@@ -8,7 +8,7 @@ default first_time_ruined_temple = True
 default can_talk_to_freya = False
 
 label ruined_temple:
-
+    show screen buttons
     scene bg_ruined_temple with fade
     pause 1.0
 
