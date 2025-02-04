@@ -219,13 +219,13 @@ label rapunzel_not_first_time:
                 "Собрать особые грибы":
                     r "Есть такие грибы... Они обладают уникальными свойствами."
                     r "Если ты их найдешь, я буду просто в восторге!"
-                    $ active_quest = "Сбор грибов для Рапунцель"
+                    $ active_quest = quest_rapunzel_mashrooms
                     jump visit_rapunzel_ruined_temple
 
                 "Приглашать девушек работать в борделе":
                     r "О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
                     r "Если приведешь мне парочку, я тебя щедро отблагодарю~"
-                    $ active_quest = "Приглашать дам для Рапунцель"
+                    $ active_quest = quest_rapunzel_women
                     jump visit_rapunzel_ruined_temple
 
         "Уйти":

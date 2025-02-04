@@ -139,7 +139,7 @@ label esdeath_ruined_temple_quests:
             menu:
                 "Принять квест":
                     es "Надеюсь на тебя"
-                    $ active_quest = "Убить гоблинов для [es.name]"
+                    $ active_quest = quest_esdeath_goblins
                     jump esdeath_ruined_temple_menu
                 "Не принимать квест":
                     es "Ожидаемо, ты пока не готов"
@@ -150,7 +150,7 @@ label esdeath_ruined_temple_quests:
             menu:
                 "Принять квест":
                     es "Надеюсь на тебя"
-                    $ active_quest = "Зачистить лес для [es.name]"
+                    $ active_quest = quest_esdeath_forest
                     jump esdeath_ruined_temple_menu
                 "Не принимать квест":
                     es "Ожидаемо, ты пока не готов"
@@ -161,7 +161,7 @@ label esdeath_ruined_temple_quests:
             menu:
                 "Принять квест":
                     es "Надеюсь на тебя"
-                    $ active_quest = "Убить бандитов для [es.name]"
+                    $ active_quest = quest_esdeath_bandits
                     jump esdeath_ruined_temple_menu
                 "Не принимать квест":
                     es "Ожидаемо, ты пока не готов"

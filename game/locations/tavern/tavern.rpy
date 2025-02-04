@@ -62,7 +62,7 @@ label talk_miku_menu:
         "Спросить, чем заняться в городе":
             jump talk_miku_info
         "Ничего":
-            jump booze_stand_menu
+            jump miku_stand_menu
         
 label talk_miku_drinks_menu:
     #TODO menu варианты выпивки у Мику(каждая стоит денег и дает баф)

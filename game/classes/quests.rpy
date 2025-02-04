@@ -26,58 +26,67 @@ init python:
             self.mana_bonus = mana_bonus  # Награда в стате магии
             self.char_bonus = char_bonus  # Награда в стате харизмы
 
-    allQuests = [
-        #elsa quests
-        GirlQuest(whatToDo="Собрать материалы", forWho="Эльза", repeatable=True,
-        location="Лесная чаща", countObj=10, 
-        character_says=["Хорошо, мне нужно несколько редких трав и минералов."
-            ,"Ты можешь найти их в этих лесах."],
-        req_character=0, req_str=0, req_mana=0, req_char=0, 
-        reward_money=10, reward_character=10, 
-        str_bonus=0, mana_bonus=5, char_bonus=0
-        ),
-        #rapunzel quests
-        GirlQuest(whatToDo="Собрать грибы", forWho="Рапунцель", repeatable=True,
-        location="Травянистая поляна", countObj=10, 
-        character_says=["Есть такие грибы... Они обладают уникальными свойствами."
-            ,"Если ты их найдешь, я буду просто в восторге!"],
-        req_character=0, req_str=0, req_mana=0, req_char=0, 
-        reward_money=10, reward_character=10, 
-        str_bonus=0, mana_bonus=0, char_bonus=3
-        ),
-        GirlQuest(whatToDo="Пригласить дам", forWho="Рапунцель", repeatable=True,
-        location="Темный переулок", countObj=3, 
-        character_says=["О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
-            ,"Если приведешь мне парочку, я тебя щедро отблагодарю~"],
-        req_character=0, req_str=0, req_mana=0, req_char=0, 
-        reward_money=15, reward_character=10, 
-        str_bonus=0, mana_bonus=0, char_bonus=10
-        ),
-        #esdeath quests
-        GirlQuest(whatToDo="Убить гоблинов", forWho="Эсдес", repeatable=True,
-        location="Лесная чаща", countObj=5, 
-        character_says=["Гоблины не такие уж и слабые."
-            ,"Ты уверен, что справишься?"],
-        req_character=0, req_str=0, req_mana=0, req_char=0, 
-        reward_money=15, reward_character=10, 
-        str_bonus=3, mana_bonus=0, char_bonus=0
-        ),
-        GirlQuest(whatToDo="Зачистить лес", forWho="Эсдес", repeatable=True,
-        location="Лес монстров", countObj=5, 
-        character_says=["Хороший выбор. Там полно опасных существ, будь осторожен."],
-        req_character=0, req_str=0, req_mana=0, req_char=0, 
-        reward_money=25, reward_character=10, 
-        str_bonus=5, mana_bonus=0, char_bonus=0
-        ),
-        GirlQuest(whatToDo="Убить бандитов", forWho="Эсдес", repeatable=True,
-        location="Темный переулок", countObj=3, 
-        character_says=["Банда действительно угрожает путникам."
-            ,"Это задание стоит того, чтобы им заняться."],
-        req_character=0, req_str=0, req_mana=0, req_char=0, 
-        reward_money=35, reward_character=10, 
-        str_bonus=7, mana_bonus=0, char_bonus=0
-        ),
-    ]
+    
+    #elsa quests
+    quest_elsa_materials = GirlQuest(whatToDo="Собрать материалы", forWho="Эльза", repeatable=True,
+    location="Лесная чаща", countObj=10, 
+    character_says=["Хорошо, мне нужно несколько редких трав и минералов."
+        ,"Ты можешь найти их в этих лесах."],
+    req_character=0, req_str=0, req_mana=0, req_char=0, 
+    reward_money=10, reward_character=10, 
+    str_bonus=0, mana_bonus=2, char_bonus=0
+    )
+    quest_elsa_test = GirlQuest(whatToDo="Протестировать работу зелья", forWho="Эльза", repeatable=True,
+    location="Разрушенный храм", countObj=3, 
+    character_says=["Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
+        ,"Твоё тело мне пригодится~"],
+    req_character=0, req_str=0, req_mana=0, req_char=0, 
+    reward_money=10, reward_character=5, 
+    str_bonus=0, mana_bonus=5, char_bonus=0
+    )
+
+    #rapunzel quests
+    quest_rapunzel_mashrooms = GirlQuest(whatToDo="Собрать грибы", forWho="Рапунцель", repeatable=True,
+    location="Травянистая поляна", countObj=10, 
+    character_says=["Есть такие грибы... Они обладают уникальными свойствами."
+        ,"Если ты их найдешь, я буду просто в восторге!"],
+    req_character=0, req_str=0, req_mana=0, req_char=0, 
+    reward_money=10, reward_character=10, 
+    str_bonus=0, mana_bonus=0, char_bonus=3
+    )
+    quest_rapunzel_women = GirlQuest(whatToDo="Пригласить дам", forWho="Рапунцель", repeatable=True,
+    location="Темный переулок", countObj=3, 
+    character_says=["О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
+        ,"Если приведешь мне парочку, я тебя щедро отблагодарю~"],
+    req_character=0, req_str=0, req_mana=0, req_char=0, 
+    reward_money=15, reward_character=10, 
+    str_bonus=0, mana_bonus=0, char_bonus=10
+    )
+    
+    #esdeath quests
+    quest_esdeath_goblins = GirlQuest(whatToDo="Убить гоблинов", forWho="Эсдес", repeatable=True,
+    location="Лесная чаща", countObj=5, 
+    character_says=["Гоблины не такие уж и слабые."
+        ,"Ты уверен, что справишься?"],
+    req_character=0, req_str=0, req_mana=0, req_char=0, 
+    reward_money=15, reward_character=10, 
+    str_bonus=2, mana_bonus=0, char_bonus=0
+    )
+    quest_esdeath_forest = GirlQuest(whatToDo="Зачистить лес", forWho="Эсдес", repeatable=True,
+    location="Лес монстров", countObj=5, 
+    character_says=["Хороший выбор. Там полно опасных существ, будь осторожен."],
+    req_character=0, req_str=0, req_mana=0, req_char=0, 
+    reward_money=25, reward_character=10, 
+    str_bonus=4, mana_bonus=0, char_bonus=0
+    )
+    quest_esdeath_bandits = GirlQuest(whatToDo="Убить бандитов", forWho="Эсдес", repeatable=True,
+    location="Темный переулок", countObj=3, 
+    character_says=["Банда действительно угрожает путникам."
+        ,"Это задание стоит того, чтобы им заняться."],
+    req_character=0, req_str=0, req_mana=0, req_char=0, 
+    reward_money=35, reward_character=10, 
+    str_bonus=6, mana_bonus=0, char_bonus=0
+    )
 
     def getAbleQuestsFor(forWho):
         result = []

@@ -7,6 +7,7 @@ init:
     define f = Character("Фрея", color="#FFD700", image='f')
     define ts = Character("Цунаде", color="#FFD700", image='ts')
     define s = Character("Сакура", color="#FFC0CB", image='s')
+    define mer = Character("Мерлин", color="#800080", image='mer')
 
     define miku = Character('Тавернщица', color="#00ffff")
     define miku_love = 0
