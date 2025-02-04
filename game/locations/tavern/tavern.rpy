@@ -1,44 +1,40 @@
 define correct_answers = 0  # Счётчик правильных ответов
 define first_time_tavern = True
 
+
 # Сцена с таверной
-label talk_miku:
+label tavern:
+    scene tavern_bg with fade
+    "Вы в таверне"
+    menu:
+        "Пойти в комнату" if can_visit_home:
+                jump room
+        "Подойти к [miku.name]" :
+            jump go_to_booze_stand
+        "Подойти к сомнительному столу" if not can_visit_black_market:
+            jump suspicious_table
+        "Подойти к доске объявлений":
+            jump tavern_task_board
+        "Выйти в город":
+                jump city
+
+label go_to_booze_stand:
     scene tavern_bg with fade
     if first_time_tavern:
         $ first_time_tavern = False
         miku "Добро пожаловать в мою таверну!"
         $ miku.name = "Мику"
-        miku "Меня зовут Мику, буду рада помочь!"
+        miku "Меня зовут [miku.name], буду рада помочь!"
     else:
-        miku "Добро пожаловать в мою таверну! Чем могу помочь?"
-    jump talk_miku_menu
+        miku "Добро пожаловать в таверну \"Звездные осколки\"!"
+    jump booze_stand_menu
 
-label talk_miku_menu:
+label booze_stand_menu:
     menu:
         "Поговорить":
             if not can_visit_home:
-                miku "Я здесь принимаю гостей. Может, вам нужна комната для ночлега?" 
-            menu:
-                "Снять комнату" if not can_visit_home:
-                    miku "Комната стоит 10 золотых в неделю."
-                    menu:
-                        "Беру" if money >= 10:
-                            $ money -= 10  # Вычитание золота
-                            $ can_visit_home = True
-                            jump room
-                        "Мне пока не по карману":
-                            jump talk_miku_menu
-                "Попросить что-нибудь выпить":
-                    miku "Что будете пить?"
-                    miku "Здесь можно найти не только пиво, но и кое-что посильнее."
-                    #TODO menu варианты выпивки у Мику(каждая стоит денег и дает баф)
-                    jump talk_miku_menu
-                "Спросить, какие есть задания":
-                    jump talk_miku_quests
-                "Спросить, чем заняться в городе":
-                    jump talk_miku_info
-                "Ничего":
-                    jump talk_miku_menu
+                miku "Чем могу помочь?" 
+            jump talk_miku_menu
         "Подойти к сомнительному столу" if not can_visit_black_market:
             miku "Они всегда здесь, что-то мутят... но если решите подойти, будьте осторожны."
             jump suspicious_table
@@ -46,9 +42,38 @@ label talk_miku_menu:
             miku "Была рада вас видеть!"
             jump tavern
 
-label talk_miku_quests:
-    "TODO здесь будут квесты"
+label talk_miku_menu:
+    menu:
+        "Снять комнату" if not can_visit_home:
+            miku "Комната стоит 10 золотых в неделю."
+            menu:
+                "Беру" if money >= 10:
+                    $ money -= 10  # Вычитание золота
+                    $ can_visit_home = True
+                    jump room
+                "Мне пока не по карману":
+                    jump talk_miku_menu
+        "Попросить что-нибудь выпить":
+            miku "Что будете пить?"
+            miku "Здесь можно найти не только пиво, но и кое-что поинтереснее."
+            jump talk_miku_drinks_menu
+        "Спросить, какие есть задания":
+            jump talk_miku_quests
+        "Спросить, чем заняться в городе":
+            jump talk_miku_info
+        "Ничего":
+            jump booze_stand_menu
+        
+label talk_miku_drinks_menu:
+    #TODO menu варианты выпивки у Мику(каждая стоит денег и дает баф)
+    "IN PROGRESS"
     jump talk_miku_menu
+
+label talk_miku_quests:
+    #TODO "здесь будут квесты"
+    "IN PROGRESS"
+    jump talk_miku_menu
+
 label talk_miku_info:
     if miku_love > 10 and not can_visit_library:
         $ can_visit_library = True
@@ -61,6 +86,12 @@ label talk_miku_info:
     else:
         "TODO написать, о том, что игрок не заслужил ее доверия, пока что стоит выполнять квесты Мику"
     jump talk_miku_menu
+
+
+label tavern_task_board:
+    #TODO miku "что-то говорит про доску объявления и о том, что я могу взять задачу, а за выполнение положена награда"
+    "IN PROGRESS"
+    jump tavern
 
 # Сцена с сомнительным столом
 label suspicious_table:
@@ -135,23 +166,11 @@ label room:
     
     menu:
         "Отдохнуть и провести ночь":
-            "Спокойной ночи, новый мир"
+            "Как же давно я не мог отдохнуть"
+            $ health = health + 5
         "Покинуть комнату":
             "Вы идете в таверну"
             jump tavern
         "Пойти в город":
             "Вы вышли в город"
             jump city
-
-label tavern:
-    scene tavern_bg with fade
-    "Вы в таверне"
-    menu:
-        "Пойти в комнату" if can_visit_home:
-                jump room
-        "Подойти к [miku.name]" :
-            jump talk_miku
-        "Подойти к сомнительному столу" if not can_visit_black_market:
-            jump suspicious_table
-        "Идти в город":
-                jump city
