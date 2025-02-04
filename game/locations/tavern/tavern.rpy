@@ -70,7 +70,7 @@ label talk_miku_drinks_menu:
     jump talk_miku_menu
 
 label talk_miku_quests:
-    #TODO "здесь будут квесты"
+    #TODO menu квестов для самой Мику
     "IN PROGRESS"
     jump talk_miku_menu
 
@@ -94,7 +94,8 @@ label talk_miku_info:
 
 
 label tavern_task_board:
-    #TODO miku "что-то говорит про доску объявления и о том, что я могу взять задачу, а за выполнение положена награда"
+    #TODO miku "что-то выкрикивает про доску объявления и о том, что я могу взять задачу, а за выполнение положена награда"
+    #TODO menu квестов от случайных людей(просто для прокачки) и денег
     "IN PROGRESS"
     jump tavern
 
