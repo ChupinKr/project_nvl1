@@ -10,7 +10,7 @@ label tavern:
         "Пойти в комнату" if can_visit_home:
                 jump room
         "Подойти к [miku.name]" :
-            jump go_to_booze_stand
+            jump go_to_miku_stand
         "Подойти к сомнительному столу" if not can_visit_black_market:
             jump suspicious_table
         "Подойти к доске объявлений":
@@ -18,7 +18,7 @@ label tavern:
         "Выйти в город":
                 jump city
 
-label go_to_booze_stand:
+label go_to_miku_stand:
     scene tavern_bg with fade
     if first_time_tavern:
         $ first_time_tavern = False
@@ -27,9 +27,9 @@ label go_to_booze_stand:
         miku "Меня зовут [miku.name], буду рада помочь!"
     else:
         miku "Добро пожаловать в таверну \"Звездные осколки\"!"
-    jump booze_stand_menu
+    jump miku_stand_menu
 
-label booze_stand_menu:
+label miku_stand_menu:
     menu:
         "Поговорить":
             if not can_visit_home:
@@ -76,15 +76,20 @@ label talk_miku_quests:
 
 label talk_miku_info:
     if miku_love > 10 and not can_visit_library:
+        #TODO Мику говорит о том, как ей важен гг, поэтому она может поделиться важной для нее информацией
         $ can_visit_library = True
     elif miku_love > 20 and not can_visit_training_ground:
+        #TODO Мику говорит о том, как ей важен гг, поэтому она может поделиться важной для нее информацией
         $ can_visit_training_ground = True
     elif miku_love > 30 and not can_visit_bar:
+        #TODO Мику говорит о том, как ей важен гг, поэтому она может поделиться важной для нее информацией
         $ can_visit_bar = True
     elif miku_love > 50:
+        #TODO Мику говорит о том, как ей важен гг, переписать below
         "Рассказывать мне больше нечего, а вот показать кое-что могу ;)"
     else:
-        "TODO написать, о том, что игрок не заслужил ее доверия, пока что стоит выполнять квесты Мику"
+        #TODO" написать, о том, что игрок не заслужил ее доверия, пока что стоит выполнять квесты Мику"
+        "IN PROGRESS"
     jump talk_miku_menu
 
 
@@ -92,6 +97,22 @@ label tavern_task_board:
     #TODO miku "что-то говорит про доску объявления и о том, что я могу взять задачу, а за выполнение положена награда"
     "IN PROGRESS"
     jump tavern
+
+# Сцена с комнатой игрока
+label room:
+    scene room_bg with fade
+    "Ты у себя в комнате"
+    
+    menu:
+        "Отдохнуть и провести ночь":
+            "Как же давно я не мог отдохнуть"
+            $ health = health + 5
+        "Покинуть комнату":
+            "Вы идете в таверну"
+            jump tavern
+        "Пойти в город":
+            "Вы вышли в город"
+            jump city
 
 # Сцена с сомнительным столом
 label suspicious_table:
@@ -157,20 +178,3 @@ label suspicious_table:
         guy1 "Тебе не место среди нас, если ты не готов убить ради выгоды. Слишком мягок, брат."
 
     jump tavern
-
-
-# Сцена с комнатой игрока
-label room:
-    scene room_bg with fade
-    "Ты у себя в комнате"
-    
-    menu:
-        "Отдохнуть и провести ночь":
-            "Как же давно я не мог отдохнуть"
-            $ health = health + 5
-        "Покинуть комнату":
-            "Вы идете в таверну"
-            jump tavern
-        "Пойти в город":
-            "Вы вышли в город"
-            jump city
