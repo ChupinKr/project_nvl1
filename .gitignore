@@ -6,3 +6,4 @@
 *.rpyb
 *.json
 *.txt
+/game/saves
