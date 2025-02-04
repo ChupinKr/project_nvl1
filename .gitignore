@@ -1,4 +1,4 @@
 **/logs
-**/log.txt
-**/saves
-**/cache
+log.txt
+game/saves
+game/cache
