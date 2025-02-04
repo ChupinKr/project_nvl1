@@ -3,7 +3,6 @@
 **/saves
 **/cache
 *.rpyb
-*.rpyb
 *.json
 *.txt
 /game/saves
