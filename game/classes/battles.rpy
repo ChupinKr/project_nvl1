@@ -1,5 +1,6 @@
 define damage_to_enemy = 0
-define base_health = 100
+define base_enemy_health = 100
+define health_to_not_escape = 20
 
 init python:
     import random
@@ -70,7 +71,7 @@ screen battle_qte():
 label start_battle:
     $ qte_sequence = generate_qte_sequence()  # Генерируем случайную последовательность
     $ qte_input = ""  # Обнуляем ввод игрока
-    $ enemy_health = base_health  # Устанавливаем здоровье противника на 100
+    $ enemy_health = base_enemy_health  # Устанавливаем здоровье противника на 100
     call screen battle_qte
     return
 
@@ -139,7 +140,7 @@ label battle_escape:
     $ last_battle_win = False
     if strength / 2 * random.randint(1, 10) > enemy_strength:
         "Тебе повезло, ты убежал и даже почти не чувствуешь боли"
-        if health < 20:
+        if health < health_to_not_escape:
             "О нет, адреналин прошел"
             "Ты не чувствуешь ничего кроме боли"
             jump surgency_tsunade_cure
