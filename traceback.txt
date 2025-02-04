@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/locations/hospital.rpy", line 113, in script
+    menu:
+  File "game/locations/hospital.rpy", line 114, in <module>
+    set bring
+NameError: name 'bring' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/locations/hospital.rpy", line 113, in script
+    menu:
+  File "C:\Users\User1\Downloads\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1625, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\User1\Downloads\renpy\renpy-8.3.4-sdk\renpy\exports\menuexports.py", line 74, in menu
+    set = renpy.python.py_eval(set_expr) # @ReservedAssignment
+  File "C:\Users\User1\Downloads\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\User1\Downloads\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/locations/hospital.rpy", line 114, in <module>
+    set bring
+NameError: name 'bring' is not defined
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.4.24120703
+project_nvl1 1.0
+Tue Feb  4 15:36:16 2025
