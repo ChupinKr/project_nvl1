@@ -1,7 +1,6 @@
 default first_time_hospital = True
 default first_time_sakura = True
 default first_time_surgency = True  
-define bring = []
 
 label hospital:
     scene bg_hospital with fade
@@ -42,6 +41,7 @@ label hospital_sakura_quests:
             jump hospital
 
 label surgency_tsunade_cure:
+    $ bring = []
     scene bg_hospital with fade
     play music "audio/hospital_theme.mp3"
 
@@ -74,6 +74,7 @@ label surgency_tsunade_cure:
     jump surgency_tsunade_menu
 
 label surgency_tsunade:
+    $ bring = []
     scene bg_hospital with fade
     play music "audio/hospital_theme.mp3"
 
@@ -120,7 +121,6 @@ label surgency_tsunade_menu:
             ts "В таверне всегда нужны помощники. Помоешь посуду — получишь монеты. "
             ts "А если умеешь драться, ищи работу в гильдии."
             $ can_visit_tavern = True
-            $ can_visit_guild = True
             jump surgency_tsunade_menu
         "Спросить про задания" if not active_quest:
             p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"

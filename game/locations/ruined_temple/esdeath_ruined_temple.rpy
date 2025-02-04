@@ -1,3 +1,6 @@
+define esdeath_strength = 90
+define battle_location_ruined_temple = "ruined_temple"
+
 label visit_esdeath_ruined_temple:
     scene ruined_temple with fade
     show esdeath smirk with dissolve
@@ -75,9 +78,9 @@ label visit_esdeath_ruined_temple:
             "Дать [es.name] понять, кто тут главный": 
                 p "Посмотрим, кто кого."
                 es "Вот так мне нравится!"
+                $ enemy_strength = esdeath_strength
                 $ enemy_name = es.name
-                $ enemy_strength = 20
-                $ battle_location = "ruined_temple"
+                $ battle_location = battle_location_ruined_temple
                 jump start_battle
 
             "Не связываться": 
@@ -108,9 +111,9 @@ label visit_esdeath_ruined_temple:
                 p "Давай потренируемся. Я хочу проверить, насколько я могу улучшиться."
                 show esdeath smirk
                 es "Хах! Ты решился снова. Очень смело, но, помни, что я не прощаю слабости."
+                $ enemy_strength = esdeath_strength
                 $ enemy_name = es.name
-                $ enemy_strength = 200
-                $ battle_location = "ruined_temple"
+                $ battle_location = battle_location_ruined_temple
                 jump start_battle
 
             "Попросить задание.": 

@@ -1,4 +1,5 @@
 define damage_to_enemy = 0
+define base_health = 100
 
 init python:
     import random
@@ -69,7 +70,7 @@ screen battle_qte():
 label start_battle:
     $ qte_sequence = generate_qte_sequence()  # Генерируем случайную последовательность
     $ qte_input = ""  # Обнуляем ввод игрока
-    $ enemy_health = 2  # Устанавливаем здоровье противника на 100
+    $ enemy_health = base_health  # Устанавливаем здоровье противника на 100
     call screen battle_qte
     return
 
