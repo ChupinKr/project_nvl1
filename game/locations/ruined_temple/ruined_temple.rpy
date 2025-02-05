@@ -25,10 +25,12 @@ label ruined_temple:
         $ first_time_ruined_temple = False
     else:
         "Куда направишься?"
+        
+    jump ruined_temple_menu
 
-
+label ruined_temple_menu:
     menu:
-        "Обратиться к богине за советом" if can_talk_to_freya:
+        "Обратиться к богине за советом" if (charisma > 10):
             jump talk_to_freya
         "Отправиться в город":
             jump city

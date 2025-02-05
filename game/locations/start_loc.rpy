@@ -4,11 +4,11 @@ label f_get_info:
     hide str_sphere
     hide mc_sphere
 
-    show f stand with dis5
+    show f smile with dis5
     f "Я могу даровать тебе одно из трёх благословений, которые изменят твою судьбу."
 
     "Она сделала лёгкий жест рукой, и перед тобой возникли три сияющих символа, как если бы сама реальность зависела от твоего выбора."
-    hide f stand with dis5
+    hide f smile with dis5
 
     show str_sphere at mid_left with dis5
     f "Первое благословение — Дар Выносливости. "
@@ -32,14 +32,14 @@ label f_get_info:
     "Она смотрела на тебя, её взгляд был одновременно игривым и загадочным, как будто она уже знала твой выбор. "
     "С её улыбкой было сложно быть уверенным в своём решении."
 
-    f stand "Обдумай всё, ведь от твоего выбора зависит то, каким ты станешь в этом новом мире."
+    f @ closed_smile "Обдумай всё, ведь от твоего выбора зависит то, каким ты станешь в этом новом мире."
     return
 
 label f_ask_more_info:
     hide ls_sphere
     hide str_sphere
     hide mc_sphere
-    show f stand with dis5
+    show f smile with dis5
     f "Ты хочешь узнать больше? Ну, это вполне естественно. Хорошо, я расскажу тебе немного о каждом из благословений, чтобы твой выбор был осознанным."
 
     call f_get_info
@@ -67,7 +67,7 @@ label blessings_choice:
             hide ls_sphere
             hide str_sphere
             hide mc_sphere
-            show f stand with dis5
+            show f smile with dis5
             f "Ты выбрал благословение [chosen_blessing.name]. Мне любопытно, как ты распорядишься моим подарком. Ты ведь понимаешь, что это только начало?"
         "Выбрать Магический Потенциал":
             $ chosen_blessing = available_blessings[1]
@@ -75,7 +75,7 @@ label blessings_choice:
             hide ls_sphere
             hide str_sphere
             hide mc_sphere
-            show f stand with dis5
+            show f smile with dis5
             f "Ты выбрал благословение [chosen_blessing.name]. Этот дар не сделает тебя всемогущим, но... если ты будешь мудр, он приведёт тебя к величию."
         "Выбрать Дар Соблазнителя":
             $ chosen_blessing = available_blessings[2]
@@ -83,7 +83,7 @@ label blessings_choice:
             hide ls_sphere
             hide str_sphere
             hide mc_sphere
-            show f stand with dis5
+            show f smile with dis5
             f @ smile "Ты выбрал благословение [chosen_blessing.name]. Ты нравишься мне, [hero_name]… иначе я бы не выбрала тебя."
 
     # Вспышка света, переход к перерождению
