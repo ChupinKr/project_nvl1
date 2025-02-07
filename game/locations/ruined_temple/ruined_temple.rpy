@@ -1,7 +1,7 @@
 # Флаги встреченных девушек
 default first_time_rapunzel = True
 default first_time_elsa = True
-default first_time_esdeath = True
+default first_time_nagatoro = True
 default first_time_ruined_temple = True
 
 # Флаг для возможности обращаться к богине
@@ -18,14 +18,14 @@ label ruined_temple:
         jump visit_rapunzel_ruined_temple
     elif mana > 0 and first_time_elsa:
         jump visit_elsa_ruined_temple
-    elif strength > 0 and first_time_esdeath:
-        jump visit_esdeath_ruined_temple
+    elif strength > 0 and first_time_nagatoro:
+        jump visit_nagatoro_ruined_temple
     elif first_time_ruined_temple:
         "Похоже, тебе придётся самому искать путь…"
         $ first_time_ruined_temple = False
     else:
         "Куда направишься?"
-        
+
     jump ruined_temple_menu
 
 label ruined_temple_menu:
@@ -36,18 +36,18 @@ label ruined_temple_menu:
             jump city
         "Попробовать пройти в лес чудовищ":
             jump monster_forest
-        "Осмотреться вокруг" if not first_time_rapunzel or not first_time_elsa or not first_time_esdeath:
+        "Осмотреться вокруг" if not first_time_rapunzel or not first_time_elsa or not first_time_nagatoro:
             jump look_around
 
 label look_around:
     "Ты осматриваешься..."
     menu:
-        "Навестить Рапунцель" if not first_time_rapunzel:
+        "Навестить [r.name]" if not first_time_rapunzel:
             jump visit_rapunzel_ruined_temple
-        "Навестить Эльзу" if not first_time_elsa:
+        "Навестить [e.name]" if not first_time_elsa:
             jump visit_elsa_ruined_temple
-        "Навестить Эсдес" if not first_time_esdeath:
-            jump visit_esdeath_ruined_temple
+        "Навестить [nag.name]" if not first_time_nagatoro:
+            jump visit_nagatoro_ruined_temple
         "Вернуться назад":
             jump ruined_temple
 

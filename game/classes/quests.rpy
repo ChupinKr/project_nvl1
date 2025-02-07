@@ -63,8 +63,8 @@ init python:
     str_bonus=0, mana_bonus=0, char_bonus=10
     )
     
-    #esdeath quests
-    quest_esdeath_goblins = GirlQuest(whatToDo="Убить гоблинов", forWho="Эсдес", repeatable=True,
+    #nagatoro quests
+    quest_nagatoro_goblins = GirlQuest(whatToDo="Убить гоблинов", forWho="Эсдес", repeatable=True,
     location="Лесная чаща", countObj=5, 
     character_says=["Гоблины не такие уж и слабые."
         ,"Ты уверен, что справишься?"],
@@ -72,14 +72,14 @@ init python:
     reward_money=15, reward_character=10, 
     str_bonus=2, mana_bonus=0, char_bonus=0
     )
-    quest_esdeath_forest = GirlQuest(whatToDo="Зачистить лес", forWho="Эсдес", repeatable=True,
+    quest_nagatoro_forest = GirlQuest(whatToDo="Зачистить лес", forWho="Эсдес", repeatable=True,
     location="Лес монстров", countObj=5, 
     character_says=["Хороший выбор. Там полно опасных существ, будь осторожен."],
     req_character=0, req_str=0, req_mana=0, req_char=0, 
     reward_money=25, reward_character=10, 
     str_bonus=4, mana_bonus=0, char_bonus=0
     )
-    quest_esdeath_bandits = GirlQuest(whatToDo="Убить бандитов", forWho="Эсдес", repeatable=True,
+    quest_nagatoro_bandits = GirlQuest(whatToDo="Убить бандитов", forWho="Эсдес", repeatable=True,
     location="Темный переулок", countObj=3, 
     character_says=["Банда действительно угрожает путникам."
         ,"Это задание стоит того, чтобы им заняться."],

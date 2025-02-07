@@ -155,14 +155,14 @@ label battle_escape:
 label after_win_battle:
     if battle_location == "ruined_temple":
         if enemy_name == es.name:
-            jump battle_win_ruined_temple_esdeath
+            jump battle_win_ruined_temple_nagatoro
         elif enemy_name == r.name:
             jump battle_win_ruined_temple_rapunzel
         elif enemy_name == e.name:
             jump battle_win_ruined_temple_elsa
     elif battle_location == "magic_tower":
         if enemy_name == es.name:
-            jump battle_win_magic_tower_esdeath
+            jump battle_win_magic_tower_nagatoro
         elif enemy_name == r.name:
             jump battle_win_magic_tower_rapunzel
         elif enemy_name == e.name:

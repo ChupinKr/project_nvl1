@@ -47,4 +47,4 @@ label start:
     f "Очень приятно, [hero_name]. Теперь, ты стоишь перед выбором."
 
     call f_get_info
-    jump f_ask_more_info
+    jump start_ask_god
