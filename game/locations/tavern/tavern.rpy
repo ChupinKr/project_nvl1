@@ -35,9 +35,9 @@ label miku_stand_menu:
             if not can_visit_home:
                 miku "Чем могу помочь?" 
             jump talk_miku_menu
-        "Подойти к сомнительному столу" if not can_visit_black_market:
+        "Что за сомнительный столик?" if not can_visit_black_market:
             miku "Они всегда здесь, что-то мутят... но если решите подойти, будьте осторожны."
-            jump suspicious_table
+            jump miku_stand_menu 
         "Уйти":
             miku "Была рада вас видеть!"
             jump tavern
@@ -45,25 +45,25 @@ label miku_stand_menu:
 label talk_miku_drinks_menu:
     miku "У нас тут не только пиво, но и магические напитки! Что будешь?"
     menu:
-        "Энергетический эль (5 золота, +2 к выносливости)":
-            if money >= 5:
+        "Энергетический эль (10 золота, +2 к силе)":
+            if money >= 10:
                 $ money -= 5
-                $ stamina += 2
+                $ strength += 2 * strength_mod
                 miku "Ооо, хорошенький выбор! Попробуй – освежает!"
             else:
                 miku "Эх, золотишка не хватает... Может, сначала квестик возьмёшь?"
         "Магический ликёр (10 золота, +2 к мане)":
             if money >= 10:
                 $ money -= 10
-                $ mana += 2
+                $ mana += 2 * mana_mod
                 miku "Этот напиток буквально искрит энергией! Ну-ка, выпей!"
             else:
                 miku "Эй, кажется, у тебя не хватает монеток!"
-        "Чёрный ром (15 золота, +1 к силе, +1 к выносливости)":
+        "Чёрный ром (15 золота, +1 к силе, +1 к мане)":
             if money >= 15:
                 $ money -= 15
-                $ strength += 1
-                $ stamina += 1
+                $ strength += 1 * strength_mod
+                $ mana += 1 * mana_mod
                 miku "Ого, крепкий выбор! Только не переборщи!"
             else:
                 miku "Хм... похоже, придётся немного подкопить!"
@@ -87,7 +87,7 @@ label talk_miku_menu:
             miku "Что будете пить?"
             miku "Здесь можно найти не только пиво, но и кое-что поинтереснее."
             jump talk_miku_drinks_menu
-        "Спросить, какие есть задания":
+        "Спросить, чем можно помочь":
             jump talk_miku_quests
         "Спросить, чем заняться в городе":
             jump talk_miku_info
@@ -95,7 +95,7 @@ label talk_miku_menu:
             jump miku_stand_menu
 
 label talk_miku_quests:
-    miku "Квесты? Отличная идея! Вот что у меня есть!"
+    miku "Помощь? Отличная идея! Вот что у меня для тебя есть!"
     menu:
         "Помочь на кухне (5 золота)":
             miku "Надо нарезать овощи и проверить запасы! Готов?"

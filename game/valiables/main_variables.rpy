@@ -5,9 +5,13 @@ init:
     $ health = 100  # Здоровье
 
     $ money = 0  # Харизма
+    
     $ charisma = 0  # Харизма
     $ strength = 0  # Сила
     $ mana = 0  # Объем маны
+    $ charisma_mod = 0  # Модификатор харизмы
+    $ strength_mod = 0  # Модификатор силы
+    $ mana_mod = 0  # Модификатор маны
 
     # День и время
     $ day = 0 # после вечера должно идти утро след дня
@@ -36,3 +40,4 @@ init:
     $ can_visit_ruined_temple = True
     $ can_visit_monster_forest = True
 
+    $ nagatoro_strength = 90

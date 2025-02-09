@@ -64,6 +64,7 @@ label blessings_choice:
         "Выбрать Дар Выносливости":
             $ chosen_blessing = available_blessings[0]
             $ strength = strength + 2
+            $ strength_mod = 2
             hide ls_sphere
             hide str_sphere
             hide mc_sphere
@@ -72,6 +73,7 @@ label blessings_choice:
         "Выбрать Магический Потенциал":
             $ chosen_blessing = available_blessings[1]
             $ mana = mana + 2
+            $ mana_mod = 2
             hide ls_sphere
             hide str_sphere
             hide mc_sphere
@@ -80,6 +82,7 @@ label blessings_choice:
         "Выбрать Дар Соблазнителя":
             $ chosen_blessing = available_blessings[2]
             $ charisma = charisma + 2
+            $ charisma_mod = 2
             hide ls_sphere
             hide str_sphere
             hide mc_sphere

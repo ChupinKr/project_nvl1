@@ -1,4 +1,3 @@
-define nagatoro_strength = 90
 define battle_location_ruined_temple = "ruined_temple"
 
 label visit_nagatoro_ruined_temple:
@@ -78,10 +77,7 @@ label visit_nagatoro_ruined_temple:
             "Дать [nag.name] понять, кто тут главный": 
                 p "Посмотрим, кто кого."
                 nag "Вот так мне нравится!"
-                $ enemy_strength = nagatoro_strength
-                $ enemy_name = nag.name
-                $ battle_location = battle_location_ruined_temple
-                jump start_battle
+                call start_battle(100, nagatoro_strength, nag.name, battle_location_ruined_temple)
 
             "Не связываться": 
                 p "Сегодня не время для сражений."
@@ -115,10 +111,7 @@ label nagatoro_ruined_temple_menu:
             p "Давай потренируемся. Я хочу проверить, насколько я могу улучшиться."
             show nag grin
             nag "Хах! Ты решился снова. Очень смело, но, помни, что я не прощаю слабости."
-            $ enemy_strength = nagatoro_strength
-            $ enemy_name = nag.name
-            $ battle_location = battle_location_ruined_temple
-            jump start_battle
+            call start_battle(100, nagatoro_strength, nag.name, battle_location_ruined_temple)
         "Попросить задание.": 
             jump nagatoro_ruined_temple_quests
         "Уйти.": 
@@ -215,7 +208,7 @@ label battle_win_ruined_temple_nagatoro:
         show nag neutral
         nag "Но давай проверим твои знания. Если ты действительно так хорош, ответь на несколько вопросов о ведении боя."
         
-        # Вопросы Эсдес
+        # Вопросы Нагаторо
         show nag neutral
         nag "Допустим, ты сражаешься против противника, который сильнее и быстрее тебя. Что ты будешь делать?"
 
