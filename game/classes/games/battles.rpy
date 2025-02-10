@@ -1,5 +1,7 @@
 init python:
     import random, math
+    damage_to_enemy = 0
+    damage = 0
 
     # Время на ввод комбинации (в секундах)
     qte_time = 3.0
@@ -17,6 +19,7 @@ init python:
             # Обнуляем значение, чтобы AnimatedValue анимировало изменение от 0 до 100 за qte_time секунд
             qte_bar = 0
         renpy.restart_interaction()
+        
     QTEGo = renpy.curry(qte_go)
 
     def generate_qte_sequence():
