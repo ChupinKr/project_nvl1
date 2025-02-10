@@ -9,6 +9,7 @@ define enemy_name = "Противник"
 define enemy_strength = 0
 define battle_location = 0
 define last_battle_win = None
+define last_clean_win = None
 
 #положения
 transform left_bit:

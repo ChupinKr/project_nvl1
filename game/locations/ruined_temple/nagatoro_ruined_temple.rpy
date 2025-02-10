@@ -159,6 +159,9 @@ label nagatoro_ruined_temple_quests:
                 "Не принимать квест":
                     nag "Ожидаемо, ты пока не готов"
                     jump nagatoro_ruined_temple_menu
+        "Передумал": 
+            nag "Ожидаемо, ты пока не готов"
+            jump nagatoro_ruined_temple_menu
 
 
 label battle_win_ruined_temple_nagatoro:

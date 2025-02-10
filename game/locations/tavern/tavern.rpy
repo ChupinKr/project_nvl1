@@ -1,3 +1,4 @@
+define battle_location_tavern = "tavern"
 define correct_answers = 0  # Счётчик правильных ответов
 define first_time_tavern = True
 
@@ -100,15 +101,23 @@ label talk_miku_quests:
         "Помочь на кухне (5 золота)":
             miku "Надо нарезать овощи и проверить запасы! Готов?"
             call start_clean
-            "Ты провёл время, помогая Мику"
+            "Ты провёл время, помогая [miku.name]"
+            if last_clean_win:
+                "[miku.name] это оценила"
+                $addLoveAndMoney("miku_love", 5, 5)
             jump talk_miku_quests
         "Прогнать шумных клиентов (10 золота)":
             miku "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!"
-            "Ты поговорил с клиентами, и они ушли, хоть и неохотно."
-            $ money += 10
-            show text "+10 золота" at left with moveinleft
-            pause 1.5
-            hide text
+            if renpy.random.choice([False, True]) > 0:
+                "Ты поговорил с клиентами, и они ушли, хоть и неохотно."
+                $addMoney(10)
+            else:
+                "Ты поговорил с клиентами, и они не захотели уходить по хорошему"
+                call start_battle(100, renpy.random.randint(10,40), "Бандиты", battle_location_tavern)
+                if last_battle_win:
+                    "[miku.name] это оценила"
+                    $addLoveAndMoney("miku_love", 10, 10)
+            jump talk_miku_quests
         "Никакой работы":
             miku "Эх, ну ладно... Может, в другой раз!"
     jump talk_miku_menu

@@ -111,10 +111,11 @@ label start_clean:
 
 
 label clean_fail:
+    $last_clean_win = False
     "Вы не справились"
     return
 
 label clean_success:
-    $ addMoney(5)
+    $last_clean_win = True
     "Вы справились и заработали 5 монет!"
     return

@@ -14,8 +14,29 @@ init python:
     def addMoney(plusMoney=0):
         global money,notices
         money += plusMoney
-        notices.append("Ты получил " + str(plusMoney) + " золота")
-        notices.append("У тебя " + str(money) + " золота")
+        notices.append("Ты получил " + str(plusMoney) + " монет")
+        notices.append("У тебя " + str(money) + " монет")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def addLove(whatLove, countLove):
+        global miku_love,notices
+        if whatLove == "miku_love":
+            miku_love += countLove
+        notices.append("Характеристика симпатии увеличилась")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def addLoveAndMoney(whatLove, countLove, plusMoney=0):
+        global money,miku_love,notices
+        if whatLove == "miku_love":
+            miku_love += countLove
+
+        money += plusMoney
+        notices.append("Ты получил " + str(plusMoney) + " монет")
+        notices.append("У тебя " + str(money) + " монет")
+
+        notices.append("Характеристика симпатии увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 

@@ -102,6 +102,10 @@ screen battle_qte():
     key "K_LEFT" action Function(add_qte_input, "←")
     key "K_RIGHT" action Function(add_qte_input, "→")
 
+
+
+
+
 label start_battle(enemy_hp, enemy_str, name, loc):
     $ enemy_health = enemy_hp  # Устанавливаем здоровье противника
     $ enemy_strength = enemy_str  # Устанавливаем здоровье противника
