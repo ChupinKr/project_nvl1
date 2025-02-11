@@ -46,16 +46,16 @@ screen notify_plus(notices):
     style_prefix "notify"
 
     for dd, i in enumerate(notices):
-        frame at notify_plus_appear(dd*3.5):
+        frame at notify_plus_appear(dd*1.5):
             text i
 
-    timer 4.25+(dd*3.5) action Hide('notify_plus')
+    timer 3.25+(dd*2.0) action Hide('notify_plus')
 
 transform notify_plus_appear(dd=0):
     on show:
-        yoffset dd*7
+        yoffset dd*40
         alpha 0 xanchor 1.0 xpos 0.0
-        pause dd
+        pause dd*0.5
         linear .25 alpha 1.0 xalign 0.0
         pause 3.25
         linear .5 alpha 0.0
