@@ -15,7 +15,7 @@ label city:
 
     menu:
         "Комната" if can_visit_home:
-            jump home
+            jump room
         "Бар" if can_visit_bar:
             "Ты направляешься к бару — месту, где собираются наёмники, картёжники и просто искатели проблем."
             jump bar

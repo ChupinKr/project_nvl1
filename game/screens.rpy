@@ -19,6 +19,19 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
+    def addHealth(counHealth):
+        global health,notices
+        health += counHealth
+        if(health > 100):
+            health = 100
+        if counHealth > 10:
+            notices.append("Ты чувствуешь себя намного лучше")
+        else:
+            notices.append("Ты чувствуешь себя чуть лучше")
+        notices.append("Текущий показатель здоровья: " + str(health))
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
     def addLove(whatLove, countLove):
         global miku_love,notices
         if whatLove == "miku_love":
@@ -79,22 +92,35 @@ screen info_panel:
         idle "gui/button/close.png"
         hover "gui/button/close_hover.png"
         action Show("buttons"), Hide("info_panel")
-    frame: ##TODO ДОДЕЛАТЬ ПОЗИЦИОНИРОВАНИЕ
+
+    frame:
+        xalign 0.5
+        yalign 0.05
         background "gui/paper.png"
+        xpadding 50
+        ypadding 20
+
         vbox:
-            xalign 0.3
+            xalign 0.5
             spacing 5
+
             if active_quest:
-                text "Текущая задача: [active_quest.name]"
+                text "Текущая задача: [active_quest.name]" style "info_text"
             else: 
-                text "Текущая задача: Найди чем заняться?"
-            text "Золото: [money]"
-            text "Сила: [strength]"
-            text "Харизма: [charisma]"
-            text "Колдовство: [mana]":
-                bold True
-                underline True
-                color "ff00ff"
+                text "Текущая задача: Найди чем заняться?" style "info_text"
+
+            text "Золото: [money]" style "info_text"
+            text "Сила: [strength]" style "info_text"
+            text "Харизма: [charisma]" style "info_text"
+            text "Колдовство: [mana]" style "info_text"
+
+# Определяем стиль
+style info_text:
+    size 35
+    color "#000"
+    font "gui/fonts/NK123.ttf"
+
+
             
 
 
