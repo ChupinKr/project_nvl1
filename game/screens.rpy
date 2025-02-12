@@ -36,7 +36,7 @@ init python:
     def minusMoney(minusMoney=0):
         global money,notices
         money -= minusMoney
-        notices.append("Ты потерял " + str(plusMoney) + " монет")
+        notices.append("Ты потерял " + str(minusMoney) + " монет")
         notices.append("У тебя " + str(money) + " монет")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
@@ -54,7 +54,7 @@ init python:
             if char == "mana":
                 mana += charCount * mana_mod
                 notices.append("Ты чувствуешь себя умнее")
-        notices.append("Ты потерял " + str(plusMoney) + " монет")
+        notices.append("Ты потерял " + str(minusMoney) + " монет")
         notices.append("У тебя " + str(money) + " монет")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
@@ -190,7 +190,7 @@ screen info_panel:
             text "Харизма: [charisma]" style "info_text"
             text "Колдовство: [mana]" style "info_text"
             text "Симпатия [nag.name]: [nag_love]" style "info_text"
-            text "Симпатия [miku.name]: [miku_love]" style "info_text"
+            text "Симпатия [m.name]: [miku_love]" style "info_text"
             text "Симпатия [h.name]: [h_love]" style "info_text"
             text "Симпатия [f.name]: [f_love]" style "info_text"
             text "Симпатия [s.name]: [s_love]" style "info_text"

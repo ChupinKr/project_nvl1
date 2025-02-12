@@ -21,7 +21,7 @@ init:
     define h = Character("Холо", color="#ff8c00")
     define h_str = 0
     define h_love = 0
-    define miku = Character('Тавернщица', color="#00ffff", image='m')
+    define m = Character('Тавернщица', color="#00ffff", image='m')
     define miku_love = 0
     define miku_str = 40
 

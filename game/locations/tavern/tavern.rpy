@@ -10,7 +10,7 @@ label tavern:
     menu:
         "Пойти в комнату" if can_visit_home:
                 jump room
-        "Подойти к [miku.name]" :
+        "Подойти к [m.name]" :
             jump go_to_miku_stand
         "Подойти к сомнительному столу" if not can_visit_black_market:
             jump suspicious_table
@@ -24,7 +24,7 @@ label go_to_miku_stand:
     show m smile with dissolve
     if first_time_tavern:
         $ first_time_tavern = False
-        $ miku.name = "Мику"
+        $ m.name = "Мику"
         m @open_smile "Привет-привет! Добро пожаловать в таверну \"Звездные осколки\"!" 
         m @smile_closed_eyes "Я Мику, хозяйка этого местечка! Если что-то нужно – просто спрашивай, не стесняйся!" 
     else:
@@ -50,22 +50,22 @@ label talk_miku_drinks_menu:
         "Энергетический эль (10 золота)":
             m "Этот эль действительно придаст тебе сил!"
             if money >= 10:
-                $minusMoneyPlusChar(10, ["str"], 2)
                 m @open_smile "Ооо, хорошенький выбор! Попробуй – освежает!"
+                $minusMoneyPlusChar(10, ["str"], 2)
             else:
                 m "Эх, золотишка не хватает... Может, сначала квестик возьмёшь?"
         "Магический ликёр (10 золота)":
             m "Опьяняет и слегка пробуждает магическое чутье!"
             if money >= 10:
+                m @open_smile  "Этот напиток буквально искрит энергией! Ну-ка, попробуй!"
                 $minusMoneyPlusChar(10, ["mana"], 2)
-                m @open_smile  "Этот напиток буквально искрит энергией! Ну-ка, выпей!"
             else:
                 m "Эй, кажется, у тебя не хватает монеток!"
         "Чёрный ром (10 золота)":
             m "Тяжелый черный ром, после него все твое тело скажет \"Спасибо\"!"
             if money >= 10:
-                $minusMoneyPlusChar(10, ["mana", "str"], 2)
-                m @open_smile "Ого, крепкий выбор! Только не переборщи!"
+                m @open_smile "Ого, крепкое же пойло ты выбрал! Только не переборщи!"
+                $minusMoneyPlusChar(10, ["mana", "str"], 1)
             else:
                 m "Хм... похоже, придётся немного подкопить!"
         "Не хочу пить":
@@ -100,7 +100,7 @@ label talk_miku_quests:
     menu:
         "Помыть посуду (5 золота)":
             m "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
-            m start_clean("dish")
+            call start_clean("dish")
             if last_clean_win:
                 m "Следующую! У нас много гостей, поторопись!"
                 call start_clean("dish")
@@ -109,8 +109,8 @@ label talk_miku_quests:
                     call start_clean("dish")
                     if last_clean_win:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
-                        "Ты провёл время, помогая [miku.name]"
-                        "[miku.name] это оценила"
+                        "Ты провёл время, помогая [m.name]"
+                        "[m.name] это оценила"
                         $addLoveAndMoney("miku", 5, 5)
                     else: 
                         m "Эх, почти успели, упустили клиента."
@@ -129,7 +129,7 @@ label talk_miku_quests:
                 "Самый большой из них встает и замахивается на тебя"
                 call start_battle(100, renpy.random.randint(10,40), "Бандит", battle_location_tavern)
                 if last_battle_win:
-                    "[miku.name] это оценила"
+                    "[m.name] это оценила"
                     $addLoveAndMoney("miku", 10, 10)
             jump talk_miku_quests
         "Никакой работы":
@@ -137,35 +137,38 @@ label talk_miku_quests:
     jump talk_miku_menu
 
 label talk_miku_info:
-    if miku_love >= 10 and not can_visit_library:
-        m "Знаешь, ты неплохой! "
-        m "Ладно, расскажу тебе одну тайну... "
-        m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"
-        m "*Описание того, как найти библиотеку*"
-        $ can_visit_library = True
-    elif miku_love >= 20 and not can_visit_training_ground:
-        m "Ты мне нравишься!"
-        m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
-        m "*Описание того, как попасть на тренировочную площадку*"
-        m "Если хочешь стать сильнее – тебе туда!"
-        $ can_visit_training_ground = True
+    if miku_love >= 50:
+        m "Мне нравится, что ты не просто клиент."
+        m "Я могу показать тебе нечто особенное... но только если ты готов к этому~"
+        menu:
+            "Я готов":
+                "IN PROGRESS"
+                jump talk_miku_info #TODO заменить на сцену минета от Мику
+            "Конечно готов":
+                "IN PROGRESS"
+                jump talk_miku_info #TODO заменить на сцену минета от Мику
+            "Всегда готов":
+                "IN PROGRESS"
+                jump talk_miku_info #TODO заменить на сцену минета от Мику
     elif miku_love >= 30 and not can_visit_bar:
         m "Ты определённо мой типаж!"
         m "В городе есть **закрытый бар**, куда пускают только своих."
         m "Там можно найти очень... полезных знакомств!"
         m "*Описание того, как найти закрытый бар*"
         m "Скажи, что ты от меня и тебя пропустят."
+    elif miku_love >= 20 and not can_visit_training_ground:
+        m "Ты мне нравишься!"
+        m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
+        m "*Описание того, как попасть на тренировочную площадку*"
+        m "Если хочешь стать сильнее – тебе туда!"
+        $ can_visit_training_ground = True
         $ can_visit_bar = True
-    elif miku_love >= 50:
-        m "Мне нравится, что ты не просто клиент."
-        m "Я могу показать тебе нечто особенное... но только если ты готов к этому~"
-        m:
-            "Я готов":
-                jump talk_miku_info #TODO заменить на сцену минета от Мику
-            "Конечно готов":
-                jump talk_miku_info #TODO заменить на сцену минета от Мику
-            "Всегда готов":
-                jump talk_miku_info #TODO заменить на сцену минета от Мику
+    elif miku_love >= 10 and not can_visit_library:
+        m "Знаешь, ты неплохой! "
+        m "Ладно, расскажу тебе одну тайну... "
+        m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"
+        m "*Описание того, как найти библиотеку*"
+        $ can_visit_library = True
     else:
         m "Хмм, пока ты ещё не заслужил моего доверия! Может, поможешь мне с парочкой дел?"
     jump talk_miku_menu
@@ -187,8 +190,6 @@ label tavern_task_board:
         "Уйти":
             m "Ну ладно, если передумаешь – заглядывай!"
     jump tavern
-
-
 
 # Сцена с комнатой игрока
 label room:
