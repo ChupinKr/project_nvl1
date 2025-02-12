@@ -9,7 +9,7 @@ default can_talk_to_freya = False
 
 label ruined_temple:
     show screen buttons
-    scene bg_ruined_temple with fade
+    scene bg ruined_temple with fade
     pause 1.0
 
     "Разрушенный храм… колонны в трещинах, повсюду мох и заросли, сквозь дыры в крыше пробиваются лучи солнца."
