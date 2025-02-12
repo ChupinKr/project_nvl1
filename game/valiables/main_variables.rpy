@@ -7,7 +7,7 @@ init:
     $ money = 0  # Харизма
     
     $ charisma = 0  # Харизма
-    $ strength = 0  # Сила
+    $ strength = 90  # Сила
     $ mana = 0  # Объем маны
     $ charisma_mod = 0  # Модификатор харизмы
     $ strength_mod = 0  # Модификатор силы
@@ -39,5 +39,3 @@ init:
     $ can_visit_forest = True
     $ can_visit_ruined_temple = True
     $ can_visit_monster_forest = True
-
-    $ nagatoro_strength = 90
