@@ -6,12 +6,12 @@ label surgency_tsunade_cure:
     scene bg_hospital with fade
     play music "audio/hospital_theme.mp3"
 
-    "Ты медленно приходишь в себя, чувствуя резкую боль во всём теле."
-    "Белый потолок, запах медикаментов… Похоже, ты в операционной."
 
     show ts neutral with dissolve
 
     if first_time_surgency and health == 0:
+        "Ты медленно приходишь в себя, чувствуя резкую боль во всём теле."
+        "Белый потолок, запах медикаментов… Похоже, ты в операционной."
         ts "Очнулся, наконец? Не люблю возиться с пациентами, которые валяются тут днями."
         if money <= 0:
             ts "Вижу у тебя небольшие проблемы с золотом."
@@ -76,12 +76,14 @@ label surgency_tsunade_menu:
                         ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
                         jump surgency_tsunade_menu
             jump surgency_tsunade_menu
-        "Спросить, где ты" if not can_visit_tavern:
+        "Спросить, где ты" if not can_visit_tavern and first_time_hospital:
             ts "Ты в лечебнице. Здесь поднимают на ноги таких, как ты — тех, кто не умеет держать меч или уклоняться от ударов."
             jump surgency_tsunade_menu
         "Поинтересоваться, как заработать денег" if not can_visit_tavern:
-            ts "Ох, ты хочешь расплатиться честно? Что ж, это похвально."
+            ts "Ох, ты хочешь расплачиваться честно? Что ж, это похвально."
+            ts "Вижу ты в этих краях раньше не бывал, так что расскажу"
             ts "В таверне всегда нужны помощники. Помоешь посуду — получишь монеты."
+            "[ts.name] рассказывает, как попасть в Таверну"
             $ can_visit_tavern = True
             jump surgency_tsunade_menu
         "Спросить про задания" if active_quest.name == no_quest.name:

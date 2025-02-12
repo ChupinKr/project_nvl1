@@ -2,12 +2,12 @@
 default first_time_rapunzel = True
 default first_time_elsa = True
 default first_time_nagatoro = True
+default can_see_info_panel = False
 
 # Флаг для возможности обращаться к богине
 default can_talk_to_freya = False
 
 label ruined_temple:
-    show screen buttons
     scene bg ruined_temple with fade
     pause 1.0
 
@@ -26,7 +26,7 @@ label ruined_temple:
 
 label ruined_temple_menu:
     menu:
-        "Обратиться к богине за советом" if (charisma > 10):
+        "Обратиться к богине за советом" if not can_see_info_panel:
             jump talk_to_freya
         "Отправиться в город":
             jump city

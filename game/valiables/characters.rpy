@@ -14,6 +14,9 @@ init:
     define s_str = 300
     define s_love = 0
     define mer = Character("Мерлин", color="#800080", image='mer')
+    define h = Character("Холо", color="#ff8c00")
+    define h_str = 0
+    define h_love = 0
 
     define miku = Character('Тавернщица', color="#00ffff")
     define miku_love = 0

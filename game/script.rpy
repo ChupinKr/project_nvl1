@@ -1,4 +1,4 @@
-﻿
+﻿$ active_quest = no_quest
 # Игра начинается здесь:
 label start:
 

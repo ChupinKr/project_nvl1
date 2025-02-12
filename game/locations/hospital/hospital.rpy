@@ -43,7 +43,7 @@ label hospital_sakura_menu:
                         "Ты решаешь пока не тратить деньги на лечение."
             jump hospital_sakura_menu
         "Перейти в операционную":
-            jump surgency_tsunade
+            jump surgency_tsunade_cure
         "Спросить про задания" if active_quest.name == no_quest.name:
             jump hospital_sakura_quests
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("s"):

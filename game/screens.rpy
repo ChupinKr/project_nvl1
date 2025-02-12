@@ -55,11 +55,15 @@ init python:
         notices = []
 
     def addLove(who, countLove):
-        global miku_love, nag_love,notices
+        global miku_love, nag_love, h_love, notices
         if who == "miku":
             miku_love += countLove
         elif who == "nag":
             nag_love += countLove
+        elif who == "nag":
+            nag_love += countLove
+        elif who == "holo":
+            h_love += countLove
         notices.append("Характеристика симпатии увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
@@ -161,11 +165,8 @@ screen info_panel:
             xalign 0.5
             spacing 5
 
-            if active_quest:
-                text "Текущая задача: [active_quest.name]" style "info_text"
-            else: 
-                text "Текущая задача: Найди чем заняться?" style "info_text"
-
+            text "Задача: [active_quest.name]" style "info_text"
+            text "Благословение: [chosen_blessing.name]" style "info_text"
             text "Золото: [money]" style "info_text"
             text "Сила: [strength]" style "info_text"
             text "Харизма: [charisma]" style "info_text"

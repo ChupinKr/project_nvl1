@@ -7,7 +7,10 @@ init python:
         reward_money=0, reward_character=0, 
         str_bonus=0, mana_bonus=0, char_bonus=0):
             if self:
-                self.name = whatToDo + " для " + forWho  # Название квеста
+                if forWho:
+                    self.name = whatToDo + " для " + forWho  # Название квеста
+                else:
+                    self.name = whatToDo 
             else:
                 self.name = "None"
             self.whatToDo = whatToDo  # Что сделать
@@ -30,7 +33,7 @@ init python:
             self.char_bonus = char_bonus  # Награда в стате харизмы
 
     
-    no_quest = GirlQuest(whatToDo="Найди чем заняться", forWho="самого себя", repeatable=True,
+    no_quest = GirlQuest(whatToDo="Найди чем заняться", forWho="", repeatable=True,
     location="Где хочешь", countObj=0, 
     character_says=["Займись уже чем-нибудь"],
     req_love=0, req_str=0, req_mana=0, req_char=0, 

@@ -18,7 +18,7 @@ init:
     $ time = 0 #Всего 3 времени (0 - раннее утро, 1 - день, 2 - вечер)
 
     #Текущий квест
-    $ active_quest = None
+    $ active_quest = no_quest
 
     # Массив доступных для главного героя заклинаний
     $ available_spells = []
@@ -36,6 +36,7 @@ init:
     $ can_visit_training_ground = False
     $ can_visit_hospital = False
     $ can_visit_black_market = False
+    $ can_visit_market = True
     $ can_visit_forest = True
     $ can_visit_ruined_temple = True
     $ can_visit_monster_forest = True
