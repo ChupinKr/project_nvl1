@@ -41,7 +41,7 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def minusMoneyPlusChar(minusMoney=0, chars, charCount):
+    def minusMoneyPlusChar(minusMoney, chars, charCount):
         global money, strength, charisma, mana, notices
         money -= minusMoney
         for char in chars:
@@ -101,7 +101,7 @@ init python:
     def addStr(who, countStr):
         global nag_str,notices
         if who == "nag":
-            nag_str += countStr
+            nag_str += countStr * strength_mod
         notices.append("Противник становится серьезнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
@@ -123,10 +123,10 @@ init python:
         global nag_str,miku_love,nag_love,notices
         if who == "miku":
             miku_love += countLove
-            miku_str += countStr
+            miku_str += countStr * strength_mod
         if who == "nag":
             nag_love += countLove
-            nag_str += countStr
+            nag_str += countStr * strength_mod
         notices.append("Противник становится серьезнее")
         notices.append("Характеристика симпатии увеличилась")
         renpy.show_screen('notify_plus', notices=notices)

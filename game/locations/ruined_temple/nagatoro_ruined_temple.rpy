@@ -85,6 +85,9 @@ label visit_nagatoro_ruined_temple:
                 p "Посмотрим, кто кого. Я готов на всё!"
                 nag "Вот так мне нравится! Давай, покажи, на что ты способен! Но помни, жалеть не стану."
                 call start_battle(100, nag_str, nag.name, battle_location_ruined_temple)
+                if last_battle_win:
+                    jump battle_win_ruined_temple_nagatoro
+
             "Не связываться":
                 p "Сегодня не время для сражений. Мне надо подумать."
                 show nag grin
@@ -94,7 +97,7 @@ label visit_nagatoro_ruined_temple:
                 "Может стоило хотя бы попытаться? В конце концов не убьет же она меня..? Да?"
                 "Ты покидаешь руины храма, оставаясь с мыслями о том, что только что произошло."
                 jump ruined_temple
-
+    # Не первая встреча
     else:
         show nag grin with dissolve
         nag "О, ты вернулся. Не ожидала увидеть тебя снова после нашей последней встречи, но, видимо, любопытство сильнее страха."
@@ -115,6 +118,8 @@ label nagatoro_ruined_temple_menu:
             show nag grin
             nag "Ха-ха! Снова рискнёшь? Мне нравится твоя наглость, но помни – слабость тут не прощается, и я не собираюсь тебя щадить."
             call start_battle(100, nag_str, nag.name, battle_location_ruined_temple)
+            if last_battle_win:
+                    jump battle_win_ruined_temple_nagatoro
         "Попросить задание.":
             jump nagatoro_ruined_temple_quests
         "Уйти.": 
@@ -328,6 +333,8 @@ label battle_win_ruined_temple_nagatoro:
                 nag "Давай быстрее, не тормози!"
                 $ can_visit_guild = True
                 jump guild_nagatoro
+                
+    #Уже может посетить гильдию
     else:
         # победа над Нагаторо
         if nag_love >= 30:

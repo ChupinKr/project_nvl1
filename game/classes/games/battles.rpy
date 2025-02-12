@@ -178,7 +178,6 @@ label battle_win:
     "Противник побежден!"
     $ last_battle_win = True
     $ strength += 2 * strength_mod
-    jump after_win_battle
     return
 
 label battle_loss:
@@ -206,31 +205,8 @@ label battle_escape:
         "Противник такого уровня тебя не отпустит, ты пропустил удар"
         jump qte_fail
 
-label after_win_battle:
-    if battle_location == "ruined_temple":
-        if enemy_name == nag.name:
-            jump battle_win_ruined_temple_nagatoro
-        elif enemy_name == r.name:
-            jump battle_win_ruined_temple_rapunzel
-        elif enemy_name == e.name:
-            jump battle_win_ruined_temple_elsa
-    elif battle_location == "magic_tower":
-        if enemy_name == nag.name:
-            jump battle_win_magic_tower_nagatoro
-        elif enemy_name == r.name:
-            jump battle_win_magic_tower_rapunzel
-        elif enemy_name == e.name:
-            jump battle_win_magic_tower_elsa
-    elif battle_location == "training_ground":
-        jump battle_win_training_ground
-    elif battle_location == "bar":
-        jump battle_win_bar
-    elif battle_location == "tavern":
-        jump battle_win_tavenr
-    else: 
-        return
-
 label escape_battle:
+    "Ухх, было близко, хорошо, что успел убежать"
     if battle_location == "ruined_temple":
         jump ruined_temple
     elif battle_location == "magic_tower":
@@ -241,5 +217,7 @@ label escape_battle:
         jump bar
     elif battle_location == "tavern":
         jump tavenr
+    elif battle_location == "market":
+        jump market
     else: 
         return

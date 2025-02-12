@@ -24,3 +24,4 @@ init:
     define guy1 = Character('Парень 1', color="#ffaaaa")
     define guy2 = Character('Парень 2', color="#ffaaaa")
     define guy3 = Character('Парень 3', color="#ffaaaa")
+    define sg = Character('Мутный тип', color="#ffaaaa") #shady guy

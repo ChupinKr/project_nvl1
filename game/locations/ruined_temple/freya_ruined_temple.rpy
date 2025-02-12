@@ -1,4 +1,4 @@
-$ is_show_buttons = False
+define is_show_buttons = False
 
 label talk_to_freya:
     scene bg haven with fade

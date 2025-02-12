@@ -1,5 +1,5 @@
 # Определение персонажей
-define t = Character("Торговка", color="#ff69b4")  # Наш аниме-персонаж
+define battle_location_market = "market"
 
 # Объявление переменных: love – показатель симпатии, visited_market – флаг первого посещения
 default first_visit_market = True
@@ -82,12 +82,26 @@ label market_menu:
             "У тебя получилось убедить всех, что ты в порядке, но тебя уже принесли в больницу"
             "Тебя уже захотели избить за такое, но тебе удалось забежать в больницу"
             jump hospital
+        "Осмотреться":
+            "Ты осматриваешься"
+            "Это выглядит подозрительно.."
+            if renpy.random.choice([False, False, True]) > 0:
+                "Лучше больше так не делать, а то можно и встрять.."
+            else:
+                "Какой-то мутный тип подходит к тебе"
+                sg "Эй, че вылупился? Зрение слишком хорошее?!"
+                call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market)
+                if last_battle_win:
+                    "[h.name] это видела"
+                    $addLove("miku", 10)
+            jump talk_miku_quests
+            jump market_menu
         "Уйти":
             jump city
 
 label visit_holo:
     show h
-    "TODO стандартное приветствие"
+    h "Охо-хо~ Ты попал в лапы мудрой волчицы, [hero_name]! Чем порадуешь меня сегодня?"
     jump holo_menu
 
 label holo_menu:
