@@ -190,9 +190,13 @@ screen info_panel:
             text "Харизма: [charisma]" style "info_text"
             text "Колдовство: [mana]" style "info_text"
             text "Симпатия [nag.name]: [nag_love]" style "info_text"
-            text "Сила [nag.name]: [nag_str]" style "info_text"
             text "Симпатия [miku.name]: [miku_love]" style "info_text"
-            text "Сила [miku.name]: [miku_str]" style "info_text"
+            text "Симпатия [h.name]: [h_love]" style "info_text"
+            text "Симпатия [f.name]: [f_love]" style "info_text"
+            text "Симпатия [s.name]: [s_love]" style "info_text"
+            text "Симпатия [ts.name]: [ts_love]" style "info_text"
+            text "Симпатия [e.name]: [e_love]" style "info_text"
+            text "Симпатия [r.name]: [r_love]" style "info_text"
 
 # Определяем стиль
 style info_text:
