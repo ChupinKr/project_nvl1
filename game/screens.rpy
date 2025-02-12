@@ -33,10 +33,20 @@ init python:
         notices = []
 
     def addLove(whatLove, countLove):
-        global miku_love,notices
+        global miku_love, nag_love,notices
         if whatLove == "miku_love":
             miku_love += countLove
+        elif whatLove == "nag_love":
+            nag_love += countLove
         notices.append("Характеристика симпатии увеличилась")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def addStr(whatStr, countStr):
+        global nag_str,notices
+        if whatStr == "nag_str":
+            nag_str += countStr
+        notices.append("Противник становится серьезнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
@@ -49,6 +59,19 @@ init python:
         notices.append("Ты получил " + str(plusMoney) + " монет")
         notices.append("У тебя " + str(money) + " монет")
 
+        notices.append("Характеристика симпатии увеличилась")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def addLoveAndStr(what, countLove, countStr):
+        global nag_str,miku_love,nag_love,notices
+        if what == "miku":
+            miku_love += countLove
+            miku_str += countStr
+        if what == "nag":
+            nag_love += countLove
+            nag_str += countStr
+        notices.append("Противник становится серьезнее")
         notices.append("Характеристика симпатии увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
