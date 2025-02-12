@@ -41,6 +41,24 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
+    def minusMoneyPlusChar(minusMoney=0, chars, charCount):
+        global money, strength, charisma, mana, notices
+        money -= minusMoney
+        for char in chars:
+            if char == "str":
+                strength += charCount * strength_mod
+                notices.append("Ты чувствуешь себя сильнее")
+            if char == "char":
+                charisma += charCount * charisma_mod
+                notices.append("Ты чувствуешь себя харизматичнее")
+            if char == "mana":
+                mana += charCount * mana_mod
+                notices.append("Ты чувствуешь себя умнее")
+        notices.append("Ты потерял " + str(plusMoney) + " монет")
+        notices.append("У тебя " + str(money) + " монет")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
     def addHealth(counHealth):
         global health,notices
         health += counHealth
