@@ -95,7 +95,32 @@ label holo_menu:
         "Купить товары":
             h "О-хо-хо, [hero_name], неужели ты наконец разжился монетками?"
             jump holo_market_menu
-        # "Чем тебе помочь?" if can_work_with_holo:
+        "Чем тебе помочь?" if can_work_with_holo:
+            menu:
+                "Протереть книги(5 монет)":
+                    h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
+                    call start_clean("books")
+                    if last_clean_win:
+                        h "Хватай следующую, быстрее!"
+                        call start_clean("books")
+                        if last_clean_win:
+                            h "Последнюю, торопись!"
+                            call start_clean("books")
+                            if last_clean_win:
+                                h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
+                                "Ты провёл время, помогая [h.name]"
+                                "[h.name] это оценила"
+                                $addLoveAndMoney("holo", 5, 5)
+                            else: 
+                                h "Эх, почти успели, упустили клиента."
+                        else: 
+                            h "Жаль, но ничего, будут еще клиенты."
+                    else: 
+                        h "[hero_name], это никуда не годится, работай лучше!"
+                    jump holo_menu
+                "Никакой работы":
+                    h "Эй, в следующий раз обещай, что поможешь!"
+                    jump holo_market_menu
         # "Попросить задание":
         # "Отказаться от задания":
         "Спросить, как тут заработать" if not can_work_with_holo or not can_visit_tavern:

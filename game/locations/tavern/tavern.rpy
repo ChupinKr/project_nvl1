@@ -100,20 +100,34 @@ label talk_miku_quests:
     menu:
         "Помыть посуду (5 золота)":
             miku "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
-            call start_clean
-            "Ты провёл время, помогая [miku.name]"
+            call start_clean("dish")
             if last_clean_win:
-                "[miku.name] это оценила"
-                $addLoveAndMoney("miku", 5, 5)
+                miku "Следующую! У нас много гостей, поторопись!"
+                call start_clean("dish")
+                if last_clean_win:
+                    miku "Последнюю, быстрее!"
+                    call start_clean("dish")
+                    if last_clean_win:
+                        miku "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
+                        "Ты провёл время, помогая [miku.name]"
+                        "[miku.name] это оценила"
+                        $addLoveAndMoney("miku", 5, 5)
+                    else: 
+                        miku "Эх, почти успели, упустили клиента."
+                else: 
+                    miku "Жаль, но ничего, этого я знаю, он еще вернется."
+            else: 
+                miku "[hero_name], тебе не нужны деньги? Почему так плохо?!"
             jump talk_miku_quests
-        "Прогнать шумных клиентов (10 золота)":
+        "Прогнать шумных гостей (10 золота)":
             miku "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!"
             if renpy.random.choice([False, True]) > 0:
                 "Ты поговорил с клиентами, и они ушли, хоть и неохотно."
                 $addMoney(10)
             else:
                 "Ты поговорил с клиентами, и они не захотели уходить по хорошему"
-                call start_battle(100, renpy.random.randint(10,40), "Бандиты", battle_location_tavern)
+                "Самый большой из них встает и замахивается на тебя"
+                call start_battle(100, renpy.random.randint(10,40), "Бандит", battle_location_tavern)
                 if last_battle_win:
                     "[miku.name] это оценила"
                     $addLoveAndMoney("miku", 10, 10)

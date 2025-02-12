@@ -1,8 +1,9 @@
 # Определяем изображения для грязной и чистой посуды
-image dish = "images/assets/cleaner/dirty_dish.png"
+
 image fresh_dish = "images/assets/cleaner/fresh_dish.png"
-image cup = "images/assets/cleaner/dirty_cup.png"
 image fresh_cup = "images/assets/cleaner/fresh_cup.png"
+image fresh_book_blue = "images/assets/cleaner/fresh_book_blue.png"
+image fresh_book_red = "images/assets/cleaner/fresh_book_red.png"
 
 # Трансформации для посуды "dish"
 transform trans_dish_show():
@@ -10,6 +11,12 @@ transform trans_dish_show():
 # Трансформации для посуды "cup"
 transform trans_cup_show():
     "images/assets/cleaner/dirty_cup.png"
+# Трансформации для посуды "book red"
+transform trans_book_red_show():
+    "images/assets/cleaner/dirty_book_red.png"
+# Трансформации для посуды "book blue"
+transform trans_book_blue_show():
+    "images/assets/cleaner/dirty_book_blue.png"
  
 transform pulse_zoom:
     zoom 1.0
@@ -35,6 +42,28 @@ transform trans_normal_cup():
  
 transform trans_touch_cup():
     trans_cup_show
+    function func_touch_dish
+    0.1
+    repeat
+
+transform trans_normal_book_red():
+    trans_book_red_show
+    0.1
+    repeat
+
+transform trans_touch_book_red():
+    trans_book_red_show
+    function func_touch_dish
+    0.1
+    repeat
+ 
+transform trans_normal_book_blue():
+    trans_book_blue_show
+    0.1
+    repeat
+ 
+transform trans_touch_book_blue():
+    trans_book_blue_show
     function func_touch_dish
     0.1
     repeat
@@ -105,8 +134,8 @@ screen dishScreen():
         value AnimatedValue(clean_bar, 100, clean_time)
         if clean_warning:
             left_bar Solid("#e02")
- 
-    text "Натирай посуду!" xalign 0.5 yalign 0.1 size 70 at pulse_zoom
+    
+    text ("Натирай посуду!" if whatToWash == "dish" else "Натирай книгу!") xalign 0.5 yalign 0.1 size 70 at pulse_zoom
 
     default refresh_var = 0
     bar value dish_value range dish_value_max:
@@ -118,9 +147,19 @@ screen dishScreen():
         xalign 0.5
         yalign 0.3
         focus_mask True
-        # В зависимости от выбранного типа посуды используем соответствующие трансформации:
-        idle (trans_normal_dish if selected_item == "dish" else trans_normal_cup)
-        hover (trans_touch_dish if selected_item == "dish" else trans_touch_cup)
+        # Исправленные условия для всех возможных значений selected_item:
+        idle (
+            trans_normal_dish if selected_item == "dish" else 
+            trans_normal_cup if selected_item == "cup" else 
+            trans_normal_book_red if selected_item == "book_red" else 
+            trans_normal_book_blue
+        )
+        hover (
+            trans_touch_dish if selected_item == "dish" else 
+            trans_touch_cup if selected_item == "cup" else 
+            trans_touch_book_red if selected_item == "book_red" else 
+            trans_touch_book_blue
+        )
         action SetScreenVariable("refresh_var", refresh_var)
     timer 0.1:
         action SetScreenVariable("refresh_var", refresh_var)
@@ -132,16 +171,16 @@ screen dishScreen():
         timer 0.1:
             action Jump("clean_success")
  
-label start_clean:
+label start_clean(whatToWash):
     # Сброс параметров игры
     $ dish_value = 0
     $ clean_bar = 100
     $ clean_warning = False
     # Случайным образом выбираем, с какой посудой будем работать
-    if renpy.random.choice([False, True]):
-        $ selected_item = "dish"
-    else:
-        $ selected_item = "cup"
+    if(whatToWash == "dish"):
+        $ selected_item = renpy.random.choice(["dish", "cup"])
+    if(whatToWash == "books"):
+        $ selected_item = renpy.random.choice(["book_blue", "book_red"])
     $ selected_fresh_item = "fresh_" + selected_item
     call screen dishScreen
     return
@@ -159,12 +198,21 @@ label clean_success:
         show fresh_dish:
             xalign 0.5
             yalign 0.3
-    else:
+    elif selected_item == "cup":
         show fresh_cup:
+            xalign 0.5
+            yalign 0.3
+    elif selected_item == "book_red":
+        show fresh_book_red:
+            xalign 0.5
+            yalign 0.3
+    elif selected_item == "book_blue":
+        show fresh_book_blue:
             xalign 0.5
             yalign 0.3
     pause 1.5
     hide fresh_cup
     hide fresh_dish
-    "Вы справились и заработали 5 монет!"
+    hide fresh_book_red
+    hide fresh_book_blue
     return
