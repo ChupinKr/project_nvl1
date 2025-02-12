@@ -1,3 +1,5 @@
+$ is_show_buttons = False
+
 label talk_to_freya:
     scene bg haven with fade
     pause 1.0
@@ -9,11 +11,12 @@ label talk_to_freya:
 
 label talk_to_freya_menu:
     menu:
-        "Помоги мне":
+        "Помоги мне" if not is_show_buttons:
             f "Дорогой, я понимаю, всё это очень сложно, но я верю в тебя!"
             f "Я не могу вмешиваться в дела смертных, пойми"
             f "Хотя кажется я знаю, что тебе может помочь.."
             show screen buttons
+            $ is_show_buttons = True
             f "Я вручаю тебе магические письмена, в них будет написана вся важная для тебя информация."
             f "А также всё, что с тобой происходит.."
             f "Но не переживай, я не буду в них заглядывать."
