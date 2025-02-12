@@ -104,7 +104,7 @@ label talk_miku_quests:
             "Ты провёл время, помогая [miku.name]"
             if last_clean_win:
                 "[miku.name] это оценила"
-                $addLoveAndMoney("miku_love", 5, 5)
+                $addLoveAndMoney("miku", 5, 5)
             jump talk_miku_quests
         "Прогнать шумных клиентов (10 золота)":
             miku "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!"
@@ -116,7 +116,7 @@ label talk_miku_quests:
                 call start_battle(100, renpy.random.randint(10,40), "Бандиты", battle_location_tavern)
                 if last_battle_win:
                     "[miku.name] это оценила"
-                    $addLoveAndMoney("miku_love", 10, 10)
+                    $addLoveAndMoney("miku", 10, 10)
             jump talk_miku_quests
         "Никакой работы":
             miku "Эх, ну ладно... Может, в другой раз!"

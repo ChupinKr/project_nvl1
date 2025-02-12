@@ -38,28 +38,60 @@ label surgency_tsunade:
     $ bring = []
     scene bg_hospital with fade
     play music "audio/hospital_theme.mp3"
+    show ts with dissolve
 
-    show ts neutral with dissolve
-
-    ts "Пришел вернуть долги?"
-
-    jump surgency_tsunade_menu
+    #можно зайти если:
+    # не может попасть в таверну
+    # нет задания
+    # не полные хп
+    # активное задание у тсунаде
+    if not can_visit_tavern or active_quest.name == no_quest.name or health < 100 or isActualQuestOfCharacter("ts"):
+        ts "Пришел вернуть долги?"
+        jump surgency_tsunade_menu
+    else:
+        ts "Я занята, возвращайся, когда будешь присмерти."
+        hide ts
+        "Тебы выгнали из операционной, и правда, что тебе там понадобилось?"
+        jump hospital
 
 label surgency_tsunade_menu: 
-    show tsunade with dissolve
     menu:
         set bring
-        "Спросить, где ты":
+        "Вылечи меня" if health < 100:
+            ts "А деньги то у тебя на это есть?"
+            menu:
+                "Да, [ts.name], вылечите меня поскорее" if money > 10:
+                    $minusMoney(10)
+                    pause 3.5
+                    $addHealth(100)
+                "Нет, но я надеялся, что вы мне поможете даром":
+                    p "Нет, но я верю, что такая молодая красавица как вы, [ts.name], не сможет оставить юношу умирать"
+                    if ts_love > 20 and charisma > 20:
+                        ts "Каков наглец, ладно, но это в последний раз."
+                        $addHealth(100)
+                        pause 3.5
+                        $minusLove("ts", 5)
+                        jump surgency_tsunade_menu
+                    else:
+                        ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
+                        jump surgency_tsunade_menu
+            jump surgency_tsunade_menu
+        "Спросить, где ты" if not can_visit_tavern:
             ts "Ты в лечебнице. Здесь поднимают на ноги таких, как ты — тех, кто не умеет держать меч или уклоняться от ударов."
             jump surgency_tsunade_menu
-        "Поинтересоваться, как заработать денег":
+        "Поинтересоваться, как заработать денег" if not can_visit_tavern:
             ts "Ох, ты хочешь расплатиться честно? Что ж, это похвально."
             ts "В таверне всегда нужны помощники. Помоешь посуду — получишь монеты."
             $ can_visit_tavern = True
             jump surgency_tsunade_menu
-        "Спросить про задания" if not active_quest:
+        "Спросить про задания" if active_quest.name == no_quest.name:
             p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"
             jump surgency_tsunade_quests
+        "Отказаться от выполнения задания" if isActualQuestOfCharacter("ts"):
+            p "Я не смогу выполнить это задание."
+            ts "Ох, ну хорошо, если передумаешь - приходи."
+            $ removeQuest()
+            jump surgency_tsunade_menu
         "Поблагодарить и уйти":
             ts "Хоть кто-то умеет говорить «спасибо». Постарайся больше не попадать ко мне."
             jump city
@@ -69,10 +101,21 @@ label surgency_tsunade_quests:
     ts "Задания? Хм... У меня есть кое-что для тебя."
     menu:
         "Принять задание на охоту за редким ингредиентом":
-            ts "Мне нужен редкий алхимический ингредиент — клык ядовитой змеи. Можно достать его в глубине леса."
-            ts "Принеси его, и я заплачу тебе."
-            $ active_quest = "Добыча клыка змеи для Цунаде"
-            jump surgency_tsunade_menu
+            if isAbleQuest(quest_tsunade_poison_tooth, 0):
+                ts "Мне нужен редкий алхимический ингредиент — клык ядовитой змеи. Можно достать его в глубине леса."
+                ts "Принеси его, и я заплачу тебе."
+                menu:
+                    "Принять квест":
+                        ts "Отлично, спасибо, буду ждать тебя, желательно в целости."
+                        $ getQuest(quest_tsunade_poison_tooth)
+                        jump surgency_tsunade_menu
+                    "Не принимать квест":
+                        ts "Ну, значит, не так уж и нуждаешься в деньгах."
+                        jump surgency_tsunade_menu
+                jump surgency_tsunade_menu
+            else:
+                ts "Я передумала, вижу, ты слишком слаб для этой работы, возвращайся, когда поднаберешься сил."
+                jump surgency_tsunade_menu
         "Отказаться":
             ts "Ну, значит, не так уж и нуждаешься в деньгах."
             jump surgency_tsunade_menu

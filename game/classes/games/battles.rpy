@@ -1,5 +1,6 @@
 init python:
     import random, math
+    health_to_not_escape = 20
     damage_to_enemy = 0
     damage = 0
 
@@ -111,6 +112,9 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     $ enemy_strength = enemy_str  # Устанавливаем здоровье противника
     $ battle_location = loc
     $ enemy_name = name
+    $ qte_time = 3.0
+    $ qte_bar = 100
+    $ enemy_strength += 5 # с течением боя противник становится сильнее(чтобы не затягивать бои)
     $ qte_sequence = generate_qte_sequence()  # Генерируем случайную последовательность
     $ qte_input = ""  # Обнуляем ввод игрока
     show screen battle_hp_bars
@@ -175,6 +179,7 @@ label battle_win:
     $ last_battle_win = True
     $ strength += 2 * strength_mod
     jump after_win_battle
+    return
 
 label battle_loss:
     "Противник нанес вам урон [damage], ваш показатель здоровья [health]"
@@ -182,6 +187,7 @@ label battle_loss:
     $ last_battle_win = False
     $ death_count += 1
     jump surgency_tsunade_cure
+    return
 
 label battle_escape:
     "Ты пытаешься сбежать из боя"
@@ -219,10 +225,9 @@ label after_win_battle:
         jump battle_win_training_ground
     elif battle_location == "bar":
         jump battle_win_bar
-    elif battle_location == "tavenr":
+    elif battle_location == "tavern":
         jump battle_win_tavenr
     else: 
-        "Залупа какая-то, не нашел куда тебя пристроить, пора умирать, напиши мне, этой баг по ходу"
         return
 
 label escape_battle:
@@ -234,8 +239,7 @@ label escape_battle:
         jump training_ground
     elif battle_location == "bar":
         jump bar
-    elif battle_location == "tavenr":
+    elif battle_location == "tavern":
         jump tavenr
     else: 
-        "Залупа какая-то, не нашел куда тебя пристроить, пора умирать, напиши мне, этой баг по ходу"
         return

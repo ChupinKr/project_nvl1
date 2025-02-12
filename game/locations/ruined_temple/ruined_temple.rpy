@@ -2,7 +2,6 @@
 default first_time_rapunzel = True
 default first_time_elsa = True
 default first_time_nagatoro = True
-default first_time_ruined_temple = True
 
 # Флаг для возможности обращаться к богине
 default can_talk_to_freya = False
@@ -12,7 +11,7 @@ label ruined_temple:
     scene bg ruined_temple with fade
     pause 1.0
 
-    "Разрушенный храм… колонны в трещинах, повсюду мох и заросли, сквозь дыры в крыше пробиваются лучи солнца."
+    "Ты у входа в разрушенный храм… колонны в трещинах, повсюду мох и заросли. Слева густой лес, а справа виднеется город."
 
     if charisma > 0 and first_time_rapunzel:
         jump visit_rapunzel_ruined_temple
@@ -20,9 +19,6 @@ label ruined_temple:
         jump visit_elsa_ruined_temple
     elif strength > 0 and first_time_nagatoro:
         jump visit_nagatoro_ruined_temple
-    elif first_time_ruined_temple:
-        "Похоже, тебе придётся самому искать путь…"
-        $ first_time_ruined_temple = False
     else:
         "Куда направишься?"
 

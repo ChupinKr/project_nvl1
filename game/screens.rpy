@@ -11,10 +11,32 @@ init offset = -1
 image paper = "paper.png"
 default notices = []
 init python:
+    def getQuest(quest):
+        global active_quest,notices
+        active_quest = quest
+        notices.append("Ты принял квест " + str(active_quest.name))
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def removeQuest():
+        global active_quest, notices
+        notices.append("Ты отказался от квеста " + str(active_quest.name))
+        active_quest = no_quest
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
     def addMoney(plusMoney=0):
         global money,notices
         money += plusMoney
         notices.append("Ты получил " + str(plusMoney) + " монет")
+        notices.append("У тебя " + str(money) + " монет")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def minusMoney(minusMoney=0):
+        global money,notices
+        money -= minusMoney
+        notices.append("Ты потерял " + str(plusMoney) + " монет")
         notices.append("У тебя " + str(money) + " монет")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
@@ -32,27 +54,39 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def addLove(whatLove, countLove):
+    def addLove(who, countLove):
         global miku_love, nag_love,notices
-        if whatLove == "miku_love":
+        if who == "miku":
             miku_love += countLove
-        elif whatLove == "nag_love":
+        elif who == "nag":
             nag_love += countLove
         notices.append("Характеристика симпатии увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def addStr(whatStr, countStr):
+    def minusLove(who, countLove):
+        global miku_love, nag_love, ts_love, notices
+        if who == "miku":
+            miku_love -= countLove
+        elif who == "nag":
+            nag_love -= countLove
+        elif who == "ts":
+            ts_love -= countLove
+        notices.append("Характеристика симпатии уменьшилась")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def addStr(who, countStr):
         global nag_str,notices
-        if whatStr == "nag_str":
+        if who == "nag":
             nag_str += countStr
         notices.append("Противник становится серьезнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def addLoveAndMoney(whatLove, countLove, plusMoney=0):
+    def addLoveAndMoney(who, countLove, plusMoney=0):
         global money,miku_love,notices
-        if whatLove == "miku_love":
+        if who == "miku":
             miku_love += countLove
 
         money += plusMoney
@@ -63,12 +97,12 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def addLoveAndStr(what, countLove, countStr):
+    def addLoveAndStr(who, countLove, countStr):
         global nag_str,miku_love,nag_love,notices
-        if what == "miku":
+        if who == "miku":
             miku_love += countLove
             miku_str += countStr
-        if what == "nag":
+        if who == "nag":
             nag_love += countLove
             nag_str += countStr
         notices.append("Противник становится серьезнее")
@@ -136,6 +170,10 @@ screen info_panel:
             text "Сила: [strength]" style "info_text"
             text "Харизма: [charisma]" style "info_text"
             text "Колдовство: [mana]" style "info_text"
+            text "Симпатия [nag.name]: [nag_love]" style "info_text"
+            text "Сила [nag.name]: [nag_str]" style "info_text"
+            text "Симпатия [miku.name]: [miku_love]" style "info_text"
+            text "Сила [miku.name]: [miku_str]" style "info_text"
 
 # Определяем стиль
 style info_text:
