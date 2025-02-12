@@ -132,8 +132,7 @@ init python:
         if quest.req_char > charisma:
             result = False
         #renpy.watch(str(result))
-        return True
-        #return result
+        return result
 
 #вычисляет принят ли квест этого персонажа сейчас
     def isActualQuestOfCharacter(who):
