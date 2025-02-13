@@ -45,7 +45,7 @@ label surgency_tsunade:
     # нет задания
     # не полные хп
     # активное задание у тсунаде
-    if not can_visit_tavern or active_quest.name == no_quest.name or health < 100 or isActualQuestOfCharacter("ts"):
+    if not can_visit_tavern or isNoQuestNow() or health < 100 or isActualQuestOfCharacter("ts"):
         ts "Пришел вернуть долги?"
         jump surgency_tsunade_menu
     else:
@@ -86,7 +86,7 @@ label surgency_tsunade_menu:
             "[ts.name] рассказывает, как попасть в Таверну"
             $ can_visit_tavern = True
             jump surgency_tsunade_menu
-        "Спросить про задания" if active_quest.name == no_quest.name:
+        "Спросить про задания" if isNoQuestNow():
             p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"
             jump surgency_tsunade_quests
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("ts"):

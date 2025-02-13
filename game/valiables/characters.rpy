@@ -18,7 +18,9 @@ init:
     define s_str = 300
     define s_love = 0
     define mer = Character("Мерлин", color="#800080", image='mer')
-    define h = Character("Холо", color="#ff8c00")
+    define mer_str = 0
+    define mer_love = 0
+    define h = Character("Холо", color="#ff8c00", image='h')
     define h_str = 0
     define h_love = 0
     define m = Character('Тавернщица', color="#00ffff", image='m')

@@ -113,16 +113,16 @@ label visit_nagatoro_ruined_temple:
 
 label nagatoro_ruined_temple_menu:
     menu:
-        "Тренировка(сражение).": 
+        "Тренировка(сражение)": 
             p "Давай потренируемся. Я хочу проверить, насколько я могу улучшиться."
             show nag grin
             nag "Ха-ха! Снова рискнёшь? Мне нравится твоя наглость, но помни – слабость тут не прощается, и я не собираюсь тебя щадить."
             call start_battle(100, nag_str, nag.name, battle_location_ruined_temple)
             if last_battle_win:
                     jump battle_win_ruined_temple_nagatoro
-        "Попросить задание.":
+        "Попросить задание" if isNoQuestNow():
             jump nagatoro_ruined_temple_quests
-        "Уйти.": 
+        "Уйти": 
             p "Я думаю, что мне стоит уйти."
             show nag grin
             nag "Как скажешь. Но знай, ты сможешь найди меня здесь утром, если тебе нужно что-то более интересное."

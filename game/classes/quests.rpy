@@ -122,6 +122,16 @@ init python:
     str_bonus=0, mana_bonus=5, char_bonus=0
     )
 
+    #Проверить, что у тебя нет задания
+    def isNoQuestNow():
+        result = False
+        #renpy.watch(str(quest.req_str))
+        #renpy.watch(str(strength))
+        if active_quest.name == no_quest.name:
+            result = True
+        return result
+
+    #проверить, что ты подходишь для задания
     def isAbleQuest(quest, love):
         result = True
         #renpy.watch(str(quest.req_str))
@@ -137,7 +147,7 @@ init python:
         #renpy.watch(str(result))
         return result
 
-#вычисляет принят ли квест этого персонажа сейчас
+    #вычисляет принят ли квест этого персонажа сейчас
     def isActualQuestOfCharacter(who):
         result = False
         if who == "ts":

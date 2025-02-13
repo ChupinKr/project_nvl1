@@ -1,7 +1,7 @@
 define first_time_city = True
 
 label city:
-    scene bg_city with fade
+    scene bg city with fade
     play music "audio/city_theme.mp3"
 
     if first_time_city:
