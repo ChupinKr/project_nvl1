@@ -6,9 +6,9 @@ init:
 
     $ money = 500  # Харизма
     
-    $ charisma = 0  # Харизма
-    $ strength = 0  # Сила
-    $ mana = 0  # Объем маны
+    $ charisma = 1  # Харизма
+    $ strength = 1  # Сила
+    $ mana = 1  # Объем маны
     $ charisma_mod = 1  # Модификатор харизмы
     $ strength_mod = 1  # Модификатор силы
     $ mana_mod = 1  # Модификатор маны

@@ -134,7 +134,7 @@ label elsa_first_time_blessing:
 
     "Отлично. Я-то думал, она просто посмеётся и забудет обо мне. А теперь я внезапно оказался её подопытным. Почему у меня такое чувство, что ничего хорошего из этого не выйдет?"  
 
-    scene city with fade
+    scene bg city with fade
     show e neutral
 
     e "Добро пожаловать в город. Раз уж ты не можешь отличить магию от цирковых фокусов, тебе не помешает экскурсия."
@@ -267,7 +267,7 @@ label elsa_quests:
     return
 
 label go_to_city_with_elsa:
-    scene city_gate with fade
+    scene bg city with fade
     show e neutral
 
     e "Добро пожаловать в город. Здесь ты найдёшь то, что тебе нужно."

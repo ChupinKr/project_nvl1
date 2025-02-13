@@ -12,11 +12,11 @@ label forest:
 
     "Ты заходишь в лес"
     
-    if charisma > 0 and first_time_rapunzel:
+    if charisma > 1 and first_time_rapunzel:
         jump visit_rapunzel_forest
-    elif mana > 0 and first_time_elsa:
+    elif mana > 1 and first_time_elsa:
         jump visit_elsa_forest
-    elif strength > 0 and first_time_nagatoro:
+    elif strength > 1 and first_time_nagatoro:
         jump visit_nagatoro_forest
     else:
         "Куда направишься?"

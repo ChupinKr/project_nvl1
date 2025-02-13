@@ -16,7 +16,7 @@ label magic_tower_first_visit:
 
     "Чем ближе я подходил, тем сильнее ощущал странное покалывание в воздухе. Это место буквально бурлило энергией."
 
-    show elsa neutral at center
+    show e neutral at center with dis5
     e "Не зевай. Идём внутрь."
 
     scene magic_tower_hall with fade
@@ -30,20 +30,20 @@ label magic_tower_first_visit:
 
     "Я буквально ощущал, как энергия течёт сквозь эти стены."
 
-    show merlin confident at center
+    show mer confident at center with dis5
     "Но моё восхищение прервала женщина, стоявшая в центре зала. "
     "Высокая, с длинными чёрными волосами, холодным, но проницательным взглядом. "
     "Она скрестила руки на груди и с ухмылкой посмотрела на меня."
 
-    show merlin amused
+    show mer amused
     mer "[hero_name] выглядит так, будто впервые видит магию."
 
-    show elsa smirk
+    show e smirk at right_mid with dis5
     e "Не просто впервые — он вообще понятия не имеет, что это такое."
 
     p "Эй! Я хотя бы слышал про магию!"
 
-    show merlin smirk
+    show mer smirk
     mer "О, слышал? Какая редкость. Давай проверим, что ты знаешь."
 
     "Ух, мне не нравится этот её тон."
@@ -54,20 +54,20 @@ label magic_tower_first_visit:
     menu:
         "Магическая палочка?":
             p "Магическая палочка!"
-            show merlin facepalm
+            show mer facepalm
             mer "О боги… Какой ужас. Нет."
         "Слова заклинания?":
             p "Наверное, слова заклинания?"
-            show merlin sigh
+            show mer sigh
             mer "Я надеялась, что ты не настолько безнадёжен…"
         "Внутренняя магическая энергия?":
             p "Внутренняя магическая энергия!"
-            show merlin neutral
+            show mer neutral
             mer "Хм… Верно, но я уверена, что ты сказал это наугад."
 
     "Эльза закатила глаза, явно не веря в мои способности."
 
-    show elsa smirk
+    show e smirk
     e "Я предупреждала."
 
     ### ВТОРАЯ ПРОВЕРКА: РАЗЛИЧИЕ ЭЛЕМЕНТОВ  
@@ -76,18 +76,18 @@ label magic_tower_first_visit:
     menu:
         "Огонь горячий, а воздух нет?":
             p "Ну... Огонь горячий, а воздух нет?"
-            show merlin annoyed
+            show mer annoyed
             mer "Гениально. Никогда бы не догадалась. Спасибо, что просветил меня."
         "Огонь сжигает, а воздух помогает дышать?":
             p "Огонь сжигает, а воздух помогает дышать?"
-            show merlin smirk
+            show mer smirk
             mer "Ты определённо мастер очевидных истин."
         "Огонь уничтожает, а воздух может направлять магию?":
             p "Ну… Огонь уничтожает, а воздух может направлять магические потоки?"
-            show merlin surprised
+            show mer surprised
             mer "Хм… Ты хоть что-то понимаешь. Может быть, из тебя ещё что-то выйдет."
 
-    show elsa smirk
+    show e smirk
     e "Хотя бы одну догадку он угадал."
 
     ### ТРЕТЬЯ ПРОВЕРКА: ПРАКТИЧЕСКИЙ ЭКСПЕРИМЕНТ  
@@ -98,35 +98,35 @@ label magic_tower_first_visit:
             p "Я закрыл глаза и попытался представить шар света в своей ладони…"
             "..."
             "Ничего не произошло."
-            show merlin sigh
+            show mer sigh
             mer "Ожидаемо."
         "Произнести какое-нибудь слово, как в книгах":
             p "Люмен! Люкс! Светоч! Дай мне свет!"
             "..."
             "Абсолютно ничего не произошло."
-            show elsa amused
+            show e amused
             e "Ахахах! Может, тебе попробовать 'абракадабра'?"
         "Потрясти руками, вдруг сработает":
             p "Я резко вытянул руки и начал трясти ими, пытаясь вызвать хоть какой-то эффект."
             "..."
             "Ничего."
-            show merlin neutral
+            show mer neutral
             mer "Ты выглядел так глупо, что я даже не знаю, смеяться или плакать."
 
-    show merlin amused
+    show mer amused
     mer "Поздравляю, ты полностью провалил все три проверки."
 
     p "Ну, я хотя бы пытался!"
 
-    show merlin smirk
+    show mer smirk
     mer "Да-да. Но в этот раз попытки не считаются. "
     mer "Хотя... Возможно, у тебя есть потенциал. "
     mer "Где-то глубоко-глубоко под слоем бесполезности."
 
-    show elsa smirk
+    show e smirk
     e "Я знала, что это будет весело."
 
-    show merlin neutral
+    show mer neutral
     mer "Ладно, раз уж Эльза тебя сюда привела, я дам тебе шанс. "
     mer "Добро пожаловать в магическую башню. Но учти: ты на самом дне. "
     mer "И тебе придётся очень постараться, чтобы хоть немного подняться."
@@ -138,7 +138,7 @@ label magic_tower_first_visit:
 
 label magic_tower_return_with_elsa:
     scene magic_tower_hall with fade
-    show elsa neutral
+    show e neutral
 
     "Я снова оказался у входа в магическую башню. Эльза шла рядом, не скрывая своего недовольства."
 
@@ -146,7 +146,7 @@ label magic_tower_return_with_elsa:
 
     e "Ты даже хуже, чем я ожидала. Но не волнуйся, у нас ещё есть время тебя исправить."
 
-    show merlin smirk
+    show mer smirk
     mer "О, ты снова привела его? Ему не хватило унижения в прошлый раз?"
 
     p "Я слышу вас, если что..."
@@ -164,7 +164,7 @@ label magic_tower_alone:
 
     "Я вздохнул и толкнул тяжёлую дверь, войдя внутрь."
 
-    show merlin neutral
+    show mer neutral
     mer "Ну-ну, кто это у нас? И без няньки в этот раз."
 
     p "Я решил прийти сам."
@@ -175,15 +175,17 @@ label magic_tower_alone:
 
     p "Я хочу научиться магии."
 
-    show merlin smirk
+    show mer smirk
     mer "Посмотрим, насколько ты серьёзен."
     mer "Мне пора бежать, если понадоблюсь..."
     mer "Думаю ты сможешь меня найти."
-    hide merlin dis5
+    hide mer dis5
 
     jump magic_tower_hub
 
 label magic_tower_hub:
+    hide e
+    hide mer
     "Я могу исследовать магическую башню, изучая магию и выполняя задания наставницы."
     
     menu:
@@ -237,13 +239,13 @@ label find_merlin:
         jump magic_tower_hub
 
 label merlin_encounter:
-    show merlin smirk at center
+    show mer smirk at center
 
     mer "Ты меня нашёл. Вопрос в том, зачем."
 
     menu:
         "Попросить урок":
-            show merlin amused
+            show mer amused
             mer "Ты действительно хочешь учиться? Ну что ж, посмотрим, как долго ты продержишься."
             "Мерлин начала объяснять сложные магические принципы, и мой мозг начал плавиться."
             $ mana += 2
@@ -251,7 +253,7 @@ label merlin_encounter:
             jump magic_tower_hub
 
         "Попросить квест":
-            show merlin neutral
+            show mer neutral
             mer "Если хочешь задание – у меня всегда есть кое-что... рискованное."
             "Мерлин хитро улыбнулась и начала рассказывать про квест."
             #TODO дописать menu с квестами от Мерлин
@@ -263,25 +265,25 @@ label merlin_encounter:
 # Поиск Эльзы (всегда успешно) с меню взаимодействий
 label find_elsa:
     scene magic_tower_training_room with fade
-    show elsa neutral at center
+    show e neutral at center
 
     "Я нашёл Эльзу в тренировочном зале. "
     "Она как раз заканчивала очередное упражнение, заставляя ледяные копья исчезать в воздухе."
 
-    show elsa smirk
+    show e smirk
     e "Решил проверить, насколько ты жалок сегодня?"
     jump find_elsa_menu
 
 label find_elsa_menu:
     menu:
         "Потренироваться с ней":
-            show elsa amused
+            show e amused
             e "Хорошо. Только не плачь, если замёрзнешь."
             "Эльза начала тренировку, и я попытался повторять её движения... но быстро понял, что мне ещё далеко до её уровня."
             $ mana += 1
             jump find_elsa_menu
         "Попросить квест" if isNoQuestNow():
-            show elsa neutral
+            show e neutral
             e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся."
             call elsa_quests_magic_tower
         "Уйти":

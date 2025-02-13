@@ -9,6 +9,7 @@ init offset = -1
 ## МОИ ЭКРАНЫ
 
 image paper = "paper.png"
+default notices = []
 init python:
     def getQuest(quest):
         global active_quest,notices
@@ -47,6 +48,17 @@ init python:
         notices.append("Ты потерял " + str(item.price) + " монет")
         notices.append("У тебя " + str(money) + " монет")
         notices.append("Ты купил " + str(item.name))
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def minusAllChar(count):
+        global money, strength, charisma, mana, notices
+        strength += charCount * strength_mod
+        charisma += charCount * charisma_mod
+        mana += charCount * mana_mod
+        notices.append("Сил нет, буквально..")
+        notices.append("Будто постарел немного..")
+        notices.append("И ты забываешь базовые знания..")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
@@ -110,7 +122,7 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def addStr(who, countStr):
+    def addNPCStr(who, countStr):
         global nag_str,notices
         if who == "nag":
             nag_str += countStr * strength_mod

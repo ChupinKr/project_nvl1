@@ -342,7 +342,7 @@ label battle_win_forest_nagatoro:
             nag "Эй, ты совсем порвал мой кэйкоги!"
             p "В настоящем сражении одежда неминуемо порвется."
             nag "Так не пойдет, реванш, сейчас же!"
-            $addStr("nag", 5)
+            $addNPCStr("nag", 5)
             call start_battle(100, nag_str, nag.name, 'return_to_this')
             if last_battle_win:
                 hide nag 
