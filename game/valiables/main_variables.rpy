@@ -39,6 +39,7 @@ init:
     $ can_visit_training_ground = False
     $ can_visit_hospital = False
     $ can_visit_black_market = False
+    $ can_visit_brothel = False
     $ can_visit_market = True
     $ can_visit_forest = True
     $ can_visit_ruined_temple = True

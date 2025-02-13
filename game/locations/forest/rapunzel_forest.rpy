@@ -139,7 +139,7 @@ label rapunzel_first_time_blessing:
             r "Ничего, я тебе всё покажу... и ты запомнишь этот день навсегда."
 
             "Она наклоняется ещё ближе, её губы почти касаются моего уха. Горячее дыхание обжигает кожу, а внутри меня разгорается любопытство... и не только оно."
-            jump brothel_rapunzel
+            jump rapunzel_brothel_first_visit
 
 
 label first_time_rapunzel_no_blessing:

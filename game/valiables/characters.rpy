@@ -26,6 +26,9 @@ init:
     define m = Character('Тавернщица', color="#00ffff", image='m')
     define miku_love = 0
     define miku_str = 40
+    define maomao = Character('Мао Мао', color="#006400", image='mao')
+    define maomao_love = 0
+    define maomao_str = 20
 
     ## Some guys
     define guy1 = Character('Парень 1', color="#ffaaaa")
