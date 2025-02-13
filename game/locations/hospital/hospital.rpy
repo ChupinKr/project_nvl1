@@ -14,7 +14,7 @@ label hospital:
     else:
         "Ты снова в больнице, где всегда кипит работа."
     if first_time_sakura:
-        show sakura neutral with dissolve
+        show s neutral with dissolve
         s "О, новый пациент? Или ты просто интересуешься нашей работой?"
         s "Я Сакура, один из главных медиков города. Если тебе нужно лечение, обращайся."
         s "Но помни, лечение стоит денег."
@@ -29,7 +29,7 @@ label hospital:
         s "Хорошо, странный мальчик, меня зовут [s.name], если тебе понадобится лечение - обращайся!"
         p "А меня зовут [hero_name], рад знакомству!"
     else:
-        show sakura smile with dissolve
+        show s smile with dissolve
         s "Опять ты? Надеюсь, не сильно пострадал."
     jump hospital_sakura_menu
 
@@ -68,21 +68,21 @@ label hospital_sakura_menu:
             jump city
 
 label hospital_sakura_quests:
-    show sakura neutral with dissolve
+    show s smile with dissolve
     s "Ты хочешь помочь? Хорошо, у нас в больнице всегда есть работа."
     
     menu:
         "Задание на сбор трав":
-            s "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу."
+            s @smile_closed_eyes "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу."
             if isAbleQuest(quest_sakura_materials, s_love):
-                s "За хороший набор я неплохо заплачу."
+                s @smile_shy "За хороший набор я неплохо заплачу."
                 menu:
                     "Принять квест":
-                        s "Будь осторожен, в лесу могут быть монстры."
+                        s @smile_shy "Будь осторожен, в лесу могут быть монстры."
                         $ getQuest(quest_sakura_materials)
                         jump hospital_sakura_menu
                     "Не принимать квест":
-                        s "А мог бы и помочь, теперь придется самой всё собирать."
+                        s @angry "А мог бы и помочь, теперь придется самой всё собирать."
                         jump hospital_sakura_menu
             else:
                 s "Подожди, я вижу, ты пока не подходишь для этой работы, возвращайся, когда станешь сильнее."

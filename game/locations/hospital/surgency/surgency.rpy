@@ -3,7 +3,7 @@ default first_time_surgency = True
 
 label surgency_tsunade_cure:
     $ bring = []
-    scene bg_hospital with fade
+    scene bg surgery with fade
     play music "audio/hospital_theme.mp3"
 
 
@@ -15,7 +15,10 @@ label surgency_tsunade_cure:
         ts "Очнулся, наконец? Не люблю возиться с пациентами, которые валяются тут днями."
         if money <= 0:
             ts "Вижу у тебя небольшие проблемы с золотом."
-        ts "Повезло тебе, в первый раз я тебя подлатала бесплатно."
+            ts "Повезло тебе, в первый раз я тебя подлатала бесплатно."
+        else:
+            ts @smile "С тебя 10 монет за срочную операцию"
+            $money -= 10
         $ can_visit_hospital = True
         $ first_time_surgency = False
         $ health = 100
@@ -31,7 +34,7 @@ label surgency_tsunade_cure:
             $ health = 100
             "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
         else:
-            ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
+            ts @angry "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
     jump surgency_tsunade_menu
 
 label surgency_tsunade:
@@ -112,7 +115,7 @@ label surgency_tsunade_quests:
                         $ getQuest(quest_tsunade_poison_tooth)
                         jump surgency_tsunade_menu
                     "Не принимать квест":
-                        ts "Ну, значит, не так уж и нуждаешься в деньгах."
+                        ts @angry "Ну, значит, не так уж и нуждаешься в деньгах."
                         jump surgency_tsunade_menu
                 jump surgency_tsunade_menu
             else:
