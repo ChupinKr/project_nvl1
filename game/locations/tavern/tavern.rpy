@@ -191,27 +191,6 @@ label tavern_task_board:
             m "Ну ладно, если передумаешь – заглядывай!"
     jump tavern
 
-# Сцена с комнатой игрока
-label room:
-    scene room_bg with fade
-    "Ты у себя в комнате"
-    
-    menu:
-        "Отдохнуть":
-            "Как же давно я не мог просто отдохнуть"
-            $addHealth(10)
-            jump room
-        "Провести ночь":
-            "Пора спать"
-            $addHealth(100)
-            jump room
-        "Покинуть комнату":
-            "Вы идете в таверну"
-            jump tavern
-        "Пойти в город":
-            "Вы вышли в город"
-            jump city
-
 # Сцена с сомнительным столом
 label suspicious_table:
     scene bg tavern

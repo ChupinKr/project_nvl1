@@ -41,6 +41,16 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
+    def buyItem(item):
+        global money,gg_items,notices
+        money -= item.price
+        gg_items.append(item)
+        notices.append("Ты потерял " + str(item.price) + " монет")
+        notices.append("У тебя " + str(money) + " монет")
+        notices.append("Ты купил " + str(item.name))
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
     def minusMoneyPlusChar(minusMoney, chars, charCount):
         global money, strength, charisma, mana, notices
         money -= minusMoney
@@ -54,8 +64,11 @@ init python:
             if char == "mana":
                 mana += charCount * mana_mod
                 notices.append("Ты чувствуешь себя умнее")
-        notices.append("Ты потерял " + str(minusMoney) + " монет")
-        notices.append("У тебя " + str(money) + " монет")
+        if minusMoney > 0:
+            notices.append("Ты потерял " + str(minusMoney) + " монет")
+            notices.append("У тебя " + str(money) + " монет")
+        if len(notices) < 1:
+            notices.append("Ты чувствуешь себя везучим")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 

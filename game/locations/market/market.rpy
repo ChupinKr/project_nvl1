@@ -146,7 +146,7 @@ label holo_menu:
                     h "Эй, в следующий раз обещай, что поможешь!"
                     jump holo_menu
         # "Попросить задание":
-        # "Отказаться от задания":
+        # "Отказаться от задания" if isNoQuestNow(): 
         "Спросить, как тут заработать" if not can_work_with_holo or not can_visit_tavern:
             p "Слушай, [h.name], а как в этом городе можно заработать денег?"
             h "О-хо-хо! [hero_name]! Я не ошиблась! Ты действительно бедный!"
@@ -160,20 +160,54 @@ label holo_menu:
             jump market
 
 label holo_market_menu:
-    "INFO: каждую книгу или предмет можно использовать несколкьо раз(надо прочитать 3 раза, чтобы закончить ее)"
-    "INFO: покупка некоторых предметов недоступна, тк вы не понимаете их ценности, пока не разовьете свои навыки достаточно"
+    "INFO: каждый предмет можно использовать несколько раз(надо использовать 3 раза)"
+    "INFO: покупка некоторых предметов недоступна, тк вы не понимаете их ценности, пока не разовьете предыдущий уровень предмета"
+    "INFO: использовать предметы возможно только дома(в комнате в таверне)"
     menu:
-        # "Купить мотивирующую книгу(20 монет)":
-        # "Купить зеркало(50 монет)":
-        # "Купить артефакт \"PlusSize\"(100 монет)":
-        # "Купить гантели легкие(20 монет)":
-        # "Купить гантели средние(50 монет)":
-        # "Купить гантели тяжелые(100 монет)":
-        # "Купить книгу(20 монет)":
-        # "Купить магический шар(50 монет)":
-        # "Купить гримуар(100 монет)":
-        # "Купить путеводитель по лесу(100 монет)":
-        # "Купить краткий экскурс по ведению боя(100 монет)":#отступление теперь доступно при малом количестве хп
+        "Купить [item_motivational_book.name]([item_motivational_book.price] монет)" if isAbleToBuy(item_motivational_book):
+            "Вы купили [item_motivational_book.name]"
+            $buyItem(item_motivational_book)
+            jump holo_market_menu
+        "Купить [item_mirror.name]([item_mirror.price] монет)" if isAbleToBuy(item_mirror):
+            "Вы купили [item_mirror.name]"
+            $buyItem(item_mirror)
+            jump holo_market_menu
+        "Купить [item_art_plus_size.name]([item_art_plus_size.price] монет)" if isAbleToBuy(item_art_plus_size):
+            "Вы купили [item_art_plus_size.name]"
+            $buyItem(item_art_plus_size)
+            jump holo_market_menu
+        "Купить [item_dumbbells_ez.name]([item_dumbbells_ez.price] монет)" if isAbleToBuy(item_dumbbells_ez):
+            "Вы купили [item_dumbbells_ez.name]"
+            $buyItem(item_dumbbells_ez)
+            jump holo_market_menu
+        "Купить [item_weight_mid.name]([item_weight_mid.price] монет)" if isAbleToBuy(item_weight_mid):
+            "Вы купили [item_weight_mid.name]"
+            $buyItem(item_dumbbells_ez)
+            jump holo_market_menu
+        "Купить [item_barbell.name]([item_barbell.price] монет)" if isAbleToBuy(item_barbell):
+            "Вы купили [item_barbell.name]"
+            $buyItem(item_barbell)
+            jump holo_market_menu
+        "Купить [item_book_math.name]([item_book_math.price] монет)" if isAbleToBuy(item_book_math):
+            "Вы купили [item_book_math.name]"
+            $buyItem(item_book_math)
+            jump holo_market_menu
+        "Купить [item_self_study_guide.name]([item_self_study_guide.price] монет)" if isAbleToBuy(item_self_study_guide):
+            "Вы купили [item_self_study_guide.name]"
+            $buyItem(item_self_study_guide)
+            jump holo_market_menu
+        "Купить [item_grimoire.name]([item_grimoire.price] монет)" if isAbleToBuy(item_grimoire):
+            "Вы купили [item_grimoire.name]"
+            $buyItem(item_grimoire)
+            jump holo_market_menu
+        "Купить [item_forest_guide.name]([item_forest_guide.price] монет)" if isAbleToBuy(item_forest_guide):
+            "Вы купили [item_forest_guide.name]"
+            $buyItem(item_forest_guide)
+            jump holo_market_menu
+        "Купить [item_combat_book.name]([item_combat_book.price] монет)" if isAbleToBuy(item_combat_book):
+            "Вы купили [item_combat_book.name]"
+            $buyItem(item_combat_book)
+            jump holo_market_menu
         "Уйти":
             h "Приятно было с тобой сотрудничать"
             jump market_menu
