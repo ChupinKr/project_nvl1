@@ -1,6 +1,6 @@
 # Поиск Мерлин (шанс зависит от mana)
 label find_merlin:
-    scene magic_tower_hall with fade
+    scene bg magic_tower with fade
 
     "Я отправился на поиски Мерлин. Она не любит, когда её беспокоят, но, возможно, мне повезёт."
 

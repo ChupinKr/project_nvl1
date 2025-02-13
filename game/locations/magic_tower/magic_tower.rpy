@@ -8,7 +8,7 @@ label magic_tower_elsa:
         jump magic_tower_return_with_elsa
 
 label magic_tower_first_visit:
-    scene magic_tower_exterior with fade
+    scene bg magic_tower_enterence with fade
 
     "Передо мной возвышалась гигантская магическая башня."
     "Она выглядела не просто древней — её стены словно впитали в себя время."
@@ -19,7 +19,7 @@ label magic_tower_first_visit:
     show e neutral at center with dis5
     e "Не зевай. Идём внутрь."
 
-    scene magic_tower_hall with fade
+    scene bg magic_tower with fade
 
     "Мы вошли внутрь, и я на секунду потерял дар речи."
 
@@ -137,7 +137,7 @@ label magic_tower_first_visit:
     jump magic_tower_hub
 
 label magic_tower_return_with_elsa:
-    scene magic_tower_hall with fade
+    scene bg magic_tower with fade
     show e neutral
 
     "Я снова оказался у входа в магическую башню. Эльза шла рядом, не скрывая своего недовольства."
@@ -158,7 +158,7 @@ label magic_tower_return_with_elsa:
     jump magic_tower_hub
 
 label magic_tower_alone:
-    scene magic_tower_hall with fade
+    scene bg magic_tower with fade
 
     "Я стоял перед величественной магической башней. В отличие от прошлого раза, теперь Эльзы рядом не было."
 
@@ -184,6 +184,7 @@ label magic_tower_alone:
     jump magic_tower_hub
 
 label magic_tower_hub:
+    scene bg magic_tower with fade
     hide e
     hide mer
     "Я могу исследовать магическую башню, изучая магию и выполняя задания наставницы."
@@ -203,105 +204,31 @@ label magic_tower_hub:
 
 # Исследование магической башни с шансом найти "Великую книгу для Дураков"
 label explore_magic_tower:
-    scene magic_tower_library with fade
-
-    "Я решил осмотреть магическую башню. "
-    "Здесь было полно загадочных комнат, пыльных полок с книгами и странных артефактов."
+    "Я решил исследовать магическую башню"
 
     $ luck = renpy.random.randint(1, 100)
+    $ lib = renpy.random.randint(1, 100)
+    if lib < 25:
+        scene bg magic_library1 with fade
+    if lib >= 25 and lib < 50:
+        scene bg magic_library2 with fade
+    if lib >= 50 and lib < 75:
+        scene bg magic_library3 with fade
+    if lib >= 75 and lib < 100:
+        scene bg magic_library4 with fade
+
+    "Здесь было полно загадочных комнат, пыльных полок с книгами и странных артефактов"
+    "Я осмотрел одну из секций гигантской библиотеки"
+    "Было потрачено немало времени на изучение книг"
 
     if luck > 95:  # 5% шанс найти легендарную книгу
         "Пролистывая одну из книжных полок, я наткнулся на потрёпанную книгу с нелепым названием: 'Великая книга для Дураков'."
 
         "Я осторожно открыл её, и вдруг почувствовал, как мощный поток энергии пронёсся через меня!"
 
-        $ mana += 10
+        $minusMoneyPlusChar(0, ["mana"], 10)
         "Моя магическая энергия резко возросла! Кажется, я стал немного сильнее."
     
     else:
         "Я нашёл несколько старых свитков с записями о магии, но ничего особо ценного."
     jump magic_tower_hub
-
-# Поиск Мерлин (шанс зависит от mana)
-label find_merlin:
-    scene magic_tower_hall with fade
-
-    "Я отправился на поиски Мерлин. Она не любит, когда её беспокоят, но, возможно, мне повезёт."
-
-    $ find_chance = mana * 5  # Чем выше mana, тем выше шанс
-    $ roll = renpy.random.randint(1, 100)
-
-    if roll <= find_chance:
-        jump merlin_encounter
-    else:
-        "Я бродил по башне, но так и не смог её найти. Видимо, она ушла по своим магическим делам."
-        "Интересно, что еще инетересного можно найти в башне"
-        jump magic_tower_hub
-
-label merlin_encounter:
-    show mer smirk at center
-
-    mer "Ты меня нашёл. Вопрос в том, зачем."
-
-    menu:
-        "Попросить урок":
-            show mer amused
-            mer "Ты действительно хочешь учиться? Ну что ж, посмотрим, как долго ты продержишься."
-            "Мерлин начала объяснять сложные магические принципы, и мой мозг начал плавиться."
-            $ mana += 2
-            #TODO дописать, что она не может больше тратить на меня свое время и ей пора идти
-            jump magic_tower_hub
-
-        "Попросить квест":
-            show mer neutral
-            mer "Если хочешь задание – у меня всегда есть кое-что... рискованное."
-            "Мерлин хитро улыбнулась и начала рассказывать про квест."
-            #TODO дописать menu с квестами от Мерлин
-            
-        "Уйти":
-            "Я решил не рисковать и оставить Мерлин в покое."
-            jump magic_tower_hub
-
-# Поиск Эльзы (всегда успешно) с меню взаимодействий
-label find_elsa:
-    scene magic_tower_training_room with fade
-    show e neutral at center
-
-    "Я нашёл Эльзу в тренировочном зале. "
-    "Она как раз заканчивала очередное упражнение, заставляя ледяные копья исчезать в воздухе."
-
-    show e smirk
-    e "Решил проверить, насколько ты жалок сегодня?"
-    jump find_elsa_menu
-
-label find_elsa_menu:
-    menu:
-        "Потренироваться с ней":
-            show e amused
-            e "Хорошо. Только не плачь, если замёрзнешь."
-            "Эльза начала тренировку, и я попытался повторять её движения... но быстро понял, что мне ещё далеко до её уровня."
-            $ mana += 1
-            jump find_elsa_menu
-        "Попросить квест" if isNoQuestNow():
-            show e neutral
-            e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся."
-            call elsa_quests_magic_tower
-        "Уйти":
-            "Я решил оставить Эльзу в покое и не мешать её тренировке."
-            jump magic_tower_hub
-
-label elsa_quests_magic_tower:
-    menu:
-        "Собирать магические материалы":
-            p "Я готов собирать магические материалы."
-            e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
-            $ active_quest = quest_elsa_materials
-        "Стать испытуемым":
-            p "Я готов стать подпытным кроликом."
-            e "Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
-            e "Твоё тело мне пригодится~"
-            $ active_quest = quest_elsa_test
-            jump elsa_test
-        "Я передумал":
-            jump find_elsa_menu
-    return
