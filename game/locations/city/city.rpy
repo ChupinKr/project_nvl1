@@ -45,4 +45,4 @@ label city:
             jump black_market
         "Выйти за городские стены" if can_visit_forest:
             "Ты можешь покинуть город и отправиться в дикую природу. Но будь осторожен: за стенами правят совсем другие законы."
-            jump ruined_temple
+            jump forest

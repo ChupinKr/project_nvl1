@@ -9,7 +9,6 @@ init offset = -1
 ## МОИ ЭКРАНЫ
 
 image paper = "paper.png"
-default notices = []
 init python:
     def getQuest(quest):
         global active_quest,notices
@@ -202,26 +201,20 @@ screen info_panel:
             text "Сила: [strength]" style "info_text"
             text "Харизма: [charisma]" style "info_text"
             text "Колдовство: [mana]" style "info_text"
-            text "Симпатия [nag.name]: [nag_love]" style "info_text"
-            text "Симпатия [m.name]: [miku_love]" style "info_text"
-            text "Симпатия [h.name]: [h_love]" style "info_text"
-            text "Симпатия [f.name]: [f_love]" style "info_text"
-            text "Симпатия [s.name]: [s_love]" style "info_text"
-            text "Симпатия [ts.name]: [ts_love]" style "info_text"
-            text "Симпатия [e.name]: [e_love]" style "info_text"
-            text "Симпатия [r.name]: [r_love]" style "info_text"
+            text "[nag.name]: [nag_love]♥" style "info_text"
+            text "[m.name]: [miku_love]♥" style "info_text"
+            text "[h.name]: [h_love]♥" style "info_text"
+            text "[f.name]: [f_love]♥" style "info_text"
+            text "[s.name]: [s_love]♥" style "info_text"
+            text "[ts.name]: [ts_love]♥" style "info_text"
+            text "[e.name]: [e_love]♥" style "info_text"
+            text "[r.name]: [r_love]♥" style "info_text"
 
 # Определяем стиль
 style info_text:
     size 35
     color "#000"
     font "gui/fonts/NK123.ttf"
-
-
-            
-
-
-
 
 ################################################################################
 ## Стили

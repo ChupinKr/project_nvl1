@@ -1,5 +1,5 @@
-label visit_rapunzel_ruined_temple:
-    scene ruined_temple with fade
+label visit_rapunzel_forest:
+    scene forest with fade
     show rapunzel happy with dissolve
 
     if first_time_rapunzel and chosen_blessing.name == "Дар Соблазнителя":
@@ -220,17 +220,17 @@ label rapunzel_not_first_time:
                     r "Есть такие грибы... Они обладают уникальными свойствами."
                     r "Если ты их найдешь, я буду просто в восторге!"
                     $ active_quest = quest_rapunzel_mashrooms
-                    jump visit_rapunzel_ruined_temple
+                    jump visit_rapunzel_forest
 
                 "Приглашать девушек работать в борделе":
                     r "О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
                     r "Если приведешь мне парочку, я тебя щедро отблагодарю~"
                     $ active_quest = quest_rapunzel_women
-                    jump visit_rapunzel_ruined_temple
+                    jump visit_rapunzel_forest
 
         "Уйти":
             p "В другой раз, Рапунцель."
             show rapunzel pout
             r "Ну вот, а я уже придумала, чем тебя занять~"
             r "Ладно, не пропадай!"
-            jump ruined_temple
+            jump forest

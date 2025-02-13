@@ -1,7 +1,7 @@
-define battle_location_ruined_temple = "ruined_temple"
+define battle_location_forest = "forest"
 
-label visit_nagatoro_ruined_temple:
-    scene bg ruined_temple with fade
+label visit_nagatoro_forest:
+    scene bg forest with fade
     show nag grin with dissolve
 
     if first_time_nagatoro:
@@ -84,9 +84,9 @@ label visit_nagatoro_ruined_temple:
             "Дать [nag.name] понять, кто тут главный":
                 p "Посмотрим, кто кого. Я готов на всё!"
                 nag "Вот так мне нравится! Давай, покажи, на что ты способен! Но помни, жалеть не стану."
-                call start_battle(100, nag_str, nag.name, battle_location_ruined_temple)
+                call start_battle(100, nag_str, nag.name, battle_location_forest)
                 if last_battle_win:
-                    jump battle_win_ruined_temple_nagatoro
+                    jump battle_win_forest_nagatoro
 
             "Не связываться":
                 p "Сегодня не время для сражений. Мне надо подумать."
@@ -96,7 +96,7 @@ label visit_nagatoro_ruined_temple:
                 "Так мне повезло? Или чутье меня обманывает? "
                 "Может стоило хотя бы попытаться? В конце концов не убьет же она меня..? Да?"
                 "Ты покидаешь руины храма, оставаясь с мыслями о том, что только что произошло."
-                jump ruined_temple
+                jump forest
     # Не первая встреча
     else:
         show nag grin with dissolve
@@ -109,27 +109,27 @@ label visit_nagatoro_ruined_temple:
         nag "Если хочешь, могу предложить тренировки – немного подправить твои слабости не повредит, а может, и сделает тебя крепче."
         nag "Или, может, хочешь задание? У меня есть пара дел, которые могут тебе подойти, если ты не трус."
         
-        jump nagatoro_ruined_temple_menu
+        jump nagatoro_forest_menu
 
-label nagatoro_ruined_temple_menu:
+label nagatoro_forest_menu:
     menu:
         "Тренировка(сражение)": 
             p "Давай потренируемся. Я хочу проверить, насколько я могу улучшиться."
             show nag grin
             nag "Ха-ха! Снова рискнёшь? Мне нравится твоя наглость, но помни – слабость тут не прощается, и я не собираюсь тебя щадить."
-            call start_battle(100, nag_str, nag.name, battle_location_ruined_temple)
+            call start_battle(100, nag_str, nag.name, battle_location_forest)
             if last_battle_win:
-                    jump battle_win_ruined_temple_nagatoro
+                    jump battle_win_forest_nagatoro
         "Попросить задание" if isNoQuestNow():
-            jump nagatoro_ruined_temple_quests
+            jump nagatoro_forest_quests
         "Уйти": 
             p "Я думаю, что мне стоит уйти."
             show nag grin
             nag "Как скажешь. Но знай, ты сможешь найди меня здесь утром, если тебе нужно что-то более интересное."
             "Её слова заставляют меня задуматься, но уходить сейчас, похоже, будет разумно. Мне нужно подготовиться лучше перед следующим шагом."
-            jump ruined_temple
+            jump forest
 
-label nagatoro_ruined_temple_quests:
+label nagatoro_forest_quests:
     p "Мне нужно задание. Что ты хочешь, чтобы я сделал, чтобы доказать, что я не просто заблудившийся мальчик?"
     show nag neutral
     nag "Хм, у меня есть парочка задач, если, конечно, ты не слишком боязлив и готов рискнуть."
@@ -143,10 +143,10 @@ label nagatoro_ruined_temple_quests:
                 "Принять квест":
                     nag "Покажи, что ты не трус. Докажи, что можешь постоять за себя!"
                     $ active_quest = quest_nagatoro_goblins
-                    jump nagatoro_ruined_temple_menu
+                    jump nagatoro_forest_menu
                 "Не принимать квест":
                     nag "Ожидаемо, ты пока не готов. Возвращайся, когда наберёшься смелости."
-                    jump nagatoro_ruined_temple_menu
+                    jump nagatoro_forest_menu
         "Зачистить часть леса от диких зверей.":
             p "Зачистить часть леса от диких зверей, чтобы хоть немного восстановить порядок."
             show nag neutral
@@ -155,10 +155,10 @@ label nagatoro_ruined_temple_quests:
                 "Принять квест":
                     nag "Покажи, что в тебе есть хоть капля мужества. Давай, удиви меня!"
                     $ active_quest = quest_nagatoro_forest
-                    jump nagatoro_ruined_temple_menu
+                    jump nagatoro_forest_menu
                 "Не принимать квест":
                     nag "Ожидаемо, ты пока не готов. Вернись, когда найдёшь в себе больше отваги."
-                    jump nagatoro_ruined_temple_menu
+                    jump nagatoro_forest_menu
         "Уничтожить банду разбойников на восточной дороге.":
             p "Уничтожить банду разбойников на восточной дороге, чтобы восстановить хоть чуточку справедливости."
             show nag grin
@@ -167,17 +167,17 @@ label nagatoro_ruined_temple_quests:
                 "Принять квест":
                     nag "Покажи, что ты не болтун. Вперёд, докажи свою силу!"
                     $ active_quest = quest_nagatoro_bandits
-                    jump nagatoro_ruined_temple_menu
+                    jump nagatoro_forest_menu
                 "Не принимать квест":
                     nag "Ожидаемо, ты пока не готов. Может, вернёшься, когда найдёшь в себе больше смелости."
-                    jump nagatoro_ruined_temple_menu
+                    jump nagatoro_forest_menu
         "Передумал":
             show nag smile_closed
             nag "Ожидаемо, ты пока не готов. Возвращайся, когда решишь, что ты не просто заблудившийся мальчик."
-            jump nagatoro_ruined_temple_menu
+            jump nagatoro_forest_menu
 
-label battle_win_ruined_temple_nagatoro:
-    scene bg ruined_temple with fade
+label battle_win_forest_nagatoro:
+    scene bg forest with fade
     show nag neutral with dissolve
 
     nag "Ух, ты неплох для новичка... но не радуйся слишком рано."
@@ -356,11 +356,11 @@ label battle_win_ruined_temple_nagatoro:
                 nag normal_shy_battle3 "[hero_name], ты, надеюсь, насмотрелся? Может уже свалишь пока цел?"
                 p "Аа, ээ, да, конечно, уже ухожу!"
                 "Ты уходишь, понимая, что всё было не зря"
-                jump ruined_temple
+                jump forest
             else:
                 nag "И это всё, что ты можешь? Беги, беги, слабак!"
                 $minusLove("nag", 10)
-                jump ruined_temple
+                jump forest
                 "Ты убегаешь, пока не понимаешь, что в безопасности"
                 "И когда понимаешь, что опасность миновала, задаешься риторическим вопросом.."
                 p "Может мне стоило достойно принять поражение?"
@@ -369,13 +369,13 @@ label battle_win_ruined_temple_nagatoro:
             nag "Эй, ты порвал мой кэйкоги!"
             p "В настоящем сражении одежда неизбежно изнашивается."
             nag "[hero_name], на сегодня закончили, приходи завтра, я буду серьезна."
-            jump ruined_temple
+            jump forest
         elif nag_love >= 10:
             show nag normal_shy_battle1
             nag "[hero_name], больше не хватайся так, ты растянул мне всю одежу!"
             p "Это было необходимо, чтобы наконец победить тебя"
             nag "На сегодня ты свободен, мне нужно тренироваться!."
-            jump ruined_temple
+            jump forest
         nag "Ха, не подумай, что я специально затягивала. Просто я не хотела разрушать твои надежды, если ты ещё не готов к настоящему бою."
         show nag grin
         nag "Ты же сам знаешь, что я не из тех, кто даёт слабым больше, чем нужно."
