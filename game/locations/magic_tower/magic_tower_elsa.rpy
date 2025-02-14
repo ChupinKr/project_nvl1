@@ -16,7 +16,12 @@ label find_elsa_menu:
             show e amused
             e "Хорошо. Только не плачь, если замёрзнешь."
             "Эльза начала тренировку, и я попытался повторять её движения... но быстро понял, что мне ещё далеко до её уровня."
-            $ mana += 1
+            #$ mana += 1
+            call magic_training(mana)
+            if last_reaction_win:
+                jump win_elsa_training
+            else:
+                jump fail_elsa_training
             jump find_elsa_menu
         "Попросить квест" if isNoQuestNow():
             show e neutral
@@ -41,3 +46,18 @@ label elsa_quests_magic_tower:
         "Я передумал":
             jump find_elsa_menu
     return
+
+label win_elsa_training:
+    show e open_smile with fade
+    e "Вау, да у тебя талант, мое уважение."
+    p "Надо будет повторить, мне понравилось."
+    e smile_shy "Мне тоже~~"
+    $e_love += 10
+    jump find_elsa_menu
+
+label fail_elsa_training:
+    show e smile with fade
+    e @laugh "Это потрясающе!"
+    p "Что? У меня же не вышло."
+    e @laugh "Да, меня потрясло то, насколько ты необучаем."
+    jump find_elsa_menu
