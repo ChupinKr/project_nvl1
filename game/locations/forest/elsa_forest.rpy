@@ -255,12 +255,12 @@ label elsa_quests:
         "Собирать магические материалы":
             p "Я готов собирать магические материалы."
             e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
-            $ active_quest = quest_elsa_materials
+            $ getQuest(quest_elsa_materials)
         "Стать испытуемым":
             p "Я готов стать подпытным кроликом."
             e "Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
             e "Твоё тело мне пригодится~"
-            $ active_quest = quest_elsa_test
+            $ getQuest(quest_elsa_test)
             jump elsa_test
         "Я передумал":
             jump elsa_not_first_time

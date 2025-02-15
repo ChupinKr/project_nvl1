@@ -142,7 +142,7 @@ label nagatoro_forest_quests:
             menu:
                 "Принять квест":
                     nag "Покажи, что ты не трус. Докажи, что можешь постоять за себя!"
-                    $ active_quest = quest_nagatoro_goblins
+                    $ getQuest(quest_nagatoro_goblins)
                     jump nagatoro_forest_menu
                 "Не принимать квест":
                     nag "Ожидаемо, ты пока не готов. Возвращайся, когда наберёшься смелости."
@@ -154,7 +154,7 @@ label nagatoro_forest_quests:
             menu:
                 "Принять квест":
                     nag "Покажи, что в тебе есть хоть капля мужества. Давай, удиви меня!"
-                    $ active_quest = quest_nagatoro_forest
+                    $ getQuest(quest_nagatoro_forest)
                     jump nagatoro_forest_menu
                 "Не принимать квест":
                     nag "Ожидаемо, ты пока не готов. Вернись, когда найдёшь в себе больше отваги."
@@ -166,7 +166,7 @@ label nagatoro_forest_quests:
             menu:
                 "Принять квест":
                     nag "Покажи, что ты не болтун. Вперёд, докажи свою силу!"
-                    $ active_quest = quest_nagatoro_bandits
+                    $ getQuest(quest_nagatoro_bandits)
                     jump nagatoro_forest_menu
                 "Не принимать квест":
                     nag "Ожидаемо, ты пока не готов. Может, вернёшься, когда найдёшь в себе больше смелости."

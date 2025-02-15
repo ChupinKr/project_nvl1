@@ -113,7 +113,9 @@ label talk_miku_quests:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
                         "Ты провёл время, помогая [m.name]"
                         "[m.name] это оценила"
-                        $addLoveAndMoney("miku", 5, 5)
+                        $addLove("m", 10)
+                        pause 3.5
+                        $addMoney(10)
                     else: 
                         m "Эх, почти успели, упустили клиента."
                 else: 
@@ -132,14 +134,16 @@ label talk_miku_quests:
                 call start_battle(100, renpy.random.randint(10,40), "Бандит", battle_location_tavern)
                 if last_battle_win:
                     "[m.name] это оценила"
-                    $addLoveAndMoney("miku", 10, 10)
+                    $addLove("m", 10)
+                    pause 3.5
+                    $addMoney(10)
             jump talk_miku_quests
         "Никакой работы":
             m @angry "Эх, ну ладно... Может, в другой раз!"
     jump talk_miku_menu
 
 label talk_miku_info:
-    if miku_love >= 50:
+    if m_love >= 50:
         m "Мне нравится, что ты не просто клиент."
         m "Я могу показать тебе нечто особенное... но только если ты готов к этому~"
         menu:
@@ -152,20 +156,20 @@ label talk_miku_info:
             "Всегда готов":
                 "IN PROGRESS"
                 jump talk_miku_info #TODO заменить на сцену минета от Мику
-    elif miku_love >= 30 and not can_visit_bar:
+    elif m_love >= 30 and not can_visit_bar:
         m "Ты определённо мой типаж!"
         m "В городе есть **закрытый бар**, куда пускают только своих."
         m "Там можно найти очень... полезных знакомств!"
         m "*Описание того, как найти закрытый бар*"
         m "Скажи, что ты от меня и тебя пропустят."
-    elif miku_love >= 20 and not can_visit_training_ground:
+    elif m_love >= 20 and not can_visit_training_ground:
         m "Ты мне нравишься!"
         m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
         m "*Описание того, как попасть на тренировочную площадку*"
         m "Если хочешь стать сильнее – тебе туда!"
         $ can_visit_training_ground = True
         $ can_visit_bar = True
-    elif miku_love >= 10 and not can_visit_library:
+    elif m_love >= 10 and not can_visit_library:
         m "Знаешь, ты неплохой! "
         m "Ладно, расскажу тебе одну тайну... "
         m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"

@@ -62,7 +62,7 @@ label market:
                 h "Красота – вещь хорошая, но если за ней пустота, то и разговаривать не о чем."
         h "Вот и славно! Теперь я знаю, что передо мной не просто болван, а кое-что интересное."  
         if (holo_choices == 3):
-            $addLove("holo",10)
+            $addLove("h",10)
             show h smile_shy
             "[h.name] смеётся, её хвост неторопливо покачивается из стороны в сторону. Кажется, ей понравился ваш ответ."
         h smile "Может, ещё заглянешь? Кто знает, вдруг я предложу тебе выгодную сделку... или устрою тебе ещё один экзамен."
@@ -96,7 +96,7 @@ label market_menu:
                 call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market)
                 if last_battle_win:
                     "[h.name] это видела"
-                    $addLove("miku", 10)
+                    $addLove("m", 10)
             jump talk_miku_quests
             jump market_menu
         "Уйти":
@@ -127,7 +127,9 @@ label holo_menu:
                                 h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
                                 "Ты провёл время, помогая [h.name]"
                                 "[h.name] это оценила"
-                                $addLoveAndMoney("holo", 5, 5)
+                                $addLove("h",5)
+                                pause 3.5
+                                $addMoney(5)
                             else: 
                                 h "Эх, почти успели, упустили клиента."
                         else: 

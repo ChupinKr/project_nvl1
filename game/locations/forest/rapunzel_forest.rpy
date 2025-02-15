@@ -231,13 +231,13 @@ label rapunzel_quests:
         "Собрать особые грибы":
             r "Есть такие грибы... Они обладают уникальными свойствами."
             r "Если ты их найдешь, я буду просто в восторге!"
-            $ active_quest = quest_rapunzel_mashrooms
+            $ getQuest(quest_rapunzel_mashrooms)
             jump rapunzel_forest
 
         "Приглашать девушек работать в борделе":
             r "О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
             r "Если приведешь мне парочку, я тебя щедро отблагодарю~"
-            $ active_quest = quest_rapunzel_women
+            $ getQuest(quest_rapunzel_women)
             jump rapunzel_forest
 
         "Я передумал":

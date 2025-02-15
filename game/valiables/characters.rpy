@@ -24,8 +24,8 @@ init:
     define h_str = 0
     define h_love = 0
     define m = Character('Тавернщица', color="#00ffff", image='m')
-    define miku_love = 0
-    define miku_str = 40
+    define m_love = 0
+    define m_str = 40
     define maomao = Character('Мао Мао', color="#006400", image='mao')
     define maomao_love = 0
     define maomao_str = 20
