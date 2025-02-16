@@ -36,6 +36,8 @@ init python:
         global qte_input
         if len(qte_input) < len(qte_sequence):
             qte_input += key
+            if len(qte_input) == len(qte_sequence):
+                renpy.jump("check_qte")
 
 screen battle_hp_bars():
     # Отображение здоровья игрока в левом верхнем углу
@@ -121,6 +123,7 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     $ enemy_strength += 5 # с течением боя противник становится сильнее(чтобы не затягивать бои)
     $ qte_sequence = generate_qte_sequence()  # Генерируем случайную последовательность
     $ qte_input = ""  # Обнуляем ввод игрока
+    $ qte_warning = False
     show screen battle_hp_bars
     call screen battle_qte
     return

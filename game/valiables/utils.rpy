@@ -205,7 +205,9 @@ init python:
     def addNPCStr(who, countStr):
         global nag_str,notices
         if who == "nag":
-            nag_str += countStr * strength_mod
+            nag_str += countStr 
+        if who == "eris":
+            eris_str += countStr
         notices.append("Противник становится серьезнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []

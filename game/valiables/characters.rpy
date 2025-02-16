@@ -4,8 +4,8 @@ init:
     define r_love = 0
     define e = Character("Эльза", color="#87CEFA", image='e')  # Светло-голубой (платиновая блондинка)
     define e_love = 0
-    define nag = Character("Нагаторо", color="#A52A2A", image='nag')  # Стальной синий (сине-белые волосы)
-    define nag_str = 80
+    define nag = Character("Нагаторо", color="#964B00", image='nag')  
+    define nag_str = 100
     define nag_love = 0
     define god = Character("Богиня", color="#FFD700", image='f')
     define f = Character("Фрея", color="#FFD700", image='f')
@@ -29,6 +29,12 @@ init:
     define maomao = Character('Мао Мао', color="#006400", image='mao')
     define maomao_love = 0
     define maomao_str = 20
+    define d = Character('Даркнесс', color="#c0c0c0", image='d')
+    define d_love = 0
+    define d_str = 180
+    define eris = Character('Эрис', color="#7B1113", image='eris')
+    define eris_love = 0
+    define eris_str = 180
 
     ## Some guys
     define guy1 = Character('Парень 1', color="#ffaaaa")
