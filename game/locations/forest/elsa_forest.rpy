@@ -212,20 +212,7 @@ label elsa_first_time_no_blessing:
             "Это как-то не успокаивает. Я не уверен, что готов быть её подопытным кроликом. Но что-то мне подсказывает, что иначе она меня просто не отпустит."  
 
     # Переход к соревнованию или мини-игре
-    call start_magic_training(mana)
-    if last_reaction_win:
-        $addChar(["mana"], 3)
-        show e smile at center with fade
-        e "Вау, да у тебя талант, мое уважение."
-        p "Надо будет повторить, мне понравилось."
-        e @smile_shy "Мне тоже~~"
-        $addLove("e", 10)
-    else:
-        show e laugh at center with fade
-        e "Это потрясающе!"
-        p "Что? У меня же не вышло."
-        e "Да, меня потрясло то, насколько ты необучаем."
-    jump elsa_not_first_time
+    jump elsa_magic_training
 
 
 label elsa_not_first_time:
@@ -237,7 +224,7 @@ label elsa_not_first_time:
             e "Здесь, в лесу, я могу показать тебе пару трюков, если ты не боишься немножко поработать."
             p "Да, я готов к тренировке по магии."
             e "Хорошо. Начнем с простого. Но ты готов, что будет тяжело."
-            jump start_magic_training(mana)
+            jump elsa_magic_training
 
         "Я бы хотел узнать, где здесь библиотека" if not canVisit("lib"):
             p "Я бы хотел узнать, где здесь библиотека или магическая башня."
@@ -259,7 +246,21 @@ label elsa_not_first_time:
             jump forest
     jump elsa_not_first_time
 
-    
+label elsa_magic_training:
+    call start_magic_training(mana)
+    if last_reaction_win:
+        $addChar(["mana"], 3)
+        show e smile at center with fade
+        e "Вау, да у тебя талант, мое уважение."
+        p "Надо будет повторить, мне понравилось."
+        e @smile_shy "Мне тоже~~"
+        $addLove("e", 10)
+    else:
+        show e laugh at center with fade
+        e "Это потрясающе!"
+        p "Что? У меня же не вышло."
+        e "Да, меня потрясло то, насколько ты необучаем."
+    jump elsa_not_first_time
 
 label elsa_quests:
     menu:
