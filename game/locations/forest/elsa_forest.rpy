@@ -15,7 +15,6 @@ label visit_elsa_forest:
 
 label elsa_first_time_blessing:
     $ first_time_elsa = False
-    scene bg forest with fade
     e "Ты... не похож на местного. Кто ты?"  
     p "Меня зовут [hero_name], я здесь просто исследовал окрестности."
     e "Хм... возможно, судьба привела тебя ко мне. Или ты просто случайно забрёл?"
@@ -138,7 +137,7 @@ label elsa_first_time_blessing:
     show e neutral
 
     e "Добро пожаловать в город. Раз уж ты не можешь отличить магию от цирковых фокусов, тебе не помешает экскурсия."
-    $ can_visit_library = True
+    $ updateCanVisit("lib", True)
     e "Там находится библиотека. Если будешь её посещать — появится хоть какая-то надежда, что ты перестанешь нести чушь."
     e "А дальше, на холме, стоит магическая башня. Там решат, можно ли из тебя сделать хоть что-то полезное."
     e "Не тормози, идём сразу к наставнице, пускай она тебя оценит."
@@ -147,7 +146,7 @@ label elsa_first_time_blessing:
 
     menu:
         "Идти за [e.name]":
-            $ can_visit_magic_tower = True
+            $ updateCanVisit("mt", True)
             jump magic_tower_elsa
 
 label elsa_first_time_no_blessing:
@@ -228,7 +227,7 @@ label elsa_not_first_time:
             e "Хорошо. Начнем с простого. Но ты готов, что будет тяжело."
             jump magic_training
 
-        "Я бы хотел узнать, где здесь библиотека" if not can_visit_library:
+        "Я бы хотел узнать, где здесь библиотека" if not canVisit("lib"):
             p "Я бы хотел узнать, где здесь библиотека или магическая башня."
             e "Ах, тебе интересно? Хорошо, я покажу тебе путь."
             e "Но помни, что в магической башне будут решать, что с тобой делать. Там не любят бездарей."
@@ -276,7 +275,7 @@ label go_to_city_with_elsa:
 
     menu:
         "Зайти в библиотеку":
-            $ can_visit_library = True
+            $ updateCanVisit("lib", True)
             jump library_elsa
         "Идти сразу в магическую башню":
             jump magic_tower

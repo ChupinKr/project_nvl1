@@ -8,13 +8,13 @@ label tavern:
     scene bg tavern with fade
     "Вы в таверне"
     menu:
-        "Пойти в комнату" if can_visit_home:
+        "Пойти в комнату" if canVisit("room"):
                 jump room
         "Подойти к [m.name]" :
             jump go_to_miku_stand
-        "Подойти к сомнительному столу" if not can_visit_black_market:
+        "Подойти к сомнительному столу" if not canVisit("bm"):
             jump suspicious_table
-        "Пойти в тайный бордель" if not can_visit_brothel:
+        "Пойти в тайный бордель" if canVisit("brothel"):
             jump brothel
         "Подойти к доске объявлений":
             jump tavern_task_board
@@ -36,10 +36,10 @@ label go_to_miku_stand:
 label miku_stand_menu:
     menu:
         "Поговорить":
-            if not can_visit_home:
+            if not canVisit("room"):
                 m @open_smile "Чем могу помочь?" 
             jump talk_miku_menu
-        "Что за сомнительный столик?" if not can_visit_black_market:
+        "Что за сомнительный столик?" if not canVisit("bm"):
             m @angry "Они всегда здесь, что-то мутят... но если решите подойти, будьте осторожны."
             jump miku_stand_menu 
         "Уйти":
@@ -77,12 +77,12 @@ label talk_miku_drinks_menu:
 
 label talk_miku_menu:
     menu:
-        "Снять комнату" if not can_visit_home:
+        "Снять комнату" if not canVisit("room"):
             m smile "Комната стоит 10 золотых в неделю."
             menu:
                 "Беру" if money >= 10:
                     $ minusMoney(10)
-                    $ can_visit_home = True
+                    $ updateCanVisit("room", True)
                     jump room
                 "Мне пока не по карману":
                     jump talk_miku_menu
@@ -156,25 +156,25 @@ label talk_miku_info:
             "Всегда готов":
                 "IN PROGRESS"
                 jump talk_miku_info #TODO заменить на сцену минета от Мику
-    elif m_love >= 30 and not can_visit_bar:
+    elif m_love >= 30 and not canVisit("bar"):
         m "Ты определённо мой типаж!"
         m "В городе есть **закрытый бар**, куда пускают только своих."
         m "Там можно найти очень... полезных знакомств!"
         m "*Описание того, как найти закрытый бар*"
         m "Скажи, что ты от меня и тебя пропустят."
-    elif m_love >= 20 and not can_visit_training_ground:
+        $ updateCanVisit("bar", True)
+    elif m_love >= 20 and not canVisit("tg"):
         m "Ты мне нравишься!"
         m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
         m "*Описание того, как попасть на тренировочную площадку*"
         m "Если хочешь стать сильнее – тебе туда!"
-        $ can_visit_training_ground = True
-        $ can_visit_bar = True
-    elif m_love >= 10 and not can_visit_library:
+        $ updateCanVisit("tg", True)
+    elif m_love >= 10 and not canVisit("lib"):
         m "Знаешь, ты неплохой! "
         m "Ладно, расскажу тебе одну тайну... "
         m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"
         m "*Описание того, как найти библиотеку*"
-        $ can_visit_library = True
+        $ updateCanVisit("lib", True)
     else:
         m "Хмм, пока ты ещё не заслужил моего доверия! Может, поможешь мне с парочкой дел?"
     jump talk_miku_menu
@@ -255,7 +255,7 @@ label suspicious_table:
 
     # Проверка правильности ответов
     if correct_answers >= 5:
-        $ can_visit_black_market = True
+        $ updateCanVisit("bm", True)
         guy3 "Ты понимаешь, что такое жесткость и сила. Заходи в старый амбар на окраине города, и забудь обо всех остальном. За тебя словечко замолвим."
     else:
         guy1 "Тебе не место среди нас, если ты не готов убить ради выгоды. Слишком мягок, брат."

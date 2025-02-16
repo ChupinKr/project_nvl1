@@ -54,7 +54,7 @@ label win_elsa_training:
     e "Вау, да у тебя талант, мое уважение."
     p "Надо будет повторить, мне понравилось."
     e @smile_shy "Мне тоже~~"
-    $e_love += 10
+    $addLove("e", 10)
     jump find_elsa_menu
 
 label fail_elsa_training:

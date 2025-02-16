@@ -185,7 +185,7 @@ label battle_win_forest_nagatoro:
     
     $addLoveAndStr("nag",10,10)
     
-    if not can_visit_guild:
+    if not canVisit("guild"):
         show nag grin
         nag "Хех. Но ты меня заинтересовал, [hero_name]."
         nag "Скажи, где ты научился так сражаться?"
@@ -331,7 +331,7 @@ label battle_win_forest_nagatoro:
         menu:
             "Следовать за [nag.name]":
                 nag "Давай быстрее, не тормози!"
-                $ can_visit_guild = True
+                $ updateCanVisit("guild",True)
                 jump guild_nagatoro
                 
     #Уже может посетить гильдию

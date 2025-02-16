@@ -19,13 +19,13 @@ label surgency_tsunade_cure:
         else:
             ts @smile "С тебя 10 монет за срочную операцию"
             $minusMoney(10)
-        $ can_visit_hospital = True
-        $ first_time_surgency = False
+        $ updateCanVisit("hospital", True)
+        $ updateCanVisit("surgency", True)
         pause 3.5
         $addHealth(100)
         "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
     elif first_time_surgency:
-        $ can_visit_hospital = True
+        $ updateCanVisit("hospital", True)
         ts "Идти можешь, и пришёл ко мне, разве тебе нужно лечение? Или у тебя есть ко мне дело?"
     elif health == 0:
         if money >= 10:
@@ -54,7 +54,7 @@ label surgency_tsunade:
     # нет задания
     # не полные хп
     # активное задание у тсунаде
-    if not can_visit_tavern or isNoQuestNow() or health < 100 or isActualQuestOfCharacter("ts"):
+    if not canVisit("tavern") or isNoQuestNow() or health < 100 or isActualQuestOfCharacter("ts"):
         ts "Пришел вернуть долги?"
         jump surgency_tsunade_menu
     else:
@@ -85,15 +85,15 @@ label surgency_tsunade_menu:
                         ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
                         jump surgency_tsunade_menu
             jump surgency_tsunade_menu
-        "Спросить, где ты" if not can_visit_tavern and first_time_hospital:
+        "Спросить, где ты" if not canVisit("tavern") and first_time_hospital:
             ts "Ты в лечебнице. Здесь поднимают на ноги таких, как ты — тех, кто не умеет держать меч или уклоняться от ударов."
             jump surgency_tsunade_menu
-        "Поинтересоваться, как заработать денег" if not can_visit_tavern:
+        "Поинтересоваться, как заработать денег" if not canVisit("tavern"):
             ts "Ох, ты хочешь расплачиваться честно? Что ж, это похвально."
             ts "Вижу ты в этих краях раньше не бывал, так что расскажу"
             ts "В таверне всегда нужны помощники. Помоешь посуду — получишь монеты."
             "[ts.name] рассказывает, как попасть в Таверну"
-            $ can_visit_tavern = True
+            $ updateCanVisit("tavern", True)
             jump surgency_tsunade_menu
         "Спросить про задания" if isNoQuestNow():
             p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"

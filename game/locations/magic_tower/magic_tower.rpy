@@ -119,7 +119,7 @@ label magic_tower_first_visit:
 
     "Я не был уверен, что мне это нравится, но выбора у меня не было."
 
-    $ can_visit_magic_tower = True
+    $ updateCanVisit("mt", True)
     jump magic_tower_hub
 
 label magic_tower_return_with_elsa:

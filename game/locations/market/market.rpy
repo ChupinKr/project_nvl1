@@ -78,7 +78,7 @@ label market_menu:
     menu:
         "Подойти к [h.name]":
             jump visit_holo
-        "Притвориться мертвым" if not can_visit_hospital:
+        "Притвориться мертвым" if not canVisit("hospital"):
             "Ты упал и притворился мертвым"
             "Вышло настолько хорошо, что тебя схватили и куда-то понесли"
             "Ты пытался вырываться и кричать, но люди думали, что ты кричишь от боли"
@@ -149,12 +149,12 @@ label holo_menu:
                     jump holo_menu
         # "Попросить задание":
         # "Отказаться от задания" if isNoQuestNow(): 
-        "Спросить, как тут заработать" if not can_work_with_holo or not can_visit_tavern:
+        "Спросить, как тут заработать" if not can_work_with_holo or not canVisit("tavern"):
             p "Слушай, [h.name], а как в этом городе можно заработать денег?"
             h "О-хо-хо! [hero_name]! Я не ошиблась! Ты действительно бедный!"
             "[h.name] очень рада и кричит об этом на весь рынок, ты чувствуешь себя униженным"
             h "Ладно, подскажу по дружески, можешь, например, пойти подработать в таверну, там всегда руки нужны."
-            $ can_visit_tavern = True
+            $ updateCanVisit("tavern", True)
             h "Ну или можешь мне помогать, я тоже в долгу не останусь~"
             $ can_work_with_holo = True
             jump holo_menu

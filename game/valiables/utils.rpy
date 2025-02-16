@@ -177,7 +177,7 @@ init python:
         notices = []
 
     def minusLove(who, countLove):
-        global miku_love, nag_love, ts_love, notices
+        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, maomao_love, notices
         if who == "f":
             f_love -= countLove
         elif who == "nag":
