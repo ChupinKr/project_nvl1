@@ -172,6 +172,12 @@ screen dishScreen():
             action Jump("clean_success")
  
 label start_clean(whatToWash):
+    pause .5
+    show expression Text("Приготовься!") at truecenter as txt
+    with dissolve
+    pause
+    hide txt
+
     # Сброс параметров игры
     $ dish_value = 0
     $ clean_bar = 100

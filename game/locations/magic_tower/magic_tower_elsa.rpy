@@ -18,7 +18,7 @@ label find_elsa_menu:
             e "Хорошо. Только не плачь, если замёрзнешь."
             "Эльза начала тренировку, и я попытался повторять её движения... но быстро понял, что мне ещё далеко до её уровня."
             show e smile at right with fade
-            call magic_training(mana) from _call_magic_training
+            call start_magic_training(mana)
             if last_reaction_win:
                 $addChar(["mana"], 3)
                 jump win_elsa_training

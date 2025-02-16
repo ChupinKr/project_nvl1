@@ -56,8 +56,7 @@ screen reactionGame:
             timer 0.1 action SetScreenVariable("reversal", False)
 
         text "Твой счет: " + str(score) size 50 xoffset 10 yoffset 30
-        text "Жми SPACE" at vibrate size 100
-        text "На 80%!!" at vibrate size 80 yoffset 100
+        text "Стреляй на 80%!!" at vibrate size 80 yoffset 100
 
         bar:
             align(0.5, 0.6)
@@ -66,6 +65,12 @@ screen reactionGame:
 
 ## Логика мини-игры.
 label magic_training(mana):
+    pause .5
+    show expression Text("Будь внимателен!") at truecenter as txt
+    with dissolve
+    pause
+    hide txt
+
     $ score = 0  # Сбрасываем очки перед игрой
     $ win_score = 3
     $ casting = True
