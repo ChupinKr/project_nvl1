@@ -34,11 +34,12 @@ label hospital:
     jump hospital_sakura_menu
 
 label hospital_sakura_menu:
+    $ first_time_sakura = False
     menu:
-        "Спросить, где можно найти главного медика" if first_time_sakura:
+        "Спросить, где можно найти главного медика" if not canVisit("surgency"):
             s "Ты имеешь в виду [ts.name]? Она лучшая лекарь в этом городе."
             s "Сейчас она в операционной, впрочем как и всегда. Если тебе нужно серьёзное лечение, направляйся туда."
-            $ first_time_sakura = False
+            $ updateCanVisit("surgency", True)
             jump hospital_sakura_menu
         "Спросить про лечение" if health < 100:
             s "Поднять на ноги стоит 5 монет. Полное лечение от [ts.name] будет стоить дороже, но оно будет сильно эффективнее при сильезных ранениях. Если у тебя их нет, придётся найти способ заработать."
@@ -55,7 +56,7 @@ label hospital_sakura_menu:
             else:
                 "У тебя нет даже 5 монет"
             jump hospital_sakura_menu
-        "Перейти в операционную":
+        "Перейти в операционную" if canVisit("surgency"):
             jump surgency_tsunade_cure
         "Спросить про задания" if isNoQuestNow():
             jump hospital_sakura_quests

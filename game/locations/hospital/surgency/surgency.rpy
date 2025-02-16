@@ -19,13 +19,12 @@ label surgency_tsunade_cure:
         else:
             ts @smile "С тебя 10 монет за срочную операцию"
             $minusMoney(10)
-        $ updateCanVisit("hospital", True)
-        $ updateCanVisit("surgency", True)
-        pause 3.5
+            pause 3.5
         $addHealth(100)
         "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
     elif first_time_surgency:
-        $ updateCanVisit("hospital", True)
+        if not canVisit("hospital"):
+            $ updateCanVisit("hospital", True)
         ts "Идти можешь, и пришёл ко мне, разве тебе нужно лечение? Или у тебя есть ко мне дело?"
     elif health == 0:
         if money >= 10:
@@ -85,8 +84,9 @@ label surgency_tsunade_menu:
                         ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
                         jump surgency_tsunade_menu
             jump surgency_tsunade_menu
-        "Спросить, где ты" if not canVisit("tavern") and first_time_hospital:
+        "Спросить, где ты" if not canVisit("surgency"):
             ts "Ты в лечебнице. Здесь поднимают на ноги таких, как ты — тех, кто не умеет держать меч или уклоняться от ударов."
+            $ updateCanVisit("surgency", True)
             jump surgency_tsunade_menu
         "Поинтересоваться, как заработать денег" if not canVisit("tavern"):
             ts "Ох, ты хочешь расплачиваться честно? Что ж, это похвально."
@@ -105,13 +105,15 @@ label surgency_tsunade_menu:
             jump surgency_tsunade_menu
         "Поблагодарить и уйти":
             ts "Хоть кто-то умеет говорить «спасибо». Постарайся больше не попадать ко мне."
+            if not canVisit("hospital"):
+                $ updateCanVisit("hospital", True)
             jump city
 
 label surgency_tsunade_quests:
     show ts neutral with dissolve
     ts "Задания? Хм... У меня есть кое-что для тебя."
     menu:
-        "Принять задание на охоту за редким ингредиентом":
+        "Охота за редким ингредиентом":
             if isAbleQuest(quest_tsunade_poison_tooth, 0):
                 ts "Мне нужен редкий алхимический ингредиент — клык ядовитой змеи. Можно достать его в глубине леса."
                 ts "Принеси его, и я заплачу тебе."

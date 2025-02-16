@@ -31,15 +31,18 @@ init python:
                     return loc
 
         def setVisit(self, tag, canVisit):
-            self.getLocByTag(tag).canVisit = canVisit
-            if canVisit:
-                notices.append("Теперь вам доступна локация "+ self.getLocByTag(tag).name)
+            global notices
+            if self.getLocByTag(tag).canVisit != canVisit:
+                self.getLocByTag(tag).canVisit = canVisit
+                if canVisit:
+                    notices.append("Теперь вам доступна локация "+ self.getLocByTag(tag).name)
+                else:
+                    notices.append("Теперь вам недоступна локация "+ self.getLocByTag(tag).name)
+                renpy.show_screen('notify_plus', notices=notices)
+                notices = []
+                return True
             else:
-                notices.append("Теперь вам недоступна локация "+ self.getLocByTag(tag).name)
-            renpy.show_screen('notify_plus', notices=notices)
-            notices = []
-            return True
-            
+                return False
     
     all_locs = LocList()
 

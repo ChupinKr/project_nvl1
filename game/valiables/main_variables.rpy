@@ -4,7 +4,7 @@ init:
     $ chosen_blessing = None  # Хранит выбранное благословение
     $ health = 100  # Здоровье
 
-    $ money = 500  # Харизма
+    $ money = 0  # Харизма
     
     $ charisma = 1  # Харизма
     $ strength = 1  # Сила
