@@ -67,7 +67,7 @@ screen info_panel:
             text "Харизма: [charisma]" style "info_text"
             text "Колдовство: [mana]" style "info_text"
             text "[nag.name]: [nag_love]♥" style "info_text"
-            text "[m.name]: [miku_love]♥" style "info_text"
+            text "[m.name]: [m_love]♥" style "info_text"
             text "[h.name]: [h_love]♥" style "info_text"
             text "[f.name]: [f_love]♥" style "info_text"
             text "[s.name]: [s_love]♥" style "info_text"

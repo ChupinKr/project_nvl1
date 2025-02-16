@@ -1,6 +1,6 @@
 
 label visit_elsa_forest:
-    scene forest with fade
+    scene bg forest with fade
     show e neutral with dissolve
 
     if first_time_elsa and chosen_blessing.name == "Магический Потенциал":

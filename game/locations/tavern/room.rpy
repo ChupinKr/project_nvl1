@@ -1,7 +1,7 @@
 
 # Сцена с комнатой игрока
 label room:
-    scene room_bg with fade
+    scene bg room with fade
     "Ты у себя в комнате"
     menu:
         "Тренироваться" if len(gg_items) > 0:
