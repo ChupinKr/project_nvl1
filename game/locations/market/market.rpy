@@ -160,7 +160,7 @@ label holo_menu:
             $ can_work_with_holo = True
             jump holo_menu
         "Уйти":
-            jump market
+            jump market_menu
 
 label holo_market_menu:
     "INFO: каждый предмет можно использовать несколько раз(надо использовать 3 раза)"
@@ -213,4 +213,4 @@ label holo_market_menu:
             jump holo_market_menu
         "Уйти":
             h "Приятно было с тобой сотрудничать"
-            jump market_menu
+            jump holo_menu

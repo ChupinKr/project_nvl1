@@ -106,6 +106,7 @@ screen battle_qte():
 
 
 label start_battle(enemy_hp, enemy_str, name, loc):
+    "Сейчас начнется битва, приготовься!"
     $ enemy_health = enemy_hp  # Устанавливаем здоровье противника
     $ enemy_strength = enemy_str  # Устанавливаем здоровье противника
     $ battle_location = loc
