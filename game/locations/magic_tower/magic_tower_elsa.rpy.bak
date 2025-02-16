@@ -1,0 +1,65 @@
+# Поиск Эльзы (всегда успешно) с меню взаимодействий
+label find_elsa:
+    scene bg tower_training with fade
+    show e neutral at center
+
+    "Я нашёл Эльзу в тренировочном зале. "
+    "Она как раз заканчивала очередное упражнение, заставляя ледяные копья исчезать в воздухе."
+
+    show e smirk
+    e "Решил проверить, насколько ты жалок сегодня?"
+    jump find_elsa_menu
+
+label find_elsa_menu:
+    show e smile
+    menu:
+        "Потренироваться с ней":
+            show e laugh
+            e "Хорошо. Только не плачь, если замёрзнешь."
+            "Эльза начала тренировку, и я попытался повторять её движения... но быстро понял, что мне ещё далеко до её уровня."
+            show e smile at right with fade
+            call magic_training(mana)
+            if last_reaction_win:
+                $addChar(["mana"], 3)
+                jump win_elsa_training
+            else:
+                jump fail_elsa_training
+            jump find_elsa_menu
+        "Попросить квест" if isNoQuestNow():
+            show e neutral
+            e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся."
+            call elsa_quests_magic_tower
+        "Уйти":
+            "Я решил оставить Эльзу в покое и не мешать её тренировке."
+            jump magic_tower_hub
+
+label elsa_quests_magic_tower:
+    menu:
+        "Собирать магические материалы":
+            p "Я готов собирать магические материалы."
+            e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
+            $ getQuest(quest_elsa_materials)
+        "Стать испытуемым":
+            p "Я готов стать подпытным кроликом."
+            e "Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
+            e "Твоё тело мне пригодится~"
+            $ getQuest(quest_elsa_test)
+            jump elsa_test
+        "Я передумал":
+            jump find_elsa_menu
+    return
+
+label win_elsa_training:
+    show e smile at center with fade
+    e "Вау, да у тебя талант, мое уважение."
+    p "Надо будет повторить, мне понравилось."
+    e @smile_shy "Мне тоже~~"
+    $e_love += 10
+    jump find_elsa_menu
+
+label fail_elsa_training:
+    show e laugh at center with fade
+    e "Это потрясающе!"
+    p "Что? У меня же не вышло."
+    e "Да, меня потрясло то, насколько ты необучаем."
+    jump find_elsa_menu

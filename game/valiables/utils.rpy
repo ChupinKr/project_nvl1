@@ -101,6 +101,21 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
+    def addChar(chars, charCount):
+        global strength, charisma, mana, notices
+        for char in chars:
+            if char == "str":
+                strength += charCount * strength_mod
+                notices.append("Ты чувствуешь себя сильнее")
+            if char == "char":
+                charisma += charCount * charisma_mod
+                notices.append("Ты чувствуешь себя харизматичнее")
+            if char == "mana":
+                mana += charCount * mana_mod
+                notices.append("Ты чувствуешь себя умнее")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
     def minusMoneyPlusChar(minusMoney, chars, charCount):
         global money, strength, charisma, mana, notices
         money -= minusMoney

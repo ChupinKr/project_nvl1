@@ -93,7 +93,7 @@ label market_menu:
             else:
                 "Какой-то мутный тип подходит к тебе"
                 sg "Эй, че вылупился? Зрение слишком хорошее?!"
-                call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market)
+                call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market) from _call_start_battle_3
                 if last_battle_win:
                     "[h.name] это видела"
                     $addLove("m", 10)
@@ -116,13 +116,13 @@ label holo_menu:
             menu:
                 "Протереть книги(5 монет)":
                     h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
-                    call start_clean("books")
+                    call start_clean("books") from _call_start_clean
                     if last_clean_win:
                         h "Хватай следующую, быстрее!"
-                        call start_clean("books")
+                        call start_clean("books") from _call_start_clean_1
                         if last_clean_win:
                             h "Последнюю, торопись!"
-                            call start_clean("books")
+                            call start_clean("books") from _call_start_clean_2
                             if last_clean_win:
                                 h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
                                 "Ты провёл время, помогая [h.name]"

@@ -10,7 +10,6 @@ default first_time_forest = True
 label forest:
     scene bg forest with fade
 
-    "Ты заходишь в лес"
     
     if charisma > 1 and first_time_rapunzel:
         jump visit_rapunzel_forest
@@ -19,6 +18,7 @@ label forest:
     elif strength > 1 and first_time_nagatoro:
         jump visit_nagatoro_forest
     else:
+        "Ты заходишь в лес"
         "Куда направишься?"
 
     jump forest_menu

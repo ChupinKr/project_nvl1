@@ -66,7 +66,6 @@ screen reactionGame:
 
 ## Логика мини-игры.
 label magic_training(mana):
-    hide e
     $ score = 0  # Сбрасываем очки перед игрой
     $ win_score = 3
     $ casting = True

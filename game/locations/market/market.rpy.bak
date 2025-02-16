@@ -1,0 +1,215 @@
+# Определение персонажей
+define battle_location_market = "market"
+
+# Объявление переменных: love – показатель симпатии, visited_market – флаг первого посещения
+default first_visit_market = True
+default can_work_with_holo = False
+
+# Сцена посещения рынка
+label market:
+    scene bg market with fade
+    hide h
+    "Вы приходите на оживлённый рынок, где запах свежего хлеба смешивается с ароматом пряностей. Люди суетятся, обсуждают цены, и всюду слышится звон монет."
+
+    if first_visit_market:
+        $ first_visit_market = False
+        "Ваш взгляд привлекает прилавок с фруктами и бочонками мёда. За ним стоит девушка с лисьими ушами и пушистым хвостом."
+        show h smile with dissolve
+
+        h "Ох-хо, кто это к нам пожаловал? Новенький, да ещё и без товарного запаса. Совсем голодранец, что ли?"
+        "Её янтарные глаза хитро поблёскивают, и на губах играет самодовольная ухмылка."
+        p "Эм... Я просто осматриваюсь."
+        h "Осматривайся, осматривайся. Главное, чтобы не пришлось осматривать пустой кошель... Хотя, глядя на тебя, он и так пустой, верно?"
+        p "..."
+        h "Хех, не обижайся. Я [h.name], мудрая волчица. Но, как видишь, теперь ещё и успешная торговка."
+        
+        p "[h.name]? Красивое имя... Я [hero_name]."
+        h "[hero_name]? Хм... не звучит богато, но я запомню. Вдруг однажды ты разбогатеешь, и я смогу на тебе нажиться, ах-хаха!"
+
+        h "Раз уж ты здесь, позволь задать тебе пару вопросов. Мне ведь нужно знать, с кем имею дело."
+        h "Начнём с простого: какую еду ты предпочитаешь?"
+        $holo_choices = 0
+        menu:
+            "Выбери вкус еды"
+            "Солёное":
+                h "Хм... Значит, у тебя характер крепкий, как выдержанный сыр. Это похвально!"
+            "Острое":
+                h "О-о, так ты любишь острые ощущения? Осторожней, иначе сожжёшь себе язык, а потом слова благодарности сказать не сможешь!"
+            "Сладкое":
+                $ holo_choices += 1
+                h "О-хо-хо! Значит, ты любишь мёд и спелые яблоки? Хороший вкус, но не обольщайся — я делиться не стану!"
+        h "Теперь серьёзный вопрос. Какое качество в людях ты ценишь больше всего?"
+        menu:
+            "Выбери качество"
+            "Честность":
+                $ holo_choices += 1
+                h "Честность? Ох-хо, ты что, в сказку попал? Честные торговцы встречаются только в легендах."
+            "Храбрость":
+                h "Храбрый, значит? Хорошо, но помни: даже самый смелый волк не полезет в клетку к разъярённому медведю."
+            "Доброта":
+                h "Доброта – вещь полезная, но в торговле за неё не дают скидку. Хотя... если мне вдруг станет скучно, я дам тебе яблоко. Может быть."
+
+        h "Последний вопрос... и, пожалуй, самый важный."  
+        h "Какие женщины тебе нравятся?"  
+        menu:
+            "Выбери тип"
+            "Нежные и заботливые":
+                h "Хм... Значит, тебе нужны те, кто принесёт тебе кружку тёплого молока перед сном? Скучно-о!"
+            "Умные, хитрые и с характером":
+                $ holo_choices += 1
+                h "О-хо-хо! Да ты разбираешься в хороших вещах, мальчишка. Может, не так уж ты и безнадёжен?"
+            "Красивые":
+                h "Красота – вещь хорошая, но если за ней пустота, то и разговаривать не о чем."
+        h "Вот и славно! Теперь я знаю, что передо мной не просто болван, а кое-что интересное."  
+        if (holo_choices == 3):
+            $addLove("h",10)
+            show h smile_shy
+            "[h.name] смеётся, её хвост неторопливо покачивается из стороны в сторону. Кажется, ей понравился ваш ответ."
+        h smile "Может, ещё заглянешь? Кто знает, вдруг я предложу тебе выгодную сделку... или устрою тебе ещё один экзамен."
+        hide h
+        jump market_menu
+    else:
+        "Вы снова на рынке. [h.name] замечает вас и лениво махает хвостом, но сегодня не пристаёт с вопросами – видимо, её развлекло что-то другое."
+        jump market_menu
+
+
+label market_menu:
+    hide h
+    menu:
+        "Подойти к [h.name]":
+            jump visit_holo
+        "Притвориться мертвым" if not can_visit_hospital:
+            "Ты упал и притворился мертвым"
+            "Вышло настолько хорошо, что тебя схватили и куда-то понесли"
+            "Ты пытался вырываться и кричать, но люди думали, что ты кричишь от боли"
+            "У тебя получилось убедить всех, что ты в порядке, но тебя уже принесли в больницу"
+            "Тебя уже захотели избить за такое, но тебе удалось забежать в больницу"
+            jump hospital
+        "Осмотреться":
+            "Ты осматриваешься"
+            "Это выглядит подозрительно.."
+            if renpy.random.choice([False, False, True]) > 0:
+                "Лучше больше так не делать, а то можно и встрять.."
+            else:
+                "Какой-то мутный тип подходит к тебе"
+                sg "Эй, че вылупился? Зрение слишком хорошее?!"
+                call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market)
+                if last_battle_win:
+                    "[h.name] это видела"
+                    $addLove("m", 10)
+            jump talk_miku_quests
+            jump market_menu
+        "Уйти":
+            jump city
+
+label visit_holo:
+    show h smile with dissolve
+    h "Охо-хо~ Ты попал в лапы мудрой волчицы, [hero_name]! Чем порадуешь меня сегодня?"
+    jump holo_menu
+
+label holo_menu:
+    menu:
+        "Купить товары":
+            h "О-хо-хо, [hero_name], неужели ты наконец разжился монетками?"
+            jump holo_market_menu
+        "Чем тебе помочь?" if can_work_with_holo:
+            menu:
+                "Протереть книги(5 монет)":
+                    h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
+                    call start_clean("books")
+                    if last_clean_win:
+                        h "Хватай следующую, быстрее!"
+                        call start_clean("books")
+                        if last_clean_win:
+                            h "Последнюю, торопись!"
+                            call start_clean("books")
+                            if last_clean_win:
+                                h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
+                                "Ты провёл время, помогая [h.name]"
+                                "[h.name] это оценила"
+                                $addLove("h",5)
+                                pause 3.5
+                                $addMoney(5)
+                            else: 
+                                h "Эх, почти успели, упустили клиента."
+                        else: 
+                            h "Жаль, но ничего, будут еще клиенты."
+                    else: 
+                        h "[hero_name], это никуда не годится, работай лучше!"
+                    jump holo_menu
+                "Избавиться от жуков(5 монет)":
+                    h "Избавься от этих жуков, они везде!"
+                    p "И как я по твоему должен от них избавиться?"
+                    h "Это уже тебе решать, [hero_name]~"
+                    "IN PROGRESS"
+                    #call start_reaction
+                    jump holo_menu
+                "Никакой работы":
+                    h "Эй, в следующий раз обещай, что поможешь!"
+                    jump holo_menu
+        # "Попросить задание":
+        # "Отказаться от задания" if isNoQuestNow(): 
+        "Спросить, как тут заработать" if not can_work_with_holo or not can_visit_tavern:
+            p "Слушай, [h.name], а как в этом городе можно заработать денег?"
+            h "О-хо-хо! [hero_name]! Я не ошиблась! Ты действительно бедный!"
+            "[h.name] очень рада и кричит об этом на весь рынок, ты чувствуешь себя униженным"
+            h "Ладно, подскажу по дружески, можешь, например, пойти подработать в таверну, там всегда руки нужны."
+            $ can_visit_tavern = True
+            h "Ну или можешь мне помогать, я тоже в долгу не останусь~"
+            $ can_work_with_holo = True
+            jump holo_menu
+        "Уйти":
+            jump market
+
+label holo_market_menu:
+    "INFO: каждый предмет можно использовать несколько раз(надо использовать 3 раза)"
+    "INFO: покупка некоторых предметов недоступна, тк вы не понимаете их ценности, пока не разовьете предыдущий уровень предмета"
+    "INFO: использовать предметы возможно только дома(в комнате в таверне)"
+    menu:
+        "Купить [item_motivational_book.name]([item_motivational_book.price] монет)" if isAbleToBuy(item_motivational_book):
+            "Вы купили [item_motivational_book.name]"
+            $buyItem(item_motivational_book)
+            jump holo_market_menu
+        "Купить [item_mirror.name]([item_mirror.price] монет)" if isAbleToBuy(item_mirror):
+            "Вы купили [item_mirror.name]"
+            $buyItem(item_mirror)
+            jump holo_market_menu
+        "Купить [item_art_plus_size.name]([item_art_plus_size.price] монет)" if isAbleToBuy(item_art_plus_size):
+            "Вы купили [item_art_plus_size.name]"
+            $buyItem(item_art_plus_size)
+            jump holo_market_menu
+        "Купить [item_dumbbells_ez.name]([item_dumbbells_ez.price] монет)" if isAbleToBuy(item_dumbbells_ez):
+            "Вы купили [item_dumbbells_ez.name]"
+            $buyItem(item_dumbbells_ez)
+            jump holo_market_menu
+        "Купить [item_weight_mid.name]([item_weight_mid.price] монет)" if isAbleToBuy(item_weight_mid):
+            "Вы купили [item_weight_mid.name]"
+            $buyItem(item_dumbbells_ez)
+            jump holo_market_menu
+        "Купить [item_barbell.name]([item_barbell.price] монет)" if isAbleToBuy(item_barbell):
+            "Вы купили [item_barbell.name]"
+            $buyItem(item_barbell)
+            jump holo_market_menu
+        "Купить [item_book_math.name]([item_book_math.price] монет)" if isAbleToBuy(item_book_math):
+            "Вы купили [item_book_math.name]"
+            $buyItem(item_book_math)
+            jump holo_market_menu
+        "Купить [item_self_study_guide.name]([item_self_study_guide.price] монет)" if isAbleToBuy(item_self_study_guide):
+            "Вы купили [item_self_study_guide.name]"
+            $buyItem(item_self_study_guide)
+            jump holo_market_menu
+        "Купить [item_grimoire.name]([item_grimoire.price] монет)" if isAbleToBuy(item_grimoire):
+            "Вы купили [item_grimoire.name]"
+            $buyItem(item_grimoire)
+            jump holo_market_menu
+        "Купить [item_forest_guide.name]([item_forest_guide.price] монет)" if isAbleToBuy(item_forest_guide):
+            "Вы купили [item_forest_guide.name]"
+            $buyItem(item_forest_guide)
+            jump holo_market_menu
+        "Купить [item_combat_book.name]([item_combat_book.price] монет)" if isAbleToBuy(item_combat_book):
+            "Вы купили [item_combat_book.name]"
+            $buyItem(item_combat_book)
+            jump holo_market_menu
+        "Уйти":
+            h "Приятно было с тобой сотрудничать"
+            jump market_menu

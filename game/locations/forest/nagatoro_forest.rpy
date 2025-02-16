@@ -84,7 +84,7 @@ label visit_nagatoro_forest:
             "Дать [nag.name] понять, кто тут главный":
                 p "Посмотрим, кто кого. Я готов на всё!"
                 nag "Вот так мне нравится! Давай, покажи, на что ты способен! Но помни, жалеть не стану."
-                call start_battle(100, nag_str, nag.name, battle_location_forest)
+                call start_battle(100, nag_str, nag.name, battle_location_forest) from _call_start_battle
                 if last_battle_win:
                     jump battle_win_forest_nagatoro
 
@@ -117,7 +117,7 @@ label nagatoro_forest_menu:
             p "Давай потренируемся. Я хочу проверить, насколько я могу улучшиться."
             show nag grin
             nag "Ха-ха! Снова рискнёшь? Мне нравится твоя наглость, но помни – слабость тут не прощается, и я не собираюсь тебя щадить."
-            call start_battle(100, nag_str, nag.name, battle_location_forest)
+            call start_battle(100, nag_str, nag.name, battle_location_forest) from _call_start_battle_1
             if last_battle_win:
                     jump battle_win_forest_nagatoro
         "Попросить задание" if isNoQuestNow():
@@ -343,7 +343,7 @@ label battle_win_forest_nagatoro:
             p "В настоящем сражении одежда неминуемо порвется."
             nag "Так не пойдет, реванш, сейчас же!"
             $addNPCStr("nag", 5)
-            call start_battle(100, nag_str, nag.name, 'return_to_this')
+            call start_battle(100, nag_str, nag.name, 'return_to_this') from _call_start_battle_2
             if last_battle_win:
                 hide nag 
                 "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее."

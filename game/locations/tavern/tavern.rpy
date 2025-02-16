@@ -102,13 +102,13 @@ label talk_miku_quests:
     menu:
         "Помыть посуду (5 золота)":
             m "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
-            call start_clean("dish")
+            call start_clean("dish") from _call_start_clean_3
             if last_clean_win:
                 m "Следующую! У нас много гостей, поторопись!"
-                call start_clean("dish")
+                call start_clean("dish") from _call_start_clean_4
                 if last_clean_win:
                     m "Последнюю, быстрее!"
-                    call start_clean("dish")
+                    call start_clean("dish") from _call_start_clean_5
                     if last_clean_win:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
                         "Ты провёл время, помогая [m.name]"
@@ -131,7 +131,7 @@ label talk_miku_quests:
             else:
                 "Ты поговорил с клиентами, и они не захотели уходить по хорошему"
                 "Самый большой из них встает и замахивается на тебя"
-                call start_battle(100, renpy.random.randint(10,40), "Бандит", battle_location_tavern)
+                call start_battle(100, renpy.random.randint(10,40), "Бандит", battle_location_tavern) from _call_start_battle_4
                 if last_battle_win:
                     "[m.name] это оценила"
                     $addLove("m", 10)
