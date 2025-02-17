@@ -12,11 +12,11 @@ label ruined_temple_menu:
     menu:
         "Обратиться к богине за советом" if not can_see_info_panel:
             jump talk_to_freya
-        "Пройти в лес":
-            jump forest
         "Осмотреться":
             "Ты ничего не находишь"
             "IN PROGRESS"
             jump ruined_temple_menu
+        "Пройти в лес":
+            jump forest
 
 
