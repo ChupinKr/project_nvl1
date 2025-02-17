@@ -202,7 +202,6 @@ label elsa_first_time_no_blessing:
         "Да, я готов!": 
             p "Да, я готов!"
             e "Хорошо, приготовься!"
-
             "Она говорит, как будто я уже должен был быть готовым. Надеюсь, я не сделаю чего-то глупого."  
 
         "Я, наверное, не готов…": 
@@ -247,6 +246,10 @@ label elsa_not_first_time:
     jump elsa_not_first_time
 
 label elsa_magic_training:
+    show e at right with dissolve
+    e "Сконцентрируйся, представь перед собой сферу, очень горячую."
+    e "Вообрази, с какой силой ее надо оттолкнуть, чтобы попасть в мишень, будь сосредоточен."
+    e "Теперь, когда ты понимаешь, что нужной энергии как раз достаточно - стреляй."
     call start_magic_training(mana)
     if last_reaction_win:
         $addChar(["mana"], 3)
@@ -255,6 +258,12 @@ label elsa_magic_training:
         p "Надо будет повторить, мне понравилось."
         e @smile_shy "Мне тоже~~"
         $addLove("e", 10)
+        if e_love >= 15 and mana > 10:
+            e @smile_shy "Ладно, думаю ты готов, идем."
+            p "К чему готов? Куда мы?"
+            e @smirk "Не важно, просто идем."
+            $ updateCanVisit("mt", True)
+            jump magic_tower_elsa
     else:
         show e laugh at center with fade
         e "Это потрясающе!"
@@ -292,4 +301,4 @@ label go_to_city_with_elsa:
             $ updateCanVisit("lib", True)
             jump library_elsa
         "Идти сразу в магическую башню" if canVisit("mt"):
-            jump magic_tower
+            jump magic_tower_elsa

@@ -50,6 +50,12 @@ transform mid_mid:
 image paper = "paper.png"
 default notices = []
 init python:
+    def customNotify(message):
+        global notices
+        notices.append(message)
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
     def getQuest(quest):
         global active_quest,notices
         active_quest = quest

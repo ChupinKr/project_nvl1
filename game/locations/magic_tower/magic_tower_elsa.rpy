@@ -28,7 +28,7 @@ label find_elsa_menu:
         "Попросить квест" if isNoQuestNow():
             show e neutral
             e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся."
-            call elsa_quests_magic_tower from _call_elsa_quests_magic_tower
+            call elsa_quests_magic_tower
         "Уйти":
             "Я решил оставить Эльзу в покое и не мешать её тренировке."
             jump magic_tower_hub

@@ -219,7 +219,7 @@ label escape_battle:
     if battle_location == "ruined_temple":
         jump ruined_temple
     elif battle_location == "magic_tower":
-        jump magic_tower
+        jump magic_tower_alone
     elif battle_location == "training_ground":
         jump training_ground
     elif battle_location == "bar":
