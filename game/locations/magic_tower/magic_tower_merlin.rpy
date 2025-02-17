@@ -128,32 +128,34 @@ label mer_root_menu:
     menu:
         "Мастурбация" if mer_love >= 50:
             call mer_root_masturbate
-            mer @smirk "Продолжим?"
             jump mer_root_menu
         "Грудями" if mer_love >= 60:
             call mer_root_titfuck
-            mer @smirk "Продолжим?"
             jump mer_root_menu
         "Минет" if mer_love >= 70:
             call mer_root_blowjob
-            mer @smirk "Продолжим?"
             jump mer_root_menu
         "Секс" if mer_love >= 80:
             call mer_root_fuck
-            mer @smirk "Продолжим?"
             jump mer_root_menu
         "Анал" if mer_love >= 90:
             call mer_root_anal
-            mer @smirk "Продолжим?"
             jump mer_root_menu
         "Фетиш" if mer_love >= 200:
             call mer_root_fetish
-            mer @smirk "Продолжим?"
             jump mer_root_menu
         "Вернуться":
             "Ты уходишь восстанавливать магические силы"
             mer @smirk "До встречи~"
             jump magic_tower_hub
+
+label mer_root_masturbate:
+    "IN PROGRESS"
+    jump mer_root_menu
+
+label mer_root_titfuck:
+    "IN PROGRESS"
+    jump mer_root_menu
 
 label mer_root_blowjob:
     scene bg magic_library1 with fade
@@ -278,13 +280,12 @@ label mer_root_blowjob:
     jump magic_tower_hub
 
 
-
-
-    
-
-
-
-
-
-    
-    
+label mer_root_fuck:
+    "IN PROGRESS"
+    jump mer_root_menu
+label mer_root_anal:
+    "IN PROGRESS"
+    jump mer_root_menu
+label mer_root_fuck:
+    "IN PROGRESS"
+    jump mer_root_fetish
