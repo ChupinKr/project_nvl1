@@ -17,8 +17,8 @@ init python:
     # название картинки (без нумерации кадров)
     img_name = "n"
     # первый и последний кадры анимации
-    minN = 1
-    maxN = 14
+    minN = 0
+    maxN = 2
     # значение, на которое прибавляется шкала при клике
     # (т.е. сложность игры. 2.0 - очень сложно, 3.0 - легко)
     points_plus = 2.5
@@ -74,7 +74,7 @@ screen clicker:
     # и проверяем на проигрыш
     timer ani_time repeat True action [NextFrame(), If(points <= 0, true=Return(False), false=NullAction())]
     # картинка с анимацией
-    #add img_name + str(number)
+    add img_name + str(number) xalign 0.5 yalign 0.75
     # отображаем невидимую кнопку для кликов
     # по нажатию прибавляем шкалу и устанавливаем флаг клика
     button:
@@ -88,23 +88,23 @@ screen clicker:
     key "K_SPACE" action [SetVariable("points", points + points_plus), SetVariable("clicked", True), If(points >= max_points, true=Return(True), false=NullAction())]
     # индикатор
     vbar value StaticValue(points, max_points):
-        align (0, 0) # положение на экране
+        align (0.7, 0.5) # положение на экране
         maximum (150, 350) # размеры
         left_bar "heartempty" # пустое сердце
         right_bar "heart" # полное сердце
         thumb None # тут можно поставить разделитель
         thumb_shadow None # и тень
 
-label start_muscule:
+label start_muscule(start_phrase, difficulty):
     # всякие ненужные штуки для оформления
     pause .5
-    show expression Text("Приготовились!") at truecenter as txt
+    show expression Text(start_phrase) at truecenter as txt
     with dissolve
     pause
     hide txt
     # начать с 10 очков, чтобы не проиграть сразу же
     $ points = 10
-
+    $ points_plus = difficulty
     # ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
     call screen clicker # ←  игра
     # ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑
@@ -117,7 +117,7 @@ label start_muscule:
             $ number += 1
             $ renpy.pause(ani_time, hard=True)
         with flash
-        show expression Text("Победа!") at truecenter as txt
+        show expression Text("Отлично!") at truecenter as txt
         $last_muscule_win = True
     else:
         # перематываем анимацию до первого кадра
@@ -125,7 +125,7 @@ label start_muscule:
             $ number -= 1
             $ renpy.pause(ani_time, hard=True)
         with flash2
-        show expression Text("Проигрыш.") at truecenter as txt
+        show expression Text("Не вышло") at truecenter as txt
         $last_muscule_win = False
     # жесткая пауза на случай, если игрок всё еще лупит по кнопке
     $ renpy.pause(1.0, hard=True)

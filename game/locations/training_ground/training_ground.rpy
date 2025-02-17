@@ -56,7 +56,7 @@ label training_ground:
 
                 "[eris.name] делает резкий выпад, атакуя тебя!"
                 
-                call start_battle(120, eris_strength, "[eris.name]", battle_location_training_ground)
+                call start_battle(120, eris_str, "[eris.name]", battle_location_training_ground)
                 
                 if last_battle_win:
                     "Ты успеваешь парировать её атаку и даже немного оттеснить её назад."
@@ -79,26 +79,34 @@ label training_ground:
     jump training_ground_menu
 
 label training_ground_menu:
+    hide eris
     menu:
         "Качаться":
-            call start_muscule
+            # добавить вызов песни подход, подход, еще подход
+            call start_muscule("Подход",2.3)
             if last_muscule_win:
-                "Я определенно становлюсь все лучше!"
-                $addChar(["str"], 2)
-                jump training_ground_menu
-            else:
-                "Надо больше заниматься"
-                jump training_ground_menu
+                call start_muscule("Подход",2.5)
+                if last_muscule_win:
+                    call start_muscule("Еще подход",2.7)
+                    if last_muscule_win:
+                        call start_muscule("Сотру со лба я легкий пот",2.7)
+                        if last_muscule_win:
+                            "Я определенно становлюсь все лучше!"
+                            $addChar(["str"], 2)
+            jump training_ground_menu
+            "Надо больше заниматься"
+            jump training_ground_menu
         "Подойти к [eris.name]":
             jump training_ground_eris_menu
         "Отправиться в город":
             jump city
 
 label training_ground_eris_menu:
+    show eris with fade
     "Ты подошел к [eris.name]"
     menu:
         "Спарринг":
-            call start_battle(120, eris_strength, "[eris.name]", battle_location_training_ground)
+            call start_battle(120, eris_str, "[eris.name]", battle_location_training_ground)
             if last_battle_win:
                 "IN PROGRESS"
                 $addChar(["str"], 2)
