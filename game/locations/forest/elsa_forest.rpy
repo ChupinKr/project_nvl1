@@ -241,6 +241,12 @@ label elsa_not_first_time:
             e "Или ты мне можешь пригодиться, как испытуемый, сам решай."
             jump elsa_quests
 
+        "Отказаться от задания" if isActualQuestOfCharacter("e"):
+            p "Я не смогу выполнить то, о чем ты просила."
+            e "Жаль, но если передумаешь - приходи."
+            $ removeQuest()
+            jump elsa_not_first_time
+
         "Вернуться":
             jump forest
     jump elsa_not_first_time
@@ -276,14 +282,27 @@ label elsa_quests:
         "Собирать магические материалы":
             p "Я готов собирать магические материалы."
             e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
-            $ getQuest(quest_elsa_materials)
+            menu:
+                "Принять квест":
+                    e "Постарайся и принеси большую корзину!"
+                    $ getQuest(quest_elsa_materials)
+                "Не принимать квест":
+                    e "Ожидаемо, тяжелый труд не для принцесс.."
+                    jump elsa_not_first_time
             jump elsa_not_first_time
         "Стать испытуемым":
             p "Я готов стать подпытным кроликом."
             e "Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
             e "Твоё тело мне пригодится~"
-            $ getQuest(quest_elsa_test)
-            jump elsa_test
+            menu:
+                "Принять квест":
+                    e "Ты действительно готов, надо же, ну тогда идем!"
+                    $ getQuest(quest_elsa_test)
+                    jump elsa_test
+                "Не принимать квест":
+                    e "Ожидаемо, тяжелый труд не для принцесс.."
+                    jump elsa_not_first_time
+            jump elsa_not_first_time
         "Я передумал":
             jump elsa_not_first_time
     return

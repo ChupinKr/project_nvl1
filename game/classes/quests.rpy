@@ -156,6 +156,8 @@ init python:
             targetQuests = [quest_sakura_materials]
         if who == "r":
             targetQuests = [quest_rapunzel_mashrooms,quest_rapunzel_women]
+        if who == "e":
+            targetQuests = [quest_elsa_materials, quest_elsa_test]
         if any(active_quest.name in q.name for q in targetQuests):
             result = True
         return result

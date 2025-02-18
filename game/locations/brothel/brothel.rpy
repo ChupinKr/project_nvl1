@@ -53,7 +53,6 @@ label rapunzel_brothel_first_visit:
     jump brothel
 
 label brothel:
-
     $ girl = renpy.random.randint(1, 100)
     if girl < 20:
         scene bg brothel_girl1 with fade
