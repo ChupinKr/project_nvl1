@@ -286,6 +286,6 @@ label mer_root_fuck:
 label mer_root_anal:
     "IN PROGRESS"
     jump mer_root_menu
-label mer_root_fuck:
+label mer_root_fetish:
     "IN PROGRESS"
-    jump mer_root_fetish
+    jump mer_root_menu

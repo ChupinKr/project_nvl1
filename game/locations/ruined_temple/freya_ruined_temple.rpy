@@ -169,4 +169,23 @@ label freya_root_masturbate:
     jump room
 
 
+label freya_root_titfuck:
+    "IN PROGRESS"
+    jump freya_root_menu
+
+label freya_root_blowjob:
+    "IN PROGRESS"
+    jump freya_root_menu
+
+label freya_root_fuck:
+    "IN PROGRESS"
+    jump freya_root_menu
+
+label freya_root_anal:
+    "IN PROGRESS"
+    jump freya_root_menu
+
+label freya_root_fetish:
+    "IN PROGRESS"
+    jump freya_root_menu
 
