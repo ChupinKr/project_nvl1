@@ -17,7 +17,7 @@ label forest:
     elif strength > 1 and first_time_nagatoro:
         jump visit_nagatoro_forest
     else:
-        "Ты заходишь в лес"
+        "Ты в лесу"
         "Куда направишься?"
 
     jump forest_menu

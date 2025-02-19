@@ -56,7 +56,8 @@ label start_ask_god:
 
 label refuse:
     "Ты решаешь отказаться от благословений и отказаться от всего, что она предлагает. В этот момент пространство вокруг тебя начинает меркнуть, и ты чувствуешь, как теряешь сознание..."
-    # Тогда я превращаю тебя в слизь
+    #TODO Тогда я превращаю тебя в слизь
+    jump forest
     return
 
 label blessings_choice:
@@ -88,7 +89,10 @@ label blessings_choice:
             hide mc_sphere
             show f smile with dis5
             f @ smile "Ты выбрал благословение [chosen_blessing.name]. Ты нравишься мне, [hero_name]… иначе я бы не выбрала тебя."
-
+        "Передумал":
+            p "Подожди, я передумал."
+            f @smile_shy_hold "Не хочешь уходить от меня?"
+            jump start_ask_god
     # Вспышка света, переход к перерождению
     scene bg haven_bright1 with dis5
     scene bg haven_bright2 with dis5

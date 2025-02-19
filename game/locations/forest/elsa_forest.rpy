@@ -146,7 +146,6 @@ label elsa_first_time_blessing:
 
     menu:
         "Идти за [e.name]":
-            $ updateCanVisit("mt", True)
             jump magic_tower_elsa
 
 label elsa_first_time_no_blessing:

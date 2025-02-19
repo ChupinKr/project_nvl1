@@ -3,6 +3,7 @@ label rapunzel_brothel_first_visit:
     pause 3.5
     show r smile at right with dis5
     p "Это место не особо похоже на то, что ты описывала."
+    $updateCanVisit("tavern", True)
     r @smile_shy "Мы еще не пришли, идем, за мной!"
     "Мы заходим в туалет, а там уже открываем потайную дверь"
     
