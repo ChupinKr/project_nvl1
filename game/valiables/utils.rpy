@@ -157,7 +157,7 @@ init python:
         notices = []
 
     def addLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, maomao_love, notices
+        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, notices
         if who == "f":
             f_love += countLove
         elif who == "nag":
@@ -176,14 +176,14 @@ init python:
             e_love += countLove
         elif who == "r":
             r_love += countLove
-        elif who == "maomao":
-            maomao_love += countLove
+        elif who == "mao":
+            mao_love += countLove
         notices.append("Характеристика симпатии ["+ who +".name] увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def minusLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, maomao_love, notices
+        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, notices
         if who == "f":
             f_love -= countLove
         elif who == "nag":
@@ -202,8 +202,8 @@ init python:
             e_love -= countLove
         elif who == "r":
             r_love -= countLove
-        elif who == "maomao":
-            maomao_love -= countLove
+        elif who == "mao":
+            mao_love -= countLove
         notices.append("Характеристика симпатии уменьшилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []

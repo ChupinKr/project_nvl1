@@ -26,9 +26,11 @@ init python:
     def generate_qte_sequence():
         """Создаёт случайную комбинацию стрелок для ввода."""
         # Пример расчёта количества символов (можно подстроить под свою логику)
-        count = math.ceil(enemy_strength / 10 - strength / 10)
-        if count < 6:
-            count = 6
+        count = math.ceil(enemy_strength / 15)
+        if count < 4:
+            count = 4
+        if count > 26:
+            count = 26
         return "".join(random.choices(["↑", "↓", "←", "→"], k=count))
 
     def add_qte_input(key):
@@ -118,7 +120,7 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     $ enemy_strength = enemy_str  # Устанавливаем здоровье противника
     $ battle_location = loc
     $ enemy_name = name
-    $ qte_time = 3.0
+    $ qte_time = 3.0 + (0.3 * strength)
     $ qte_bar = 100
     $ enemy_strength += 5 # с течением боя противник становится сильнее(чтобы не затягивать бои)
     $ qte_sequence = generate_qte_sequence()  # Генерируем случайную последовательность
@@ -137,7 +139,7 @@ label check_qte:
 
 label qte_success:
     # Уменьшаем здоровье противника случайным количеством
-    $ damage_to_enemy = random.randint(strength, strength*2)  # Случайный урон
+    $ damage_to_enemy = random.randint(math.ceil(strength / 2), math.ceil(strength * 1.5))  # Случайный урон
     if damage_to_enemy < 10:
         $ damage_to_enemy = 10
     $ enemy_health -= damage_to_enemy  # Уменьшаем здоровье противника
@@ -153,8 +155,11 @@ label qte_success:
 
 label qte_fail:
     # Уменьшаем здоровье игрока на случайный урон
-    $ damage = random.randint(enemy_strength, enemy_strength*2)  # Случайный урон для игрока (например, от 10 до 30)
-    $ health -= damage  # Уменьшаем здоровье игрока
+    $ damage = random.randint(math.ceil(enemy_strength / 2), math.ceil(enemy_strength * 1.5))  # Случайный урон для игрока (например, от 10 до 30)
+    if damage - (strength * 2) > 10:
+        $ health -= damage - (strength * 2)  # Уменьшаем здоровье игрока
+    else:
+        $ health -= 10 # Уменьшаем здоровье игрока
 
     # Проверка на поражение игрока
     if health <= 0:
@@ -207,14 +212,14 @@ label battle_escape:
             "Ты не чувствуешь ничего кроме боли"
             jump surgency_tsunade_cure
         else:
-            "Тебе больно, но это терпимо, может само пройдет"
-            "(Не пройдет, иди к врачу)"
+            "Тебе больно, но это терпимо, само пройдет"
             jump escape_battle
     else:
         "Противник такого уровня тебя не отпустит, ты пропустил удар"
         jump qte_fail
 
 label escape_battle:
+    hide screen battle_hp_bars
     "Ухх, было близко, хорошо, что успел убежать"
     if battle_location == "ruined_temple":
         jump ruined_temple
@@ -228,5 +233,9 @@ label escape_battle:
         jump tavenr
     elif battle_location == "market":
         jump market
+    elif battle_location == "forest":
+        jump forest
+    elif battle_location == "brothel":
+        jump brothel
     else: 
         return

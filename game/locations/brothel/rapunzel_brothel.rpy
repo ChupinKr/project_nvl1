@@ -458,7 +458,7 @@ label r_root_blowjob:
     scene bg r_suck_28 with dissolve
     "Вы еще какое то время смотрите друг на друга"
     "!!!!!"
-    maomao "Эй, [r.name], где ты там? Пора за работу!"
+    mao "Эй, [r.name], где ты там? Пора за работу!"
     r "Ты слышал ее, мне пора, до встречи~"
 
     scene bg r_suck_31 with dissolve

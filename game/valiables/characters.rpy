@@ -26,9 +26,9 @@ init:
     define m = Character('Тавернщица', color="#00ffff", image='m')
     define m_love = 0
     define m_str = 40
-    define maomao = Character('Мао Мао', color="#006400", image='mao')
-    define maomao_love = 0
-    define maomao_str = 20
+    define mao = Character('Мао Мао', color="#006400", image='mao')
+    define mao_love = 0
+    define mao_str = 20
     define d = Character('Даркнесс', color="#c0c0c0", image='d')
     define d_love = 0
     define d_str = 180
@@ -41,3 +41,7 @@ init:
     define guy2 = Character('Парень 2', color="#ffaaaa")
     define guy3 = Character('Парень 3', color="#ffaaaa")
     define sg = Character('Мутный тип', color="#ffaaaa") #shady guy
+
+    
+    define korg = Character('Корг', color="#ffaaaa")
+    define korg_str = 300

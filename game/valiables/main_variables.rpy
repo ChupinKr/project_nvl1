@@ -26,5 +26,9 @@ init:
     # Массив купленных товаров
     $ gg_items = []
 
+    # Приглашенная девушка
+    $ can_invite_brothel = False
+    $ invited_girl = None
+
     #Количество смертей
     $ death_count = 0
