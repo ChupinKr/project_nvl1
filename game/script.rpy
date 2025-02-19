@@ -40,7 +40,8 @@ label start:
 
 
     # Создание персонажа с подставленным именем
-    define p = Character("[hero_name]", color="#FFFFFF")  # Главный герой с именем, выбранным игроком
+    define p = Character("[hero_name]", color="#FFFFFF") # Главный герой с именем, выбранным игроком
+    define mind = Character("Мысли [hero_name]", color="#FFFFFF")  # Мысли ГГ
 
     p "Меня зовут [hero_name]."  # Главный герой говорит своё имя
 

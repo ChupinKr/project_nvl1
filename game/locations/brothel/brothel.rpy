@@ -4,9 +4,10 @@ label rapunzel_brothel_first_visit:
     show r smile at right with dis5
     p "Это место не особо похоже на то, что ты описывала."
     r @smile_shy "Мы еще не пришли, идем, за мной!"
-    "Мы заходим в туалет, а там уже открываем потайную дверь в чудесное место"
+    "Мы заходим в туалет, а там уже открываем потайную дверь"
     
-    scene bg brothel_girl with dis5
+    scene bg brothel_girl1 with dis5
+    show r smile at right with dis5
     "Меня ослепили диковинные для этих мест, фиотеловые огни"
     "Это действительно похоже на современный бордель, на что только не идут люди, чтобы повеселиться, магия и тут пригодилась"
     p "У меня нет слов, это лучшее место в этом городе!"
@@ -72,6 +73,8 @@ label brothel_menu:
     menu:
         "Подойти к [maomao.name]":
             jump visit_maomao
+        "Найти [r.name]" if can_go_r:
+            jump rapunzel_brothel
         "Посмотреть танец":
             jump brothel_girl_menu
         "Уйти":

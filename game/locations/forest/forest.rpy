@@ -9,7 +9,6 @@ default first_time_forest = True
 
 label forest:
     scene bg forest with fade
-
     
     if charisma > 1 and first_time_rapunzel:
         jump visit_rapunzel_forest
@@ -37,7 +36,7 @@ label forest_menu:
 label look_around:
     "Ты осматриваешься..."
     menu:
-        "Навестить [r.name]" if not first_time_rapunzel:
+        "Навестить [r.name]" if not first_time_rapunzel and can_go_r:
             jump visit_rapunzel_forest
         "Навестить [e.name]" if not first_time_elsa:
             jump visit_elsa_forest
