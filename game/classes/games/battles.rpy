@@ -26,7 +26,7 @@ init python:
     def generate_qte_sequence():
         """Создаёт случайную комбинацию стрелок для ввода."""
         # Пример расчёта количества символов (можно подстроить под свою логику)
-        count = math.ceil(enemy_strength / 15)
+        count = math.ceil(enemy_strength / 15) - math.ceil(strength / 10)
         if count < 4:
             count = 4
         if count > 26:
@@ -140,9 +140,10 @@ label check_qte:
 label qte_success:
     # Уменьшаем здоровье противника случайным количеством
     $ damage_to_enemy = random.randint(math.ceil(strength / 2), math.ceil(strength * 1.5))  # Случайный урон
+    $ damage_to_enemy = damage_to_enemy - (enemy_strength * 2)
     if damage_to_enemy < 10:
         $ damage_to_enemy = 10
-    $ enemy_health -= damage_to_enemy  # Уменьшаем здоровье противника
+    $ enemy_health -= damage_to_enemy   # Уменьшаем здоровье противника
     # Проверка на победу
     if enemy_health <= 0:
         hide screen battle_hp_bars
@@ -156,10 +157,10 @@ label qte_success:
 label qte_fail:
     # Уменьшаем здоровье игрока на случайный урон
     $ damage = random.randint(math.ceil(enemy_strength / 2), math.ceil(enemy_strength * 1.5))  # Случайный урон для игрока (например, от 10 до 30)
-    if damage - (strength * 2) > 10:
-        $ health -= damage - (strength * 2)  # Уменьшаем здоровье игрока
-    else:
-        $ health -= 10 # Уменьшаем здоровье игрока
+    $ damage = damage - (strength * 2)
+    if damage < 10:
+        $ damage = 10
+    $ health -= damage # Уменьшаем здоровье игрока
 
     # Проверка на поражение игрока
     if health <= 0:

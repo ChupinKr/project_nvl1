@@ -157,7 +157,7 @@ init python:
         notices = []
 
     def addLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, notices
+        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
         if who == "f":
             f_love += countLove
         elif who == "nag":
@@ -178,12 +178,14 @@ init python:
             r_love += countLove
         elif who == "mao":
             mao_love += countLove
+        elif who == "d":
+            d_love += countLove
         notices.append("Характеристика симпатии ["+ who +".name] увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def minusLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, notices
+        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
         if who == "f":
             f_love -= countLove
         elif who == "nag":
@@ -204,6 +206,8 @@ init python:
             r_love -= countLove
         elif who == "mao":
             mao_love -= countLove
+        elif who == "d":
+            d_love -= countLove
         notices.append("Характеристика симпатии уменьшилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
@@ -214,15 +218,14 @@ init python:
             nag_str += countStr 
         if who == "eris":
             eris_str += countStr
+        if who == "d":
+            d_str += countStr
         notices.append("Противник становится серьезнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def addLoveAndStr(who, countLove, countStr):
         global nag_str,miku_love,nag_love,notices
-        if who == "miku":
-            miku_love += countLove
-            miku_str += countStr * strength_mod
         if who == "nag":
             nag_love += countLove
             nag_str += countStr * strength_mod
