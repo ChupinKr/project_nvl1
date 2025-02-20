@@ -195,6 +195,7 @@ label nagatoro_root_show:
     nag "Хаха, да шучу я!"
 
     if nag_love < 60:
+        $customNotify("Недостаточно симатии")
         nag "Всё, на этом закончим, пора идти заниматься еще и твоими тренировками."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
         "Вы встаете, [nag.name] одевается"
@@ -231,6 +232,7 @@ label nagatoro_root_show:
     "Ты не можешь сделать вид, что ничего не заметил"
     
     if nag_love < 70:
+        $customNotify("Недостаточно симатии")
         "Но [nag.name] может"
         scene bg nag_show19 with dissolve
         nag "Кхм... Ааах, как же я устала!"
@@ -264,17 +266,63 @@ label nagatoro_root_show:
     scene bg nag_show24 with dissolve
     nag "Как тебе шоу? Понравилось же?"
 
-    if nag_love >= 90:
-        "Ты не можешь сдержаться и набрасываешься на [nag.name]"
-        nag "Ах, [hero_name], что на тебя нашло?!"
-        p "Я не могу себя контролировать, прими это!"
-        call nagatoro_root_show_anal
+    if nag_love < 90:
+        $customNotify("Недостаточно симатии")
+        p "У меня нет слов!"
+        scene bg nagatoro_dodjo with fade
+        show nag grin_battle6 with dissolve
+        nag "Ты должен был сказать, что мои достижения тебя вдохновили на большие тренировки!"
+        nag "Я дала тебе столько мотивации, хаха, самое время тренировать тебя!"
         return
+        
+    "Ты не можешь сдержаться и набрасываешься на [nag.name]"
+    nag "Ах, [hero_name], что на тебя нашло?!"
+    p "Я не могу себя контролировать, прими это!"
+    scene bg nag_show_anal1 with dissolve
+    pause .3
+    scene bg nag_show_anal2 with dissolve
+    pause .3
+    scene bg nag_show_anal3 with dissolve
+    pause .3
+    scene bg nag_show_anal4 with dissolve
+    pause .3
+    scene bg nag_show_anal5 with dissolve
+    pause .3
+    scene bg nag_show_anal4 with dissolve
+    pause .3
+    scene bg nag_show_anal3 with dissolve
+    pause .3
+    scene bg nag_show_anal4 with dissolve
+    pause .3
+    scene bg nag_show_anal3 with dissolve
+    pause .3
+    scene bg nag_show_anal4 with dissolve
+    pause .3
+    scene bg nag_show_anal5 with dissolve
 
-    scene bg nagatoro_dodjo with fade
-    show nag grin_battle6 with dissolve
-    p "У меня нет слов!"
-    nag "Ты должен был сказать, что мои достижения тебя вдохновили на большие тренировки!"
-    nag "Я дала тебе столько мотивации, хаха, самое время тренировать тебя!"
+    nag "Ааааааах, [hero_name]!"
+    p "Прими это, сука!"
 
-    return
+    scene bg nag_show_anal5_cum0 with flash
+    
+    nag "А-а-ааааах"
+    scene bg nag_show_anal_cum1 with dissolve
+    pause .5
+    scene bg nag_show_anal_cum2 with dissolve
+    pause .5
+    scene bg nag_show_anal_cum3 with flash
+    pause .2
+    scene bg nag_show_anal_cum3 with flash
+    pause .2
+    scene bg nag_show_anal_cum3 with flash
+    pause .7
+    scene bg nag_show_anal_cum4 with flash
+    pause .2
+    scene bg nag_show_anal_cum4 with flash
+    pause .2
+    scene bg nag_show_anal_cum4 with flash
+
+    p "Еще увидимся."
+    "Ты одеваешься и уходишь"
+
+    jump city
