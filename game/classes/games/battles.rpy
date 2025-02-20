@@ -120,7 +120,7 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     $ enemy_strength = enemy_str  # Устанавливаем здоровье противника
     $ battle_location = loc
     $ enemy_name = name
-    $ qte_time = 3.0 + (0.3 * strength)
+    $ qte_time = 3.0 + (0.03 * strength)
     $ qte_bar = 100
     $ enemy_strength += 5 # с течением боя противник становится сильнее(чтобы не затягивать бои)
     $ qte_sequence = generate_qte_sequence()  # Генерируем случайную последовательность
@@ -140,7 +140,7 @@ label check_qte:
 label qte_success:
     # Уменьшаем здоровье противника случайным количеством
     $ damage_to_enemy = random.randint(math.ceil(strength / 2), math.ceil(strength * 1.5))  # Случайный урон
-    $ damage_to_enemy = damage_to_enemy - (enemy_strength * 2)
+    $ damage_to_enemy = damage_to_enemy
     if damage_to_enemy < 10:
         $ damage_to_enemy = 10
     $ enemy_health -= damage_to_enemy   # Уменьшаем здоровье противника

@@ -1,4 +1,6 @@
 define battle_location_forest = "forest"
+define can_visit_nagatoro = True
+define first_root_nagatoro = True
 
 label visit_nagatoro_forest:
     scene bg forest with fade
@@ -113,11 +115,42 @@ label visit_nagatoro_forest:
 
 label nagatoro_forest_menu:
     menu:
+        "Глубокий партер" if not first_root_nagatoro: 
+            if nag_love >= 60:
+                nag "Идем!"
+                jump nagatoro_dodjo_first_time
+            else:
+                nag "У меня сейчас нет настроения на эти тренировки."
+                mind "Возможно я ее чем-то разочаровал, наверно стоит заслужить ее доверие вновь"
+                jump nagatoro_forest_menu
+        "Тренировка(новая)" if nag_love >= 60 and first_root_nagatoro: 
+            nag @happy "Эй, [hero_name], я придумала новые тренировки!"
+            nag @grin "Это скорее кардио, и направлены на развитие различных групп мышц, а тренироваться необходимо с минимумом одежды!"
+            show nag normal_shy_battle3 with fade    
+            "[nag.name] разделась до футболки"
+            nag @grin_battle3 "Я назвала эту группу упражнений \"Глубокий партер\". Хочешь научу?"
+            menu:
+                "Да":
+                    p "Новые упражнения? Конечно!"
+                    $ first_root_nagatoro = False
+                    nag @grin_battle3 "И ты даже не боишься?"
+                    p "Боюсь, но ты сама велела мне бороться со своим страхом!"
+                    nag "Хах, молодец, хорошая работа, [hero_name]. Идем, я покажу, где мы будем проводить тренировки."
+                    jump nagatoro_dodjo
+                "Нет":
+                    p "Звучит сомнительно, предпочту отказаться"
+                    $can_visit_nagatoro = False
+                    nag @grin_battle3 "Что, струсил опять?"
+                    p "Нет, просто звучит как-то подозрительно..."
+                    nag "Понятно, ты не только слабак, но и неисправимый дурак, я не собираюсь тратить время на такого, как ты, прощай."
+                    "[nag.name] уходит, и, кажется, больше не вернется в этот лес"
+                    $customNotify("Ты больше не увидишь [nag.name]")
+                    jump forest
         "Тренировка(сражение)": 
-            p "Давай потренируемся. Я хочу проверить, насколько я могу улучшиться."
+            p "Давай потренируемся. Я хочу проверить, насколько сильнее я стал."
             show nag grin
             nag "Ха-ха! Снова рискнёшь? Мне нравится твоя наглость, но помни – слабость тут не прощается, и я не собираюсь тебя щадить."
-            call start_battle(100, nag_str, nag.name, battle_location_forest) from _call_start_battle_1
+            call start_battle(100, nag_str, nag.name, battle_location_forest)
             if last_battle_win:
                     jump battle_win_forest_nagatoro
         "Попросить задание" if isNoQuestNow():
@@ -335,28 +368,104 @@ label battle_win_forest_nagatoro:
     #Уже может посетить гильдию
     else:
         # победа над Нагаторо
-        $addLoveAndStr("nag",10,5)
+        $addLoveAndStr("nag",5,5)
         jump check_lvl_root
 
 
 label check_lvl_root:
-    if nag_love >= 30:
+    if nag_love >= 50:
         show nag normal_shy_battle2
         nag "Эй, ты совсем порвал мой кэйкоги!"
         p "В настоящем сражении одежда неминуемо порвется."
         nag "Так не пойдет, реванш, сейчас же!"
         $addNPCStr("nag", 5)
         #Требует реванш!
-        call start_battle(100, nag_str, nag.name, 'return_to_this') from _call_start_battle_2
+        call start_battle(100, nag_str, nag.name, 'return_to_this')
+        if last_battle_win:
+            hide nag with fade
+            "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
+            show nag normal_shy_battle4 with fade
+            nag @grin_battle4 "Знаешь, [hero_name], я слишком сильно поддавалась тебе, с этим покончено!"
+            $addNPCStr("nag", 10)
+            show nag normal_shy_battle5 with fade
+            "[nag.name] снимает с себя всю верхнюю одежду в надежде, что теперь тебе будет еще сложнее ухватиться и победить ее"
+            nag @grin_battle5 "Что смотришь? Больше тебе не победить! Реванш!"
+            call start_battle(100, nag_str, nag.name, 'return_to_this')
+            if last_battle_win:
+                hide nag with fade
+                "Шло ожесточенное сражение. Твои руки скользят по ее гладкому телу"
+                "Но тебе все же удалось за что-то ухватиться, благодаря этому то ты и победил"
+                $customNotify("Ты получил трусики [nag.name]")
+                show nag grin_battle6 with fade
+                nag "Все же нашел, за что ухватиться, да?"
+                p "!!!!!!"
+                p "Прости, я не хотел.."
+                nag normal_shy_battle6 "Я уже привыкла, но давай ты все же уйдешь.."
+                "Ты уходишь"
+                mind "Интересно, что [nag.name] задумала? Она явно это просто так не оставит.."
+                mind "Спасибо [f.name], прекрасный мир!"
+                jump forest
+            else:
+                nag "Я так и знала, что ты слабак, просто надо было серьезнее отнестись к бою!"
+                $minusLove("nag", 10)
+                jump forest
+                "Ты убегаешь, пока не понимаешь, что в безопасности"
+                "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
+                mind "Нужно стать сильнее!"
+                jump forest
+        else:
+            nag "И это всё, что ты можешь? Беги, беги, слабак!"
+            $minusLove("nag", 10)
+            jump forest
+            "Ты убегаешь, пока не понимаешь, что в безопасности"
+            "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
+            mind "Нужно стать сильнее!"
+            jump forest
+    if nag_love >= 40:
+        show nag normal_shy_battle2
+        nag "Эй, ты совсем порвал мой кэйкоги!"
+        p "В настоящем сражении одежда неминуемо порвется."
+        nag "Так не пойдет, реванш, сейчас же!"
+        $addNPCStr("nag", 5)
+        #Требует реванш!
+        call start_battle(100, nag_str, nag.name, 'return_to_this')
+        if last_battle_win:
+           hide nag 
+           "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
+           show nag normal_shy_battle4
+           nag @grin_battle4 "Может не будешь так сильно хватать, я устала зашивать кейроги!"
+           nag normal_shy_battle4 "Ты не собираешшься отвернуть?"
+           p "Зачем?"
+           nag @grin_battle4 "Хах, а ты осмелел!"
+           nag normal_shy_battle4 "[hero_name], хочешь тренировать? Приходи в следующий раз, видишь же, мне надо зашить одежду!"
+           "Ты уходишь"
+           mind "Надо стать еще сильнее перед след встречешь, кто знает, что она учудит."
+           jump forest
+        else:
+            nag "И это всё, что ты можешь? Беги, беги, слабак!"
+            $minusLove("nag", 10)
+            jump forest
+            "Ты убегаешь, пока не понимаешь, что в безопасности"
+            "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
+            mind "Нужно стать сильнее!"
+            jump forest
+    elif nag_love >= 30:
+        show nag normal_shy_battle2
+        nag "Эй, ты совсем порвал мой кэйкоги!"
+        p "В настоящем сражении одежда неминуемо порвется."
+        nag "Так не пойдет, реванш, сейчас же!"
+        $addNPCStr("nag", 5)
+        #Требует реванш!
+        call start_battle(100, nag_str, nag.name, 'return_to_this')
         if last_battle_win:
            hide nag 
            "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее."
            show nag normal_shy_battle3
-           nag angry_battle3 "Ты должно быть издеваешься?!"
+           nag @grin_battle3 "Ты должно быть издеваешься?!"
            nag normal_shy_battle3 "Может отвернешься ради приличия?"
            p "Ой, да... "
            p "Да, прости пожалуйста."
-           nag grin_shy_battle3 "Ха ха, так и знала, что трусость с тренировками никуда не пропадает."
+           nag @grin_battle3 "Ха ха, так и знала, что трусость с тренировками никуда не пропадает."
            nag normal_shy_battle3 "[hero_name], ты, надеюсь, насмотрелся? Может уже свалишь пока цел?"
            p "Аа, ээ, да, конечно, уже ухожу!"
            "Ты уходишь, понимая, что всё было не зря"

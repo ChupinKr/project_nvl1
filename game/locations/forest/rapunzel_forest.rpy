@@ -200,7 +200,7 @@ label first_time_rapunzel_no_blessing:
 label rapunzel_forest: 
     show r smile
     menu:
-        "Посмотреть Бордель" if r_love >=20 and not canVisit("brothel"):
+        "Посмотреть Бордель" if r_love >= 20 and not canVisit("brothel"):
             p "Я слышал, что где-то здесь есть бордель, ты случаем не знаешь о нем?"
             r @surprised "Только тихо, место это секретное. Идем."
             jump rapunzel_brothel_first_visit

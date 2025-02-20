@@ -40,7 +40,7 @@ label look_around:
             jump visit_rapunzel_forest
         "Навестить [e.name]" if not first_time_elsa:
             jump visit_elsa_forest
-        "Навестить [nag.name]" if not first_time_nagatoro:
+        "Навестить [nag.name]" if not first_time_nagatoro and can_visit_nagatoro:
             jump visit_nagatoro_forest
         "Вернуться назад":
             jump forest
@@ -48,18 +48,18 @@ label look_around:
 label look_for_enemy:
     "Ты заходишь чуть глубже в лес, отходишь от протоптанной тропинки"
     $rand_emeny = renpy.random.randint(1, 100) 
-    if rand_emeny < 20:
+    if rand_emeny < 35:
         "Ты видишь зайца с рогом, от тебя еще не видит, что будешь делать?"
         menu:
             "Напасть":
-                call start_battle(60, renpy.random.randint(1, 30) , "Заяц", 'scene')
+                call start_battle(60, renpy.random.randint(1, 20) , "Заяц", 'scene')
                 if last_battle_win:
                     "Ты прибил бедного зайку, тебе должно быть стыдно"
                     $ addChar(["str"],1)
                     jump forest_menu
             "Уйти":
                 jump forest_menu
-    if rand_emeny >= 20 and rand_emeny < 40:
+    if rand_emeny >= 35 and rand_emeny < 70:
         "Ты видишь большого и красивого оленя, кажется он уже доедает зайца?!"
         "Он тебя еще не видит, что будешь делать?"
         menu:
@@ -71,21 +71,21 @@ label look_for_enemy:
                     jump forest_menu
             "Уйти":
                 jump forest_menu
-    if rand_emeny >= 40 and rand_emeny < 60:
+    if rand_emeny >= 70 and rand_emeny < 85:
         "Ты видидишь кабана, он сразу замечает тебя и бежит в твою сторону!"
         call start_battle(150, renpy.random.randint(40, 80) , "Дикий кабан", 'scene')
         if last_battle_win:
             "Справился с диким кабаном, это успех!"
             $ addChar(["str"],3)
             jump forest_menu
-    if rand_emeny >= 60 and rand_emeny < 80:
+    if rand_emeny >= 85 and rand_emeny < 95:
         "Ты видидишь волка, он сразу замечает тебя и набрасывается!"
         call start_battle(60, renpy.random.randint(90, 120) , "Волк", 'scene')
         if last_battle_win:
             "Мне повезло справиться с волком Или я уже настолко силен?"
             $ addChar(["str"],4)
             jump forest_menu
-    if rand_emeny >= 80 and rand_emeny < 100:
+    if rand_emeny >= 95 and rand_emeny < 100:
         "Ты видидишь медведя, он моментально тебя замечает, спрятаться и убежать не выйдет!"
         call start_battle(200, renpy.random.randint(120, 160) , "Бурый медведь", 'scene')
         if last_battle_win:

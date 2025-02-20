@@ -14,25 +14,25 @@ define last_clean_win = None
 #положения
 transform left_bit:
     xalign 0.25
-    yalign 1.5
+    yalign 1.2
 transform left_mid:
     xalign 0.1
-    yalign 1.5
+    yalign 1.2
 transform left:
     xalign 0.0
-    yalign 1.5
+    yalign 1.2
 transform right_bit:
     xalign 0.75
-    yalign 1.5
+    yalign 1.2
 transform right_mid:
     xalign 0.9
-    yalign 1.5
+    yalign 1.2
 transform right:
     xalign 1.0
-    yalign 1.5
+    yalign 1.2
 transform mid:
     xalign 0.5
-    yalign 1.5
+    yalign 1.2
 
 # положения сфер
 transform mid_left:
@@ -225,11 +225,11 @@ init python:
         notices = []
 
     def addLoveAndStr(who, countLove, countStr):
-        global nag_str,miku_love,nag_love,notices
+        global nag_love,strength,notices
         if who == "nag":
             nag_love += countLove
-            nag_str += countStr * strength_mod
-        notices.append("Противник становится серьезнее")
+        strength += countStr * strength_mod
+        notices.append("Ты стал сильнее")
         notices.append("Характеристика симпатии увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
