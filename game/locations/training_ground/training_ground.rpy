@@ -56,7 +56,7 @@ label training_ground:
 
                 "[eris.name] делает резкий выпад, атакуя тебя!"
                 
-                call start_battle(120, eris_str, "[eris.name]", battle_location_training_ground)
+                call start_battle(120, eris_str, eris.name, battle_location_training_ground)
                 
                 if last_battle_win:
                     "Ты успеваешь парировать её атаку и даже немного оттеснить её назад."
@@ -106,7 +106,7 @@ label training_ground_eris_menu:
     "Ты подошел к [eris.name]"
     menu:
         "Спарринг":
-            call start_battle(120, eris_str, "[eris.name]", battle_location_training_ground)
+            call start_battle(120, eris_str, eris.name, battle_location_training_ground)
             if last_battle_win:
                 "IN PROGRESS"
                 $addChar(["str"], 2)

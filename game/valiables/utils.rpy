@@ -157,7 +157,8 @@ init python:
         notices = []
 
     def addLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
+        global m_love, e_love, r_love, ts_love, s_love, eris_love
+        global nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
         if who == "f":
             f_love += countLove
         elif who == "nag":
@@ -180,12 +181,15 @@ init python:
             mao_love += countLove
         elif who == "d":
             d_love += countLove
+        elif who == "eris":
+            eris_love += countLove
         notices.append("Характеристика симпатии ["+ who +".name] увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def minusLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
+        global m_love, e_love, r_love, ts_love, s_love, eris_love
+        global nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
         if who == "f":
             f_love -= countLove
         elif who == "nag":
@@ -206,6 +210,8 @@ init python:
             r_love -= countLove
         elif who == "mao":
             mao_love -= countLove
+        elif who == "eris":
+            eris_love -= countLove
         elif who == "d":
             d_love -= countLove
         notices.append("Характеристика симпатии уменьшилась")
@@ -213,7 +219,7 @@ init python:
         notices = []
 
     def addNPCStr(who, countStr):
-        global nag_str,notices
+        global nag_str,d_str,eris_str,notices
         if who == "nag":
             nag_str += countStr 
         if who == "eris":

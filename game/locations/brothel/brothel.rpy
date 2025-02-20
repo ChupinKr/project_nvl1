@@ -95,7 +95,7 @@ label brothel_menu:
                             "Ты отходишь от [krog.name]"
                             jump brothel
                         "Драться":
-                            call start_battle(200, korg_str , "[krog.name]", 'brothel')
+                            call start_battle(200, korg_str , krog.name, 'brothel')
                             if last_battle_win:
                                 mind "Я победил, но что мне с ним делать дальше?"
                                 menu:

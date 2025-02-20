@@ -76,6 +76,8 @@ label guild:
                 nag "Ну, тут я даже согласна с [hero_name]. Это действительно было странно..."
                 d @angry "Ах... какой стыд... такой шанс упущен..."
                 $minusLove("d",10)
+                "Богине пришлось по душе твое решение"
+                $addLove("f",10)
                 jump guild_after_trial
     else:
         "Ты в гильдии."
@@ -95,23 +97,27 @@ label guild_menu:
             else:
                 "Надо больше заниматься"
                 jump guild_menu
-        "Качаться":
-            call start_muscule
-            if last_muscule_win:
-                "Я определенно становлюсь все лучше!"
-                $addChar(["str"], 2)
-                jump guild_menu
-            else:
-                "Надо больше заниматься"
-                jump guild_menu
         "Найти [d.name]" if can_go_d:
             jump guild_d_menu
+        "Качаться":
+            # добавить вызов песни подход, подход, еще подход
+            call start_muscule("Подход",2.3)
+            if last_muscule_win:
+                call start_muscule("Подход",2.5)
+                if last_muscule_win:
+                    call start_muscule("Еще подход",2.7)
+                    if last_muscule_win:
+                        call start_muscule("Сотру со лба я легкий пот",2.7)
+                        if last_muscule_win:
+                            "Я определенно становлюсь все лучше!"
+                            $addChar(["str"], 2)
+                            if renpy.random.randint(1, 100) > 90:
+                                "Твоя занятия увидела [d.name]"
+                                $addLove("d", 5)
+                            jump guild_menu
+            "Надо больше заниматься"
+            jump guild_menu
         "Отправиться в город":
             jump city
-
-label guild_d_menu:
-    "Ты находишь [d.name]"
-    menu:
-        "Тебя пора наказать"
 
 

@@ -115,7 +115,8 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     with dissolve
     pause
     hide txt
-    
+    $ damage_to_enemy = 0
+    $ damage = 0
     $ enemy_health = enemy_hp  # Устанавливаем здоровье противника
     $ enemy_strength = enemy_str  # Устанавливаем здоровье противника
     $ battle_location = loc
