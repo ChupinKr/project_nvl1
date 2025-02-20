@@ -14,7 +14,7 @@ label rapunzel_brothel_menu:
             jump rapunzel_root_menu
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
-            call start_charisma_training(charisma)
+            call rapunzel_training
             if first_r_root:
                 if last_charisma_training_win and r_love >= 50:
                     $ first_r_root = False
@@ -43,21 +43,23 @@ label rapunzel_brothel_menu:
                     r @annoyed "Мог бы хоть постараться!"
                     $minusLove ("r", 2)
                     jump rapunzel_brothel_menu
+            jump rapunzel_brothel_menu
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
             r "Хм... На самом деле, у меня есть кое-что интересное!"
-            jump rapunzel_quests
+            call rapunzel_quests
+            jump rapunzel_brothel_menu
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("r"):
             p "Я не смогу выполнить это задание."
             r "Ох, ну хорошо, если передумаешь - приходи."
             $ removeQuest()
-            jump rapunzel_forest
+            jump rapunzel_brothel_menu
         "Уйти":
             p "В другой раз, Рапунцель."
             show r annoyed
             r "Ну вот, а я уже придумала, чем тебя занять~"
             r @smile "Ладно, не пропадай!"
-            jump forest
+            jump brothel
 
 label rapunzel_root_menu:
     menu:

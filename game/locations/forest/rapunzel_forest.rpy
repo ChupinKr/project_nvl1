@@ -193,19 +193,26 @@ label first_time_rapunzel_no_blessing:
 
     "Что ж, если это испытание — я определённо не собираюсь его провалить."  
 
-    jump rapunzel_training
+    call rapunzel_training
+    jump rapunzel_forest
 
 
 label rapunzel_forest: 
     show r smile
     menu:
+        "Посмотреть Бордель" if r_love >=20 and not canVisit("brothel"):
+            p "Я слышал, что где-то здесь есть бордель, ты случаем не знаешь о нем?"
+            r @surprised "Только тихо, место это секретное. Идем."
+            jump rapunzel_brothel_first_visit
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
-            jump rapunzel_training
+            call rapunzel_training
+            jump rapunzel_forest
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
             r "Хм... На самом деле, у меня есть кое-что интересное!"
-            jump rapunzel_quests
+            call rapunzel_quests
+            jump rapunzel_forest
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("r"):
             p "Я не смогу выполнить это задание."
             r "Ох, ну хорошо, если передумаешь - приходи."
@@ -222,21 +229,22 @@ label rapunzel_quests:
     menu:
         "Собрать особые грибы":
             r "Есть такие грибы... Они обладают уникальными свойствами."
-            r "Если ты их найдешь, я буду просто в восторге!"
-            $ getQuest(quest_rapunzel_mashrooms)
-            jump rapunzel_forest
-
+            if isAbleQuest(quest_rapunzel_mashrooms, r_love):
+                r "Если ты их найдешь, я буду просто в восторге!"
+                $ getQuest(quest_rapunzel_mashrooms)
+            else:
+                r "Хотя нет, думаю ты пока не готов выполнить это задание."
         "Приглашать девушек работать в борделе":
             r "О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
             r "Если приведешь мне парочку, я тебя щедро отблагодарю~"
             $ getQuest(quest_rapunzel_women)
-            jump rapunzel_forest
-
         "Я передумал":
             r "Ладно, но постарайся больше не отказывать девушкам в просьбах~~"
-            jump rapunzel_forest
+    return
 
 
-label rapunzel_training: 
-    "IN PROGRESS"
-    jump rapunzel_forest
+label rapunzel_training:
+    call start_charisma_training(charisma)
+    if last_charisma_training_win:
+        $addLove("r", 10)
+    return
