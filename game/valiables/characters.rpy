@@ -31,7 +31,7 @@ init:
     define mao_str = 20
     define d = Character('Даркнесс', color="#c0c0c0", image='d')
     define d_love = 0
-    define d_str = 180
+    define d_str = 200
     define eris = Character('Эрис', color="#7B1113", image='eris')
     define eris_love = 0
     define eris_str = 180

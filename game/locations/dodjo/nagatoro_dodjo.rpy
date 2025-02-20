@@ -32,6 +32,7 @@ label nagatoro_dodjo_first_time:
             p "Звучит интересно! Показывай!"
             nag @grin "Вот это настрой! Тогда начинаем!"
     call nagatoro_root_show
+    scene bg nagatoro_dodjo with fade
     show nag normal_shy_battle6 with fade
     nag "На этом пока закончим, найди меня в лесу, и мы продолжим наши занятия!"
     nag "Можешь идти."
@@ -148,7 +149,7 @@ label nagatoro_root_show:
     p "Ч-что? Это всё?"
 
     if nag_love < 55:
-        $customNotify("Недостаточно симатии")
+        $customNotify("Недостаточно симпатии")
         nag "Да, с тебя хватит, давай займемся обычными тренировками, а то что-то ты расслабился сильно."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
         "Вы встаете, [nag.name] одевается"
@@ -195,7 +196,7 @@ label nagatoro_root_show:
     nag "Хаха, да шучу я!"
 
     if nag_love < 60:
-        $customNotify("Недостаточно симатии")
+        $customNotify("Недостаточно симпатии")
         nag "Всё, на этом закончим, пора идти заниматься еще и твоими тренировками."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
         "Вы встаете, [nag.name] одевается"
@@ -232,7 +233,7 @@ label nagatoro_root_show:
     "Ты не можешь сделать вид, что ничего не заметил"
     
     if nag_love < 70:
-        $customNotify("Недостаточно симатии")
+        $customNotify("Недостаточно симпатии")
         "Но [nag.name] может"
         scene bg nag_show19 with dissolve
         nag "Кхм... Ааах, как же я устала!"
@@ -267,7 +268,7 @@ label nagatoro_root_show:
     nag "Как тебе шоу? Понравилось же?"
 
     if nag_love < 90:
-        $customNotify("Недостаточно симатии")
+        $customNotify("Недостаточно симпатии")
         p "У меня нет слов!"
         scene bg nagatoro_dodjo with fade
         show nag grin_battle6 with dissolve
@@ -326,3 +327,270 @@ label nagatoro_root_show:
     "Ты одеваешься и уходишь"
 
     jump city
+
+label nagatoro_root_titfuck:
+    nag @grin "Уже не терпится, да?"
+    hide nag grin with fade
+    "[nag.name] вышла из комнаты"
+    mind "Наверно она пошла переодеваться?"
+    show nag grin_battle6 with fade
+    "Полностью обнаженная [nag.name] вошла в комнату"
+    p "!!!!!"
+    nag "Не будем терять время.."
+    "Ты был не в том состоянии, чтобы спорить"
+
+    scene bg nag_titjob1 with dissolve
+    "[nag.name] быстро стягивает с тебя всю одежду и садит на кровать"
+    "Ты и не думаешь сопротивляться"
+    mind "Я думал, что ее грудь меньше. Такое нельзя скрывать под кейроги."
+    
+    scene bg nag_titjob2 with dissolve
+    "[nag.name] прижимается своей грудью к твоим ногам, это очень заводит"
+    nag "Аааааа..."
+
+    scene bg nag_titjob3 with dissolve
+    mind "Так сразу? Просит ее \"накормить\"?"
+    "Твой член еще сильнее напрягается от ее выражения лица, [nag.name] это замечает"
+    
+    scene bg nag_titjob4 with dissolve
+    p "Ты опять издеваешься! [nag.name], я так и знал, все по лицу видно!"
+    nag "Хах, может быть.."
+
+    scene bg nag_titjob5 with dissolve
+    "Ты уже напрягся до предела и не можешь держать свой член между ног"
+    "Твой член выпрыгивает, слегка задевая по щеке [nag.name]"
+    
+    scene bg nag_titjob6 with dissolve
+    nag "!!!!!"
+    nag "[hero_name]! Что это такое?!"
+    nag "Что за гигант!"
+    
+    scene bg nag_titjob7 with dissolve
+    nag "Ты знал, что именно такие я люблю больше всего?~~"
+    "[nag.name] прижимается грудями к твоему члену"
+    p "Ах, ты так прижимаешься.."
+
+    scene bg nag_titjob8 with dissolve
+    "Теперь она прижалась личиком к твоему члену, мягко поглаживая его своей нежной кожей"
+    nag "Так лучше?"
+    p "Ухх.."
+
+    scene bg nag_titjob9 with dissolve
+    "Она взяла твой член у основания, готовясь к чему-то"
+    nag "Ну же, что молчишь?"
+    p "Д-да, так хорошо."
+    nag "Тогда я сделаю еще лучше~~"
+    
+    scene bg nag_titjob10 with dissolve
+    mind "!!!!"
+    mind "Она лижет мой член!!!"
+
+    scene bg nag_titjob11 with dissolve
+    p "А-ах.."
+    nag "Мммм, какой вкусный~~"
+
+    scene bg nag_titjob12 with dissolve
+    nag "Пора начинать, да, [hero_name]?"
+    "[nag.name] мягко обхватила твой член грудями"
+    mind "Это блаженство~"
+    p "Чт-то начинать?"
+
+    scene bg nag_titjob13 with dissolve
+    "Ты чувствуешь горячее дыхание [nag.name] головкой, твой член начинает пульсировать, [nag.name] явно это заметила"
+    
+    scene bg nag_titjob14 with dissolve
+    "Теперь она касается уздечки члена своим язычком, у тебя бегут мурашки по телу"
+    nag "Тебе так нравится, [hero_name]?"
+
+    scene bg nag_titjob16 with dissolve
+    "Ты не успеваешь ответить, твой член уже почти во рту у [nag.name]"
+    mind "Охх, этот взгляд, как же заводит.."
+
+    scene bg nag_titjob16 with dissolve
+    "Слюни стекают с ее языка на твой член и на ее упругие груди"
+    mind "Ахх, так хорошо! Между ее грудей так скользко, тепло и приятно"
+    mind "Я больше не могу держаться!"
+    p "Только не сопротивляйся, [nag.name]!"
+    
+    scene bg nag_titjob17 with dissolve
+    "Ты слегка наклоняешь голову [nag.name], чтобы головка члена оказалась у нее во рту"
+    nag "Мммммффф"
+    p "Ах, да, именно так, двигай язычком"
+    
+    scene bg nag_titjob18 with dissolve
+    "[nag.name] начала активно двигать язычком"
+    p "Нет, держи его во рту"
+    nag "Угумфф"
+    mind "Думаю она согласилась"
+    
+    scene bg nag_titjob19 with dissolve
+    "Она прикрыла глаза, это явное согласие на то, чтобы ты ее направлял"
+    
+    scene bg nag_titjob20 with dissolve
+    "Ты пркладываешь чуть больше усилий так, что [nag.name] почти взяла всю головку в рот"
+    mind "Да, возьми побольше в свой теплый ротик"
+    nag "Мммнн"
+    
+    scene bg nag_titjob18 with dissolve
+    nag "Ах, тебе хорошо?"
+    mind "Да, блять, не останавливайся!"
+    p "Я уже н-на грани.."
+    
+    scene bg nag_titjob19 with dissolve
+    pause .3
+    scene bg nag_titjob20 with dissolve
+    pause .3
+    scene bg nag_titjob19 with dissolve
+    pause .3
+    scene bg nag_titjob20 with dissolve
+    pause .3
+    scene bg nag_titjob19 with dissolve
+    pause .3
+    scene bg nag_titjob20 with dissolve
+    pause .2
+    scene bg nag_titjob20 with flash
+    pause .2
+    scene bg nag_titjob20 with flash
+    pause .2
+    scene bg nag_titjob_cum21 with flash
+
+    "Ты начинаешь кончать"
+    
+    if nag_love < 70:
+        $customNotify("Недостаточно симпатии")
+        "[nag.name] вырвалась"
+        scene bg nagatoro_dodjo with fade
+        show nag normal_shy_battle6 with dissolve
+        nag "Эй, подожди, я не готова!"
+        nag "Тебе лучше уйти..."
+        jump city
+
+    mind "Аргх, получай!"
+    nag "ММММННННФФФФ!"
+
+    scene bg nag_titjob_cum22 with flash
+    "[nag.name] этого не ожидала"
+    nag "ММММММММММННН!"
+
+    scene bg nag_titjob_cum23 with flash
+    "[nag.name] сопротивляется все сильнее, пока ты заливаешь в ее рот сперму порцию за порцией"
+
+    if strength < nag_str:
+        $customNotify("Недостаточно силы")
+        "[nag.name] вырвалась из твой хватки и вздохнула воздуха"
+        scene bg nagatoro_dodjo with fade
+        show nag angry_cummed with dissolve
+        nag "О таком нужно предупреждать!"
+        nag "Я ухожу."
+        $minusLove("nag", 10)
+        jump city
+    "Ты смог удержать порыв [nag.name]"
+
+    scene bg nag_titjob_cum24 with flash
+    "Она поняла, что сопротивляться бесполезно, ты сильнее"
+    "[nag.name] смотрит на тебя умоляющим взглядом, сжимая твой пульсирующий член меж грудей"
+    nag "Умммммнф~~"
+    
+    scene bg nag_titjob_cum25 with flash
+    "Тебя это раззадорило и ты лишь сильнее вгоняешь свой член в её узенький ротик"
+    "Глаза [nag.name] начали закатываться от обилия спермы"
+    mind "Аргх, глотай всё, что я тебе даю!"
+    
+    scene bg nag_titjob_cum26 with flash
+    "[nag.name] смотрит на тебя щенячьими глаза, а из ее рта брызжет спермы"
+    nag "Ммммннуууу~~"
+
+    scene bg nag_titjob_cum27 with flash
+    "Ей очень тяжело, но она все еще двигает грудями дволь твоего члена, стимулируя его всё сильнее"
+    p "Арргх, да, да, глотай!"
+
+    scene bg nag_titjob_cum27 with flash
+    "По щекам [nag.name] текут слезы"
+    mind "Кажется она начала задыхаться..."
+    nag "Ммммффрр.."
+    
+    scene bg nag_titjob_cum28 with flash
+    "Ты даешь ей возможность вдохнуть немного воздуха, и продолжаешь обильно кончать в ее рот"
+
+    if strength < nag_str * 1.5:
+        scene bg nag_titjob_cum28_1 with flash
+        "Почти сразу ты насаживаешь ее ротик обратно на свой член"
+        "Грудь [nag.name] покрылась спермой, а сама она смотрит на тебя гневным взглядом"
+        mind "Потерпи, [nag.name], еще немного, уххх"
+        p "Уффффхх.."
+        
+        scene bg nag_titjob_cum28_2 with flash
+        "Ты стараешься насадить ее еще сильнее на свой член, но сопротивление [nag.name] лишь растет"
+        "[nag.name] старается изо всех сил, ты действительно ее разозлил"
+        
+        $customNotify("Недостаточно силы")
+        scene bg nag_titjob_cum28_3 with flash
+        "Наконец [nag.name] вырывается"
+        scene bg nagatoro_dodjo with fade
+        show nag angry_cummed with dissolve
+        nag "Больше! Так! Не! Делай!"
+        nag "Я ухожу!"
+        $minusLove("nag", 10)
+        jump city
+
+    scene bg nag_titjob_cum29 with flash
+    "[nag.name] смиряется, слезы ручьями текут по ее щекам, а изо рта вырываются струи своей спермы"
+    mind "Вот он, взгляд полный любви и доверия~"
+
+    scene bg nag_titjob_cum30 with flash
+    "Ты отпускаешь ее голову, [nag.name] начинает жадно глотать воздух"
+    "Ты не останавливаешься, продолжая заливать ее личико спермой"
+    p "А-а-ааааах.."
+    
+    scene bg nag_titjob_cum31 with flash
+    "Лицо [nag.name] покрывается твоей спермой, а сама она все еще не может надышаться"
+    
+    scene bg nag_titjob_cum32 with flash
+    "Наконец твой член успокаивается и лишь пара струй спермы свисают с языка [nag.name]"
+    p "Ты хорошо постаралась."
+    
+    scene bg nag_titjob_cum33 with flash
+    "[nag.name] выбилась из сил и уже истощена, но, будто по привычке, она облизывает головку твоего члена, пытаясь почистить"
+    
+    scene bg nag_titjob_cum34 with flash
+    "Но делает только хуже, рот [nag.name] переполнен спермой"
+    "Ее грудь и лицо тоже полностью залиты твоим семенем"
+    
+    scene bg nag_titjob_cum35 with dissolve
+    "Она быстро закрывает рот, чтобы не испачкать тебя еще сильнее"
+    "А сама она старается сильнее обхватывать своей грудью твой член"
+    "Ты наслаждаешься зрелищем"
+    p "Ты молодец, [nag.name]"
+    
+    scene bg nag_titjob_cum36 with dissolve
+    "[nag.name] будто готова расплакаться, по ее щекам текут слезы в перемешку со спермой, и даже весь ее рот переполнен твоим угощением"
+    nag "Уфу фруфу?"
+    p "Да, [nag.name], мне очень понравилось, ты умничка!"
+
+    scene bg nag_titjob_cum37 with dissolve
+    "Довольная [nag.name] открыла свой ротик, чтобы показать, сколько угощения ты ей оставил"
+    p "Приятного аппетита, [nag.name]!"
+
+    scene bg nag_titjob_cum36 with dissolve
+    mind "Кажется она все проглотила.."
+    "И это тебя очень радует"
+
+    "Довольная [nag.name] встает"
+    scene bg nagatoro_dodjo with fade
+    show nag smile_cummed with dissolve
+    nag "Хорошая вышла тренировка!"
+    p "Да!"
+    nag "А сейчас мне нужно идти. Еще увидимся, [hero_name]!"
+    hide nag
+    mind "Уверен она пошла в душ."
+    "Полностью удовлетворенный, ты уходишь"
+    jump city
+    
+        
+
+
+
+
+
+
+
