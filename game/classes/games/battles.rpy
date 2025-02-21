@@ -26,7 +26,7 @@ init python:
     def generate_qte_sequence():
         """Создаёт случайную комбинацию стрелок для ввода."""
         # Пример расчёта количества символов (можно подстроить под свою логику)
-        count = math.ceil(enemy_strength / 15) - math.ceil(strength / 10)
+        count = math.ceil(enemy_strength / 10) - math.ceil(strength / 20)
         if count < 4:
             count = 4
         if count > 26:
