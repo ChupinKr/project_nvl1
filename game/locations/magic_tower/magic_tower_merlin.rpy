@@ -10,27 +10,36 @@ label find_merlin:
     $ roll = renpy.random.randint(1, 100)
 
     if roll <= find_chance and can_go_mer:
-        jump merlin_encounter
+        show mer smirk at center
+        mer "Ты меня нашёл. Вопрос в том, зачем."
+        jump merlin_menu
     else:
         "Я бродил по башне, но так и не смог её найти. Видимо, она ушла по своим магическим делам."
         "Интересно, что еще инетересного можно найти в башне"
         jump magic_tower_hub
 
-label merlin_encounter:
-    show mer smirk at center
-    mer "Ты меня нашёл. Вопрос в том, зачем."
+label merlin_menu:
     menu:
         "Попросить урок":
             jump mer_teach
-        # "Попросить квест":
-        #     show mer neutral
-        #     mer "Если хочешь задание – у меня всегда есть кое-что... рискованное."
-        #     "Мерлин хитро улыбнулась и начала рассказывать про квест."
-        #     jump merlin_quests
-        #     #TODO дописать menu с квестами от Мерлин
+        "Попросить квест":
+            show mer neutral
+            mer "Если хочешь задание – у меня всегда есть кое-что... рискованное."
+            "Мерлин хитро улыбнулась и начала рассказывать про квест."
+            call merlin_quests
+            jump merlin_menu
+        "Отказаться от задания" if isActualQuestOfCharacter("mer"):
+            p "Я не смогу выполнить это задание."
+            mer @smirk "Ожидаемо..."
+            $ removeQuest()
+            jump merlin_menu
         "Уйти":
             "Я решил не рисковать и оставить Мерлин в покое."
             jump magic_tower_hub
+
+label merlin_quests:
+    "IN PROGRESS"
+    return
 
 label mer_teach:
     show mer surprised

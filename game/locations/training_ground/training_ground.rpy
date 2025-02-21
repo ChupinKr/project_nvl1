@@ -116,7 +116,7 @@ label training_ground_eris_menu:
             else:
                 "IN PROGRESS"
                 jump training_ground_menu
-        "Пойти на задание вдвоем" if isNoQuestNow() and eris_love > 40:
+        "Пойти на задание вдвоем" if isNoQuestNow() and eris_love >= 40:
             jump eris_quest_menu
         "Вернуться":
             jump training_ground

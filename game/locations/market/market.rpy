@@ -100,7 +100,6 @@ label market_menu:
                 if last_battle_win:
                     "[h.name] это видела"
                     $addLove("h", 10)
-            jump talk_miku_quests
             jump market_menu
         "Уйти":
             jump city

@@ -92,13 +92,13 @@ label talk_miku_menu:
             jump talk_miku_drinks_menu
         "Спросить, чем можно помочь":
             m "Помощь? Отличная идея! Вот что у меня для тебя есть!"
-            jump talk_miku_quests
+            jump talk_miku_work
         "Спросить, чем заняться в городе":
             jump talk_miku_info
         "Ничего":
             jump miku_stand_menu
 
-label talk_miku_quests:
+label talk_miku_work:
     menu:
         "Помыть посуду (5 золота)":
             m "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
@@ -122,7 +122,7 @@ label talk_miku_quests:
                     m "Жаль, но ничего, этого я знаю, он еще вернется."
             else: 
                 m @angry "[hero_name], тебе не нужны деньги? Почему так плохо?!"
-            jump talk_miku_quests
+            jump talk_miku_work
         "Прогнать шумных гостей (10 золота)":
             m @angry "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!"
             if renpy.random.choice([False, True]) > 0:
@@ -137,7 +137,7 @@ label talk_miku_quests:
                     $addLove("m", 10)
                     pause 3.5
                     $addMoney(10)
-            jump talk_miku_quests
+            jump talk_miku_work
         "Никакой работы":
             m @angry "Эх, ну ладно... Может, в другой раз!"
     jump talk_miku_menu

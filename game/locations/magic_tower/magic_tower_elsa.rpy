@@ -29,6 +29,12 @@ label find_elsa_menu:
             show e neutral
             e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся."
             call elsa_quests_magic_tower
+            jump find_elsa_menu
+        "Отказаться от квеста" if isActualQuestOfCharacter("e"):
+            p "Я откажусь от выполнения квеста."
+            e smile "Ничего страшного, но если передумаешь - приходи!"
+            $ removeQuest()
+            jump find_elsa_menu
         "Уйти":
             "Я решил оставить Эльзу в покое и не мешать её тренировке."
             jump magic_tower_hub
@@ -44,9 +50,9 @@ label elsa_quests_magic_tower:
             e "Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
             e "Твоё тело мне пригодится~"
             $ getQuest(quest_elsa_test)
-            jump elsa_test
+            call elsa_test
         "Я передумал":
-            jump find_elsa_menu
+            return
     return
 
 label win_elsa_training:

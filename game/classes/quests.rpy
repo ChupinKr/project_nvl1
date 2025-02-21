@@ -82,14 +82,14 @@ init python:
     location="Лесная чаща", countObj=5, 
     character_says=["Гоблины не такие уж и слабые."
         ,"Ты уверен, что справишься?"],
-    req_love=0, req_str=0, req_mana=0, req_char=0, 
+    req_love=0, req_str=5, req_mana=0, req_char=0, 
     reward_money=15, reward_character=10, 
     str_bonus=2, mana_bonus=0, char_bonus=0
     )
     quest_nagatoro_forest = GirlQuest(whatToDo="Зачистить лес", forWho="Нагаторо", repeatable=True,
     location="Лес монстров", countObj=5, 
     character_says=["Хороший выбор. Там полно опасных существ, будь осторожен."],
-    req_love=0, req_str=0, req_mana=0, req_char=0, 
+    req_love=0, req_str=10, req_mana=0, req_char=0, 
     reward_money=25, reward_character=10, 
     str_bonus=4, mana_bonus=0, char_bonus=0
     )
@@ -97,7 +97,7 @@ init python:
     location="Темный переулок", countObj=3, 
     character_says=["Банда действительно угрожает путникам."
         ,"Это задание стоит того, чтобы им заняться."],
-    req_love=0, req_str=0, req_mana=0, req_char=0, 
+    req_love=0, req_str=20, req_mana=0, req_char=0, 
     reward_money=35, reward_character=10, 
     str_bonus=6, mana_bonus=0, char_bonus=0
     )
@@ -158,6 +158,18 @@ init python:
             targetQuests = [quest_rapunzel_mashrooms,quest_rapunzel_women]
         if who == "e":
             targetQuests = [quest_elsa_materials, quest_elsa_test]
+        if who == "nag":
+            targetQuests = [quest_nagatoro_bandits, quest_nagatoro_forest, quest_nagatoro_goblins]
+        if who == "mer":
+            targetQuests = []
+        if who == "d":
+            targetQuests = []
+        if who == "h":
+            targetQuests = []
+        if who == "m":
+            targetQuests = []
+        if who == "eris":
+            targetQuests = []
         if any(active_quest.name in q.name for q in targetQuests):
             result = True
         return result

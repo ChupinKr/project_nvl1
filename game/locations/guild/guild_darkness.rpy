@@ -35,7 +35,13 @@ label guild_d_menu:
                 "Стоило достойно принять поражение"
                 jump guild_menu
         "Спросить про задание" if isNoQuestNow():
-            jump guild_d_quests
+            call guild_d_quests
+            jump guild_d_menu
+        "Отказаться от задания" if isActualQuestOfCharacter("d"):
+            p "Я не буду выполнять твое задание."
+            d @smile_shy "Ааах, ты так жесток~"
+            $ removeQuest()
+            jump guild_d_menu
         "Уйти": 
             p "Я думаю, что мне стоит уйти."
             d @smile "Если понадоблюсь - я буду здесь~"
@@ -80,3 +86,7 @@ label guild_d_root_menu:
         "Передумал":
             d @angry "Ах, какой вы благородный юноша, [hero_name].."
             jump guild_menu
+
+label guild_d_quests:
+    "IN PROGRESS"
+    return 
