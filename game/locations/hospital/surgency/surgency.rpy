@@ -22,10 +22,12 @@ label surgency_tsunade_cure:
             pause 3.5
         $addHealth(100)
         "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
+        $first_time_surgency = False
     elif first_time_surgency:
         if not canVisit("hospital"):
             $ updateCanVisit("hospital", True)
         ts "Идти можешь, и пришёл ко мне, разве тебе нужно лечение? Или у тебя есть ко мне дело?"
+        $first_time_surgency = False
     elif health == 0:
         if money >= 10:
             ts "Опять ты? Уже не первый раз на моём операционном столе."  

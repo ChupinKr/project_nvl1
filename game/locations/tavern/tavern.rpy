@@ -1,7 +1,9 @@
 define battle_location_tavern = "tavern"
 define correct_answers = 0  # Счётчик правильных ответов
 define first_time_tavern = True
-
+define m_can_go_root = False
+define shoot_tits = False
+define can_go_m = True
 
 # Сцена с таверной
 label tavern:
@@ -10,7 +12,7 @@ label tavern:
     menu:
         "Пойти в комнату" if canVisit("room"):
                 jump room
-        "Подойти к [m.name]" :
+        "Подойти к [m.name]" if can_go_m:
             jump go_to_miku_stand
         "Подойти к сомнительному столу" if not canVisit("bm"):
             jump suspicious_table
@@ -30,7 +32,7 @@ label go_to_miku_stand:
         m @open_smile "Привет-привет! Добро пожаловать в таверну \"Звездные осколки\"!" 
         m @smile_closed_eyes "Я Мику, хозяйка этого местечка! Если что-то нужно – просто спрашивай, не стесняйся!" 
     else:
-        m @open_smile "Ой, опять ты! Как здорово! Чего желаешь сегодня?"
+        m @open_smile "Ой, [hero_name]! Чего желаешь сегодня?"
     jump miku_stand_menu
 
 label miku_stand_menu:
@@ -77,6 +79,10 @@ label talk_miku_drinks_menu:
 
 label talk_miku_menu:
     menu:
+        "Обслужи меня" if m_love >= 50 and m_can_go_root:
+            show m smirk_no_top with dissolve
+            m "Поднимайся по лестнице, ты знаешь, где поя комната~"
+            jump miku_tavern_root
         "Снять комнату" if not canVisit("room"):
             m smile "Комната стоит 10 золотых в неделю."
             menu:
@@ -90,10 +96,10 @@ label talk_miku_menu:
             m "Что будете пить?"
             m "Здесь можно найти не только пиво, но и кое-что поинтереснее."
             jump talk_miku_drinks_menu
-        "Спросить, чем можно помочь":
+        "Чем тебе помочь?":
             m "Помощь? Отличная идея! Вот что у меня для тебя есть!"
             jump talk_miku_work
-        "Спросить, чем заняться в городе":
+        "Попросить информацию":
             jump talk_miku_info
         "Ничего":
             jump miku_stand_menu
@@ -113,7 +119,7 @@ label talk_miku_work:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
                         "Ты провёл время, помогая [m.name]"
                         "[m.name] это оценила"
-                        $addLove("m", 10)
+                        $addLove("m", 5)
                         pause 3.5
                         $addMoney(10)
                     else: 
@@ -143,19 +149,75 @@ label talk_miku_work:
     jump talk_miku_menu
 
 label talk_miku_info:
-    if m_love >= 50:
+    if m_love >= 50 and not m_can_go_root:
+        $m_can_go_root = True
         m "Мне нравится, что ты не просто клиент."
-        m "Я могу показать тебе нечто особенное... но только если ты готов к этому~"
+        m "Мне больше нечего тебе рассказать.."
+        show m smile_no_top with dissolve
+        m "Но я могу показать тебе нечто особенное... но только если ты готов к этому~"
         menu:
-            "Я готов":
-                "IN PROGRESS"
-                jump talk_miku_info #TODO заменить на сцену минета от Мику
-            "Конечно готов":
-                "IN PROGRESS"
-                jump talk_miku_info #TODO заменить на сцену минета от Мику
             "Всегда готов":
-                "IN PROGRESS"
-                jump talk_miku_info #TODO заменить на сцену минета от Мику
+                m "Поднимайся на второй этаж, дверь налево. Я подойду через минуту~~"
+                "Ты идешь на второй этаж и заходишь в комнату [m.name]"
+                scene bg miku_room_tavern with fade
+                "..."
+                "....."
+                "........"
+                show m smirk_no_top with dissolve
+                m "Я долго этого ждала~~"
+                jump m_root_show #TODO заменить на сцену минета от Мику
+            "Не готов":
+                p "С тобой? Не думаю."
+                "Ты дурак?!"
+                $can_go_m = False
+                show m angry with dissolve
+                m "Ты! Дурак!"
+                hide m with dissolve
+                "[m.name] отвернулась и плачет"
+                $customNotify("Ты больше не сможешь поговорить с [m.name]")
+                jump tavern
+    elif m_love >= 40 and not shoot_tits:
+        m "Хммм, дай ка подумать.."
+        show m smile_closed_eyes with dissolve
+        pause 1
+        m smile_stretched_buttons1 "Кажется я тебе уже всё рассказал..."
+        show m smile_stretched_buttons2 with dissolve
+        "Ттрррсссс.."
+        show m smile_stretched_buttons3 with dissolve
+        "Внезапно пуговица на ее сарафане выстреливает тебе прямо в лоб"
+        show m smile_stretched_buttons4 with flash
+        pause 1
+        show m smile_stretched_buttons5 with dissolve
+        $health -= 10
+        $customNotify("Ты получил 10 единиц урона")
+        $shoot_tits = True
+        if health <= 0:
+            $health = 0
+            "Тебя добила пуговица, стоит быть аккуратнее."
+            m "О нет, ты в порядке?"
+            "Ты теряешь сознание"
+            jump surgency_tsunade_cure
+        else:
+            m "О нет, ты в порядке?"
+            p "Ай.. Да... Жить буду."
+            "Ты пялишься на ее грудь"
+            m "Прости меня, как я могу загладить свою вину?"
+            menu:
+                "Налей мне":
+                    "[m.name] застегивает сарафа и дрожащими руками наливает тебе Эль"
+                    show m smile_closed_eyes with dissolve
+                    m smile_closed_eyes "Вот твой напиток!"
+                    "[m.name] подскальзывается и проливает немного на себя"
+                    m surprised_wet_top "В-вооот! Держи!"
+                    $addChar(["str"], 2)
+                    p "Спасибо! Очень освежает"
+                    show m smile_wet_top with dissolve
+                    "[m.name] улыбается тебе"
+                "Сама придумай":
+                    "[m.name] снимает верх сарафана"
+                    show m smile_no_top with dissolve
+                    m "Эммм... Я... Я видела, как ты пялился, такого извинения будет достаточно?"
+                    p "Хаха! Да, пойдет, отлично шоу, [m.name]!"
     elif m_love >= 30 and not canVisit("bar"):
         m "Ты определённо мой типаж!"
         m "В городе есть **закрытый бар**, куда пускают только своих."
@@ -163,7 +225,7 @@ label talk_miku_info:
         m "*Описание того, как найти закрытый бар*"
         m "Скажи, что ты от меня и тебя пропустят."
         $ updateCanVisit("bar", True)
-    elif m_love >= 20 and not canVisit("tg"):
+    elif m_love >= 15 and not canVisit("tg"):
         m "Ты мне нравишься!"
         m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
         m "*Описание того, как попасть на тренировочную площадку*"
@@ -183,8 +245,15 @@ label tavern_task_board:
     m "Эй! Если тебе нужны деньги или опыт, взгляни на **доску объявлений**! Всегда найдётся интересное задание!"
     menu:
         "Помочь стражникам (10 золота)":
+            if renpy.random.randint(0,100) > 70:
+                $addMoney(10)
+            else:
+                "Ты встретил нарушителя порядка, его надо задержать!"
+                call start_battle(100, renpy.random.randint(50,120), "Бандит", battle_location_tavern)
+                if last_battle_win:
+                    "Ты успешно справился с противником"
+                    $addMoney(10)
             "Ты провёл день, помогая стражникам следить за порядком."
-            $ money += 10
         "Собрать лечебные травы (5 золота)":
             "Ты нашёл полезные травы, которые пригодятся целителям."
             $ money += 5
@@ -195,7 +264,7 @@ label tavern_task_board:
             $ strength += 1 * str_mod
         "Уйти":
             "Ты отодишь от доски объявлений"
-    jump tavern
+    jump city
 
 # Сцена с сомнительным столом
 label suspicious_table:

@@ -232,7 +232,7 @@ label escape_battle:
     elif battle_location == "bar":
         jump bar
     elif battle_location == "tavern":
-        jump tavenr
+        jump tavern
     elif battle_location == "market":
         jump market
     elif battle_location == "forest":
