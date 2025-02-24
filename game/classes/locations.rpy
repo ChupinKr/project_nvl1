@@ -52,3 +52,82 @@ init python:
 
     def updateCanVisit(locationtag, canVisit):
         return all_locs.setVisit(locationtag,canVisit)
+
+
+label forest_scene:
+    if isMorning():
+        scene bg forest_morning with fade
+    elif isDay():
+        scene bg forest_day with fade
+    elif isEvening():
+        scene bg forest_evening with fade
+    elif isNight():
+        scene bg forest_night with fade
+    else:
+        scene bg forest_day with fade
+    return
+
+label tavern_scene:
+    if isMorning():
+        scene bg tavern_morning with fade
+    elif isDay():
+        scene bg tavern_day with fade
+    elif isEvening():
+        scene bg tavern_evening with fade
+    elif isNight():
+        scene bg tavern_night with fade
+    else:
+        scene bg tavern_day with fade
+    return
+
+label city_scene:
+    if isMorning():
+        scene bg city_morning with fade
+    elif isDay():
+        scene bg city_day with fade
+    elif isEvening():
+        scene bg city_evening with fade
+    elif isNight():
+        scene bg city_night with fade
+    else:
+        scene bg city_day with fade
+    return
+
+label market_scene:
+    if isMorning():
+        scene bg market_morning with fade
+    elif isDay():
+        scene bg market_day with fade
+    elif isEvening():
+        scene bg market_evening with fade
+    elif isNight():
+        scene bg market_night with fade
+    else:
+        scene bg market_day with fade
+    return
+
+label ruined_temple_scene:
+    if isMorning():
+        scene bg ruined_temple_morning with fade
+    elif isDay():
+        scene bg ruined_temple_day with fade
+    elif isEvening():
+        scene bg ruined_temple_evening with fade
+    elif isNight():
+        scene bg ruined_temple_night with fade
+    else:
+        scene bg ruined_temple_day with fade
+    return
+
+label training_ground_scene:
+    if isMorning():
+        scene bg training_ground_morning with fade
+    elif isDay():
+        scene bg training_ground_day with fade
+    elif isEvening():
+        scene bg training_ground_evening with fade
+    elif isNight():
+        scene bg training_ground_night with fade
+    else:
+        scene bg training_ground_day with fade
+    return

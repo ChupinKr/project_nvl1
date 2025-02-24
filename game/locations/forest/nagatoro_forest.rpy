@@ -3,7 +3,7 @@ define can_visit_nagatoro = True
 define first_root_nagatoro = True
 
 label visit_nagatoro_forest:
-    scene bg forest with fade
+    call forest_scene
     show nag grin with dissolve
 
     if first_time_nagatoro:
@@ -220,7 +220,7 @@ label nagatoro_forest_quests:
     return
 
 label battle_win_forest_nagatoro:
-    scene bg forest with fade
+    call forest_scene
     show nag neutral with dissolve
 
     nag "Ух, ты неплох для новичка... но не радуйся слишком рано."

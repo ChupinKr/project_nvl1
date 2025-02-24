@@ -1,7 +1,7 @@
 define battle_location_forest = "forest"
 
 label visit_nagatoro_forest:
-    scene bg forest with fade
+    call forest_scene with fade
     show nag grin with dissolve
 
     if first_time_nagatoro:
@@ -177,7 +177,7 @@ label nagatoro_forest_quests:
             jump nagatoro_forest_menu
 
 label battle_win_forest_nagatoro:
-    scene bg forest with fade
+    call forest_scene with fade
     show nag neutral with dissolve
 
     nag "Ух, ты неплох для новичка... но не радуйся слишком рано."

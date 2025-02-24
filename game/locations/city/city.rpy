@@ -1,7 +1,7 @@
 define first_time_city = True
 
 label city:
-    scene bg city with fade
+    call city_scene
     play music "audio/city_theme.mp3"
 
     if first_time_city:
@@ -14,9 +14,13 @@ label city:
         "Куда ты отправишься?"
 
     menu:
+        "Переночевать на скамейке" if isNight():
+            jump city_overnight_stay
+        "Отдохнуть на скамейке" if not canVisit("room"):
+            jump city_rest
         "Комната" if canVisit("room"):
             jump room
-        "Бар" if canVisit("bar") if not isMorning():
+        "Бар" if canVisit("bar") and not isMorning():
             "Ты направляешься к бару — месту, где собираются наёмники, картёжники и просто искатели проблем."
             jump bar
         "Таверна" if canVisit("tavern"):
@@ -34,7 +38,7 @@ label city:
         "Гильдия бойцов" if canVisit("guild"):
             "Лязг и крики, команды, место где порядок и дисциплина прежде всего."
             jump guild
-        "Больница" if canVisit("hospital") if not isNight():
+        "Больница" if canVisit("hospital") and not isNight():
             "Вдали ты замечаешь больницу — высокое светлое здание, где лечат раненых, но за это берут плату."
             jump hospital
         "Городской рынок" if canVisit("market"):
@@ -47,9 +51,30 @@ label city:
             "Ты можешь покинуть город и отправиться в дикую природу. Но будь осторожен: за стенами правят совсем другие законы."
             jump forest
 
-label city_night:
+label city_overnight_stay:
     "Уже слишком поздно, тебя клонит в сон"
     "Тебе некуда податься, ты решаешь уснуть в центре города на холодной деревянной скамье"
     "Такая ночь неизбежно подкашивает твое здоровье"
     $minusHealth(10)
+    jump city
+
+label city_rest:
+    "Ты устал и решаешь посидеть передохнуть на скамейке"
+    "Не самый приятный отдых в твоей жизни"
+    $rest_fuckup = renpy.random.randint(0,100) 
+    if renpy.random.randint(0,100) > 50:
+        if rest_fuckup < 50:
+            "Проезжающая мимо телега с фруктами проехала тебе по ноге"
+            $minusHealth(5)
+        if rest_fuckup >= 50:
+            "Проезжающая мимо телега с фруктами проехала тебе по ноге"
+            if money >= 5:
+                $minusMoney(5)
+                "У тебя украли 5 монет, когда ты отвлекся"
+            elif money > 0 and money < 5:
+                $minusMoney(money)
+                "Пока ты дремал, у тебя высыпалась вся мелочь и ее быстро кто-то подобрал"
+            else:
+                "Кажется кто-то хотел украсть у тебя деньги, благо их у тебя нет"
+    $nextTime()
     jump city

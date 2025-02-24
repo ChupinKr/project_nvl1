@@ -200,7 +200,7 @@ label battle_loss:
     "Противник нанес вам урон [damage], ваш показатель здоровья [health]"
     "Ты проиграл бой, возможно стоило улучшить свои навыки перед тем, как вступать в бой с серьезным противником"
     $ last_battle_win = False
-    $ death_count += 1
+    "Ты падаешь без сознания"
     $ nextDay()
     jump surgency_tsunade_cure
     return

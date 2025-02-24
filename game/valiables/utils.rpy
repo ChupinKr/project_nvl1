@@ -252,22 +252,22 @@ init python:
         global day,time,notices
         if time == "Утро":
             time = "День"
-        if time == "День":
+        elif time == "День":
             time = "Вечер"
-        if time == "Вечер":
+        elif time == "Вечер":
             time = "Ночь"
-        if time == "Ночь":
+        elif time == "Ночь":
             time = "Утро"
             day += 1
-            if canVisit("room"):
-                Jump("room")
-            else:
-                Jump("city_night")
-            if day > while_room:
+            if canVisit("room") and day > while_room:
                 updateCanVisit("room", False)
-
-            
-
+                renpy.jump("room")
+            elif canVisit("room"):
+                renpy.jump("room")
+            else:
+                renpy.jump("city_overnight_stay")
+                #TODO ИСПРАВИТЬ КРИТ БАГ
+                #ЕСЛИ НОЧЬЮ ДЕЛАТЬ ПОЛЕЗНЫЕ ДЕЛА_ ПЕРКИДЫВАЕТ В ГОРОД, НЕ ДАЕТ БОНУСЫ
 
     def nextDay():
         global day,time,notices
@@ -278,6 +278,9 @@ init python:
         notices.append("Наступил следующий день")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
+
+
+
 
     def isNight():
         global time,notices
@@ -301,7 +304,7 @@ init python:
             return False
 
     def isMorning():
-        global time,notices
+        global time
         if time == "Утро":
             return True
         else:

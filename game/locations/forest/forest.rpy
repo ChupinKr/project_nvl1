@@ -19,7 +19,7 @@ label forest:
         "Ты в лесу"
         "Куда направишься?"
         
-    scene bg forest with fade
+    call forest_scene
     jump forest_menu
 
 label forest_menu:
@@ -36,7 +36,7 @@ label forest_menu:
 label look_around:
     "Ты осматриваешься..."
     menu:
-        "Навестить [r.name]" if not first_time_rapunzel and can_go_r and not isNight():
+        "Навестить [r.name]" if not first_time_rapunzel and can_go_r and not isNight() and not isEvening():
             jump visit_rapunzel_forest
         "Навестить [e.name]" if not first_time_elsa and not isNight():
             jump visit_elsa_forest

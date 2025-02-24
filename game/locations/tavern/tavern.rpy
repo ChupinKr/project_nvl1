@@ -7,7 +7,7 @@ define can_go_m = True
 
 # Сцена с таверной
 label tavern:
-    scene bg tavern with fade
+    call tavern_scene
     "Вы в таверне"
     menu:
         "Пойти в комнату" if canVisit("room"):
@@ -128,7 +128,7 @@ label talk_miku_work:
                 else: 
                     m "Жаль, но ничего, этого я знаю, он еще вернется."
             else: 
-                m angry "[hero_name], тебе не нужны деньги? Почему так плохо?!" with dissolve
+                m @angry "[hero_name], тебе не нужны деньги? Почему так плохо?!" with dissolve
             $nextTime()
             jump talk_miku_menu
         "Прогнать шумных гостей (10 золота)":
@@ -274,7 +274,7 @@ label tavern_task_board:
 
 # Сцена с сомнительным столом
 label suspicious_table:
-    scene bg tavern
+    call tavern_scene
     guy1 "Ну что, парниша, выглядишь, как тот, кто может сделать нужные вещи. Хочешь поговорить о том, как войти в темные дела?"
     guy2 "Тебе нужно знать кое-что, если ты хочешь быть частью нашего круга. Но для этого нужно доказать, что ты не ссышь."
 

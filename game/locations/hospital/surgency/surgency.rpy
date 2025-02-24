@@ -40,6 +40,8 @@ label surgency_tsunade_cure:
             ts @angry "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
             ts @angry "Думаю в этот раз вместо магических кристаллов - энергию мы будем брать прямо из тебя, потерпи, это будет незабываемо!"
             $minusAllChar(5)
+            "Ты условно умер, но [ts.name] пожалела тебя"
+            $defeat_count +=1
             pause 3.5
             $addHealth(100)
     jump surgency_tsunade_menu

@@ -1,6 +1,6 @@
 
 label visit_elsa_forest:
-    scene bg forest with fade
+    call forest_scene
     show e neutral with dissolve
 
     if first_time_elsa and chosen_blessing.name == "Магический Потенциал":
@@ -137,7 +137,7 @@ label elsa_first_time_blessing:
 
     "Отлично. Я-то думал, она просто посмеётся и забудет обо мне. А теперь я внезапно оказался её подопытным. Почему у меня такое чувство, что ничего хорошего из этого не выйдет?"  
 
-    scene bg city with fade
+    call city_scene
     show e neutral with dissolve
 
     e "Добро пожаловать в город. Раз уж ты не можешь отличить магию от цирковых фокусов, тебе не помешает экскурсия."
@@ -153,7 +153,7 @@ label elsa_first_time_blessing:
             jump magic_tower_elsa
 
 label elsa_first_time_no_blessing:
-    scene bg forest with fade
+    call forest_scene
     $ first_time_elsa = False
     e "Ты... не похож на местного. Кто ты?"  
     p "Меня зовут [hero_name], я здесь просто исследовал окрестности."
@@ -311,7 +311,7 @@ label elsa_quests:
     return
 
 label go_to_lib_with_elsa:
-    scene bg city with fade
+    call city_scene
     show e neutral with dissolve
 
     e "Добро пожаловать в город. Здесь ты найдёшь то, что тебе нужно."

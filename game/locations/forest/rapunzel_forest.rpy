@@ -1,5 +1,5 @@
 label visit_rapunzel_forest:
-    scene bg forest with fade
+    call forest_scene
     show r smile with dissolve
 
     if first_time_rapunzel and chosen_blessing.name == "Дар Соблазнителя":

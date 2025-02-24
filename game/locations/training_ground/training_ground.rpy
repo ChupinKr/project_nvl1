@@ -1,7 +1,7 @@
 define first_time_training_ground = True
 define battle_location_training_ground = "training_ground"
 label training_ground:
-    scene bg training_ground with fade
+    call training_ground_scene
 
     if first_time_training_ground and isMorning():
         $ first_time_training_ground = False

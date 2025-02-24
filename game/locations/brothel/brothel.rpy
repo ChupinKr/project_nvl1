@@ -1,6 +1,6 @@
 define is_free_dance = True
 label rapunzel_brothel_first_visit:
-    scene bg tavern with fade
+    call tavern_scene
     pause 3.5
     show r smile at right with dissolve
     p "Это место не особо похоже на то, что ты описывала."
@@ -81,7 +81,7 @@ label brothel_menu:
     menu:
         "Подойти к [mao.name]" if can_go_mao:
             jump visit_mao
-        "Найти [r.name]" if can_go_r:
+        "Найти [r.name]" if can_go_r and (isNight() or isEvening()):
             jump rapunzel_brothel
         "Посмотреть танец":
             if not is_free_dance:

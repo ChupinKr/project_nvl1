@@ -22,7 +22,7 @@ screen notify_plus(notices):
 
 transform notify_plus_appear(dd=0):
     on show:
-        yoffset 50 + dd*40
+        yoffset (100 + (dd*40))
         alpha 0 xanchor 1.0 xpos 0.0
         pause dd*0.5
         linear .25 alpha 1.0 xalign 0.0
