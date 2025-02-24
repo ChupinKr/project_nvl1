@@ -36,11 +36,11 @@ label forest_menu:
 label look_around:
     "Ты осматриваешься..."
     menu:
-        "Навестить [r.name]" if not first_time_rapunzel and can_go_r:
+        "Навестить [r.name]" if not first_time_rapunzel and can_go_r and not isNight():
             jump visit_rapunzel_forest
-        "Навестить [e.name]" if not first_time_elsa:
+        "Навестить [e.name]" if not first_time_elsa and not isNight():
             jump visit_elsa_forest
-        "Навестить [nag.name]" if not first_time_nagatoro and can_visit_nagatoro:
+        "Навестить [nag.name]" if not first_time_nagatoro and can_visit_nagatoro and not isNight():
             jump visit_nagatoro_forest
         "Вернуться назад":
             jump forest

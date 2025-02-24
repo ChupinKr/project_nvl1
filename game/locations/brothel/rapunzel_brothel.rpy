@@ -26,34 +26,33 @@ label rapunzel_brothel_menu:
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
             call rapunzel_training
-            if first_r_root:
-                if last_charisma_training_win and r_love >= 50:
-                    $ first_r_root = False
-                    r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
-                    r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
-                    menu:
-                        "Определенно можешь":
-                            p "Ты точно можешь мне помочь!"
-                            show r smile_shy with dissolve
-                            r "..."
-                            jump rapunzel_root_menu
-                        "Ты? Чем?":
-                            p "И чем ты можешь мне помочь? Какой мне толк от твоей помощи?"
-                            r @neutral "уходи..." with dissolve
-                            r annoyed "Я больше не хочу тебя видеть!" with dissolve
-                            $can_go_r = False
-                            "[r.name] силой выталкивает тебя из своих покоев и запирает дверь на ключ"
-                            $customNotify("Ты больше никогда не встретишь [r.name]")
-                            jump brothel
-                elif last_charisma_training_win:
-                    $addChar(["char"], 5)
-                    r @smile_shy "Хорошая работа, [hero_name]!" with dissolve
-                    $addLove ("r", 5)
-                    jump rapunzel_brothel_menu
-                else:
-                    r @annoyed "Мог бы хоть постараться!" with dissolve
-                    $minusLove ("r", 2)
-                    jump rapunzel_brothel_menu
+            if last_charisma_training_win and first_r_root and r_love >= 50:
+                $ first_r_root = False
+                r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
+                r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
+                menu:
+                    "Определенно можешь":
+                        p "Ты точно можешь мне помочь!"
+                        show r smile_shy with dissolve
+                        r "..."
+                        jump rapunzel_root_menu
+                    "Ты? Чем?":
+                        p "И чем ты можешь мне помочь? Какой мне толк от твоей помощи?"
+                        r @neutral "уходи..." with dissolve
+                        r annoyed "Я больше не хочу тебя видеть!" with dissolve
+                        $can_go_r = False
+                        "[r.name] силой выталкивает тебя из своих покоев и запирает дверь на ключ"
+                        $customNotify("Ты больше никогда не встретишь [r.name]")
+                        jump brothel
+            elif last_charisma_training_win:
+                $addChar(["char"], 5)
+                r smile_shy "Хорошая работа, [hero_name]!" with dissolve
+                $addLove ("r", 5)
+                jump rapunzel_brothel_menu
+            else:
+                r annoyed "Мог бы хоть постараться!" with dissolve
+                $minusLove ("r", 2)
+                jump rapunzel_brothel_menu
             jump rapunzel_brothel_menu
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
@@ -69,7 +68,7 @@ label rapunzel_brothel_menu:
             p "В другой раз, Рапунцель."
             show r annoyed with dissolve
             r "Ну вот, а я уже придумала, чем тебя занять~"
-            r @smile "Ладно, не пропадай!" with dissolve
+            r smile "Ладно, не пропадай!" with dissolve
             jump brothel
 
 label rapunzel_root_menu:

@@ -68,7 +68,7 @@ label market:
         hide h
         jump market_menu
     else:
-        if h_can_visit:
+        if h_can_visit and not isNight():
             "Вы снова на рынке. [h.name] замечает вас и лениво махает хвостом, но сегодня не пристаёт с вопросами – видимо, её развлекло что-то другое."
         else:
             "Вы снова на рынке."
@@ -78,9 +78,9 @@ label market:
 label market_menu:
     hide h
     menu:
-        "Подойти к [h.name]" if h_can_visit:
+        "Подойти к [h.name]" if h_can_visit and not isNight():
             jump visit_holo
-        "Притвориться мертвым" if not canVisit("hospital"):
+        "Притвориться мертвым" if not canVisit("hospital") and not isNight():
             "Ты упал и притворился мертвым"
             "Вышло настолько хорошо, что тебя схватили и куда-то понесли"
             "Ты пытался вырываться и кричать, но люди думали, что ты кричишь от боли"

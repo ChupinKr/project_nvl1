@@ -2,6 +2,20 @@
 # Сцена с комнатой игрока
 label room:
     scene bg room with fade
+    if not canVisit("room"):
+        show m with dissolve
+        m smile "[hero_name], срок аренды закончился, комната стоит 10 монет в неделю..." with dissolve
+        menu:
+            "Беру" if money >= 10:
+                p "Понял, вот оплата на неделю."
+                $ minusMoney(10)
+                $ updateCanVisit("room", True)
+                $ while_room = day + 6
+                m smile "Спасибо, приятного отдыха~"
+            "Мне пока не по карману":
+                m smile "Тогда пожалуйста покинь комнату и приходи ко мне подработать~" with dissolve
+                "Ты уходишь"
+                jump city
     "Ты у себя в комнате"
     menu:
         "Тренироваться" if len(gg_items) > 0:

@@ -155,6 +155,15 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
+    def minusHealth(counHealth):
+        global health,notices
+        health -= counHealth
+        if(health < 0):
+            health = 0
+        notices.append("Текущий показатель здоровья: " + str(health))
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
     def addLove(who, countLove):
         global m_love, e_love, r_love, ts_love, s_love, eris_love
         global nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
@@ -250,11 +259,50 @@ init python:
         if time == "Ночь":
             time = "Утро"
             day += 1
+            if canVisit("room"):
+                Jump("room")
+            else:
+                Jump("city_night")
+            if day > while_room:
+                updateCanVisit("room", False)
+
+            
+
 
     def nextDay():
-        global day,notices
+        global day,time,notices
         day += 1
         time = "Утро"
+        if day > while_room:
+            updateCanVisit("room", False)
         notices.append("Наступил следующий день")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
+
+    def isNight():
+        global time,notices
+        if time == "Ночь":
+            return True
+        else:
+            return False
+
+    def isEvening():
+        global time,notices
+        if time == "Вечер":
+            return True
+        else:
+            return False
+
+    def isDay():
+        global time,notices
+        if time == "День":
+            return True
+        else:
+            return False
+
+    def isMorning():
+        global time,notices
+        if time == "Утро":
+            return True
+        else:
+            return False

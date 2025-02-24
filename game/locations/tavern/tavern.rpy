@@ -29,10 +29,10 @@ label go_to_miku_stand:
     if first_time_tavern:
         $ first_time_tavern = False
         $ m.name = "Мику"
-        m @open_smile "Привет-привет! Добро пожаловать в таверну \"Звездные осколки\"!" 
-        m @smile_closed_eyes "Я Мику, хозяйка этого местечка! Если что-то нужно – просто спрашивай, не стесняйся!" 
+        m @open_smile "Привет-привет! Добро пожаловать в таверну \"Звездные осколки\"!" with dissolve
+        m @smile_closed_eyes "Я Мику, хозяйка этого местечка! Если что-то нужно – просто спрашивай, не стесняйся!" with dissolve 
     else:
-        m @open_smile "Ой, [hero_name]! Чего желаешь сегодня?"
+        m @open_smile "Ой, [hero_name]! Чего желаешь сегодня?" with dissolve
     jump miku_stand_menu
 
 label miku_stand_menu:
@@ -49,31 +49,31 @@ label miku_stand_menu:
             jump tavern
 
 label talk_miku_drinks_menu:
-    m smile "У нас тут не только пиво, но и магические напитки! Что будешь?"
+    m smile "У нас тут не только пиво, но и магические напитки! Что будешь?" with dissolve
     menu:
         "Энергетический эль (10 золота)":
             m "Этот эль действительно придаст тебе сил!"
             if money >= 10:
-                m @open_smile "Ооо, хорошенький выбор! Попробуй – освежает!"
+                m @open_smile "Ооо, хорошенький выбор! Попробуй – освежает!" with dissolve
                 $minusMoneyPlusChar(10, ["str"], 2)
             else:
                 m "Эх, золотишка не хватает... Может, сначала квестик возьмёшь?"
         "Магический ликёр (10 золота)":
             m "Опьяняет и слегка пробуждает магическое чутье!"
             if money >= 10:
-                m @open_smile  "Этот напиток буквально искрит энергией! Ну-ка, попробуй!"
+                m @open_smile  "Этот напиток буквально искрит энергией! На, попробуй!" with dissolve
                 $minusMoneyPlusChar(10, ["intelligence"], 2)
             else:
                 m "Эй, кажется, у тебя не хватает монеток!"
         "Чёрный ром (10 золота)":
             m "Тяжелый черный ром, после него все твое тело скажет \"Спасибо\"!"
             if money >= 10:
-                m @open_smile "Ого, крепкое же пойло ты выбрал! Только не переборщи!"
+                m @open_smile "Ого, крепкое же пойло ты выбрал! Только не переборщи!" with dissolve
                 $minusMoneyPlusChar(10, ["intelligence", "str"], 1)
             else:
                 m "Хм... похоже, придётся немного подкопить!"
         "Не хочу пить":
-            m @smile_closed_eyes "Окей, если передумаешь – я тут!"
+            m @smile_closed_eyes "Окей, если передумаешь – я тут!" with dissolve
     jump talk_miku_menu
 
 
@@ -84,11 +84,12 @@ label talk_miku_menu:
             m "Поднимайся по лестнице, ты знаешь, где поя комната~"
             jump miku_tavern_root
         "Снять комнату" if not canVisit("room"):
-            m smile "Комната стоит 10 золотых в неделю."
+            m smile "Комната стоит 10 золотых в неделю." with dissolve
             menu:
                 "Беру" if money >= 10:
                     $ minusMoney(10)
                     $ updateCanVisit("room", True)
+                    $ while_room = day + 6
                     jump room
                 "Мне пока не по карману":
                     jump talk_miku_menu
@@ -127,11 +128,11 @@ label talk_miku_work:
                 else: 
                     m "Жаль, но ничего, этого я знаю, он еще вернется."
             else: 
-                m @angry "[hero_name], тебе не нужны деньги? Почему так плохо?!"
+                m angry "[hero_name], тебе не нужны деньги? Почему так плохо?!" with dissolve
             $nextTime()
-            jump talk_miku_work
+            jump talk_miku_menu
         "Прогнать шумных гостей (10 золота)":
-            m @angry "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!"
+            m @angry "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!" with dissolve
             if renpy.random.choice([False, True]) > 0:
                 "Ты поговорил с клиентами, и они ушли, хоть и неохотно."
                 $addMoney(10)
@@ -144,9 +145,9 @@ label talk_miku_work:
                     $addLove("m", 10)
                     pause 3.5
                     $addMoney(10)
-            jump talk_miku_work
+            jump talk_miku_menu
         "Никакой работы":
-            m @angry "Эх, ну ладно... Может, в другой раз!"
+            m angry "Эх, ну ладно... Может, в другой раз!" with dissolve
     jump talk_miku_menu
 
 label talk_miku_info:
@@ -209,7 +210,7 @@ label talk_miku_info:
                     show m smile_closed_eyes with dissolve
                     m smile_closed_eyes "Вот твой напиток!"
                     "[m.name] подскальзывается и проливает немного на себя"
-                    m surprised_wet_top "В-вооот! Держи!"
+                    m surprised_wet_top "В-вооот! Держи!" with dissolve
                     $addChar(["str"], 2)
                     p "Спасибо! Очень освежает"
                     show m smile_wet_top with dissolve
@@ -225,6 +226,7 @@ label talk_miku_info:
         m "Там можно найти очень... полезных знакомств!"
         m "*Описание того, как найти закрытый бар*"
         m "Скажи, что ты от меня и тебя пропустят."
+        m "Ах да, бар по утрам не работает, не забудь."
         $ updateCanVisit("bar", True)
     elif m_love >= 15 and not canVisit("tg"):
         m "Ты мне нравишься!"
@@ -254,15 +256,18 @@ label tavern_task_board:
                 if last_battle_win:
                     "Ты успешно справился с противником"
                     $addMoney(10)
-            "Ты провёл день, помогая стражникам следить за порядком."
+            $nextTime()
+            "Ты провёл какое-то время, помогая стражникам следить за порядком."
         "Собрать лечебные травы (5 золота)":
             "Ты нашёл полезные травы, которые пригодятся целителям."
             $ money += 5
             $ intelligence += 1 * intelligence_mod
+            $nextTime()
         "Охота на гоблинов (15 золота)":
             "Ты сразился с гоблинами и одержал победу!"
             $ money += 15
             $ strength += 1 * str_mod
+            $nextTime()
         "Уйти":
             "Ты отодишь от доски объявлений"
     jump city

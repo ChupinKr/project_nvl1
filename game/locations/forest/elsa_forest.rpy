@@ -141,7 +141,6 @@ label elsa_first_time_blessing:
     show e neutral with dissolve
 
     e "Добро пожаловать в город. Раз уж ты не можешь отличить магию от цирковых фокусов, тебе не помешает экскурсия."
-    $ updateCanVisit("lib", True)
     e "Там находится библиотека. Если будешь её посещать — появится хоть какая-то надежда, что ты перестанешь нести чушь."
     e "А дальше, на холме, стоит магическая башня. Там решат, можно ли из тебя сделать хоть что-то полезное."
     e "Не тормози, идём сразу к наставнице, пускай она тебя оценит."
@@ -271,7 +270,6 @@ label elsa_magic_training:
             e @smile_shy "Ладно, думаю ты готов, идем." with dissolve
             p "К чему готов? Куда мы?"
             e @smirk "Не важно, просто идем." with dissolve
-            $ updateCanVisit("mt", True)
             jump magic_tower_elsa
     else:
         show e laugh at center with fade

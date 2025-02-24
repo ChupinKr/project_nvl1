@@ -20,6 +20,7 @@ label start_charisma_training(charisma):
 
 ## Переход после завершения игры
 label end_charisma_training:
+    "IN PROGRESS"
     if score >= win_score:
         $ last_charisma_training_win = True
     return
