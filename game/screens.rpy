@@ -66,7 +66,7 @@ screen info_panel:
             text "Золото: [money]" style "info_text"
             text "Сила: [strength]" style "info_text"
             text "Харизма: [charisma]" style "info_text"
-            text "Колдовство: [mana]" style "info_text"
+            text "Колдовство: [intelligence]" style "info_text"
             text "" style "info_text"
             text "[f.name]: [f_love]♥" style "info_text"
             text "[nag.name]: [nag_love]♥" style "info_text"

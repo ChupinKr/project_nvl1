@@ -258,15 +258,15 @@ label elsa_magic_training:
     show e at right with dissolve
     e "Сконцентрируйся, представь перед собой сферу, очень горячую."
     e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dis5
-    call start_magic_training(mana)
+    call start_magic_training(intelligence)
     if last_reaction_win:
-        $addChar(["mana"], 3)
+        $addChar(["intelligence"], 3)
         show e smile at center with dis5
         e "Вау, да у тебя талант!"
         p "Надо будет повторить, мне понравилось."
         e @smile_shy "Мне тоже~~" with dis5
         $addLove("e", 5)
-        if e_love >= 15 and mana > 10 and not canVisit("mt") and can_go_mer:
+        if e_love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
             e @smile_shy "Ладно, думаю ты готов, идем." with dis5
             p "К чему готов? Куда мы?"
             e @smirk "Не важно, просто идем." with dis5

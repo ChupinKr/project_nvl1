@@ -11,7 +11,7 @@ label forest:
     
     if charisma > 1 and first_time_rapunzel:
         jump visit_rapunzel_forest
-    elif mana > 1 and first_time_elsa:
+    elif intelligence > 1 and first_time_elsa:
         jump visit_elsa_forest
     elif strength > 1 and first_time_nagatoro:
         jump visit_nagatoro_forest

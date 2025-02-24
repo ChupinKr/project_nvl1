@@ -32,11 +32,11 @@ init python:
     countUsage=3, lvl=3, bonus=5, char="str")
 
     item_book_math = Item(name="Книга по математике", price=20,
-    countUsage=3, lvl=1, bonus=1, char="mana")
+    countUsage=3, lvl=1, bonus=1, char="intelligence")
     item_self_study_guide  = Item(name="Самоучитель по магии", price=50,
-    countUsage=3, lvl=2, bonus=3, char="mana")
+    countUsage=3, lvl=2, bonus=3, char="intelligence")
     item_grimoire = Item(name="Гримуар", price=100,
-    countUsage=3, lvl=3, bonus=5, char="mana")
+    countUsage=3, lvl=3, bonus=5, char="intelligence")
 
     item_forest_guide = Item(name="Путеводитель по лесу", price=100,
     countUsage=1, lvl=0, bonus=0, char="")

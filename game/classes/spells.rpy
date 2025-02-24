@@ -1,9 +1,9 @@
 python:
     # Класс для заклинаний
     class Spell:
-        def __init__(self, name, mana_cost, location):
+        def __init__(self, name, intelligence_cost, location):
             self.name = name  # Название заклинания
-            self.mana_cost = mana_cost  # Стоимость маны
+            self.intelligence_cost = intelligence_cost  # Стоимость маны
             self.location = location  # Место, где заклинание можно найти
 
     # Массив всех доступных заклинаний

@@ -19,9 +19,9 @@ label find_elsa_menu:
             p "[e.name], ты говорила, что можешь меня потренировать."
             e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dis5
             show e smile at right with fade
-            call start_magic_training(mana)
+            call start_magic_training(intelligence)
             if last_reaction_win:
-                $addChar(["mana"], 3)
+                $addChar(["intelligence"], 3)
                 jump win_elsa_training
             else:
                 jump fail_elsa_training

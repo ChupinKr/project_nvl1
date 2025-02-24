@@ -97,10 +97,10 @@ init python:
         notices = []
 
     def minusAllChar(count):
-        global money, strength, charisma, mana, notices
+        global money, strength, charisma, intelligence, notices
         strength += charCount * strength_mod
         charisma += charCount * charisma_mod
-        mana += charCount * mana_mod
+        intelligence += charCount * intelligence_mod
         notices.append("Сил нет, буквально..")
         notices.append("Будто постарел немного..")
         notices.append("И ты забываешь базовые знания..")
@@ -108,7 +108,7 @@ init python:
         notices = []
 
     def addChar(chars, charCount):
-        global strength, charisma, mana, notices
+        global strength, charisma, intelligence, notices
         for char in chars:
             if char == "str":
                 strength += charCount * strength_mod
@@ -116,14 +116,14 @@ init python:
             if char == "char":
                 charisma += charCount * charisma_mod
                 notices.append("Ты чувствуешь себя харизматичнее")
-            if char == "mana":
-                mana += charCount * mana_mod
+            if char == "intelligence":
+                intelligence += charCount * intelligence_mod
                 notices.append("Ты чувствуешь себя умнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def minusMoneyPlusChar(minusMoney, chars, charCount):
-        global money, strength, charisma, mana, notices
+        global money, strength, charisma, intelligence, notices
         money -= minusMoney
         for char in chars:
             if char == "str":
@@ -132,8 +132,8 @@ init python:
             if char == "char":
                 charisma += charCount * charisma_mod
                 notices.append("Ты чувствуешь себя харизматичнее")
-            if char == "mana":
-                mana += charCount * mana_mod
+            if char == "intelligence":
+                intelligence += charCount * intelligence_mod
                 notices.append("Ты чувствуешь себя умнее")
         if minusMoney > 0:
             notices.append("Ты потерял " + str(minusMoney) + " монет")

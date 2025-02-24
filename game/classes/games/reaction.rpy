@@ -71,7 +71,7 @@ screen reactionGame:
             xysize(1000, 50)
 
 ## Логика мини-игры.
-label start_magic_training(mana):
+label start_magic_training(intelligence):
     pause .5
     show expression Text("Будь внимателен!") at truecenter as txt
     with dissolve

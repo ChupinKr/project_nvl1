@@ -72,8 +72,8 @@ label blessings_choice:
             f "Ты выбрал благословение [chosen_blessing.name]. Мне любопытно, как ты распорядишься моим подарком. Ты ведь понимаешь, что это только начало?"
         "Выбрать Магический Потенциал":
             $ chosen_blessing = available_blessings[1]
-            $ mana = mana + 2
-            $ mana_mod = 2
+            $ intelligence = intelligence + 2
+            $ intelligence_mod = 2
             hide ls_sphere
             hide str_sphere
             hide mc_sphere
