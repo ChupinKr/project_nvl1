@@ -15,7 +15,7 @@ label magic_tower_first_visit:
     "Огромные каменные плиты покрывались тонкими линиями светящихся рун, медленно меняющих цвет. Казалось, башня дышит магией."
     "Чем ближе я подходил, тем сильнее ощущал странное покалывание в воздухе. Это место буквально бурлило энергией."
 
-    #show e neutral at center with dis5
+    #show e neutral at center with dissolve
     e "Не зевай. Идём внутрь."
     scene bg magic_tower with fade
 
@@ -34,7 +34,7 @@ label magic_tower_first_visit:
 
     mer surprised "[hero_name] выглядит так, будто впервые видит магию." with dissolve 
 
-    #show e smirk at right_mid with dis5
+    #show e smirk at right_mid with dissolve
     e "Не просто впервые — он вообще понятия не имеет, что это такое."
     p "Эй! Я хотя бы слышал про магию!"
     mer smirk "О, слышал? Какая редкость. Давай проверим, что ты знаешь." with dissolve 
@@ -46,15 +46,15 @@ label magic_tower_first_visit:
     menu:
         "Магическая палочка?":
             p "Магическая палочка!"
-            show mer sigh with dissolve 
+            show mer sigh with dissolve
             mer "О боги… Какой ужас. Нет."
         "Слова заклинания?":
             p "Наверное, слова заклинания?"
-            show mer sigh with dissolve 
+            show mer sigh with dissolve
             mer "Я надеялась, что ты не настолько безнадёжен…"
         "Внутренняя магическая энергия?":
             p "Внутренняя магическая энергия!"
-            show mer neutral with dissolve 
+            show mer neutral with dissolve
             mer "Хм… Верно, но я уверена, что ты сказал это наугад."
     "[mer.name] закатила глаза, явно не веря в мои способности."
     #show e smirk with dissolve 
@@ -69,11 +69,11 @@ label magic_tower_first_visit:
             mer "Гениально. Никогда бы не догадалась. Спасибо, что просветил меня."
         "Огонь сжигает, а воздух помогает дышать?":
             p "Огонь сжигает, а воздух помогает дышать?"
-            show mer smirk with dissolve 
+            show mer smirk with dissolve
             mer "Ты определённо мастер очевидных истин."
         "Огонь уничтожает, а воздух может направлять магию?":
             p "Ну… Огонь уничтожает, а воздух может направлять магические потоки?"
-            show mer surprised with dissolve 
+            show mer surprised with dissolve
             mer "Хм… Ты хоть что-то понимаешь. Может быть, из тебя ещё что-то выйдет."
     #show e smirk with dissolve 
     e "Хотя бы одну догадку он угадал."
@@ -132,10 +132,10 @@ label magic_tower_with_elsa_no_blessing:
     p "Какие уроки? Меня не слышно?"
     mer "[e.name] почувствовала в тебе сильную энергию, а я пока сомневаюсь, но мы разовьем то, что в тебе есть."
     p "Но вы не спросили, хочу ли я обучаться!"
-    mer annoyed "Хорошо... [hero_name], ты хочешь обучаться магии?" with dis5
+    mer annoyed "Хорошо... [hero_name], ты хочешь обучаться магии?" with dissolve
     menu:
         "Да":
-            mer smile "Вопрос решен. Пока подумай обо всем. Видимо тебе нужно время." with dis5
+            mer smile "Вопрос решен. Пока подумай обо всем. Видимо тебе нужно время." with dissolve
             $ updateCanVisit("mt", True)
             jump city
         "Нет":

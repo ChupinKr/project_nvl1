@@ -201,6 +201,7 @@ label battle_loss:
     "Ты проиграл бой, возможно стоило улучшить свои навыки перед тем, как вступать в бой с серьезным противником"
     $ last_battle_win = False
     $ death_count += 1
+    $ nextDay()
     jump surgency_tsunade_cure
     return
 
@@ -210,8 +211,9 @@ label battle_escape:
     if strength / 2 * random.randint(1, 10) > enemy_strength:
         "Тебе повезло, ты убежал и даже почти не чувствуешь боли"
         if health < health_to_not_escape:
-            "О нет, адреналин прошел"
-            "Ты не чувствуешь ничего кроме боли"
+            mind "О нет, адреналин прошел"
+            "Ты не чувствуешь ничего кроме боли, от боли ты падаешь в обморок"
+            $ nextDay()
             jump surgency_tsunade_cure
         else:
             "Тебе больно, но это терпимо, само пройдет"

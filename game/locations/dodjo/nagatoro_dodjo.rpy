@@ -33,7 +33,7 @@ label nagatoro_dodjo_first_time:
             nag @grin "Вот это настрой! Тогда начинаем!"
     call nagatoro_root_show
     scene bg nagatoro_dodjo with fade
-    show nag normal_shy_battle6 with fade
+    show nag normal_shy_battle6 with dissolve
     nag "На этом пока закончим, найди меня в лесу, и мы продолжим наши занятия!"
     nag "Можешь идти."
     "Ошеломленный ты уходишь, надеясь на развитие ваших тренировок"
@@ -44,21 +44,27 @@ label nagatoro_dodjo_menu:
     menu:
         "Спортивное позирование" if nag_love >= 50: 
             call nagatoro_root_show
+            $nextTime()
             jump nagatoro_dodjo
         "Растираение грудными мыщцами" if nag_love >= 60: 
             call nagatoro_root_titfuck
+            $nextTime()
             jump nagatoro_dodjo
         "Развитие лицевых мышц" if nag_love >= 70: 
             call nagatoro_root_blowjob
+            $nextTime()
             jump nagatoro_dodjo
         "Тренировка мышц таза" if nag_love >= 80: 
             call nagatoro_root_fuck
+            $nextTime()
             jump nagatoro_dodjo
         "Стимулирование анальной проходимости" if nag_love >= 90: 
             call nagatoro_root_anal
+            $nextTime()
             jump nagatoro_dodjo
         "Тренировка с доп. условиями" if nag_love >= 90: 
             call nagatoro_root_fetish
+            $nextTime()
             jump nagatoro_dodjo
         "Не хочу тренироваться": 
             p "Продолжим позже, сейчас у меня есть более важные дела."
@@ -330,10 +336,10 @@ label nagatoro_root_show:
 
 label nagatoro_root_titfuck:
     nag @grin "Уже не терпится, да?"
-    hide nag grin with fade
+    hide nag grin with dissolve
     "[nag.name] вышла из комнаты"
     mind "Наверно она пошла переодеваться?"
-    show nag grin_battle6 with fade
+    show nag grin_battle6 with dissolve
     "Полностью обнаженная [nag.name] вошла в комнату"
     p "!!!!!"
     nag "Не будем терять время.."

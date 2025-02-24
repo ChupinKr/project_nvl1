@@ -4,9 +4,9 @@ define can_go_d = True
 label guild_d_menu:
     "Ты находишь [d.name]"
     if d_love >= 50:
-        show d smile_shy with fade
+        show d smile_shy with dissolve
     else:
-        show d neutral with fade
+        show d neutral with dissolve
     menu:
         "А где тут у вас туалет?" if not first_root_d and d_love >= 80:
             jump toilet
@@ -63,25 +63,35 @@ label toilet:
 label guild_d_root_menu:
     $first_root_d = False
     menu:
-        "Публичный туалет" if d_love >= 90:
-            d @smile_shy "Ах, ты так жесток, все эти мужчины, о боже~"
-            call d_root_toilet
-            jump guild_menu
-        "БДСМ изнасилование" if d_love >= 80:
-            d @smile_shy "Прошу, начинай, хочу отмучиться побыстрее~"
-            call d_root_bdsm
-            jump guild_menu
-        "Публичный секс" if d_love >= 70:
-            d @smile_shy "О нет, что ты за злодей такой~"
-            call d_root_public_fuck
-            jump guild_menu
-        "Публичное обнажение" if d_love >= 60:
-            d @smile_shy "Ах, не, за что ты так со мной~"
-            call d_root_public_naked
-            jump guild_menu
-        "Публично покажи сиськи" if d_love >= 50:
+        "Покажи сиськи" if d_love >= 50:
             d @smile_shy "О боже, только не это~~"
             call d_root_public_partly_naked
+            $nextTime()
+            jump guild_menu
+        "Разденься" if d_love >= 60:
+            d @smile_shy "Ах, не, за что ты так со мной~"
+            call d_root_public_naked
+            $nextTime()
+            jump guild_menu
+        "Секс" if d_love >= 70:
+            d @smile_shy "О нет, что ты за злодей такой~"
+            call d_root_public_fuck
+            $nextTime()
+            jump guild_menu
+        "Публичный туалет" if d_love >= 80:
+            d @smile_shy "Ах, ты так жесток, все эти мужчины, о боже~"
+            call d_root_toilet
+            $nextTime()
+            jump guild_menu
+        "Изнасилование" if d_love >= 90:
+            d @smile_shy "Прошу, начинай, хочу отмучиться побыстрее~"
+            call d_root_group_fuck
+            $nextTime()
+            jump guild_menu
+        "Какая-то жесть" if d_love >= 200:
+            d @ahegao "Нет! Прошу! Только не это!"
+            call d_root_jest
+            $nextTime()
             jump guild_menu
         "Передумал":
             d @angry "Ах, какой вы благородный юноша, [hero_name].."

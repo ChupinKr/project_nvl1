@@ -94,4 +94,5 @@ label end_magic_game:
     hide screen finishGame
     if score >= win_score:
         $ last_reaction_win = True
+    $nextTime()
     return

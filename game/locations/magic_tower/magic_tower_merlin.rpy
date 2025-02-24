@@ -10,11 +10,11 @@ label find_merlin:
     $ roll = renpy.random.randint(1, 1000)
 
     if roll <= find_chance and can_go_mer:
-        show mer smirk at center
+        show mer smirk at center with dissolve
         mer "Ты меня нашёл. Вопрос в том, зачем."
         jump merlin_menu
     else:
-        $customNotify("Недосстаточно интеллекта")
+        $customNotify("Недостаточно интеллекта")
         "Я бродил по башне, но так и не смог её найти. Видимо, она очень занята."
         "Интересно, что еще инетересного можно найти в башне"
         jump magic_tower_hub
@@ -24,7 +24,7 @@ label merlin_menu:
         "Попросить урок":
             jump mer_teach
         "Попросить квест":
-            show mer neutral
+            show mer neutral with dissolve
             mer "Если хочешь задание – у меня всегда есть кое-что... рискованное."
             "Мерлин хитро улыбнулась и начала рассказывать про квест."
             call merlin_quests
@@ -43,7 +43,7 @@ label merlin_quests:
     return
 
 label mer_teach:
-    show mer surprised
+    show mer surprised with dissolve
     mer "Ты действительно хочешь учиться? Ну что ж, посмотрим, как долго ты продержишься."
     "Мерлин начала объяснять сложные магические принципы, и мой мозг начал плавиться."
     mer neutral "Итак, ты всё понял? Сможешь повторить то, что я рассказала?"

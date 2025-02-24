@@ -1,6 +1,5 @@
 
 # Переходы
-define dis5 = Dissolve(.5)
 define dis25 = Dissolve(.25)
 define flash = Fade(0.1, 0.0, 1.0, color="#FFFFFF")
 
@@ -237,5 +236,25 @@ init python:
         strength += countStr * strength_mod
         notices.append("Ты стал сильнее")
         notices.append("Характеристика симпатии увеличилась")
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
+
+    def nextTime():
+        global day,time,notices
+        if time == "Утро":
+            time = "День"
+        if time == "День":
+            time = "Вечер"
+        if time == "Вечер":
+            time = "Ночь"
+        if time == "Ночь":
+            time = "Утро"
+            day += 1
+
+    def nextDay():
+        global day,notices
+        day += 1
+        time = "Утро"
+        notices.append("Наступил следующий день")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []

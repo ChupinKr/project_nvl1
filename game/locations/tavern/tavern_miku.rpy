@@ -8,21 +8,27 @@ label miku_tavern_root_menu:
     menu:
         "Покажи" if m_love >= 50:
             call m_root_show
+            $nextTime()
             jump tavern
         "Мастурбация" if nag_love >= 60: 
             call m_root_titfuck
+            $nextTime()
             jump tavern
         "Горловой минет" if nag_love >= 70: 
             call m_root_blowjob
+            $nextTime()
             jump tavern
         "Секс" if nag_love >= 80: 
             call m_root_fuck
+            $nextTime()
             jump tavern
         "Анал" if nag_love >= 90: 
             call m_root_anal
+            $nextTime()
             jump tavern
         "Сделаем это прилюдно" if nag_love >= 200: 
             call m_root_fetish
+            $nextTime()
             jump tavern
         "Я передумал": 
             p "Продолжим позже, сейчас у меня есть более важные дела."

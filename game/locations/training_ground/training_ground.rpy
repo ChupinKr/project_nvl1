@@ -13,7 +13,7 @@ label training_ground:
         
         "Кажется, она даже не замечает окружающих, полностью погрузившись в свою тренировку."
 
-        show eris training at center
+        show eris training at center with dissolve
         "Но затем, в один момент, её резкий удар отбивает манекен в сторону... прямо на тебя!"
 
         menu:
@@ -102,7 +102,7 @@ label training_ground_menu:
             jump city
 
 label training_ground_eris_menu:
-    show eris with fade
+    show eris with dissolve
     "Ты подошел к [eris.name]"
     menu:
         "Спарринг":

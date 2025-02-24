@@ -64,11 +64,11 @@ init python:
     location="Травянистая поляна", countObj=10, 
     character_says=["Есть такие грибы... Они обладают уникальными свойствами."
         ,"Если ты их найдешь, я буду просто в восторге!"],
-    req_love=0, req_str=0, req_intelligence=0, req_char=0, 
+    req_love=0, req_str=0, req_intelligence=5, req_char=0, 
     reward_money=10, reward_character=10, 
     str_bonus=0, intelligence_bonus=0, char_bonus=3
     )
-    quest_rapunzel_women = GirlQuest(whatToDo="Пригласить дам", forWho="Рапунцель", repeatable=True,
+    quest_rapunzel_women = GirlQuest(whatToDo="Пригласить дам на подмену", forWho="Рапунцель", repeatable=True,
     location="Темный переулок", countObj=3, 
     character_says=["О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
         ,"Если приведешь мне парочку, я тебя щедро отблагодарю~"],

@@ -1,10 +1,21 @@
 define first_r_root = True
 define can_go_r = True
+define first_time_visit_room_rapunzel = True
 
 label rapunzel_brothel:
-    scene bg brothel_private with dissolve
-    show r smile with fade
-    r "Ты меня искал?"
+
+    if first_time_visit_room_rapunzel:
+        $first_time_visit_room_rapunzel = False
+        r "[hero_name], подойди сюда."
+        "[r.name] заводит тебя в комнату"
+        scene bg brothel_private with dissolve
+        show r smile  with dissolve
+        mind "Какая приятная комната, только вот выглядит как будто сделана для приватных утех.."
+        r "В следующий раз сразу иди сюда, это моя комната, не надо беспокоить другие гостей!"
+    else:
+        scene bg brothel_private with dissolve
+        show r smile  with dissolve
+        r "Ты меня искал?"
     jump rapunzel_brothel_menu
 
 label rapunzel_brothel_menu:
@@ -18,29 +29,29 @@ label rapunzel_brothel_menu:
             if first_r_root:
                 if last_charisma_training_win and r_love >= 50:
                     $ first_r_root = False
-                    r @smile_shy "Ты так много трудишься и так много сделал для меня."
-                    r @smirk "Может я могу помочь тебе расслабиться?"
+                    r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
+                    r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
                     menu:
                         "Определенно можешь":
                             p "Ты точно можешь мне помочь!"
-                            show r smile_shy 
+                            show r smile_shy with dissolve
                             r "..."
                             jump rapunzel_root_menu
                         "Ты? Чем?":
                             p "И чем ты можешь мне помочь? Какой мне толк от твоей помощи?"
-                            r @neutral "уходи..."
-                            r annoyed "Я больше не хочу тебя видеть!"
+                            r @neutral "уходи..." with dissolve
+                            r annoyed "Я больше не хочу тебя видеть!" with dissolve
                             $can_go_r = False
                             "[r.name] силой выталкивает тебя из своих покоев и запирает дверь на ключ"
                             $customNotify("Ты больше никогда не встретишь [r.name]")
                             jump brothel
                 elif last_charisma_training_win:
                     $addChar(["char"], 5)
-                    r @smile_shy "Хорошая работа, [hero_name]!"
+                    r @smile_shy "Хорошая работа, [hero_name]!" with dissolve
                     $addLove ("r", 5)
                     jump rapunzel_brothel_menu
                 else:
-                    r @annoyed "Мог бы хоть постараться!"
+                    r @annoyed "Мог бы хоть постараться!" with dissolve
                     $minusLove ("r", 2)
                     jump rapunzel_brothel_menu
             jump rapunzel_brothel_menu
@@ -56,30 +67,36 @@ label rapunzel_brothel_menu:
             jump rapunzel_brothel_menu
         "Уйти":
             p "В другой раз, Рапунцель."
-            show r annoyed
+            show r annoyed with dissolve
             r "Ну вот, а я уже придумала, чем тебя занять~"
-            r @smile "Ладно, не пропадай!"
+            r @smile "Ладно, не пропадай!" with dissolve
             jump brothel
 
 label rapunzel_root_menu:
     menu:
         "Мастурбация" if r_love >= 50:
             call r_root_masturbate
+            $nextTime()
             jump brothel
         "Грудями" if r_love >= 60:
             call r_root_titfuck
+            $nextTime()
             jump brothel
         "Минет" if r_love >= 70:
             call r_root_blowjob
+            $nextTime()
             jump brothel
         "Секс" if r_love >= 80:
             call r_root_fuck
+            $nextTime()
             jump brothel
         "Анал" if r_love >= 90:
             call r_root_anal
+            $nextTime()
             jump brothel
         "Фетиш" if r_love >= 200:
             call r_root_fetish
+            $nextTime()
             jump brothel
         "Вернуться":
             "Ты уходишь восстанавливать силы"
@@ -88,9 +105,9 @@ label rapunzel_root_menu:
 
 label r_root_masturbate:
     "[r.name] садит тебя на свою кровать и скидывает с себя почти всю одежду"
-    show r naked with fade
+    show r naked  with dissolve
     "Она садится на колени перед тобой, обнажая свою прелестную грудь"
-    hide r with fade
+    hide r  with dissolve
     scene bg r_masturbate1 with dissolve
     mind "[r.name] просто стоит и смотрит... Полностью обнажённая выше пояса."  
     mind "Чёрт, как мне вообще реагировать на это?"
@@ -216,7 +233,7 @@ label r_root_masturbate:
     if r_love < 70:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
-        show r naked
+        show r naked with dissolve
         $customNotify("Недостаточно симпатии [r.name]")
         "Она остановилась на самом интересном, может если она будет мне больше доверять, то я получу еще больше?"
         return
@@ -241,7 +258,7 @@ label r_root_masturbate:
     if r_love < 90:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
-        show r naked
+        show r naked with dissolve
         $customNotify("Недостаточно симпатии [r.name]")
         "Она остановилась на самом интересном, может если она будет мне больше доверять, то я получу еще больше?"
         return
@@ -398,7 +415,7 @@ label r_root_blowjob:
         $customNotify("Недостаточно силы")
         "Ты не смог удержать ее голову"
         scene bg brothel_private with dissolve
-        show r naked_cummed_annoyed
+        show r naked_cummed_annoyed with dissolve
         r "Урод!"
         $minusLove("r", 10)
         "[r.name] расстроенная уходит"
@@ -466,7 +483,7 @@ label r_root_blowjob:
     scene bg r_suck_31 with dissolve
     "[r.name] на последок еще раз целует твой член и поднимается"
     scene bg brothel_private with dissolve
-    show r naked_cummed
+    show r naked_cummed with dissolve
     r "После такого ты обязан навещать меня чаще~"
     p "Конечно!"
 

@@ -22,12 +22,19 @@ screen notify_plus(notices):
 
 transform notify_plus_appear(dd=0):
     on show:
-        yoffset dd*40
+        yoffset 50 + dd*40
         alpha 0 xanchor 1.0 xpos 0.0
         pause dd*0.5
         linear .25 alpha 1.0 xalign 0.0
         pause 3.25
         linear .5 alpha 0.0
+
+screen daytime:
+    vbox:
+        xalign 0.01
+        yalign 0.01
+        text "День: [day]" style "outline_text"
+        text "Время: [time]" style "outline_text"
 
 screen buttons:
     vbox:
@@ -86,6 +93,13 @@ style info_text:
     size 35
     color "#000"
     font "gui/fonts/NK123.ttf"
+    
+
+style outline_text:
+    size 35
+    color "#999"
+    font "gui/fonts/NK123.ttf"
+    outlines [(2,"#000",0,0)]
 
 ################################################################################
 ## Стили

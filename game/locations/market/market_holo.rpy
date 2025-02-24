@@ -69,6 +69,7 @@ label holo_menu:
                             h "Жаль, но ничего, будут еще клиенты."
                     else: 
                         h "[hero_name], это никуда не годится, работай лучше!"
+                    $nextTime()
                     jump holo_menu
                 "Избавиться от жуков(5 монет)":
                     h "Избавься от этих жуков, они везде!"
@@ -166,6 +167,7 @@ label holo_market_root_menu:
                 jump market
             $minusMoney(30)
             call h_root_masturbate
+            $nextTime()
             jump market
         "Грудями(40 монет)" if h_love >= 60:
             if money < 40:
@@ -173,6 +175,7 @@ label holo_market_root_menu:
                 jump holo_menu
             $minusMoney(40)
             call h_root_titfuck
+            $nextTime()
             jump market
         "Минет(50 монет)" if h_love >= 70:
             if money < 50:
@@ -180,6 +183,7 @@ label holo_market_root_menu:
                 jump holo_menu
             $minusMoney(50)
             call h_root_blowjob
+            $nextTime()
             jump market
         "Секс(70 монет)" if h_love >= 80:
             if money < 70:
@@ -187,6 +191,7 @@ label holo_market_root_menu:
                 jump holo_menu
             $minusMoney(70)
             call h_root_fuck
+            $nextTime()
             jump market
         "Анал(80 монет)" if h_love >= 90:
             if money < 80:
@@ -194,6 +199,7 @@ label holo_market_root_menu:
                 jump holo_menu
             $minusMoney(80)
             call h_root_anal
+            $nextTime()
             jump market
         "Фетиш(200 монет)" if h_love >= 200:
             if money < 200:
@@ -202,6 +208,7 @@ label holo_market_root_menu:
             h @smile_shy "Ладно, это слишком, сделаю для тебя скидку~"
             $minusMoney(100)
             call h_root_fetish
+            $nextTime()
             jump market
         "Вернуться":
             "Ты уходишь восстанавливать силы"

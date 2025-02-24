@@ -30,7 +30,7 @@ label elsa_first_time_blessing:
     p "Что? От меня чем-то пахнет?"
 
     # Эльза внимательно осматривает игрока
-    show e smirk
+    show e smirk with dissolve
 
     e "Ты хоть что-то знаешь о магии? Хотя бы основы?"
 
@@ -97,7 +97,7 @@ label elsa_first_time_blessing:
     "Я мысленно выдыхаю. Последний шанс? Это что, проверка на профпригодность? Что будет, если я провалю этот \"экзамен\"?"  
 
     # Третий вопрос
-    show e neutral
+    show e neutral with dissolve
     e "Какое заклинание ты бы использовал, если оказался окружённым врагами?"
 
     "Так, тут хотя бы понятный сценарий. Надо просто выбрать что-то логичное…"  
@@ -150,6 +150,7 @@ label elsa_first_time_blessing:
 
     menu:
         "Идти за [e.name]":
+            $nextTime()
             jump magic_tower_elsa
 
 label elsa_first_time_no_blessing:
@@ -162,7 +163,7 @@ label elsa_first_time_no_blessing:
     
     "Её ледяной взгляд пробирает до костей. Я не чувствую враждебности, но ощущение, будто она читает меня насквозь, оставляет лёгкое напряжение."  
 
-    show e neutral
+    show e neutral with dissolve
     e "От тебя исходит слабая аура, но ты не чувствуешь магию? Ты даже не понимаешь, как всё работает."
 
     "Что-то в её взгляде настораживает. Похоже, я совсем не произвёл впечатления, которое надеялся."  
@@ -171,14 +172,14 @@ label elsa_first_time_no_blessing:
     menu:
         "Эм... я не уверен, что понимаю, о чём ты говоришь.": 
             p "Эм... я не уверен, что понимаю, о чём ты говоришь."
-            show e neutral
+            show e neutral with dissolve
             e "Нет, я не ошиблась. Ты вообще не чувствуешь её. Что ж, очевидно, ты не обладаешь магическим потенциалом."
 
             "Я чувствую, как её разочарование буквально пробивает меня насквозь. Ну конечно, магией я не владею. Просто чудо, что я вообще оказался здесь."  
 
         "Я точно что-то чувствую... но не могу объяснить.": 
             p "Я точно что-то чувствую... но не могу объяснить."
-            show e neutral
+            show e neutral with dissolve
             e "Ты ещё хочешь убедить меня, что ты маг? Нет, ты — просто обычный смертный. Мечты не помогут тебе овладеть магией."
 
             "Она явно не верит мне. И я даже не могу предъявить доказательства. Может, если бы я мог хотя бы сделать что-то подобное, она бы поняла, что я не просто... ну, лузер."  
@@ -186,7 +187,7 @@ label elsa_first_time_no_blessing:
     e "Я думала, что ты окажешься чем-то более интересным, но похоже, что я ошиблась."
     e "Тем не менее, ты не бесполезен. Время покажет, может быть, тебе всё-таки удастся стать кем-то великим."
     e "Но, что бы там ни было, у тебя есть шанс научиться чему-то. Конечно же у меня!"
-    show e smirk
+    show e smirk with dissolve
     e "Мы можем устроить соревнование! Я покажу тебе пару трюков и ты постараешься повторить. Если сможешь — может быть, я даже что-то придумаю, как тебя обучить."
 
     "Что?.. Соревнование? Она что, всерьёз думает, что я могу соревноваться с ней? Если я проиграю, мне точно не поздоровится..."  
@@ -218,7 +219,7 @@ label elsa_first_time_no_blessing:
 
 
 label elsa_not_first_time:
-    show e neutral
+    show e neutral with dissolve
     menu:
         "Научи меня":
             p "Можешь научить меня чему-нибудь?"
@@ -257,19 +258,19 @@ label elsa_not_first_time:
 label elsa_magic_training:
     show e at right with dissolve
     e "Сконцентрируйся, представь перед собой сферу, очень горячую."
-    e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dis5
+    e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dissolve
     call start_magic_training(intelligence)
     if last_reaction_win:
         $addChar(["intelligence"], 3)
-        show e smile at center with dis5
+        show e smile at center with dissolve
         e "Вау, да у тебя талант!"
         p "Надо будет повторить, мне понравилось."
-        e @smile_shy "Мне тоже~~" with dis5
+        e @smile_shy "Мне тоже~~" with dissolve
         $addLove("e", 5)
         if e_love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
-            e @smile_shy "Ладно, думаю ты готов, идем." with dis5
+            e @smile_shy "Ладно, думаю ты готов, идем." with dissolve
             p "К чему готов? Куда мы?"
-            e @smirk "Не важно, просто идем." with dis5
+            e @smirk "Не важно, просто идем." with dissolve
             $ updateCanVisit("mt", True)
             jump magic_tower_elsa
     else:
@@ -300,7 +301,9 @@ label elsa_quests:
                 "Принять квест":
                     e "Ты действительно готов, надо же, ну тогда идем!"
                     $ getQuest(quest_elsa_test)
-                    jump elsa_test
+                    call elsa_test
+                    $nextTime()
+                    jump city
                 "Не принимать квест":
                     e "Ожидаемо, тяжелый труд не для принцесс.."
                     jump elsa_not_first_time
@@ -311,7 +314,7 @@ label elsa_quests:
 
 label go_to_lib_with_elsa:
     scene bg city with fade
-    show e neutral with dis5
+    show e neutral with dissolve
 
     e "Добро пожаловать в город. Здесь ты найдёшь то, что тебе нужно."
     e "Вон там библиотека — источник знаний, который поможет тебе понять, что такое магия."
@@ -320,6 +323,7 @@ label go_to_lib_with_elsa:
 
     menu:
         "Зайти в библиотеку":
+            $nextTime()
             jump library_elsa
         "Идти сразу в магическую башню" if canVisit("mt"):
             jump magic_tower_elsa
