@@ -8,7 +8,6 @@ default first_time_forest = True
 #Суйка из геройской академии
 
 label forest:
-    scene bg forest with fade
     
     if charisma > 1 and first_time_rapunzel:
         jump visit_rapunzel_forest
@@ -19,7 +18,8 @@ label forest:
     else:
         "Ты в лесу"
         "Куда направишься?"
-
+        
+    scene bg forest with fade
     jump forest_menu
 
 label forest_menu:

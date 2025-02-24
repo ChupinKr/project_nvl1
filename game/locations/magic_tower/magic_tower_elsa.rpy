@@ -1,22 +1,23 @@
 # Поиск Эльзы (всегда успешно) с меню взаимодействий
 label find_elsa:
     scene bg tower_training with fade
-    show e neutral at center
+    show e neutral at center with dis5
 
     "Я нашёл Эльзу в тренировочном зале. "
     "Она как раз заканчивала очередное упражнение, заставляя ледяные копья исчезать в воздухе."
 
-    show e smirk
+    show e smirk with dis5
     e "Решил проверить, насколько ты жалок сегодня?"
     jump find_elsa_menu
 
 label find_elsa_menu:
-    show e smile
+    show e smile with dis5
     menu:
         "Потренироваться с ней":
-            show e laugh
-            e "Хорошо. Только не плачь, если замёрзнешь."
-            "Эльза начала тренировку, и я попытался повторять её движения... но быстро понял, что мне ещё далеко до её уровня."
+            show e smile with dissolve
+            "[e.name] начала тренировку, и я попытался повторять её движения..."
+            p "[e.name], ты говорила, что можешь меня потренировать."
+            e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dis5
             show e smile at right with fade
             call start_magic_training(mana)
             if last_reaction_win:
@@ -26,13 +27,13 @@ label find_elsa_menu:
                 jump fail_elsa_training
             jump find_elsa_menu
         "Попросить квест" if isNoQuestNow():
-            show e neutral
-            e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся."
+            show e neutral with dis5
+            e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся." with dis5
             call elsa_quests_magic_tower
             jump find_elsa_menu
         "Отказаться от квеста" if isActualQuestOfCharacter("e"):
             p "Я откажусь от выполнения квеста."
-            e smile "Ничего страшного, но если передумаешь - приходи!"
+            e smile "Ничего страшного, но если передумаешь - приходи!" with dis5
             $ removeQuest()
             jump find_elsa_menu
         "Уйти":
@@ -56,15 +57,15 @@ label elsa_quests_magic_tower:
     return
 
 label win_elsa_training:
-    show e smile at center with fade
-    e "Вау, да у тебя талант, мое уважение."
+    show e smile at center with dis5
+    e "Вау, да у тебя талант!"
     p "Надо будет повторить, мне понравилось."
     e @smile_shy "Мне тоже~~"
-    $addLove("e", 10)
+    $addLove("e", 5)
     jump find_elsa_menu
 
 label fail_elsa_training:
-    show e laugh at center with fade
+    show e laugh at center with dis5
     e "Это потрясающе!"
     p "Что? У меня же не вышло."
     e "Да, меня потрясло то, насколько ты необучаем."

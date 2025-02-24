@@ -12,6 +12,12 @@ init python:
             renpy.show_screen("finishGame")
 
 default casting = False
+default key_value = 80
+default deviation1 = 0
+default deviation2 = 0
+default deviation3 = 0
+default deviation4 = 0
+default magic_training_difficult = 15#чем больше, тем проще
 
 ## Анимация тряски текста.
 transform vibrate:
@@ -37,26 +43,27 @@ screen reactionGame:
     modal True
     default tick = 0
     default reversal = False
-    key "mouseup_1" action If(tick >= 80, Function(success), Show("failGame"))
-    key "K_SPACE" action If(tick >= 80, Function(success), Show("failGame"))
+    key "mouseup_1" action If(tick <= key_value + magic_training_difficult and tick >= key_value - magic_training_difficult, Function(success), Show("failGame"))
+    key "K_SPACE" action If(tick <= key_value + magic_training_difficult and tick >= key_value - magic_training_difficult, Function(success), Show("failGame"))
 
     if casting:
         if tick < 20:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + 3), SetScreenVariable("tick", tick - 3))
+            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation1), SetScreenVariable("tick", tick - deviation1))
         elif tick < 40:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + 6), SetScreenVariable("tick", tick - 6))
+            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation2), SetScreenVariable("tick", tick - deviation2))
         elif tick < 60:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + 16), SetScreenVariable("tick", tick - 16))
+            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation3), SetScreenVariable("tick", tick - deviation3))
         else:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + 20), SetScreenVariable("tick", tick - 20))
+            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation4), SetScreenVariable("tick", tick - deviation4))
 
-        if tick >= 95:
+        if tick >= 88:
             timer 0.1 action SetScreenVariable("reversal", True)
-        elif tick < 5:
+        elif tick < 12:
             timer 0.1 action SetScreenVariable("reversal", False)
 
         text "Твой счет: " + str(score) size 50 xoffset 10 yoffset 30
-        text "Стреляй на 80%!!" at vibrate size 80 yoffset 100
+        text "Целься в [key_value]%!!" at vibrate size 80 yoffset 100
+        #text "tick [tick]" size 80 yoffset 100
 
         bar:
             align(0.5, 0.6)
@@ -70,7 +77,11 @@ label start_magic_training(mana):
     with dissolve
     pause
     hide txt
-
+    $ key_value = renpy.random.randint(0, 100)
+    $ deviation1 = renpy.random.randint(1, 10)
+    $ deviation2 = renpy.random.randint(2, 10)
+    $ deviation3 = renpy.random.randint(3, 10)
+    $ deviation4 = renpy.random.randint(4, 10)
     $ score = 0  # Сбрасываем очки перед игрой
     $ win_score = 3
     $ casting = True
