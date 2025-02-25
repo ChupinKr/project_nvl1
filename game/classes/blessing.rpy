@@ -32,4 +32,10 @@ init python:
         grade=0  #грейд
     )
 
-    available_blessings = [blessing_stamina, blessing_magic, blessing_seduction]
+    blessing_nothing = Blessing(
+        name="Дар свободы", #от линейного сюжета
+        description="Ничего не увеличивает, лишь делает жизнь немного сложнее.",
+        grade=0  #грейд
+    )
+
+    available_blessings = [blessing_stamina, blessing_magic, blessing_seduction, blessing_nothing]

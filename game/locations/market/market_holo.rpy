@@ -21,15 +21,15 @@ label visit_holo:
                 hide h with dissolve
                 pause 1
                 show h smile_naked with dissolve
-                h smile_naked "Как тебе? На какую сумму оценишь?"
+                h smile_naked "Как тебе? На какую сумму оценишь?" with dissolve
                 p "Выше всех похвал, пол царства бы отдал!"
-                h smile_naked "Охо-хо~ Этой фразой ты только что обеспечил себе первую бесплатную услугу, идем~"
+                h smile_naked "Охо-хо~ Этой фразой ты только что обеспечил себе первую бесплатную услугу, идем~" with dissolve
                 $h_can_go_root = True
                 call h_root_masturbate
                 jump market
             "Нет":
                 $h_can_visit = False
-                h angry_no_top "Похоже я в тебе ошиблась, [hero_name]!"
+                h angry_no_top "Похоже я в тебе ошиблась, [hero_name]!" with dissolve
                 $customNotify("Ты больше никогда не увидишь [h.name]")
                 jump market
     else:
@@ -47,7 +47,7 @@ label holo_menu:
             jump holo_market_root_menu
         "Чем тебе помочь?" if can_work_with_holo:
             menu:
-                "Протереть книги(5 монет)":
+                "Протереть книги(10 монет)":
                     h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
                     call start_clean("books") from _call_start_clean
                     if last_clean_win:
@@ -59,10 +59,10 @@ label holo_menu:
                             if last_clean_win:
                                 h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
                                 "Ты провёл время, помогая [h.name]"
-                                "[h.name] это оценила"
                                 $addLove("h",5)
+                                "[h.name] это оценила"
                                 pause 3.5
-                                $addMoney(5)
+                                $addMoney(10)
                             else: 
                                 h "Эх, почти успели, упустили клиента."
                         else: 
@@ -71,12 +71,19 @@ label holo_menu:
                         h "[hero_name], это никуда не годится, работай лучше!"
                     $nextTime()
                     jump holo_menu
-                "Избавиться от жуков(5 монет)":
-                    h "Избавься от этих жуков, они везде!"
-                    p "И как я по твоему должен от них избавиться?"
+                "Избавиться от жуков(10 монет)":
+                    h "Избавься от этих жуков, они везде! Только не убивай их!"
+                    scene bg holo_tavern_boxes with fade
+                    p "И как мне их убрать?"
                     h "Это уже тебе решать, [hero_name]~"
-                    "IN PROGRESS"
-                    #call start_reaction
+                    call bug_hunt
+                    call market_scene
+                    show h smile_shy with dissolve
+                    h "О-хо-хо! [hero_name], спасибо, не знаю, что бы я без тебя делала!"
+                    $addLove("h",5)
+                    "Ты провёл время, помогая [h.name], она это оценила"
+                    $addMoney(10)
+                    $nextTime()
                     jump holo_menu
                 "Никакой работы":
                     h "Эй, в следующий раз обещай, что поможешь!"

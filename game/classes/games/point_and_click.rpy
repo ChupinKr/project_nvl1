@@ -1,93 +1,66 @@
-init python:
-    pc_score = 0
-    win_score = 0
-    last_pc_win = False  # Переменная для запоминания результата
+label bug_hunt: 
+    $ score = 0
+    $ bugs = []  # Список жуков
+    $ bug_path = "images/assets/point_and_click/bug.png"
+    $ bug_hover_path = "images/assets/point_and_click/bug_hover.png"
 
-    def success():
-        global score, last_reaction_win
-        score += 1
-        if score >= 20:
-            last_pc_win = True
-            renpy.hide_screen("pcGame")
-            renpy.show_screen("pcFinishGame")
+    python:
+        import random
 
-default casting = False
-default obj_count = 20
-default pc_difficult = 15 #чем больше, тем проще
+        class Bug:
+            def __init__(self, id):
+                self.id = id
+                self.x = random.randint(100, 1600)
+                self.y = random.randint(100, 900)
+                self.targetX = self.x
+                self.targetY = self.y
+                self.alive = True  # Флаг, жив ли жук
 
-## Анимация тряски текста.
-transform vibrate:
-    pos(0.5, 0.4) anchor(0.5, 0.5) rotate 0
-    linear 0.1 rotate 5
-    linear 0.1 rotate 0
-    linear 0.1 rotate -5
-    linear 0.1 rotate 0
-    repeat
+            def move(self):
+                """Обновляет цель движения жука"""
+                if self.alive:
+                    self.targetX = self.x + random.randint(-200, 200)
+                    self.targetY = self.y + random.randint(-200, 200)
 
-screen failGame:
-    on "show" action Hide("reactionGame"), SetVariable("casting", False), SetVariable("last_reaction_win", False)
-    text "Провал.." size 100 align(0.5, 0.5)
-    dismiss action Hide("failGame"), Jump("end_magic_game")  # Автоматический выход
+                    # Ограничиваем границы движения
+                    self.targetX = max(100, min(1600, self.targetX))
+                    self.targetY = max(100, min(900, self.targetY))
 
-screen finishGame:
-    on "show" action Hide("reactionGame"), SetVariable("casting", False)
-    text "Успех!" size 100 align(0.5, 0.5)
-    if score >= 3:
-        timer 1.0 action Jump("end_magic_game")  # Задержка перед выходом
+    # Создаем 20 жуков
+    python:
+        bugs = [Bug(i) for i in range(20)]
 
-screen reactionGame:
-    modal True
-    default tick = 0
-    default reversal = False
-    key "mouseup_1" action If(tick <= key_value + magic_training_difficult and tick >= key_value - magic_training_difficult, Function(success), Show("failGame"))
-    key "K_SPACE" action If(tick <= key_value + magic_training_difficult and tick >= key_value - magic_training_difficult, Function(success), Show("failGame"))
+    screen bug_game():
+        text "Счет: [score]" xpos 20 ypos 20 size 40 color "#fff"
 
-    if casting:
-        if tick < 20:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation1), SetScreenVariable("tick", tick - deviation1))
-        elif tick < 40:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation2), SetScreenVariable("tick", tick - deviation2))
-        elif tick < 60:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation3), SetScreenVariable("tick", tick - deviation3))
-        else:
-            timer 0.1 repeat True action If(not reversal, SetScreenVariable("tick", tick + deviation4), SetScreenVariable("tick", tick - deviation4))
+        for bug in bugs:
+            if bug.alive:
+                imagebutton:
+                    idle bug_path
+                    hover bug_hover_path
+                    xpos bug.x
+                    ypos bug.y
+                    action [
+                        SetVariable("score", score + 1),
+                        Function(setattr, bug, "alive", False)  # Убираем жука
+                    ]
+                    at move_bug(bug)  # Применяем анимацию движения
 
-        if tick >= 88:
-            timer 0.1 action SetScreenVariable("reversal", True)
-        elif tick < 12:
-            timer 0.1 action SetScreenVariable("reversal", False)
+    # Анимация хаотичного движения (не сбрасывает позицию)
+    transform move_bug(bug):
+        ease 1 xpos bug.targetX ypos bug.targetY
+        pause 0.1  # Короткая пауза перед следующим движением
+        repeat  # Повторяем движение
 
-        text "Твой счет: " + str(score) size 50 xoffset 10 yoffset 30
-        text "Целься в [key_value]%!!" at vibrate size 80 yoffset 100
-        #text "tick [tick]" size 80 yoffset 100
+    window hide
+    show screen bug_game
 
-        bar:
-            align(0.5, 0.6)
-            value AnimatedValue(value=tick, range=100, delay=0.1, old_value=None)
-            xysize(1000, 50)
+    while score < 20:
+        python:
+            for bug in bugs:
+                bug.move()  # Обновляем координаты
+        $ renpy.pause(0.5)  # Ждем, пока жуки двигаются
 
-## Логика мини-игры.
-label start_magic_training(intelligence):
-    pause .5
-    show expression Text("Будь внимателен!") at truecenter as txt
-    with dissolve
-    pause
-    hide txt
-    $ key_value = renpy.random.randint(0, 100)
-    $ deviation1 = renpy.random.randint(1, 10)
-    $ deviation2 = renpy.random.randint(2, 10)
-    $ deviation3 = renpy.random.randint(3, 10)
-    $ deviation4 = renpy.random.randint(4, 10)
-    $ score = 0  # Сбрасываем очки перед игрой
-    $ win_score = 3
-    $ casting = True
-    call screen reactionGame
-    return
-
-## Переход после завершения игры
-label end_magic_game:
-    hide screen failGame
-    hide screen finishGame
-    if score >= win_score:
-        $ last_reaction_win = True
+    hide screen bug_game
+    "Успех!"
     return

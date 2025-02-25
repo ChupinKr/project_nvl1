@@ -57,6 +57,8 @@ label start_ask_god:
 label refuse:
     "Ты решаешь отказаться от благословений и от всего, что она предлагает. В этот момент пространство вокруг тебя начинает меркнуть, и ты чувствуешь, как теряешь сознание..."
     #TODO Тогда я превращаю тебя в слизь
+    $ chosen_blessing = available_blessings[3]
+    show screen daytime
     jump forest
     return
 
