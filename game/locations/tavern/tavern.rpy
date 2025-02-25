@@ -82,7 +82,7 @@ label talk_miku_menu:
     menu:
         "Обслужи меня" if m_love >= 50 and m_can_go_root:
             show m smirk_no_top with dissolve
-            m "Поднимайся по лестнице, ты знаешь, где поя комната~"
+            m "Поднимайся по лестнице, ты знаешь, где моя комната~"
             jump miku_tavern_root
         "Снять комнату" if not canVisit("room"):
             m smile "Комната стоит 10 золотых в неделю." with dissolve
@@ -137,19 +137,24 @@ label talk_miku_work:
             show m smile with dissolve
             jump talk_miku_menu
         "Прогнать шумных гостей (10 монет)":
-            m @angry "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!" with dissolve
+            scene bg tavern_battle with fade
+            show m angry at left with dissolve
+            m "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!" with dissolve
             if renpy.random.choice([False, True]) > 0:
                 "Ты поговорил с клиентами, и они ушли, хоть и неохотно."
                 $addMoney(10)
             else:
                 "Ты поговорил с клиентами, и они не захотели уходить по хорошему"
                 "Самый большой из них встает и замахивается на тебя"
-                call start_battle(100, renpy.random.randint(10,40), "Бандит", battle_location_tavern) from _call_start_battle_4
+                call start_battle(100, renpy.random.randint(10,150), "Бандит", battle_location_tavern)
                 if last_battle_win:
                     "[m.name] это оценила"
+                    m smile "Спасибо, [hero_name], ты меня снова выручил." with dissolve
                     $addLove("m", 10)
                     pause 3.5
                     $addMoney(10)
+            scene bg bar_counter with fade
+            show m smile at center with dissolve
             $nextTime()
             jump talk_miku_menu
         "Никакой работы":
@@ -157,34 +162,26 @@ label talk_miku_work:
     jump talk_miku_menu
 
 label talk_miku_info:
-    if m_love >= 50 and not m_can_go_root:
-        $m_can_go_root = True
-        m "Мне нравится, что ты не просто клиент."
-        m "Мне больше нечего тебе рассказать.."
-        show m smile_no_top with dissolve
-        m "Но я могу показать тебе нечто особенное... но только если ты готов к этому~"
-        menu:
-            m "Но я могу показать тебе нечто особенное, ты готов?"
-            "Всегда готов":
-                m "Поднимайся на второй этаж, дверь налево. Я подойду через минуту~~"
-                "Ты идешь на второй этаж и заходишь в комнату [m.name]"
-                scene bg miku_room_tavern with fade
-                "..."
-                "....."
-                "........"
-                show m smirk_no_top with dissolve
-                m "Я долго этого ждала~~"
-                jump m_root_show #TODO заменить на сцену минета от Мику
-            "Не готов":
-                p "С тобой? Не думаю."
-                "Ты дурак?!"
-                $can_go_m = False
-                show m angry with dissolve
-                m "Ты! Дурак!"
-                hide m with dissolve
-                "[m.name] отвернулась и плачет"
-                $customNotify("Ты больше не сможешь поговорить с [m.name]")
-                jump tavern
+    if m_love >= 10 and not canVisit("lib"):
+        m "Знаешь, ты неплохой! "
+        m "Ладно, расскажу тебе одну тайну... "
+        m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"
+        m "*Описание того, как найти библиотеку*"
+        $ updateCanVisit("lib", True)
+    elif m_love >= 20 and not canVisit("tg"):
+        m "Ты мне нравишься!"
+        m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
+        m "*Описание того, как попасть на тренировочную площадку*"
+        m "Если хочешь стать сильнее – тебе туда!"
+        $ updateCanVisit("tg", True)
+    elif m_love >= 30 and not canVisit("bar"):
+        m "Ты определённо мой типаж!"
+        m "В городе есть **закрытый бар**, куда пускают только своих."
+        m "Там можно найти очень... полезных знакомств!"
+        m "*Описание того, как найти закрытый бар*"
+        m "Скажи, что ты от меня и тебя пропустят."
+        m "Ах да, бар по утрам не работает, не забудь."
+        $ updateCanVisit("bar", True)
     elif m_love >= 40 and not shoot_tits:
         m "Хммм, дай ка подумать.."
         show m smile_closed_eyes with dissolve
@@ -228,26 +225,48 @@ label talk_miku_info:
                     show m smile_no_top with dissolve
                     m "Эммм... Я... Я видела, как ты пялился, такого извинения будет достаточно?"
                     p "Хаха! Да, пойдет, отлично шоу, [m.name]!"
-    elif m_love >= 30 and not canVisit("bar"):
-        m "Ты определённо мой типаж!"
-        m "В городе есть **закрытый бар**, куда пускают только своих."
-        m "Там можно найти очень... полезных знакомств!"
-        m "*Описание того, как найти закрытый бар*"
-        m "Скажи, что ты от меня и тебя пропустят."
-        m "Ах да, бар по утрам не работает, не забудь."
-        $ updateCanVisit("bar", True)
-    elif m_love >= 15 and not canVisit("tg"):
-        m "Ты мне нравишься!"
-        m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
-        m "*Описание того, как попасть на тренировочную площадку*"
-        m "Если хочешь стать сильнее – тебе туда!"
-        $ updateCanVisit("tg", True)
-    elif m_love >= 10 and not canVisit("lib"):
-        m "Знаешь, ты неплохой! "
-        m "Ладно, расскажу тебе одну тайну... "
-        m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"
-        m "*Описание того, как найти библиотеку*"
-        $ updateCanVisit("lib", True)
+    elif m_love >= 50 and not m_can_go_root:
+        $m_can_go_root = True
+        m "Мне нравится, что ты не просто клиент."
+        m "Мне больше нечего тебе рассказать.."
+        show m smile_no_top with dissolve
+        m "Но я могу показать тебе нечто особенное... но только если ты готов к этому~"
+        menu:
+            m "Но я могу показать тебе нечто особенное, ты готов?"
+            "Всегда готов":
+                m "Поднимайся на второй этаж, дверь налево. Я подойду через минуту~~"
+                "Ты идешь на второй этаж и заходишь в комнату [m.name]"
+                scene bg miku_room_tavern with fade
+                "..."
+                "....."
+                "........"
+                show m smirk_no_top with dissolve
+                m "Я долго этого ждала~~"
+                call m_root_show
+                jump tavern
+            "Не готов":
+                p "С тобой? Не думаю."
+                "Ты дурак?!"
+                $can_go_m = False
+                show m angry with dissolve
+                m "Ты! Дурак!"
+                hide m with dissolve
+                "[m.name] отвернулась и плачет"
+                $customNotify("Ты больше не сможешь поговорить с [m.name]")
+                jump tavern
+    elif m_love >= 60:
+        m "Ты мне так много помогаешь, [hero_name]..."
+        show m smile_no_top with dissolve
+        m "Я долго думала, как тебе отплатить за доброту.."
+        m "Думаю, тебе понравится~"
+        "[m.name] встает на колени и снимает с тебя штаны"
+        call m_rool_tavern_blowjob
+        scene bg bar_counter with fade
+        show m smile_naked_cummed with dissolve
+        m "Спасибо за угощение~"
+        m "Мне пора переодеться, пока меня никто не увидел"
+        hide m with dissolve
+        show m smile_blush with dissolve
     else:
         m "Хмм, пока ты ещё не заслужил моего доверия! Может, поможешь мне с парочкой дел?"
     jump talk_miku_menu

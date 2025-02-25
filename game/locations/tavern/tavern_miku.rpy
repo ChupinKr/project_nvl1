@@ -7,27 +7,27 @@ label miku_tavern_root:
 label miku_tavern_root_menu:
     menu:
         "Покажи" if m_love >= 50:
-            call m_root_show from _call_m_root_show
+            call m_root_show 
             $nextTime()
             jump tavern
-        "Мастурбация" if nag_love >= 60: 
-            call m_root_titfuck from _call_m_root_titfuck
+        "Мастурбация" if m_love >= 60: 
+            call m_root_titfuck
             $nextTime()
             jump tavern
-        "Горловой минет" if nag_love >= 70: 
-            call m_root_blowjob from _call_m_root_blowjob
+        "Горловой минет" if m_love >= 70: 
+            call m_root_blowjob 
             $nextTime()
             jump tavern
-        "Секс" if nag_love >= 80: 
-            call m_root_fuck from _call_m_root_fuck
+        "Секс" if m_love >= 80: 
+            call m_root_fuck 
             $nextTime()
             jump tavern
-        "Анал" if nag_love >= 90: 
-            call m_root_anal from _call_m_root_anal
+        "Анал" if m_love >= 90: 
+            call m_root_anal 
             $nextTime()
             jump tavern
-        "Сделаем это прилюдно" if nag_love >= 200: 
-            call m_root_fetish from _call_m_root_fetish
+        "Сделаем это прилюдно" if m_love >= 200: 
+            call m_root_fetish 
             $nextTime()
             jump tavern
         "Я передумал": 
@@ -35,6 +35,10 @@ label miku_tavern_root_menu:
             m "Ты многое упускаешь, [hero_name]~~"
             "Ты уходишь"
             jump city
+
+label m_rool_tavern_blowjob:
+    "IN PROGRESS"
+    return
 
 label m_root_show:
     m "Подожди меня тут, [hero_name]~"
@@ -99,7 +103,7 @@ label m_root_show:
     
     scene bg m_show10 with dissolve
     "Немного смутившись, она слегка наклоняется и приспускает трусики."
-    "Киска и анус становятся видны, её глаза застилает смущённый, но игривый взгляд."
+    "Ты видишь ее киску, а её глаза застилает смущённый, но игривый взгляд."
     m "Ты... правда этого хотел?"
     p "Каждую секунду мечтал об этом."
     mind "Теперь главное — удержать себя в руках."
@@ -110,7 +114,6 @@ label m_root_show:
     p "Потому что ты невероятно красива. Ну же, покажи мне свою киску."
     
     scene bg m_show12 with dissolve
-    "[m.name] оттягивает свою попку, чтобы показать свою розовую киску."
     m "Ты хочешь, чтобы я показала тебе всё?"
     p "Да, [m.name], покажи мне себя полностью."
     
@@ -253,8 +256,8 @@ label m_root_show:
 
     scene bg m_show29 with dissolve
     "Она встаёт, оперевшись на грудь, раздвинув ноги."
-    m "В-видишь, как сильно я стараюсь?"
-    p "Вижу, ты умничка."
+    m "Ты уже еле держишься, да, [hero_name]?"
+    p "..."
 
     scene bg m_show30 with dissolve
     "[m.name] встаёт на прямых раздвинутых ногах, наклонившись вниз, соки с её киски стекают по её животику на грудь."

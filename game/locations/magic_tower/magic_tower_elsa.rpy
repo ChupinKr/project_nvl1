@@ -45,7 +45,7 @@ label win_elsa_training:
     show e smile at center with dissolve
     e "Вау, да у тебя талант!"
     p "Надо будет повторить, мне понравилось."
-    e @smile_shy "Мне тоже~~"
+    e @smile_shy "Мне тоже.."
     $addLove("e", 5)
     jump find_elsa_menu
 

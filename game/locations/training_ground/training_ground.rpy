@@ -122,7 +122,8 @@ label training_ground_eris_menu:
             $nextTime()
             jump training_ground_menu
         "Пойти на задание вдвоем" if isNoQuestNow() and eris_love >= 40:
-            jump eris_quest_menu
+            call eris_quest_menu
+            jump training_ground_eris_menu
         "Вернуться":
             jump training_ground
 
@@ -130,11 +131,12 @@ label eris_quest_menu:
     eris "Отличная идея!"
     menu:
         "IN PROGRESS":
-            "IN PROGRESS"
+            eris "IN PROGRESS"
             #jump eris_quest_dragon_hunting
         "IN PROGRESS":
-            "IN PROGRESS"
+            eris "IN PROGRESS"
             #jump eris_quest_goblin_hunting
         "Передумал":
             eris "IN PROGRESS"
-            jump training_ground_menu
+            return
+    return

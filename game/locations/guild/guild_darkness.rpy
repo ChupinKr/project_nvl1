@@ -13,7 +13,7 @@ label guild_d_menu:
         "Тебя пора наказать" if not first_root_d:
             jump guild_d_root_menu
         "Научи меня":
-            call start_battle(d_str, 50, d.name, battle_location_guild)
+            call start_battle(d_str, 60, d.name, battle_location_guild)
             if last_battle_win:
                 d @smile_shy "А-а-аах, ты победил меня, великую воительницу~"
                 $addLove("d", 5)
@@ -33,7 +33,7 @@ label guild_d_menu:
                 $minusLove("d", 5)
                 "Стоило достойно принять поражение"
             $nextTime()
-            jump guild_menu
+            jump guild_d_menu
         "Спросить про задание" if isNoQuestNow():
             call guild_d_quests from _call_guild_d_quests
             jump guild_d_menu

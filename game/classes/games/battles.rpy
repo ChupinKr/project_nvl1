@@ -27,8 +27,8 @@ init python:
         """Создаёт случайную комбинацию стрелок для ввода."""
         # Пример расчёта количества символов (можно подстроить под свою логику)
         count = math.ceil(enemy_strength / 10) - math.ceil(strength / 20)
-        if count < 4:
-            count = 4
+        if count < 6:
+            count = 6
         if count > 26:
             count = 26
         return "".join(random.choices(["↑", "↓", "←", "→"], k=count))
@@ -151,9 +151,14 @@ label qte_success:
         jump battle_win
     else:
         # Генерируем новую последовательность и очищаем ввод игрока
+        $ damage_to_enemy = 0
+        $ damage = 0
         $ qte_sequence = generate_qte_sequence()
         $ qte_input = ""
-        jump continue_battle
+        # Сброс таймера: возвращаем значение qte_bar в 100 и сбрасываем предупреждение
+        $ qte_bar = 100
+        $ qte_warning = False
+        call screen battle_qte  # Продолжаем бой
 
 label qte_fail:
     # Уменьшаем здоровье игрока на случайный урон

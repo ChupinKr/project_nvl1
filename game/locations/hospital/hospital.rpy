@@ -5,6 +5,10 @@ label hospital:
     scene bg hospital with fade
     play music "audio/hospital_theme.mp3"
 
+    if isNight():
+        "Ты видишь надпись: Больница закрыта, приходите утром."
+        jump city
+
     if first_time_hospital:
         "Ты входишь в просторное помещение, оно выглядит довольно знакомо."
         "Прямо как в родном мире, стоят баночки, даже висит монитор, да и свет от ламп."

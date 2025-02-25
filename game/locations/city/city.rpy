@@ -38,7 +38,7 @@ label city:
         "Гильдия бойцов" if canVisit("guild"):
             "Лязг и крики, команды, место где порядок и дисциплина прежде всего."
             jump guild
-        "Больница" if canVisit("hospital") and not isNight():
+        "Больница" if canVisit("hospital"):
             "Вдали ты замечаешь больницу — высокое светлое здание, где лечат раненых, но за это берут плату."
             jump hospital
         "Городской рынок" if canVisit("market"):

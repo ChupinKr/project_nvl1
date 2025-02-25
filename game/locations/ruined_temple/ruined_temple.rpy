@@ -16,7 +16,7 @@ label ruined_temple_menu:
             "Ты ничего не находишь"
             "IN PROGRESS"
             jump ruined_temple_menu
-        "Пройти в лес":
+        "Вернуться в лес":
             jump forest
 
 

@@ -10,7 +10,7 @@ label market:
     hide h
     "Вы приходите на оживлённый рынок, где запах свежего хлеба смешивается с ароматом пряностей. Люди суетятся, обсуждают цены, и всюду слышится звон монет."
 
-    if first_visit_market:
+    if first_visit_market and not isNight() and not isEvening():
         $ first_visit_market = False
         "Ваш взгляд привлекает прилавок с фруктами и бочонками мёда. За ним стоит девушка с лисьими ушами и пушистым хвостом."
         show h smile with dissolve
@@ -71,7 +71,7 @@ label market:
         hide h with dissolve
         jump market_menu
     else:
-        if h_can_visit and not isNight():
+        if h_can_visit and not isNight() and not isEvening():
             "Вы снова на рынке. [h.name] замечает вас и лениво махает хвостом, но сегодня не пристаёт с вопросами – видимо, её развлекло что-то другое."
         else:
             "Вы снова на рынке."
@@ -81,7 +81,7 @@ label market:
 label market_menu:
     hide h with dissolve
     menu:
-        "Подойти к [h.name]" if h_can_visit and not isNight():
+        "Подойти к [h.name]" if h_can_visit and not isNight() and not isEvening():
             jump visit_holo
         "Притвориться мертвым" if not canVisit("hospital") and not isNight():
             "Ты упал и притворился мертвым"
@@ -101,7 +101,7 @@ label market_menu:
                 "Какой-то мутный тип подходит к тебе"
                 sg "Эй, че вылупился? Зрение слишком хорошее?!"
                 call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market) from _call_start_battle_3
-                if last_battle_win:
+                if last_battle_win and not isNight() and not isEvening():
                     "[h.name] это видела"
                     $addLove("h", 10)
             $nextTime()

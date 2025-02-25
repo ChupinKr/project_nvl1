@@ -38,7 +38,9 @@ label room:
             jump city
 
 label room_sleep:
-    "Пора спать. Ты проводишь ночь в теплой постели."
+    "Пора спать. Ты идешь в свою комнату в таверне."
+    scene bg room with fade
+    "Ты проводишь ночь в теплой постели."
     $addHealth(100)
     $nextDay()
     jump room
