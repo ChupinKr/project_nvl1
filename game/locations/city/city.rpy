@@ -1,7 +1,7 @@
 define first_time_city = True
 
 label city:
-    call city_scene
+    call city_scene from _call_city_scene
     play music "audio/city_theme.mp3"
 
     if first_time_city:
@@ -53,7 +53,7 @@ label city:
 
 label city_overnight_stay:
     "Уже слишком поздно, тебя клонит в сон"
-    call city_scene("night")
+    call city_scene("night") from _call_city_scene_1
     "Тебе некуда податься, ты решаешь уснуть в центре города на холодной деревянной скамье"
     "Такая ночь неизбежно подкашивает твое здоровье"
     $minusAllChar(1)

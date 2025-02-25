@@ -6,7 +6,7 @@ default first_visit_market = True
 
 # Сцена посещения рынка
 label market:
-    call market_scene
+    call market_scene from _call_market_scene
     hide h
     "Вы приходите на оживлённый рынок, где запах свежего хлеба смешивается с ароматом пряностей. Люди суетятся, обсуждают цены, и всюду слышится звон монет."
 

@@ -89,7 +89,7 @@ label guild_menu:
     hide nag
     menu:
         "Тренироваться в спарринге":
-            call start_battle(100, strength, "Противник", battle_location_guild)
+            call start_battle(100, strength, "Противник", battle_location_guild) from _call_start_battle_21
             if last_battle_win:
                 "Я определенно становлюсь все лучше!"
                 $addChar(["str"], 3)
@@ -101,13 +101,13 @@ label guild_menu:
             jump guild_d_menu
         "Качаться":
             # добавить вызов песни подход, подход, еще подход
-            call start_muscule("Подход",2.3)
+            call start_muscule("Подход",2.3) from _call_start_muscule
             if last_muscule_win:
-                call start_muscule("Подход",2.5)
+                call start_muscule("Подход",2.5) from _call_start_muscule_1
                 if last_muscule_win:
-                    call start_muscule("Еще подход",2.7)
+                    call start_muscule("Еще подход",2.7) from _call_start_muscule_2
                     if last_muscule_win:
-                        call start_muscule("Сотру со лба я легкий пот",2.7)
+                        call start_muscule("Сотру со лба я легкий пот",2.7) from _call_start_muscule_3
                         if last_muscule_win:
                             "Я определенно становлюсь все лучше!"
                             $addChar(["str"], 2)

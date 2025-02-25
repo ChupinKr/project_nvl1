@@ -45,5 +45,5 @@ label start:
 
     f "[hero_name], теперь ты стоишь перед серьезнейшим выбором в твоей новой жизни."
 
-    call f_get_info
+    call f_get_info from _call_f_get_info_1
     jump start_ask_god

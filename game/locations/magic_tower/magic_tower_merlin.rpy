@@ -28,7 +28,7 @@ label merlin_menu:
             show mer neutral with dissolve
             mer "Если хочешь задание – у меня всегда есть кое-что... рискованное."
             "Мерлин хитро улыбнулась и начала рассказывать про квест."
-            call merlin_quests
+            call merlin_quests from _call_merlin_quests
             jump merlin_menu
         "Отказаться от задания" if isActualQuestOfCharacter("mer"):
             p "Я не смогу выполнить это задание."
@@ -139,22 +139,22 @@ label mer_root:
 label mer_root_menu:
     menu:
         "Мастурбация" if mer_love >= 50:
-            call mer_root_masturbate
+            call mer_root_masturbate from _call_mer_root_masturbate
             jump mer_root_menu
         "Грудями" if mer_love >= 60:
-            call mer_root_titfuck
+            call mer_root_titfuck from _call_mer_root_titfuck
             jump mer_root_menu
         "Минет" if mer_love >= 70:
-            call mer_root_blowjob
+            call mer_root_blowjob from _call_mer_root_blowjob
             jump mer_root_menu
         "Секс" if mer_love >= 80:
-            call mer_root_fuck
+            call mer_root_fuck from _call_mer_root_fuck
             jump mer_root_menu
         "Анал" if mer_love >= 90:
-            call mer_root_anal
+            call mer_root_anal from _call_mer_root_anal
             jump mer_root_menu
         "Фетиш" if mer_love >= 200:
-            call mer_root_fetish
+            call mer_root_fetish from _call_mer_root_fetish
             jump mer_root_menu
         "Вернуться":
             "Ты уходишь восстанавливать магические силы"

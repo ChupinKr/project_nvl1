@@ -20,7 +20,7 @@ label room:
     menu:
         "Тренироваться" if len(gg_items) > 0:
             "За дело!"
-            call room_training
+            call room_training from _call_room_training
             jump room
         "Отдохнуть":
             "Как же давно я не мог просто отдохнуть"

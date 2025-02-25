@@ -7,7 +7,7 @@ define can_go_m = True
 
 # Сцена с таверной
 label tavern:
-    call tavern_scene
+    call tavern_scene from _call_tavern_scene_1
     "Вы в таверне"
     menu:
         "Пойти в комнату" if canVisit("room"):
@@ -252,7 +252,7 @@ label tavern_task_board:
                 $addMoney(10)
             else:
                 "Ты встретил нарушителя порядка, его надо задержать!"
-                call start_battle(100, renpy.random.randint(50,120), "Бандит", battle_location_tavern)
+                call start_battle(100, renpy.random.randint(50,120), "Бандит", battle_location_tavern) from _call_start_battle_23
                 if last_battle_win:
                     "Ты успешно справился с противником"
                     $addMoney(10)
@@ -274,7 +274,7 @@ label tavern_task_board:
 
 # Сцена с сомнительным столом
 label suspicious_table:
-    call tavern_scene
+    call tavern_scene from _call_tavern_scene_2
     guy1 "Ну что, парниша, выглядишь, как тот, кто может сделать нужные вещи. Хочешь поговорить о том, как войти в темные дела?"
     guy2 "Тебе нужно знать кое-что, если ты хочешь быть частью нашего круга. Но для этого нужно доказать, что ты не ссышь."
 

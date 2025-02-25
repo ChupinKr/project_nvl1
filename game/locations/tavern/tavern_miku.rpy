@@ -7,27 +7,27 @@ label miku_tavern_root:
 label miku_tavern_root_menu:
     menu:
         "Покажи" if m_love >= 50:
-            call m_root_show
+            call m_root_show from _call_m_root_show
             $nextTime()
             jump tavern
         "Мастурбация" if nag_love >= 60: 
-            call m_root_titfuck
+            call m_root_titfuck from _call_m_root_titfuck
             $nextTime()
             jump tavern
         "Горловой минет" if nag_love >= 70: 
-            call m_root_blowjob
+            call m_root_blowjob from _call_m_root_blowjob
             $nextTime()
             jump tavern
         "Секс" if nag_love >= 80: 
-            call m_root_fuck
+            call m_root_fuck from _call_m_root_fuck
             $nextTime()
             jump tavern
         "Анал" if nag_love >= 90: 
-            call m_root_anal
+            call m_root_anal from _call_m_root_anal
             $nextTime()
             jump tavern
         "Сделаем это прилюдно" if nag_love >= 200: 
-            call m_root_fetish
+            call m_root_fetish from _call_m_root_fetish
             $nextTime()
             jump tavern
         "Я передумал": 
@@ -166,7 +166,7 @@ label m_root_show:
     if m_love >= 80:
         menu:
             "Секс":
-                call m_root_fuck_continue
+                call m_root_fuck_continue from _call_m_root_fuck_continue
             "Продолжать":
                 "Ты режаешь досмотреть шоу"
     else:
@@ -240,7 +240,7 @@ label m_root_show:
         if m_love >= 90:
             menu:
                 "Анал":
-                    call m_root_anal_continue
+                    call m_root_anal_continue from _call_m_root_anal_continue
                 "Продолжать":
                     "Ты режаешь досмотреть шоу"
         else:
@@ -267,7 +267,7 @@ label m_root_show:
     if m_love >= 200:
         menu:
             "Обе!":
-                call m_root_fetish_public_continue
+                call m_root_fetish_public_continue from _call_m_root_fetish_public_continue
                 #TODO "Ты хватаешь [m.name] и начинаешь жестко насиловать, на ее крики прибегают посетители"
             "Продолжить":
                 "Ты решаешь продолжить смотреть шоу"

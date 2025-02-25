@@ -13,7 +13,7 @@ label guild_d_menu:
         "Тебя пора наказать" if not first_root_d:
             jump guild_d_root_menu
         "Научи меня":
-            call start_battle(d_str, 50, d.name, battle_location_guild)
+            call start_battle(d_str, 50, d.name, battle_location_guild) from _call_start_battle_22
             if last_battle_win:
                 d @smile_shy "А-а-аах, ты победил меня, великую воительницу~"
                 $addLove("d", 5)
@@ -35,7 +35,7 @@ label guild_d_menu:
                 "Стоило достойно принять поражение"
                 jump guild_menu
         "Спросить про задание" if isNoQuestNow():
-            call guild_d_quests
+            call guild_d_quests from _call_guild_d_quests
             jump guild_d_menu
         "Отказаться от задания" if isActualQuestOfCharacter("d"):
             p "Я не буду выполнять твое задание."
@@ -65,32 +65,32 @@ label guild_d_root_menu:
     menu:
         "Покажи сиськи" if d_love >= 50:
             d @smile_shy "О боже, только не это~~"
-            call d_root_public_partly_naked
+            call d_root_public_partly_naked from _call_d_root_public_partly_naked
             $nextTime()
             jump guild_menu
         "Разденься" if d_love >= 60:
             d @smile_shy "Ах, не, за что ты так со мной~"
-            call d_root_public_naked
+            call d_root_public_naked from _call_d_root_public_naked
             $nextTime()
             jump guild_menu
         "Секс" if d_love >= 70:
             d @smile_shy "О нет, что ты за злодей такой~"
-            call d_root_public_fuck
+            call d_root_public_fuck from _call_d_root_public_fuck
             $nextTime()
             jump guild_menu
         "Публичный туалет" if d_love >= 80:
             d @smile_shy "Ах, ты так жесток, все эти мужчины, о боже~"
-            call d_root_toilet
+            call d_root_toilet from _call_d_root_toilet
             $nextTime()
             jump guild_menu
         "Изнасилование" if d_love >= 90:
             d @smile_shy "Прошу, начинай, хочу отмучиться побыстрее~"
-            call d_root_group_fuck
+            call d_root_group_fuck from _call_d_root_group_fuck
             $nextTime()
             jump guild_menu
         "Какая-то жесть" if d_love >= 200:
             d @ahegao "Нет! Прошу! Только не это!"
-            call d_root_jest
+            call d_root_jest from _call_d_root_jest
             $nextTime()
             jump guild_menu
         "Передумал":

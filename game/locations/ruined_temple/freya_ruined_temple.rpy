@@ -80,22 +80,22 @@ label talk_to_freya_menu:
 label freya_root_menu:
     menu:
         "Мастурбация" if f_love >= 50:
-            call freya_root_masturbate
+            call freya_root_masturbate from _call_freya_root_masturbate
             jump freya_root_menu
         "Грудями" if f_love >= 60:
-            call freya_root_titfuck
+            call freya_root_titfuck from _call_freya_root_titfuck
             jump freya_root_menu
         "Минет" if f_love >= 70:
-            call freya_root_blowjob
+            call freya_root_blowjob from _call_freya_root_blowjob
             jump freya_root_menu
         "Секс" if f_love >= 80:
-            call freya_root_fuck
+            call freya_root_fuck from _call_freya_root_fuck
             jump freya_root_menu
         "Анал" if f_love >= 90:
-            call freya_root_anal
+            call freya_root_anal from _call_freya_root_anal
             jump freya_root_menu
         "Фетиш" if f_love >= 200:
-            call freya_root_fetish
+            call freya_root_fetish from _call_freya_root_fetish
             jump freya_root_menu
         "Вернуться":
             jump talk_to_freya_menu

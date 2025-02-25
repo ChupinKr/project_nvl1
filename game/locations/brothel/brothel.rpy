@@ -1,6 +1,6 @@
 define is_free_dance = True
 label rapunzel_brothel_first_visit:
-    call tavern_scene
+    call tavern_scene from _call_tavern_scene
     pause 3.5
     show r smile at right with dissolve
     p "Это место не особо похоже на то, что ты описывала."
@@ -97,12 +97,12 @@ label brothel_menu:
                             "Ты отходишь от [krog.name]"
                             jump brothel
                         "Драться":
-                            call start_battle(200, korg_str , krog.name, 'brothel')
+                            call start_battle(200, korg_str , krog.name, 'brothel') from _call_start_battle_1
                             if last_battle_win:
                                 mind "Я победил, но что мне с ним делать дальше?"
                                 menu:
                                     "Унизить":
-                                        call fuck_krog
+                                        call fuck_krog from _call_fuck_krog
                                         "[krog.name] был прилюдно унижен, все девушки видели это"
                                         jump brothel_girl_menu
                                     "Отпустить":
