@@ -25,11 +25,12 @@ label find_elsa_menu:
                 jump win_elsa_training
             else:
                 jump fail_elsa_training
+            $nextTime()
             jump find_elsa_menu
         "Попросить квест" if isNoQuestNow():
             show e neutral with dissolve
             e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся." with dissolve
-            call elsa_quests_magic_tower
+            call elsa_quests
             jump find_elsa_menu
         "Отказаться от квеста" if isActualQuestOfCharacter("e"):
             p "Я откажусь от выполнения квеста."
@@ -39,22 +40,6 @@ label find_elsa_menu:
         "Уйти":
             "Я решил оставить Эльзу в покое и не мешать её тренировке."
             jump magic_tower_hub
-
-label elsa_quests_magic_tower:
-    menu:
-        "Собирать магические материалы":
-            p "Я готов собирать магические материалы."
-            e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
-            $ getQuest(quest_elsa_materials)
-        "Стать испытуемым":
-            p "Я готов стать подпытным кроликом."
-            e "Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
-            e "Твоё тело мне пригодится~"
-            $ getQuest(quest_elsa_test)
-            call elsa_test
-        "Я передумал":
-            return
-    return
 
 label win_elsa_training:
     show e smile at center with dissolve

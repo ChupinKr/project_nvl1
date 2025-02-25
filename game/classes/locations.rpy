@@ -80,7 +80,17 @@ label tavern_scene:
         scene bg tavern_day with fade
     return
 
-label city_scene:
+label city_scene(bgc = None):
+    if bgc:
+        if bgc == "morning":
+            scene bg city_morning with fade
+        elif bgc == "day":
+            scene bg city_day with fade
+        elif bgc == "evening":
+            scene bg city_evening with fade
+        elif bgc == "night":
+            scene bg city_night with fade
+        return
     if isMorning():
         scene bg city_morning with fade
     elif isDay():

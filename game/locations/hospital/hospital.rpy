@@ -59,7 +59,8 @@ label hospital_sakura_menu:
         "Перейти в операционную" if canVisit("surgency"):
             jump surgency_tsunade_cure
         "Спросить про задания" if isNoQuestNow():
-            jump hospital_sakura_quests
+            call hospital_sakura_quests
+            jump hospital_sakura_menu
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("s"):
             p "Я не смогу выполнить это задание."
             s "Жаль, но потребность в травах есть всегда, если захочешь помочь - приходи."
@@ -81,13 +82,10 @@ label hospital_sakura_quests:
                     "Принять квест":
                         s @smile_shy "Будь осторожен, в лесу могут быть монстры."
                         $ getQuest(quest_sakura_materials)
-                        jump hospital_sakura_menu
                     "Не принимать квест":
                         s @angry "А мог бы и помочь, теперь придется самой всё собирать."
-                        jump hospital_sakura_menu
             else:
                 s "Подожди, я вижу, ты пока не подходишь для этой работы, возвращайся, когда станешь сильнее."
-                jump hospital_sakura_menu
         "Отказаться":
             s "Если передумаешь, только спроси"
-            jump hospital_sakura_menu
+    return

@@ -101,7 +101,8 @@ label surgency_tsunade_menu:
             jump surgency_tsunade_menu
         "Спросить про задания" if isNoQuestNow():
             p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"
-            jump surgency_tsunade_quests
+            call surgency_tsunade_quests
+            jump surgency_tsunade_menu
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("ts"):
             p "Я не смогу выполнить это задание."
             ts "Ох, ну хорошо, если передумаешь - приходи."
@@ -125,14 +126,10 @@ label surgency_tsunade_quests:
                     "Принять квест":
                         ts "Отлично, спасибо, буду ждать тебя, желательно в целости."
                         $ getQuest(quest_tsunade_poison_tooth)
-                        jump surgency_tsunade_menu
                     "Не принимать квест":
                         ts @angry "Ну, значит, не так уж и нуждаешься в деньгах."
-                        jump surgency_tsunade_menu
-                jump surgency_tsunade_menu
             else:
                 ts "Я передумала, вижу, ты слишком слаб для этой работы, возвращайся, когда поднаберешься сил."
-                jump surgency_tsunade_menu
         "Отказаться":
             ts "Ну, значит, не так уж и нуждаешься в деньгах."
-            jump surgency_tsunade_menu
+    return

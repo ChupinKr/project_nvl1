@@ -1,23 +1,19 @@
 init python:
-    score = 0
+    pc_score = 0
     win_score = 0
-    last_reaction_win = False  # Переменная для запоминания результата
+    last_pc_win = False  # Переменная для запоминания результата
 
     def success():
         global score, last_reaction_win
         score += 1
-        if score >= 3:
-            last_reaction_win = True
-            renpy.hide_screen("reactionGame")
-            renpy.show_screen("finishGame")
+        if score >= 20:
+            last_pc_win = True
+            renpy.hide_screen("pcGame")
+            renpy.show_screen("pcFinishGame")
 
 default casting = False
-default key_value = 80
-default deviation1 = 0
-default deviation2 = 0
-default deviation3 = 0
-default deviation4 = 0
-default magic_training_difficult = 15#чем больше, тем проще
+default obj_count = 20
+default pc_difficult = 15 #чем больше, тем проще
 
 ## Анимация тряски текста.
 transform vibrate:

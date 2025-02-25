@@ -91,7 +91,7 @@ label magic_tower_first_visit:
             p "Люмен! Люкс! Светоч! Дай мне свет!"
             "..."
             "Абсолютно ничего не произошло."
-            show e laugh with dissolve 
+            show mer annoyed with dissolve 
             e "Ахахах! Может, тебе попробовать 'абракадабра'?"
         "Потрясти руками, вдруг сработает":
             p "Я резко вытянул руки и начал трясти ими, пытаясь вызвать хоть какой-то эффект."
@@ -100,7 +100,7 @@ label magic_tower_first_visit:
             show mer neutral with dissolve 
             mer "Ты выглядел так глупо, что я даже не знаю, смеяться или плакать."
 
-    mer surprised "Поздравляю, ты полностью провалил все три проверки." with dissolve 
+    mer surprised "Поздравляю, ты полностью провалил проверку." with dissolve 
     p "Ну, я хотя бы пытался!"
 
     mer smirk "Да-да. Но в этот раз попытки не считаются. " with dissolve 
@@ -195,9 +195,15 @@ label magic_tower_hub:
             jump explore_magic_tower
 
         "Найти [mer.name]":
+            if isNight():
+                "Уже ночь, она наверняка спит."
+                jump magic_tower_hub
             jump find_merlin
 
         "Найти [e.name]":
+            if isNight():
+                "Уже ночь, лучше ее не беспокоить."
+                jump magic_tower_hub
             jump find_elsa
 
         "Вернуться в город":
@@ -232,4 +238,5 @@ label explore_magic_tower:
     
     else:
         "Я нашёл несколько старых свитков с записями о магии, но ничего особо ценного."
+    $nextTime()
     jump magic_tower_hub

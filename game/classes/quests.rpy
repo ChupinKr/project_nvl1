@@ -46,7 +46,7 @@ init python:
     location="Лесная чаща", countObj=10, 
     character_says=["Хорошо, мне нужно несколько редких трав и минералов."
         ,"Ты можешь найти их в этих лесах."],
-    req_love=0, req_str=0, req_intelligence=0, req_char=0, 
+    req_love=0, req_str=0, req_intelligence=5, req_char=0, 
     reward_money=10, reward_character=10, 
     str_bonus=0, intelligence_bonus=2, char_bonus=0
     )
@@ -54,7 +54,7 @@ init python:
     location="Разрушенный храм", countObj=3, 
     character_says=["Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
         ,"Твоё тело мне пригодится~"],
-    req_love=0, req_str=0, req_intelligence=0, req_char=0, 
+    req_love=0, req_str=0, req_intelligence=10, req_char=0, 
     reward_money=10, reward_character=5, 
     str_bonus=0, intelligence_bonus=5, char_bonus=0
     )
@@ -72,7 +72,7 @@ init python:
     location="Темный переулок", countObj=3, 
     character_says=["О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
         ,"Если приведешь мне парочку, я тебя щедро отблагодарю~"],
-    req_love=0, req_str=0, req_intelligence=0, req_char=0, 
+    req_love=0, req_str=0, req_intelligence=0, req_char=10, 
     reward_money=15, reward_character=10, 
     str_bonus=0, intelligence_bonus=0, char_bonus=10
     )

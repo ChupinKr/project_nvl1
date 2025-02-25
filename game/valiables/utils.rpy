@@ -97,12 +97,18 @@ init python:
 
     def minusAllChar(count):
         global money, strength, charisma, intelligence, notices
-        strength += charCount * strength_mod
-        charisma += charCount * charisma_mod
-        intelligence += charCount * intelligence_mod
+        strength -= count
+        charisma -= count
+        intelligence -= count
+        if strength < 0:
+            strength = 0
+        if charisma < 0:
+            charisma = 0
+        if intelligence < 0:
+            intelligence = 0
         notices.append("Сил нет, буквально..")
         notices.append("Будто постарел немного..")
-        notices.append("И ты забываешь базовые знания..")
+        notices.append("Тебе очень плохо..")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
