@@ -79,6 +79,7 @@ label hospital_sakura_quests:
             if isAbleQuest(quest_sakura_materials, s_love):
                 s @smile_shy "За хороший набор я неплохо заплачу."
                 menu:
+                    "Квест: Задание на сбор трав"
                     "Принять квест":
                         s @smile_shy "Будь осторожен, в лесу могут быть монстры."
                         $ getQuest(quest_sakura_materials)

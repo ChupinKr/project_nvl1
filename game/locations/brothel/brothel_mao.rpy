@@ -32,6 +32,7 @@ label visit_mao_menu:
             show mao panties at right_bit with dissolve
             mao "Может я могу с тобой расплатиться не монетами, а как-то иначе?"
             menu:
+                mao "Может я могу с тобой расплатиться не монетами, а как-то иначе?"
                 "Согласен!":
                     p "Это отличная идея! Я же верно тебя понимаю?"
                     mao no_panties "Да, [hero_name], ты верно меня понимаешь~"
@@ -59,6 +60,7 @@ label visit_mao_menu:
             mao @smile_closed "Неплохо, очень неплохо." with dissolve
             mao @smile "Пригласишь ее сейчас к нам?" with dissolve
             menu:
+                mao "Пригласишь ее сейчас к нам?"
                 "Да":
                     "Ты приводишь [invited_girl.name] в Бордель"
                     invited_girl @smile "Привет, меня зовут [invited_girl.name] и я готова работать у вас~" with dissolve

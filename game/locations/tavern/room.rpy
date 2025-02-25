@@ -6,6 +6,7 @@ label room:
         show m with dissolve
         m smile "[hero_name], срок аренды закончился, комната стоит 10 монет в неделю..." with dissolve
         menu:
+            "Арендовать комнату на неделю?"
             "Беру" if money >= 10:
                 p "Понял, вот оплата на неделю."
                 $ minusMoney(10)

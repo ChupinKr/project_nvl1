@@ -31,6 +31,7 @@ label rapunzel_brothel_menu:
                 r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
                 r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
                 menu:
+                    r "Может я могу помочь тебе расслабиться?"
                     "Определенно можешь":
                         p "Ты точно можешь мне помочь!"
                         show r smile_shy with dissolve

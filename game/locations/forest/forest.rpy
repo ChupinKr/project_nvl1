@@ -50,6 +50,7 @@ label look_for_enemy:
     if strength >= 80:
         "Ты настолько развил свои навыки, что можешь сам выслеживать добычу"
         menu:
+            "Кого выследить?"
             "Слизь":
                 call start_battle(60, renpy.random.randint(1, 10) , "Слизь", 'scene')
                 if last_battle_win:
@@ -96,6 +97,7 @@ label look_for_enemy:
     if rand_emeny < 35:
         "Ты видишь слизь, она даже убежать не сможет"
         menu:
+            "Ты видишь слизь, она даже убежать не сможет"
             "Напасть":
                 call start_battle(60, renpy.random.randint(1, 10) , "Слизь", 'scene') 
                 if last_battle_win:
@@ -108,6 +110,7 @@ label look_for_enemy:
     if rand_emeny >= 35 and rand_emeny < 55:
         "Ты видишь зайца с рогом, он тебя еще не видит, что будешь делать?"
         menu:
+            "Ты видишь зайца с рогом, он тебя еще не видит, что будешь делать?"
             "Напасть":
                 call start_battle(60, renpy.random.randint(1, 20) , "Заяц", 'scene') 
                 if last_battle_win:
@@ -121,6 +124,7 @@ label look_for_enemy:
         "Ты видишь большого и красивого оленя, кажется он уже доедает зайца?!"
         "Он тебя еще не видит, что будешь делать?"
         menu:
+            "Он тебя еще не видит, что будешь делать?"
             "Напасть":
                 call start_battle(100, renpy.random.randint(30, 50) , "Плотоядный олень", 'scene') 
                 if last_battle_win:

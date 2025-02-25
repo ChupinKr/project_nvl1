@@ -167,7 +167,7 @@ label m_root_show:
         menu:
             "Секс":
                 call m_root_fuck_continue from _call_m_root_fuck_continue
-            "Продолжать":
+            "Продолжать сцену":
                 "Ты режаешь досмотреть шоу"
     else:
         $customNotify("Недостаточно симпатии")
@@ -241,7 +241,7 @@ label m_root_show:
             menu:
                 "Анал":
                     call m_root_anal_continue from _call_m_root_anal_continue
-                "Продолжать":
+                "Продолжить сцену":
                     "Ты режаешь досмотреть шоу"
         else:
             $customNotify("Недостаточно симпатии")
@@ -269,7 +269,7 @@ label m_root_show:
             "Обе!":
                 call m_root_fetish_public_continue from _call_m_root_fetish_public_continue
                 #TODO "Ты хватаешь [m.name] и начинаешь жестко насиловать, на ее крики прибегают посетители"
-            "Продолжить":
+            "Продолжить сцену":
                 "Ты решаешь продолжить смотреть шоу"
     else:
         $customNotify("Недостаточно симпатии")
