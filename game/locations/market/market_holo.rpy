@@ -49,6 +49,7 @@ label holo_menu:
             menu:
                 "Протереть книги(10 монет)":
                     h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
+                    scene bg holo_tavern_boxes with fade
                     call start_clean("books") from _call_start_clean
                     if last_clean_win:
                         h "Хватай следующую, быстрее!"
@@ -70,6 +71,8 @@ label holo_menu:
                     else: 
                         h "[hero_name], это никуда не годится, работай лучше!"
                     $nextTime()
+                    call market_scene
+                    show h smile with dissolve
                     jump holo_menu
                 "Избавиться от жуков(10 монет)":
                     h "Избавься от этих жуков, они везде! Только не убивай их!"
@@ -77,13 +80,13 @@ label holo_menu:
                     p "И как мне их убрать?"
                     h "Это уже тебе решать, [hero_name]~"
                     call bug_hunt from _call_bug_hunt
-                    call market_scene from _call_market_scene_1
+                    $nextTime()
+                    call market_scene
                     show h smile_shy with dissolve
                     h "О-хо-хо! [hero_name], спасибо, не знаю, что бы я без тебя делала!"
                     $addLove("h",5)
                     "Ты провёл время, помогая [h.name], она это оценила"
                     $addMoney(10)
-                    $nextTime()
                     jump holo_menu
                 "Никакой работы":
                     h "Эй, в следующий раз обещай, что поможешь!"
@@ -422,15 +425,15 @@ label h_root_masturbate:
     pause .3
     scene bg h_masturbate19_t_1 with dissolve  
     pause .3
-    scene bg h_masturbate19_t_2 with dissolve  
+    scene bg h_masturbate19_t_2 with dissolve
     pause .3
-    scene bg h_masturbate19_t_1 with dissolve  
+    scene bg h_masturbate19_t_1 with dissolve
     pause .2
-    scene bg h_masturbate19_t_0 with dissolve  
+    scene bg h_masturbate19_t_0 with dissolve
     pause .2
-    scene bg h_masturbate19_t_1 with flash  
+    scene bg h_masturbate19_t_1 with flash
     pause .2
-    scene bg h_masturbate19_t_2 with flash  
+    scene bg h_masturbate19_t_2 with flash
 
     scene bg h_masturbate20_t_cum1 with flash  
     "[h.name] продолжает смотреть тебе в глаза, горячая струя спермы летит в её лицо. Она не отворачивается, её взгляд полон удовольствия."  

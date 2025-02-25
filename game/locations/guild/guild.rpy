@@ -93,10 +93,10 @@ label guild_menu:
             if last_battle_win:
                 "Я определенно становлюсь все лучше!"
                 $addChar(["str"], 3)
-                jump guild_menu
             else:
                 "Надо больше заниматься"
-                jump guild_menu
+            $nextTime()
+            jump guild_menu
         "Найти [d.name]" if can_go_d:
             jump guild_d_menu
         "Качаться":

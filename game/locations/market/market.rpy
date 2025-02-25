@@ -97,7 +97,6 @@ label market_menu:
             "Это выглядит подозрительно.."
             if renpy.random.choice([False, False, True]) > 0:
                 "Лучше больше так не делать, а то можно и встрять.."
-                $nextTime()
             else:
                 "Какой-то мутный тип подходит к тебе"
                 sg "Эй, че вылупился? Зрение слишком хорошее?!"
@@ -105,6 +104,7 @@ label market_menu:
                 if last_battle_win:
                     "[h.name] это видела"
                     $addLove("h", 10)
+            $nextTime()
             jump market_menu
         "Уйти":
             jump city

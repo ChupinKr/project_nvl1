@@ -66,8 +66,8 @@ label training_ground:
                 else:
                     "Ты не успеваешь среагировать, и её удар сбивает тебя с ног."
                     eris "Фу-у, даже неинтересно!"
-
                 eris smile "Есть захочешь повторить - можешь найти меня здесь по утрам." with dissolve 
+                $nextTime()
 
             "Отказаться":
                 p "Знаешь, я пока не готов."
@@ -95,6 +95,7 @@ label training_ground_menu:
                         if last_muscule_win:
                             "Я определенно становлюсь все лучше!"
                             $addChar(["str"], 2)
+            $nextTime()
             jump training_ground_menu
             "Надо больше заниматься"
             jump training_ground_menu
@@ -114,10 +115,10 @@ label training_ground_eris_menu:
                 $addChar(["str"], 2)
                 $addLove("eris", 5)
                 $addNPCStr("eris", 10)
-                jump training_ground_menu
             else:
                 "IN PROGRESS"
-                jump training_ground_menu
+            $nextTime()
+            jump training_ground_menu
         "Пойти на задание вдвоем" if isNoQuestNow() and eris_love >= 40:
             jump eris_quest_menu
         "Вернуться":

@@ -1,6 +1,6 @@
 
 label visit_elsa_forest:
-    call forest_scene from _call_forest_scene
+    call forest_scene  
     show e neutral with dissolve
 
     if first_time_elsa and chosen_blessing.name == "Магический Потенциал":
@@ -137,7 +137,7 @@ label elsa_first_time_blessing:
 
     "Отлично. Я-то думал, она просто посмеётся и забудет обо мне. А теперь я внезапно оказался её подопытным. Почему у меня такое чувство, что ничего хорошего из этого не выйдет?"  
 
-    call city_scene from _call_city_scene_2
+    call city_scene  
     show e neutral with dissolve
 
     e "Добро пожаловать в город. Раз уж ты не можешь отличить магию от цирковых фокусов, тебе не помешает экскурсия."
@@ -154,7 +154,7 @@ label elsa_first_time_blessing:
             jump magic_tower_elsa
 
 label elsa_first_time_no_blessing:
-    call forest_scene from _call_forest_scene_1
+    call forest_scene  
     $ first_time_elsa = False
     e "Ты... не похож на местного. Кто ты?"  
     p "Меня зовут [hero_name], я здесь просто исследовал окрестности."
@@ -246,7 +246,7 @@ label elsa_not_first_time:
             e "У меня есть парочка заданий для тебя. Если хочешь, могу научить тебя собирать магические компоненты."
             e "Это будет полезно, и если ты справишься, я подумаю, что с тобой дальше делать."
             e "Или ты мне можешь пригодиться, как испытуемый, сам решай."
-            call elsa_quests from _call_elsa_quests
+            call elsa_quests  
             jump elsa_not_first_time
 
         "Отказаться от задания" if isActualQuestOfCharacter("e"):
@@ -263,7 +263,7 @@ label elsa_magic_training:
     show e at right with dissolve
     e "Сконцентрируйся, представь перед собой сферу, очень горячую."
     e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dissolve
-    call start_magic_training(intelligence) from _call_start_magic_training
+    call start_magic_training(intelligence)  
     if last_reaction_win:
         $addChar(["intelligence"], 3)
         show e smile at center with dissolve
@@ -310,7 +310,7 @@ label elsa_quests:
                     "Принять квест":
                         e "Ты действительно готов, надо же, ну тогда идем!"
                         $ getQuest(quest_elsa_test)
-                        call elsa_test from _call_elsa_test
+                        call elsa_test  
                         jump city
                     "Не принимать квест":
                         e "Ожидаемо, тяжелый труд не для принцесс.."
@@ -323,7 +323,7 @@ label elsa_quests:
     return
 
 label go_to_lib_with_elsa:
-    call city_scene from _call_city_scene_3
+    call city_scene  
     show e neutral with dissolve
 
     e "Добро пожаловать в город. Здесь ты найдёшь то, что тебе нужно."

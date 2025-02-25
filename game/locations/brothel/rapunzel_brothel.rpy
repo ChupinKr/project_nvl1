@@ -25,7 +25,7 @@ label rapunzel_brothel_menu:
             jump rapunzel_root_menu
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
-            call rapunzel_training from _call_rapunzel_training
+            call rapunzel_training
             if last_charisma_training_win and first_r_root and r_love >= 50:
                 $ first_r_root = False
                 r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
@@ -57,7 +57,7 @@ label rapunzel_brothel_menu:
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
             r "Хм... На самом деле, у меня есть кое-что интересное!"
-            call rapunzel_quests from _call_rapunzel_quests
+            call rapunzel_quests
             jump rapunzel_brothel_menu
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("r"):
             p "Я не смогу выполнить это задание."
@@ -74,27 +74,27 @@ label rapunzel_brothel_menu:
 label rapunzel_root_menu:
     menu:
         "Мастурбация" if r_love >= 50:
-            call r_root_masturbate from _call_r_root_masturbate
+            call r_root_masturbate
             $nextTime()
             jump brothel
         "Грудями" if r_love >= 60:
-            call r_root_titfuck from _call_r_root_titfuck
+            call r_root_titfuck  
             $nextTime()
             jump brothel
         "Минет" if r_love >= 70:
-            call r_root_blowjob from _call_r_root_blowjob
+            call r_root_blowjob  
             $nextTime()
             jump brothel
         "Секс" if r_love >= 80:
-            call r_root_fuck from _call_r_root_fuck
+            call r_root_fuck  
             $nextTime()
             jump brothel
         "Анал" if r_love >= 90:
-            call r_root_anal from _call_r_root_anal
+            call r_root_anal  
             $nextTime()
             jump brothel
         "Фетиш" if r_love >= 200:
-            call r_root_fetish from _call_r_root_fetish
+            call r_root_fetish  
             $nextTime()
             jump brothel
         "Вернуться":

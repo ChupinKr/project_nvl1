@@ -79,27 +79,27 @@ label visit_mao_menu:
 label brothen_mao_root_menu:
     menu:
         "Мастурбация" if mao_love >= 50:
-            call mao_root_masturbate from _call_mao_root_masturbate
+            call mao_root_masturbate
             $nextTime()
             jump brothel
         "Грудями" if mao_love >= 60:
-            call mao_root_titfuck from _call_mao_root_titfuck
+            call mao_root_titfuck
             $nextTime()
             jump brothel
         "Минет" if mao_love >= 70:
-            call mao_root_blowjob from _call_mao_root_blowjob
+            call mao_root_blowjob
             $nextTime()
             jump brothel
         "Секс" if mao_love >= 80:
-            call mao_root_fuck from _call_mao_root_fuck
+            call mao_root_fuck
             $nextTime()
             jump brothel
         "Анал" if mao_love >= 90:
-            call mao_root_anal from _call_mao_root_anal
+            call mao_root_anal
             $nextTime()
             jump brothel
         "Фетиш" if mao_love >= 200:
-            call mao_root_fetish from _call_mao_root_fetish
+            call mao_root_fetish
             $nextTime()
             jump brothel
         "Вернуться":

@@ -115,14 +115,6 @@ label visit_nagatoro_forest:
 
 label nagatoro_forest_menu:
     menu:
-        "Глубокий партер" if not first_root_nagatoro: 
-            if nag_love >= 60:
-                nag "Идем!"
-                jump nagatoro_dodjo_first_time
-            else:
-                nag "У меня сейчас нет настроения на эти тренировки."
-                mind "Возможно я ее чем-то разочаровал, наверно стоит заслужить ее доверие вновь"
-                jump nagatoro_forest_menu
         "Тренировка(новая)" if nag_love >= 60 and first_root_nagatoro: 
             nag @happy "Эй, [hero_name], я придумала новые тренировки!"
             nag @grin "Это скорее кардио, и направлены на развитие различных групп мышц, а тренироваться необходимо с минимумом одежды!"
@@ -150,9 +142,9 @@ label nagatoro_forest_menu:
             p "Давай потренируемся. Я хочу проверить, насколько сильнее я стал."
             show nag grin with dissolve
             nag "Ха-ха! Снова рискнёшь? Мне нравится твоя наглость, но помни – слабость тут не прощается, и я не собираюсь тебя щадить."
-            call start_battle(100, nag_str, nag.name, battle_location_forest) from _call_start_battle_16
+            call start_battle(100, nag_str, nag.name, battle_location_forest)
             if last_battle_win:
-                    jump battle_win_forest_nagatoro
+                jump battle_win_forest_nagatoro
         "Попросить задание" if isNoQuestNow():
             call nagatoro_forest_quests from _call_nagatoro_forest_quests
             jump nagatoro_forest_menu
@@ -390,7 +382,7 @@ label check_lvl_root:
         nag "Так не пойдет, реванш, сейчас же!"
         $addNPCStr("nag", 5)
         #Требует реванш!
-        call start_battle(100, nag_str, nag.name, 'return_to_this') from _call_start_battle_17
+        call start_battle(100, nag_str, nag.name, 'return_to_this')
         if last_battle_win:
             hide nag with dissolve
             "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
@@ -400,7 +392,7 @@ label check_lvl_root:
             show nag normal_shy_battle5 with dissolve
             "[nag.name] снимает с себя всю верхнюю одежду в надежде, что теперь тебе будет еще сложнее ухватиться и победить ее"
             nag @grin_battle5 "Что смотришь? Больше тебе не победить! Реванш!"
-            call start_battle(100, nag_str, nag.name, 'return_to_this') from _call_start_battle_18
+            call start_battle(100, nag_str, nag.name, 'return_to_this')
             if last_battle_win:
                 hide nag with dissolve
                 "Шло ожесточенное сражение. Твои руки скользят по ее гладкому телу"
@@ -438,7 +430,7 @@ label check_lvl_root:
         nag "Так не пойдет, реванш, сейчас же!"
         $addNPCStr("nag", 5)
         #Требует реванш!
-        call start_battle(100, nag_str, nag.name, 'return_to_this') from _call_start_battle_19
+        call start_battle(100, nag_str, nag.name, 'return_to_this')
         if last_battle_win:
            hide nag 
            "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
@@ -466,7 +458,7 @@ label check_lvl_root:
         nag "Так не пойдет, реванш, сейчас же!"
         $addNPCStr("nag", 5)
         #Требует реванш!
-        call start_battle(100, nag_str, nag.name, 'return_to_this') from _call_start_battle_20
+        call start_battle(100, nag_str, nag.name, 'return_to_this')
         if last_battle_win:
            hide nag 
            "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее."

@@ -42,7 +42,7 @@ label f_ask_more_info:
     show f smile with dissolve
     f "Ты хочешь узнать больше? Ну, это вполне естественно. Хорошо, я расскажу тебе немного о каждом из благословений, чтобы твой выбор был осознанным."
 
-    call f_get_info from _call_f_get_info
+    call f_get_info 
     jump start_ask_god
 
 label start_ask_god:
@@ -50,7 +50,7 @@ label start_ask_god:
         "Принять одно из благословений.":
             jump blessings_choice
         "Попытаться уговорить богиню дать больше информации.":
-            call f_ask_more_info from _call_f_ask_more_info
+            call f_ask_more_info
         "Отказаться":
             jump refuse
 

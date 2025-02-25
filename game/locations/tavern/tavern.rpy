@@ -109,6 +109,7 @@ label talk_miku_work:
     menu:
         "Помыть посуду (5 золота)":
             m "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
+            scene bg tavern_sink with fade
             call start_clean("dish") from _call_start_clean_3
             if last_clean_win:
                 m "Следующую! У нас много гостей, поторопись!"
@@ -130,6 +131,8 @@ label talk_miku_work:
             else: 
                 m @angry "[hero_name], тебе не нужны деньги? Почему так плохо?!" with dissolve
             $nextTime()
+            scene bg bar_counter with fade
+            show m smile with dissolve
             jump talk_miku_menu
         "Прогнать шумных гостей (10 золота)":
             m @angry "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!" with dissolve
@@ -145,6 +148,7 @@ label talk_miku_work:
                     $addLove("m", 10)
                     pause 3.5
                     $addMoney(10)
+            $nextTime()
             jump talk_miku_menu
         "Никакой работы":
             m angry "Эх, ну ладно... Может, в другой раз!" with dissolve

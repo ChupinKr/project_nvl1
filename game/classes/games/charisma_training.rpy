@@ -14,7 +14,7 @@ label start_charisma_training(charisma):
     
     #TODO исправить
     $score = win_score
-    call end_charisma_training from _call_end_charisma_training
+    call end_charisma_training
 
     return
 

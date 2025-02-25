@@ -31,7 +31,7 @@ label nagatoro_dodjo_first_time:
         "Показать заинтересованность.":
             p "Звучит интересно! Показывай!"
             nag @grin "Вот это настрой! Тогда начинаем!"
-    call nagatoro_root_show from _call_nagatoro_root_show
+    call nagatoro_root_show  
     scene bg nagatoro_dodjo with fade
     show nag normal_shy_battle6 with dissolve
     nag "На этом пока закончим, найди меня в лесу, и мы продолжим наши занятия!"
@@ -43,27 +43,27 @@ label nagatoro_dodjo_first_time:
 label nagatoro_dodjo_menu:
     menu:
         "Спортивное позирование" if nag_love >= 50: 
-            call nagatoro_root_show from _call_nagatoro_root_show_1
+            call nagatoro_root_show  
             $nextTime()
             jump nagatoro_dodjo
         "Растираение грудными мыщцами" if nag_love >= 60: 
-            call nagatoro_root_titfuck from _call_nagatoro_root_titfuck
+            call nagatoro_root_titfuck  
             $nextTime()
             jump nagatoro_dodjo
         "Развитие лицевых мышц" if nag_love >= 70: 
-            call nagatoro_root_blowjob from _call_nagatoro_root_blowjob
+            call nagatoro_root_blowjob  
             $nextTime()
             jump nagatoro_dodjo
         "Тренировка мышц таза" if nag_love >= 80: 
-            call nagatoro_root_fuck from _call_nagatoro_root_fuck
+            call nagatoro_root_fuck  
             $nextTime()
             jump nagatoro_dodjo
         "Стимулирование анальной проходимости" if nag_love >= 90: 
-            call nagatoro_root_anal from _call_nagatoro_root_anal
+            call nagatoro_root_anal  
             $nextTime()
             jump nagatoro_dodjo
         "Тренировка с доп. условиями" if nag_love >= 90: 
-            call nagatoro_root_fetish from _call_nagatoro_root_fetish
+            call nagatoro_root_fetish  
             $nextTime()
             jump nagatoro_dodjo
         "Не хочу тренироваться": 
