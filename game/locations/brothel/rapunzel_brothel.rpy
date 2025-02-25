@@ -46,7 +46,7 @@ label rapunzel_brothel_menu:
                         $customNotify("Ты больше никогда не встретишь [r.name]")
                         jump brothel
             elif last_charisma_training_win:
-                $addChar(["char"], 5)
+                $addChar(["char"], 2)
                 r smile_shy "Хорошая работа, [hero_name]!" with dissolve
                 $addLove ("r", 5)
                 jump rapunzel_brothel_menu

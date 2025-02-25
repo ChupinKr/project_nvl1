@@ -200,7 +200,7 @@ label first_time_rapunzel_no_blessing:
 
     "Что ж, если это испытание — я определённо не собираюсь его провалить."  
 
-    call rapunzel_training from _call_rapunzel_training_1
+    call rapunzel_training
     jump rapunzel_forest
 
 
@@ -213,7 +213,7 @@ label rapunzel_forest:
             jump rapunzel_brothel_first_visit
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
-            call rapunzel_training from _call_rapunzel_training_2
+            call rapunzel_training
             jump rapunzel_forest
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
@@ -254,5 +254,8 @@ label rapunzel_training:
     call start_charisma_training(charisma) from _call_start_charisma_training
     if last_charisma_training_win:
         $addLove("r", 10)
+        r "Не так уж плохо, приходи еще, я буду ждать тебя~"
+    else:
+        r @smirk "Ты не старался, да?" with dissolve
     $nextTime()
     return

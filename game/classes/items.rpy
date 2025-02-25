@@ -14,7 +14,7 @@ init python:
         
         def executeItem(self):
             self.countUsage -=1
-            minusMoneyPlusChar(0, [self.char], self.bonus)
+            addChar([self.char], self.bonus)
             return True  
 
     item_motivational_book = Item(name="Мотивирующая книга", price=20,

@@ -21,7 +21,7 @@ label room:
     menu:
         "Тренироваться" if len(gg_items) > 0:
             "За дело!"
-            call room_training from _call_room_training
+            call room_training
             jump room
         "Отдохнуть":
             "Как же давно я не мог просто отдохнуть"
@@ -29,16 +29,20 @@ label room:
             $nextTime()
             jump room
         "Провести ночь":
-            "Пора спать"
-            $addHealth(100)
-            $nextDay()
-            jump room
+            jump room_sleep
         "Покинуть комнату":
             "Вы идете в таверну"
             jump tavern
         "Пойти в город":
             "Вы вышли в город"
             jump city
+
+label room_sleep:
+    "Пора спать. Ты проводишь ночь в теплой постели."
+    $addHealth(100)
+    $nextDay()
+    jump room
+
 
 label room_training:
     p "Хм, чем бы заняться?"
@@ -118,7 +122,7 @@ label room_training:
             $gg_items[14].executeItem()
             "Осталось использований [gg_items[14].countUsage]"
             $nextTime()
-        "Не хочу тренироваться":
+        "Передумал":
             jump room
 
     jump room

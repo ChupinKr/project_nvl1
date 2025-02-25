@@ -17,7 +17,7 @@ label guild_d_menu:
             if last_battle_win:
                 d @smile_shy "А-а-аах, ты победил меня, великую воительницу~"
                 $addLove("d", 5)
-                $addChar(["str"], 3)
+                $addChar(["str"], 2)
                 $addNPCStr("d", 20)
                 if d_love >= 50:
                     d @smile_shy "Теперь ты можешь делать со мной все, что захочешь~"

@@ -269,7 +269,7 @@ label elsa_magic_training:
     e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dissolve
     call start_magic_training(intelligence)  
     if last_reaction_win:
-        $addChar(["intelligence"], 3)
+        $addChar(["intelligence"], 2)
         show e smile at center with dissolve
         e "Вау, да у тебя талант!"
         p "Надо будет повторить, мне понравилось."

@@ -109,7 +109,7 @@ label talk_miku_menu:
 
 label talk_miku_work:
     menu:
-        "Помыть посуду (5 золота)":
+        "Помыть посуду (10 монет)":
             m "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
             scene bg tavern_sink with fade
             call start_clean("dish") from _call_start_clean_3
@@ -136,7 +136,7 @@ label talk_miku_work:
             scene bg bar_counter with fade
             show m smile with dissolve
             jump talk_miku_menu
-        "Прогнать шумных гостей (10 золота)":
+        "Прогнать шумных гостей (10 монет)":
             m @angry "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!" with dissolve
             if renpy.random.choice([False, True]) > 0:
                 "Ты поговорил с клиентами, и они ушли, хоть и неохотно."

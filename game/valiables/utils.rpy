@@ -267,9 +267,9 @@ init python:
             day += 1
             if canVisit("room") and day > while_room:
                 updateCanVisit("room", False)
-                renpy.jump("room")
+                renpy.jump("room_sleep")
             elif canVisit("room"):
-                renpy.jump("room")
+                renpy.jump("room_sleep")
             else:
                 renpy.jump("city_overnight_stay")
                 #TODO ИСПРАВИТЬ КРИТ БАГ

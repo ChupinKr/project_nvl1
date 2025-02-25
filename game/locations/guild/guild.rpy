@@ -93,7 +93,7 @@ label guild_menu:
             call start_battle(100, strength, "Противник", battle_location_guild) from _call_start_battle_21
             if last_battle_win:
                 "Я определенно становлюсь все лучше!"
-                $addChar(["str"], 3)
+                $addChar(["str"], 2)
             else:
                 "Надо больше заниматься"
             $nextTime()

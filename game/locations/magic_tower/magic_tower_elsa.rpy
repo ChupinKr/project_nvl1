@@ -21,7 +21,7 @@ label find_elsa_menu:
             show e smile at right with fade
             call start_magic_training(intelligence) from _call_start_magic_training_1
             if last_reaction_win:
-                $addChar(["intelligence"], 3)
+                $addChar(["intelligence"], 2)
                 jump win_elsa_training
             else:
                 jump fail_elsa_training
