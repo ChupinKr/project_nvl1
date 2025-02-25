@@ -80,15 +80,19 @@ label nagatoro_root_show:
     nag "Итак, [hero_name], я знаю, что ты готов, просто, мне нужно время, чтобы собраться."
     p "Начинай, я буду внимательно смотреть и запоминать позы."
     scene bg nag_show1 with dissolve
+    call hide_dialog
     nag "Я уже начала, а ты и не заметил, видишь, это поза лотоса."
     p "Так это все знают, покажи что-нибудь новое."
     scene bg nag_show1_2 with dissolve
+    call hide_dialog
     "[nag.name] немного расчачивает бедра в позе лотоса"
     p "Что ты делаешь?"
     nag "Это часть разминки, я растягиваюсь, нельзя позировать без растяжки!"
     scene bg nag_show1_3 with dissolve
+    call hide_dialog
     pause .3
     scene bg nag_show2 with dissolve
+    call hide_dialog
     "[nag.name] подняла ноги и на мгновение тебе удалось увидеть очертания ее киски через трусики"
     nag "Эй, я тут! На что это ты там смотрел?"
     p "Э-э-э, ни на что!"
@@ -104,53 +108,65 @@ label nagatoro_root_show:
     scene bg nag_show2_1 with dissolve
     pause .3
     scene bg nag_show2 with dissolve
+    call hide_dialog
     nag "Примерно так."
     p "Никогда не знал о таком"
     mind "Как же эротично это выглядит, кажется я видел киску [nag.name] сквозь трусики, не могла же она просто так ничего не надеть кейроги? Она опять меня дразнит!"
     scene bg nag_show3 with dissolve
-    p "!!!!!"
+    call hide_dialog
+    p "!!!!!" with vpunch
     nag "А-ах, да, видишь, благодаря тренировкам я довольно гибкая~"
     mind "Ух, какая она гибкая. Пожалуйста не меняй позу, пожалуйста не меняй позу!"
     nag "Эээй, ты чего так уставился?"
     scene bg nag_show3_1 with dissolve
+    call hide_dialog
     nag "Таким образом я растягиваю мышцы спины, на самом деле очень полезное упражнение!"
     "Ты одобрительно киваешь"
 
     scene bg nag_show3_2 with dissolve
+    call hide_dialog
     nag "И вот на что я способна благодаря ежедневным тренировкам, учись, [hero_name]."
     p "Удивительно!"
     mind "Удивительно, что я просто сижу и смотрю"
 
     scene bg nag_show4 with dissolve
+    call hide_dialog
     "[nag.name] села на колени, выпрямив грудь"
     nag "Ты ошибаешься, если думаешь, что у меня только растяжка хорошая!"
     p "Да? В чем же ты еще хорошая?"
 
     scene bg nag_show1_3 with dissolve
+    call hide_dialog
     nag "Во всем, например, у меня очень сильные руки."
     p "В руках я не сомневаюсь, пару раз на себе почувствовал."
     nag "Ха ха, свои грудные мышцы я тоже развивала."
 
     scene bg nag_show4 with dissolve
+    call hide_dialog
     p "Да? Что-то не видно!"
     scene bg nag_show5 with dissolve
+    call hide_dialog
     "[nag.name] снимает с себя топ и выставляет грудь вперед"
     p "Чт-т-т-т-ооооооо?!!!!!"
     nag "Ну так ты посмотри поближе!"
     p "А я м-м-могу п-п-потрогать?"
     nag "Ахахах, конечно нет!"
     scene bg nag_show6 with dissolve
+    call hide_dialog
     nag "Но ты можешь смотреть и восхищаться."
     p "Д-да, [nag.name], ты действительно потрясающая."
     p "Кхм, то есть, т-твоя фигура, т-твое физическое состояние! Оно потрясающее!"
     scene bg nag_show7 with dissolve
+    call hide_dialog
     nag "Правда? Смотришь только на фигуру?"
     p "Н-нееет, что ты!"
     scene bg nag_show8 with dissolve
+    call hide_dialog
     "[nag.name] приподнимает свою грудь"
     nag "А я считаю, что сейчас ты должен смотреть только на мою фигуру!"
     mind "Господи, что с ней? Что здесь со всеми? Откуда столько похоти в ее взгляде?"
     scene bg nag_show9_1 with dissolve
+    call hide_dialog
     nag "Хотя грудь и правда не самая сильная моя сторона."
     nag "Ладно, думаю этого достаточно."
     p "Ч-что? Это всё?"
@@ -164,40 +180,49 @@ label nagatoro_root_show:
 
     nag "Нет, мы только начали, [hero_name]."
     scene bg nag_show9_2 with dissolve
+    call hide_dialog
     nag "Я хотела сказать, что помимо груди больше всего я вкладывала сил именно в бедренные вышцы."
     mind "О да, я мечтал об этом, каждый спарринг, каждый партер были не зря!"
     nag "Что молчишь? Неужели результаты моих тренировок настолько поражают?"
     p "Д-дааа, [nag.name], ты точно не зря старалась!"
     scene bg nag_show9_3 with dissolve
+    call hide_dialog
     mind "Кажется еще чуть чуть и я буду на небесах, у нее просто охуенная задница."
     nag "Ты не видел даже половины моих способностей, а я уже поразительная. Ха ха, старайся больше, [hero_name]!"
     p "Дааа, охуенная зад..."
     nag "Повтори ка?! Что ты сказал?"
     p "Я сказал... Очень привлекательная фигура!"
     scene bg nag_show9_4 with dissolve
+    call hide_dialog
     nag "Я так и услышала~"
     pause .3
     nag "А теперь я покажу тебе упражнение из йоги. Именно так я занимаюсь обычно."
     scene bg nag_show9_5 with dissolve
+    call hide_dialog
     mind "Идеальная округлая задница, кажется я вижу очертания ее ануса"
     nag "Ты как-то неправильно сидишь, сядь вот туда! Наверняка же не понимаешь, как делать эти упражнения."
     scene bg nag_show10 with dissolve
+    call hide_dialog
     mind "Я пересел с другого края, чтобы еще лучше видеть ее округлые части."
     nag "Эй, я же сказала сесть по другому!"
     p "Но я уже сел тут и мне всё понятно."
     nag "Ну тогда ладно~"
     scene bg nag_show11 with dissolve
+    call hide_dialog
     mind "[nag.name] слегка наклонилась, не думаю, что это упражнение, она точно не хотела просто показать свои прелести мне?"
     nag "Не витай в облаках, а то заставлю повторять за мной!"
     scene bg nag_show12 with dissolve
-    p "!!!!!"
+    call hide_dialog
+    p "!!!!!" with vpunch
     mind "Я отчетливо вижу ее анус через трусики, да и она вся покраснела"
     nag "Эй, хватит пялиться, у нас тренировка, это упражнение, смотри!"
     scene bg nag_show13 with dissolve
+    call hide_dialog
     mind "Как же она гнется, это просто нечто"
     nag "Видишь, как важны ежедневные тренировки! Моя гибкость тебя поразила?"
     p "Да, не то слово!"
     scene bg nag_show14 with dissolve
+    call hide_dialog
     nag "Хочешь потрогать? Она такая мягкая и при этом упругая~"
     p "Чт-т-тооо?"
     nag "Хаха, да шучу я!"
@@ -210,32 +235,39 @@ label nagatoro_root_show:
         return
     
     scene bg nag_show15 with dissolve
+    call hide_dialog
     nag "Мне кажется ты меня уже достаточно хорошо знаешь~"
     p "Т-точно, тебе же не нравятся одежда, смущающая движение."
     nag "В точку, [hero_name]."
 
     scene bg nag_show16 with dissolve
+    call hide_dialog
     "[nag.name] стягивает с себя трусики обнажая свою попку"
     p "[nag.name], ты отлично поработала над своей фигурой!"
     nag "Да? Посмотри на это!"
 
     scene bg nag_show17 with dissolve
-    p "!!!!!"
-    nag "Да, я тренировала сфинктер!!!"
+    call hide_dialog
+    p "!!!!!" with vpunch
+    nag "Да, я тренировала сфинктер!"
     nag "Я не просто так показываю тебе всё это!"
     nag "Сам смотри!"
 
     scene bg nag_show18 with dissolve
+    call hide_dialog
     p "Ты проделала огромную работу! У тебя отличное тело!"
     nag "Дааа? Скажи еще что еще тебе во мне нравится, [hero_name]? Нууу же."
 
     scene bg nag_show19 with dissolve
+    call hide_dialog
     mind "Она считает, что я не замечаю того, что она чуть присела и начала мастурбировать? Она думает, что если я ношу очки, то я слепой?!"
     p "Мне н-нравится то, что ты ставишь и д-добиваешься своих целей!"
     scene bg nag_show20_2 with dissolve
+    call hide_dialog
     nag "Ииии?"
     p "Т-твое упорство приносит п-плоды!"
     scene bg nag_show20_3 with dissolve
+    call hide_dialog
     nag "Ааааах, дааааа!"
     "Ты не можешь сделать вид, что ничего не заметил"
     
@@ -243,6 +275,7 @@ label nagatoro_root_show:
         $customNotify("Недостаточно симпатии")
         "Но [nag.name] может"
         scene bg nag_show19 with dissolve
+        call hide_dialog
         nag "Кхм... Ааах, как же я устала!"
         nag "Давай на этом закончим, пора заняться твоими тренировками."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
@@ -252,26 +285,31 @@ label nagatoro_root_show:
     nag "Ты же всё видел, да, [hero_name]?"
     p "Чт-т-тооо? Неееет, конечно нет!"
     scene bg nag_show20_4 with dissolve
+    call hide_dialog
     nag "А теперь? Смотри, наслаждайся!"
     "[nag.name] повенулась с тебе спиной и показала весь поток соков из ее киски"
     nag "Знаешь, что я сейчас хочу сделать?"
     "Ты сидишь и не понимаешь, что она от тебя ждет"
     
     scene bg nag_show21 with dissolve
+    call hide_dialog
     "[nag.name] вставляет пальчики в свой тугой анус"
     mind "Так вот, что она имела ввиду под тренировкам."
     nag "Аааах, [hero_name], смотри, не отводи вгляда!"
     "Даже если бы она просила не смотреть, у тебя бы не вышло. Ты даже не мограешь"
 
     scene bg nag_show22 with dissolve
+    call hide_dialog
     "Глаза [nag.name] закатываются от наслаждения, да и ты сам тоже уже готов взять ее прямо сейчас"
     nag "Аааах, [hero_name], смотри, смотри, это всё для тебя!"
 
     scene bg nag_show23 with dissolve
+    call hide_dialog
     "[nag.name] приподняла попку, чтобы показать тебе результат"
     "Ты видишь, как соки стекают по ее нежным бедрам и киске, от этого заводишься всё сильнее"
     
     scene bg nag_show24 with dissolve
+    call hide_dialog
     nag "Как тебе шоу? Понравилось же?"
 
     if nag_love < 90:
@@ -307,11 +345,13 @@ label nagatoro_root_show:
     scene bg nag_show_anal4 with dissolve
     pause .3
     scene bg nag_show_anal5 with dissolve
+    call hide_dialog
 
     nag "Ааааааах, [hero_name]!"
     p "Прими это, сука!"
 
     scene bg nag_show_anal5_cum0 with flash
+    call hide_dialog
     
     nag "А-а-ааааах"
     scene bg nag_show_anal_cum1 with dissolve
@@ -329,6 +369,7 @@ label nagatoro_root_show:
     scene bg nag_show_anal_cum4 with flash
     pause .2
     scene bg nag_show_anal_cum4 with flash
+    call hide_dialog
 
     p "Еще увидимся."
     "Ты одеваешься и уходишь"
@@ -341,104 +382,126 @@ label nagatoro_root_titfuck:
     "[nag.name] вышла из комнаты"
     mind "Наверно она пошла переодеваться?"
     show nag grin_battle6 with dissolve
-    "Полностью обнаженная [nag.name] вошла в комнату"
-    p "!!!!!"
+    call hide_dialog
+    "Полностью обнаженная [nag.name] вошла в комнату" with vpunch
+    p "!!!!!" with vpunch
     nag "Не будем терять время.."
     "Ты был не в том состоянии, чтобы спорить"
 
     scene bg nag_titjob1 with dissolve
+    call hide_dialog
     "[nag.name] быстро стягивает с тебя всю одежду и садит на кровать"
     "Ты и не думаешь сопротивляться"
     mind "Я думал, что ее грудь меньше. Такое нельзя скрывать под кейроги."
     
     scene bg nag_titjob2 with dissolve
+    call hide_dialog
     "[nag.name] прижимается своей грудью к твоим ногам, это очень заводит"
     nag "Аааааа..."
 
     scene bg nag_titjob3 with dissolve
+    call hide_dialog
     mind "Так сразу? Просит ее \"накормить\"?"
     "Твой член еще сильнее напрягается от ее выражения лица, [nag.name] это замечает"
     
     scene bg nag_titjob4 with dissolve
+    call hide_dialog
     p "Ты опять издеваешься! [nag.name], я так и знал, все по лицу видно!"
     nag "Хах, может быть.."
 
     scene bg nag_titjob5 with dissolve
+    call hide_dialog
     "Ты уже напрягся до предела и не можешь держать свой член между ног"
     "Твой член выпрыгивает, слегка задевая по щеке [nag.name]"
     
     scene bg nag_titjob6 with dissolve
-    nag "!!!!!"
+    call hide_dialog
+    nag "!!!!!" with vpunch
     nag "[hero_name]! Что это такое?!"
     nag "Что за гигант!"
     
     scene bg nag_titjob7 with dissolve
+    call hide_dialog
     nag "Ты знал, что именно такие я люблю больше всего?~~"
     "[nag.name] прижимается грудями к твоему члену"
     p "Ах, ты так прижимаешься.."
 
     scene bg nag_titjob8 with dissolve
+    call hide_dialog
     "Теперь она прижалась личиком к твоему члену, мягко поглаживая его своей нежной кожей"
     nag "Так лучше?"
     p "Ухх.."
 
     scene bg nag_titjob9 with dissolve
+    call hide_dialog
     "Она взяла твой член у основания, готовясь к чему-то"
     nag "Ну же, что молчишь?"
     p "Д-да, так хорошо."
     nag "Тогда я сделаю еще лучше~~"
     
     scene bg nag_titjob10 with dissolve
-    mind "!!!!"
+    call hide_dialog
+    mind "!!!!" with vpunch
     mind "Она лижет мой член!!!"
 
     scene bg nag_titjob11 with dissolve
+    call hide_dialog
     p "А-ах.."
     nag "Мммм, какой вкусный~~"
 
     scene bg nag_titjob12 with dissolve
+    call hide_dialog
     nag "Пора начинать, да, [hero_name]?"
     "[nag.name] мягко обхватила твой член грудями"
     mind "Это блаженство~"
     p "Чт-то начинать?"
 
     scene bg nag_titjob13 with dissolve
+    call hide_dialog
     "Ты чувствуешь горячее дыхание [nag.name] головкой, твой член начинает пульсировать, [nag.name] явно это заметила"
     
     scene bg nag_titjob14 with dissolve
+    call hide_dialog
     "Теперь она касается уздечки члена своим язычком, у тебя бегут мурашки по телу"
     nag "Тебе так нравится, [hero_name]?"
 
     scene bg nag_titjob16 with dissolve
+    call hide_dialog
     "Ты не успеваешь ответить, твой член уже почти во рту у [nag.name]"
     mind "Охх, этот взгляд, как же заводит.."
 
     scene bg nag_titjob16 with dissolve
+    call hide_dialog
     "Слюни стекают с ее языка на твой член и на ее упругие груди"
     mind "Ахх, так хорошо! Между ее грудей так скользко, тепло и приятно"
     mind "Я больше не могу держаться!"
     p "Только не сопротивляйся, [nag.name]!"
     
     scene bg nag_titjob17 with dissolve
+    call hide_dialog
     "Ты слегка наклоняешь голову [nag.name], чтобы головка члена оказалась у нее во рту"
     nag "Мммммффф"
     p "Ах, да, именно так, двигай язычком"
     
     scene bg nag_titjob18 with dissolve
+    call hide_dialog
     "[nag.name] начала активно двигать язычком"
     p "Нет, держи его во рту"
     nag "Угумфф"
     mind "Думаю она согласилась"
     
     scene bg nag_titjob19 with dissolve
+    call hide_dialog
     "Она прикрыла глаза, это явное согласие на то, чтобы ты ее направлял"
     
     scene bg nag_titjob20 with dissolve
+    call hide_dialog
     "Ты пркладываешь чуть больше усилий так, что [nag.name] почти взяла всю головку в рот"
     mind "Да, возьми побольше в свой теплый ротик"
     nag "Мммнн"
     
     scene bg nag_titjob18 with dissolve
+    call hide_dialog
     nag "Ах, тебе хорошо?"
     mind "Да, блять, не останавливайся!"
     p "Я уже н-на грани.."
@@ -460,6 +523,7 @@ label nagatoro_root_titfuck:
     scene bg nag_titjob20 with flash
     pause .2
     scene bg nag_titjob_cum21 with flash
+    call hide_dialog
 
     "Ты начинаешь кончать"
     
@@ -476,17 +540,20 @@ label nagatoro_root_titfuck:
     nag "ММММННННФФФФ!"
 
     scene bg nag_titjob_cum22 with flash
+    call hide_dialog
     "[nag.name] этого не ожидала"
     nag "ММММММММММННН!"
 
     scene bg nag_titjob_cum23 with flash
+    call hide_dialog
     "[nag.name] сопротивляется все сильнее, пока ты заливаешь в ее рот сперму порцию за порцией"
 
-    if strength < nag_str:
+    if strength < nag_str / 2:
         $customNotify("Недостаточно силы")
         "[nag.name] вырвалась из твой хватки и вздохнула воздуха"
         scene bg nagatoro_dodjo with fade
         show nag angry_cummed with dissolve
+        call hide_dialog
         nag "О таком нужно предупреждать!"
         nag "Я ухожу."
         $minusLove("nag", 10)
@@ -494,44 +561,53 @@ label nagatoro_root_titfuck:
     "Ты смог удержать порыв [nag.name]"
 
     scene bg nag_titjob_cum24 with flash
+    call hide_dialog
     "Она поняла, что сопротивляться бесполезно, ты сильнее"
     "[nag.name] смотрит на тебя умоляющим взглядом, сжимая твой пульсирующий член меж грудей"
     nag "Умммммнф~~"
     
     scene bg nag_titjob_cum25 with flash
+    call hide_dialog
     "Тебя это раззадорило и ты лишь сильнее вгоняешь свой член в её узенький ротик"
     "Глаза [nag.name] начали закатываться от обилия спермы"
     mind "Аргх, глотай всё, что я тебе даю!"
     
     scene bg nag_titjob_cum26 with flash
+    call hide_dialog
     "[nag.name] смотрит на тебя щенячьими глаза, а из ее рта брызжет спермы"
     nag "Ммммннуууу~~"
 
     scene bg nag_titjob_cum27 with flash
+    call hide_dialog
     "Ей очень тяжело, но она все еще двигает грудями дволь твоего члена, стимулируя его всё сильнее"
     p "Арргх, да, да, глотай!"
 
     scene bg nag_titjob_cum27 with flash
+    call hide_dialog
     "По щекам [nag.name] текут слезы"
     mind "Кажется она начала задыхаться..."
     nag "Ммммффрр.."
     
     scene bg nag_titjob_cum28 with flash
+    call hide_dialog
     "Ты даешь ей возможность вдохнуть немного воздуха, и продолжаешь обильно кончать в ее рот"
 
-    if strength < nag_str * 1.5:
+    if strength < nag_str * 0.8:
         scene bg nag_titjob_cum28_1 with flash
+        call hide_dialog
         "Почти сразу ты насаживаешь ее ротик обратно на свой член"
         "Грудь [nag.name] покрылась спермой, а сама она смотрит на тебя гневным взглядом"
         mind "Потерпи, [nag.name], еще немного, уххх"
         p "Уффффхх.."
         
         scene bg nag_titjob_cum28_2 with flash
+        call hide_dialog
         "Ты стараешься насадить ее еще сильнее на свой член, но сопротивление [nag.name] лишь растет"
         "[nag.name] старается изо всех сил, ты действительно ее разозлил"
         
         $customNotify("Недостаточно силы")
         scene bg nag_titjob_cum28_3 with flash
+        call hide_dialog
         "Наконец [nag.name] вырывается"
         scene bg nagatoro_dodjo with fade
         show nag angry_cummed with dissolve
@@ -541,50 +617,61 @@ label nagatoro_root_titfuck:
         jump city
 
     scene bg nag_titjob_cum29 with flash
+    call hide_dialog
     "[nag.name] смиряется, слезы ручьями текут по ее щекам, а изо рта вырываются струи своей спермы"
     mind "Вот он, взгляд полный любви и доверия~"
 
     scene bg nag_titjob_cum30 with flash
+    call hide_dialog
     "Ты отпускаешь ее голову, [nag.name] начинает жадно глотать воздух"
     "Ты не останавливаешься, продолжая заливать ее личико спермой"
     p "А-а-ааааах.."
     
     scene bg nag_titjob_cum31 with flash
+    call hide_dialog
     "Лицо [nag.name] покрывается твоей спермой, а сама она все еще не может надышаться"
     
     scene bg nag_titjob_cum32 with flash
+    call hide_dialog
     "Наконец твой член успокаивается и лишь пара струй спермы свисают с языка [nag.name]"
     p "Ты хорошо постаралась."
     
     scene bg nag_titjob_cum33 with flash
+    call hide_dialog
     "[nag.name] выбилась из сил и уже истощена, но, будто по привычке, она облизывает головку твоего члена, пытаясь почистить"
     
     scene bg nag_titjob_cum34 with flash
+    call hide_dialog
     "Но делает только хуже, рот [nag.name] переполнен спермой"
     "Ее грудь и лицо тоже полностью залиты твоим семенем"
     
     scene bg nag_titjob_cum35 with dissolve
+    call hide_dialog
     "Она быстро закрывает рот, чтобы не испачкать тебя еще сильнее"
     "А сама она старается сильнее обхватывать своей грудью твой член"
     "Ты наслаждаешься зрелищем"
     p "Ты молодец, [nag.name]"
     
     scene bg nag_titjob_cum36 with dissolve
+    call hide_dialog
     "[nag.name] будто готова расплакаться, по ее щекам текут слезы в перемешку со спермой, и даже весь ее рот переполнен твоим угощением"
     nag "Уфу фруфу?"
     p "Да, [nag.name], мне очень понравилось, ты умничка!"
 
     scene bg nag_titjob_cum37 with dissolve
+    call hide_dialog
     "Довольная [nag.name] открыла свой ротик, чтобы показать, сколько угощения ты ей оставил"
     p "Приятного аппетита, [nag.name]!"
 
     scene bg nag_titjob_cum36 with dissolve
+    call hide_dialog
     mind "Кажется она все проглотила.."
     "И это тебя очень радует"
 
     "Довольная [nag.name] встает"
     scene bg nagatoro_dodjo with fade
     show nag smile_cummed with dissolve
+    call hide_dialog
     nag "Хорошая вышла тренировка!"
     p "Да!"
     nag "А сейчас мне нужно идти. Еще увидимся, [hero_name]!"

@@ -44,7 +44,10 @@ transform mid_mid:
     xalign 0.5
     yalign 0.5
 
-
+label hide_dialog:
+    window hide
+    pause 5.0
+    return
 
 image paper = "paper.png"
 default notices = []

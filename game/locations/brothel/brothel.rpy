@@ -4,13 +4,16 @@ label rapunzel_brothel_first_visit:
     pause 3.5
     show r smile at right with dissolve
     p "Это место не особо похоже на то, что ты описывала."
-    $updateCanVisit("tavern", True)
+    if not canVisit("tavern"):
+        $updateCanVisit("tavern", True)
     r @smile_shy "Мы еще не пришли, идем, за мной!" with dissolve
     "Мы заходим в туалет, а там уже открываем потайную дверь"
     
     scene bg brothel_girl1 with dissolve
     show r smile at right with dissolve
-    $updateCanVisit("brothel", True)
+    
+    if not canVisit("brothel"):
+        $updateCanVisit("brothel", True)
     "Меня ослепили диковинные для этих мест, фиотеловые огни"
     mind "Это действительно похоже на современный бордель, на что только не идут люди, чтобы повеселиться, магия и тут пригодилась?"
     p "У меня нет слов, это лучшее место, что я видел!"

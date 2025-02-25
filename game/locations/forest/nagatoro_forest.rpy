@@ -410,7 +410,6 @@ label check_lvl_root:
                 $customNotify("Ты получил трусики [nag.name]")
                 show nag grin_battle6 with dissolve
                 nag "Все же нашел, за что ухватиться, да?"
-                p "!!!!!!"
                 p "Прости, я не хотел.."
                 nag normal_shy_battle6 "Я уже привыкла, но давай ты все же уйдешь.."
                 "Ты уходишь"
