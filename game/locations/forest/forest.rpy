@@ -8,6 +8,7 @@ default first_time_forest = True
 #Суйка из геройской академии
 
 label forest:
+    call forest_scene 
     
     if charisma > 1 and first_time_rapunzel:
         jump visit_rapunzel_forest
@@ -19,7 +20,6 @@ label forest:
         "Ты в лесу"
         "Куда направишься?"
         
-    call forest_scene 
     jump forest_menu
 
 label forest_menu:
@@ -98,6 +98,7 @@ label look_for_enemy:
         menu:
             "Напасть":
                 call start_battle(60, renpy.random.randint(1, 10) , "Слизь", 'scene') 
+                if last_battle_win:
                     "Ты размазал слизьня"
                     $ addChar(["str"],1)
                 $nextTime()

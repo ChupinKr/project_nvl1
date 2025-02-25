@@ -4,6 +4,7 @@ define h_can_go_root = False
 define h_can_visit = True
 
 label visit_holo:
+    scene bg holo_market with fade
     show h smile with dissolve
     if not h_can_go_root and h_love >= 50:
         h smile_shy "Охо-хо~, [hero_name], вижу ты разжился монетками! Я готова предложить тебе новый товар~"
@@ -71,7 +72,7 @@ label holo_menu:
                     else: 
                         h "[hero_name], это никуда не годится, работай лучше!"
                     $nextTime()
-                    call market_scene
+                    scene bg holo_market with fade
                     show h smile with dissolve
                     jump holo_menu
                 "Избавиться от жуков(10 монет)":
@@ -81,7 +82,7 @@ label holo_menu:
                     h "Это уже тебе решать, [hero_name]~"
                     call bug_hunt from _call_bug_hunt
                     $nextTime()
-                    call market_scene
+                    scene bg holo_market with fade
                     show h smile_shy with dissolve
                     h "О-хо-хо! [hero_name], спасибо, не знаю, что бы я без тебя делала!"
                     $addLove("h",5)
