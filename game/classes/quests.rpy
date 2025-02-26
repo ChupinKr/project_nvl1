@@ -1,6 +1,6 @@
 init python:
     class GirlQuest:
-        def __init__(self, whatToDo, forWho, repeatable, 
+        def __init__(self, whatToDo, forWho, forWhoShort, repeatable, 
         location, countObj, 
         character_says,
         req_love=0, req_str=0, req_intelligence=0,req_char=0,
@@ -176,7 +176,7 @@ init python:
             result = True
         return result
 
-    def completeQuest(quest)
+    def completeQuest(quest):
         addMoney(active_quest.reward_money)
         addLove(active_quest.forWhoShort, active_quest.reward_character)
         addChar(["str"], active_quest.str_bonus)

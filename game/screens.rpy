@@ -36,6 +36,35 @@ screen daytime:
         text "День: [day]" style "outline_text"
         text "Время: [time]" style "outline_text"
 
+transform rotate_text(angle=0):
+    rotate angle
+
+screen minds1:
+    vbox:
+        xalign 0.15
+        yalign 0.4
+        text "Ты бесполезен" style "white_text" at rotate_text(-25)
+screen minds2:
+    vbox:
+        xalign 0.2
+        yalign 0.7
+        text "У тебя не выйдет" style "white_text" at rotate_text(-25)
+screen minds3:
+    vbox:
+        xalign 0.8
+        yalign 0.2
+        text "Ты обычный трус" style "white_text" at rotate_text(25)
+screen minds4:
+    vbox:
+        xalign 0.7
+        yalign 0.35
+        text "Тебя ждет провал" style "white_text" at rotate_text(20)
+screen minds5:
+    vbox:
+        xalign 0.75
+        yalign 0.7
+        text "Сдайся" style "white_text" at rotate_text(20)
+        
 screen buttons:
     vbox:
         xalign 0.99
@@ -100,6 +129,11 @@ style outline_text:
     color "#999"
     font "gui/fonts/NK123.ttf"
     outlines [(2,"#000",0,0)]
+
+style white_text:
+    size 50
+    color "#999"
+    outlines [(1,"#000",0,0)]
 
 ################################################################################
 ## Стили

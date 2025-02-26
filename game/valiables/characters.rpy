@@ -35,6 +35,9 @@ init:
     define eris = Character('Эрис', color="#7B1113", image='eris')
     define eris_love = 0
     define eris_str = 180
+    define ramiris = Character('Рамирис', color="#FFBA00", image='ramiris')
+    define ramiris_love = 0
+    define ramiris_str = 180
 
     ## Some guys
     define guy1 = Character('Парень 1', color="#ffaaaa")
