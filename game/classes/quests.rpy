@@ -46,9 +46,9 @@ init python:
     location="Лесная чаща", countObj=10, 
     character_says=["Хорошо, мне нужно несколько редких трав и минералов."
         ,"Ты можешь найти их в этих лесах."],
-    req_love=0, req_str=5, req_intelligence=10, req_char=0, 
+    req_love=0, req_str=10, req_intelligence=40, req_char=0, 
     reward_money=10, reward_character=10, 
-    str_bonus=0, intelligence_bonus=2, char_bonus=0
+    str_bonus=0, intelligence_bonus=5, char_bonus=0
     )
     quest_elsa_test = GirlQuest(whatToDo="Протестировать работу зелья", forWho="Эльза", forWhoShort="e", repeatable=True,
     location="Разрушенный храм", countObj=3, 

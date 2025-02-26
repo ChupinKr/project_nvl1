@@ -110,8 +110,8 @@ label forest_quest_elsa_materials:
     hide screen minds1 with dissolve
     pause .2
     hide screen minds4 with dissolve
-    if strength > 30:
-        $customNotify("Недостаточно силы")
+    if intelligence > 60:
+        $customNotify("Недостаточно интеллекта")
         $addChar(["str"], 5)
     else:
         "Ты падаешь в обморок не способный подняться"
