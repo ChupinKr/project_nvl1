@@ -24,6 +24,17 @@ label forest:
 
 label forest_menu:
     menu:
+        "Выполнить задание [e.name]" if active_quest.name in quest_elsa_materials.name:
+            call forest_quest_elsa_materials
+            "Ты выбираешься из [active_quest.location]"
+            $nextDay()
+            call forest_scene 
+            "[e.name] наверняка ждет, надо ее обрадовать"
+            call forest_quest_elsa_materials_reward
+            $completeQuest(quest_elsa_materials)
+            "Ты выходишь в город"
+            jump city
+
         "Посетить руины храма":
             jump ruined_temple
         "Осмотреться вокруг" if not first_time_rapunzel or not first_time_elsa or not first_time_nagatoro:

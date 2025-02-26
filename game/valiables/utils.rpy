@@ -58,20 +58,6 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def getQuest(quest):
-        global active_quest,notices
-        active_quest = quest
-        notices.append("Ты принял квест " + str(active_quest.name))
-        renpy.show_screen('notify_plus', notices=notices)
-        notices = []
-
-    def removeQuest():
-        global active_quest, notices
-        notices.append("Ты отказался от квеста " + str(active_quest.name))
-        active_quest = no_quest
-        renpy.show_screen('notify_plus', notices=notices)
-        notices = []
-
     def addMoney(plusMoney=0):
         global money,notices
         money += plusMoney
@@ -275,8 +261,6 @@ init python:
                 renpy.jump("room_sleep")
             else:
                 renpy.jump("city_overnight_stay")
-                #TODO ИСПРАВИТЬ КРИТ БАГ
-                #ЕСЛИ НОЧЬЮ ДЕЛАТЬ ПОЛЕЗНЫЕ ДЕЛА_ ПЕРКИДЫВАЕТ В ГОРОД, НЕ ДАЕТ БОНУСЫ
 
     def nextDay():
         global day,time,notices
