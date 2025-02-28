@@ -38,63 +38,77 @@ label blowjob_elsa:
 
     # Сцена раздевания
     scene bg elsa_undress1 at Transform(zoom=1.5) with fade
+    call hide_dialog
     "[e.name] держит в руках мерцающую ледяную снежинку."
     p "Ты хочешь показать мне заклинание?"
 
     scene bg elsa_undress2 at Transform(zoom=1.5) with dissolve
-    "[e.name] делает шаг ближе, слегка приподнимая платье, её взгляд испытующий."
+    call hide_dialog
+    "[e.name] делает шаг ближе, слегка приподнимая платье."
     e "Нет, не угадал. Смотри внимательно."
 
     scene bg elsa_undress3 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "Её магия оживает: одежда рассыпается в вихре снежинок, обнажая её тело."
     p "Это... потрясающе."
     mind "Комплимент был скорее для её изящной фигуры и груди, которую она невзначай сжимает."
 
     scene bg elsa_undress4 at Transform(zoom=1.5) with dissolve
-    "Снежинки тают в воздухе, [e.name] наклоняется, подчёркивая свою грудь."
+    call hide_dialog
+    "Снежинки тают в воздухе, [e.name] наклоняется, подчёркивая свою фигуру."
     e "Ты дрожишь, [hero_name]. Страх или нетерпение?"
 
     scene bg elsa_undress5 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "[e.name] опускается на колени с королевской грацией, в её движениях — скрытая сила."
     e "Ну же, [hero_name]. Я жду."
 
     # Облизывание члена
     scene bg elsa_lick1 at Transform(zoom=1.5) with fade
+    call hide_dialog
     "Ты расстёгиваешь одежду, доставая твёрдый член. Глаза [e.name] расширяются от удивления."
     e "Боги... Это что, твоя награда мне?"
 
     scene bg elsa_lick2 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "[e.name] наклоняется ближе, её прохладное дыхание касается кожи."
     p "Ты правда собираешься?.."
     e "Молчи. Я сама решаю."
 
     scene bg elsa_lick3 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "Она высовывает язык, тянясь к твоему члену, с кончика языка стекает капля слюны."
 
     scene bg elsa_lick4 at Transform(zoom=1.5) with dissolve
     pause .3
     scene bg elsa_lick5 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "[e.name] касается твоего члена языком — лёгкий холодок смешивается с теплом."
     e "Хм... теплее, чем я думала."
 
     scene bg elsa_lick6 at Transform(zoom=1.5) with dissolve
     pause .3
     scene bg elsa_lick7 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "Она нежно берёт твой член рукой и продолжает водить языком."
 
     scene bg elsa_lick8 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "Ты прижимаешь член к её лицу, подчёркивая его размер, а [e.name] продолжает лизать."
 
     scene bg elsa_lick9 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "Её язык скользит к головке, движения точны и уверены."
 
     scene bg elsa_lick10 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "[e.name] смотрит на тебя, ожидая реакции."
     p "Ах... это так приятно."
     e "Ещё бы. Я знаю, что делаю."
 
     # Минет
     scene bg elsa_blow0_1 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "[e.name] чуть смущённо облизывает головку твоего члена."
     e "Ммм..."
     scene bg elsa_blow0_2 at Transform(zoom=1.5) with dissolve
@@ -102,10 +116,12 @@ label blowjob_elsa:
     scene bg elsa_blow0_3 at Transform(zoom=1.5) with dissolve
     pause .3
     scene bg elsa_blow0_4 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "[e.name] принимает головку в рот, её губы плотно смыкаются."
     p "Ах... [e.name]!"
 
     scene bg elsa_blow1 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
     "[e.name] закрывает глаза и начинает сосать, сохраняя контроль."
 
     scene bg elsa_blow1_re1 at Transform(zoom=1.5) with dissolve
@@ -137,42 +153,54 @@ label blowjob_elsa:
     scene bg elsa_blow1_re6 at Transform(zoom=1.5) with dissolve
     pause .05
     scene bg elsa_blow1_re7 at Transform(zoom=1.5) with flash
+    call hide_dialog
 
     # Кульминация
     scene bg elsa_blow2_cum1 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "Ты выпускаешь горячую сперму в её ротик, глаза [e.name] слегка прикрыты."
     e "Ммм..."
 
     scene bg elsa_blow2_cum2 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "[e.name] послушно глотает всё, что ты ей даешь, сохраняя спокойствие."
 
     scene bg elsa_blow2_cum3 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "Поток спермы усиливается, [e.name] смотрит на тебя с сильным удивлением."
     "Ты хватаешь её за волосы, притягивая ближе, чтобы член вошёл глубже."
 
     scene bg elsa_blow2_cum4 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "[e.name] не сопротивляется, но её глаза выдают, что ей трудно дышать."
 
     scene bg elsa_blow2_cum5 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "Ты удерживаешь её голову, продолжая кончать, и слёзы выступают у неё на глазах."
 
     scene bg elsa_blow2_cum6 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "Это разжигает тебя ещё сильнее, сперма переполняет её рот и стекает по подбородку, пока ты держишь её."
 
     scene bg elsa_blow2_cum7 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "Тушь размазывается, её лицо выражает смесь усталости и мольбы."
 
     scene bg elsa_blow2_cum8 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "Ты отпускаешь её голову, [e.name] жадно вдыхает воздух, а ты продолжаешь кончать на её лицо."
 
     scene bg elsa_blow2_cum9 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "[e.name] высовывает язык, ловя сперму, её лицо уже покрыто ею."
 
     scene bg elsa_blow2_cum10 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "Ты слегка постукиваешь членом по её языку и лицу, сперма стекает на грудь."
 
     # Завершение
     scene bg elsa_blow2_cum11 at Transform(zoom=1.5) with flash
+    call hide_dialog
     "[e.name] поднимается на четвереньки, на её губах играет слабая ухмылка."
     p "[e.name]... ты выглядишь..."
     e "Знаю, тебе это нравится."
