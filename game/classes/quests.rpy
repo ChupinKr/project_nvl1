@@ -51,13 +51,13 @@ init python:
     reward_money=10, reward_character=10, 
     str_bonus=0, intelligence_bonus=5, char_bonus=0
     )
-    quest_elsa_test = GirlQuest(whatToDo="Протестировать работу зелья", forWho="Эльза", forWhoShort="e", repeatable=True,
-    location="Разрушенный храм", countObj=3, 
-    character_says=["Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
+    quest_elsa_crystall = GirlQuest(whatToDo="Добыть Кристалл зимнего эха", forWho="Эльза", forWhoShort="e", repeatable=True,
+    location="Ледяные пещеры", countObj=1, 
+    character_says=["Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума идти в эти пещеры."
         ,"Твоё тело мне пригодится~"],
-    req_love=30, req_str=0, req_intelligence=20, req_char=0, 
-    reward_money=10, reward_character=5, 
-    str_bonus=0, intelligence_bonus=5, char_bonus=0
+    req_love=40, req_str=20, req_intelligence=50, req_char=0, 
+    reward_money=50, reward_character=20, 
+    str_bonus=0, intelligence_bonus=15, char_bonus=0
     )
 
     #rapunzel quests
@@ -160,7 +160,7 @@ init python:
         if who == "r":
             targetQuests = [quest_rapunzel_mashrooms,quest_rapunzel_women]
         if who == "e":
-            targetQuests = [quest_elsa_materials, quest_elsa_test]
+            targetQuests = [quest_elsa_materials, quest_elsa_crystall]
         if who == "nag":
             targetQuests = [quest_nagatoro_bandits, quest_nagatoro_forest, quest_nagatoro_goblins]
         if who == "mer":

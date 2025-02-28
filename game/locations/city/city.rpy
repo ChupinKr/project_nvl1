@@ -14,6 +14,16 @@ label city:
         "Куда ты отправишься?"
 
     menu:
+        "Выполнить задание [e.name]" if active_quest.name in quest_elsa_crystall.name:
+            call quest_elsa_crystall_start
+            "Ты выбираешься из [active_quest.location]"
+            $nextDay()
+            call city_scene 
+            "[e.name] наверняка ждет, надо ее обрадовать"
+            call quest_elsa_crystall_reward
+            $completeQuest(quest_elsa_crystall)
+            "Ты выходишь в город"
+            jump city
         "Переночевать на скамейке" if isNight():
             jump city_overnight_stay
         "Отдохнуть на скамейке" if not canVisit("room"):
