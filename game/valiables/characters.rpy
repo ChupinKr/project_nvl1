@@ -48,3 +48,4 @@ init:
     
     define korg = Character('Корг', color="#ffaaaa")
     define korg_str = 300
+    define ent = Character('Девушка Энт', color="#013220", image='ent')

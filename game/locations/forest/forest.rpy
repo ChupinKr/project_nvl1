@@ -104,17 +104,20 @@ label look_for_enemy:
                     $ addChar(["str"],6)
                 $nextTime()
                 jump forest_menu
-            'Светлолесный энт':
+            'Разгневанный энт' if can_find_ent:
                 show ent at center with dissolve
-                call start_battle(200, renpy.random.randint(150, 200), 'Светлолесный энт', 'scene')
+                call start_battle(200, renpy.random.randint(150, 200), 'Разгневанный энт', 'scene')
                 hide ent at center with dissolve
                 if last_battle_win:
                     "Это было очень опасно, хорошо, что я справился!"
-                    if strength > 60:
-                        call fuck_ent
-                    else:
-                        $customNotify("Недостаточно силы")
-                    $ addChar(["str"],5)
+                    if strength > 100:
+                        menu:
+                            "Надругаться":
+                                call fuck_ent
+                                call forest_scene 
+                            "Отпустить":
+                                "Энт сбегает"
+                    $ addChar(["str"],7)
                 $nextTime()
                 jump forest_menu
     $rand_emeny = renpy.random.randint(1, 100) 

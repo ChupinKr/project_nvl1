@@ -15,6 +15,7 @@ init python:
                 self.name = "None"
             self.whatToDo = whatToDo  # Что сделать
             self.forWho = forWho  # Для кого делаем
+            self.forWhoShort = forWhoShort  # Для кого делаем
             self.repeatable = repeatable  # Повторяемый
 
             self.location = location  # Локация
@@ -182,7 +183,7 @@ init python:
         addChar(["str"], active_quest.str_bonus)
         addChar(["char"], active_quest.char_bonus)
         addChar(["intelligence"], active_quest.intelligence_bonus)
-        removeQuest()
+        removeQuest(False)
         quest.repeatable = False
         return True
 
@@ -193,9 +194,10 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def removeQuest():
+    def removeQuest(inform = True):
         global active_quest, notices
-        notices.append("Ты отказался от квеста " + str(active_quest.name))
         active_quest = no_quest
-        renpy.show_screen('notify_plus', notices=notices)
-        notices = []
+        if inform:
+            notices.append("Ты отказался от квеста " + str(active_quest.name))
+            renpy.show_screen('notify_plus', notices=notices)
+            notices = []

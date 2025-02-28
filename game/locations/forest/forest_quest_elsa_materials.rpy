@@ -7,49 +7,57 @@ label forest_quest_elsa_materials:
     "В воздухе витал аромат свежей зелени, а где-то вдали раздавался лёгкий звонкий смех."
     "Я слышал легенды об этом месте, где магия переплетается с реальностью."
     "Мои шаги отозвались эхом в тишине, пока я пробирался сквозь заросли."
-    "Внезапно, между деревьями, мерцнул нежный свет."
-    
-    "Подойдя ближе, я обнаружил миниатюрную фигуру, окружённую сиянием."
-    show ramiris smirk at center with dissolve
     if first_time_forest_quest_elsa_materials:
-        ramiris "Эй, ты кто такой? Что ты тут забыл? Если ты пришёл испортить мой лес, уходи сразу!"
-        "Моё сердце замерло, но я не собирался отступать."
+        "Внезапно, между деревьями, что-то шелохнулось."
+        mind "Кажется что-то приближается..."
+        show ramiris neutral_flying_dark2 with dissolve
+        pause .3
+        mind "Э-это дух? Или что это?"
+        show ramiris neutral_flying_dark1 with dissolve
+        pause .3
+        mind "Пожалуйста, пускай оно не будет враждебным.."
+
+        ramiris neutral_flying "Эй, ты кто такой? Что ты тут забыл? Если ты пришёл испортить мой лес, уходи сразу!" with dissolve
+        mind "!!!!!"
+        ramiris blush_hide_panties_mini "Эй, куда ты смотришь?!" with dissolve
+        p "А-а, эмм, никуда!"
         menu:
             "Приветливо поздороваться":
                 p "Привет! Я просто исследую местность, наслаждаюсь её красотой."
-                ramiris smirk "Ой, исследователь, значит? Ха! Смотри, чтоб тебя не съели местные звери!"
+                ramiris "Ой, исследователь, значит? Ха! Смотри, чтоб тебя не съели местные звери!"
             "Спросить о травах":
                 p "Я ищу редкие магические травы. Ты знаешь, где их найти?"
                 ramiris "О, может, и знаю... Но почему я должна тебе помогать? Вдруг ты какой-нибудь вредитель?"
-        "[ramiris.name] задумчиво скрестила руки на груди и пристально посмотрела на меня."
         
+        ramiris crossed_smile_mini "[ramiris.name] задумчиво скрестила руки на груди и пристально посмотрела на меня." with dissolve
+        mind "Она уже забыла о том, что я увидел ее трусики? Какая невнимательная фея.."
+
         menu:
             "Подойти ближе, чтобы завести разговор":
                 p "Я осторожно шагнул вперёд, желая узнать больше о тебе и этом лесу."
-                ramiris "Ты чего такой смелый? Думаешь, если ты такой высокий, то можешь просто так запугать меня? Ха! Ничего подобного!"
+                ramiris crossed_smile "Ты чего такой смелый? Думаешь, если ты такой высокий, то можешь просто так запугать меня? Ха! Ничего подобного!" with dissolve
                 p "Нет, я просто хочу узнать, кто ты и почему здесь правишь."
-                ramiris grin "Ну-ну, поближе, говоришь? Раз уж ты пришёл, то я тебя не отпущу просто так."
-            "Отступить и переосмыслить свой подход":
-                p "Может, я слишком резко подошёл..."
-                ramiris "Ой, не стесняйся, герой. Лучше быть прямым, чем скрытным."
-                p "Ты права, я останусь и послушаю, что ты расскажешь."
+                ramiris crossed_grin "Ну-ну, поближе, говоришь? Раз уж ты пришёл, то я тебя не отпущу просто так." with dissolve
+            "Переосмыслить свой подход":
+                p "Может, я был слишком резок, подойду к ней поближе."
+                ramiris crossed_smile "Ой, не стесняйся, герой. Лучше быть прямым, чем скрытным." with dissolve
         
         "[ramiris.name] начала медленно кружиться вокруг меня, её взгляд был полон игривого интереса."
         ramiris "Ты знаешь, что в этом лесу я хозяйка? Если хочешь что-то получить, тебе придётся меня заинтересовать."
         p "Заинтересовать? Как именно?"
         
 
-        ramiris smirk "У меня есть несколько идей. Ты ведь не против немножко развлечений, правда?"
+        ramiris crossed_smirk "У меня есть несколько идей. Ты ведь не против немножко развлечений, правда?" with dissolve
         menu:
             "Сказать, что я не против развлечений":
                 p "Я открыт для любых удовольствий и приключений."
-                ramiris blush "Ой, как смело! Тогда посмотрим, насколько ты готов к настоящим испытаниям."
+                ramiris crossed_surprised "Ой, как смело! Тогда посмотрим, насколько ты готов к настоящим испытаниям." with dissolve
             "Сказать, что я предпочитаю разумное общение":
                 p "Я предпочитаю сначала поговорить, узнать друг друга, а потом решать, что дальше."
                 ramiris "О, ты такой скучный! Но может, даже умным иногда хочется поиграть."
         "Мы остановились у величественного старого дерева, под которым мир казался иным."
         
-        ramiris "Слушай, я тебе помогу. Но сначала... давай узнаем друг друга получше."
+        ramiris crossed_smile "Слушай, я тебе помогу. Но сначала... давай узнаем друг друга получше." with dissolve
         p "Что ты имеешь в виду, [ramiris.name]?"
         ramiris "Я хочу понять, насколько ты чувствуешь этот лес, его ритм и пульс. Расскажи, что привело тебя сюда?"
         p "Я всегда искал приключения, что-то, что заставляет сердце биться чаще. И вот я здесь, среди магии и опасностей."
@@ -62,6 +70,7 @@ label forest_quest_elsa_materials:
         p "Как мне доказать, что я достоин твоей помощи?"
     else:
         ramiris "Давно не виделись, пойдем?"
+
     ramiris "Сначала ты пройдёшь через испытания. Готов?"
     menu:
         "Согласиться на испытание":
@@ -111,16 +120,17 @@ label forest_quest_elsa_materials:
     pause .2
     hide screen minds4 with dissolve
     if intelligence > 60:
-        $customNotify("Недостаточно интеллекта")
         $addChar(["str"], 5)
     else:
+        $customNotify("Недостаточно интеллекта")
         "Ты падаешь в обморок не способный подняться"
         $ nextDay()
+        $health = 0
         jump surgency_tsunade_cure
 
     mind "Наконец, измученный, я вышел из лабиринта, чувствуя, как изменился."
     scene bg dark_forest with fade
-    show ramiris smile at center with dissolve
+    show ramiris smile with dissolve
     "У выхода уже ждала [ramiris.name], её взгляд был холоден, но в нём мелькала искра уважения."
     ramiris "Вот и вышел ты. Лабиринт был жесток, не так ли? Но теперь ты знаешь, на что способен."
     p "Это было невероятно... Каждая минута казалась вечностью, и страх был так осязаем."
@@ -132,80 +142,120 @@ label forest_quest_elsa_materials:
     p "Была битва с ордами чудовищ в руинах древнего замка. Каждая секунда была борьбой за жизнь."
     ramiris "Хм, похоже, ты знаешь, что такое риск. Но здесь испытания совсем иные."
     p "Что именно тебя ожидает здесь?"
-    ramiris "Скоро ты встретишь Темнолесного энта — древнее существо, питающееся страхом и падением природы."
+    ramiris "Скоро ты встретишь Энта — древнее существо, питающееся страхом и падением природы."
     "Мы шли долго, и ожидание казалось мучительным."
 
     "Наконец, перед нами появились массивные деревья, за которыми скрывалось нечто зловещее."
     hide ramiris with dissolve
-    show dark_ent at center with dissolve
-    "Передо мной появился Темнолесный энт, покрытый мхом и трещинами, из которых сочился яд."
+    show ent angry at left_bit with dissolve
+    "Передо мной появился Разгневанный энт, покрытый мхом и трещинами, из которых сочился яд."
     ramiris "Вот он. Твоя следующая проверка — победить это существо, чтобы доказать свою силу."
     p "Я готов. Пусть судьба решит, кто из нас окажется сильнее."
-    call start_battle(200, 100, 'Темнолесный энт', 'forest')
-    hide dark_ent with dissolve 
+    call start_battle(200, 100, 'Разгневанный энт', 'next')
+    hide ent with dissolve 
+    $customNotify("Теперь ты можешь выследить энта в лесу")
     if last_battle_win:
         "С победой я ощутил, как энергия леса вливается в меня, наполняя новыми силами."
-        if strength > 60:
-            call fuck_ent
-            ramiris blush "Вау, не знала, что с ними можно так обойтись..."
+        $ addChar(["str"],7)
+        if strength > 100:
+            menu:
+                "Надругаться":
+                    call fuck_ent
+                    scene bg dark_forest with fade
+                    ramiris smile_blush "Вау, не знала, что с ними можно так обойтись..."
+                "Отпустить":
+                    "Энт сбегает"
         else:
             $customNotify("Недостаточно силы")
         $can_find_ent = True
-        $customNotify("Теперь ты можешь выследить энта в лесу")
+        show ramiris smile with dissolve
         ramiris smile "Ты действительно справился! Может, ты не такой уж и слабак."
     else:
-        "У тебя получилось убежать!"
+        show ramiris smile with dissolve
         ramiris smile "Я не могу тебя похвалить, но ты выжил, это уже что-то."
     
-    scene bg dark_forest with fade
-    show ramiris with dissolve
+    
     
     "После боя мы остановились, чтобы перевести дыхание и осмыслить произошедшее."
-
-    ramiris "Ты доказал свою силу, но испытания только начинаются. Каждое испытание — шаг к истинному себе."
+    if last_battle_win:
+        ramiris "Ты доказал свою силу! Каждое испытание — шаг к истинному себе."
+    else:
+        ramiris "Ты выжил и это главное! Каждое испытание — шаг к истинному себе."
     p "Что будет дальше, [ramiris.name]? Я готов слушать."
+    
     ramiris "Дальше я расскажу, где найти магические травы. Но сперва — немного отдыха."
     "Мы подошли к маленькому ручью, где журчание воды успокаивало душу."
-    p "Никогда не видел столь мирного места. Здесь всё так спокойно..."
-    ramiris "Да, природа умеет лечить даже самые раненые сердца. Но отдых недолгий."
+    scene bg ramiris_river1 with fade
+    ramiris "Знаешь, [hero_name], природа умеет лечить даже самые раненые сердца."
     "[ramiris.name] села на мягкую траву, пригласив меня разделить с ней этот миг."
     p "Расскажи, как ты стала хозяйкой этого леса? Какая цена была заплачена за твою силу?"
+    scene bg ramiris_river3 with dissolve
     ramiris "О, это длинная история, полная кровавых битв и потерь. Но, может, я расскажу тебе немного..."
+    scene bg ramiris_river2 with dissolve
     "Она задумалась, её взгляд стал тёплым, но с оттенком грусти."
+    scene bg ramiris_river3 with dissolve
     ramiris "Когда-то я была простой феей, как и многие. Но судьба распорядилась иначе..."
     "[ramiris.name] начала рассказывать свою историю, словно ветер шёпотом передавал древние тайны."
+    scene bg ramiris_river4 with dissolve
     ramiris "Я родилась здесь, в этом лесу, и природа дала мне силу защищать его."
+    scene bg ramiris_river1 with dissolve
     p "Значит, ты приняла решение стать его хранительницей?"
+    scene bg ramiris_river3 with dissolve
     ramiris "Не столько выбор, сколько судьба. Каждая победа и поражение сделали меня тем, кто я есть."
+    scene bg ramiris_river1 with dissolve
     "Её голос затих, и тишина окутала нас, наполненная воспоминаниями."
     p "Я чувствую, что за каждым твоим словом скрыта боль, но и огромная сила."
+    scene bg ramiris_river4 with dissolve
     ramiris "Боль и страсть — неразделимы. Они делают нас живыми, если мы умеем с ними обращаться."
+    scene bg ramiris_river1 with dissolve
     "Мы молчали некоторое время, слушая шум ручья и шелест листвы."
     p "Что для тебя значит любовь, [ramiris.name]?"
+    scene bg ramiris_river3 with dissolve
     ramiris "Любовь — это огонь, который согревает в холодные ночи, но может обжечь, если им не управлять."
+    scene bg ramiris_river1 with dissolve
     p "Я никогда не чувствовал такой страсти. С тобой я готов рискнуть всем."
-    ramiris blush "Ты умеешь находить слова... Возможно, ты станешь для меня этим светом."
+    scene bg ramiris_river3 with dissolve
+    ramiris "Ты умеешь находить слова... Возможно, ты станешь для меня этим светом."
+    scene bg ramiris_river1 with dissolve
     "Наши взгляды встретились, и в них мелькнула искра взаимопонимания и ожидания."
     p "Кажется, наше приключение становится чем-то большим, чем просто поиск трав."
-    ramiris "Правильно. Но помни: всё имеет свою цену. Каждая радость и каждая боль — часть пути."
+    scene bg ramiris_river4 with dissolve
+    ramiris "Помни, всё имеет свою цену. Каждая радость и каждая боль — часть пути."
     
-    scene bg meadow with dissolve
-    show ramiris with dissolve
-    "Мы подошли к старому дереву, под которым спряталась небольшая поляна."
-    ramiris "Здесь, в тишине, я хочу, чтобы ты полностью открыл своё сердце."
-    ramiris "Почувствуй ритм природы, позволь душе летать свободно. Здесь, в этом месте, мы становимся одним с лесом."
-    "С каждым мгновением наша связь становилась крепче, как будто время остановилось."
-    menu:
-        ramiris blush "Мы можем связать наши души здесь, на этой чудесной поляне..."
-        "Связь с [ramiris.name]":
-            call fuck_ramiris
-            ramiris naked_cummed "Ахх, это было замечательно~"
-        "Не сейчас":
-            ramiris "Ты прав, не время отдыхать."
+    scene bg meadow with fade
+    show ramiris smile with dissolve
+
+    if charisma > 70:
+        "Мы подошли к старому дереву, под которым спряталась небольшая поляна."
+        ramiris blush "Здесь, в тишине, я хочу, чтобы ты полностью открыл своё сердце."with dissolve
+        ramiris "Почувствуй ритм природы, позволь душе летать свободно. Здесь, в этом месте, мы становимся одним с лесом."
+        "С каждым мгновением наша связь становилась крепче, как будто время остановилось."
+        menu:
+            ramiris "Мы можем связать наши души здесь, на этой чудесной поляне..." with dissolve
+            "Связь с [ramiris.name]":
+                call fuck_ramiris
+                scene bg meadow with fade
+                "Ты возвращаешься к поиску магических материалов"
+                "Через некоторое время..."
+                "..."
+                "....."
+                show ramiris smile_naked_cummed with dissolve
+                ramiris "Ахх, [hero_name], это было замечательно~" with dissolve
+                p "Ты же лежала там, совсем без сил?!"
+                ramiris "Я уже в порядке. Только мне нужно привести себя в порядок.."
+                hide ramiris with dissolve
+                pause 1
+                show ramiris smile_cummed with dissolve
+                mind "Она не вытерла лицо... Ну ладно, ей даже к лицу."
+            "Не сейчас":
+                ramiris "Ты прав, не время отдыхать."
+    else:
+        $customNotify("Недостаточно харизмы")
 
     ramiris "Впереди ещё один этап. Мы должны собрать необходимые тебе травы."
     ramiris "Вот оно, место, где они растут. Будь осторожен, здесь может быть не так спокойно."
-    p "Я готов. Каждая капля пота и каждый удар судьбы стоят того, чтобы приблизиться к истине."
+    p "Я готов."
+    mind "Каждая капля пота и каждый удар судьбы стоят ее тела. [e.name], я обязательно выполню твое задание."
     "Мы остановились, и [ramiris.name] внимательно осмотрела местность."
     ramiris "Смотри, здесь растут редкие травы, впитавшие магию древних времён. Природа говорит с теми, кто умеет слушать."
     p "[ramiris.name], послушай, возможно глупый вопрос, но как мне понять, что я на верном пути?"
@@ -213,17 +263,288 @@ label forest_quest_elsa_materials:
     "Мы провели несколько минут в молчании, погружённые в звуки природы."
     p "Я думаю, я понял. Это не просто сбор трав — это путь к себе."
     p "[ramiris.name]... Спасибо за всё, что ты мне открыла."
-    ramiris "Спасибо тебе, [hero_name], за то, что поверил в магию этого леса. Теперь иди и исполни свою судьбу!"
-    "[ramiris.name] медленно отступила в тень деревьев, оставляя меня с новыми знаниями и ощущением неизбежного будущего."
-    p "Я знал, что этот лес изменит меня навсегда. Возможно, именно здесь начнётся моя истинная история."
+
+    scene bg ramiris_kiss1 with fade
+    "[ramiris.name] посмотрела на меня с теплотой, её глаза отражали свет луны. Её щеки слегка порозовели."
+    ramiris "Спасибо тебе, [hero_name], за то, что поверил в магию этого леса."
+    "Она сделала шаг ближе, её пальцы легко коснулись моей руки."
+
+    scene bg ramiris_kiss2 with dissolve
+    "В следующую секунду её губы мягко накрыли мои."
+    "Поцелуй был тёплым, наполненным нежностью и скрытой силой."
+    "В этот миг весь лес замер, словно сама природа благословляла этот момент."
+
+    scene bg ramiris_kiss1 with dissolve
+    "Когда она отстранилась, её глаза сияли, а на губах играла загадочная улыбка."
+    
+    scene bg meadow with fade
+    show ramiris blush with dissolve
+    ramiris "Теперь иди и исполни свою судьбу!"
+    "[ramiris.name] медленно отступила в тень деревьев."
+    "Я остался с новыми знаниями, ощущением неизбежного будущего и вкусом её губ на моих."
+    p "Я знал, что этот лес изменит меня навсегда."
+    p "Возможно, именно здесь начнётся моя истинная история."
     return
 
+
+
+
 label fuck_ent:
-    "IN PROGRESS"
+    "Разгневанный энт встает, пускай уже без части брони, но лишь злее"
+    show ent prenaked with dissolve
+    call start_battle(170, 250, 'Разгневанный энт', 'next')
+    if last_battle_win:
+        show ent naked with dissolve
+        ent "Что? Что ты собираешься со мной сделать?"
+        p "Оооо, сейчас узнаешь."
+
+        scene ent_fuck1 at Transform(zoom=1.5) with dissolve
+        "Ты опрокидываешь ее на землю, срывая остатки веток с ее головы и тела"
+        ent "А-ааааах!"
+        
+        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        mind "Она не сопротивляется.."
+        ent "Ах! Ах! Ах!"
+        
+        scene ent_fuck3 at Transform(zoom=1.5) with dissolve
+        pause .5
+        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        pause .3
+        scene ent_fuck3 at Transform(zoom=1.5) with dissolve
+        pause .3
+        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        pause .1
+        scene ent_fuck3 at Transform(zoom=1.5) with dissolve
+        pause .1
+        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        pause .1
+        scene ent_fuck3 at Transform(zoom=1.5) with flash
+        pause .4
+        scene ent_fuck4_1 at Transform(zoom=1.5) with flash
+        p "Аааргх!"
+
+        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        ent "Ааааааах~~"
+        p "Мы не закончили!"
+        
+        scene ent_fuck5 at Transform(zoom=1.5) with flash
+        pause .3
+        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        pause .3
+        scene ent_fuck5 at Transform(zoom=1.5) with flash
+        pause .1
+        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        pause .1
+        scene ent_fuck5 at Transform(zoom=1.5) with flash
+        pause .1
+        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        pause .1
+        scene ent_fuck5 at Transform(zoom=1.5) with flash
+
+        ent "А-аааах~~"
+        
+        scene ent_fuck6 at Transform(zoom=1.5) with dissolve
+        "Из ее киски сочится сперма"
+        
+        scene ent_fuck7 at Transform(zoom=1.5) with dissolve
+        "[ent.name] частично покрыта спермой. Ты поднимаешься и тянешься к ее личику"
+        
+        scene ent_cumming1 at Transform(zoom=1.5) with dissolve
+        p "Твое личико тоже можно удобрить"
+
+        scene ent_cumming2 at Transform(zoom=1.5) with flash
+        pause .4
+        scene ent_cumming3 at Transform(zoom=1.5) with flash
+        pause .5
+        scene ent_cumming4 at Transform(zoom=1.5) with flash
+        pause .3
+        scene ent_cumming4 at Transform(zoom=1.5) with flash
+
+        scene ent_go1 at Transform(zoom=1.5) with dissolve
+        p "Прощай, теперь это мой лес."
+
+        scene ent_go2 at Transform(zoom=1.5) with dissolve
+        "[ent.name] с тоской смотрит на тебя"
+
+        scene ent_go3 at Transform(zoom=1.5) with dissolve
+        "Она будет ждать тебя..."
     return
 
 label fuck_ramiris:
-    "IN PROGRESS"
+
+    scene bg forest_day with fade
+    show ramiris smile with dissolve
+    ramiris "Терпение, [hero_name]. Сначала я должна убедиться, что ты достоин."
+    
+    scene bg ramiris_undress1 at Transform(zoom=1.5) with fade
+    "Рамирис медленно взмахивает крыльями и поднимается в воздух."
+    "Рамирис парит в воздухе, её волосы развеваются"
+    ramiris "Смотри внимательно~"
+
+    scene bg ramiris_undress2 at Transform(zoom=1.5) with fade
+    "Она протетает мимо, а вокруг тебя начинают падать части ее одежды, а сама она приподнимает свою юбку, показывая трусики."
+    p "Ты... что делаешь?"
+    ramiris "Разве не очевидно? Я хочу, чтобы ты остался со мной подольше."
+
+    scene bg ramiris_undress3 at Transform(zoom=1.5) with fade
+    "[ramiris.name] пролетает еще один круг, останавливается перед тобой и мимолетно показывает, что на ней больше нет трусиков"
+    "Твоё сердце бьётся быстрее, пока Рамирис продолжает раздеваться."
+
+    scene bg ramiris_undress4 at Transform(zoom=1.5) with fade
+    "Она скидывает платье полностью, её крылья сияют"
+    ramiris "Ну как? Нравится?"
+    p "Ты... невероятна."
+    ramiris "Тогда подойди ближе, смертный. Я хочу тебя."
+
+    
+    scene bg ramiris_undress5 at Transform(zoom=1.5) with fade
+    "Рамирис опускается на мягкую траву, маня тебя к себе."
+    ramiris "Тебе нравится такой вид?"
+    "Ты не можешь сопротивляться и опускаешься к ней..."
+    
+    scene bg ramiris_sex1 at Transform(zoom=1.5) with fade
+    "Ты наклоняешься над ней, а [ramiris.name] ожидает твойх действий"
+    ramiris "Давай, покажи мне свою силу!"
+
+    scene bg ramiris_sex2 at Transform(zoom=1.5) with fade
+    "Ты вытаскиваешь свой член, он уже затвердел"
+    ramiris "А-а?!!!"
+
+    scene bg ramiris_sex3_0 at Transform(zoom=1.5) with fade
+    "[ramiris.name] раздвигает ноги и прижимается к твоему огромному члену"
+    ramiris "О боже..."
+
+
+    scene bg ramiris_sex3_1 at Transform(zoom=1.5) with fade
+    p "Не переживай, лучше погладь его своими ручками, прижмись."
+
+    scene bg ramiris_sex3_2 at Transform(zoom=1.5) with fade
+    "[ramiris.name] обнимает твой член обоими руками"
+
+    
+    scene bg ramiris_sex4 at Transform(zoom=1.5) with fade
+    ramiris "Т-тебе приятно?"
+    
+    scene bg ramiris_sex5 at Transform(zoom=1.5) with fade
+    p "Да, очень!"
+    
+    scene bg ramiris_sex6 at Transform(zoom=1.5) with fade
+    "[ramiris.name] подозрительно улыбается, будто задумав что-то"
+    
+    scene bg ramiris_sex7 at Transform(zoom=1.5) with fade
+    "Она ложится на твое бедро, прижимаясь личиком к твоему члену"
+    ramiris "Может я могу..."
+    
+    scene bg ramiris_sex8 at Transform(zoom=1.5) with fade
+    "[ramiris.name] начинает облизывать твой член"
+    
+    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    ramiris "Мммм... Мммм.."
+
+    scene bg ramiris_sex8 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg ramiris_sex8 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg ramiris_sex8 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    pause .5
+    scene bg ramiris_sex10 at Transform(zoom=1.5) with flash
+    "Из тебя вырывается небольшая струйка спермы"
+    
+    scene bg ramiris_sex11 at Transform(zoom=1.5) with dissolve
+    ramiris "Что? Ты уже кончил?"
+
+    scene bg ramiris_sex12 at Transform(zoom=1.5) with dissolve
+    "Подвигав своими ручками вдоль твоего ствола, [ramiris.name] заставила его вновь подняться"
+    ramiris "Тебе настолько нравится, да, [hero_name]?"
+    
+    scene bg ramiris_sex13 at Transform(zoom=1.5) with dissolve
+    ramiris "Он все еще стоит, что мне с ним делать дальше?"
+    
+    scene bg ramiris_sex14 at Transform(zoom=1.5) with dissolve
+    p "У меня есть идея..."
+    ramiris "А-аааа?!"
+    
+    scene bg ramiris_sex15_0 at Transform(zoom=1.5) with dissolve
+    "Ты прижимаешь [ramiris.name] к своему члену"
+    "И начинаешь дрочить ее телом"
+
+    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    p "Рамирис... ты такая тесная."
+    ramiris "Продолжай... не останавливайся!"
+    pause .3
+    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    pause .5
+    scene bg ramiris_sex16_1 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg ramiris_sex16_2 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg ramiris_sex16_3 at Transform(zoom=1.5) with flash
+    ramiris "А-а-аааах!"    
+    "[ramiris.name] кончила от этого"
+
+    p "Думаю ты готова!"
+    scene bg ramiris_sex17 at Transform(zoom=1.5) with dissolve
+    "Ты жестко вгоняешь свой огромный член в ее узкую киску"
+
+    scene bg ramiris_sex17_1 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg ramiris_sex17_2 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg ramiris_sex17_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg ramiris_sex17_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg ramiris_sex17_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg ramiris_sex17_2 at Transform(zoom=1.5) with dissolve
+    pause .5
+    scene bg ramiris_sex17_cum1 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg ramiris_sex17_cum2 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg ramiris_sex17_cum3 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg ramiris_sex17_cum4 at Transform(zoom=1.5) with flash
+    p "Аааргх!"
+    "Ты заполняешь ее спермой. Сперма начинает сочиться из всех ее дырочек"
+    
+    scene bg ramiris_go0 at Transform(zoom=1.5) with fade
+    "Ты аккуратно кладешь ее на землю, полностью залитую спермой"
+    
+    scene bg ramiris_go1 at Transform(zoom=1.5) with dissolve
+    "[ramiris.name] приходит в себя и пытается обратиться к тебе"
+    ramiris "Мглфлф!"   
+    
+    scene bg ramiris_go2 at Transform(zoom=1.5) with dissolve 
+    "Она пытается подняться, но у нее совсем не осталось сил"
+    
+    scene bg ramiris_go3 at Transform(zoom=1.5) with dissolve 
+    p "До скорого, [ramiris.name], еще увидимся!"
+    "Ты уходишь"
+    "[ramiris.name] будет ждать тебя"
+
     return
 
 label forest_quest_elsa_materials_reward:
