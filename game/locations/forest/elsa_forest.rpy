@@ -273,10 +273,10 @@ label elsa_magic_training:
         show e smile at center with dissolve
         e "Вау, да у тебя талант!"
         p "Надо будет повторить, мне понравилось."
-        e @smile_shy "Мне тоже.." with dissolve
+        e smile_shy "Мне тоже.." with dissolve
         $addLove("e", 5)
         if e_love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
-            e @smile_shy "Ладно, думаю ты готов, идем." with dissolve
+            e smile_shy "Ладно, думаю ты готов, идем." with dissolve
             p "К чему готов? Куда мы?"
             e @smirk "Не важно, просто идем." with dissolve
             jump magic_tower_elsa

@@ -194,3 +194,8 @@ label blowjob_elsa:
     "Ты разворачиваешься и уходишь."
 
     return
+
+
+label elsa_anal_continue:
+    "IN PROGRESS"
+    return
