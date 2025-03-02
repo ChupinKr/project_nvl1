@@ -65,7 +65,7 @@ screen minds5:
         yalign 0.7
         text "Сдайся" style "white_text" at rotate_text(20)
         
-screen buttons:
+screen stat:
     vbox:
         xalign 0.99
         yalign 0.01
@@ -74,54 +74,132 @@ screen buttons:
             yalign 0.05
             idle "gui/button/stat.png"
             hover "gui/button/stat_hover.png"
-            action Show("info_panel"), Hide("buttons")
+            action Show("info_panel"), Show("info_panel_text"), Show("cheat_buttons"), Hide("stat")
+
+screen cheat_buttons:
+    vbox:
+        xalign 0.01
+        yalign 0.15
+        imagebutton:
+            ypadding 15
+            idle "gui/button/plus_buttons/plus_money.png"
+            hover "gui/button/plus_buttons/plus_money_hover.png"
+            action Function(addMoney, 10)
+        imagebutton:
+            ypadding 15
+            idle "gui/button/plus_buttons/plus_str.png"
+            hover "gui/button/plus_buttons/plus_str_hover.png"
+            action Function(addChar, ["str"], 5)
+        imagebutton:
+            ypadding 15
+            idle "gui/button/plus_buttons/plus_int.png"
+            hover "gui/button/plus_buttons/plus_int_hover.png"
+            action Function(addChar, ["intelligence"], 5)
+        imagebutton:
+            ypadding 15
+            idle "gui/button/plus_buttons/plus_char.png"
+            hover "gui/button/plus_buttons/plus_char_hover.png"
+            action Function(addChar, ["char"], 5)
 
 screen info_panel:
     modal True
-    # close
+    frame:
+        xalign 0.5
+        yalign 0.15
+        xsize 600
+        ysize 900
+        background "gui/paper.png"
+
     imagebutton:
         align (0.985, 0.02)
         idle "gui/button/close.png"
         hover "gui/button/close_hover.png"
-        action Show("buttons"), Hide("info_panel")
+        action [Show("stat"), Hide("info_panel_text"), 
+            Hide("info_panel"), Hide("cheat_buttons"),
+            Hide("quest_panel_text"), 
+            Hide("blessing_panel_text"),
+            ]
 
-    frame:
-        xalign 0.5
-        yalign 0.05
-        background "gui/paper.png"
-        xpadding 50
-        ypadding 20
+screen info_panel_text:
+    vbox:
+        xalign 0.55
+        yalign 0.3
+        xsize 600
+        spacing 5
+        textbutton "Задача: [active_quest.name]" text_style "info_textbutton":
+            action Show("quest_panel_text"), Hide("info_panel_text")
+        textbutton "Благословение: [chosen_blessing.name]" text_style "info_textbutton":
+            action Show("blessing_panel_text"), Hide("info_panel_text")
+        text "Текущее здоровье: [health]"  style "info_text"
+        text "Золото: [money]" style "info_text"
+        text "Сила: [strength]" style "info_text"
+        text "Интеллект: [intelligence]" style "info_text"
+        text "Харизма: [charisma]" style "info_text"
+        text ""
+        text "♥[f.name]: [f_love]" style "info_text"
+        text "♥[nag.name]: [nag_love]" style "info_text"
+        text "♥[e.name]: [e_love]" style "info_text"
+        text "♥[r.name]: [r_love]" style "info_text"
+        text "♥[d.name]: [d_love]" style "info_text"
+        text "♥[eris.name]: [eris_love]" style "info_text"
+        text "♥[mao.name]: [mao_love]" style "info_text"
+        text "♥[mer.name]: [mer_love]" style "info_text"
+        text "♥[h.name]: [h_love]" style "info_text"
+        text "♥[m.name]: [m_love]" style "info_text"
+        text "♥[s.name]: [s_love]" style "info_text"
+        text "♥[ts.name]: [ts_love]" style "info_text"
 
-        vbox:
-            xalign 0.5
-            spacing 5
+screen quest_panel_text:
+    vbox:
+        xalign 0.555
+        yalign 0.052
+        xsize 600
+        spacing 5
+        text "Задача: [active_quest.whatToDo]" style "info_text"
+        if active_quest.forWho:
+            text "Для: [active_quest.forWho]" style "info_text"
+        if active_quest.location:
+            text "Локация: [active_quest.location]" style "info_text"
+        if active_quest.reward_character > 0:
+            text "Награда в симпатии: [active_quest.reward_character]" style "info_text"
+        if active_quest.reward_money > 0:
+            text "Награда в монетах: [active_quest.reward_money]" style "info_text"
 
-            text "Задача: [active_quest.name]" style "info_text"
-            text "Благословение: [chosen_blessing.name]" style "info_text"
-            text "Текущее здоровье: [health]" style "info_text"
-            text "Золото: [money]" style "info_text"
-            text "Сила: [strength]" style "info_text"
-            text "Харизма: [charisma]" style "info_text"
-            text "Колдовство: [intelligence]" style "info_text"
-            text "" style "info_text"
-            text "[f.name]: [f_love]♥" style "info_text"
-            text "[nag.name]: [nag_love]♥" style "info_text"
-            text "[e.name]: [e_love]♥" style "info_text"
-            text "[r.name]: [r_love]♥" style "info_text"
-            text "[d.name]: [d_love]♥" style "info_text"
-            text "[eris.name]: [eris_love]♥" style "info_text"
-            text "[mao.name]: [mao_love]♥" style "info_text"
-            text "[mer.name]: [mer_love]♥" style "info_text"
-            text "[h.name]: [h_love]♥" style "info_text"
-            text "[m.name]: [m_love]♥" style "info_text"
-            text "[s.name]: [s_love]♥" style "info_text"
-            text "[ts.name]: [ts_love]♥" style "info_text"
+    imagebutton:
+        align (0.64, 0.07)
+        idle "gui/button/back.png"
+        hover "gui/button/back_hover.png"
+        action Hide("quest_panel_text"), Show("info_panel_text"), Show("cheat_buttons")
+
+screen blessing_panel_text:
+    vbox:
+        xalign 0.555
+        yalign 0.052
+        xsize 600
+        spacing 5
+        text "Благословение: [chosen_blessing.name]" style "info_text"
+        text "Преимущество: [chosen_blessing.description]" style "info_text"
+
+    imagebutton:
+        align (0.64, 0.07)
+        idle "gui/button/back.png"
+        hover "gui/button/back_hover.png"
+        action Hide("blessing_panel_text"), Show("info_panel_text"), Show("cheat_buttons")
+
+
 
 # Определяем стиль
 style info_text:
     size 35
     color "#000"
     font "gui/fonts/NK123.ttf"
+
+style info_textbutton:
+    size 35
+    color "#000"
+    hover_color "#808080"
+    font "gui/fonts/NK123.ttf"
+    
     
 
 style outline_text:

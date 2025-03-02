@@ -35,7 +35,7 @@ init python:
 
     
     no_quest = GirlQuest(whatToDo="Найди чем заняться", forWho="", forWhoShort="p", repeatable=True,
-    location="Где хочешь", countObj=0, 
+    location="Надо поискать", countObj=0, 
     character_says=["Займись уже чем-нибудь"],
     req_love=0, req_str=0, req_intelligence=0, req_char=0, 
     reward_money=0, reward_character=0, 
@@ -134,21 +134,29 @@ init python:
 
     #проверить, что ты подходишь для задания
     def isAbleQuest(quest, love):
+        global notices
         result = True
         #renpy.watch(str(quest.req_str))
         #renpy.watch(str(strength))
+        if not quest.repeatable:
+            return False
         if quest.req_love > love:
+            notices.append("Недостаточно симпатии")
             result = False
         if quest.req_str > strength:
+            notices.append("Недостаточно силы")
             result = False
         if quest.req_intelligence > intelligence:
+            notices.append("Недостаточно интеллекта")
             result = False
         if quest.req_char > charisma:
-            result = False
-        if not quest.repeatable:
+            notices.append("Недостаточно харизмы")
             result = False
         #renpy.watch(str(result))
+        renpy.show_screen('notify_plus', notices=notices)
+        notices = []
         return result
+        
 
     #вычисляет принят ли квест этого персонажа сейчас
     def isActualQuestOfCharacter(who):
