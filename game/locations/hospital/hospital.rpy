@@ -63,7 +63,7 @@ label hospital_sakura_menu:
         "Перейти в операционную" if canVisit("surgency"):
             jump surgency_tsunade_cure
         "Спросить про задания" if isNoQuestNow():
-            call hospital_sakura_quests from _call_hospital_sakura_quests
+            call hospital_sakura_quests
             jump hospital_sakura_menu
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("s"):
             p "Я не смогу выполнить это задание."

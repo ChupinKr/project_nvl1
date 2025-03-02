@@ -681,7 +681,24 @@ label nagatoro_root_titfuck:
     jump city
     
         
-
+label nagatoro_root_blowjob:
+    "IN PROGRESS"
+    return
+    
+        
+label nagatoro_root_fuck:
+    "IN PROGRESS"
+    return
+    
+        
+label nagatoro_root_anal:
+    "IN PROGRESS"
+    return
+    
+        
+label nagatoro_root_fetish:
+    "IN PROGRESS"
+    return
 
 
 

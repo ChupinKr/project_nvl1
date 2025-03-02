@@ -1,7 +1,7 @@
 define first_time_training_ground = True
 define battle_location_training_ground = "training_ground"
 label training_ground:
-    call training_ground_scene from _call_training_ground_scene
+    call training_ground_scene
 
     if first_time_training_ground and isMorning():
         $ first_time_training_ground = False
@@ -58,7 +58,7 @@ label training_ground:
 
                 "[eris.name] делает резкий выпад, атакуя тебя!"
                 
-                call start_battle(120, eris_str, eris.name, battle_location_training_ground) from _call_start_battle_24
+                call start_battle(120, eris_str, eris.name, battle_location_training_ground)
                 
                 if last_battle_win:
                     "Ты успеваешь парировать её атаку и даже немного оттеснить её назад."
@@ -87,13 +87,13 @@ label training_ground_menu:
     menu:
         "Качаться":
             # добавить вызов песни подход, подход, еще подход
-            call start_muscule("Подход",2.3) from _call_start_muscule_4
+            call start_muscule("Подход",2.3)
             if last_muscule_win:
-                call start_muscule("Подход",2.5) from _call_start_muscule_5
+                call start_muscule("Подход",2.5)
                 if last_muscule_win:
-                    call start_muscule("Еще подход",2.7) from _call_start_muscule_6
+                    call start_muscule("Еще подход",2.7)
                     if last_muscule_win:
-                        call start_muscule("Сотру со лба я легкий пот",2.7) from _call_start_muscule_7
+                        call start_muscule("Сотру со лба я легкий пот",2.7)
                         if last_muscule_win:
                             "Я определенно становлюсь все лучше!"
                             $addChar(["str"], 2)
@@ -111,7 +111,7 @@ label training_ground_eris_menu:
     "Ты подошел к [eris.name]"
     menu:
         "Спарринг":
-            call start_battle(120, eris_str, eris.name, battle_location_training_ground) from _call_start_battle_25
+            call start_battle(120, eris_str, eris.name, battle_location_training_ground)
             if last_battle_win:
                 "IN PROGRESS"
                 $addChar(["str"], 2)

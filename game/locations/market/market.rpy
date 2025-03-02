@@ -6,7 +6,7 @@ default first_visit_market = True
 
 # Сцена посещения рынка
 label market:
-    call market_scene from _call_market_scene
+    call market_scene
     hide h
     "Вы приходите на оживлённый рынок, где запах свежего хлеба смешивается с ароматом пряностей. Люди суетятся, обсуждают цены, и всюду слышится звон монет."
 
@@ -100,7 +100,7 @@ label market_menu:
             else:
                 "Какой-то мутный тип подходит к тебе"
                 sg "Эй, че вылупился? Зрение слишком хорошее?!"
-                call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market) from _call_start_battle_3
+                call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market)
                 if last_battle_win and not isNight() and not isEvening():
                     "[h.name] это видела"
                     $addLove("h", 10)

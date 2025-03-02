@@ -108,3 +108,27 @@ label brothen_mao_root_menu:
             "Ты уходишь восстанавливать силы"
             r @smirk "До встречи~"
             jump brothel
+
+label mao_root_masturbate:
+    "IN PROGRESS"
+    return
+
+label mao_root_titfuck:
+    "IN PROGRESS"
+    return
+
+label mao_root_blowjob:
+    "IN PROGRESS"
+    return
+
+label mao_root_fuck:
+    "IN PROGRESS"
+    return
+
+label mao_root_anal:
+    "IN PROGRESS"
+    return
+
+label mao_root_fetish:
+    "IN PROGRESS"
+    return

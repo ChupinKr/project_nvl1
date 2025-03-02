@@ -101,7 +101,7 @@ label surgency_tsunade_menu:
             jump surgency_tsunade_menu
         "Спросить про задания" if isNoQuestNow():
             p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"
-            call surgency_tsunade_quests from _call_surgency_tsunade_quests
+            call surgency_tsunade_quests
             jump surgency_tsunade_menu
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("ts"):
             p "Я не смогу выполнить это задание."

@@ -36,7 +36,7 @@ label miku_tavern_root_menu:
             "Ты уходишь"
             jump city
 
-label m_rool_tavern_blowjob:
+label m_root_tavern_blowjob:
     "IN PROGRESS"
     return
 
@@ -355,4 +355,24 @@ label m_root_show:
     "[m.name] одевается и уходит"
     "Ты тоже решаешь уйти"
 
+    return
+
+label m_root_titfuck:
+    "IN PROGRESS"
+    return
+
+label m_root_blowjob:
+    "IN PROGRESS"
+    return
+
+label m_root_fuck:
+    "IN PROGRESS"
+    return
+
+label m_root_anal:
+    "IN PROGRESS"
+    return
+
+label m_root_fetish:
+    "IN PROGRESS"
     return

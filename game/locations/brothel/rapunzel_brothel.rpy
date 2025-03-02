@@ -565,5 +565,18 @@ label r_root_blowjob:
 
     return
 
+label r_root_titfuck:
+    "IN PROGRESS"
+    return
 
+label r_root_fuck:
+    "IN PROGRESS"
+    return
 
+label r_root_anal:
+    "IN PROGRESS"
+    return
+
+label r_root_fetish:
+    "IN PROGRESS"
+    return

@@ -7,7 +7,7 @@ define can_go_m = True
 
 # Сцена с таверной
 label tavern:
-    call tavern_scene from _call_tavern_scene_1
+    call tavern_scene
     "Вы в таверне"
     menu:
         "Пойти в комнату" if canVisit("room"):
@@ -112,13 +112,13 @@ label talk_miku_work:
         "Помыть посуду (10 монет)":
             m "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
             scene bg tavern_sink with fade
-            call start_clean("dish") from _call_start_clean_3
+            call start_clean("dish")
             if last_clean_win:
                 m "Следующую! У нас много гостей, поторопись!"
-                call start_clean("dish") from _call_start_clean_4
+                call start_clean("dish")
                 if last_clean_win:
                     m "Последнюю, быстрее!"
-                    call start_clean("dish") from _call_start_clean_5
+                    call start_clean("dish")
                     if last_clean_win:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
                         "Ты провёл время, помогая [m.name]"
@@ -279,7 +279,7 @@ label tavern_task_board:
                 $addMoney(10)
             else:
                 "Ты встретил нарушителя порядка, его надо задержать!"
-                call start_battle(100, renpy.random.randint(50,120), "Бандит", battle_location_tavern) from _call_start_battle_23
+                call start_battle(100, renpy.random.randint(50,120), "Бандит", battle_location_tavern)
                 if last_battle_win:
                     "Ты успешно справился с противником"
                     $addMoney(10)
@@ -301,7 +301,7 @@ label tavern_task_board:
 
 # Сцена с сомнительным столом
 label suspicious_table:
-    call tavern_scene from _call_tavern_scene_2
+    call tavern_scene
     guy1 "Ну что, парниша, выглядишь, как тот, кто может сделать нужные вещи. Хочешь поговорить о том, как войти в темные дела?"
     guy2 "Тебе нужно знать кое-что, если ты хочешь быть частью нашего круга. Но для этого нужно доказать, что ты не ссышь."
 

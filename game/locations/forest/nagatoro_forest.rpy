@@ -3,7 +3,7 @@ define can_visit_nagatoro = True
 define first_root_nagatoro = True
 
 label visit_nagatoro_forest:
-    call forest_scene from _call_forest_scene_3
+    call forest_scene
     show nag grin with dissolve
 
     if first_time_nagatoro:
@@ -88,7 +88,7 @@ label visit_nagatoro_forest:
             "Дать [nag.name] понять, кто тут главный":
                 p "Посмотрим, кто кого. Я готов на всё!"
                 nag "Вот так мне нравится! Давай, покажи, на что ты способен! Но помни, жалеть не стану."
-                call start_battle(100, nag_str, nag.name, battle_location_forest) from _call_start_battle
+                call start_battle(100, nag_str, nag.name, battle_location_forest)
                 if last_battle_win:
                     jump battle_win_forest_nagatoro
 
@@ -149,7 +149,7 @@ label nagatoro_forest_menu:
             if last_battle_win:
                 jump battle_win_forest_nagatoro
         "Попросить задание" if isNoQuestNow():
-            call nagatoro_forest_quests from _call_nagatoro_forest_quests
+            call nagatoro_forest_quests
             jump nagatoro_forest_menu
         "Отказаться от задания" if isActualQuestOfCharacter("nag"):
             p "Я не смогу выполнить это задание."
@@ -218,7 +218,7 @@ label nagatoro_forest_quests:
     return
 
 label battle_win_forest_nagatoro:
-    call forest_scene from _call_forest_scene_4
+    call forest_scene
     show nag neutral with dissolve
 
     nag "Ух, ты неплох для новичка... но не радуйся слишком рано."

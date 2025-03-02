@@ -19,7 +19,7 @@ label find_elsa_menu:
             p "[e.name], ты говорила, что можешь меня потренировать."
             e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dissolve
             show e smile at right with fade
-            call start_magic_training(intelligence) from _call_start_magic_training_1
+            call start_magic_training(intelligence)
             if last_reaction_win:
                 $addChar(["intelligence"], 2)
                 jump win_elsa_training
@@ -30,7 +30,7 @@ label find_elsa_menu:
         "Попросить квест" if isNoQuestNow():
             show e neutral with dissolve
             e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся." with dissolve
-            call elsa_quests from _call_elsa_quests_1
+            call elsa_quests
             jump find_elsa_menu
         "Отказаться от квеста" if isActualQuestOfCharacter("e"):
             p "Я откажусь от выполнения квеста."

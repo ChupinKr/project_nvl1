@@ -26,7 +26,7 @@ label visit_holo:
                 p "Выше всех похвал, пол царства бы отдал!"
                 h smile_naked "Охо-хо~ Этой фразой ты только что обеспечил себе первую бесплатную услугу, идем~" with dissolve
                 $h_can_go_root = True
-                call h_root_masturbate from _call_h_root_masturbate
+                call h_root_masturbate
                 jump market
             "Нет":
                 $h_can_visit = False
@@ -51,13 +51,13 @@ label holo_menu:
                 "Протереть книги(10 монет)":
                     h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
                     scene bg holo_market_boxes with fade
-                    call start_clean("books") from _call_start_clean
+                    call start_clean("books")
                     if last_clean_win:
                         h "Хватай следующую, быстрее!"
-                        call start_clean("books") from _call_start_clean_1
+                        call start_clean("books")
                         if last_clean_win:
                             h "Последнюю, торопись!"
-                            call start_clean("books") from _call_start_clean_2
+                            call start_clean("books")
                             if last_clean_win:
                                 h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
                                 "Ты провёл время, помогая [h.name]"
@@ -80,7 +80,7 @@ label holo_menu:
                     scene bg holo_market_boxes with fade
                     p "И как мне их убрать?"
                     h "Это уже тебе решать, [hero_name]~"
-                    call bug_hunt from _call_bug_hunt
+                    call bug_hunt
                     $nextTime()
                     scene bg holo_market with fade
                     show h smile_shy with dissolve
@@ -177,7 +177,7 @@ label holo_market_root_menu:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump market
             $minusMoney(30)
-            call h_root_masturbate from _call_h_root_masturbate_1
+            call h_root_masturbate
             $nextTime()
             jump market
         "Грудями(40 монет)" if h_love >= 60:
@@ -185,7 +185,7 @@ label holo_market_root_menu:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
             $minusMoney(40)
-            call h_root_titfuck from _call_h_root_titfuck
+            call h_root_titfuck
             $nextTime()
             jump market
         "Минет(50 монет)" if h_love >= 70:
@@ -193,7 +193,7 @@ label holo_market_root_menu:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
             $minusMoney(50)
-            call h_root_blowjob from _call_h_root_blowjob
+            call h_root_blowjob
             $nextTime()
             jump market
         "Секс(70 монет)" if h_love >= 80:
@@ -201,7 +201,7 @@ label holo_market_root_menu:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
             $minusMoney(70)
-            call h_root_fuck from _call_h_root_fuck
+            call h_root_fuck
             $nextTime()
             jump market
         "Анал(80 монет)" if h_love >= 90:
@@ -209,7 +209,7 @@ label holo_market_root_menu:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
             $minusMoney(80)
-            call h_root_anal from _call_h_root_anal
+            call h_root_anal
             $nextTime()
             jump market
         "Фетиш(200 монет)" if h_love >= 200:
@@ -218,7 +218,7 @@ label holo_market_root_menu:
                 jump holo_menu
             h @smile_shy "Ладно, это слишком, сделаю для тебя скидку~"
             $minusMoney(100)
-            call h_root_fetish from _call_h_root_fetish
+            call h_root_fetish
             $nextTime()
             jump market
         "Вернуться":
@@ -764,3 +764,19 @@ label h_root_titfuck:
     mind "Мне тоже следует уходить."
 
     return  
+
+label h_root_blowjob:
+    "IN PROGRESS"
+    return
+
+label h_root_fuck:
+    "IN PROGRESS"
+    return
+
+label h_root_anal:
+    "IN PROGRESS"
+    return
+
+label h_root_fetish:
+    "IN PROGRESS"
+    return

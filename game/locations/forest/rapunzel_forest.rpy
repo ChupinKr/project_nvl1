@@ -1,5 +1,5 @@
 label visit_rapunzel_forest:
-    call forest_scene from _call_forest_scene_5
+    call forest_scene
     show r smile with dissolve
 
     if first_time_rapunzel and chosen_blessing.name == "Дар Соблазнителя":
@@ -218,7 +218,7 @@ label rapunzel_forest:
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
             r "Хм... На самом деле, у меня есть кое-что интересное!"
-            call rapunzel_quests from _call_rapunzel_quests_1
+            call rapunzel_quests
             jump rapunzel_forest
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("r"):
             p "Я не смогу выполнить это задание."
@@ -251,7 +251,7 @@ label rapunzel_quests:
 
 
 label rapunzel_training:
-    call start_charisma_training(charisma) from _call_start_charisma_training
+    call start_charisma_training(charisma)
     if last_charisma_training_win:
         $addLove("r", 10)
         r "Не так уж плохо, приходи еще, я буду ждать тебя~"
