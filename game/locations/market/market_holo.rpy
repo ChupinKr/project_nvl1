@@ -50,7 +50,7 @@ label holo_menu:
             menu:
                 "Протереть книги(10 монет)":
                     h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
-                    scene bg holo_tavern_boxes with fade
+                    scene bg holo_market_boxes with fade
                     call start_clean("books") from _call_start_clean
                     if last_clean_win:
                         h "Хватай следующую, быстрее!"
@@ -77,7 +77,7 @@ label holo_menu:
                     jump holo_menu
                 "Избавиться от жуков(10 монет)":
                     h "Избавься от этих жуков, они везде! Только не убивай их!"
-                    scene bg holo_tavern_boxes with fade
+                    scene bg holo_market_boxes with fade
                     p "И как мне их убрать?"
                     h "Это уже тебе решать, [hero_name]~"
                     call bug_hunt from _call_bug_hunt

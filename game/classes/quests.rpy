@@ -153,7 +153,8 @@ init python:
             notices.append("Недостаточно харизмы")
             result = False
         #renpy.watch(str(result))
-        renpy.show_screen('notify_plus', notices=notices)
+        if notices:
+            renpy.show_screen('notify_plus', notices=notices)
         notices = []
         return result
         

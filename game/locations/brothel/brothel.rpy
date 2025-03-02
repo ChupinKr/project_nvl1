@@ -84,7 +84,10 @@ label brothel_menu:
     menu:
         "Подойти к [mao.name]" if can_go_mao:
             jump visit_mao
-        "Найти [r.name]" if can_go_r and (isNight() or isEvening()):
+        "Найти [r.name]" if can_go_r:
+            if (isNight() or isEvening()):
+                "Ты ее не находишь, стоит поискать ее в лесу"
+                $customNotify("[r.name] можно найти в Борделе только вечером или ночью")
             jump rapunzel_brothel
         "Посмотреть танец":
             if not is_free_dance:

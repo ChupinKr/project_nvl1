@@ -73,7 +73,7 @@ label holo_menu:
                     jump holo_menu
                 "Избавиться от жуков(10 монет)":
                     h "Избавься от этих жуков, они везде! Только не убивай их!"
-                    scene bg holo_tavern_boxes with fade
+                    scene bg holo_market_boxes with fade
                     p "И как мне их убрать?"
                     h "Это уже тебе решать, [hero_name]~"
                     call bug_hunt

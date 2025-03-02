@@ -46,5 +46,5 @@ init:
     define korg_str = 300
     #quest persns
     define ent = Character('Девушка Энт', color="#013220", image='ent')
-    define emilia = Character("Эмилия", color="#dda0dd")
+    define emilia = Character("Эмилия", color="#dda0dd", image='emilia')
     define ramiris = Character('Рамирис', color="#FFBA00", image='ramiris')
