@@ -105,7 +105,7 @@ label rapunzel_root_menu:
 
 label r_root_masturbate:
     "[r.name] садит тебя на свою кровать и скидывает с себя почти всю одежду"
-    show r naked  with dissolve
+    show r smile_naked  with dissolve
     "Она садится на колени перед тобой, обнажая свою прелестную грудь"
     hide r  with dissolve
     scene bg r_masturbate1 with dissolve
@@ -256,7 +256,7 @@ label r_root_masturbate:
     if r_love < 70:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
-        show r naked with dissolve
+        show r smile_naked with dissolve
         $customNotify("Недостаточно симпатии [r.name]")
         "Она остановилась на самом интересном, может если она будет мне больше доверять, то я получу еще больше?"
         return
@@ -284,7 +284,7 @@ label r_root_masturbate:
     if r_love < 90:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
-        show r naked with dissolve
+        show r smile_naked with dissolve
         $customNotify("Недостаточно симпатии [r.name]")
         "Она остановилась на самом интересном, может если она будет мне больше доверять, то я получу еще больше?"
         return
@@ -350,7 +350,7 @@ label r_root_masturbate:
 
 label r_root_blowjob:
     "[r.name] полностью разделась и посадила меня на кровать"
-    show r naked with fade
+    show r smile_naked with fade
     r "[hero_name], Чего ты ждешь? Можешь тоже снимаешь штаны?"
     "Она встает на четвереньки и приближается к твоим ногам, само зрелище тебя уже неплохо завело"
     hide r with fade
@@ -559,7 +559,7 @@ label r_root_blowjob:
     call hide_dialog
     "[r.name] на последок еще раз целует твой член и поднимается"
     scene bg brothel_private with dissolve
-    show r naked_cummed with dissolve
+    show r smile_naked_cummed with dissolve
     r "После такого ты обязан навещать меня чаще~"
     p "Конечно!"
 
