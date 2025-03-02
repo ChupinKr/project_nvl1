@@ -1,14 +1,14 @@
 init:
     # Инициализация персонажей с соответствующими цветами имен
-    define r = Character("Рапунцель", color="#FFD700", image='r')  # Золотистый (блондинка)
+    define r = Character("Рапунцель", color="#FFBA00", image='r')  # Золотистый (блондинка)
     define r_love = 0
     define e = Character("Эльза", color="#87CEFA", image='e')  # Светло-голубой (платиновая блондинка)
     define e_love = 0
     define nag = Character("Нагаторо", color="#964B00", image='nag')  
     define nag_str = 100
     define nag_love = 0
-    define god = Character("Богиня", color="#FFD700", image='f')
-    define f = Character("Фрея", color="#FFD700", image='f')
+    define god = Character("Богиня", color="#B38DF9", image='f')
+    define f = Character("Фрея", color="#B38DF9", image='f')
     define f_str = 10000
     define f_love = 0
     define ts = Character("Цунаде", color="#FFD700", image='ts')
