@@ -765,8 +765,222 @@ label h_root_titfuck:
 
     return  
 
+
+# Сцена глубокого минета с [h.name]
 label h_root_blowjob:
-    "IN PROGRESS"
+    scene bg holo_room with fade
+    "[h.name] Приводит тебя к себе в комнату"
+    show h smile_panties with dissolve
+    h "[hero_name], знаешь, я практиковалась."
+    
+    # 1. [h.name] в трусиках показывает тело
+    scene bg h_blowjob1 at Transform(zoom=1.5) with fade
+    call hide_dialog
+    # [h.name] стоит в одних трусиках, слегка покачивая бёдрами
+    "[h.name] с лёгкой насмешкой встает на четвереньки на кровать в одних трусиках, слегка покачивая бёдрами."
+    h "Ну как, нравится? Волчица ведь не просто так хвалится."
+    p "Ты... так красива."
+
+    scene bg h_blowjob2 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] ложить на кровать, сжимая свою огромную грудь."
+    h "Вот, посмотри, какая у меня сексуальная грудь."
+
+    scene bg h_blowjob3 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    # [h.name] снимает трусики
+    "[h.name] хмыкает, будто её что-то раздражает, и она медленно стягивает трусики"
+
+    scene bg h_blowjob4 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    h "Они только мешают. Так лучше, правда?"
+    "Её обнажённое тело теперь лежит перед тобой, и она смотрит с ухмылкой."
+
+    scene bg h_blowjob5 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] садится на колени напротив тебя, её движения плавные."
+    h "Ну что, начнём? Ты ведь за этим пришёл."
+    p "Да..."
+
+    scene bg h_blowjob5_2 at Transform(zoom=1.5) with fade
+    call hide_dialog
+    # ГГ расстёгивает штаны, [h.name] смотрит на член с интересом
+    "Ты расстёгиваешь штаны, и [h.name] склоняет голову, разглядывая твой член с явным любопытством."
+    h "Ох, какой... аппетитный. Ты точно не пожалеешь о своих деньгах."
+    "Она слегка облизывает губы, её глаза хитро блестят."
+    
+
+    scene bg h_blowjob6 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] устраивается поудобнее прямо между твоих ног, твой член перед ее лицом, а сама она смотрит тебе в глаза."
+    
+    scene bg h_blowjob7 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] упираясь грудями в твой уже эрегированный член, заставляет его дергаться."
+
+    scene bg h_blowjob8_1 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] наклоняется ближе и медленно проводит языком вдоль головки твоего члена, дразня тебя."
+    scene bg h_blowjob8_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob8_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob8_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob8_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob8_2 at Transform(zoom=1.5) with dissolve
+    pause .5
+    scene bg h_blowjob9 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    h "Ммм... сладкий. Что ты ел? Люблю сладкое~."
+    p "[h.name]..."
+    
+    scene bg h_blowjob10 at Transform(zoom=1.5) with dissolve
+    "[h.name] трется щекой об член с явной ухмылкой"
+    h "Как думаешь, ему понравится у меня в ротике?"
+
+    scene bg h_blowjob11_0 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    # [h.name] берёт член в рот, её движения уверенные
+    "Она обхватывает твой член губами и начинает сосать, её движения ритмичны и умелы."
+    scene bg h_blowjob11_1 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob11_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    h "Ммф... не дёфгайся, дай мне нафладиться."
+    scene bg h_blowjob12 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "Её тёплое дыхание и ловкий язык заставляют тебя напрячься."
+
+    scene bg h_blowjob_deep1 at Transform(zoom=1.5) with vpunch
+    call hide_dialog
+    # [h.name] берёт член глубже, её горло сжимается
+    p "Чёрт, [h.name]... это..."
+    "[h.name] наклоняется ещё ниже, заглатывая твой член. Её горло сжимается вокруг него, и она слегка мычит."
+    h "Ммгх..."
+    "[h.name] начинает двигаться, заглатывая ещё сильнее"
+    scene bg h_blowjob_deep2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob_deep3 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob_deep3 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_blowjob_deep3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with flash
+    call hide_dialog
+
+    # 8. ГГ кончает в горло [h.name]
+    scene bg h_blowjob_deep5_cum1 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Ты не выдерживаешь и кончаешь"
+    scene bg h_blowjob_deep5_cum2 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Поток спермы заполняет её горло. [h.name] глотает, не отстраняясь."
+    scene bg h_blowjob_deep5_cum3 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "На глазах у [h.name] проступают слезы"
+    h "Ммммммф!!!"
+
+    scene bg h_blowjob_cum4 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "[h.name] понимает, что ей не хватает воздуха и постепенно поднимается по стволу твоего члена, а из него брызжет сперма"
+    
+    scene bg h_blowjob_cum5 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] доржит кончик твоего члена во рту, старая сглатывать всё, что может"
+    
+    scene bg h_blowjob_cum6 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    h "Ааааах.."
+    
+    scene bg h_blowjob_cum7 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] вся покрытая спермой, открыла ротик с улыбкой, чтобы показать, что всё проглотила"
+    
+    scene bg h_blowjob_cum8 at Transform(zoom=1.5) with dissolve
+    pause .5
+    scene bg h_blowjob_cum9 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "Ну как тебе, [hero_name]? Я же говорила, что практиковалась!"
+
+    scene bg h_blowjob_after1 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    # [h.name] отстраняется, на её губах капли спермы, она улыбается
+    "[h.name] ложится напротив тебя и улыбвается, ее лицо покрыто спермой и капает на грудь."
+    h "Ну что, [hero_name], стоило своих денег, да? Я же говорила, что я лучшая."
+    p "Ты... невероятна."
+
+    scene bg h_blowjob_after2 at Transform(zoom=1.5) with dissolve
+    "[h.name] встает на четвереньки, на кровать капает сперма с ее груди и лица"
+    if my_holo.love >= 90:
+        scene bg h_blowjob_after3 at Transform(zoom=1.5) with dissolve
+        call hide_dialog
+        h "Я знаю, что тебе этого недостаточно, [hero_name]."
+
+        scene bg h_blowjob_after4 at Transform(zoom=1.5) with dissolve
+        h "Хочешь продолжить?"
+        menu:
+            "Анал":
+                "IN PROGRESS"  # Заглушка для будущего продолжения
+            "На этом всё":
+                "На этом всё"
+    
+    scene bg holo_room with fade
+    show h smile_naked_cummed with dissolve
+    "[h.name] встаёт, всё ее тело покрыто твоим семенем."
+    h "Ну всё, [hero_name], было весело. Зови, если снова захочешь потратить золото."
+    "Она подмигивает и уходит, оставляя тебя одного в комнате."
+    "Ты уходишь."
     return
 
 label h_root_fuck:
