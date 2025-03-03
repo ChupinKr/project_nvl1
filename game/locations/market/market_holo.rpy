@@ -971,7 +971,16 @@ label h_root_blowjob:
         h "Хочешь продолжить?"
         menu:
             "Анал":
+                p "Только надень юбку, меня это заводит."
+                "..."
+                "....."
+                "......."
+                scene bg pull_skirt1 at Transform(zoom=1.5) with fade
+                pause .7
+                scene bg pull_skirt2 at Transform(zoom=1.5) with fade
+                h "Так?"
                 call h_root_anal_continue
+                return
             "На этом всё":
                 "На этом всё"
 
@@ -982,10 +991,6 @@ label h_root_blowjob:
     "Ты уходишь."
     return
 
-label h_root_anal_continue:
-    "IN PROGRESS"
-    return
-
 label h_root_fuck:
     "IN PROGRESS"
     return
@@ -994,35 +999,33 @@ label h_root_anal:
     scene bg holo_room with fade
     "[h.name] приводит тебя в свою комнату."
     show h smile_no_top with fade
-    p "Присаживайся и наслаждайся"
+    h "Присаживайся, [hero_name], и наслаждайся."
 
     # 1. Холо раздевается
     scene bg h_anal1 at Transform(zoom=1.5) with fade
     call hide_dialog
-    # Холо берет свою грудь
     "[h.name] дразняще показывает тебе грудь."
-    h "Наслаждаешься видом на моих малышек?"
-    p "Сложно их назвать малышками..."
-    
+    h "Ну как тебе мои сокровища? Волчица ведь знает, как завлечь."
+    p "Сложно их не заметить..."
+
     scene bg h_anal2 at Transform(zoom=1.5) with fade
     call hide_dialog
-    h "Хах, и правда, да и сегодня мы будем играть с моей задней частью."
+    h "Ха, и верно! А сегодня я покажу тебе кое-что ещё интереснее."
 
     scene bg h_anal3 at Transform(zoom=1.5) with fade
     call hide_dialog
     "[h.name] приподнимает юбку, ты видишь, что на ней нет трусиков."
-    h "Тебе нравится моя юбка?"
+    h "Нравится моя юбка? Или то, что под ней?"
 
     scene bg h_anal4 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    # Холо полностью раздевается, остаётся обнажённой
-    "[h.name] встает на четвереньки боком к тебе в одной юбке."
+    "[h.name] встаёт на четвереньки боком к тебе в одной юбке."
 
     scene bg h_anal5 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[h.name] немного разворачивается к тебе спиной, ты видишь ее анус и киску."
-    h "Ну как? Волчица в полном расцвете сил."
-    
+    "[h.name] немного разворачивается спиной, открывая тебе вид на её анус и киску."
+    h "Ну как? Волчица в самом соку, не находишь?"
+
     scene bg h_anal5 at Transform(zoom=1.5) with dissolve
     pause .3
     scene bg h_anal6 at Transform(zoom=1.5) with dissolve
@@ -1034,13 +1037,13 @@ label h_root_anal:
     scene bg h_anal5 at Transform(zoom=1.5) with dissolve
     pause .3
     scene bg h_anal6 at Transform(zoom=1.5) with dissolve
-    "[h.name] немного потверкала своей жопой"
+    "[h.name] слегка покачивает попкой, дразня тебя."
 
     # 3. Холо подготавливает попку пальцами
     scene bg h_anal7 at Transform(zoom=1.5) with fade
     call hide_dialog
-    "[h.name] немного оттягивает попу, показывая тебе свой анус."
-    p "Обожаю эту сочную задницу..."
+    "[h.name] немного оттягивает попку, показывая тебе свой анус."
+    p "Обожаю эту аппетитную попку..."
 
     scene bg h_anal8 at Transform(zoom=1.5) with dissolve
     call hide_dialog
@@ -1048,9 +1051,9 @@ label h_root_anal:
 
     scene bg h_anal9 at Transform(zoom=1.5) with fade
     call hide_dialog
-    "Она нежно засовывает 2 пальчика в свой анус"
-    h "Надо же подготовиться, верно? Ты ведь не хочешь, чтобы я скучала."
-    
+    "Она нежно вводит два пальца в свой анус."
+    h "Надо подготовиться, верно? Волчица не любит скучать."
+
     scene bg h_anal10_1 at Transform(zoom=1.5) with dissolve
     pause .2
     scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
@@ -1090,26 +1093,25 @@ label h_root_anal:
     scene bg h_anal11 at Transform(zoom=1.5) with flash
     call hide_dialog
 
-
     scene bg h_anal12 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "Она закончила играть со своей попкой и медленно вытаскивает пальцы из попки."
+    "Она заканчивает играть со своей попкой и медленно вытаскивает пальцы."
 
     scene bg h_anal13 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[h.name] расслабляет анус растягивает его пальцами, показывая, на что она способна."
-    h "Как думаешь, я готова?"
-    p "Сейчас, я помогу."
+    "[h.name] расслабляет анус и растягивает его пальцами, дразня тебя."
+    h "Ну что, [hero_name], готов ли я?"
+    p "Сейчас помогу."
 
     # ГГ подходит, его рука тянется к попке Холо
     scene bg h_anal14 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Ты подходишь ближе, и твоя рука касается её попки."
-    h "Давай, [hero_name], покажи, на что способен. Только не торопись."
-    "Ты вводишь палец, её тело слегка вздрагивает."
-    p "Ты тёплая..."
-    h "Ха, а ты ожидал, что волчица будет холодной?"
-    "Ты начинаешь двигать рукой, по ее лицу видно, [h.name] получает массу удовольствия."
+    h "Давай, покажи, на что способен."
+    "Ты вводишь два палец, её тело слегка вздрагивает."
+    p "Какая тёплая..."
+    h "Ха, а ты ждал ледяную волчицу?"
+    "Ты двигаешь рукой, и по её лицу видно, что [h.name] наслаждается."
 
     scene bg h_anal15_1 at Transform(zoom=1.5) with dissolve
     pause .2
@@ -1143,19 +1145,22 @@ label h_root_anal:
     pause .2
     scene bg h_anal16 at Transform(zoom=1.5) with flash
     call hide_dialog
-    h "А-а-аааах..."
-    
+    h "Ах... ну же!"
+
     scene bg h_anal17 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "Ты суешь большой палец ей, немного двигая"
+    "Ты суёшь большой палец ей в попку, слегка двигая."
     p "Теперь ты готова."
-    h "Сейчас ты во..."
-    
+    h "Сейчас ты меня..."
+    call h_root_anal_continue
+    return
+
+label h_root_anal_continue:
     scene bg h_anal18 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    h "Иииик!"
-    "Ты резко вгоняешь свой член в задницу [h.name]"
-    
+    h "Ииик!"
+    "Ты резко вводишь свой член в попку [h.name]."
+
     scene bg h_anal19_1 at Transform(zoom=1.5) with dissolve
     pause .2
     scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
@@ -1204,43 +1209,43 @@ label h_root_anal:
     pause .2
     scene bg h_anal20 at Transform(zoom=1.5) with flash
     call hide_dialog
-    h "А-а-аааах..."
-    "Ты кончаешь в эту суку"
+    h "Ааааах!"
+    "Ты кончаешь в ее попку."
 
-    
     scene bg h_anal21 at Transform(zoom=1.5) with flash
     call hide_dialog
-    "Ты запускаешь огромную порцию спермы в ее задницу"
-    p "Получай, сука!"
-    h "А-а-аааа! Ах! Ах!"
+    "Ты выпускаешь огромную порцию спермы."
+    p "Получай!"
+    h "Ах! Ах! Сколько же тебя!"
 
     scene bg h_anal22_after1 at Transform(zoom=1.5) with flash
     call hide_dialog
-    "Ты вытаскиваешь член из ее задницы и продолжаешь кончать на ее спину и задницу"
-    p "Аргх!"
+    "Ты вытаскиваешь член из её попки и продолжаешь кончать на её спину и ягодицы."
+    p "Вот так!"
 
     scene bg h_anal22_after2 at Transform(zoom=1.5) with flash
     call hide_dialog
-    "Ты испускаешь последнее, [h.name] держит задницу приподнятой, и ее анус раскрыт, будто чтобы принимать сперму"
-    h "Аааах..."
+    "Ты испускаешь последнее, [h.name] держит попку приподнятой, её анус раскрыт, принимая остатки."
+    h "Ммм... Ааах..."
 
     scene bg h_anal22_after3 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[h.name] плачет от радости, она легла на живот, из ее задницы сочится сперма и вся ее спина ею покрыта"
+    "Слезы текут по щекам [h.name], она ложится на живот, сперма сочится из её попки и покрывает спину."
 
     scene bg h_anal22_after5 at Transform(zoom=1.5) with dissolve
     pause .7
     scene bg h_anal22_after4 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[h.name] улыбается и слегка приподнимает попку, показывая, как много спермы ты влил в ее задницу"
-
+    "[h.name] улыбается и слегка приподнимает попку, показывая, сколько спермы ты оставил внутри."
 
     scene bg holo_room with fade
     show h smile_naked_cummed with dissolve
-    "[h.name] встаёт, её тело слегка дрожит, но она гордо ухмыляется."
-    h "Всё, [hero_name], сделка завершена. Приноси ещё золота, если захочешь продолжения."
+    "Юбка падает с бёдер [h.name]."
+    "Она встаёт, её тело дрожит, но она гордо ухмыляется."
+    h "Ну что, [hero_name], сделка удалась. Приноси ещё монет, если захочешь добавки."
     "Она подмигивает и уходит, оставляя тебя одного в комнате."
-    "Ты уходишь"
+    hide h with dissolve
+    "Ты уходишь."
     return
 
 label h_root_fetish:
