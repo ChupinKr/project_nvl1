@@ -6,7 +6,7 @@ define h_can_visit = True
 label visit_holo:
     scene bg holo_market with fade
     show h smile with dissolve
-    if not h_can_go_root and h_love >= 50:
+    if not h_can_go_root and my_holo.love >= 50:
         h smile_shy "Охо-хо~, [hero_name], вижу ты разжился монетками! Я готова предложить тебе новый товар~"
         pause .5
         h "Подожди тут, я подготовлюсь~"
@@ -43,7 +43,7 @@ label holo_menu:
         "Купить товары":
             h "О-хо-хо, [hero_name], неужели ты наконец разжился монетками?"
             jump holo_market_menu
-        "Обслужи меня" if h_love >= 50 and h_can_go_root:
+        "Обслужи меня" if my_holo.love >= 50 and h_can_go_root:
             h "О-хо-хо, [hero_name], а ты уверен, что тебе хватит?"
             jump holo_market_root_menu
         "Чем тебе помочь?" if can_work_with_holo:
@@ -172,7 +172,7 @@ label holo_market_menu:
 
 label holo_market_root_menu:
     menu:
-        "Мастурбация(30 монет)" if h_love >= 50:
+        "Мастурбация(30 монет)" if my_holo.love >= 50:
             if money < 30:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump market
@@ -180,7 +180,7 @@ label holo_market_root_menu:
             call h_root_masturbate
             $nextTime()
             jump market
-        "Грудями(40 монет)" if h_love >= 60:
+        "Грудями(40 монет)" if my_holo.love >= 60:
             if money < 40:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
@@ -188,7 +188,7 @@ label holo_market_root_menu:
             call h_root_titfuck
             $nextTime()
             jump market
-        "Минет(50 монет)" if h_love >= 70:
+        "Минет(50 монет)" if my_holo.love >= 70:
             if money < 50:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
@@ -196,7 +196,7 @@ label holo_market_root_menu:
             call h_root_blowjob
             $nextTime()
             jump market
-        "Секс(70 монет)" if h_love >= 80:
+        "Секс(70 монет)" if my_holo.love >= 80:
             if money < 70:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
@@ -204,7 +204,7 @@ label holo_market_root_menu:
             call h_root_fuck
             $nextTime()
             jump market
-        "Анал(80 монет)" if h_love >= 90:
+        "Анал(80 монет)" if my_holo.love >= 90:
             if money < 80:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
@@ -212,7 +212,7 @@ label holo_market_root_menu:
             call h_root_anal
             $nextTime()
             jump market
-        "Фетиш(200 монет)" if h_love >= 200:
+        "Фетиш(200 монет)" if my_holo.love >= 200:
             if money < 200:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
@@ -491,7 +491,7 @@ label h_root_masturbate:
     "Ты наконец заканчиваешь, только небольшая струйка спермы свисает с твоего члена. [h.name] с ухмылкой смотрит тебе в глаза, а её рука всё ещё держит твой член."  
     h "Ну что, мой волчонок, устал?"
 
-    if h_love < 70:
+    if my_holo.love < 70:
         $customNotify("Недостаточно симпатии")
         p "Да, спасибо за этот день"
         h "Всё для моего волчонка~"
@@ -611,7 +611,7 @@ label h_root_titfuck:
     mind "Она уже забралась на меня, неужели так соскучилась по моему члену?"
     h "Ну же, доставай его скорее~"
     
-    if h_love > 80:
+    if my_holo.love > 80:
     
         show bg h_titfuck8 with dissolve
         call hide_dialog

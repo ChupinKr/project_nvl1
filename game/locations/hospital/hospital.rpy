@@ -80,7 +80,7 @@ label hospital_sakura_quests:
     menu:
         "Задание на сбор трав":
             s @smile_closed_eyes "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу."
-            if isAbleQuest(quest_sakura_materials, s_love):
+            if isAbleQuest(quest_sakura_materials, my_sakura.love):
                 s @smile_shy "За хороший набор я неплохо заплачу."
                 menu:
                     "Квест: Задание на сбор трав"

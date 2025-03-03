@@ -26,7 +26,7 @@ label rapunzel_brothel_menu:
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
             call rapunzel_training
-            if last_charisma_training_win and first_r_root and r_love >= 50:
+            if last_charisma_training_win and first_r_root and my_rapunzel.love >= 50:
                 $ first_r_root = False
                 r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
                 r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
@@ -73,27 +73,27 @@ label rapunzel_brothel_menu:
 
 label rapunzel_root_menu:
     menu:
-        "Мастурбация" if r_love >= 50:
+        "Мастурбация" if my_rapunzel.love >= 50:
             call r_root_masturbate
             $nextTime()
             jump brothel
-        "Грудями" if r_love >= 60:
+        "Грудями" if my_rapunzel.love >= 60:
             call r_root_titfuck
             $nextTime()
             jump brothel
-        "Минет" if r_love >= 70:
+        "Минет" if my_rapunzel.love >= 70:
             call r_root_blowjob
             $nextTime()
             jump brothel
-        "Секс" if r_love >= 80:
+        "Секс" if my_rapunzel.love >= 80:
             call r_root_fuck
             $nextTime()
             jump brothel
-        "Анал" if r_love >= 90:
+        "Анал" if my_rapunzel.love >= 90:
             call r_root_anal
             $nextTime()
             jump brothel
-        "Фетиш" if r_love >= 200:
+        "Фетиш" if my_rapunzel.love >= 200:
             call r_root_fetish
             $nextTime()
             jump brothel
@@ -229,7 +229,7 @@ label r_root_masturbate:
     r "Смотри... Я ведь такая мокрая..."  
     p "Ты слишком хороша, чтобы не смотреть."  
 
-    if r_love < 70:
+    if my_rapunzel.love < 70:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
         show r smile_naked with dissolve
@@ -254,7 +254,7 @@ label r_root_masturbate:
     r "Ммм... Да... Ещё глубже..."  
     p "Я теряю голову..."  
 
-    if r_love < 90:
+    if my_rapunzel.love < 90:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
         show r smile_naked with dissolve

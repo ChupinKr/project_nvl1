@@ -80,7 +80,7 @@ label guild:
                 $minusLove("d",10)
                 "Богине пришлось по душе твое решение"
                 $addLove("f",10)
-                jump guild_after_trial
+                jump guild_menu
     else:
         "Ты в гильдии."
 

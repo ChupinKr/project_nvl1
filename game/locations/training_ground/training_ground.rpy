@@ -138,7 +138,7 @@ label training_ground_eris_menu:
             $nextTime()
             jump tavern
         "Пойти на задание вдвоём":
-            if isNoQuestNow() and (eris_love >= 40 or charisma >= 50):
+            if isNoQuestNow() and (my_eris.love >= 40 or charisma >= 50):
                 eris "Отличная мысль! Выбирай, что будем делать!"
                 call eris_quest_menu
             else:
@@ -153,7 +153,7 @@ label eris_quest_menu:
         "Охота на гоблинов":
             p "Готов поохотиться на гоблинов вместе?"
             eris t_neutral "Гоблины — мелочь, но их слишком много. Надо их проредить, пока не полезли к людям." with dissolve
-            if isAbleQuest(quest_eris_goblin_hunting, eris_love):
+            if isAbleQuest(quest_eris_goblin_hunting, my_eris.love):
                 menu:
                     "Охота на гоблинов в лесной чаще"
                     "Принять квест":
@@ -169,7 +169,7 @@ label eris_quest_menu:
             eris t_neutral "Слышал про дракона в пещере? Я давно хочу зарубить что-то большое!" with dissolve
             p "Ты уверена? Это серьёзный противник."
             eris t_smirk "Уверена? Ха! Покажу ему, кто тут главный, а ты не зевай!" with dissolve
-            if isAbleQuest(quest_eris_dragon_hunting, eris_love):
+            if isAbleQuest(quest_eris_dragon_hunting, my_eris.love):
                 menu:
                     "Выгнать дракона из пещеры"
                     "Принять квест":
@@ -185,7 +185,7 @@ label eris_quest_menu:
         "Свидание":
             p "Может, сходим прогуляться по городу? Без драк, просто вдвоём."
             eris t_surprised "Свидание? Ты серьёзно? Это что, шутка такая?" with dissolve
-            if isAbleQuest(quest_eris_date, eris_love):
+            if isAbleQuest(quest_eris_date, my_eris.love):
                 menu:
                     "Прогуляться по городу с [eris.name]"
                     "Принять квест":

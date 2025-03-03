@@ -160,83 +160,82 @@ init python:
         notices = []
 
     def addLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, eris_love
-        global nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
+        
+        global notices
         if who == "f":
-            f_love += countLove
+            my_freya.love += countLove
         elif who == "nag":
-            nag_love += countLove
+            my_nag.love += countLove
         elif who == "mer":
-            mer_love += countLove
+            my_merlin.love += countLove
         elif who == "s":
-            s_love += countLove
+            my_sakura.love += countLove
         elif who == "ts":
-            ts_love += countLove
+            my_tsunade.love += countLove
         elif who == "h":
-            h_love += countLove
+            my_holo.love += countLove
         elif who == "m":
-            m_love += countLove
+            my_miku.love += countLove
         elif who == "e":
-            e_love += countLove
+            my_elsa.love += countLove
         elif who == "r":
-            r_love += countLove
+            my_rapunzel.love += countLove
         elif who == "mao":
-            mao_love += countLove
+            my_mao.love += countLove
         elif who == "d":
-            d_love += countLove
+            my_darkness.love += countLove
         elif who == "eris":
-            eris_love += countLove
+            my_eris.love += countLove
         notices.append("Характеристика симпатии ["+ who +".name] увеличилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def minusLove(who, countLove):
-        global m_love, e_love, r_love, ts_love, s_love, eris_love
-        global nag_love, f_love, h_love,mer_love, mao_love, d_love, notices
+        global notices
         if who == "f":
-            f_love -= countLove
+            my_freya.love -= countLove
         elif who == "nag":
-            nag_love -= countLove
+            my_nag.love -= countLove
         elif who == "mer":
-            mer_love -= countLove
+            my_merlin.love -= countLove
         elif who == "s":
-            s_love -= countLove
+            my_sakura.love -= countLove
         elif who == "ts":
-            ts_love -= countLove
+            my_tsunade.love -= countLove
         elif who == "h":
-            h_love -= countLove
+            my_holo.love -= countLove
         elif who == "m":
-            m_love -= countLove
+            my_miku.love -= countLove
         elif who == "e":
-            e_love -= countLove
+            my_elsa.love -= countLove
         elif who == "r":
-            r_love -= countLove
+            my_rapunzel.love -= countLove
         elif who == "mao":
-            mao_love -= countLove
+            my_mao.love -= countLove
         elif who == "eris":
-            eris_love -= countLove
+            my_eris.love -= countLove
         elif who == "d":
-            d_love -= countLove
+            my_darkness.love -= countLove
         notices.append("Характеристика симпатии уменьшилась")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def addNPCStr(who, countStr):
-        global nag_str,d_str,eris_str,notices
+        global notices
         if who == "nag":
-            nag_str += countStr 
+            my_nag.str += countStr 
         if who == "eris":
-            eris_str += countStr
+            my_eris.str += countStr
         if who == "d":
-            d_str += countStr
+            my_darkness.str += countStr
         notices.append("Противник становится серьезнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
     def addLoveAndStr(who, countLove, countStr):
-        global nag_love,strength,notices
+        global strength,notices
         if who == "nag":
-            nag_love += countLove
+            my_nag.love += countLove
         strength += countStr * strength_mod
         notices.append("Ты стал сильнее")
         notices.append("Характеристика симпатии увеличилась")

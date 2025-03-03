@@ -118,6 +118,7 @@ screen info_panel:
             Hide("info_panel"), Hide("cheat_buttons"),
             Hide("quest_panel_text"), 
             Hide("blessing_panel_text"),
+            Hide("character_panel")
             ]
 
 screen info_panel_text:
@@ -125,36 +126,47 @@ screen info_panel_text:
         xalign 0.55
         yalign 0.3
         xsize 600
-        spacing 5
+        spacing 1
         textbutton "Задача: [active_quest.name]" text_style "info_textbutton":
-            action Show("quest_panel_text"), Hide("info_panel_text")
+            action Show("quest_panel_text"), Hide("info_panel_text"), Hide("character_panel")
         textbutton "Благословение: [chosen_blessing.name]" text_style "info_textbutton":
-            action Show("blessing_panel_text"), Hide("info_panel_text")
+            action Show("blessing_panel_text"), Hide("info_panel_text"), Hide("character_panel")
         text "Текущее здоровье: [health]"  style "info_text"
         text "Золото: [money]" style "info_text"
         text "Сила: [strength]" style "info_text"
         text "Интеллект: [intelligence]" style "info_text"
         text "Харизма: [charisma]" style "info_text"
-        text ""
-        text "♥[f.name]: [f_love]" style "info_text"
-        text "♥[nag.name]: [nag_love]" style "info_text"
-        text "♥[e.name]: [e_love]" style "info_text"
-        text "♥[r.name]: [r_love]" style "info_text"
-        text "♥[d.name]: [d_love]" style "info_text"
-        text "♥[eris.name]: [eris_love]" style "info_text"
-        text "♥[mao.name]: [mao_love]" style "info_text"
-        text "♥[mer.name]: [mer_love]" style "info_text"
-        text "♥[h.name]: [h_love]" style "info_text"
-        text "♥[m.name]: [m_love]" style "info_text"
-        text "♥[s.name]: [s_love]" style "info_text"
-        text "♥[ts.name]: [ts_love]" style "info_text"
+        textbutton "♥[f.name]: [my_freya.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_freya), Hide("info_panel_text")
+        textbutton "♥[nag.name]: [my_nag.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_nag), Hide("info_panel_text")
+        textbutton "♥[e.name]: [my_elsa.love]"  text_style "info_textbutton":
+            action Show("character_panel", char=my_elsa), Hide("info_panel_text")
+        textbutton "♥[r.name]: [my_rapunzel.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_rapunzel), Hide("info_panel_text")
+        textbutton "♥[d.name]: [my_darkness.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_darkness), Hide("info_panel_text")
+        textbutton "♥[eris.name]: [my_eris.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_eris), Hide("info_panel_text")
+        textbutton "♥[mao.name]: [my_mao.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_mao), Hide("info_panel_text")
+        textbutton "♥[mer.name]: [my_merlin.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_merlin), Hide("info_panel_text")
+        textbutton "♥[h.name]: [my_holo.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_holo), Hide("info_panel_text")
+        textbutton "♥[m.name]: [my_miku.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_miku), Hide("info_panel_text")
+        textbutton "♥[s.name]: [my_sakura.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_sakura), Hide("info_panel_text")
+        textbutton "♥[ts.name]: [my_tsunade.love]" text_style "info_textbutton":
+            action Show("character_panel", char=my_tsunade), Hide("info_panel_text")
 
 screen quest_panel_text:
     vbox:
-        xalign 0.555
-        yalign 0.052
-        xsize 600
-        spacing 5
+        xalign 0.535
+        yalign 0.06
+        xsize 550
+        spacing 3
         text "Задача: [active_quest.whatToDo]" style "info_text"
         if active_quest.forWho:
             text "Для: [active_quest.forWho]" style "info_text"
@@ -173,9 +185,9 @@ screen quest_panel_text:
 
 screen blessing_panel_text:
     vbox:
-        xalign 0.555
-        yalign 0.052
-        xsize 600
+        xalign 0.535
+        yalign 0.06
+        xsize 550
         spacing 5
         text "Благословение: [chosen_blessing.name]" style "info_text"
         text "Преимущество: [chosen_blessing.description]" style "info_text"
@@ -187,6 +199,37 @@ screen blessing_panel_text:
         action Hide("blessing_panel_text"), Show("info_panel_text"), Show("cheat_buttons")
 
 
+screen character_panel(char):
+    frame:
+        xalign 0.58
+        yalign 0.15
+        xsize 250
+        ysize 500
+        background char.img at Transform(zoom=0.5) 
+
+    vbox:
+        xalign 0.45
+        yalign 0.052
+        xsize 350
+        spacing 5
+        text ""
+        text "Имя: [char.name]" style "info_text"
+        text ""
+        text "Описание: \n[char.desc]" style "info_text"
+        text ""
+        text "Совет: \n[char.notice]" style "info_text"
+        text ""
+        text "Симпатия: [char.love]♥" style "info_text"
+        text "Сила: [char.str]" style "info_text"
+
+    imagebutton:
+        align (0.64, 0.07)
+        idle "gui/button/back.png"
+        hover "gui/button/back_hover.png"
+        action Hide("character_panel"), Show("info_panel_text"), Show("cheat_buttons")
+
+
+
 
 # Определяем стиль
 style info_text:
@@ -195,6 +238,7 @@ style info_text:
     font "gui/fonts/NK123.ttf"
 
 style info_textbutton:
+    spacing 1
     size 35
     color "#000"
     hover_color "#808080"

@@ -4,10 +4,10 @@ label talk_to_freya:
     scene bg haven with fade
     pause 1.0
     $ outfit_chance = renpy.random.randint(1,100)
-    if outfit_chance > 90 and f_love >= 50:
+    if outfit_chance > 90 and my_freya.love >= 50:
         show f smile_shy_naked_hold with dissolve
         f "Дорогой, ты так неожиданно зашел, я как раз переодевалась, чем я могу помочь тебе?"
-    elif outfit_chance > 70 and f_love >= 40:
+    elif outfit_chance > 70 and my_freya.love >= 40:
         show f smile_shy_hold_swimsuit with dissolve
         f "[hero_name], тебя не учили стучаться? Хотя ничего страшного, это всего-лишь плавательный костюм."
         f "Кстати как тебе?"
@@ -18,7 +18,7 @@ label talk_to_freya:
             "Прикройся":
                 p "Что за стыд, могла бы прикрыться"
                 f "Ах так?"
-                if f_love >= 70:
+                if my_freya.love >= 70:
                     f "Может быть так тебе больше понравится?"
                     show f smile_shy_naked_hold with dissolve
                     menu:
@@ -35,7 +35,7 @@ label talk_to_freya:
                     "Больше такого не увидишь!"
                     $minusLove("f",10)
                     show f little_sad with dissolve
-    elif outfit_chance > 60 and f_love >= 30:
+    elif outfit_chance > 60 and my_freya.love >= 30:
         show f smile_shy_hold with dissolve      
     else:
         show f smile with dissolve
@@ -57,7 +57,7 @@ label talk_to_freya_menu:
             f "Но не переживай, я не буду в них заглядывать."
             "Кнопка для просмотра текущей информации отображаются в правом верхнем углу"
             jump talk_to_freya_menu
-        "Помоги мне" if f_love >= 50:
+        "Помоги мне" if my_freya.love >= 50:
             p "Я так устал, помоги мне расстабиться, ты же богиня."
             f "Дорогой, я вижу ты отлично потрудился."
             jump freya_root_menu
@@ -79,22 +79,22 @@ label talk_to_freya_menu:
 
 label freya_root_menu:
     menu:
-        "Мастурбация" if f_love >= 50:
+        "Мастурбация" if my_freya.love >= 50:
             call freya_root_masturbate
             jump freya_root_menu
-        "Грудями" if f_love >= 60:
+        "Грудями" if my_freya.love >= 60:
             call freya_root_titfuck
             jump freya_root_menu
-        "Минет" if f_love >= 70:
+        "Минет" if my_freya.love >= 70:
             call freya_root_blowjob
             jump freya_root_menu
-        "Секс" if f_love >= 80:
+        "Секс" if my_freya.love >= 80:
             call freya_root_fuck
             jump freya_root_menu
-        "Анал" if f_love >= 90:
+        "Анал" if my_freya.love >= 90:
             call freya_root_anal
             jump freya_root_menu
-        "Фетиш" if f_love >= 200:
+        "Фетиш" if my_freya.love >= 200:
             call freya_root_fetish
             jump freya_root_menu
         "Вернуться":

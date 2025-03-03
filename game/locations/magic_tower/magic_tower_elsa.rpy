@@ -61,7 +61,7 @@ label elsa_quests:
         "Собирать магические материалы":
             p "Я готов собирать магические материалы."
             e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
-            if isAbleQuest(quest_elsa_materials, e_love):
+            if isAbleQuest(quest_elsa_materials, my_elsa.love):
                 menu:
                     "Собирать магические материалы"
                     "Принять квест":
@@ -83,7 +83,7 @@ label elsa_quests:
             e smile_closed_eyes "Ты быстро учишься, [hero_name]. Сделай это, и я... подумаю, как тебя отблагодарить." with dissolve
             p "Звучит как сделка."
             e smirk "Тогда не медли. Пещеры к северу от башни. И не разбей кристалл — он хрупкий." with dissolve
-            if isAbleQuest(quest_elsa_crystall, e_love):
+            if isAbleQuest(quest_elsa_crystall, my_elsa.love):
                 menu:
                     "Добыть Кристалл зимнего эха в Ледяных пещерах"
                     "Принять квест":
