@@ -46,27 +46,32 @@ label nagatoro_dodjo_menu:
         "Спортивное позирование" if nag_love >= 50: 
             call nagatoro_root_show  
             $nextTime()
-            jump nagatoro_dodjo
+            jump nagatoro_dodjo_menu
         "Растираение грудными мыщцами" if nag_love >= 60: 
-            call nagatoro_root_titfuck  
+            menu:
+                "INFO: В этой сцене пришлось сделать грудь [nag.name] значительно больше."
+                "Продолжить":
+                    call nagatoro_root_titfuck  
+                "Вернуться":
+                    jump nagatoro_dodjo_menu
             $nextTime()
-            jump nagatoro_dodjo
+            jump city
         "Развитие лицевых мышц" if nag_love >= 70: 
             call nagatoro_root_blowjob  
             $nextTime()
-            jump nagatoro_dodjo
+            jump city
         "Тренировка мышц таза" if nag_love >= 80: 
             call nagatoro_root_fuck  
             $nextTime()
-            jump nagatoro_dodjo
+            jump city
         "Стимулирование анальной проходимости" if nag_love >= 90: 
             call nagatoro_root_anal  
             $nextTime()
-            jump nagatoro_dodjo
+            jump city
         "Тренировка с доп. условиями" if nag_love >= 90: 
             call nagatoro_root_fetish  
             $nextTime()
-            jump nagatoro_dodjo
+            jump city
         "Не хочу тренироваться": 
             p "Продолжим позже, сейчас у меня есть более важные дела."
             nag "Как скажешь."
@@ -184,7 +189,7 @@ label nagatoro_root_show:
     nag "Я хотела сказать, что помимо груди больше всего я вкладывала сил именно в бедренные вышцы."
     mind "О да, я мечтал об этом, каждый спарринг, каждый партер были не зря!"
     nag "Что молчишь? Неужели результаты моих тренировок настолько поражают?"
-    p "Д-дааа, [nag.name], ты точно не зря старалась!"
+    p "Д-да, [nag.name], ты точно не зря старалась!"
     scene bg nag_show9_3 with dissolve
     call hide_dialog
     mind "Кажется еще чуть чуть и я буду на небесах, у нее просто охуенная задница."
@@ -209,7 +214,7 @@ label nagatoro_root_show:
     nag "Ну тогда ладно~"
     scene bg nag_show11 with dissolve
     call hide_dialog
-    mind "[nag.name] слегка наклонилась, не думаю, что это упражнение, она точно не хотела просто показать свои прелести мне?"
+    mind "[nag.name] слегка наклонилась, не думаю, что это упражнение. Она точно не хотела просто показать свои прелести мне?"
     nag "Не витай в облаках, а то заставлю повторять за мной!"
     scene bg nag_show12 with dissolve
     call hide_dialog
@@ -527,8 +532,8 @@ label nagatoro_root_titfuck:
 
     "Ты начинаешь кончать"
     
-    if nag_love < 70:
-        $customNotify("Недостаточно симпатии")
+    if strength < 100:
+        $customNotify("Недостаточно силы")
         "[nag.name] вырвалась"
         scene bg nagatoro_dodjo with fade
         show nag normal_shy_battle6 with dissolve

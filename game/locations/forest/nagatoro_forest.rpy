@@ -117,7 +117,7 @@ label visit_nagatoro_forest:
 
 label nagatoro_forest_menu:
     menu:
-        "Тренировка(новая)" if nag_love >= 60 and first_root_nagatoro: 
+        "Тренировка(новая)" if nag_love >= 50 and first_root_nagatoro: 
             nag @happy "Эй, [hero_name], я придумала новые тренировки!"
             nag @grin "Это скорее кардио, и направлены на развитие различных групп мышц, а тренироваться необходимо с минимумом одежды!"
             show nag normal_shy_battle3 with dissolve   
@@ -415,15 +415,12 @@ label check_lvl_root:
                 "Ты уходишь"
                 mind "Интересно, что [nag.name] задумала? Она явно это просто так не оставит.."
                 mind "Спасибо [f.name], прекрасный мир!"
-                jump forest
             else:
                 nag "Я так и знала, что ты слабак, просто надо было серьезнее отнестись к бою!"
                 $minusLove("nag", 10)
-                jump forest
                 "Ты убегаешь, пока не понимаешь, что в безопасности"
                 "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
                 mind "Нужно стать сильнее!"
-                jump forest
         else:
             nag "И это всё, что ты можешь? Беги, беги, слабак!"
             $minusLove("nag", 10)
@@ -431,7 +428,8 @@ label check_lvl_root:
             "Ты убегаешь, пока не понимаешь, что в безопасности"
             "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
             mind "Нужно стать сильнее!"
-            jump forest
+        $nextTime()
+        jump forest
     if nag_love >= 40:
         show nag normal_shy_battle2 with dissolve
         nag "Эй, ты совсем порвал мой кэйкоги!"
@@ -445,7 +443,7 @@ label check_lvl_root:
            "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
            show nag normal_shy_battle4 with dissolve
            nag @grin_battle4 "Может не будешь так сильно хватать, я устала зашивать кейроги!"
-           nag normal_shy_battle4 "Ты не собираешшься отвернуть?"
+           nag normal_shy_battle4 "Ты не собираешься отвернуться?"
            p "Зачем?"
            nag @grin_battle4 "Хах, а ты осмелел!"
            nag normal_shy_battle4 "[hero_name], хочешь тренировать? Приходи в следующий раз, видишь же, мне надо зашить одежду!"
@@ -459,7 +457,8 @@ label check_lvl_root:
             "Ты убегаешь, пока не понимаешь, что в безопасности"
             "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
             mind "Нужно стать сильнее!"
-            jump forest
+        $nextTime()
+        jump forest
     elif nag_love >= 30: 
         show nag normal_shy_battle2 with dissolve
         nag "Эй, ты совсем порвал мой кэйкоги!"
@@ -480,7 +479,6 @@ label check_lvl_root:
            nag normal_shy_battle3 "[hero_name], ты, надеюсь, насмотрелся? Может уже свалишь пока цел?"
            p "Аа, ээ, да, конечно, уже ухожу!"
            "Ты уходишь, понимая, что всё было не зря"
-           jump forest
         else:
             nag "И это всё, что ты можешь? Беги, беги, слабак!"
             $minusLove("nag", 10)
@@ -488,19 +486,23 @@ label check_lvl_root:
             "Ты убегаешь, пока не понимаешь, что в безопасности"
             "И когда понимаешь, что опасность миновала, задаешься риторическим вопросом.."
             p "Может мне стоило достойно принять поражение?"
-            jump forest
+        $nextTime()
+        jump forest
     elif nag_love >= 20:
         show nag normal_shy_battle2 with dissolve
         nag "Эй, ты порвал мой кэйкоги!"
         p "В настоящем сражении одежда неизбежно изнашивается."
         nag "[hero_name], на сегодня закончили, приходи завтра, я буду серьезна."
+        $nextTime()
         jump forest
     elif nag_love >= 10:
         show nag normal_shy_battle1 with dissolve
         nag "[hero_name], больше не хватайся так, ты растянул мне всю одежу!"
         p "Это было необходимо, чтобы наконец победить тебя"
         nag "На сегодня ты свободен, мне нужно тренироваться!."
+        $nextTime()
         jump forest
     else:
         nag "А ты действительно делаешь успехи, [hero_name]."
+        $nextTime()
         jump nagatoro_forest_menu
