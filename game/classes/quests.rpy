@@ -103,6 +103,71 @@ init python:
     str_bonus=6, intelligence_bonus=0, char_bonus=0
     )
 
+    #Eris quests
+    quest_eris_goblin_hunting = GirlQuest(
+        whatToDo="Охота на гоблинов",
+        forWho="Эрис",
+        forWhoShort="eris",
+        repeatable=True,
+        location="Лесная чаща",
+        countObj=10,  # Убить 5 гоблинов
+        character_says=[
+            "Гоблины — мелочь, но их слишком много. Пора их проредить!",
+            "Бери меч и пошли, я начну!"
+        ],
+        req_love=20,  # Требуется минимальная симпатия Эрис
+        req_str=20,   # Нужно немного силы для боя
+        req_intelligence=0,  # Интеллект не нужен
+        req_char=0,   # Харизма не требуется
+        reward_money=15,      # Скромная награда
+        reward_character=10,  # +10 к любви Эрис
+        str_bonus=5,          # Бонус к силе за победу
+        intelligence_bonus=0, # Нет бонуса к интеллекту
+        char_bonus=0          # Нет бонуса к харизме
+    )
+    quest_eris_dragon_hunting = GirlQuest(
+        whatToDo="Выгнать дракона",
+        forWho="Эрис",
+        forWhoShort="eris",
+        repeatable=False,  # Дракон — редкий противник
+        location="Пещера",
+        countObj=1,  # Один дракон
+        character_says=[
+            "Дракон? Отлично, я давно хотела зарубить что-то большое!",
+            "Покажи, на что способен, или не мешай мне!"
+        ],
+        req_love=30,  # Нужно больше доверия Эрис
+        req_str=40,   # Дракон требует серьёзной силы
+        req_intelligence=10,  # Нужно немного смекалки для тактики
+        req_char=0,   # Харизма не важна
+        reward_money=50,      # Хорошая награда за сложность
+        reward_character=15,  # +15 к любви Эрис
+        str_bonus=10,          # Бонус к силе за победу
+        intelligence_bonus=0, # Нет бонуса к интеллекту
+        char_bonus=0          # Нет бонуса к харизме
+    )
+    quest_eris_date = GirlQuest(
+        whatToDo="Свидание",
+        forWho="Эрис",
+        forWhoShort="eris",
+        repeatable=True,  # Можно повторять для укрепления отношений
+        location="Город",
+        countObj=0,  # Нет конкретных объектов, просто провести время
+        character_says=[
+            "Свидание? Ты шутишь? Хотя... давай попробуем!",
+            "Только не думай, что я буду скучать. Удиви меня!"
+        ],
+        req_love=50,  # Нужно больше любви для романтики
+        req_str=0,    # Сила не требуется
+        req_intelligence=0,  
+        req_char=20,  # Харизма важна для успеха
+        reward_money=0,       # Нет денег, это не про заработок
+        reward_character=20,  # +20 к любви Эрис при успехе
+        str_bonus=0,          # Нет бонуса к силе
+        intelligence_bonus=1, # Небольшой бонус к интеллекту
+        char_bonus=2          # Бонус к харизме за удачное свидание
+    )
+
     #tsunade quests
     quest_tsunade_poison_tooth = GirlQuest(whatToDo="Достать клык", forWho="Тсунаде", forWhoShort="ts", repeatable=True,
     location="Лесная чаща", countObj=5, 
@@ -181,7 +246,7 @@ init python:
         if who == "m":
             targetQuests = []
         if who == "eris":
-            targetQuests = []
+            targetQuests = [quest_eris_goblin_hunting, quest_eris_dragon_hunting, quest_eris_date]
         if any(active_quest.name in q.name for q in targetQuests):
             result = True
         return result

@@ -34,7 +34,7 @@ init:
     define d_str = 200
     define eris = Character('Эрис', color="#7B1113", image='eris')
     define eris_love = 0
-    define eris_str = 180
+    define eris_str = 150
     ## Some guys
     define guy1 = Character('Парень 1', color="#ffaaaa")
     define guy2 = Character('Парень 2', color="#ffaaaa")
