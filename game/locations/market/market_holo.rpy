@@ -992,7 +992,222 @@ label h_root_blowjob:
     return
 
 label h_root_fuck:
-    "IN PROGRESS"
+    scene bg holo_room with fade
+    "[h.name] приводит тебя в свою комнату, её глаза блестят хитринкой, а кончик волчьего хвоста слегка покачивается."
+    show h smile_shy with dissolve
+    h "Ну что, [hero_name], готов к настоящему угощению от волчицы?"
+
+    # 1. Холо раздевается с элементами зверя
+    scene bg h_fuck1_1 at Transform(zoom=1.5) with fade
+    call hide_dialog
+    "[h.name] садится перед тобой и смотрит с игривой насмешкой."
+
+    scene bg h_fuck1_2 at Transform(zoom=1.5) with dissolve
+    pause .4
+    scene bg h_fuck1_1 at Transform(zoom=1.5) with dissolve
+    pause .4
+    scene bg h_fuck1_2 at Transform(zoom=1.5) with dissolve
+    pause .4
+    scene bg h_fuck1_1 at Transform(zoom=1.5) with dissolve
+    pause .4
+    scene bg h_fuck1_2 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] шевелит ушками и хвостиком, дразня тебя."
+    h "Ну как, нравится смотреть на волчицу?"
+
+    scene bg h_fuck2 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "Она встаёт и смотрит с лукавой ухмылкой."
+    h "Готовься, смертный, сейчас будет жарко!"
+
+    scene bg h_fuck3 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] медленно стягивает юбку ниже по бёдрам, не открывая киску."
+    h "Терпение, [hero_name], я знаю, чего ты ждёшь."
+
+    scene bg h_fuck4 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] игриво снимает юбку и приподнимает рубашку, показывая киску и грудь."
+
+    scene bg h_fuck5 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] стоит перед тобой абсолютно голая и уверенная в себе."
+    h "Вот тебе волчица во всей красе — наслаждайся!"
+    p "Ты... просто невероятна."
+
+    scene bg h_fuck7 at Transform(zoom=1.5) with fade
+    call hide_dialog
+    "[h.name] садится обратно на колени в немного дикой позе и смотрит на тебя как на добычу."
+    h "Ну что, готов к охоте, смертный?"
+
+    scene bg h_fuck8 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "Каким-то образом за хвостиком [h.name] появляется красный дилдо."
+    h "Смотри, какая у меня игрушка — почти как ты, только чуть скромнее."
+
+    scene bg h_fuck9 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] приближает дилдо к своей киске, слегка касаясь его."
+    h "Хочешь, чтобы волчица разогрелась перед тобой?"
+
+    scene bg h_fuck10 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] с той же ухмылкой пристраивается к дилдо, дразня киской."
+
+    scene bg h_fuck11 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] начинает тереться о дилдо, её лицо искажается от возбуждения."
+    h "Ммм..."
+
+    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck12_1 at Transform(zoom=1.5) with flash
+    pause .03
+    scene bg h_fuck12_2 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg h_fuck13 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    h "Ааах..."
+    "Ты не выдерживаешь и набрасываешься на [h.name]."
+
+    scene bg h_fuck14 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "Твой член уже в киске [h.name], и ты готов её взять."
+    h "Ах... Покажи, чего стоишь!"
+
+    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck15_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck15_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck15_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck15_3 at Transform(zoom=1.5) with flash
+    pause .03
+    scene bg h_fuck15_1 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg h_fuck16 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    p "Вот тебе!"
+    h "Ах... Да!"
+    "У [h.name] текут слёзы. Ты заполняешь киску [h.name] спермой, но тебе мало, и ты меняешь позу."
+
+    scene bg h_fuck18 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    p "Стой смирно, волчица!"
+
+    if strength < 50:
+        $customNotify("Недостаточно силы")
+        "Ты не смог удержать [h.name]"
+        scene bg holo_room with fade
+        show h angry_naked_cummed with dissolve
+        h "Что ж, [hero_name], было хорошо, но и меру надо знать!"
+        "Она уходит, оставляя тебя одного в комнате."
+        "Ты уходишь."
+        return
+
+    scene bg h_fuck18_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck18_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck18_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck18_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck18_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_fuck18_3 at Transform(zoom=1.5) with flash
+    pause .03
+    scene bg h_fuck18_4 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg h_fuck19 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    p "Ещё порция для тебя!"
+    h "Ааааах!"
+
+    scene bg h_fuck20 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Ты продолжаешь наполнять её киску спермой, она брызжет наружу и течёт по бёдрам."
+    h "Ммм... Ааах.."
+
+    scene bg h_fuck21 at Transform(zoom=1.5) with fade
+    call hide_dialog
+    "[h.name] падает на кровать от усталости, сперма вытекает из её киски."
+    h "Ох..."
+
+    scene bg h_fuck22 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Но ты ещё не закончил и продолжаешь покрывать её тело спермой."
+    p "Получай ещё, волчица!"
+
+    scene bg h_fuck23 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    p "И последняя порция!"
+    h "..."
+
+    scene bg holo_room with fade
+    "[h.name] всё ещё лежит в огромной луже спермы, а ты уходишь."
     return
 
 label h_root_anal:
