@@ -223,7 +223,7 @@ label holo_market_root_menu:
                 jump holo_menu
             h @smile_shy "Ладно, это слишком, сделаю для тебя скидку~"
             $minusMoney(100)
-            call h_root_fetish
+            call h_root_footfuck
             $nextTime()
             jump market
         "Вернуться":
@@ -804,7 +804,10 @@ label h_root_blowjob:
     "[h.name] садится на колени напротив, её движения плавные и уверенные."
     h "Ну что, начнём? Ты ведь за этим сюда явился."
     p "Да..."
+    call h_root_blowjob_continue
+    return
 
+label h_root_blowjob_continue:
     scene bg h_blowjob5_2 at Transform(zoom=1.5) with fade
     call hide_dialog
     "Ты расстёгиваешь штаны, и [h.name] склоняет голову."
@@ -1090,8 +1093,12 @@ label h_root_fuck:
     scene bg h_fuck13 at Transform(zoom=1.5) with flash
     call hide_dialog
     h "Ааах..."
-    "Ты не выдерживаешь и набрасываешься на [h.name]."
+    call h_root_fuck_continue
+    return
 
+label h_root_fuck_continue:
+
+    "Ты не выдерживаешь и набрасываешься на [h.name]."
     scene bg h_fuck14 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Твой член уже в киске [h.name], и ты готов её взять."
@@ -1463,6 +1470,123 @@ label h_root_anal_continue:
     "Ты уходишь."
     return
 
-label h_root_fetish:
-    "IN PROGRESS"
+label h_root_footfuck:
+    scene bg h_foot1 at Transform(zoom=1.5) with fade
+    # Холо сидит на стуле или кровати, вытягивая ноги к ГГ
+    "[h.name] садится напротив тебя, вытягивая свои стройные ноги и шевеля пальцами."
+    h "Смотри, какие у волчицы лапки. Удобно устроился, [hero_name]?"
+
+    scene bg h_foot2 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    p "Холо, что ты задумала?"
+    h "Ха, скоро узнаешь. Волчица хочет поиграть!"
+
+    # 2. ГГ возбуждается, Холо касается ногами его члена
+    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    # Холо касается ногами промежности ГГ, он напрягается
+    "Ты чувствуешь, как её прохладные ступни касаются твоей промежности, и твой член мгновенно твердеет."
+    h "Ох, какой ты шустрый! Я ещё ничего толком не сделала, а ты уже наготове."
+    "Она хихикает, её пальцы ног слегка сжимают тебя через ткань."
+    p "Холо... это слишком..."
+
+    # Анимация: Холо ускоряет движения ногами
+    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg h_foot3_2 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    h "Ха, ты весь дрожишь, [hero_name]! Неужто мои лапки так тебя завели?"
+    p "Холо... я не выдержу долго..."
+
+    # 4. ГГ обильно кончает
+    scene bg h_foot4 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Ты не выдерживаешь, и мощный поток спермы вырывается, заливая её ступни и лодыжки."
+
+    scene bg h_foot5 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    h "Ох... сколько же ты припас! Волчица довольна таким уловом!"
+
+    scene bg h_foot6 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Сперма сочится из твоего члена и стекает по её ногам, а она ухмыляется."
+    h "Ммм... ну и напор у тебя!"
+
+    scene bg h_foot7 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    p "Ах... Холо..."
+    h "Хо-хо, [hero_name], ты так изголодался по моим ножкам?"
+
+    # 5. Холо показывает ноги, покрытые спермой
+    scene bg h_foot8 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    # Холо поднимает ноги, демонстрируя сперму
+    "[h.name] приподнимает ноги, показывая, как твоя сперма блестит на её коже, и слегка разводит пальцы."
+    h "Ну что скажешь, [hero_name]? Мои лапки теперь все в твоём... даре."
+    "Она хихикает, её хвост игриво дёргается."
+
+    scene bg h_foot9 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    p "Ты... это слишком много для меня..."
+    h "Ха, слишком? Волчица знает, как удивить!"
+
+    scene bg h_foot10 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[h.name] показывает, как сперма стекает по её ножкам."
+    h "Тепло и липко... мне нравится."
+
+    scene bg h_foot11 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    h "Неужто мы на этом закончим?"
+    menu:
+        "Минет":
+            call h_root_blowjob_continue
+            return
+        "Секс":
+            p "Нет, мы точно продолжим!"
+            call h_root_fuck_continue
+            return
+        "Анал":
+            p "Надень юбку, это меня заводит."
+            "..."
+            "....."
+            "......."
+            scene bg pull_skirt1 at Transform(zoom=1.5) with fade
+            pause .7
+            scene bg pull_skirt2 at Transform(zoom=1.5) with fade
+            h "Вот так?"
+            call h_root_anal_continue
+            return
+        "На этом всё":
+            p "Хватит на сегодня."
+
+    scene bg holo_room with fade
+    show h smile_naked at center with dissolve
+    "[h.name] встаёт, её ноги всё ещё покрыты спермой, и она смотрит на тебя с лукавой улыбкой."
+    h "Вот так волчица развлекается, [hero_name]. Приходи ещё, если захочешь новых игр."
+    "Она подмигивает и уходит, оставляя тебя одного в комнате."
     return
