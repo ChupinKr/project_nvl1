@@ -164,7 +164,7 @@ screen info_panel_text:
 screen quest_panel_text:
     vbox:
         xalign 0.535
-        yalign 0.06
+        yalign 0.042
         xsize 550
         spacing 3
         text "Задача: [active_quest.whatToDo]" style "info_text"
@@ -186,7 +186,7 @@ screen quest_panel_text:
 screen blessing_panel_text:
     vbox:
         xalign 0.535
-        yalign 0.06
+        yalign 0.045
         xsize 550
         spacing 5
         text "Благословение: [chosen_blessing.name]" style "info_text"
@@ -574,6 +574,12 @@ screen navigation():
 
             ## Помощь не необходима и не относится к мобильным устройствам.
             textbutton _("Помощь") action ShowMenu("help")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            textbutton _("Boosty") action OpenURL("https://boosty.to/Ko2ed/")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            textbutton _("Patreon") action OpenURL("https://patreon.com/c/Ko2ed/")
 
         if renpy.variant("pc"):
 

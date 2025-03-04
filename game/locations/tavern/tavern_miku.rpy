@@ -376,97 +376,196 @@ label m_root_titfuck:
     "[my_miku.name] убирает часть костюма прикрывающую грудь"
     m "Хах! Думаю так тебе привычнее меня видеть!"
 
+    scene bg miku_titfuck3_2 at Transform(zoom=1.5) with dissolve
+    "[my_miku.name], смущаясь, наклоняется. Она снимает свою юбку, открывая отличный вид на ее киску"
+
     scene bg miku_titfuck4 at Transform(zoom=1.5) with dissolve
     pause 0.7
     scene bg miku_titfuck4_2 at Transform(zoom=1.5) with dissolve
     "Она полностью снимает верх, ты видишь ее шикарную большую грудь"
     m "Нравится?"
 
-    # 1. [my_miku.name] снимает верх, остаётся в юбке
-    scene bg miku_breastfuck_undress1 at Transform(zoom=1.5) with dissolve
-    # [my_miku.name] снимает верх, обнажая грудь
-    "[m.name] с улыбкой стягивает верхнюю часть своей одежды, обнажая грудь, и остаётся в короткой юбке."
-    m "Смотри, какая у меня форма! Специально для тебя, [hero_name]."
-    p "Ты... потрясающая."
+    scene bg miku_titfuck5 at Transform(zoom=1.5) with dissolve
+    "[my_miku.name] садится на колени и прижимается своими грудями между твоих ног, смотря просящим взглядом"
 
-    # 2. [my_miku.name] садится между ног ГГ
-    scene bg miku_breastfuck_sit1 at Transform(zoom=1.5) with dissolve
-    # [my_miku.name] садится между ног ГГ, её грудь близко
-    "[m.name] опускается на колени между твоих ног, её грудь почти касается тебя."
-    m "Устраивайся поудобнее, сейчас будет весело!"
-    "Она хихикает, её глаза блестят от предвкушения."
-
-    # 3. [my_miku.name] видит член ГГ, прижатый к её щеке
-    scene bg miku_breastfuck_tease1 at Transform(zoom=1.5) with dissolve
-    # ГГ расстёгивает штаны, член касается щеки [my_miku.name]
-    "Ты расстёгиваешь штаны, и твой член высвобождается, тут же прижимаясь к её мягкой щеке."
-    m "Ой, какой шустрый! Уже хочет познакомиться поближе?"
-    p "[my_miku.name]... ты сама его дразнишь."
-
-    # 4. [my_miku.name] облизывает член ГГ
-    scene bg miku_breastfuck_lick1 at Transform(zoom=1.5) with dissolve
-    # [my_miku.name] проводит языком по члену
-    "[m.name] наклоняется и медленно проводит языком вдоль твоего члена, её движения дразнящие."
-    m "Ммм... вкусненько! Тебе ведь нравится, когда я так делаю?"
-    "Она смотрит на тебя снизу вверх, кокетливо улыбаясь."
-
-    # 5. [my_miku.name] погружает член между грудями
-    scene bg miku_breastfuck_breast1 at Transform(zoom=1.5) with dissolve
-    # [my_miku.name] сжимает член грудями
-    "[m.name] прижимает свою грудь к твоему члену, погружая его между мягкими округлостями."
-    m "Вот так, между моими малышками тебе будет уютно!"
-    p "Это... слишком хорошо..."
-
-    # 6. [my_miku.name] начинает двигаться
-    scene bg miku_breastfuck_move1 at Transform(zoom=1.5) with dissolve
-    # [my_miku.name] двигает грудью вверх-вниз
-    "[m.name] начинает двигать грудью, её движения ритмичны, как мелодия."
-    m "Чувствуешь ритм? Я же звезда таверны, умею зажигать!"
-    "Она ускоряет темп, её хвосты слегка покачиваются в такт."
-
-    scene bg miku_breastfuck_move2 at Transform(zoom=1.5) with dissolve
-    pause .2
-    scene bg miku_breastfuck_move1 at Transform(zoom=1.5) with dissolve
-    pause .2
-    scene bg miku_breastfuck_move2 at Transform(zoom=1.5) with dissolve
+    scene bg miku_titfuck6 at Transform(zoom=1.5) with dissolve
+    "Внезапно твой член выскакивает у нее между грудей и слегка шлепает по ее личику, прикасаясь к ее губам"
+    m "!!!"
+    
+    scene bg miku_titfuck7 at Transform(zoom=1.5) with dissolve
+    "[my_miku.name] осматривает твой член с восторгом"
+    m "Какой же он большой..."
+    
+    scene bg miku_titfuck8_1 at Transform(zoom=1.5) with dissolve
+    "Она легко целует твой член и высовывает язычок"
+    
+    scene bg miku_titfuck8_2 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck8_3 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck8_3 at Transform(zoom=1.5) with dissolve
     pause .1
-    scene bg miku_breastfuck_move1 at Transform(zoom=1.5) with dissolve
+    scene bg miku_titfuck8_2 at Transform(zoom=1.5) with dissolve
     pause .1
-    scene bg miku_breastfuck_move2 at Transform(zoom=1.5) with dissolve
+    scene bg miku_titfuck8_3 at Transform(zoom=1.5) with dissolve
     pause .1
-    h "Хи-хи, ты уже на пределе, [hero_name]?"
-    p "[my_miku.name]... я не выдержу..."
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck8_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck8_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck8_5 at Transform(zoom=1.5) with dissolve
+    m "Ммм..."
 
-    # 7. ГГ кончает
-    scene bg miku_breastfuck_cum1 at Transform(zoom=1.5) with flash
-    # ГГ кончает, сперма покрывает грудь [my_miku.name]
-    "Ты не выдерживаешь, и первая порция спермы вырывается, заливая её грудь."
-    m "Ой, какой напор! Ты прямо фонтанчик!"
+    scene bg miku_titfuck9 at Transform(zoom=1.5) with dissolve
+    m "Как тебе поя работа язычком?"
+    p "Ты... великолепна!"
 
-    # 8. ГГ обильно кончает
-    scene bg miku_breastfuck_cum2 at Transform(zoom=1.5) with flash
-    # ГГ продолжает кончать, сперма брызжет дальше
-    "Ты кончаешь ещё обильнее, сперма покрывает её грудь и брызжет выше."
-    m "Вау, сколько же тебя! Это что, вся таверна в одном?"
+    scene bg miku_titfuck10 at Transform(zoom=1.5) with dissolve
+    pause .7
+    scene bg miku_titfuck11 at Transform(zoom=1.5) with dissolve
+    "[my_miku.name] обхватывает грудями твой член"
+    m "Правда? А ведь я еще даже не начала~"
 
-    # 9. [my_miku.name] открывает ротик
-    scene bg miku_breastfuck_cum3 at Transform(zoom=1.5) with flash
-    # [my_miku.name] открывает рот, ловя сперму
-    "[m.name] открывает ротик, пытаясь поймать последние капли, её глаза блестят от восторга."
-    m "Ммм... вкусненько! Не пропущу ни капли!"
+    
+    scene bg miku_titfuck11_1 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck11_3 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck11_3 at Transform(zoom=1.5) with dissolve
+    pause .3
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg miku_titfuck11_4 at Transform(zoom=1.5) with flash
+    p "Аргх!"
 
-    # 10. Лицо и грудь [my_miku.name] покрыты спермой
-    scene bg miku_breastfuck_after1 at Transform(zoom=1.5) with dissolve
-    # [my_miku.name] сидит, покрытая спермой, лицо и грудь в белом
-    "[m.name] сидит напротив, её лицо и грудь покрыты спермой, а она улыбается, будто только что спела хит."
-    m "Ну как, [hero_name]? Это было ярче, чем шоу в таверне, да?"
+    scene bg miku_titfuck12 at Transform(zoom=1.5) with flash
+    pause .5
+    scene bg miku_titfuck13 at Transform(zoom=1.5) with flash
+    "[my_miku.name] сжимает твой член, из него начинает сочиться сперма"
+
+    scene bg miku_titfuck14 at Transform(zoom=1.5) with flash
+    "Ты начинаешь кончать, струя спермы летит в лицо [my_miku.name], она не отводит взгляда"
+
+    scene bg miku_titfuck15 at Transform(zoom=1.5) with flash
+    "[my_miku.name] закрывает глаза и открывает рот, старайся поймать как можно больше твоей спермы"
+
+    scene bg miku_titfuck16 at Transform(zoom=1.5) with flash
+    "[my_miku.name] все еще с закрытыми глазами получает твою сперму в рот и на лицо"
+
+    scene bg miku_titfuck17 at Transform(zoom=1.5) with flash
+    "Ты наконец останавливаешься. [my_miku.name] открыла глаза и держит твой член грядми, открыв рот, показывая, как много спермы у нее во рту"
+
+    scene bg miku_titfuck18 at Transform(zoom=1.5) with flash
+    "[my_miku.name] улыбается, глотая твою сперму"
+    
+    scene bg miku_titfuck19 at Transform(zoom=1.5) with flash
+    "[my_miku.name] наклоняется, открывая свой пустой ротик, показывая, что всё проглотила"
+
+    scene bg miku_titfuck20 at Transform(zoom=1.5) with flash
+    "[my_miku.name] улыбается смотря на тебя и упираясь своим личиком на твой член"
+
+    scene bg miku_titfuck21 at Transform(zoom=1.5) with flash
+    "[my_miku.name] наклоняется, приближаясь к твоему члену губами"
+
+    scene bg miku_titfuck22 at Transform(zoom=1.5) with flash
+    "[my_miku.name] закрывает глаза и вытягивает губы"
+
+    scene bg miku_titfuck23 at Transform(zoom=1.5) with flash
+    "[my_miku.name] слизывает сперму с твоего члена"
+
+    scene bg miku_titfuck24 at Transform(zoom=1.5) with flash
+    "После этого она смотрит на тебя с улыбкой"
+
+    scene bg miku_titfuck25 at Transform(zoom=1.5) with flash
+    m "Ну как, [hero_name]? Это было ярче, чем любое шоу, да?"
     p "Ты... нереальная, [my_miku.name]."
 
-    scene bg miku_room with fade
-    show m smile_cummed at center with dissolve
-    "[m.name] встаёт, сперма всё ещё стекает по её телу, и она смотрит на тебя с кокетливой улыбкой."
+    scene bg miku_titfuck26 at Transform(zoom=1.5) with flash
+    "[my_miku.name] сжимает свою грудь, которая вся в спермы, показывая, насколько она большая"
+    m "Понравилось, как я играю своими девочками?"
+
+    scene bg miku_titfuck27 at Transform(zoom=1.5) with flash
+    "[m.name] ложится на кровать, сперма всё ещё стекает по её телу, и она смотрит на тебя с кокетливой улыбкой."
     m "Вот так я обслуживаю своих любимых гостей! Заходи ещё, [hero_name]!"
-    "Она подмигивает и уходит, оставляя тебя одного в комнате."
+    "Ты уходишь, оставляя ее прибирать."
     return
 
 label m_root_blowjob:
