@@ -929,7 +929,7 @@ label m_root_blowjob_continue:
     return
 
 label m_root_fuck:
-    m "Подожди тут, мне надо переодеться~"
+    m "Подожди тут, я сейчас вернусь... в новом образе~"
     hide m with dissolve
     p "..."
     p "....."
@@ -937,51 +937,51 @@ label m_root_fuck:
 
     scene bg m_fuck1_1 at Transform(zoom=1.5) with fade
     call hide_dialog
-    "В комнату заходит [my_miku.name] в костюме развратной студентки, покачивая бедрами и улыбаясь своей фирменной улыбкой."
+    "В комнату заходит [my_miku.name], переодетая в костюм развратной студентки, покачивая бёдрами, с её фирменной ослепительной улыбкой."
     p "!!!"
-    m "Ну что, [hero_name], соскучился по своей любимой официантке?"
-    p "У тебя новый наряд?!"
+    m "Ну что, [hero_name], соскучился по своей любимой официантке? Сегодня я подаю нечто... особенное~"
+    p "Это что, новый костюм?!"
 
     scene bg m_fuck1_2 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] подходит ближе и Облакачивается на кровать, показывая, свои шикарные груди."
-    m "Сегодня у меня для тебя особое меню~"
+    "[my_miku.name] подходит ближе и грациозно облокачивается на кровать, пока её роскошные груди манят тебя."
+    m "В нашем меню сегодня горячая порция меня, милый~ Как тебе такой заказ?"
     p "*сглатывает*"
 
     scene bg m_fuck1_3 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] поворачивается к тебе спиной, ты видишь под юбочкой сексуальные белые стринги"
-    m "Вижу, тебе нравится мой наряд~"
+    "[my_miku.name] разворачивается спиной, и под юбочкой мелькают её белые стринги."
+    m "Ой-ой, вижу, как глазки загорелись~ Нравится мой новый образ?"
 
     scene bg m_fuck1_4 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] спускает юбочку по ножкам и слегка оттягивает попку, ты почти видишь очертания ее ануса"
-
+    "[my_miku.name] медленно стягивает юбочку вниз, и слегка оттопыривает попку, дразня тебя."
+    
     scene bg m_fuck1_5 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] осталась лишь в стрингах и белой расстегнутой рубашке"
+    "[my_miku.name] сидит в расстёгнутой рубашке и стрингах."
 
     scene bg m_fuck1_6 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] игриво улыбаясь, начинает спускать стринги по своим бедрам, открывая тебе вид на ее киску и анус"
-    m "Они такие тесные... Да и всё равно они нам будут лишь мешать"
+    "[my_miku.name], сияя улыбкой, стягивает стринги, открывая тебе всё, что скрывалось под тканью."
+    m "Эти тесные штучки только портят ритм... Давай без них, а?"
     
     scene bg m_fuck1_7 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] растягивает свою попку двумя руками, дразня тебя"
+    "[my_miku.name] раздвигает попку руками, и бросает на тебя лукавый взгляд."
     
     scene bg m_fuck1_8 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "Она повернулась к тебе лицом, по ее плечам сползает белая рубашка, полностью обнажая ее грудь"
+    "Она оборачивается, и рубашка соскальзывает с плеч, обнажая грудь."
     
     scene bg m_fuck1_9 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] осталась без одежды и слегка прикрывает грудь"
-    m "Ты так смотришь, мне даже неловко~"
+    "[my_miku.name] стоит голая, чуть прикрывая грудь, и кокетливо склоняет голову."
+    m "Ты так смотришь... Мне даже неловко~"
     
     scene bg m_fuck1_10 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "Она встает на четвереньки попкой к тебе и оттягивает анус"
+    "Она встаёт на четвереньки, повернувшись попкой к тебе, и оттягивает анус."
     m "Хах, шучу, наслаждайся шоу~"
     call m_root_fuck_continue
     return
@@ -989,9 +989,9 @@ label m_root_fuck:
 label m_root_fuck_continue:
     scene bg m_fuck2 at Transform(zoom=1.5) with vpunch
     call hide_dialog
-    "Ты не выдерживаешь и насаживаешь ее тугую киску на свой член"
-    m "Ууух, какой нетерпеливый, ладно~"
-    "[my_miku.name] начинает прыгать на твоем члене"
+    "Ты не выдерживаешь и врываешься в её тугую киску."
+    m "Ууух, какой ты нетерпеливый... Хорошо, раз ты так хочешь~"
+    "[my_miku.name] начинает двигаться на тебе, словно исполняя ритмичный танец."
 
     scene bg m_fuck3_1 at Transform(zoom=1.5) with dissolve
     pause .15
@@ -1038,12 +1038,12 @@ label m_root_fuck_continue:
     scene bg m_fuck3_4 at Transform(zoom=1.5) with flash
     call hide_dialog
 
-    "[my_miku.name] ускоряет темп, ее грудь подпрыгивает в такт движениям."
-    m "Ох.. [hero_name]... Такой... Горячий.."
+    "[my_miku.name] ускоряет темп, её грудь подпрыгивает, словно ноты в быстрой мелодии."
+    m "Ох, [hero_name]... Ты прямо... огонь в моей песне..."
 
-    "Ты начинаешь кончать в ее киску"
+    "Ты чувствуешь, как всё внутри сжимается, и начинаешь кончать в её киску."
     scene bg m_fuck4 at Transform(zoom=1.5) with flash
-    m "Ах! Заполни меня, [hero_name]~"
+    m "Ах! Давай, [hero_name], дай мне свою кульминацию~"
     scene bg m_fuck5 at Transform(zoom=1.5) with flash
     pause .7
     scene bg m_fuck6 at Transform(zoom=1.5) with flash
@@ -1052,7 +1052,7 @@ label m_root_fuck_continue:
 
     scene bg m_fuck7 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] смотрит на тебя с улыбкой. Ты оттягиваешь ее задницу, смотря, как твоя сперма вытекает из ее киски"
+    "[my_miku.name] смотрит на тебя с сияющей улыбкой. Ты оттягиваешь её попку, наблюдая, как твоя сперма вытекает."
 
     scene bg m_fuck8 at Transform(zoom=1.5) with dissolve
     call hide_dialog
@@ -1060,34 +1060,34 @@ label m_root_fuck_continue:
 
     scene bg m_fuck9 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] схватила свою задницу одной рукой и игриво смотрит на тебя"
+    "[my_miku.name] хватает свою попку одной рукой и бросает на тебя озорной взгляд."
 
     scene bg m_fuck10 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     if charisma >= 60:
-        m "Я тебя уже довольно хорошо знаю... Тебе ведь этого недостаточно?"
+        m "Я знаю тебя, [hero_name]... Тебе ведь мало одной песни, верно?"
         menu:
-            m "Продолжим?"
+            m "Споём ещё, мой любимый гость?"
             "Анал":
-                p "Ты права."
-                m "Ммм?"
+                p "Ты читаешь мои мысли."
+                m "Ого, какой поворот мелодии~ Держись!"
                 call m_root_anal_continue
                 return
             "Достаточно":
-                "Нет, мне этого хватило."
+                p "Пока хватит, звезда моя."
     else:
         $customNotify("Недостаточно харизмы")
     
-    m "Мы обязаны повторить, да, [hero_name]?"
-    p "Мы точно повторим."
-    "Ты встаешь и уходишь"
+    m "Мы ведь повторим, да, [hero_name]?"
+    p "Обязательно."
+    "Ты встаёшь и уходишь, оставляя её убирать беспорядок."
     return
 
 label m_root_anal_continue:
     scene bg m_fuck11_1 at Transform(zoom=1.5) with vpunch
     call hide_dialog
-    "Ты резко хватаешь [my_miku.name], засаживаешь свой член в ее узкую задницу, и начинаешь двигаться."
-    m "Аах!"
+    "Ты резко хватаешь [my_miku.name], врываясь в её узкую задницу."
+    m "Ааах!"
 
     scene bg m_fuck11_2 at Transform(zoom=1.5) with dissolve
     pause .2
@@ -1127,30 +1127,30 @@ label m_root_anal_continue:
     pause .03
     scene bg m_fuck11_4 at Transform(zoom=1.5) with flash
     call hide_dialog
-    m "Да! ДА! Даааа!"
+    m "Да! ДА! Дааа! "
 
     scene bg m_fuck12 at Transform(zoom=1.5) with flash
     call hide_dialog
-    "Ты кончаешь, заполняя ее анус спермой."
+    "Ты кончаешь."
     m "Ах! Да! Заполни меня~"
 
     scene bg m_fuck13 at Transform(zoom=1.5) with flash
     call hide_dialog
-    "Поток спермы лишь усиливается. [my_miku.name] стонет."
+    "Поток спермы усиливается, и [my_miku.name] стонет."
     m "Аааах~~"
 
     scene bg m_fuck14 at Transform(zoom=1.5) with flash
     call hide_dialog
-    "И наконец ты испустил всё, что у тебя было"
+    "Ты выплёскиваешь всё до последней капли."
 
     scene bg m_fuck15 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "Ты вытаскиваешь член, но [my_miku.name] дрожит не двигаясь, из ее ануса вытекает сперма"
+    "Ты вытаскиваешь член, а [my_miku.name] дрожит, всё ещё в экстазе, пока сперма вытекает из её ануса."
 
     scene bg m_fuck17 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "Наконец [my_miku.name] упала изнеможденная, а ее анус все еще сочится твоей спермой"
-    p "Классно было, я еще вернусь!"
+    "[my_miku.name] падает на кровать, изнеможённая, пока её анус сочится твоим семенем."
+    p "Отличное шоу, ещё вернусь за добавкой!"
 
     scene bg m_fuck16 at Transform(zoom=1.5) with dissolve
     call hide_dialog
