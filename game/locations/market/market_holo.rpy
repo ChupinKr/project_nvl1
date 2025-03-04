@@ -176,7 +176,11 @@ label holo_market_root_menu:
             if money < 30:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump market
-            $minusMoney(30)
+            if my_holo.love >= 150:
+                h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
+                $minusMoney(10)
+            else:
+                $minusMoney(30)
             call h_root_masturbate
             $nextTime()
             jump market
@@ -184,7 +188,11 @@ label holo_market_root_menu:
             if money < 40:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            $minusMoney(40)
+            if my_holo.love >= 150:
+                h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
+                $minusMoney(10)
+            else:
+                $minusMoney(40)
             call h_root_titfuck
             $nextTime()
             jump market
@@ -192,7 +200,11 @@ label holo_market_root_menu:
             if money < 50:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            $minusMoney(50)
+            if my_holo.love >= 150:
+                h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
+                $minusMoney(10)
+            else:
+                $minusMoney(50)
             call h_root_blowjob
             $nextTime()
             jump market
@@ -200,7 +212,11 @@ label holo_market_root_menu:
             if money < 70:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            $minusMoney(70)
+            if my_holo.love >= 150:
+                h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
+                $minusMoney(10)
+            else:
+                $minusMoney(70)
             call h_root_fuck
             $nextTime()
             jump market
@@ -208,6 +224,11 @@ label holo_market_root_menu:
             if money < 80:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
+            if my_holo.love >= 150:
+                h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
+                $minusMoney(10)
+            else:
+                $minusMoney(80)
             h "Ну что, [hero_name], хочешь ещё одну услугу от волчицы? Это обойдётся тебе в кругленькую сумму."
             p "Сколько на этот раз?"
             h "Двести золотых. И не пытайся сбить цену — я знаю, чего стою."
@@ -217,12 +238,15 @@ label holo_market_root_menu:
             call h_root_anal
             $nextTime()
             jump market
-        "Фетиш(200 монет)" if my_holo.love >= 200:
-            if money < 200:
+        "Секрет(100 монет)" if my_holo.love >= 100:
+            if money < 100:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            h @smile_shy "Ладно, это слишком, сделаю для тебя скидку~"
-            $minusMoney(100)
+            if my_holo.love >= 150:
+                h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
+                $minusMoney(10)
+            else:
+                $minusMoney(100)
             call h_root_footfuck
             $nextTime()
             jump market
