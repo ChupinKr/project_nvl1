@@ -641,30 +641,37 @@ label m_root_blowjob:
     scene bg m_blowjob1 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Она вошла в комнату полностью обнаженная"
-    
+
     scene bg m_blowjob2 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Она слегка подпрыгнула, а ее груди качнулись"
+    m "Хе-хе, нравится, как они танцуют?"
 
     scene bg m_blowjob3 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "[my_miku.name] садится на колени, и медленно подползает к тебе"
-    m "Тебе же нравится моя грудь?"
+    m "Тебе же нравится моя грудь, да?"
+    p "Трудно не заметить..."
 
     scene bg m_blowjob4 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "[my_miku.name] быстро стянула с тебя штаны и твой эрегированный член уперся в ее личико"
+    m "Ого, кто-то тут уже в полной готовности!"
+    p "Ты сама виновата."
 
     scene bg m_blowjob5 at Transform(zoom=1.5) with dissolve
     pause .3
     scene bg m_blowjob6 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    "[my_miku.name] прижимается грудью к свои ногам, зажимая твой член"
+    "[my_miku.name] прижимается грудью к твоим ногам, зажимая твой член"
     m "Я знаю, что тебе понравится еще больше~"
-    
+    p "Ты слишком самоуверенна."
+    m "Просто смотри и наслаждайся!"
+
     scene bg m_blowjob7_0 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "[my_miku.name] берет кончик твоего члена в ротик и водит язычком"
+    m "Ммм, какой вкусный~"
 
     scene bg m_blowjob7_1 at Transform(zoom=1.5) with dissolve
     pause .1
@@ -699,10 +706,11 @@ label m_root_blowjob:
     scene bg m_blowjob7_2 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "[my_miku.name] вылизывает головку твоего члена до блеска"
-    
+
     scene bg m_blowjob8 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Теперь она берет головку твоего члена целиком в свой рот и начинает двигаться"
+    m "Мрф... нравится?"
 
     scene bg m_blowjob9 at Transform(zoom=1.5) with dissolve
     pause .2
@@ -753,17 +761,20 @@ label m_root_blowjob:
     call hide_dialog
     "Ты берешь [my_miku.name] за волосы и оттягиваешь"
     "[my_miku.name] ухмыляется"
-    m "Что такое, не можешь себя сдерживать?"
+    m "Что, не выдержал моего темпа?"
+    p "Скорее, решил взять все в свои руки."
 
     scene bg m_blowjob11_2 at Transform(zoom=1.5) with dissolve
     call hide_dialog
-    p "Не совсем, я решил тебе помочь"
+    p "Считай это помощью."
+    m "Эй, подожди-ка..."
 
     scene bg m_blowjob11_3 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Выражение лица [my_miku.name] сменилось на испуганное и не зря"
-    m "К-как помочь?"
-    
+    m "К-как помочь? Ты что задумал?!"
+    p "Увидишь."
+
     scene bg m_blowjob12_2 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Ты с силой берешь голову [my_miku.name] и насаживаешь на свой член, начиная жестко ебать ее в рот"
@@ -808,54 +819,57 @@ label m_root_blowjob:
     pause .03
     scene bg m_blowjob12_4 at Transform(zoom=1.5) with flash
     call hide_dialog
-    m "М-мм...фрф..."
-    
+    m "М-мм... глх!"
+
     scene bg m_blowjob13_1 at Transform(zoom=1.5) with dissolve
     pause .1
     scene bg m_blowjob13_2 at Transform(zoom=1.5) with flash
     call hide_dialog
-    m "Заглатывай, шлюха!"
-    
+    p "Давай глубже!"
+    m "Мрф-ф!"
+
     scene bg m_blowjob14_1 at Transform(zoom=1.5) with flash
     call hide_dialog
     "Выражение лица [my_miku.name] тебя возбуждает еще сильнее"
     m "Мрфффрррр!"
-    
+
     scene bg m_blowjob14_2 at Transform(zoom=1.5) with dissolve
     pause .1
     scene bg m_blowjob14_3 at Transform(zoom=1.5) with flash
     call hide_dialog
     m "Грлллфф!"
-    
+
     scene bg m_blowjob14_4 at Transform(zoom=1.5) with flash
     call hide_dialog
-    p "Даа! Вот так!"
+    p "Даа! Отлично берёшь!"
     m "Брррлллл!"
-    
+
     scene bg m_blowjob15_1 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Ты отпускаешь голову [my_miku.name]"
-    
+
     scene bg m_blowjob15_2 at Transform(zoom=1.5) with flash
     call hide_dialog
     "Сперма брызжет из ее рта и носа"
-    
+    m "Кхрф!"
+
     scene bg m_blowjob16_1 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Наконец [my_miku.name] поднимает голову и вдыхает"
     m "А-ааах!"
-    
+    p "Зато эффективно."
+
     scene bg m_blowjob16_2 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "Из ее рта вытекает твоя сперма"
     p "Какая растрата..."
-    
+
     scene bg m_blowjob17 at Transform(zoom=1.5) with dissolve
     pause .4
     scene bg m_blowjob18 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "[my_miku.name] закрывает ротик и сглатывает"
-    
+
     scene bg m_blowjob19 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     p "Хорошая девочка."
