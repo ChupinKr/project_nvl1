@@ -622,9 +622,11 @@ screen main_menu():
 
             text "[config.name!t]":
                 style "main_menu_title"
+                outlines [(2, "#000000")]
 
             text "[config.version]":
                 style "main_menu_version"
+                outlines [(2, "#000000")]
 
 
 style main_menu_frame is empty
