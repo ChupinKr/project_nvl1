@@ -201,7 +201,7 @@ label m_root_show:
     "[m.name] немного поворачивается, оттягивая попку, чтобы показать, как много соков вышло из неё."
     m "Видишь, как я старалась?"
 
-    if my_miku.love >= 70:
+    if my_miku.love >= 65:
         p "Может покажешь, настоящую себя?"
         m "Д-да..."
 
@@ -300,12 +300,14 @@ label m_root_show:
     scene bg m_show31 with dissolve
     call hide_dialog
     "Она встаёт, оперевшись на грудь, но теперь повёрнута к тебе спиной, ты видишь её киску и гладкий животик."
-    m "К-какую из этих дырочек ты хочешь больше?~"
+    
     if my_miku.love >= 200:
+        m "К-какую из этих дырочек ты хочешь больше?~"
         menu:
             "Обе!":
+                scene bg miku_public_continue0 at Transform(zoom=1.5) with dissolve
+                "Ты хватаешь [m.name] и начинаешь ее насиловать изо всех сил, на ее крики прибегают посетители.."
                 call m_root_fetish_public_continue
-                #TODO "Ты хватаешь [m.name] и начинаешь жестко насиловать, на ее крики прибегают посетители"
             "Продолжить сцену":
                 "Ты решаешь продолжить смотреть шоу"
     else:
@@ -476,6 +478,14 @@ label m_root_titfuck:
     scene bg miku_titfuck9 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     m "Как тебе мой язычок, а, [hero_name]?"
+    if charisma < 25:
+        $customNotify("Недостаточно интеллекта")
+        p "Не так уж это и заводит..."
+        scene bg miku_titfuck5 at Transform(zoom=1.5) with dissolve
+        m "Я... Тебя не возбудила?"
+        $minusLove("m", 5)
+        m "Тебе пора идти, [hero_name]!"
+        return
     p "Ты просто невероятна!"
 
     scene bg miku_titfuck10 at Transform(zoom=1.5) with dissolve
@@ -580,7 +590,7 @@ label m_root_titfuck:
     call hide_dialog
     "[my_miku.name] наклоняется, открывая свой пустой ротик, показывая, что всё проглотила"
 
-    if my_miku.love >= 80:
+    if my_miku.love >= 70:
         menu:
             "Минет":
                 call m_root_blowjob_continue
@@ -706,6 +716,14 @@ label m_root_blowjob:
     scene bg m_blowjob7_2 at Transform(zoom=1.5) with dissolve
     call hide_dialog
     "[my_miku.name] вылизывает головку твоего члена до блеска"
+    if charisma < 40:
+        $customNotify("Недостаточно харизмы")
+        p "Ааах... Как же ты хороша..."
+        scene bg m_blowjob6 at Transform(zoom=1.5) with dissolve
+        m "Да? Рада, что тебе понравилось!"
+        m "В таком случае можешь идти, у меня еще полно работы."
+        return
+    p "Отлично, продолжай"
 
     scene bg m_blowjob8 at Transform(zoom=1.5) with dissolve
     call hide_dialog
@@ -762,6 +780,13 @@ label m_root_blowjob:
     "Ты берешь [my_miku.name] за волосы и оттягиваешь"
     "[my_miku.name] ухмыляется"
     m "Что, не выдержал моего темпа?"
+    if strength < 40:
+        $customNotify("Недостаточно силы")
+        "Ты тянешь ее голову на свой член, но у тебя не получается."
+        p "А, ой, нет, прости, не хотел испортить твою прическу."
+        scene bg m_blowjob11_2 at Transform(zoom=1.5) with dissolve
+        m "Мы закончили, можешь уходить, и даже не думай испортить мою прическу..."
+        return
     p "Скорее, решил взять все в свои руки."
 
     scene bg m_blowjob11_2 at Transform(zoom=1.5) with dissolve
@@ -877,6 +902,19 @@ label m_root_blowjob:
 
     scene bg m_blowjob20 at Transform(zoom=1.5) with fade
     call hide_dialog
+
+    if my_miku.love >= 80:
+        menu:
+            "Секс":
+                p "Подставляй задницу!"
+                "[my_miku.name] послушно поворачивается к тебе, раздвигая попку"
+                call m_root_fuck_continue
+                return
+            "Продолжить":
+                m "Ааааа..."
+    else:
+        $customNotify("Недостаточно симпатии")
+
     p "Тут стало так грязно, я пожалуй пойду."
     "Ты встаешь и уходишь."
     return
