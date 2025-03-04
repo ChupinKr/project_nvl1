@@ -995,8 +995,10 @@ label h_root_blowjob_continue:
         h "Вижу по твоим глазам, [hero_name], тебе мало."
 
         scene bg h_blowjob_after4 at Transform(zoom=1.5) with dissolve
+        call hide_dialog
         h "Хочешь продолжить?"
         menu:
+            h "Хочешь продолжить?"
             "Анал":
                 p "Только надень юбку, меня это заводит."
                 "..."
@@ -1005,11 +1007,12 @@ label h_root_blowjob_continue:
                 scene bg pull_skirt1 at Transform(zoom=1.5) with fade
                 pause .7
                 scene bg pull_skirt2 at Transform(zoom=1.5) with fade
+                call hide_dialog
                 h "Так?"
                 call h_root_anal_continue
                 return
             "На этом всё":
-                "На этом всё"
+                p "На сегодня всё."
 
     scene bg holo_room with fade
     show h smile_naked_cummed with dissolve
