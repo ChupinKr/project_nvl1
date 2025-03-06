@@ -91,13 +91,12 @@ label talk_miku_menu:
                 "Беру" if money >= 10:
                     $ minusMoney(10)
                     $ updateCanVisit("room", True)
-                    $ while_room = day + 6
+                    $ while_room = day + 2
                     jump room
                 "Мне пока не по карману":
                     jump talk_miku_menu
         "Попросить что-нибудь выпить":
-            m "Что будете пить?"
-            m "Здесь можно найти не только пиво, но и кое-что поинтереснее."
+            m "Что есть в меню?"
             jump talk_miku_drinks_menu
         "Чем тебе помочь?":
             m "Помощь? Отличная идея! Вот что у меня для тебя есть!"

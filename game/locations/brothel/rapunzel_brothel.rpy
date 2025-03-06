@@ -42,18 +42,18 @@ label rapunzel_brothel_menu:
                         r @neutral "уходи..." with dissolve
                         r annoyed "Я больше не хочу тебя видеть!" with dissolve
                         $can_go_r = False
-                        "[r.name] силой выталкивает тебя из своих покоев и запирает дверь на ключ"
+                        "[r.name] силой выталкивает тебя из своей комнаты и запирает дверь на ключ"
                         $customNotify("Ты больше никогда не встретишь [r.name]")
+                        $nextTime()
                         jump brothel
             elif last_charisma_training_win:
                 $addChar(["char"], 2)
                 r smile_shy "Хорошая работа, [hero_name]!" with dissolve
                 $addLove ("r", 5)
-                jump rapunzel_brothel_menu
             else:
                 r annoyed "Мог бы хоть постараться!" with dissolve
                 $minusLove ("r", 2)
-                jump rapunzel_brothel_menu
+            $nextTime()
             jump rapunzel_brothel_menu
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
@@ -110,16 +110,12 @@ label r_root_masturbate:
     hide r  with dissolve
     scene bg r_masturbate1 with dissolve
     call hide_dialog
-    mind "[r.name] просто стоит и смотрит... Полностью обнажённая выше пояса."  
     mind "Чёрт, как мне вообще реагировать на это?"
-    r "Ты так странно замер... Неожиданно?"
-    p "Ещё бы... Ты же не даёшь мне даже времени привыкнуть."
 
     scene bg r_masturbate2_1 with dissolve
     call hide_dialog
-    mind "[r.name] прикрыла одну грудь, но явно не спешит скрываться."  
+    mind "[r.name] прикрыла одну грудь."  
     r "Ты ведь всё равно уже видел... Так зачем мне закрываться?"
-    p "Ну, ты же понимаешь, что от этого мне только сложнее не пялиться?"
 
     scene bg r_masturbate2_2 with dissolve
     call hide_dialog
@@ -131,7 +127,7 @@ label r_root_masturbate:
     call hide_dialog
     mind "Теперь [r.name] обеими руками трогает свои груди."  
     r "Ты ведь не против, если я немного поиграю сама с собой?"
-    p "...Я даже не знаю, как на это ответить."
+    p "..."
 
     scene bg r_masturbate4_test with dissolve
     call hide_dialog
@@ -146,23 +142,19 @@ label r_root_masturbate:
     call hide_dialog
     r "Ааах..."
     mind "Как же развратно это выглядит, и как мне оставаться спокойным?"
-    mind "Я только что чуть не набросился на нее, я едва могу держать себя в руках."
 
 
-    "Удовольствие на лице [r.name] резко сменилось на ухмылку"
     scene bg r_masturbate6 with dissolve
     call hide_dialog
-    mind "Она хотела убедиться, что я еле держусь? Так это была проверка?"  
-    mind "Она видит, как я реагирую, и это забавляет [r.name]."
+    "Удовольствие на лице [r.name] резко сменилось на ухмылку"
+    mind "Она хотела убедиться, что я еле держусь? Так это была проверка?"
     r "Тебе ведь нравится? Не скрывай этого."
-    p "Ты же понимаешь, что сводишь меня с ума?"
     p "Думаю, тут уже бесполезно что-то скрывать.."
 
     scene bg r_masturbate7 with dissolve
     call hide_dialog
     mind "Она явно рада моему ответу."
     r "Ммм... Ещё немного, и я совсем забудусь...Пора подавать главное блюдо~"
-    p "Ты же понимаешь, что я не железный?"
 
     "[r.name] разворачивается и встает на четвереньки..."
     scene bg r_masturbate8 with dissolve
@@ -282,10 +274,10 @@ label r_root_masturbate:
     p "Я теряю голову..."  
 
     if my_rapunzel.love < 90:
+        $customNotify("Недостаточно симпатии [r.name]")
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
         show r smile_naked with dissolve
-        $customNotify("Недостаточно симпатии [r.name]")
         "Она остановилась на самом интересном, может если она будет мне больше доверять, то я получу еще больше?"
         return
 

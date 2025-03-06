@@ -11,7 +11,7 @@ label room:
                 p "Понял, вот оплата на неделю."
                 $ minusMoney(10)
                 $ updateCanVisit("room", True)
-                $ while_room = day + 6
+                $ while_room = day + 2
                 m smile "Спасибо, приятного отдыха~"
             "Мне пока не по карману":
                 m smile "Тогда пожалуйста покинь комнату и приходи ко мне подработать~" with dissolve

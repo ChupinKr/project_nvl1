@@ -167,6 +167,8 @@ screen quest_panel_text:
         yalign 0.042
         xsize 550
         spacing 3
+        text "" style "info_text"
+        text "" style "info_text"
         text "Задача: [active_quest.whatToDo]" style "info_text"
         if active_quest.forWho:
             text "Для: [active_quest.forWho]" style "info_text"
@@ -189,6 +191,8 @@ screen blessing_panel_text:
         yalign 0.045
         xsize 550
         spacing 5
+        text "" style "info_text"
+        text "" style "info_text"
         text "Благословение: [chosen_blessing.name]" style "info_text"
         text "Преимущество: [chosen_blessing.description]" style "info_text"
 
@@ -580,6 +584,9 @@ screen navigation():
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             textbutton _("Patreon") action OpenURL("https://patreon.com/c/Ko2ed/")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            textbutton _("Donate") action OpenURL("https://boosty.to/ko2ed/donate")
 
         if renpy.variant("pc"):
 
