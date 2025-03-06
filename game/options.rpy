@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## Версия игры.
 
-define config.version = "1.0"
+define config.version = "0.1"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## постройке дистрибутивов. Оно должно содержать текст формата ASCII и не должно
 ## содержать пробелы, двоеточия и точки с запятой.
 
-define build.name = "project_nvl1"
+define build.name = "er_vn"
 
 
 ## Звуки и музыка ##############################################################
@@ -208,4 +208,4 @@ init python:
 ## Имя пользователя и название проекта, ассоциированные с проектом на itch.io,
 ## разделённые дробью.
 
-# define build.itch_project = "renpytom/test-project"
+define build.itch_project = "ko2ed/er-vn"
