@@ -81,7 +81,7 @@ label talk_miku_drinks_menu:
 label talk_miku_menu:
     menu:
         "Обслужи меня" if my_miku.love >= 50 and m_can_go_root:
-            show m smirk_no_top with dissolve
+            show m smile_blush with dissolve
             m "Поднимайся по лестнице, ты знаешь, где моя комната~"
             jump miku_tavern_root
         "Снять комнату" if not canVisit("room"):
@@ -260,7 +260,7 @@ label talk_miku_info:
         m "Я долго думала, как тебе отплатить за доброту.."
         m "Думаю, тебе понравится~"
         "[m.name] встает на колени и снимает с тебя штаны"
-        call m_rool_tavern_blowjob
+        call m_root_tavern_blowjob
         scene bg bar_counter with fade
         show m smile_naked_cummed with dissolve
         m "Спасибо за угощение~"
