@@ -132,6 +132,16 @@ label start_charisma_training(character, your_charisma):
     $ score = 0
     $ win_score = 3  # Количество правильных ответов для победы
 
+    if is_cheats:
+        menu:
+            "У вас включены читы. Пропустить мини-игру?"
+            "Играть":
+                pause .01
+            "Пропустить":
+                $score = win_score
+                call end_charisma_training(character)
+                return
+
     # Проходимся по каждому вопросу
     python:
         for question in selected_questions:

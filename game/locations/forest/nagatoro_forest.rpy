@@ -390,7 +390,7 @@ label check_lvl_root:
         nag "Эй, ты совсем порвал мой кэйкоги!"
         p "В настоящем сражении одежда неминуемо порвется."
         nag "Так не пойдет, реванш, сейчас же!"
-        $addNPCStr("nag", 5)
+        $my_nag.addNPCStr(5)
         #Требует реванш!
         call start_battle(100, my_nag.str, nag.name, 'return_to_this')
         if last_battle_win:
@@ -398,7 +398,7 @@ label check_lvl_root:
             "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
             show nag normal_shy_battle4 with dissolve
             nag @grin_battle4 "Знаешь, [hero_name], я слишком сильно поддавалась тебе, с этим покончено!"
-            $addNPCStr("nag", 10)
+            $my_nag.addNPCStr(10)
             show nag normal_shy_battle5 with dissolve
             "[nag.name] снимает с себя всю верхнюю одежду в надежде, что теперь тебе будет еще сложнее ухватиться и победить ее"
             nag @grin_battle5 "Что смотришь? Больше тебе не победить! Реванш!"
@@ -435,7 +435,7 @@ label check_lvl_root:
         nag "Эй, ты совсем порвал мой кэйкоги!"
         p "В настоящем сражении одежда неминуемо порвется."
         nag "Так не пойдет, реванш, сейчас же!"
-        $addNPCStr("nag", 5)
+        $my_nag.addNPCStr(5)
         #Требует реванш!
         call start_battle(100, my_nag.str, nag.name, 'return_to_this')
         if last_battle_win:
@@ -464,7 +464,7 @@ label check_lvl_root:
         nag "Эй, ты совсем порвал мой кэйкоги!"
         p "В настоящем сражении одежда неминуемо порвется."
         nag "Так не пойдет, реванш, сейчас же!"
-        $addNPCStr("nag", 5)
+        $my_nag.addNPCStr(5)
         #Требует реванш!
         call start_battle(100, my_nag.str, nag.name, 'return_to_this')
         if last_battle_win:

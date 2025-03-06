@@ -122,7 +122,7 @@ label talk_miku_work:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
                         "Ты провёл время, помогая [m.name]"
                         "[m.name] это оценила"
-                        $addLove("m", 5)
+                        $my_miku.addLove(5)
                         pause 3.5
                         $addMoney(10)
                     else: 
@@ -149,7 +149,7 @@ label talk_miku_work:
                 if last_battle_win:
                     "[m.name] это оценила"
                     m smile "Спасибо, [hero_name], ты меня снова выручил." with dissolve
-                    $addLove("m", 10)
+                    $my_miku.addLove(10)
                     pause 3.5
                     $addMoney(10)
             scene bg bar_counter with fade

@@ -66,7 +66,7 @@ label visit_mao_menu:
                     invited_girl @smile "Привет, меня зовут [invited_girl.name] и я готова работать у вас~" with dissolve
                     $addChar(["char"], 10)
                     mao @open_smile "Прекрасная кандидатка!" with dissolve
-                    $addLove("mao", 10)
+                    $my_mao.addLove(10)
                     mao @smile "Хорошая работа, [hero_name], можешь идти, а мы пока обсудим детали." with dissolve
                     mao @smile "Ах да, [hero_name], вот твоя оплата." with dissolve
                     $addMoney(20)

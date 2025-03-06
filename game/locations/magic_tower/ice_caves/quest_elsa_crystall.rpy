@@ -203,7 +203,7 @@ label deal_with_emilia:
 
     menu:
         "Освободить [emilia.name]":
-            $addLove("f", 10)
+            $my_freya.addLove(10)
             scene bg ice_caves at Transform(zoom=1.5) with fade
             if strength > 50:
                 "Ты подходишь к ней и одним сильным ударом разбиваешь ледяные цепи."

@@ -13,12 +13,12 @@ label guild_d_menu:
         "Тебя пора наказать" if not first_root_d:
             jump guild_d_root_menu
         "Научи меня":
-            call start_battle(d_str, 60, d.name, battle_location_guild)
+            call start_battle(my_darkness.str, 60, d.name, battle_location_guild)
             if last_battle_win:
                 d @smile_shy "А-а-аах, ты победил меня, великую воительницу~"
-                $addLove("d", 5)
+                $my_darkness.addLove(5)
                 $addChar(["str"], 2)
-                $addNPCStr("d", 20)
+                $my_darkness.addNPCStr(20)
                 if my_darkness.love >= 50:
                     d @smile_shy "Теперь ты можешь делать со мной все, что захочешь~"
                     d @smile_shy "Что же ты со мной сделаешь?"

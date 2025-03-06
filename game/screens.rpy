@@ -3,7 +3,7 @@
 ################################################################################
 
 init offset = -1
-
+define is_cheats = False
 
 ################
 ## МОИ ЭКРАНЫ
@@ -77,29 +77,30 @@ screen stat:
             action Show("info_panel"), Show("info_panel_text"), Show("cheat_buttons"), Hide("stat")
 
 screen cheat_buttons:
-    vbox:
-        xalign 0.01
-        yalign 0.15
-        imagebutton:
-            ypadding 15
-            idle "gui/button/plus_buttons/plus_money.png"
-            hover "gui/button/plus_buttons/plus_money_hover.png"
-            action Function(addMoney, 10)
-        imagebutton:
-            ypadding 15
-            idle "gui/button/plus_buttons/plus_str.png"
-            hover "gui/button/plus_buttons/plus_str_hover.png"
-            action Function(addChar, ["str"], 5)
-        imagebutton:
-            ypadding 15
-            idle "gui/button/plus_buttons/plus_int.png"
-            hover "gui/button/plus_buttons/plus_int_hover.png"
-            action Function(addChar, ["intelligence"], 5)
-        imagebutton:
-            ypadding 15
-            idle "gui/button/plus_buttons/plus_char.png"
-            hover "gui/button/plus_buttons/plus_char_hover.png"
-            action Function(addChar, ["char"], 5)
+    if is_cheats:
+        vbox:
+            xalign 0.01
+            yalign 0.15
+            imagebutton:
+                ypadding 15
+                idle "gui/button/plus_buttons/plus_money.png"
+                hover "gui/button/plus_buttons/plus_money_hover.png"
+                action Function(addMoney, 10)
+            imagebutton:
+                ypadding 15
+                idle "gui/button/plus_buttons/plus_str.png"
+                hover "gui/button/plus_buttons/plus_str_hover.png"
+                action Function(addChar, ["str"], 5)
+            imagebutton:
+                ypadding 15
+                idle "gui/button/plus_buttons/plus_int.png"
+                hover "gui/button/plus_buttons/plus_int_hover.png"
+                action Function(addChar, ["intelligence"], 5)
+            imagebutton:
+                ypadding 15
+                idle "gui/button/plus_buttons/plus_char.png"
+                hover "gui/button/plus_buttons/plus_char_hover.png"
+                action Function(addChar, ["char"], 5)
 
 screen info_panel:
     modal True
@@ -223,8 +224,14 @@ screen character_panel(char):
         text ""
         text "Совет: \n[char.notice]" style "info_text"
         text ""
-        text "Симпатия: [char.love]♥" style "info_text"
-        text "Сила: [char.str]" style "info_text"
+        if is_cheats:
+            textbutton "Симпатия: [char.love]♥" text_style "info_textbutton":
+                action Function(char.addLove, 5)
+            textbutton "Сила: [char.str]♥" text_style "info_textbutton":
+                action Function(char.addNPCStr, 5)
+        else:
+            text "Симпатия: [char.love]♥" style "info_text"
+            text "Сила: [char.str]" style "info_text"
 
     imagebutton:
         align (0.64, 0.07)
@@ -1017,6 +1024,11 @@ screen preferences():
                     textbutton _("Всего текста") action Preference("skip", "toggle")
                     textbutton _("После выборов") action Preference("after choices", "toggle")
                     textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
+                vbox:
+                    style_prefix "radio"
+                    label _("Читы")
+                    textbutton _("Вкл") action SetVariable("is_cheats", True)
+                    textbutton _("Выкл") action SetVariable("is_cheats", False)
 
                 ## Дополнительные vbox'ы типа "radio_pref" или "check_pref"
                 ## могут быть добавлены сюда для добавления новых настроек.

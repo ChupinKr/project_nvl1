@@ -172,11 +172,6 @@ screen dishScreen():
             action Jump("clean_success")
  
 label start_clean(whatToWash):
-    pause .5
-    show expression Text("Приготовься!") at truecenter as txt
-    with dissolve
-    pause
-    hide txt
 
     # Сброс параметров игры
     $ dish_value = 0
@@ -188,6 +183,21 @@ label start_clean(whatToWash):
     if(whatToWash == "books"):
         $ selected_item = renpy.random.choice(["book_blue", "book_red"])
     $ selected_fresh_item = "fresh_" + selected_item
+    
+    if is_cheats:
+        menu:
+            "У вас включены читы. Пропустить мини-игру?"
+            "Играть":
+                pause .01
+            "Пропустить":
+                call clean_success
+                return
+    
+    pause .5
+    show expression Text("Приготовься!") at truecenter as txt
+    with dissolve
+    pause
+    hide txt
     call screen dishScreen
     return
  

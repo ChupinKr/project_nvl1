@@ -98,6 +98,15 @@ screen clicker:
 label start_muscule(start_phrase, difficulty):
     # всякие ненужные штуки для оформления
     pause .5
+    if is_cheats:
+        menu:
+            "У вас включены читы. Пропустить мини-игру?"
+            "Играть":
+                pause .01
+            "Пропустить":
+                hide txt
+                $last_muscule_win = True
+                return
     show expression Text(start_phrase) at truecenter as txt
     with dissolve
     pause

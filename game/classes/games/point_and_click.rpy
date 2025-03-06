@@ -53,6 +53,15 @@ label bug_hunt:
         repeat  # Повторяем движение
 
     window hide
+    if is_cheats:
+        menu:
+            "У вас включены читы. Пропустить мини-игру?"
+            "Играть":
+                pause .01
+            "Пропустить":
+                "Успех!"
+                return
+
     show screen bug_game
 
     while score < 20:

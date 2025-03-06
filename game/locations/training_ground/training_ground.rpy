@@ -72,7 +72,7 @@ label training_ground:
                     show eris t_smile with dissolve
                     eris "Ого! Да ты не совсем бесполезный!"
                     "Она кивает с одобрением, опуская меч."
-                    $addLove("eris", 10)
+                    $my_eris.addLove(10)
                 else:
                     "Ты не успеваешь среагировать, и её удар валит тебя с ног."
                     show eris t_angry with dissolve
@@ -126,8 +126,8 @@ label training_ground_eris_menu:
             if last_battle_win:
                 "IN PROGRESS"
                 $addChar(["str"], 2)
-                $addLove("eris", 5)
-                $addNPCStr("eris", 10)
+                $my_eris.addLove(5)
+                $my_eris.addNPCStr(10)
             else:
                 "IN PROGRESS"
             $nextTime()

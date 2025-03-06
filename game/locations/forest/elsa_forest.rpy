@@ -274,7 +274,7 @@ label elsa_magic_training:
         e "Вау, да у тебя талант!"
         p "Надо будет повторить, мне понравилось."
         e smile_shy "Мне тоже.." with dissolve
-        $addLove("e", 5)
+        $my_elsa.addLove(5)
         if my_elsa.love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
             e smile_shy "Ладно, думаю ты готов, идем." with dissolve
             p "К чему готов? Куда мы?"

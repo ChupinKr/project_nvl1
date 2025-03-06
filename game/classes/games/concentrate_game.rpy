@@ -1,6 +1,15 @@
 label magic_training_gmmm:
     scene bg room
 
+    if is_cheats:
+        menu:
+            "У вас включены читы. Пропустить мини-игру?"
+            "Играть":
+                pause .01
+            "Пропустить":
+                "Ты успешно контролировал магию!"
+                return
+
     $ energy = 0  # Начальный уровень энергии
     $ min_energy = 0
     $ max_energy = 100

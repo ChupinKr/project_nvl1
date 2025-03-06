@@ -61,7 +61,7 @@ label holo_menu:
                             if last_clean_win:
                                 h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
                                 "Ты провёл время, помогая [h.name]"
-                                $addLove("h",5)
+                                $my_holo.addLove(5)
                                 "[h.name] это оценила"
                                 pause 3.5
                                 $addMoney(10)
@@ -85,7 +85,7 @@ label holo_menu:
                     scene bg holo_market with fade
                     show h smile_shy with dissolve
                     h "О-хо-хо! [hero_name], спасибо, не знаю, что бы я без тебя делала!"
-                    $addLove("h",5)
+                    $my_holo.addLove(5)
                     "Ты провёл время, помогая [h.name], она это оценила"
                     $addMoney(10)
                     jump holo_menu
@@ -114,57 +114,57 @@ label holo_market_menu:
         "Купить [item_motivational_book.name]([item_motivational_book.price] монет)" if isAbleToBuy(item_motivational_book):
             "Вы купили [item_motivational_book.name]"
             $buyItem(item_motivational_book)
-            $addLove("h",3)
+            $my_holo.addLove(3)
             jump holo_market_menu
         "Купить [item_mirror.name]([item_mirror.price] монет)" if isAbleToBuy(item_mirror):
             "Вы купили [item_mirror.name]"
             $buyItem(item_mirror)
-            $addLove("h",5)
+            $my_holo.addLove(5)
             jump holo_market_menu
         "Купить [item_art_plus_size.name]([item_art_plus_size.price] монет)" if isAbleToBuy(item_art_plus_size):
             "Вы купили [item_art_plus_size.name]"
             $buyItem(item_art_plus_size)
-            $addLove("h",10)
+            $my_holo.addLove(10)
             jump holo_market_menu
         "Купить [item_dumbbells_ez.name]([item_dumbbells_ez.price] монет)" if isAbleToBuy(item_dumbbells_ez):
             "Вы купили [item_dumbbells_ez.name]"
             $buyItem(item_dumbbells_ez)
-            $addLove("h",3)
+            $my_holo.addLove(3)
             jump holo_market_menu
         "Купить [item_weight_mid.name]([item_weight_mid.price] монет)" if isAbleToBuy(item_weight_mid):
             "Вы купили [item_weight_mid.name]"
             $buyItem(item_dumbbells_ez)
-            $addLove("h",5)
+            $my_holo.addLove(5)
             jump holo_market_menu
         "Купить [item_barbell.name]([item_barbell.price] монет)" if isAbleToBuy(item_barbell):
             "Вы купили [item_barbell.name]"
             $buyItem(item_barbell)
-            $addLove("h",10)
+            $my_holo.addLove(10)
             jump holo_market_menu
         "Купить [item_book_math.name]([item_book_math.price] монет)" if isAbleToBuy(item_book_math):
             "Вы купили [item_book_math.name]"
             $buyItem(item_book_math)
-            $addLove("h",3)
+            $my_holo.addLove(3)
             jump holo_market_menu
         "Купить [item_self_study_guide.name]([item_self_study_guide.price] монет)" if isAbleToBuy(item_self_study_guide):
             "Вы купили [item_self_study_guide.name]"
             $buyItem(item_self_study_guide)
-            $addLove("h",5)
+            $my_holo.addLove(5)
             jump holo_market_menu
         "Купить [item_grimoire.name]([item_grimoire.price] монет)" if isAbleToBuy(item_grimoire):
             "Вы купили [item_grimoire.name]"
             $buyItem(item_grimoire)
-            $addLove("h",10)
+            $my_holo.addLove(10)
             jump holo_market_menu
         "Купить [item_forest_guide.name]([item_forest_guide.price] монет)" if isAbleToBuy(item_forest_guide):
             "Вы купили [item_forest_guide.name]"
             $buyItem(item_forest_guide)
-            $addLove("h",10)
+            $my_holo.addLove(10)
             jump holo_market_menu
         "Купить [item_combat_book.name]([item_combat_book.price] монет)" if isAbleToBuy(item_combat_book):
             "Вы купили [item_combat_book.name]"
             $buyItem(item_combat_book)
-            $addLove("h",10)
+            $my_holo.addLove(10)
             jump holo_market_menu
         "Уйти":
             h "Приятно было с тобой сотрудничать"

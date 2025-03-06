@@ -52,6 +52,13 @@ label hide_dialog:
 image paper = "paper.png"
 default notices = []
 init python:
+    def cheatsOn():
+        global is_cheats
+        is_cheats = True
+    def cheatsOff():
+        global is_cheats
+        is_cheats = False
+
     def customNotify(message):
         global notices
         notices.append(message)
@@ -159,37 +166,6 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def addLove(who, countLove):
-        
-        global notices
-        if who == "f":
-            my_freya.love += countLove
-        elif who == "nag":
-            my_nag.love += countLove
-        elif who == "mer":
-            my_merlin.love += countLove
-        elif who == "s":
-            my_sakura.love += countLove
-        elif who == "ts":
-            my_tsunade.love += countLove
-        elif who == "h":
-            my_holo.love += countLove
-        elif who == "m":
-            my_miku.love += countLove
-        elif who == "e":
-            my_elsa.love += countLove
-        elif who == "r":
-            my_rapunzel.love += countLove
-        elif who == "mao":
-            my_mao.love += countLove
-        elif who == "d":
-            my_darkness.love += countLove
-        elif who == "eris":
-            my_eris.love += countLove
-        notices.append("Характеристика симпатии ["+ who +".name] увеличилась")
-        renpy.show_screen('notify_plus', notices=notices)
-        notices = []
-
     def minusLove(who, countLove):
         global notices
         if who == "f":
@@ -217,18 +193,6 @@ init python:
         elif who == "d":
             my_darkness.love -= countLove
         notices.append("Характеристика симпатии уменьшилась")
-        renpy.show_screen('notify_plus', notices=notices)
-        notices = []
-
-    def addNPCStr(who, countStr):
-        global notices
-        if who == "nag":
-            my_nag.str += countStr 
-        if who == "eris":
-            my_eris.str += countStr
-        if who == "d":
-            my_darkness.str += countStr
-        notices.append("Противник становится серьезнее")
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 

@@ -72,11 +72,6 @@ screen reactionGame:
 
 ## Логика мини-игры.
 label start_magic_training(intelligence):
-    pause .5
-    show expression Text("Будь внимателен!") at truecenter as txt
-    with dissolve
-    pause
-    hide txt
     $ key_value = renpy.random.randint(0, 100)
     $ deviation1 = renpy.random.randint(1, 10)
     $ deviation2 = renpy.random.randint(2, 10)
@@ -84,6 +79,23 @@ label start_magic_training(intelligence):
     $ deviation4 = renpy.random.randint(4, 10)
     $ score = 0  # Сбрасываем очки перед игрой
     $ win_score = 3
+
+    pause .5
+    if is_cheats:
+        menu:
+            "У вас включены читы. Пропустить мини-игру?"
+            "Играть":
+                pause .01
+            "Пропустить":
+                $score = win_score
+                call end_magic_game
+                "Успех!"
+                return
+
+    show expression Text("Будь внимателен!") at truecenter as txt
+    with dissolve
+    pause
+    hide txt
     $ casting = True
     call screen reactionGame
     return

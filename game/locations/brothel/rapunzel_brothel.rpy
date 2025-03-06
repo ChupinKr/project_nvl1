@@ -49,7 +49,7 @@ label rapunzel_brothel_menu:
             elif last_charisma_training_win:
                 $addChar(["char"], 2)
                 r smile_shy "Хорошая работа, [hero_name]!" with dissolve
-                $addLove ("r", 5)
+                $my_rapunzel.addLove(5)
             else:
                 r annoyed "Мог бы хоть постараться!" with dissolve
                 $minusLove ("r", 2)

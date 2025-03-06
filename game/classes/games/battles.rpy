@@ -110,11 +110,6 @@ screen battle_qte():
 
 
 label start_battle(enemy_hp, enemy_str, name, loc):
-    pause .5
-    show expression Text("Сейчас начнется битва, приготовься!") at truecenter as txt
-    with dissolve
-    pause
-    hide txt
     $ damage_to_enemy = 0
     $ damage = 0
     $ enemy_health = enemy_hp  # Устанавливаем здоровье противника
@@ -127,6 +122,21 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     $ qte_sequence = generate_qte_sequence()  # Генерируем случайную последовательность
     $ qte_input = ""  # Обнуляем ввод игрока
     $ qte_warning = False
+    pause .5
+    
+    if is_cheats:
+        menu:
+            "У вас включены читы. Пропустить мини-игру?"
+            "Играть":
+                pause .01
+            "Пропустить":
+                call battle_win
+                return
+
+    show expression Text("Сейчас начнется битва, приготовься!") at truecenter as txt
+    with dissolve
+    pause
+    hide txt
     show screen battle_hp_bars
     call screen battle_qte
     return
