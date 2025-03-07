@@ -7,7 +7,7 @@ label find_merlin:
     "Я отправился на поиски Мерлин. Она не любит, когда её беспокоят, но, возможно, мне повезёт."
 
     $ find_chance = intelligence  # Чем выше intelligence, тем выше шанс
-    $ roll = renpy.random.randint(1, 1000)
+    $ roll = renpy.random.randint(1, 300)
 
     if roll <= find_chance and can_go_mer:
         show mer smirk at center with dissolve
@@ -24,6 +24,9 @@ label merlin_menu:
     menu:
         "Попросить урок":
             jump mer_teach
+        "Приватные уроки" if not first_mer_root:
+            call mer_root_menu
+            jump merlin_menu
         "Попросить квест":
             show mer neutral with dissolve
             mer "Если хочешь задание – у меня всегда есть кое-что... рискованное."
@@ -48,69 +51,69 @@ label mer_teach:
     mer "Ты действительно хочешь учиться? Ну что ж, посмотрим, как долго ты продержишься."
     "Мерлин начала объяснять сложные магические принципы, и мой мозг начал плавиться."
     mer neutral "Итак, ты всё понял? Сможешь повторить то, что я рассказала?"
-    menu:
-        mer "Итак, ты всё понял? Сможешь повторить то, что я рассказала?"
-        "Без проблем":
-            p "Да, без проблем расскажу"
-            if intelligence >= 50:
-                "Ты слово в слово пересказываешь всё, что рассказала [mer.name], она чувствует, что время потрачено было не зря и проникается к тебе уважением"
-                mer @surprised "Удивительно, а ты не безнадежен!"
-                $addChar(["intelligence"],5)
-                $my_merlin.addLove(10)
-                if my_merlin.love >= 50:
-                    mer smile "Не хочешь пройти дополнительный курс? Этот курс сильно укрепит твои знания!"
-                    menu:
-                        mer "Хочешь пройти дополнительный курс?"
-                        "Конечно!":
-                            p "Само собой, я хочу изучить еще больше!"
-                            mer smirk "Тогда следуй за мной."
-                            jump mer_root
-                        "Не сейчас":
-                            p "Сейчас я занят, может чуть позже?"
-                            mer annoyed "Раз посмел прийти в магическую башню - у тебя не должно оставаться приоритетов выше изучения магии!"
-                            "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
-                            jump magic_tower_hub
-                else:
-                    "Урок закончился и ты очутился в середине развилки магической башни"
-                    jump magic_tower_hub
+    call merlin_training
+    if last_magic_knowlenge_win:
+        p "Да, без проблем расскажу"
+        if intelligence >= 150:
+            "Ты слово в слово пересказываешь всё, что рассказала [mer.name], она чувствует, что время было потрачено не зря и проникается к тебе уважением."
+            mer @surprised "Удивительно, а ты не безнадежен!"
+            $addChar(["intelligence"],5)
+            $my_merlin.addLove(10)
+            if first_mer_root and my_merlin.love >= 50:
+                mer smile "Не хочешь пройти дополнительный курс? Этот курс сильно укрепит твои знания!"
+                menu:
+                    mer "Хочешь пройти дополнительный курс?"
+                    "Конечно!":
+                        p "Само собой, я хочу изучить еще больше!"
+                        mer smirk "Тогда следуй за мной."
+                        jump mer_root
+                    "Не сейчас":
+                        p "Сейчас я занят, может чуть позже?"
+                        mer annoyed "Раз посмел прийти в магическую башню - у тебя не должно оставаться приоритетов выше изучения магии!"
+                        "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+                        jump magic_tower_hub
             else:
-                "Ты попытался рассказать всё именно так, как говорила [mer.name], но у тебя не вышло"
-                "Возможно стоит сначала повысить свой интелект.."
-                "[mer.name] выглядит раздраженной"
-                $minusLove("mer",2)
-                "Хорошо, что хоть что-то ты запомнил"
-                $addChar(["intelligence"],2)
-                mer @sigh "Большего от тебя и не ожидала, всё, я занята, уходи!"
-                "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+                "Урок закончился и ты очутился в середине развилки магической башни"
                 jump magic_tower_hub
-        "Я не понял пару моментов":
-            if intelligence >= 25:
-                p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
-                "[mer.name] рассказывает тебе ту часть, которую сразу у тебя не удалось понять"
-                mer smile "По глазам вижу, теперь то ты всё понял"
-                $my_merlin.addLove(5)
-                p "Да, спасибо, что разъяснила!"
-                $addChar(["intelligence"],3)
-                mer "Если вновь появятся вопросы - можешь найти меня и я постараюсь помочь."
-                p "Хорошо, еще я бы хотел..."
-                "Не успев договорить, ты перемещаешься в центральную развилку магической башни"
-                jump magic_tower_hub
-            else:
-                p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
-                "[mer.name] еще пару часов объясняла тебе структуры магических элементов и разжевывала основны магического сотворения"
-                "И даже так ты ничего не понял"
-                "Возможно стоит сначала повысить свой интелект.."
-                "[mer.name] выглядит раздраженной"
-                $minusLove("mer",3)
-                "Жаль, что ты ничего не запомнил"
-                mer @sigh "Больше я не собираюсь тратить на тебя свое время!"
-                "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
-                jump magic_tower_hub
-        "Не смогу..":
-            mer annoyed "Столько времени и всё попусту, убирайся, не хочу тебя видеть!"
-            "Ты послушно уходишь"
+        else:
+            $customNotify("Недостаточно интеллекта")
+            "Ты попытался рассказать всё именно так, как говорила [mer.name], но у тебя не вышло"
+            $minusLove("mer",2)
+            "[mer.name] выглядит раздраженной"
+            "Хорошо, что хоть что-то ты запомнил"
+            $addChar(["intelligence"],2)
+            mer @sigh "Большего от тебя и не ожидала, всё, я занята, уходи!"
+            "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+            jump magic_tower_hub
+    else:
+        if intelligence >= 100:
+            p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
+            "[mer.name] рассказывает тебе ту часть, которую сразу у тебя не удалось понять"
+            $my_merlin.addLove(5)
+            mer smile "По глазам вижу, теперь то ты всё понял"
+            p "Да, спасибо, что разъяснила!"
+            $addChar(["intelligence"],3)
+            mer "Если вновь появятся вопросы - можешь найти меня и я постараюсь помочь."
+            p "Хорошо, еще я бы хотел..."
+            "Не успев договорить, ты перемещаешься в центральную развилку магической башни"
+            jump magic_tower_hub
+        else:
+            $customNotify("Недостаточно интеллекта")
+            p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
+            "[mer.name] еще пару часов объясняла тебе структуры магических элементов и разжевывала основны магического сотворения"
+            "И даже так ты ничего не понял"
+            "Возможно стоит сначала повысить свой интелект.."
+            "[mer.name] выглядит раздраженной"
+            $minusLove("mer",3)
+            "Жаль, что ты ничего не запомнил"
+            mer @sigh "Больше я не собираюсь тратить на тебя свое время!"
+            "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
             jump magic_tower_hub
     jump magic_tower_hub
+
+label merlin_training:
+    call start_magic_knowlenge_training(mer, intelligence)
+    return
 
 label mer_root:
     scene bg magic_tower with fade
@@ -221,7 +224,49 @@ label mer_root_blowjob:
     call hide_dialog
     "Соков становится всё больше"
     "[mer.name] продолжает обсасывать твой член"
+    scene bg mer_suck2 with dissolve
+    pause .2
     scene bg mer_suck4 with dissolve
+    pause .2
+    scene bg mer_suck2 with dissolve
+    pause .2
+    scene bg mer_suck4 with dissolve
+    pause .2
+    scene bg mer_suck2 with dissolve
+    pause .1
+    scene bg mer_suck4 with dissolve
+    pause .1
+    scene bg mer_suck2 with dissolve
+    pause .1
+    scene bg mer_suck4 with dissolve
+    pause .1
+    scene bg mer_suck2 with dissolve
+    pause .05
+    scene bg mer_suck4 with dissolve
+    pause .05
+    scene bg mer_suck2 with dissolve
+    pause .05
+    scene bg mer_suck4 with dissolve
+    pause .05
+    scene bg mer_suck2 with dissolve
+    pause .05
+    scene bg mer_suck4 with dissolve
+    pause .05
+    scene bg mer_suck2 with dissolve
+    pause .03
+    scene bg mer_suck4 with dissolve
+    pause .03
+    scene bg mer_suck2 with dissolve
+    pause .03
+    scene bg mer_suck4 with dissolve
+    pause .03
+    scene bg mer_suck2 with dissolve
+    pause .03
+    scene bg mer_suck4 with dissolve
+    pause .03
+    scene bg mer_suck2 with dissolve
+    pause .3
+    scene bg mer_suck1 with dissolve
     call hide_dialog
     "Она слегка отдаляется, но что-то тебе подсказывает, что это необходимо"
     "!!!!!"
@@ -234,29 +279,72 @@ label mer_root_blowjob:
     scene bg mer_suck6 with dissolve
     call hide_dialog
     "Это лучший глубокий минет в твоей жизни, твой член напрягается еще сильнее"
-    "Ты больше не можешь держаться, ведь сама [mer.name] делает тебе минет"
+
+    scene bg mer_suck5 with dissolve
+    pause .2
+    scene bg mer_suck6 with dissolve
+    pause .2
+    scene bg mer_suck5 with dissolve
+    pause .2
+    scene bg mer_suck6 with dissolve
+    pause .2
+    scene bg mer_suck5 with dissolve
+    pause .1
+    scene bg mer_suck6 with dissolve
+    pause .1
+    scene bg mer_suck5 with dissolve
+    pause .1
+    scene bg mer_suck6 with dissolve
+    pause .1
+    scene bg mer_suck5 with dissolve
+    pause .05
+    scene bg mer_suck6 with dissolve
+    pause .05
+    scene bg mer_suck5 with dissolve
+    pause .05
+    scene bg mer_suck6 with dissolve
+    pause .05
+    scene bg mer_suck5 with dissolve
+    pause .05
+    scene bg mer_suck6 with dissolve
+    pause .05
+    scene bg mer_suck5 with dissolve
+    pause .03
+    scene bg mer_suck6 with dissolve
+    pause .03
+    scene bg mer_suck5 with dissolve
+    pause .03
+    scene bg mer_suck6 with dissolve
+    pause .03
+    scene bg mer_suck5 with dissolve
+    pause .03
+    scene bg mer_suck6 with dissolve
+    pause .03
+    scene bg mer_suck5 with dissolve
+    call hide_dialog
+
     p "А-а-ааааах"
     mer "Ммммфффф!"
     "Твой член проникает еще глубже в ее глотку, ты начинаешь кончать"
-    scene bg mer_suck_cum1 with dissolve
+    scene bg mer_suck_cum1 with flash
     call hide_dialog
     "[mer.name] из всех сил старается не выпускать твой член из горла"
     "Она проглатывает всё, старается не упустить ни капли, но что-то все же вырывается из ее ротика"
     "Ты продолжаешь кончать, [mer.name] этого не ожидала"
-    scene bg mer_suck_cum2 with dissolve
+    scene bg mer_suck_cum2 with flash
     call hide_dialog
     "Ее глаза начинают закатываться от удовольствия"
     "[mer.name] больше не в состоянии удерживать твой член в глотке, мощная струя спермы выталкивает его"
-    scene bg mer_suck_cum3 with dissolve
+    scene bg mer_suck_cum3 with flash
     call hide_dialog
     "Сперма начинается сочиться все сильнее из ее горла, которым она все еще пытается удержать твой член"
     "[mer.name] старается изо всех сил, у нее начинают проступать слезы"
-    scene bg mer_suck_cum4 with dissolve
+    scene bg mer_suck_cum4 with flash
     call hide_dialog
     "Тушь потекла, но она все еще делает всё возможное, чтобы удержать этот безумный член в своем узкомгорле"
     "Она сама для себя решила принять всё, что ты ей дашь, но такого огромного количества спермы она не ожидала"
     "Это только сильнее тебя возбуждает и ты кончаешь с еще большей силой"
-    scene bg mer_suck_cum5 with dissolve
+    scene bg mer_suck_cum5 with flash
     call hide_dialog
     "Слезы текут по ее щекам, смешавшись с тушью, вся помада размазалась, но это именно то выражение лица, которое ты и хотел видеть"
     p "Получай, сука!"
@@ -265,46 +353,53 @@ label mer_root_blowjob:
     "Она больше не подает признаков разумности, твой член полностью заполонил ее голову, единственное, о чем она может думать - о твоем члене"
     "Ты видишь, она старается, но она итак на грани своих возможностей"
     "Наконец ты превзошел ожидания [mer.name], хоть и не в магии"
-    scene bg mer_suck_cum6 with dissolve
+    scene bg mer_suck_cum6 with flash
     call hide_dialog
     "[mer.name] не смогла полностью удержать этот бешеный поток спермы"
     "Часть спермы попала на ее лицо, смешиваясь со слезами и тушью, и забрызгала ее шикарную грудь"
     scene bg mer_suck_cum7 with dissolve
     call hide_dialog
     "[mer.name] медленно отсраняется от твоего члена, но все еще глотает столько спермы, сколько возможно"
+    
     scene bg mer_suck_cum8 with dissolve
     call hide_dialog
     "Поток спермы постепенно ослабевает, она начинает приходить в сознание"
     "Она вернулась к головке, своими нежными губками она отсасывает остатки"
     "Поняв, что извержение наконец закончилось, [mer.name] нежно облизывает головку"
+
     scene bg mer_suck_cum9 with dissolve
     call hide_dialog
     "Всё вокруг уже покрыто густой теплой спермой, с лица [mer.name] капает сперма прямо на груди и с них на пол"
     "[mer.name], не скрывая радости, смотрит на тебя, полизывая член"
     "Ты видишь, что она собой очень довольна, скорее всего это самый большой член в ее жизни"
-    "Коснувшись чувствительной части головки - [mer.name] заставлять тебя испустить последнюю порцию"
+    
     scene bg mer_suck_cum10 with dissolve
     call hide_dialog
+    "Коснувшись чувствительной части головки - [mer.name] заставлять тебя испустить последнюю порцию"
     "[mer.name] смотрит на твой член с вожделением и старается поймать последнюю струю спермы языком"
     "И успешно с этим справляется, гордо сглатывая"
-    "Наконец поняв, что твой член успокоился, [mer.name] вновь переводит свой взгляд на тебя"
+
     scene bg mer_suck_cum11 with dissolve
     call hide_dialog
+    "Наконец поняв, что твой член успокоился, [mer.name] вновь переводит свой взгляд на тебя"
     "Она смотрит на тебя с неподдельной улыбкой, понимая, что справилась, это был ее личный экзамен, который она сдала на отлично"
     mer "Никогда не смогу привыкнуть к твоему члену~"
     p "Как ты мне сама же говорила - опыт приходит с практикой."
-    "[mer.name] подмигивает тебе"
+
     scene bg mer_suck_cum_closed1eye with dissolve
     call hide_dialog
+    "[mer.name] подмигивает тебе"
     p "Повторим еще?"
-    "[mer.name], полностью покрытая спермой, одобрительно закрывает глаза и чуть наклоняет голову, еще сильнее прижимаясь к твоему члену"
+
     scene bg mer_suck_cum_closed_eyes with dissolve
     call hide_dialog
+    "[mer.name], полностью покрытая спермой, одобрительно закрывает глаза и чуть наклоняет голову, еще сильнее прижимаясь к твоему члену"
     mer "Однократные исследования не приводят к результату, [hero_name]."
     p "Я учту это."
-    "[mer.name] открывает глаза и чуть отстраняется, понимая, что тестирование закончено и надо зафиксировать результаты"
+
     scene bg mer_suck_cum11 with dissolve
     call hide_dialog
+    "[mer.name] открывает глаза и чуть отстраняется, понимая, что тестирование закончено и надо зафиксировать результаты"
     mer "На этом закончим, [hero_name]."
     p "Буду рад повторить испытания."
     mer "Ты знаешь, где меня найти."
