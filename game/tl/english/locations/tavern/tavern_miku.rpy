@@ -2,2113 +2,1762 @@
 
 # game/locations/tavern/tavern_miku.rpy:3
 translate english miku_tavern_root_6ac957a2:
-
-    # "Ты в уютной комнате [m.name] в таверне"
-    "Ты в уютной комнате [m.name] в таверне"
+    # "You are in [m.name]'s cozy room in the tavern."
+    "You are in [m.name]'s cozy room in the tavern."
 
 # game/locations/tavern/tavern_miku.rpy:5
 translate english miku_tavern_root_9f3b40ac:
-
-    # m "Чем займемся сегодня, [hero_name]?"
-    m "Чем займемся сегодня, [hero_name]?"
+    # m "What shall we do today, [hero_name]?"
+    m "What shall we do today, [hero_name]?"
 
 # game/locations/tavern/tavern_miku.rpy:35
 translate english miku_tavern_root_menu_7138f0c2:
-
-    # p "Продолжим позже, сейчас у меня есть более важные дела."
-    p "Продолжим позже, сейчас у меня есть более важные дела."
+    # p "Let’s continue later, I have more important things to do right now."
+    p "Let’s continue later, I have more important things to do right now."
 
 # game/locations/tavern/tavern_miku.rpy:36
 translate english miku_tavern_root_menu_3fad6160:
-
-    # m "Ты многое упускаешь, [hero_name]~~"
-    m "Ты многое упускаешь, [hero_name]~~"
+    # m "You’re missing out on a lot, [hero_name]~~"
+    m "You’re missing out on a lot, [hero_name]~~"
 
 # game/locations/tavern/tavern_miku.rpy:37
 translate english miku_tavern_root_menu_1e5ea600:
-
-    # "Ты уходишь"
-    "Ты уходишь"
+    # "You leave."
+    "You leave."
 
 # game/locations/tavern/tavern_miku.rpy:41
 translate english m_root_tavern_blowjob_59e03460:
-
     # "IN PROGRESS"
     "IN PROGRESS"
 
 # game/locations/tavern/tavern_miku.rpy:45
 translate english m_root_show_e72e6fc3:
-
-    # m "Подожди меня тут, [hero_name]~"
-    m "Подожди меня тут, [hero_name]~"
+    # m "Wait for me here, [hero_name]~"
+    m "Wait for me here, [hero_name]~"
 
 # game/locations/tavern/tavern_miku.rpy:47
 translate english m_root_show_8a0a3a4c:
-
-    # p "Надо же, как тут светло и чисто."
-    p "Надо же, как тут светло и чисто."
+    # p "Wow, it’s so bright and clean in here."
+    p "Wow, it’s so bright and clean in here."
 
 # game/locations/tavern/tavern_miku.rpy:51
 translate english m_root_show_665e0022:
-
-    # "Через какое-то время заходит [m.name]."
-    "Через какое-то время заходит [m.name]."
+    # "After a while, [m.name] enters."
+    "After a while, [m.name] enters."
 
 # game/locations/tavern/tavern_miku.rpy:52
 translate english m_root_show_0d28cb02:
-
-    # m "Эм... Ты уверен, что хочешь это увидеть?"
-    m "Эм... Ты уверен, что хочешь это увидеть?"
+    # m "Um... Are you sure you want to see this?"
+    m "Um... Are you sure you want to see this?"
 
 # game/locations/tavern/tavern_miku.rpy:53
 translate english m_root_show_160049de:
-
-    # p "Конечно. Ты прекрасна, [m.name]."
-    p "Конечно. Ты прекрасна, [m.name]."
+    # p "Of course. You’re beautiful, [m.name]."
+    p "Of course. You’re beautiful, [m.name]."
 
 # game/locations/tavern/tavern_miku.rpy:57
 translate english m_root_show_22e07362:
-
-    # "[m.name] всё еще прикрывает свою прекрасную грудь."
-    "[m.name] всё еще прикрывает свою прекрасную грудь."
+    # "[m.name] is still covering her beautiful breasts."
+    "[m.name] is still covering her beautiful breasts."
 
 # game/locations/tavern/tavern_miku.rpy:58
 translate english m_root_show_b84081c3:
-
-    # mind "Она такая милая, её смущение только добавляет ей шарма."
-    mind "Она такая милая, её смущение только добавляет ей шарма."
+    # mind "She’s so cute; her shyness only adds to her charm."
+    mind "She’s so cute; her shyness only adds to her charm."
 
 # game/locations/tavern/tavern_miku.rpy:59
 translate english m_root_show_86b8136f:
-
-    # p "Давай, не стесняйся. Ты же знаешь, что я восхищаюсь тобой."
-    p "Давай, не стесняйся. Ты же знаешь, что я восхищаюсь тобой."
+    # p "Come on, don’t be shy. You know I admire you."
+    p "Come on, don’t be shy. You know I admire you."
 
 # game/locations/tavern/tavern_miku.rpy:63
 translate english m_root_show_c9a3483b:
-
-    # "[m.name] нехотя убрала одну из рук, но все еще старается прикрыться."
-    "[m.name] нехотя убрала одну из рук, но все еще старается прикрыться."
+    # "[m.name] reluctantly moves one hand away but still tries to cover herself."
+    "[m.name] reluctantly moves one hand away but still tries to cover herself."
 
 # game/locations/tavern/tavern_miku.rpy:64
 translate english m_root_show_1b106b51:
-
-    # m "Ты так смотришь..."
-    m "Ты так смотришь..."
+    # m "You’re staring so much..."
+    m "You’re staring so much..."
 
 # game/locations/tavern/tavern_miku.rpy:68
 translate english m_root_show_d4a8d435:
-
-    # "[m.name] наклоняется, обнажив свою грудь."
-    "[m.name] наклоняется, обнажив свою грудь."
+    # "[m.name] leans forward, exposing her breasts."
+    "[m.name] leans forward, exposing her breasts."
 
 # game/locations/tavern/tavern_miku.rpy:69
 translate english m_root_show_1a247006:
-
-    # mind "Черт, это восхитительно..."
-    mind "Черт, это восхитительно..."
+    # mind "Damn, this is breathtaking..."
+    mind "Damn, this is breathtaking..."
 
 # game/locations/tavern/tavern_miku.rpy:70
 translate english m_root_show_44f4e923:
-
-    # p "Ты прекрасна, [m.name]."
-    p "Ты прекрасна, [m.name]."
+    # p "You’re beautiful, [m.name]."
+    p "You’re beautiful, [m.name]."
 
 # game/locations/tavern/tavern_miku.rpy:74
 translate english m_root_show_cfb9cde4:
-
-    # "Тело [m.name] дрожит от волнения, но улыбка не сходит с ее губ."
-    "Тело [m.name] дрожит от волнения, но улыбка не сходит с ее губ."
+    # "[m.name]'s body trembles with excitement, but a smile remains on her lips."
+    "[m.name]'s body trembles with excitement, but a smile remains on her lips."
 
 # game/locations/tavern/tavern_miku.rpy:75
 translate english m_root_show_21bf7e69:
-
-    # m "И что теперь?"
-    m "И что теперь?"
+    # m "So, what now?"
+    m "So, what now?"
 
 # game/locations/tavern/tavern_miku.rpy:76
 translate english m_root_show_07c6bc88:
-
-    # p "Может, поднимешь юбку?"
-    p "Может, поднимешь юбку?"
+    # p "How about lifting your skirt?"
+    p "How about lifting your skirt?"
 
 # game/locations/tavern/tavern_miku.rpy:80
 translate english m_root_show_fecda603:
-
-    # "Она слегка поднимает короткую юбку, показывая стройные бедра."
-    "Она слегка поднимает короткую юбку, показывая стройные бедра."
+    # "She slightly lifts her short skirt, revealing her slender thighs."
+    "She slightly lifts her short skirt, revealing her slender thighs."
 
 # game/locations/tavern/tavern_miku.rpy:81
 translate english m_root_show_9db2bc61:
-
-    # p "Еще чуть-чуть..."
-    p "Еще чуть-чуть..."
+    # p "A little more..."
+    p "A little more..."
 
 # game/locations/tavern/tavern_miku.rpy:82
 translate english m_root_show_1da6db0b:
-
-    # m "Ты уверен?"
-    m "Ты уверен?"
+    # m "Are you sure?"
+    m "Are you sure?"
 
 # game/locations/tavern/tavern_miku.rpy:86
 translate english m_root_show_43203412:
-
-    # "Её лицо заливается румянцем, когда она поднимает юбку ещё выше, обнажая белые трусики."
-    "Её лицо заливается румянцем, когда она поднимает юбку ещё выше, обнажая белые трусики."
+    # "Her face flushes as she lifts her skirt higher, revealing white panties."
+    "Her face flushes as she lifts her skirt higher, revealing white panties."
 
 # game/locations/tavern/tavern_miku.rpy:87
 translate english m_root_show_a826022c:
-
-    # m "Они... тебе нравятся?"
-    m "Они... тебе нравятся?"
+    # m "Do... you like them?"
+    m "Do... you like them?"
 
 # game/locations/tavern/tavern_miku.rpy:88
 translate english m_root_show_d5b9d21e:
-
-    # p "Очень... Ты выглядишь потрясающе. Ну же, раздевайся!"
-    p "Очень... Ты выглядишь потрясающе. Ну же, раздевайся!"
+    # p "Very much... You look stunning. Come on, take it off!"
+    p "Very much... You look stunning. Come on, take it off!"
 
 # game/locations/tavern/tavern_miku.rpy:92
 translate english m_root_show_e3ff72a0:
-
-    # "[m.name] послушно сняла сарафан, покрасневшая, прикрывает руками грудь и трусики."
-    "[m.name] послушно сняла сарафан, покрасневшая, прикрывает руками грудь и трусики."
+    # "[m.name] obediently takes off her sundress, blushing, covering her breasts and panties with her hands."
+    "[m.name] obediently takes off her sundress, blushing, covering her breasts and panties with her hands."
 
 # game/locations/tavern/tavern_miku.rpy:93
 translate english m_root_show_4061fe42:
-
-    # mind "Она стесняется, но не останавливается. Интересно, как далеко она готова зайти?"
-    mind "Она стесняется, но не останавливается. Интересно, как далеко она готова зайти?"
+    # mind "She’s shy but doesn’t stop. I wonder how far she’s willing to go?"
+    mind "She’s shy but doesn’t stop. I wonder how far she’s willing to go?"
 
 # game/locations/tavern/tavern_miku.rpy:94
 translate english m_root_show_10b7da82:
-
-    # p "Ты прекрасна... Не скрывайся."
-    p "Ты прекрасна... Не скрывайся."
+    # p "You’re beautiful... Don’t hide."
+    p "You’re beautiful... Don’t hide."
 
 # game/locations/tavern/tavern_miku.rpy:98
 translate english m_root_show_2a248560:
-
-    # "Она держит руки под грудью, словно немного подталкивая их вверх."
-    "Она держит руки под грудью, словно немного подталкивая их вверх."
+    # "She holds her hands under her breasts, slightly pushing them up."
+    "She holds her hands under her breasts, slightly pushing them up."
 
 # game/locations/tavern/tavern_miku.rpy:99
 translate english m_root_show_45cab328:
-
-    # m "Тебе так нравится моя грудь?"
-    m "Тебе так нравится моя грудь?"
+    # m "Do you like my breasts that much?"
+    m "Do you like my breasts that much?"
 
 # game/locations/tavern/tavern_miku.rpy:103
 translate english m_root_show_25c77c00:
-
-    # "[m.name] слегка сжимает груди руками, её дыхание становится тяжелее."
-    "[m.name] слегка сжимает груди руками, её дыхание становится тяжелее."
+    # "[m.name] gently squeezes her breasts with her hands, her breathing growing heavier."
+    "[m.name] gently squeezes her breasts with her hands, her breathing growing heavier."
 
 # game/locations/tavern/tavern_miku.rpy:104
 translate english m_root_show_2ca1f956:
-
-    # p "Я рад, что могу увидеть тебя такой."
-    p "Я рад, что могу увидеть тебя такой."
+    # p "I’m glad I get to see you like this."
+    p "I’m glad I get to see you like this."
 
 # game/locations/tavern/tavern_miku.rpy:108
 translate english m_root_show_7b2fb517:
-
-    # "Она наклоняется, держа в руках груди, показывая их тебе."
-    "Она наклоняется, держа в руках груди, показывая их тебе."
+    # "She leans forward, holding her breasts, showing them to you."
+    "She leans forward, holding her breasts, showing them to you."
 
 # game/locations/tavern/tavern_miku.rpy:109
 translate english m_root_show_a80de022:
-
-    # mind "О боже, это просто великолепно."
-    mind "О боже, это просто великолепно."
+    # mind "Oh God, this is just magnificent."
+    mind "Oh God, this is just magnificent."
 
 # game/locations/tavern/tavern_miku.rpy:110
 translate english m_root_show_ffa8bf12:
-
-    # p "Ты божественна, [m.name]..."
-    p "Ты божественна, [m.name]..."
+    # p "You’re divine, [m.name]..."
+    p "You’re divine, [m.name]..."
 
 # game/locations/tavern/tavern_miku.rpy:114
 translate english m_root_show_d3c1762d:
-
-    # "[m.name] поворачивается спиной, обнажая свою изящную попку."
-    "[m.name] поворачивается спиной, обнажая свою изящную попку."
+    # "[m.name] turns around, exposing her elegant backside."
+    "[m.name] turns around, exposing her elegant backside."
 
 # game/locations/tavern/tavern_miku.rpy:115
 translate english m_root_show_7c116fdc:
-
-    # p "Твоя фигура идеальна."
-    p "Твоя фигура идеальна."
+    # p "Your figure is perfect."
+    p "Your figure is perfect."
 
 # game/locations/tavern/tavern_miku.rpy:119
 translate english m_root_show_207e691c:
-
-    # "Немного смутившись, она слегка наклоняется и приспускает трусики."
-    "Немного смутившись, она слегка наклоняется и приспускает трусики."
+    # "A little embarrassed, she bends slightly and lowers her panties."
+    "A little embarrassed, she bends slightly and lowers her panties."
 
 # game/locations/tavern/tavern_miku.rpy:120
 translate english m_root_show_2e1cf7f1:
-
-    # "Ты видишь ее киску, а её глаза застилает смущённый, но игривый взгляд."
-    "Ты видишь ее киску, а её глаза застилает смущённый, но игривый взгляд."
+    # "You see her pussy, and her eyes are clouded with a shy yet playful look."
+    "You see her pussy, and her eyes are clouded with a shy yet playful look."
 
 # game/locations/tavern/tavern_miku.rpy:121
 translate english m_root_show_8d88e8c7:
-
-    # m "Ты... правда этого хотел?"
-    m "Ты... правда этого хотел?"
+    # m "Did you... really want this?"
+    m "Did you... really want this?"
 
 # game/locations/tavern/tavern_miku.rpy:122
 translate english m_root_show_8af5ed5c:
-
-    # p "Каждую секунду мечтал об этом."
-    p "Каждую секунду мечтал об этом."
+    # p "I’ve dreamed of this every second."
+    p "I’ve dreamed of this every second."
 
 # game/locations/tavern/tavern_miku.rpy:123
 translate english m_root_show_89163d98:
-
-    # mind "Теперь главное — удержать себя в руках."
-    mind "Теперь главное — удержать себя в руках."
+    # mind "Now the main thing is to keep myself under control."
+    mind "Now the main thing is to keep myself under control."
 
 # game/locations/tavern/tavern_miku.rpy:127
 translate english m_root_show_9be29742:
-
-    # "[m.name] наклонилась еще сильнее, румянец на ее лице усиливается, она смущена."
-    "[m.name] наклонилась еще сильнее, румянец на ее лице усиливается, она смущена."
+    # "[m.name] bends even further, her blush deepening, visibly embarrassed."
+    "[m.name] bends even further, her blush deepening, visibly embarrassed."
 
 # game/locations/tavern/tavern_miku.rpy:128
 translate english m_root_show_cac3e940:
-
-    # m "Ты так внимательно смотришь... я чувствую себя такой открытой..."
-    m "Ты так внимательно смотришь... я чувствую себя такой открытой..."
+    # m "You’re staring so intently... I feel so exposed..."
+    m "You’re staring so intently... I feel so exposed..."
 
 # game/locations/tavern/tavern_miku.rpy:129
 translate english m_root_show_0553b4a5:
-
-    # p "Потому что ты невероятно красива. Ну же, покажи мне свою киску."
-    p "Потому что ты невероятно красива. Ну же, покажи мне свою киску."
+    # p "Because you’re incredibly beautiful. Come on, show me your pussy."
+    p "Because you’re incredibly beautiful. Come on, show me your pussy."
 
 # game/locations/tavern/tavern_miku.rpy:133
 translate english m_root_show_78d5af3b:
-
-    # m "Ты хочешь, чтобы я показала тебе всё?"
-    m "Ты хочешь, чтобы я показала тебе всё?"
+    # m "You want me to show you everything?"
+    m "You want me to show you everything?"
 
 # game/locations/tavern/tavern_miku.rpy:134
 translate english m_root_show_552d1d41:
-
-    # p "Да, [m.name], покажи мне себя полностью."
-    p "Да, [m.name], покажи мне себя полностью."
+    # p "Yes, [m.name], show me all of you."
+    p "Yes, [m.name], show me all of you."
 
 # game/locations/tavern/tavern_miku.rpy:138
 translate english m_root_show_91e7a194:
-
-    # "[m.name] встала на кровати на четвереньки, выпятив свою попку."
-    "[m.name] встала на кровати на четвереньки, выпятив свою попку."
+    # "[m.name] gets on all fours on the bed, sticking out her backside."
+    "[m.name] gets on all fours on the bed, sticking out her backside."
 
 # game/locations/tavern/tavern_miku.rpy:139
 translate english m_root_show_5b45b388:
-
-    # mind "Черт... Она такая соблазнительная."
-    mind "Черт... Она такая соблазнительная."
+    # mind "Damn... She’s so tempting."
+    mind "Damn... She’s so tempting."
 
 # game/locations/tavern/tavern_miku.rpy:140
 translate english m_root_show_6e12308c:
-
-    # p "Ты же понимаешь, чего именно я ожидаю?"
-    p "Ты же понимаешь, чего именно я ожидаю?"
+    # p "You know what I’m expecting, right?"
+    p "You know what I’m expecting, right?"
 
 # game/locations/tavern/tavern_miku.rpy:144
 translate english m_root_show_f72b49aa:
-
-    # "[m.name] чуть выпрямляется, раздвигая ноги и готовится к чему-то."
-    "[m.name] чуть выпрямляется, раздвигая ноги и готовится к чему-то."
+    # "[m.name] straightens up a bit, spreading her legs, preparing for something."
+    "[m.name] straightens up a bit, spreading her legs, preparing for something."
 
 # game/locations/tavern/tavern_miku.rpy:145
 translate english m_root_show_d8d51d07:
-
-    # m "Д-да..."
-    m "Д-да..."
+    # m "Y-yes..."
+    m "Y-yes..."
 
 # game/locations/tavern/tavern_miku.rpy:149
 translate english m_root_show_ffdd4611:
-
-    # "[m.name] опускается на колени, её пальчики медленно скользят к её киске."
-    "[m.name] опускается на колени, её пальчики медленно скользят к её киске."
+    # "[m.name] drops to her knees, her fingers slowly sliding toward her pussy."
+    "[m.name] drops to her knees, her fingers slowly sliding toward her pussy."
 
 # game/locations/tavern/tavern_miku.rpy:150
 translate english m_root_show_6c10aae9:
-
-    # m "Боже, что я делаю...."
-    m "Боже, что я делаю...."
+    # m "God, what am I doing..."
+    m "God, what am I doing..."
 
 # game/locations/tavern/tavern_miku.rpy:151
 translate english m_root_show_f5965f46:
-
-    # p "Ты всё делаешь правильно."
-    p "Ты всё делаешь правильно."
+    # p "You’re doing everything right."
+    p "You’re doing everything right."
 
 # game/locations/tavern/tavern_miku.rpy:155
 translate english m_root_show_a943c703:
-
-    # "[m.name] начинает мастурбировать"
-    "[m.name] начинает мастурбировать"
+    # "[m.name] starts masturbating."
+    "[m.name] starts masturbating."
 
 # game/locations/tavern/tavern_miku.rpy:184
 translate english m_root_show_1fb3b078:
-
-    # "Её движения становятся всё быстрее, её дыхание учащается, а глаза закрываются от наслаждения."
-    "Её движения становятся всё быстрее, её дыхание учащается, а глаза закрываются от наслаждения."
+    # "Her movements speed up, her breathing quickens, and her eyes close in pleasure."
+    "Her movements speed up, her breathing quickens, and her eyes close in pleasure."
 
 # game/locations/tavern/tavern_miku.rpy:185
 translate english m_root_show_3d1ca19a:
-
-    # m "Я... Я... Аааааах..."
-    m "Я... Я... Аааааах..."
+    # m "I... I... Aaaah..."
+    m "I... I... Aaaah..."
 
 # game/locations/tavern/tavern_miku.rpy:189
 translate english m_root_show_d04530fb:
-
-    # "Соки [m.name] стекают по её бедрам."
-    "Соки [m.name] стекают по её бедрам."
+    # "[m.name]'s juices drip down her thighs."
+    "[m.name]'s juices drip down her thighs."
 
 # game/locations/tavern/tavern_miku.rpy:194
 translate english m_root_show_1a4def60:
-
-    # "[m.name] немного поворачивается, оттягивая попку, чтобы показать, как много соков вышло из неё."
-    "[m.name] немного поворачивается, оттягивая попку, чтобы показать, как много соков вышло из неё."
+    # "[m.name] turns slightly, pulling her backside to show how much juice has come out of her."
+    "[m.name] turns slightly, pulling her backside to show how much juice has come out of her."
 
 # game/locations/tavern/tavern_miku.rpy:195
 translate english m_root_show_fb4fdf05:
-
-    # m "Видишь, как я старалась?"
-    m "Видишь, как я старалась?"
+    # m "See how hard I tried?"
+    m "See how hard I tried?"
 
 # game/locations/tavern/tavern_miku.rpy:200
 translate english m_root_show_06efa6f1:
-
-    # p "Надеюсь ты готова.."
-    p "Надеюсь ты готова.."
+    # p "I hope you’re ready..."
+    p "I hope you’re ready..."
 
 # game/locations/tavern/tavern_miku.rpy:201
 translate english m_root_show_79980e2d:
-
-    # m "Ммм?"
-    m "Ммм?"
+    # m "Mmm?"
+    m "Mmm?"
 
 # game/locations/tavern/tavern_miku.rpy:205
 translate english m_root_show_b5429e12:
-
-    # "Ты режаешь досмотреть шоу"
-    "Ты режаешь досмотреть шоу"
+    # "You decide to keep watching the show."
+    "You decide to keep watching the show."
 
 # game/locations/tavern/tavern_miku.rpy:210
 translate english m_root_show_ffbc1f89:
-
-    # p "Может покажешь, настоящую себя?"
-    p "Может покажешь, настоящую себя?"
+    # p "Maybe you’ll show me the real you?"
+    p "Maybe you’ll show me the real you?"
 
 # game/locations/tavern/tavern_miku.rpy:211
 translate english m_root_show_d8d51d07_1:
-
-    # m "Д-да..."
-    m "Д-да..."
+    # m "Y-yes..."
+    m "Y-yes..."
 
 # game/locations/tavern/tavern_miku.rpy:215
 translate english m_root_show_bc114846:
-
-    # "Её пальчики медленно скользят к её анусу, она начинает ласкать его, наслаждаясь каждым прикосновением."
-    "Её пальчики медленно скользят к её анусу, она начинает ласкать его, наслаждаясь каждым прикосновением."
+    # "Her fingers slowly slide toward her anus, and she begins caressing it, enjoying every touch."
+    "Her fingers slowly slide toward her anus, and she begins caressing it, enjoying every touch."
 
 # game/locations/tavern/tavern_miku.rpy:216
 translate english m_root_show_88b68703:
-
-    # m "Ты правда этого х-хочешь??"
-    m "Ты правда этого х-хочешь??"
+    # m "You really w-want this??"
+    m "You really w-want this??"
 
 # game/locations/tavern/tavern_miku.rpy:217
 translate english m_root_show_6cf54329:
-
-    # "Ты сглатываешь.."
-    "Ты сглатываешь.."
+    # "You swallow hard..."
+    "You swallow hard..."
 
 # game/locations/tavern/tavern_miku.rpy:221
 translate english m_root_show_64cdb771:
-
-    # "[m.name] начинает играть со своим анусом"
-    "[m.name] начинает играть со своим анусом"
+    # "[m.name] starts playing with her anus."
+    "[m.name] starts playing with her anus."
 
 # game/locations/tavern/tavern_miku.rpy:222
 translate english m_root_show_38aaac27:
-
-    # m "Это так... приятно..."
-    m "Это так... приятно..."
+    # m "It feels so... good..."
+    m "It feels so... good..."
 
 # game/locations/tavern/tavern_miku.rpy:226
 translate english m_root_show_8d34b9ed:
-
-    # "Её глаза закатываются от удовольствия, а воздух становится горячее"
-    "Её глаза закатываются от удовольствия, а воздух становится горячее"
+    # "Her eyes roll back in pleasure, and the air grows hotter."
+    "Her eyes roll back in pleasure, and the air grows hotter."
 
 # game/locations/tavern/tavern_miku.rpy:227
 translate english m_root_show_1eb36631:
-
-    # "Она продолжает играть со своей попкой, комната наполняется сладкими вздохами [m.name]"
-    "Она продолжает играть со своей попкой, комната наполняется сладкими вздохами [m.name]"
+    # "She continues playing with her backside, the room filling with [m.name]'s sweet sighs."
+    "She continues playing with her backside, the room filling with [m.name]'s sweet sighs."
 
 # game/locations/tavern/tavern_miku.rpy:252
 translate english m_root_show_36a14a68:
-
-    # "Её тело дрожит от наслаждения, её пальчики продолжают играть с её анусом, а соки стекают по её бедрам."
-    "Её тело дрожит от наслаждения, её пальчики продолжают играть с её анусом, а соки стекают по её бедрам."
+    # "Her body trembles with pleasure, her fingers keep playing with her anus, and juices drip down her thighs."
+    "Her body trembles with pleasure, her fingers keep playing with her anus, and juices drip down her thighs."
 
 # game/locations/tavern/tavern_miku.rpy:253
 translate english m_root_show_ab3f0e53:
-
-    # p "Ты так сексуальна..."
-    p "Ты так сексуальна..."
+    # p "You’re so sexy..."
+    p "You’re so sexy..."
 
 # game/locations/tavern/tavern_miku.rpy:257
 translate english m_root_show_524469e6:
-
-    # "[m.name] поворачивается к тебе попкой, раздвигая её, наслаждаясь тем, что ты на неё смотришь."
-    "[m.name] поворачивается к тебе попкой, раздвигая её, наслаждаясь тем, что ты на неё смотришь."
+    # "[m.name] turns her backside to you, spreading it, enjoying the fact that you’re watching her."
+    "[m.name] turns her backside to you, spreading it, enjoying the fact that you’re watching her."
 
 # game/locations/tavern/tavern_miku.rpy:258
 translate english m_root_show_db2b84c9:
-
-    # m "Тебе нравится?"
-    m "Тебе нравится?"
+    # m "Do you like it?"
+    m "Do you like it?"
 
 # game/locations/tavern/tavern_miku.rpy:259
 translate english m_root_show_5eee610b:
-
-    # p "Да, хорошая девочка."
-    p "Да, хорошая девочка."
+    # p "Yes, good girl."
+    p "Yes, good girl."
 
 # game/locations/tavern/tavern_miku.rpy:263
 translate english m_root_show_1210c897:
-
-    # "Она улыбается, всё ещё в той же позе, её глаза блестят от удовольствия."
-    "Она улыбается, всё ещё в той же позе, её глаза блестят от удовольствия."
+    # "She smiles, still in the same pose, her eyes sparkling with pleasure."
+    "She smiles, still in the same pose, her eyes sparkling with pleasure."
 
 # game/locations/tavern/tavern_miku.rpy:264
 translate english m_root_show_ebe64fdb:
-
-    # m "Я делаю это для тебя~"
-    m "Я делаю это для тебя~"
+    # m "I’m doing this for you~"
+    m "I’m doing this for you~"
 
 # game/locations/tavern/tavern_miku.rpy:268
 translate english m_root_show_9ac35bd9:
-
-    # "[m.name] немного поворачивается, растягивая свой анус, показывая свою дырочку, её улыбка становится ещё шире."
-    "[m.name] немного поворачивается, растягивая свой анус, показывая свою дырочку, её улыбка становится ещё шире."
+    # "[m.name] turns slightly, stretching her anus, showing her hole, her smile widening."
+    "[m.name] turns slightly, stretching her anus, showing her hole, her smile widening."
 
 # game/locations/tavern/tavern_miku.rpy:269
 translate english m_root_show_24fb662a:
-
-    # m "Хо... Хочешь увидеть больше?"
-    m "Хо... Хочешь увидеть больше?"
+    # m "W-want to see more?"
+    m "W-want to see more?"
 
 # game/locations/tavern/tavern_miku.rpy:270
 translate english m_root_show_bcb08f1a:
-
-    # p "Конечно!"
-    p "Конечно!"
+    # p "Of course!"
+    p "Of course!"
 
 # game/locations/tavern/tavern_miku.rpy:274
 translate english m_root_show_e740940d:
-
-    # "Её взгляд меняется на ухмылку, она явно наслаждается тем, как ты на неё смотришь."
-    "Её взгляд меняется на ухмылку, она явно наслаждается тем, как ты на неё смотришь."
+    # "Her gaze shifts to a smirk; she’s clearly enjoying how you’re looking at her."
+    "Her gaze shifts to a smirk; she’s clearly enjoying how you’re looking at her."
 
 # game/locations/tavern/tavern_miku.rpy:275
 translate english m_root_show_8991c60c:
-
-    # m "Ты такой предсказуемый..."
-    m "Ты такой предсказуемый..."
+    # m "You’re so predictable..."
+    m "You’re so predictable..."
 
 # game/locations/tavern/tavern_miku.rpy:276
 translate english m_root_show_d78182e1:
-
-    # mind "Я уже еле держусь!"
-    mind "Я уже еле держусь!"
+    # mind "I’m barely holding on!"
+    mind "I’m barely holding on!"
 
 # game/locations/tavern/tavern_miku.rpy:284
 translate english m_root_show_b5429e12_1:
-
-    # "Ты режаешь досмотреть шоу"
-    "Ты режаешь досмотреть шоу"
+    # "You decide to keep watching the show."
+    "You decide to keep watching the show."
 
 # game/locations/tavern/tavern_miku.rpy:292
 translate english m_root_show_79847e1b:
-
-    # "[m.name] поднимается, всё ещё наклонившись, её попка всё так же соблазнительно выставлена на показ."
-    "[m.name] поднимается, всё ещё наклонившись, её попка всё так же соблазнительно выставлена на показ."
+    # "[m.name] stands up, still bent over, her backside still seductively on display."
+    "[m.name] stands up, still bent over, her backside still seductively on display."
 
 # game/locations/tavern/tavern_miku.rpy:296
 translate english m_root_show_e4bcbfa2:
-
-    # "Она встаёт, оперевшись на грудь, раздвинув ноги."
-    "Она встаёт, оперевшись на грудь, раздвинув ноги."
+    # "She stands, leaning on her chest, legs spread."
+    "She stands, leaning on her chest, legs spread."
 
 # game/locations/tavern/tavern_miku.rpy:297
 translate english m_root_show_d3f945c3:
-
-    # m "Ты уже еле держишься, да, [hero_name]?"
-    m "Ты уже еле держишься, да, [hero_name]?"
+    # m "You’re barely holding on, aren’t you, [hero_name]?"
+    m "You’re barely holding on, aren’t you, [hero_name]?"
 
 # game/locations/tavern/tavern_miku.rpy:298
 translate english m_root_show_c8ea8a4a:
-
     # p "..."
     p "..."
 
 # game/locations/tavern/tavern_miku.rpy:302
 translate english m_root_show_9fe1946e:
-
-    # "[m.name] встаёт на прямых раздвинутых ногах, наклонившись вниз, соки с её киски стекают по её животику на грудь."
-    "[m.name] встаёт на прямых раздвинутых ногах, наклонившись вниз, соки с её киски стекают по её животику на грудь."
+    # "[m.name] stands with her legs spread straight, bending down, her pussy juices dripping down her stomach to her chest."
+    "[m.name] stands with her legs spread straight, bending down, her pussy juices dripping down her stomach to her chest."
 
 # game/locations/tavern/tavern_miku.rpy:303
 translate english m_root_show_169a4c56:
-
-    # m "К-как тебе такое?"
-    m "К-как тебе такое?"
+    # m "H-how’s this?"
+    m "H-how’s this?"
 
 # game/locations/tavern/tavern_miku.rpy:304
 translate english m_root_show_70d1dcb6:
-
-    # p "Вау... Ты... Просто нечто!"
-    p "Вау... Ты... Просто нечто!"
+    # p "Wow... You’re... unreal!"
+    p "Wow... You’re... unreal!"
 
 # game/locations/tavern/tavern_miku.rpy:308
 translate english m_root_show_ade349b3:
-
-    # "Она встаёт, оперевшись на грудь, но теперь повёрнута к тебе спиной, ты видишь её киску и гладкий животик."
-    "Она встаёт, оперевшись на грудь, но теперь повёрнута к тебе спиной, ты видишь её киску и гладкий животик."
+    # "She stands, leaning on her chest, now turned with her back to you; you see her pussy and smooth stomach."
+    "She stands, leaning on her chest, now turned with her back to you; you see her pussy and smooth stomach."
 
 # game/locations/tavern/tavern_miku.rpy:311
 translate english m_root_show_f1cc6786:
-
-    # m "К-какую из этих дырочек ты хочешь больше?~"
-    m "К-какую из этих дырочек ты хочешь больше?~"
+    # m "W-which of these holes do you want more?~"
+    m "W-which of these holes do you want more?~"
 
 # game/locations/tavern/tavern_miku.rpy:315
 translate english m_root_show_d222283c:
-
-    # "Ты хватаешь [m.name] и начинаешь ее насиловать изо всех сил, на ее крики прибегают посетители.."
-    "Ты хватаешь [m.name] и начинаешь ее насиловать изо всех сил, на ее крики прибегают посетители.."
+    # "You grab [m.name] and start ravishing her with all your strength; visitors come running at her screams..."
+    "You grab [m.name] and start ravishing her with all your strength; visitors come running at her screams..."
 
 # game/locations/tavern/tavern_miku.rpy:319
 translate english m_root_show_a0d2be44:
-
-    # "Ты решаешь продолжить смотреть шоу"
-    "Ты решаешь продолжить смотреть шоу"
+    # "You decide to keep watching the show."
+    "You decide to keep watching the show."
 
 # game/locations/tavern/tavern_miku.rpy:323
 translate english m_root_show_7481ea48:
-
-    # p "Твоя растяжка... Это что-то!"
-    p "Твоя растяжка... Это что-то!"
+    # p "Your flexibility... It’s something else!"
+    p "Your flexibility... It’s something else!"
 
 # game/locations/tavern/tavern_miku.rpy:326
 translate english m_root_show_f1ad081e:
-
-    # "[m.name] ложится на бок, её улыбка становится мягче, она явно наслаждается моментом."
-    "[m.name] ложится на бок, её улыбка становится мягче, она явно наслаждается моментом."
+    # "[m.name] lies on her side, her smile softening; she’s clearly enjoying the moment."
+    "[m.name] lies on her side, her smile softening; she’s clearly enjoying the moment."
 
 # game/locations/tavern/tavern_miku.rpy:327
 translate english m_root_show_bde62c84:
-
-    # m "М-мне нравится, как ты на меня смотришь~~"
-    m "М-мне нравится, как ты на меня смотришь~~"
+    # m "I-I like how you’re looking at me~~"
+    m "I-I like how you’re looking at me~~"
 
 # game/locations/tavern/tavern_miku.rpy:331
 translate english m_root_show_34b5cd0e:
-
-    # "Она ложится на спину, чуть согнув ножки в коленях, её грудь прекрасна."
-    "Она ложится на спину, чуть согнув ножки в коленях, её грудь прекрасна."
+    # "She lies on her back, knees slightly bent; her breasts are gorgeous."
+    "She lies on her back, knees slightly bent; her breasts are gorgeous."
 
 # game/locations/tavern/tavern_miku.rpy:332
 translate english m_root_show_0619ee86:
-
-    # p "Не прячь свою чудесную киску, [m.name]."
-    p "Не прячь свою чудесную киску, [m.name]."
+    # p "Don’t hide your wonderful pussy, [m.name]."
+    p "Don’t hide your wonderful pussy, [m.name]."
 
 # game/locations/tavern/tavern_miku.rpy:336
 translate english m_root_show_512aaad6:
-
-    # "[m.name] поднимает ножки, лежа на спине, показывая свою киску."
-    "[m.name] поднимает ножки, лежа на спине, показывая свою киску."
+    # "[m.name] lifts her legs while lying on her back, showing her pussy."
+    "[m.name] lifts her legs while lying on her back, showing her pussy."
 
 # game/locations/tavern/tavern_miku.rpy:337
 translate english m_root_show_1291bf97:
-
-    # p "А теперь раздвить свою попку, хочу хорошо рассмотреть твою киску."
-    p "А теперь раздвить свою попку, хочу хорошо рассмотреть твою киску."
+    # p "Now spread your ass; I want a good look at your pussy."
+    p "Now spread your ass; I want a good look at your pussy."
 
 # game/locations/tavern/tavern_miku.rpy:341
 translate english m_root_show_6418e927:
-
-    # "Она смущённо придерживает свои ножки, чтобы ты лучше всё рассмотрел."
-    "Она смущённо придерживает свои ножки, чтобы ты лучше всё рассмотрел."
+    # "She shyly holds her legs so you can see everything better."
+    "She shyly holds her legs so you can see everything better."
 
 # game/locations/tavern/tavern_miku.rpy:342
 translate english m_root_show_a937b09a:
-
-    # m "Ты доволен?"
-    m "Ты доволен?"
+    # m "Are you satisfied?"
+    m "Are you satisfied?"
 
 # game/locations/tavern/tavern_miku.rpy:343
 translate english m_root_show_bcb08f1a_1:
-
-    # p "Конечно!"
-    p "Конечно!"
+    # p "Of course!"
+    p "Of course!"
 
 # game/locations/tavern/tavern_miku.rpy:347
 translate english m_root_show_4faa7be3:
-
-    # "[m.name] встаёт на ноги, наклонившись, её киска видна, соки текут по её бедрам."
-    "[m.name] встаёт на ноги, наклонившись, её киска видна, соки текут по её бедрам."
+    # "[m.name] stands up, bending over; her pussy is visible, juices running down her thighs."
+    "[m.name] stands up, bending over; her pussy is visible, juices running down her thighs."
 
 # game/locations/tavern/tavern_miku.rpy:351
 translate english m_root_show_331d28aa:
-
-    # "Она поднимает одну ножку и стоит на другой, показывая свою гибкость и соблазнительную киску."
-    "Она поднимает одну ножку и стоит на другой, показывая свою гибкость и соблазнительную киску."
+    # "She lifts one leg while standing on the other, showing her flexibility and seductive pussy."
+    "She lifts one leg while standing on the other, showing her flexibility and seductive pussy."
 
 # game/locations/tavern/tavern_miku.rpy:352
 translate english m_root_show_27a45cb2:
-
-    # p "Эта растяжка нам понадобится позже."
-    p "Эта растяжка нам понадобится позже."
+    # p "This flexibility will come in handy later."
+    p "This flexibility will come in handy later."
 
 # game/locations/tavern/tavern_miku.rpy:355
 translate english m_root_show_9ba6ecaf:
-
-    # p "Может даже прямо сейчас..."
-    p "Может даже прямо сейчас..."
+    # p "Maybe even right now..."
+    p "Maybe even right now..."
 
 # game/locations/tavern/tavern_miku.rpy:360
 translate english m_root_show_a79114a3:
-
-    # m "Ч-чтооо?"
-    m "Ч-чтооо?"
+    # m "W-what??"
+    m "W-what??"
 
 # game/locations/tavern/tavern_miku.rpy:361
 translate english m_root_show_7364fadd:
-
-    # p "Подставляй задницу!"
-    p "Подставляй задницу!"
+    # p "Stick out your ass!"
+    p "Stick out your ass!"
 
 # game/locations/tavern/tavern_miku.rpy:363
 translate english m_root_show_13cf8ba5:
-
-    # "[my_miku.name] послушно поворачивается к тебе попкой."
-    "[my_miku.name] послушно поворачивается к тебе попкой."
+    # "[my_miku.name] obediently turns her backside to you."
+    "[my_miku.name] obediently turns her backside to you."
 
 # game/locations/tavern/tavern_miku.rpy:369
 translate english m_root_show_a79114a3_1:
-
-    # m "Ч-чтооо?"
-    m "Ч-чтооо?"
+    # m "W-what??"
+    m "W-what??"
 
 # game/locations/tavern/tavern_miku.rpy:370
 translate english m_root_show_efd2723f:
-
-    # p "Хаха! Ладно, ты итак молодец!"
-    p "Хаха! Ладно, ты итак молодец!"
+    # p "Haha! Alright, you’ve already done great!"
+    p "Haha! Alright, you’ve already done great!"
 
 # game/locations/tavern/tavern_miku.rpy:375
 translate english m_root_show_a79114a3_2:
-
-    # m "Ч-чтооо?"
-    m "Ч-чтооо?"
+    # m "W-what??"
+    m "W-what??"
 
 # game/locations/tavern/tavern_miku.rpy:376
 translate english m_root_show_efd2723f_1:
-
-    # p "Хаха! Ладно, ты итак молодец!"
-    p "Хаха! Ладно, ты итак молодец!"
+    # p "Haha! Alright, you’ve already done great!"
+    p "Haha! Alright, you’ve already done great!"
 
 # game/locations/tavern/tavern_miku.rpy:380
 translate english m_root_show_ebe8382c:
-
-    # "[m.name] стоит перед тобой, полностью голая, довольная тем, что у нее удалось удовлетворить твой интерес."
-    "[m.name] стоит перед тобой, полностью голая, довольная тем, что у нее удалось удовлетворить твой интерес."
+    # "[m.name] stands before you, completely naked, pleased that she managed to satisfy your curiosity."
+    "[m.name] stands before you, completely naked, pleased that she managed to satisfy your curiosity."
 
 # game/locations/tavern/tavern_miku.rpy:381
 translate english m_root_show_4afd200c:
-
-    # m "На сегодня закончим..."
-    m "На сегодня закончим..."
+    # m "Let’s call it a day..."
+    m "Let’s call it a day..."
 
 # game/locations/tavern/tavern_miku.rpy:383
 translate english m_root_show_f8eadb6e:
-
-    # "[m.name] одевается и уходит"
-    "[m.name] одевается и уходит"
+    # "[m.name] gets dressed and leaves."
+    "[m.name] gets dressed and leaves."
 
 # game/locations/tavern/tavern_miku.rpy:384
 translate english m_root_show_91ad5140:
-
-    # "Ты тоже решаешь уйти"
-    "Ты тоже решаешь уйти"
+    # "You decide to leave too."
+    "You decide to leave too."
 
 # game/locations/tavern/tavern_miku.rpy:391
 translate english m_root_titfuck_f63cc4e5:
-
-    # "[my_miku.name] отталкивает тебя на кровать и слегка приподнимает юбку так, что ты можешь увидеть ее белые трусики"
-    "[my_miku.name] отталкивает тебя на кровать и слегка приподнимает юбку так, что ты можешь увидеть ее белые трусики"
+    # "[my_miku.name] pushes you onto the bed and slightly lifts her skirt, letting you see her white panties."
+    "[my_miku.name] pushes you onto the bed and slightly lifts her skirt, letting you see her white panties."
 
 # game/locations/tavern/tavern_miku.rpy:392
 translate english m_root_titfuck_44baff45:
-
-    # m "Расслабься, [hero_name], сейчас я покажу тебе настоящий сервис~"
-    m "Расслабься, [hero_name], сейчас я покажу тебе настоящий сервис~"
+    # m "Relax, [hero_name], I’m about to show you some real service~"
+    m "Relax, [hero_name], I’m about to show you some real service~"
 
 # game/locations/tavern/tavern_miku.rpy:393
 translate english m_root_titfuck_678928fa:
-
-    # p "Э-э, подожди, что ты задумала?"
-    p "Э-э, подожди, что ты задумала?"
+    # p "Uh, wait, what are you planning?"
+    p "Uh, wait, what are you planning?"
 
 # game/locations/tavern/tavern_miku.rpy:394
 translate english m_root_titfuck_19e354b1:
-
-    # m "Тсс, не спорь с профессионалом!"
-    m "Тсс, не спорь с профессионалом!"
+    # m "Shh, don’t argue with a professional!"
+    m "Shh, don’t argue with a professional!"
 
 # game/locations/tavern/tavern_miku.rpy:398
 translate english m_root_titfuck_17007d0d:
-
-    # "[my_miku.name] стоит ровно перед тобой"
-    "[my_miku.name] стоит ровно перед тобой"
+    # "[my_miku.name] stands straight in front of you."
+    "[my_miku.name] stands straight in front of you."
 
 # game/locations/tavern/tavern_miku.rpy:399
 translate english m_root_titfuck_5ea16deb:
-
-    # m "Ну что, настроился?"
-    m "Ну что, настроился?"
+    # m "So, are you ready?"
+    m "So, are you ready?"
 
 # game/locations/tavern/tavern_miku.rpy:400
 translate english m_root_titfuck_434ee9b4:
-
-    # p "Ты серьезно?"
-    p "Ты серьезно?"
+    # p "Are you serious?"
+    p "Are you serious?"
 
 # game/locations/tavern/tavern_miku.rpy:404
 translate english m_root_titfuck_215f72a3:
-
-    # "[my_miku.name] убирает часть костюма прикрывающую грудь"
-    "[my_miku.name] убирает часть костюма прикрывающую грудь"
+    # "[my_miku.name] removes the part of her outfit covering her breasts."
+    "[my_miku.name] removes the part of her outfit covering her breasts."
 
 # game/locations/tavern/tavern_miku.rpy:405
 translate english m_root_titfuck_c2f944ca:
-
-    # m "Ха! Так ведь привычнее, да?"
-    m "Ха! Так ведь привычнее, да?"
+    # m "Ha! Feels more familiar now, right?"
+    m "Ha! Feels more familiar now, right?"
 
 # game/locations/tavern/tavern_miku.rpy:406
 translate english m_root_titfuck_c8ea8a4a:
-
     # p "..."
     p "..."
 
 # game/locations/tavern/tavern_miku.rpy:410
 translate english m_root_titfuck_898bc901:
-
-    # "[my_miku.name], смущаясь, наклоняется. Она снимает свою юбку, открывая отличный вид на ее киску"
-    "[my_miku.name], смущаясь, наклоняется. Она снимает свою юбку, открывая отличный вид на ее киску"
+    # "[my_miku.name], blushing, bends over. She takes off her skirt, giving you a great view of her pussy."
+    "[my_miku.name], blushing, bends over. She takes off her skirt, giving you a great view of her pussy."
 
 # game/locations/tavern/tavern_miku.rpy:411
 translate english m_root_titfuck_6679fa30:
-
-    # m "Ой, кажется, я немного увлеклась... Нравится?"
-    m "Ой, кажется, я немного увлеклась... Нравится?"
+    # m "Oops, looks like I got a bit carried away... Do you like it?"
+    m "Oops, looks like I got a bit carried away... Do you like it?"
 
 # game/locations/tavern/tavern_miku.rpy:417
 translate english m_root_titfuck_8d94dd98:
-
-    # "Она полностью снимает верх, ты видишь ее шикарную большую грудь"
-    "Она полностью снимает верх, ты видишь ее шикарную большую грудь"
+    # "She fully removes her top, revealing her gorgeous, large breasts."
+    "She fully removes her top, revealing her gorgeous, large breasts."
 
 # game/locations/tavern/tavern_miku.rpy:418
 translate english m_root_titfuck_333f9a55:
-
-    # m "Ну, как тебе вид?"
-    m "Ну, как тебе вид?"
+    # m "So, how’s the view?"
+    m "So, how’s the view?"
 
 # game/locations/tavern/tavern_miku.rpy:419
 translate english m_root_titfuck_aa59d612:
-
-    # p "Это... впечатляет."
-    p "Это... впечатляет."
+    # p "It’s... impressive."
+    p "It’s... impressive."
 
 # game/locations/tavern/tavern_miku.rpy:420
 translate english m_root_titfuck_3444bd2b:
-
-    # m "Хи-хи, я знала, что тебе понравится!"
-    m "Хи-хи, я знала, что тебе понравится!"
+    # m "Hee-hee, I knew you’d like it!"
+    m "Hee-hee, I knew you’d like it!"
 
 # game/locations/tavern/tavern_miku.rpy:424
 translate english m_root_titfuck_6be64ae5:
-
-    # "[my_miku.name] садится на колени и прижимается своими грудями между твоих ног, смотря просящим взглядом"
-    "[my_miku.name] садится на колени и прижимается своими грудями между твоих ног, смотря просящим взглядом"
+    # "[my_miku.name] kneels and presses her breasts between your legs, looking at you with a pleading gaze."
+    "[my_miku.name] kneels and presses her breasts between your legs, looking at you with a pleading gaze."
 
 # game/locations/tavern/tavern_miku.rpy:428
 translate english m_root_titfuck_2c4a6567:
-
-    # "Внезапно твой член выскакивает у нее между грудей и слегка шлепает по ее личику, прикасаясь к ее губам"
-    "Внезапно твой член выскакивает у нее между грудей и слегка шлепает по ее личику, прикасаясь к ее губам"
+    # "Suddenly, your cock slips out between her breasts and lightly slaps her face, brushing against her lips."
+    "Suddenly, your cock slips out between her breasts and lightly slaps her face, brushing against her lips."
 
 # game/locations/tavern/tavern_miku.rpy:429
 translate english m_root_titfuck_29a4f6ab:
-
     # m "!!!"
     m "!!!"
 
 # game/locations/tavern/tavern_miku.rpy:433
 translate english m_root_titfuck_79d298b0:
-
-    # "[my_miku.name] осматривает твой член с восторгом"
-    "[my_miku.name] осматривает твой член с восторгом"
+    # "[my_miku.name] examines your cock with delight."
+    "[my_miku.name] examines your cock with delight."
 
 # game/locations/tavern/tavern_miku.rpy:434
 translate english m_root_titfuck_115b03b9:
-
-    # m "Вау, он просто огромный!"
-    m "Вау, он просто огромный!"
+    # m "Wow, it’s just huge!"
+    m "Wow, it’s just huge!"
 
 # game/locations/tavern/tavern_miku.rpy:435
 translate english m_root_titfuck_8bc7f75a:
-
-    # p "Эм... спасибо?"
-    p "Эм... спасибо?"
+    # p "Uh... thanks?"
+    p "Uh... thanks?"
 
 # game/locations/tavern/tavern_miku.rpy:439
 translate english m_root_titfuck_8fcf2192:
-
-    # "Она нежно проводит языком по твоему члену"
-    "Она нежно проводит языком по твоему члену"
+    # "She gently runs her tongue along your cock."
+    "She gently runs her tongue along your cock."
 
 # game/locations/tavern/tavern_miku.rpy:440
 translate english m_root_titfuck_a26e7ad0:
-
-    # m "Сейчас попробуем на вкус~"
-    m "Сейчас попробуем на вкус~"
+    # m "Let’s taste it~"
+    m "Let’s taste it~"
 
 # game/locations/tavern/tavern_miku.rpy:502
 translate english m_root_titfuck_1e999391:
-
-    # m "Ммм..."
-    m "Ммм..."
+    # m "Mmm..."
+    m "Mmm..."
 
 # game/locations/tavern/tavern_miku.rpy:506
 translate english m_root_titfuck_9ae69881:
-
-    # m "Как тебе мой язычок, а, [hero_name]?"
-    m "Как тебе мой язычок, а, [hero_name]?"
+    # m "How’s my tongue, huh, [hero_name]?"
+    m "How’s my tongue, huh, [hero_name]?"
 
 # game/locations/tavern/tavern_miku.rpy:509
 translate english m_root_titfuck_3e2c0804:
-
-    # p "Не так уж это и заводит..."
-    p "Не так уж это и заводит..."
+    # p "It’s not that exciting..."
+    p "It’s not that exciting..."
 
 # game/locations/tavern/tavern_miku.rpy:511
 translate english m_root_titfuck_244c4114:
-
-    # m "Я... Тебя не возбудила?"
-    m "Я... Тебя не возбудила?"
+    # m "I... didn’t turn you on?"
+    m "I... didn’t turn you on?"
 
 # game/locations/tavern/tavern_miku.rpy:513
 translate english m_root_titfuck_dbe5694f:
-
-    # m "Тебе пора идти, [hero_name]!"
-    m "Тебе пора идти, [hero_name]!"
+    # m "Time for you to go, [hero_name]!"
+    m "Time for you to go, [hero_name]!"
 
 # game/locations/tavern/tavern_miku.rpy:515
 translate english m_root_titfuck_a5bafa21:
-
-    # p "Ты просто невероятна!"
-    p "Ты просто невероятна!"
+    # p "You’re just incredible!"
+    p "You’re just incredible!"
 
 # game/locations/tavern/tavern_miku.rpy:521
 translate english m_root_titfuck_b501fb67:
-
-    # "[my_miku.name] обхватывает грудями твой член"
-    "[my_miku.name] обхватывает грудями твой член"
+    # "[my_miku.name] wraps her breasts around your cock."
+    "[my_miku.name] wraps her breasts around your cock."
 
 # game/locations/tavern/tavern_miku.rpy:522
 translate english m_root_titfuck_dd931b35:
-
-    # m "Серьезно? А я ведь только разогреваюсь!"
-    m "Серьезно? А я ведь только разогреваюсь!"
+    # m "Seriously? And I’m just getting started!"
+    m "Seriously? And I’m just getting started!"
 
 # game/locations/tavern/tavern_miku.rpy:523
 translate english m_root_titfuck_226cd697:
-
-    # p "Ты точно официантка, а не волшебница?"
-    p "Ты точно официантка, а не волшебница?"
+    # p "Are you sure you’re a waitress and not a sorceress?"
+    p "Are you sure you’re a waitress and not a sorceress?"
 
 # game/locations/tavern/tavern_miku.rpy:524
 translate english m_root_titfuck_81d39c91:
-
-    # m "Хе-хе, я многопрофильный талант!"
-    m "Хе-хе, я многопрофильный талант!"
+    # m "Heh-heh, I’m a multi-talented gal!"
+    m "Heh-heh, I’m a multi-talented gal!"
 
 # game/locations/tavern/tavern_miku.rpy:586
 translate english m_root_titfuck_6b8a25b7:
-
-    # p "Аргх!"
-    p "Аргх!"
+    # p "Argh!"
+    p "Argh!"
 
 # game/locations/tavern/tavern_miku.rpy:592
 translate english m_root_titfuck_8cc522d3:
-
-    # "[my_miku.name] сжимает твой член, и ты выпускаешь весь поток спермы"
-    "[my_miku.name] сжимает твой член, и ты выпускаешь весь поток спермы"
+    # "[my_miku.name] squeezes your cock, and you release a full stream of cum."
+    "[my_miku.name] squeezes your cock, and you release a full stream of cum."
 
 # game/locations/tavern/tavern_miku.rpy:596
 translate english m_root_titfuck_6fc8dbf2:
-
-    # "Ты начинаешь кончать, струя спермы летит в лицо [my_miku.name]"
-    "Ты начинаешь кончать, струя спермы летит в лицо [my_miku.name]"
+    # "You start to cum, a stream of semen shooting onto [my_miku.name]'s face."
+    "You start to cum, a stream of semen shooting onto [my_miku.name]'s face."
 
 # game/locations/tavern/tavern_miku.rpy:600
 translate english m_root_titfuck_44f173dc:
-
-    # "[my_miku.name] закрывает глаза и открывает рот, стараясь поймать как можно больше твоей спермы"
-    "[my_miku.name] закрывает глаза и открывает рот, стараясь поймать как можно больше твоей спермы"
+    # "[my_miku.name] closes her eyes and opens her mouth, trying to catch as much of your cum as possible."
+    "[my_miku.name] closes her eyes and opens her mouth, trying to catch as much of your cum as possible."
 
 # game/locations/tavern/tavern_miku.rpy:601
 translate english m_root_titfuck_f8998002:
-
-    # m "Ааааа.."
-    m "Ааааа.."
+    # m "Aaaah..."
+    m "Aaaah..."
 
 # game/locations/tavern/tavern_miku.rpy:605
 translate english m_root_titfuck_66136589:
-
-    # "[my_miku.name] все еще с закрытыми глазами получает твою сперму в рот и на лицо"
-    "[my_miku.name] все еще с закрытыми глазами получает твою сперму в рот и на лицо"
+    # "[my_miku.name], still with her eyes closed, gets your cum in her mouth and on her face."
+    "[my_miku.name], still with her eyes closed, gets your cum in her mouth and on her face."
 
 # game/locations/tavern/tavern_miku.rpy:609
 translate english m_root_titfuck_e40577f9:
-
-    # "Ты наконец останавливаешься. [my_miku.name] открыла глаза и держит твой член грудями, открыв рот, показывая, как много спермы у нее во рту"
-    "Ты наконец останавливаешься. [my_miku.name] открыла глаза и держит твой член грудями, открыв рот, показывая, как много спермы у нее во рту"
+    # "You finally stop. [my_miku.name] opens her eyes, holding your cock with her breasts, mouth open, showing how much cum is inside."
+    "You finally stop. [my_miku.name] opens her eyes, holding your cock with her breasts, mouth open, showing how much cum is inside."
 
 # game/locations/tavern/tavern_miku.rpy:613
 translate english m_root_titfuck_a3d5a7fa:
-
-    # "[my_miku.name] улыбается, глотая твою сперму"
-    "[my_miku.name] улыбается, глотая твою сперму"
+    # "[my_miku.name] smiles, swallowing your cum."
+    "[my_miku.name] smiles, swallowing your cum."
 
 # game/locations/tavern/tavern_miku.rpy:617
 translate english m_root_titfuck_bb472900:
-
-    # "[my_miku.name] наклоняется, открывая свой пустой ротик, показывая, что всё проглотила"
-    "[my_miku.name] наклоняется, открывая свой пустой ротик, показывая, что всё проглотила"
+    # "[my_miku.name] leans forward, opening her empty mouth to show she swallowed it all."
+    "[my_miku.name] leans forward, opening her empty mouth to show she swallowed it all."
 
 # game/locations/tavern/tavern_miku.rpy:622
 translate english m_root_titfuck_37636743:
-
-    # p "Тебе придется продолжить ротиком."
-    p "Тебе придется продолжить ротиком."
+    # p "You’ll have to continue with your mouth."
+    p "You’ll have to continue with your mouth."
 
 # game/locations/tavern/tavern_miku.rpy:623
 translate english m_root_titfuck_29a4f6ab_1:
-
     # m "!!!"
     m "!!!"
 
 # game/locations/tavern/tavern_miku.rpy:627
 translate english m_root_titfuck_33ea017e:
-
-    # m "Ааааа..."
-    m "Ааааа..."
-
+    # m "Aaaah..."
+    m "Aaaah..."
 # game/locations/tavern/tavern_miku.rpy:633
 translate english m_root_titfuck_d10209b5:
-
-    # "[my_miku.name] улыбается, смотря на тебя и упираясь своим личиком на твой член"
-    "[my_miku.name] улыбается, смотря на тебя и упираясь своим личиком на твой член"
+    # "[my_miku.name] smiles, looking at you and resting her face against your cock."
+    "[my_miku.name] smiles, looking at you and resting her face against your cock."
 
 # game/locations/tavern/tavern_miku.rpy:634
 translate english m_root_titfuck_1291efb7:
-
-    # m "Ну что, как ощущения?"
-    m "Ну что, как ощущения?"
+    # m "So, how does it feel?"
+    m "So, how does it feel?"
 
 # game/locations/tavern/tavern_miku.rpy:638
 translate english m_root_titfuck_57624b02:
-
-    # "[my_miku.name] наклоняется, приближаясь к твоему члену губами"
-    "[my_miku.name] наклоняется, приближаясь к твоему члену губами"
+    # "[my_miku.name] leans in, bringing her lips closer to your cock."
+    "[my_miku.name] leans in, bringing her lips closer to your cock."
 
 # game/locations/tavern/tavern_miku.rpy:639
 translate english m_root_titfuck_927d6bfb:
-
-    # m "Подожди, тут еще осталось немного..."
-    m "Подожди, тут еще осталось немного..."
+    # m "Wait, there’s still a little left here..."
+    m "Wait, there’s still a little left here..."
 
 # game/locations/tavern/tavern_miku.rpy:643
 translate english m_root_titfuck_8b1433d1:
-
-    # "[my_miku.name] закрывает глаза и вытягивает губы"
-    "[my_miku.name] закрывает глаза и вытягивает губы"
+    # "[my_miku.name] closes her eyes and puckers her lips."
+    "[my_miku.name] closes her eyes and puckers her lips."
 
 # game/locations/tavern/tavern_miku.rpy:647
 translate english m_root_titfuck_ae5b1675:
-
-    # "[my_miku.name] слизывает сперму с твоего члена"
-    "[my_miku.name] слизывает сперму с твоего члена"
+    # "[my_miku.name] licks the cum off your cock."
+    "[my_miku.name] licks the cum off your cock."
 
 # game/locations/tavern/tavern_miku.rpy:648
 translate english m_root_titfuck_1e999391_1:
-
-    # m "Ммм..."
-    m "Ммм..."
+    # m "Mmm..."
+    m "Mmm..."
 
 # game/locations/tavern/tavern_miku.rpy:652
 translate english m_root_titfuck_3b1ec424:
-
-    # "После этого она смотрит на тебя с улыбкой"
-    "После этого она смотрит на тебя с улыбкой"
+    # "After that, she looks at you with a smile."
+    "After that, she looks at you with a smile."
 
 # game/locations/tavern/tavern_miku.rpy:653
 translate english m_root_titfuck_49ab2a1b:
-
-    # m "Ну, как тебе мой фирменный стиль?"
-    m "Ну, как тебе мой фирменный стиль?"
+    # m "So, how do you like my signature style?"
+    m "So, how do you like my signature style?"
 
 # game/locations/tavern/tavern_miku.rpy:657
 translate english m_root_titfuck_e0a6c86d:
-
-    # m "Ну что, [hero_name]? Это было покруче любого шоу!"
-    m "Ну что, [hero_name]? Это было покруче любого шоу!"
+    # m "Well, [hero_name]? That was better than any show!"
+    m "Well, [hero_name]? That was better than any show!"
 
 # game/locations/tavern/tavern_miku.rpy:661
 translate english m_root_titfuck_d29094db:
-
-    # "[my_miku.name] сжимает свою грудь, залитую твоей спермой"
-    "[my_miku.name] сжимает свою грудь, залитую твоей спермой"
+    # "[my_miku.name] squeezes her breasts, covered in your cum."
+    "[my_miku.name] squeezes her breasts, covered in your cum."
 
 # game/locations/tavern/tavern_miku.rpy:662
 translate english m_root_titfuck_0214b9cf:
-
-    # m "Как тебе мои девочки в деле, а?"
-    m "Как тебе мои девочки в деле, а?"
+    # m "How do you like my girls in action, huh?"
+    m "How do you like my girls in action, huh?"
 
 # game/locations/tavern/tavern_miku.rpy:663
 translate english m_root_titfuck_66ebd4d6:
-
-    # p "Они... Н-настоящие звезды."
-    p "Они... Н-настоящие звезды."
+    # p "They’re... r-real stars."
+    p "They’re... r-real stars."
 
 # game/locations/tavern/tavern_miku.rpy:667
 translate english m_root_titfuck_3727f556:
-
-    # "[my_miku.name] ложится на кровать, сперма всё ещё стекает по её телу, и она смотрит на тебя с кокетливой улыбкой."
-    "[my_miku.name] ложится на кровать, сперма всё ещё стекает по её телу, и она смотрит на тебя с кокетливой улыбкой."
+    # "[my_miku.name] lies on the bed, cum still dripping down her body, and looks at you with a flirty smile."
+    "[my_miku.name] lies on the bed, cum still dripping down her body, and looks at you with a flirty smile."
 
 # game/locations/tavern/tavern_miku.rpy:668
 translate english m_root_titfuck_87138539:
-
-    # m "Вот так я забочусь о своих любимчиках! Заходи еще, [hero_name], не пожалеешь!"
-    m "Вот так я забочусь о своих любимчиках! Заходи еще, [hero_name], не пожалеешь!"
+    # m "This is how I take care of my favorites! Come back again, [hero_name], you won’t regret it!"
+    m "This is how I take care of my favorites! Come back again, [hero_name], you won’t regret it!"
 
 # game/locations/tavern/tavern_miku.rpy:669
 translate english m_root_titfuck_ec7a942a:
-
-    # p "После такого точно вернусь."
-    p "После такого точно вернусь."
+    # p "After this, I’ll definitely be back."
+    p "After this, I’ll definitely be back."
 
 # game/locations/tavern/tavern_miku.rpy:670
 translate english m_root_titfuck_bed51ed9:
-
-    # "Ты уходишь, оставляя ее прибирать беспорядок."
-    "Ты уходишь, оставляя ее прибирать беспорядок."
+    # "You leave, letting her clean up the mess."
+    "You leave, letting her clean up the mess."
 
 # game/locations/tavern/tavern_miku.rpy:674
 translate english m_root_blowjob_e72e6fc3:
-
-    # m "Подожди меня тут, [hero_name]~"
-    m "Подожди меня тут, [hero_name]~"
+    # m "Wait for me here, [hero_name]~"
+    m "Wait for me here, [hero_name]~"
 
 # game/locations/tavern/tavern_miku.rpy:676
 translate english m_root_blowjob_a20cefa7:
-
     # "..."
     "..."
 
 # game/locations/tavern/tavern_miku.rpy:677
 translate english m_root_blowjob_07bdde05:
-
     # "....."
     "....."
 
 # game/locations/tavern/tavern_miku.rpy:678
 translate english m_root_blowjob_3928a113:
-
     # "......."
     "......."
 
 # game/locations/tavern/tavern_miku.rpy:681
 translate english m_root_blowjob_0b365f1c:
-
-    # "Она вошла в комнату полностью обнаженная"
-    "Она вошла в комнату полностью обнаженная"
+    # "She enters the room completely naked."
+    "She enters the room completely naked."
 
 # game/locations/tavern/tavern_miku.rpy:685
 translate english m_root_blowjob_64d537fe:
-
-    # "Она слегка подпрыгнула, а ее груди качнулись"
-    "Она слегка подпрыгнула, а ее груди качнулись"
+    # "She hops slightly, and her breasts bounce."
+    "She hops slightly, and her breasts bounce."
 
 # game/locations/tavern/tavern_miku.rpy:686
 translate english m_root_blowjob_9e245bc8:
-
-    # m "Хе-хе, нравится, как они танцуют?"
-    m "Хе-хе, нравится, как они танцуют?"
+    # m "Heh-heh, like how they dance?"
+    m "Heh-heh, like how they dance?"
 
 # game/locations/tavern/tavern_miku.rpy:690
 translate english m_root_blowjob_38b2b4f1:
-
-    # "[my_miku.name] садится на колени, и медленно подползает к тебе"
-    "[my_miku.name] садится на колени, и медленно подползает к тебе"
+    # "[my_miku.name] gets on her knees and slowly crawls toward you."
+    "[my_miku.name] gets on her knees and slowly crawls toward you."
 
 # game/locations/tavern/tavern_miku.rpy:691
 translate english m_root_blowjob_27fa5029:
-
-    # m "Тебе же нравится моя грудь, да?"
-    m "Тебе же нравится моя грудь, да?"
+    # m "You like my breasts, don’t you?"
+    m "You like my breasts, don’t you?"
 
 # game/locations/tavern/tavern_miku.rpy:692
 translate english m_root_blowjob_38fafedf:
-
-    # p "Трудно не заметить..."
-    p "Трудно не заметить..."
+    # p "Hard not to notice..."
+    p "Hard not to notice..."
 
 # game/locations/tavern/tavern_miku.rpy:696
 translate english m_root_blowjob_b9fe399c:
-
-    # "[my_miku.name] быстро стянула с тебя штаны и твой эрегированный член уперся в ее личико"
-    "[my_miku.name] быстро стянула с тебя штаны и твой эрегированный член уперся в ее личико"
+    # "[my_miku.name] quickly pulls your pants down, and your erect cock presses against her face."
+    "[my_miku.name] quickly pulls your pants down, and your erect cock presses against her face."
 
 # game/locations/tavern/tavern_miku.rpy:697
 translate english m_root_blowjob_7a269791:
-
-    # m "Ого, кто-то тут уже в полной готовности!"
-    m "Ого, кто-то тут уже в полной готовности!"
+    # m "Wow, someone’s already fully ready!"
+    m "Wow, someone’s already fully ready!"
 
 # game/locations/tavern/tavern_miku.rpy:698
 translate english m_root_blowjob_0981e7b3:
-
-    # p "Ты сама виновата."
-    p "Ты сама виновата."
+    # p "It’s your fault."
+    p "It’s your fault."
 
 # game/locations/tavern/tavern_miku.rpy:704
 translate english m_root_blowjob_f2e5648f:
-
-    # "[my_miku.name] прижимается грудью к твоим ногам, зажимая твой член"
-    "[my_miku.name] прижимается грудью к твоим ногам, зажимая твой член"
+    # "[my_miku.name] presses her breasts against your legs, trapping your cock."
+    "[my_miku.name] presses her breasts against your legs, trapping your cock."
 
 # game/locations/tavern/tavern_miku.rpy:705
 translate english m_root_blowjob_7ab55144:
-
-    # m "Я знаю, что тебе понравится еще больше~"
-    m "Я знаю, что тебе понравится еще больше~"
+    # m "I know you’ll like this even more~"
+    m "I know you’ll like this even more~"
 
 # game/locations/tavern/tavern_miku.rpy:706
 translate english m_root_blowjob_56feeb01:
-
-    # p "Ты слишком самоуверенна."
-    p "Ты слишком самоуверенна."
+    # p "You’re too confident."
+    p "You’re too confident."
 
 # game/locations/tavern/tavern_miku.rpy:707
 translate english m_root_blowjob_f36c25b9:
-
-    # m "Просто смотри и наслаждайся!"
-    m "Просто смотри и наслаждайся!"
+    # m "Just watch and enjoy!"
+    m "Just watch and enjoy!"
 
 # game/locations/tavern/tavern_miku.rpy:711
 translate english m_root_blowjob_97563d2b:
-
-    # "[my_miku.name] берет кончик твоего члена в ротик и водит язычком"
-    "[my_miku.name] берет кончик твоего члена в ротик и водит язычком"
+    # "[my_miku.name] takes the tip of your cock into her mouth and swirls her tongue around it."
+    "[my_miku.name] takes the tip of your cock into her mouth and swirls her tongue around it."
 
 # game/locations/tavern/tavern_miku.rpy:712
 translate english m_root_blowjob_17e9a869:
-
-    # m "Ммм, какой вкусный~"
-    m "Ммм, какой вкусный~"
+    # m "Mmm, so tasty~"
+    m "Mmm, so tasty~"
 
 # game/locations/tavern/tavern_miku.rpy:746
 translate english m_root_blowjob_3b02722e:
-
-    # "[my_miku.name] вылизывает головку твоего члена до блеска"
-    "[my_miku.name] вылизывает головку твоего члена до блеска"
+    # "[my_miku.name] licks the head of your cock until it shines."
+    "[my_miku.name] licks the head of your cock until it shines."
 
 # game/locations/tavern/tavern_miku.rpy:749
 translate english m_root_blowjob_f58e4785:
-
-    # p "Ааах... Как же ты хороша..."
-    p "Ааах... Как же ты хороша..."
+    # p "Aaah... You’re so good..."
+    p "Aaah... You’re so good..."
 
 # game/locations/tavern/tavern_miku.rpy:751
 translate english m_root_blowjob_970305a7:
-
-    # m "Да? Рада, что тебе понравилось!"
-    m "Да? Рада, что тебе понравилось!"
+    # m "Really? Glad you liked it!"
+    m "Really? Glad you liked it!"
 
 # game/locations/tavern/tavern_miku.rpy:752
 translate english m_root_blowjob_12ed3f7d:
-
-    # m "В таком случае можешь идти, у меня еще полно работы."
-    m "В таком случае можешь идти, у меня еще полно работы."
+    # m "In that case, you can go; I’ve still got a ton of work to do."
+    m "In that case, you can go; I’ve still got a ton of work to do."
 
 # game/locations/tavern/tavern_miku.rpy:754
 translate english m_root_blowjob_59a3ea5f:
-
-    # p "Отлично, продолжай"
-    p "Отлично, продолжай"
+    # p "Great, keep going."
+    p "Great, keep going."
 
 # game/locations/tavern/tavern_miku.rpy:758
 translate english m_root_blowjob_2fc83706:
-
-    # "Теперь она берет головку твоего члена целиком в свой рот и начинает двигаться"
-    "Теперь она берет головку твоего члена целиком в свой рот и начинает двигаться"
+    # "Now she takes the head of your cock fully into her mouth and starts moving."
+    "Now she takes the head of your cock fully into her mouth and starts moving."
 
 # game/locations/tavern/tavern_miku.rpy:759
 translate english m_root_blowjob_76adbf6b:
-
-    # m "Мрф... нравится?"
-    m "Мрф... нравится?"
+    # m "Mmph... like it?"
+    m "Mmph... like it?"
 
 # game/locations/tavern/tavern_miku.rpy:811
 translate english m_root_blowjob_continue_d384c06d:
-
-    # "Ты берешь [my_miku.name] за волосы и оттягиваешь"
-    "Ты берешь [my_miku.name] за волосы и оттягиваешь"
+    # "You grab [my_miku.name] by the hair and pull her back."
+    "You grab [my_miku.name] by the hair and pull her back."
 
 # game/locations/tavern/tavern_miku.rpy:812
 translate english m_root_blowjob_continue_092d842e:
-
-    # "[my_miku.name] ухмыляется"
-    "[my_miku.name] ухмыляется"
+    # "[my_miku.name] smirks."
+    "[my_miku.name] smirks."
 
 # game/locations/tavern/tavern_miku.rpy:813
 translate english m_root_blowjob_continue_a06976f3:
-
-    # m "Что, не выдержал моего темпа?"
-    m "Что, не выдержал моего темпа?"
+    # m "What, couldn’t keep up with my pace?"
+    m "What, couldn’t keep up with my pace?"
 
 # game/locations/tavern/tavern_miku.rpy:816
 translate english m_root_blowjob_continue_4e7ad529:
-
-    # "Ты тянешь ее голову на свой член, но у тебя не получается."
-    "Ты тянешь ее голову на свой член, но у тебя не получается."
+    # "You pull her head toward your cock, but it doesn’t work."
+    "You pull her head toward your cock, but it doesn’t work."
 
 # game/locations/tavern/tavern_miku.rpy:817
 translate english m_root_blowjob_continue_5f34c0f1:
-
-    # p "А, ой, нет, прости, не хотел испортить твою прическу."
-    p "А, ой, нет, прости, не хотел испортить твою прическу."
+    # p "Oh, uh, no, sorry, I didn’t mean to mess up your hair."
+    p "Oh, uh, no, sorry, I didn’t mean to mess up your hair."
 
 # game/locations/tavern/tavern_miku.rpy:819
 translate english m_root_blowjob_continue_76761735:
-
-    # m "Мы закончили, можешь уходить, и даже не думай испортить мою прическу..."
-    m "Мы закончили, можешь уходить, и даже не думай испортить мою прическу..."
+    # m "We’re done. You can leave, and don’t even think about ruining my hair..."
+    m "We’re done. You can leave, and don’t even think about ruining my hair..."
 
 # game/locations/tavern/tavern_miku.rpy:821
 translate english m_root_blowjob_continue_469d2ac5:
-
-    # p "Скорее, решил взять все в свои руки."
-    p "Скорее, решил взять все в свои руки."
+    # p "More like I decided to take matters into my own hands."
+    p "More like I decided to take matters into my own hands."
 
 # game/locations/tavern/tavern_miku.rpy:825
 translate english m_root_blowjob_continue_7872d0c2:
-
-    # p "Считай это помощью."
-    p "Считай это помощью."
+    # p "Consider it help."
+    p "Consider it help."
 
 # game/locations/tavern/tavern_miku.rpy:826
 translate english m_root_blowjob_continue_17f2ad85:
-
-    # m "Эй, подожди-ка..."
-    m "Эй, подожди-ка..."
+    # m "Hey, wait a sec..."
+    m "Hey, wait a sec..."
 
 # game/locations/tavern/tavern_miku.rpy:830
 translate english m_root_blowjob_continue_5597637a:
-
-    # "Выражение лица [my_miku.name] сменилось на испуганное и не зря"
-    "Выражение лица [my_miku.name] сменилось на испуганное и не зря"
+    # "[my_miku.name]'s expression turns to fear, and not without reason."
+    "[my_miku.name]'s expression turns to fear, and not without reason."
 
 # game/locations/tavern/tavern_miku.rpy:831
 translate english m_root_blowjob_continue_c81adf13:
-
-    # m "К-как помочь? Ты что задумал?!"
-    m "К-как помочь? Ты что задумал?!"
+    # m "H-how help? What are you planning?!"
+    m "H-how help? What are you planning?!"
 
 # game/locations/tavern/tavern_miku.rpy:832
 translate english m_root_blowjob_continue_6a33ba35:
-
-    # p "Увидишь."
-    p "Увидишь."
+    # p "You’ll see."
+    p "You’ll see."
 
 # game/locations/tavern/tavern_miku.rpy:836
 translate english m_root_blowjob_continue_246ae91b:
-
-    # "Ты с силой берешь голову [my_miku.name] и насаживаешь на свой член, начиная жестко ебать ее в рот"
-    "Ты с силой берешь голову [my_miku.name] и насаживаешь на свой член, начиная жестко ебать ее в рот"
+    # "You forcefully grab [my_miku.name]'s head and shove it onto your cock, starting to fuck her mouth hard."
+    "You forcefully grab [my_miku.name]'s head and shove it onto your cock, starting to fuck her mouth hard."
 
 # game/locations/tavern/tavern_miku.rpy:878
 translate english m_root_blowjob_continue_5993ff48:
-
-    # m "М-мм... глх!"
-    m "М-мм... глх!"
+    # m "M-mm... glk!"
+    m "M-mm... glk!"
 
 # game/locations/tavern/tavern_miku.rpy:884
 translate english m_root_blowjob_continue_b0d15193:
-
-    # p "Давай глубже!"
-    p "Давай глубже!"
+    # p "Deeper!"
+    p "Deeper!"
 
 # game/locations/tavern/tavern_miku.rpy:885
 translate english m_root_blowjob_continue_ae5ac0f8:
-
-    # m "Мрф-ф!"
-    m "Мрф-ф!"
+    # m "Mrf-f!"
+    m "Mrf-f!"
 
 # game/locations/tavern/tavern_miku.rpy:889
 translate english m_root_blowjob_continue_12c9e0a8:
-
-    # "Выражение лица [my_miku.name] тебя возбуждает еще сильнее"
-    "Выражение лица [my_miku.name] тебя возбуждает еще сильнее"
+    # "[my_miku.name]'s expression excites you even more."
+    "[my_miku.name]'s expression excites you even more."
 
 # game/locations/tavern/tavern_miku.rpy:890
 translate english m_root_blowjob_continue_aae80c57:
-
-    # m "Мрфффрррр!"
-    m "Мрфффрррр!"
+    # m "Mrffffrr!"
+    m "Mrffffrr!"
 
 # game/locations/tavern/tavern_miku.rpy:896
 translate english m_root_blowjob_continue_b92c7bce:
-
-    # m "Грлллфф!"
-    m "Грлллфф!"
+    # m "Grllff!"
+    m "Grllff!"
 
 # game/locations/tavern/tavern_miku.rpy:900
 translate english m_root_blowjob_continue_d50d538e:
-
-    # p "Даа! Отлично берёшь!"
-    p "Даа! Отлично берёшь!"
+    # p "Yeah! You’re taking it great!"
+    p "Yeah! You’re taking it great!"
 
 # game/locations/tavern/tavern_miku.rpy:901
 translate english m_root_blowjob_continue_eed453d8:
-
-    # m "Брррлллл!"
-    m "Брррлллл!"
+    # m "Brrll!"
+    m "Brrll!"
 
 # game/locations/tavern/tavern_miku.rpy:905
 translate english m_root_blowjob_continue_c90b78c9:
-
-    # "Ты отпускаешь голову [my_miku.name]"
-    "Ты отпускаешь голову [my_miku.name]"
+    # "You let go of [my_miku.name]'s head."
+    "You let go of [my_miku.name]'s head."
 
 # game/locations/tavern/tavern_miku.rpy:909
 translate english m_root_blowjob_continue_6a22fe4b:
-
-    # "Сперма брызжет из ее рта и носа"
-    "Сперма брызжет из ее рта и носа"
+    # "Cum sprays from her mouth and nose."
+    "Cum sprays from her mouth and nose."
 
 # game/locations/tavern/tavern_miku.rpy:910
 translate english m_root_blowjob_continue_214a72c3:
-
-    # m "Кхрф!"
-    m "Кхрф!"
+    # m "Khrf!"
+    m "Khrf!"
 
 # game/locations/tavern/tavern_miku.rpy:914
 translate english m_root_blowjob_continue_1f1f2ae0:
-
-    # "Наконец [my_miku.name] поднимает голову и вдыхает"
-    "Наконец [my_miku.name] поднимает голову и вдыхает"
+    # "Finally, [my_miku.name] lifts her head and takes a breath."
+    "Finally, [my_miku.name] lifts her head and takes a breath."
 
 # game/locations/tavern/tavern_miku.rpy:915
 translate english m_root_blowjob_continue_b30d9e03:
-
-    # m "А-ааах!"
-    m "А-ааах!"
+    # m "A-aaah!"
+    m "A-aaah!"
 
 # game/locations/tavern/tavern_miku.rpy:919
 translate english m_root_blowjob_continue_a177ac26:
-
-    # "Из ее рта вытекает твоя сперма"
-    "Из ее рта вытекает твоя сперма"
+    # "Your cum drips from her mouth."
+    "Your cum drips from her mouth."
 
 # game/locations/tavern/tavern_miku.rpy:920
 translate english m_root_blowjob_continue_e99a6ccb:
-
-    # p "Какая растрата..."
-    p "Какая растрата..."
+    # p "What a waste..."
+    p "What a waste..."
 
 # game/locations/tavern/tavern_miku.rpy:926
 translate english m_root_blowjob_continue_aedcf9c9:
-
-    # "[my_miku.name] закрывает ротик и сглатывает"
-    "[my_miku.name] закрывает ротик и сглатывает"
+    # "[my_miku.name] closes her mouth and swallows."
+    "[my_miku.name] closes her mouth and swallows."
 
 # game/locations/tavern/tavern_miku.rpy:930
 translate english m_root_blowjob_continue_4669cf89:
-
-    # p "Хорошая девочка."
-    p "Хорошая девочка."
+    # p "Good girl."
+    p "Good girl."
 
 # game/locations/tavern/tavern_miku.rpy:931
 translate english m_root_blowjob_continue_57d2eb9b:
-
-    # m "Угум..."
-    m "Угум..."
+    # m "Mhm..."
+    m "Mhm..."
 
 # game/locations/tavern/tavern_miku.rpy:939
 translate english m_root_blowjob_continue_7364fadd:
-
-    # p "Подставляй задницу!"
-    p "Подставляй задницу!"
+    # p "Stick out your ass!"
+    p "Stick out your ass!"
 
 # game/locations/tavern/tavern_miku.rpy:941
 translate english m_root_blowjob_continue_f988f601:
-
-    # "[my_miku.name] вытирает слёзы и послушно поворачивается к тебе"
-    "[my_miku.name] вытирает слёзы и послушно поворачивается к тебе"
+    # "[my_miku.name] wipes her tears and obediently turns toward you."
+    "[my_miku.name] wipes her tears and obediently turns toward you."
 
 # game/locations/tavern/tavern_miku.rpy:945
 translate english m_root_blowjob_continue_33ea017e:
-
-    # m "Ааааа..."
-    m "Ааааа..."
+    # m "Aaaah..."
+    m "Aaaah..."
 
 # game/locations/tavern/tavern_miku.rpy:949
 translate english m_root_blowjob_continue_625a9c43:
-
-    # p "Тут стало так грязно, я пожалуй пойду."
-    p "Тут стало так грязно, я пожалуй пойду."
+    # p "It’s gotten so messy here; I think I’ll go."
+    p "It’s gotten so messy here; I think I’ll go."
 
 # game/locations/tavern/tavern_miku.rpy:950
 translate english m_root_blowjob_continue_9bf7fee7:
-
-    # "Ты встаешь и уходишь."
-    "Ты встаешь и уходишь."
+    # "You get up and leave."
+    "You get up and leave."
 
 # game/locations/tavern/tavern_miku.rpy:954
 translate english m_root_fuck_b716b135:
-
-    # m "Подожди тут, я сейчас вернусь... в новом образе~"
-    m "Подожди тут, я сейчас вернусь... в новом образе~"
-
+    # m "Wait here, I’ll be back soon... in a new look~"
+    m "Wait here, I’ll be back soon... in a new look~"
 # game/locations/tavern/tavern_miku.rpy:956
 translate english m_root_fuck_c8ea8a4a:
-
     # p "..."
     p "..."
 
 # game/locations/tavern/tavern_miku.rpy:957
 translate english m_root_fuck_4fe1f5ce:
-
     # p "....."
     p "....."
 
 # game/locations/tavern/tavern_miku.rpy:958
 translate english m_root_fuck_c354091b:
-
     # p "......."
     p "......."
 
 # game/locations/tavern/tavern_miku.rpy:962
 translate english m_root_fuck_edcb5e6d:
-
-    # "В комнату заходит [my_miku.name], переодетая в костюм развратной студентки, покачивая бёдрами, с её фирменной ослепительной улыбкой."
-    "В комнату заходит [my_miku.name], переодетая в костюм развратной студентки, покачивая бёдрами, с её фирменной ослепительной улыбкой."
+    # "[my_miku.name] enters the room, dressed in a slutty student outfit, swaying her hips with her signature dazzling smile."
+    "[my_miku.name] enters the room, dressed in a slutty student outfit, swaying her hips with her signature dazzling smile."
 
 # game/locations/tavern/tavern_miku.rpy:963
 translate english m_root_fuck_5a7740d7:
-
     # p "!!!"
     p "!!!"
 
 # game/locations/tavern/tavern_miku.rpy:964
 translate english m_root_fuck_c08ca435:
-
-    # m "Ну что, [hero_name], соскучился по своей любимой официантке? Сегодня я подаю нечто... особенное~"
-    m "Ну что, [hero_name], соскучился по своей любимой официантке? Сегодня я подаю нечто... особенное~"
+    # m "So, [hero_name], missed your favorite waitress? Today I’m serving something... special~"
+    m "So, [hero_name], missed your favorite waitress? Today I’m serving something... special~"
 
 # game/locations/tavern/tavern_miku.rpy:965
 translate english m_root_fuck_e4faf9a2:
-
-    # p "Это что, новый костюм?!"
-    p "Это что, новый костюм?!"
+    # p "Is that a new costume?!"
+    p "Is that a new costume?!"
 
 # game/locations/tavern/tavern_miku.rpy:969
 translate english m_root_fuck_00b9dcd2:
-
-    # "[my_miku.name] подходит ближе и грациозно облокачивается на кровать, пока её роскошные груди манят тебя."
-    "[my_miku.name] подходит ближе и грациозно облокачивается на кровать, пока её роскошные груди манят тебя."
+    # "[my_miku.name] comes closer and gracefully leans on the bed, her luxurious breasts beckoning you."
+    "[my_miku.name] comes closer and gracefully leans on the bed, her luxurious breasts beckoning you."
 
 # game/locations/tavern/tavern_miku.rpy:970
 translate english m_root_fuck_3f2f76f1:
-
-    # m "В нашем меню сегодня горячая порция меня, милый~ Как тебе такой заказ?"
-    m "В нашем меню сегодня горячая порция меня, милый~ Как тебе такой заказ?"
+    # m "On the menu today is a hot serving of me, darling~ How’s that for an order?"
+    m "On the menu today is a hot serving of me, darling~ How’s that for an order?"
 
 # game/locations/tavern/tavern_miku.rpy:971
 translate english m_root_fuck_82fef80d:
-
-    # p "*сглатывает*"
-    p "*сглатывает*"
+    # p "*gulps*"
+    p "*gulps*"
 
 # game/locations/tavern/tavern_miku.rpy:975
 translate english m_root_fuck_b7c79779:
-
-    # "[my_miku.name] разворачивается спиной, и под юбочкой мелькают её белые стринги."
-    "[my_miku.name] разворачивается спиной, и под юбочкой мелькают её белые стринги."
+    # "[my_miku.name] turns around, and her white thong peeks out from under her skirt."
+    "[my_miku.name] turns around, and her white thong peeks out from under her skirt."
 
 # game/locations/tavern/tavern_miku.rpy:976
 translate english m_root_fuck_bd97b187:
-
-    # m "Ой-ой, вижу, как глазки загорелись~ Нравится мой новый образ?"
-    m "Ой-ой, вижу, как глазки загорелись~ Нравится мой новый образ?"
+    # m "Oh-oh, I see your eyes lighting up~ Like my new look?"
+    m "Oh-oh, I see your eyes lighting up~ Like my new look?"
 
 # game/locations/tavern/tavern_miku.rpy:980
 translate english m_root_fuck_12dd3ae0:
-
-    # "[my_miku.name] медленно стягивает юбочку вниз, и слегка оттопыривает попку, дразня тебя."
-    "[my_miku.name] медленно стягивает юбочку вниз, и слегка оттопыривает попку, дразня тебя."
+    # "[my_miku.name] slowly pulls her skirt down and sticks her ass out slightly, teasing you."
+    "[my_miku.name] slowly pulls her skirt down and sticks her ass out slightly, teasing you."
 
 # game/locations/tavern/tavern_miku.rpy:984
 translate english m_root_fuck_f66f5985:
-
-    # m "Хороший вид, а, [hero_name]?"
-    m "Хороший вид, а, [hero_name]?"
+    # m "Nice view, huh, [hero_name]?"
+    m "Nice view, huh, [hero_name]?"
 
 # game/locations/tavern/tavern_miku.rpy:988
 translate english m_root_fuck_176dc299:
-
-    # "[my_miku.name], сияя улыбкой, стягивает стринги, открывая тебе всё, что скрывалось под тканью."
-    "[my_miku.name], сияя улыбкой, стягивает стринги, открывая тебе всё, что скрывалось под тканью."
+    # "[my_miku.name], beaming with a smile, pulls off her thong, revealing everything hidden beneath the fabric."
+    "[my_miku.name], beaming with a smile, pulls off her thong, revealing everything hidden beneath the fabric."
 
 # game/locations/tavern/tavern_miku.rpy:989
 translate english m_root_fuck_bf9b4858:
-
-    # m "Эти тесные трусики только мешают... Мне стоит их снять, как думаешь?"
-    m "Эти тесные трусики только мешают... Мне стоит их снять, как думаешь?"
+    # m "These tight panties were just getting in the way... Should I take them off, what do you think?"
+    m "These tight panties were just getting in the way... Should I take them off, what do you think?"
 
 # game/locations/tavern/tavern_miku.rpy:990
 translate english m_root_fuck_82fef80d_1:
-
-    # p "*сглатывает*"
-    p "*сглатывает*"
+    # p "*gulps*"
+    p "*gulps*"
 
 # game/locations/tavern/tavern_miku.rpy:994
 translate english m_root_fuck_2988467a:
-
-    # "[my_miku.name] раздвигает попку руками, и бросает на тебя лукавый взгляд."
-    "[my_miku.name] раздвигает попку руками, и бросает на тебя лукавый взгляд."
+    # "[my_miku.name] spreads her ass with her hands and throws you a sly glance."
+    "[my_miku.name] spreads her ass with her hands and throws you a sly glance."
 
 # game/locations/tavern/tavern_miku.rpy:998
 translate english m_root_fuck_5ec750f0:
-
-    # "Она оборачивается, а её рубашка соскальзывает с плеч, обнажая грудь."
-    "Она оборачивается, а её рубашка соскальзывает с плеч, обнажая грудь."
+    # "She turns around, and her shirt slips off her shoulders, exposing her breasts."
+    "She turns around, and her shirt slips off her shoulders, exposing her breasts."
 
 # game/locations/tavern/tavern_miku.rpy:1002
 translate english m_root_fuck_994b08d7:
-
-    # "[my_miku.name] легла на кровать, голая, чуть прикрывая грудь, и кокетливо склоняет голову."
-    "[my_miku.name] легла на кровать, голая, чуть прикрывая грудь, и кокетливо склоняет голову."
+    # "[my_miku.name] lies on the bed, naked, slightly covering her breasts, and tilts her head flirtatiously."
+    "[my_miku.name] lies on the bed, naked, slightly covering her breasts, and tilts her head flirtatiously."
 
 # game/locations/tavern/tavern_miku.rpy:1003
 translate english m_root_fuck_d3ab1de3:
-
-    # m "Ты так смотришь... Мне даже неловко~"
-    m "Ты так смотришь... Мне даже неловко~"
+    # m "You’re staring so much... It’s making me shy~"
+    m "You’re staring so much... It’s making me shy~"
 
 # game/locations/tavern/tavern_miku.rpy:1007
 translate english m_root_fuck_539cdc8e:
-
-    # "Она встаёт на четвереньки, повернувшись попкой к тебе, и оттягивает анус."
-    "Она встаёт на четвереньки, повернувшись попкой к тебе, и оттягивает анус."
+    # "She gets on all fours, facing you with her ass, and spreads her anus."
+    "She gets on all fours, facing you with her ass, and spreads her anus."
 
 # game/locations/tavern/tavern_miku.rpy:1008
 translate english m_root_fuck_14d3e6e7:
-
-    # m "Хах, шучу, наслаждайся шоу~"
-    m "Хах, шучу, наслаждайся шоу~"
+    # m "Hah, kidding, enjoy the show~"
+    m "Hah, kidding, enjoy the show~"
 
 # game/locations/tavern/tavern_miku.rpy:1015
 translate english m_root_fuck_continue_54f8ac85:
-
-    # "Ты не выдерживаешь и врываешься в её тугую киску."
-    "Ты не выдерживаешь и врываешься в её тугую киску."
+    # "You can’t hold back anymore and thrust into her tight pussy."
+    "You can’t hold back anymore and thrust into her tight pussy."
 
 # game/locations/tavern/tavern_miku.rpy:1016
 translate english m_root_fuck_continue_f33ce69e:
-
-    # m "Ах!~"
-    m "Ах!~"
+    # m "Ah!~"
+    m "Ah!~"
 
 # game/locations/tavern/tavern_miku.rpy:1017
 translate english m_root_fuck_continue_2de73cbe:
-
-    # "[my_miku.name] начинает двигаться на тебе, словно исполняя ритмичный танец."
-    "[my_miku.name] начинает двигаться на тебе, словно исполняя ритмичный танец."
+    # "[my_miku.name] starts moving on you, as if performing a rhythmic dance."
+    "[my_miku.name] starts moving on you, as if performing a rhythmic dance."
 
 # game/locations/tavern/tavern_miku.rpy:1064
 translate english m_root_fuck_continue_5115253b:
-
-    # "[my_miku.name] ускоряет темп, её грудь подпрыгивает."
-    "[my_miku.name] ускоряет темп, её грудь подпрыгивает."
+    # "[my_miku.name] picks up the pace, her breasts bouncing."
+    "[my_miku.name] picks up the pace, her breasts bouncing."
 
 # game/locations/tavern/tavern_miku.rpy:1065
 translate english m_root_fuck_continue_6605ec77:
-
-    # m "Ох, [hero_name]... Моя киска... Горит..."
-    m "Ох, [hero_name]... Моя киска... Горит..."
+    # m "Oh, [hero_name]... My pussy... It’s burning..."
+    m "Oh, [hero_name]... My pussy... It’s burning..."
 
 # game/locations/tavern/tavern_miku.rpy:1067
 translate english m_root_fuck_continue_c5e2c402:
-
-    # "Ты чувствуешь, как всё внутри сжимается, и начинаешь кончать в её киску."
-    "Ты чувствуешь, как всё внутри сжимается, и начинаешь кончать в её киску."
+    # "You feel everything tightening inside, and you start cumming into her pussy."
+    "You feel everything tightening inside, and you start cumming into her pussy."
 
 # game/locations/tavern/tavern_miku.rpy:1069
 translate english m_root_fuck_continue_c6b436f5:
-
-    # m "Ах! Давай, [hero_name], кончи в меня~"
-    m "Ах! Давай, [hero_name], кончи в меня~"
+    # m "Ah! Go ahead, [hero_name], cum inside me~"
+    m "Ah! Go ahead, [hero_name], cum inside me~"
 
 # game/locations/tavern/tavern_miku.rpy:1074
 translate english m_root_fuck_continue_73518d98:
-
-    # p "Умничка, [my_miku.name]."
-    p "Умничка, [my_miku.name]."
+    # p "Good girl, [my_miku.name]."
+    p "Good girl, [my_miku.name]."
 
 # game/locations/tavern/tavern_miku.rpy:1078
 translate english m_root_fuck_continue_35a5d4f6:
-
-    # "[my_miku.name] смотрит на тебя с сияющей улыбкой. Ты оттягиваешь её попку, наблюдая, как твоя сперма вытекает."
-    "[my_miku.name] смотрит на тебя с сияющей улыбкой. Ты оттягиваешь её попку, наблюдая, как твоя сперма вытекает."
+    # "[my_miku.name] looks at you with a radiant smile. You pull her ass apart, watching your cum drip out."
+    "[my_miku.name] looks at you with a radiant smile. You pull her ass apart, watching your cum drip out."
 
 # game/locations/tavern/tavern_miku.rpy:1082
 translate english m_root_fuck_continue_fbdee1d8:
-
-    # m "Ммм... Так тепло внутри..."
-    m "Ммм... Так тепло внутри..."
+    # m "Mmm... So warm inside..."
+    m "Mmm... So warm inside..."
 
 # game/locations/tavern/tavern_miku.rpy:1086
 translate english m_root_fuck_continue_5d3dfe35:
-
-    # "[my_miku.name] хватает свою попку одной рукой и бросает на тебя озорной взгляд."
-    "[my_miku.name] хватает свою попку одной рукой и бросает на тебя озорной взгляд."
+    # "[my_miku.name] grabs her ass with one hand and shoots you a naughty look."
+    "[my_miku.name] grabs her ass with one hand and shoots you a naughty look."
 
 # game/locations/tavern/tavern_miku.rpy:1091
 translate english m_root_fuck_continue_bc51c20c:
-
-    # m "Я хорошо знаю тебя, [hero_name]... Тебе ведь мало, верно?"
-    m "Я хорошо знаю тебя, [hero_name]... Тебе ведь мало, верно?"
+    # m "I know you well, [hero_name]... That wasn’t enough for you, was it?"
+    m "I know you well, [hero_name]... That wasn’t enough for you, was it?"
 
 # game/locations/tavern/tavern_miku.rpy:1093
 translate english m_root_fuck_continue_c3ec9a66:
-
-    # m "Продолжим?" nointeract
-    m "Продолжим?" nointeract
+    # m "Shall we continue?" nointeract
+    m "Shall we continue?" nointeract
 
 # game/locations/tavern/tavern_miku.rpy:1095
 translate english m_root_fuck_continue_6f4236fd:
-
-    # p "Ты читаешь мои мысли..."
-    p "Ты читаешь мои мысли..."
+    # p "You’re reading my mind..."
+    p "You’re reading my mind..."
 
 # game/locations/tavern/tavern_miku.rpy:1099
 translate english m_root_fuck_continue_7bbeac01:
-
-    # p "Пока хватит, звезда моя."
-    p "Пока хватит, звезда моя."
+    # p "That’s enough for now, my star."
+    p "That’s enough for now, my star."
 
 # game/locations/tavern/tavern_miku.rpy:1103
 translate english m_root_fuck_continue_877dcb48:
-
-    # m "Мы ведь повторим, да, [hero_name]?"
-    m "Мы ведь повторим, да, [hero_name]?"
+    # m "We’ll do it again, right, [hero_name]?"
+    m "We’ll do it again, right, [hero_name]?"
 
 # game/locations/tavern/tavern_miku.rpy:1104
 translate english m_root_fuck_continue_33dc2d19:
-
-    # p "Обязательно."
-    p "Обязательно."
+    # p "Definitely."
+    p "Definitely."
 
 # game/locations/tavern/tavern_miku.rpy:1105
 translate english m_root_fuck_continue_d8696e73:
-
-    # "Ты встаёшь и уходишь, оставляя её убирать беспорядок."
-    "Ты встаёшь и уходишь, оставляя её убирать беспорядок."
+    # "You get up and leave, leaving her to clean up the mess."
+    "You get up and leave, leaving her to clean up the mess."
 
 # game/locations/tavern/tavern_miku.rpy:1111
 translate english m_root_anal_continue_000fafc1:
-
-    # "Ты резко хватаешь [my_miku.name], врываясь в её узкую задницу."
-    "Ты резко хватаешь [my_miku.name], врываясь в её узкую задницу."
+    # "You suddenly grab [my_miku.name] and thrust into her tight ass."
+    "You suddenly grab [my_miku.name] and thrust into her tight ass."
 
 # game/locations/tavern/tavern_miku.rpy:1112
 translate english m_root_anal_continue_e14461c1:
-
-    # m "Ааах!"
-    m "Ааах!"
+    # m "Aaah!"
+    m "Aaah!"
 
 # game/locations/tavern/tavern_miku.rpy:1152
 translate english m_root_anal_continue_3c06f2fb:
-
-    # m "Да! ДА! Дааа! "
-    m "Да! ДА! Дааа! "
+    # m "Yes! YES! Yesss!"
+    m "Yes! YES! Yesss!"
 
 # game/locations/tavern/tavern_miku.rpy:1156
 translate english m_root_anal_continue_d61cafa8:
-
-    # "Ты кончаешь."
-    "Ты кончаешь."
+    # "You cum."
+    "You cum."
 
 # game/locations/tavern/tavern_miku.rpy:1157
 translate english m_root_anal_continue_a98d2521:
-
-    # m "Ах! Да! Заполни меня~"
-    m "Ах! Да! Заполни меня~"
+    # m "Ah! Yes! Fill me up~"
+    m "Ah! Yes! Fill me up~"
 
 # game/locations/tavern/tavern_miku.rpy:1161
 translate english m_root_anal_continue_03b47cbe:
-
-    # "Поток спермы усиливается, и [my_miku.name] стонет."
-    "Поток спермы усиливается, и [my_miku.name] стонет."
+    # "The stream of cum intensifies, and [my_miku.name] moans."
+    "The stream of cum intensifies, and [my_miku.name] moans."
 
 # game/locations/tavern/tavern_miku.rpy:1162
 translate english m_root_anal_continue_97960444:
-
-    # m "Аааах~~"
-    m "Аааах~~"
+    # m "Aaaah~~"
+    m "Aaaah~~"
 
 # game/locations/tavern/tavern_miku.rpy:1166
 translate english m_root_anal_continue_ea71c3fc:
-
-    # "Ты выплёскиваешь всё до последней капли."
-    "Ты выплёскиваешь всё до последней капли."
+    # "You release everything down to the last drop."
+    "You release everything down to the last drop."
 
 # game/locations/tavern/tavern_miku.rpy:1170
 translate english m_root_anal_continue_c6fedbd5:
-
-    # "Ты вытаскиваешь член, а [my_miku.name] дрожит, всё ещё в экстазе, пока сперма вытекает из её ануса."
-    "Ты вытаскиваешь член, а [my_miku.name] дрожит, всё ещё в экстазе, пока сперма вытекает из её ануса."
+    # "You pull out, and [my_miku.name] trembles, still in ecstasy, as cum leaks from her anus."
+    "You pull out, and [my_miku.name] trembles, still in ecstasy, as cum leaks from her anus."
 
 # game/locations/tavern/tavern_miku.rpy:1174
 translate english m_root_anal_continue_1a8943a7:
-
-    # "[my_miku.name] падает на кровать, изнеможённая, пока её анус сочится твоим семенем."
-    "[my_miku.name] падает на кровать, изнеможённая, пока её анус сочится твоим семенем."
+    # "[my_miku.name] collapses onto the bed, exhausted, as her anus oozes with your seed."
+    "[my_miku.name] collapses onto the bed, exhausted, as her anus oozes with your seed."
 
 # game/locations/tavern/tavern_miku.rpy:1175
 translate english m_root_anal_continue_f0279d6d:
-
-    # p "Отличное шоу, ещё вернусь за добавкой!"
-    p "Отличное шоу, ещё вернусь за добавкой!"
+    # p "Great show, I’ll be back for more!"
+    p "Great show, I’ll be back for more!"
 
 # game/locations/tavern/tavern_miku.rpy:1179
 translate english m_root_anal_continue_a5a9c34d:
-
-    # m "А-агааа~"
-    m "А-агааа~"
+    # m "A-yesss~"
+    m "A-yesss~"
 
 # game/locations/tavern/tavern_miku.rpy:1180
 translate english m_root_anal_continue_41ef9746:
-
-    # "Ты уходишь, оставляя ее отдыхать в беспорядке, который вы устроили."
-    "Ты уходишь, оставляя ее отдыхать в беспорядке, который вы устроили."
+    # "You leave, letting her rest in the mess you made together."
+    "You leave, letting her rest in the mess you made together."
 
 # game/locations/tavern/tavern_miku.rpy:1184
 translate english m_root_anal_b716b135:
-
-    # m "Подожди тут, я сейчас вернусь... в новом образе~"
-    m "Подожди тут, я сейчас вернусь... в новом образе~"
+    # m "Wait here, I’ll be back soon... in a new look~"
+    m "Wait here, I’ll be back soon... in a new look~"
 
 # game/locations/tavern/tavern_miku.rpy:1186
 translate english m_root_anal_c8ea8a4a:
-
     # p "..."
     p "..."
 
 # game/locations/tavern/tavern_miku.rpy:1187
 translate english m_root_anal_4fe1f5ce:
-
     # p "....."
     p "....."
 
 # game/locations/tavern/tavern_miku.rpy:1188
 translate english m_root_anal_c354091b:
-
     # p "......."
     p "......."
 
 # game/locations/tavern/tavern_miku.rpy:1192
 translate english m_root_anal_e41eea14:
-
-    # "Дверь комнаты открывается, и в неё вплывает [my_miku.name], одетая в голубое бикини — яркое, обтягивающее, с её длинными бирюзовыми хвостиками, покачивающимися в такт шагам."
-    "Дверь комнаты открывается, и в неё вплывает [my_miku.name], одетая в голубое бикини — яркое, обтягивающее, с её длинными бирюзовыми хвостиками, покачивающимися в такт шагам."
+    # "The door opens, and [my_miku.name] glides in, wearing a bright, tight blue bikini, her long turquoise twin-tails swaying with her steps."
+    "The door opens, and [my_miku.name] glides in, wearing a bright, tight blue bikini, her long turquoise twin-tails swaying with her steps."
 
 # game/locations/tavern/tavern_miku.rpy:1193
 translate english m_root_anal_0d7f55ec:
-
-    # m "Ну что, [hero_name]? Как тебе мой новый костюмчик для особого обслуживания?~"
-    m "Ну что, [hero_name]? Как тебе мой новый костюмчик для особого обслуживания?~"
+    # m "So, [hero_name]? How do you like my new outfit for special service?~"
+    m "So, [hero_name]? How do you like my new outfit for special service?~"
 
 # game/locations/tavern/tavern_miku.rpy:1197
 translate english m_root_anal_aee0a356:
-
-    # "Она подходит ближе и с улыбкой сжимает свои большие, упругие груди."
-    "Она подходит ближе и с улыбкой сжимает свои большие, упругие груди."
+    # "She comes closer and squeezes her large, firm breasts with a smile."
+    "She comes closer and squeezes her large, firm breasts with a smile."
 
 # game/locations/tavern/tavern_miku.rpy:1203
 translate english m_root_anal_3f9741e5:
-
-    # m "Ммм, они такие тяжёлые сегодня... Хочешь помочь мне их разгрузить?~"
-    m "Ммм, они такие тяжёлые сегодня... Хочешь помочь мне их разгрузить?~"
+    # m "Mmm, they feel so heavy today... Want to help me lighten the load?~"
+    m "Mmm, they feel so heavy today... Want to help me lighten the load?~"
 
 # game/locations/tavern/tavern_miku.rpy:1204
 translate english m_root_anal_82fef80d:
-
-    # p "*сглатывает*"
-    p "*сглатывает*"
+    # p "*gulps*"
+    p "*gulps*"
 
 # game/locations/tavern/tavern_miku.rpy:1210
 translate english m_root_anal_8bcea2c9:
-
-    # "[my_miku.name] хихикает, затем оттягивает резинку своих трусиков и отпускает её, позволяя ткани звонко шлёпнуть по её упругой попке."
-    "[my_miku.name] хихикает, затем оттягивает резинку своих трусиков и отпускает её, позволяя ткани звонко шлёпнуть по её упругой попке."
+    # "[my_miku.name] giggles, then pulls the elastic of her panties and lets it snap back, the fabric smacking loudly against her firm ass."
+    "[my_miku.name] giggles, then pulls the elastic of her panties and lets it snap back, the fabric smacking loudly against her firm ass."
 
 # game/locations/tavern/tavern_miku.rpy:1211
 translate english m_root_anal_c9b3f771:
-
-    # m "Ой! *смеётся* Кажется, я сама себя наказала~ Нравится такой ритм, [hero_name]?"
-    m "Ой! *смеётся* Кажется, я сама себя наказала~ Нравится такой ритм, [hero_name]?"
+    # m "Oops! *laughs* Looks like I punished myself~ Like this rhythm, [hero_name]?"
+    m "Oops! *laughs* Looks like I punished myself~ Like this rhythm, [hero_name]?"
 
 # game/locations/tavern/tavern_miku.rpy:1215
 translate english m_root_anal_00a61f8f:
-
-    # "Она медленно приподнимает верх бикини, открывая тебе вид на её роскошную грудь — соски уже слегка напряжены, а кожа блестит в мягком свете комнаты."
-    "Она медленно приподнимает верх бикини, открывая тебе вид на её роскошную грудь — соски уже слегка напряжены, а кожа блестит в мягком свете комнаты."
+    # "She slowly lifts the bikini top, revealing her luxurious breasts—her nipples already slightly hard, her skin glistening in the room’s soft light."
+    "She slowly lifts the bikini top, revealing her luxurious breasts—her nipples already slightly hard, her skin glistening in the room’s soft light."
 
 # game/locations/tavern/tavern_miku.rpy:1219
 translate english m_root_anal_67b5fd2c:
-
-    # "[my_miku.name] сбрасывает верх бикини на пол."
-    "[my_miku.name] сбрасывает верх бикини на пол."
+    # "[my_miku.name] drops the bikini top to the floor."
+    "[my_miku.name] drops the bikini top to the floor."
 
 # game/locations/tavern/tavern_miku.rpy:1223
 translate english m_root_anal_afc7134e:
-
-    # "Она поворачивается спиной и наклоняется, выставляя свою попку на показ."
-    "Она поворачивается спиной и наклоняется, выставляя свою попку на показ."
+    # "She turns her back and bends over, showing off her ass."
+    "She turns her back and bends over, showing off her ass."
 
 # game/locations/tavern/tavern_miku.rpy:1225
 translate english m_root_anal_1fc38f61:
-
-    # m "Ну как, [hero_name]? Эта часть шоу тебе по вкусу?~"
-    m "Ну как, [hero_name]? Эта часть шоу тебе по вкусу?~"
+    # m "So, [hero_name]? Does this part of the show suit your taste?~"
+    m "So, [hero_name]? Does this part of the show suit your taste?~"
 
 # game/locations/tavern/tavern_miku.rpy:1229
 translate english m_root_anal_11d77fd8:
-
-    # "[my_miku.name] спускает трусики по бедрам, показывая тебе самое сокровенное."
-    "[my_miku.name] спускает трусики по бедрам, показывая тебе самое сокровенное."
+    # "[my_miku.name] slides her panties down her thighs, revealing her most intimate parts."
+    "[my_miku.name] slides her panties down her thighs, revealing her most intimate parts."
 
 # game/locations/tavern/tavern_miku.rpy:1230
 translate english m_root_anal_6c9c08ed:
-
-    # m "Не так хорош образ, как то, что скрывается под ним~"
-    m "Не так хорош образ, как то, что скрывается под ним~"
+    # m "The outfit’s not as good as what’s underneath~"
+    m "The outfit’s not as good as what’s underneath~"
 
 # game/locations/tavern/tavern_miku.rpy:1236
 translate english m_root_anal_8c38e486:
-
-    # "Она полностью спустила трусики и оттянула попку так, чтобы ты получше рассмотрел ее анус."
-    "Она полностью спустила трусики и оттянула попку так, чтобы ты получше рассмотрел ее анус."
+    # "She fully lowers her panties and spreads her ass so you can get a good look at her anus."
+    "She fully lowers her panties and spreads her ass so you can get a good look at her anus."
 
 # game/locations/tavern/tavern_miku.rpy:1240
 translate english m_root_anal_6aef813f:
-
-    # "[my_miku.name] тянется к своему анусу и начинает дразнить его кончиками пальцев, слегка постанывая в ритм своим движениям."
-    "[my_miku.name] тянется к своему анусу и начинает дразнить его кончиками пальцев, слегка постанывая в ритм своим движениям."
+    # "[my_miku.name] reaches for her anus and starts teasing it with her fingertips, moaning softly in rhythm with her movements."
+    "[my_miku.name] reaches for her anus and starts teasing it with her fingertips, moaning softly in rhythm with her movements."
 
 # game/locations/tavern/tavern_miku.rpy:1241
 translate english m_root_anal_fcd0fa19:
-
-    # m "Сегодня мне точно надо подготовиться, я знаю, с чем мне придется иметь дело~"
-    m "Сегодня мне точно надо подготовиться, я знаю, с чем мне придется иметь дело~"
+    # m "I definitely need to prepare today; I know what I’m dealing with~"
+    m "I definitely need to prepare today; I know what I’m dealing with~"
 
 # game/locations/tavern/tavern_miku.rpy:1302
 translate english m_root_anal_4af45f00:
-
-    # m "А-аах... "
-    m "А-аах... "
+    # m "A-ahh..."
+    m "A-ahh..."
 
 # game/locations/tavern/tavern_miku.rpy:1305
 translate english m_root_anal_8f4a52f3:
-
-    # "[my_miku.name] оттягивает свой анус."
-    "[my_miku.name] оттягивает свой анус."
+    # "[my_miku.name] spreads her anus."
+    "[my_miku.name] spreads her anus."
 
 # game/locations/tavern/tavern_miku.rpy:1306
 translate english m_root_anal_ba6c4b7c:
-
-    # m "Тут нужен твой главный инструмент, а, что думаешь?~"
-    m "Тут нужен твой главный инструмент, а, что думаешь?~"
+    # m "This needs your main tool, huh, what do you think?~"
+    m "This needs your main tool, huh, what do you think?~"
 
 # game/locations/tavern/tavern_miku.rpy:1310
 translate english m_root_anal_4db212af:
-
-    # "Твоё терпение лопается. Ты резко хватаешь [my_miku.name] за бёдра и врываешься в её тугую попку своим членом."
-    "Твоё терпение лопается. Ты резко хватаешь [my_miku.name] за бёдра и врываешься в её тугую попку своим членом."
+    # "Your patience snaps. You grab [my_miku.name] by the hips and thrust your cock into her tight ass."
+    "Your patience snaps. You grab [my_miku.name] by the hips and thrust your cock into her tight ass."
 
 # game/locations/tavern/tavern_miku.rpy:1311
 translate english m_root_anal_e14461c1:
-
-    # m "Ааах!"
-    m "Ааах!"
+    # m "Aaah!"
+    m "Aaah!"
 
 # game/locations/tavern/tavern_miku.rpy:1369
 translate english m_root_anal_f29b4248:
-
-    # "[my_miku.name] стонет всё громче, её голос дрожит, под твоими резкими толчками."
-    "[my_miku.name] стонет всё громче, её голос дрожит, под твоими резкими толчками."
+    # "[my_miku.name] moans louder, her voice trembling under your rough thrusts."
+    "[my_miku.name] moans louder, her voice trembling under your rough thrusts."
 
 # game/locations/tavern/tavern_miku.rpy:1370
 translate english m_root_anal_7aeb51ac:
-
-    # m "Ах! Аах! А-аах!"
-    m "Ах! Аах! А-аах!"
+    # m "Ah! Aah! A-ahh!"
+    m "Ah! Aah! A-ahh!"
 
 # game/locations/tavern/tavern_miku.rpy:1374
 translate english m_root_anal_2f970f26:
-
-    # "Ты начинаешь кончать в ее тугую попку."
-    "Ты начинаешь кончать в ее тугую попку."
+    # "You start cumming into her tight ass."
+    "You start cumming into her tight ass."
 
 # game/locations/tavern/tavern_miku.rpy:1381
 translate english m_root_anal_6b8a25b7:
-
-    # p "Аргх!"
-    p "Аргх!"
+    # p "Argh!"
+    p "Argh!"
 
 # game/locations/tavern/tavern_miku.rpy:1385
 translate english m_root_anal_848fc9c5:
-
-    # "Ты заканчиваешь, а тело [my_miku.name] дрожит."
-    "Ты заканчиваешь, а тело [my_miku.name] дрожит."
+    # "You finish, and [my_miku.name]'s body trembles."
+    "You finish, and [my_miku.name]'s body trembles."
 
 # game/locations/tavern/tavern_miku.rpy:1392
 translate english m_root_anal_1e185c0e:
-
-    # "Ты скидываешь [my_miku.name] на кровать, из ее ануса текут струи спермы, а сама она не в силах подняться."
-    "Ты скидываешь [my_miku.name] на кровать, из ее ануса текут струи спермы, а сама она не в силах подняться."
+    # "You toss [my_miku.name] onto the bed, streams of cum flowing from her anus as she’s unable to get up."
+    "You toss [my_miku.name] onto the bed, streams of cum flowing from her anus as she’s unable to get up."
 
 # game/locations/tavern/tavern_miku.rpy:1393
 translate english m_root_anal_cdad87c4:
-
-    # p "Ну же, я уже ухожу."
-    p "Ну же, я уже ухожу."
+    # p "Come on, I’m leaving."
+    p "Come on, I’m leaving."
 
 # game/locations/tavern/tavern_miku.rpy:1394
 translate english m_root_anal_43ef858c:
-
-    # m "Аааа..."
-    m "Аааа..."
+    # m "Aaaah..."
+    m "Aaaah..."
 
 # game/locations/tavern/tavern_miku.rpy:1398
 translate english m_root_anal_f5710694:
-
-    # "[my_miku.name] всё еще дрожит, не в силах подняться."
-    "[my_miku.name] всё еще дрожит, не в силах подняться."
+    # "[my_miku.name] is still trembling, unable to stand."
+    "[my_miku.name] is still trembling, unable to stand."
 
 # game/locations/tavern/tavern_miku.rpy:1399
 translate english m_root_anal_bc3f2964:
-
-    # p "Ты в порядке, [my_miku.name]?"
-    p "Ты в порядке, [my_miku.name]?"
+    # p "You okay, [my_miku.name]?"
+    p "You okay, [my_miku.name]?"
 
 # game/locations/tavern/tavern_miku.rpy:1400
 translate english m_root_anal_f721e84a:
-
     # m "...."
     m "...."
 
 # game/locations/tavern/tavern_miku.rpy:1401
 translate english m_root_anal_bf49a66f:
-
-    # m "Ууу... А-агаааа..."
-    m "Ууу... А-агаааа..."
+    # m "Uuu... Y-yesss..."
+    m "Uuu... Y-yesss..."
 
 # game/locations/tavern/tavern_miku.rpy:1405
 translate english m_root_anal_b2745e20:
-
-    # p "Я ухожу."
-    p "Я ухожу."
+    # p "I’m leaving."
+    p "I’m leaving."
 
 # game/locations/tavern/tavern_miku.rpy:1406
 translate english m_root_anal_c1f3b97b:
-
-    # m "Так... рада... Ещё..."
-    m "Так... рада... Ещё..."
+    # m "So... glad... More..."
+    m "So... glad... More..."
 
 # game/locations/tavern/tavern_miku.rpy:1407
 translate english m_root_anal_6e363b2d:
-
-    # "Ты оставляешь её лежать на полу и уходишь."
-    "Ты оставляешь её лежать на полу и уходишь."
+    # "You leave her lying on the floor and walk out."
+    "You leave her lying on the floor and walk out."
 
 # game/locations/tavern/tavern_miku.rpy:1411
 translate english m_root_fetish_59e03460:
-
     # "IN PROGRESS"
     "IN PROGRESS"
 
 translate english strings:
-
     # game/locations/tavern/tavern_miku.rpy:9
     old "Покажи"
-    new "Покажи"
+    new "Show me"
 
     # game/locations/tavern/tavern_miku.rpy:9
     old "Горловой минет"
-    new "Горловой минет"
+    new "Deep throat blowjob"
 
     # game/locations/tavern/tavern_miku.rpy:9
     old "Сделаем это прилюдно"
-    new "Сделаем это прилюдно"
+    new "Let’s do it in public"
 
     # game/locations/tavern/tavern_miku.rpy:198
     old "Продолжать сцену"
-    new "Продолжать сцену"
+    new "Continue the scene"
 
     # game/locations/tavern/tavern_miku.rpy:279
     old "Продолжить сцену"
-    new "Продолжить сцену"
+    new "Continue the scene"
 
     # game/locations/tavern/tavern_miku.rpy:312
     old "Обе!"
-    new "Обе!"
+    new "Both!"
 
     # game/locations/tavern/tavern_miku.rpy:1092
     old "Достаточно"
-    new "Достаточно"
-
+    new "Enough"
