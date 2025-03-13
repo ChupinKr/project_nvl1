@@ -208,14 +208,24 @@ label continue_battle:
     else:
         "Противник нанес вам урон [damage], ваш показатель здоровья [health]"
     $ damage_to_enemy = 0
-    menu:
-        "Продолжить бой":
-            # Сброс таймера: возвращаем значение qte_bar в 100 и сбрасываем предупреждение
-            $ qte_bar = 100
-            $ qte_warning = False
-            call screen battle_qte  # Продолжаем бой
-        "Попытаться сбежать":
-            jump battle_escape  # Бегство из боя
+    if persistent.lang == "russian":
+        menu:
+            "Продолжить бой":
+                # Сброс таймера: возвращаем значение qte_bar в 100 и сбрасываем предупреждение
+                $ qte_bar = 100
+                $ qte_warning = False
+                call screen battle_qte  # Продолжаем бой
+            "Попытаться сбежать":
+                jump battle_escape  # Бегство из боя
+    if persistent.lang == "english":
+        menu:
+            "Continue the fight":
+                # Сброс таймера: возвращаем значение qte_bar в 100 и сбрасываем предупреждение
+                $ qte_bar = 100
+                $ qte_warning = False
+                call screen battle_qte  # Продолжаем бой
+            "Try to escape":
+                jump battle_escape  # Бегство из боя
 
 label battle_win:
     "Вы наносите противнику [damage_to_enemy], показатель здоровья противника [enemy_health]"
