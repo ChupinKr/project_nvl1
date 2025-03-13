@@ -33,8 +33,12 @@ screen daytime:
     vbox:
         xalign 0.01
         yalign 0.01
-        text "День: [day]" style "outline_text"
-        text "Время: [time]" style "outline_text"
+        if persistent.lang == "russian":
+            text "День: [day]" style "outline_text"
+            text "Время: [time]" style "outline_text"
+        if persistent.lang == "english":
+            text "Day: [day]" style "outline_text"
+            text "Time: [time]" style "outline_text"
 
 transform rotate_text(angle=0):
     rotate angle
@@ -43,27 +47,42 @@ screen minds1:
     vbox:
         xalign 0.15
         yalign 0.4
-        text "Ты бесполезен" style "white_text" at rotate_text(-25)
+        if persistent.lang == "russian":
+            text "Ты бесполезен" style "white_text" at rotate_text(-25)
+        if persistent.lang == "english":
+            text "You are useless" style "white_text" at rotate_text(-25)
 screen minds2:
     vbox:
         xalign 0.2
         yalign 0.7
-        text "У тебя не выйдет" style "white_text" at rotate_text(-25)
+        if persistent.lang == "russian":
+            text "У тебя не выйдет" style "white_text" at rotate_text(-25)
+        if persistent.lang == "english":
+            text "You won't succeed" style "white_text" at rotate_text(-25)
 screen minds3:
     vbox:
         xalign 0.8
         yalign 0.2
-        text "Ты обычный трус" style "white_text" at rotate_text(25)
+        if persistent.lang == "russian":
+            text "Ты обычный трус" style "white_text" at rotate_text(25)
+        if persistent.lang == "english":
+            text "You are a common coward" style "white_text" at rotate_text(25)
 screen minds4:
     vbox:
         xalign 0.7
         yalign 0.35
-        text "Тебя ждет провал" style "white_text" at rotate_text(20)
+        if persistent.lang == "russian":
+            text "Тебя ждет провал" style "white_text" at rotate_text(20)
+        if persistent.lang == "english":
+            text "You are destined to fail" style "white_text" at rotate_text(20)
 screen minds5:
     vbox:
         xalign 0.75
         yalign 0.7
-        text "Сдайся" style "white_text" at rotate_text(20)
+        if persistent.lang == "russian":
+            text "Сдайся" style "white_text" at rotate_text(20)
+        if persistent.lang == "english":
+            text "Give up" style "white_text" at rotate_text(20)
         
 screen stat:
     vbox:
@@ -128,39 +147,74 @@ screen info_panel_text:
         yalign 0.3
         xsize 600
         spacing 1
-        textbutton "Задача: [active_quest.name]" text_style "info_textbutton":
-            action Show("quest_panel_text"), Hide("info_panel_text"), Hide("character_panel")
-        textbutton "Благословение: [chosen_blessing.name]" text_style "info_textbutton":
-            action Show("blessing_panel_text"), Hide("info_panel_text"), Hide("character_panel")
-        text "Текущее здоровье: [health]"  style "info_text"
-        text "Золото: [money]" style "info_text"
-        text "Сила: [strength]" style "info_text"
-        text "Интеллект: [intelligence]" style "info_text"
-        text "Харизма: [charisma]" style "info_text"
-        textbutton "♥[f.name]: [my_freya.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_freya), Hide("info_panel_text")
-        textbutton "♥[nag.name]: [my_nag.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_nag), Hide("info_panel_text")
-        textbutton "♥[e.name]: [my_elsa.love]"  text_style "info_textbutton":
-            action Show("character_panel", char=my_elsa), Hide("info_panel_text")
-        textbutton "♥[r.name]: [my_rapunzel.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_rapunzel), Hide("info_panel_text")
-        textbutton "♥[d.name]: [my_darkness.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_darkness), Hide("info_panel_text")
-        textbutton "♥[eris.name]: [my_eris.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_eris), Hide("info_panel_text")
-        textbutton "♥[mao.name]: [my_mao.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_mao), Hide("info_panel_text")
-        textbutton "♥[mer.name]: [my_merlin.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_merlin), Hide("info_panel_text")
-        textbutton "♥[h.name]: [my_holo.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_holo), Hide("info_panel_text")
-        textbutton "♥[m.name]: [my_miku.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_miku), Hide("info_panel_text")
-        textbutton "♥[s.name]: [my_sakura.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_sakura), Hide("info_panel_text")
-        textbutton "♥[ts.name]: [my_tsunade.love]" text_style "info_textbutton":
-            action Show("character_panel", char=my_tsunade), Hide("info_panel_text")
+        if persistent.lang == "russian":
+            textbutton "Задача: [active_quest.name]" text_style "info_textbutton":
+                action Show("quest_panel_text"), Hide("info_panel_text"), Hide("character_panel")
+            textbutton "Благословение: [chosen_blessing.name]" text_style "info_textbutton":
+                action Show("blessing_panel_text"), Hide("info_panel_text"), Hide("character_panel")
+            text "Текущее здоровье: [health]"  style "info_text"
+            text "Золото: [money]" style "info_text"
+            text "Сила: [strength]" style "info_text"
+            text "Интеллект: [intelligence]" style "info_text"
+            text "Харизма: [charisma]" style "info_text"
+            textbutton "♥[f.name]: [my_freya.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_freya), Hide("info_panel_text")
+            textbutton "♥[nag.name]: [my_nag.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_nag), Hide("info_panel_text")
+            textbutton "♥[e.name]: [my_elsa.love]"  text_style "info_textbutton":
+                action Show("character_panel", char=my_elsa), Hide("info_panel_text")
+            textbutton "♥[r.name]: [my_rapunzel.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_rapunzel), Hide("info_panel_text")
+            textbutton "♥[d.name]: [my_darkness.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_darkness), Hide("info_panel_text")
+            textbutton "♥[eris.name]: [my_eris.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_eris), Hide("info_panel_text")
+            textbutton "♥[mao.name]: [my_mao.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_mao), Hide("info_panel_text")
+            textbutton "♥[mer.name]: [my_merlin.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_merlin), Hide("info_panel_text")
+            textbutton "♥[h.name]: [my_holo.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_holo), Hide("info_panel_text")
+            textbutton "♥[m.name]: [my_miku.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_miku), Hide("info_panel_text")
+            textbutton "♥[s.name]: [my_sakura.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_sakura), Hide("info_panel_text")
+            textbutton "♥[ts.name]: [my_tsunade.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_tsunade), Hide("info_panel_text")
+        if persistent.lang == "english":
+            textbutton "Task: [active_quest.name]" text_style "info_textbutton":
+                action Show("quest_panel_text"), Hide("info_panel_text"), Hide("character_panel")
+            textbutton "Blessing: [chosen_blessing.name]" text_style "info_textbutton":
+                action Show("blessing_panel_text"), Hide("info_panel_text"), Hide("character_panel")
+            text "Current health: [health]"  style "info_text"
+            text "Gold: [money]" style "info_text"
+            text "Strength: [strength]" style "info_text"
+            text "Intelligence: [intelligence]" style "info_text"
+            text "Charisma: [charisma]" style "info_text"
+            textbutton "♥[f.name]: [my_freya.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_freya), Hide("info_panel_text")
+            textbutton "♥[nag.name]: [my_nag.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_nag), Hide("info_panel_text")
+            textbutton "♥[e.name]: [my_elsa.love]"  text_style "info_textbutton":
+                action Show("character_panel", char=my_elsa), Hide("info_panel_text")
+            textbutton "♥[r.name]: [my_rapunzel.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_rapunzel), Hide("info_panel_text")
+            textbutton "♥[d.name]: [my_darkness.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_darkness), Hide("info_panel_text")
+            textbutton "♥[eris.name]: [my_eris.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_eris), Hide("info_panel_text")
+            textbutton "♥[mao.name]: [my_mao.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_mao), Hide("info_panel_text")
+            textbutton "♥[mer.name]: [my_merlin.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_merlin), Hide("info_panel_text")
+            textbutton "♥[h.name]: [my_holo.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_holo), Hide("info_panel_text")
+            textbutton "♥[m.name]: [my_miku.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_miku), Hide("info_panel_text")
+            textbutton "♥[s.name]: [my_sakura.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_sakura), Hide("info_panel_text")
+            textbutton "♥[ts.name]: [my_tsunade.love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_tsunade), Hide("info_panel_text")
 
 screen quest_panel_text:
     vbox:
@@ -170,15 +224,26 @@ screen quest_panel_text:
         spacing 3
         text "" style "info_text"
         text "" style "info_text"
-        text "Задача: [active_quest.whatToDo]" style "info_text"
-        if active_quest.forWho:
-            text "Для: [active_quest.forWho]" style "info_text"
-        if active_quest.location:
-            text "Локация: [active_quest.location]" style "info_text"
-        if active_quest.reward_character > 0:
-            text "Награда в симпатии: [active_quest.reward_character]" style "info_text"
-        if active_quest.reward_money > 0:
-            text "Награда в монетах: [active_quest.reward_money]" style "info_text"
+        if persistent.lang == "russian":
+            text "Задача: [active_quest.whatToDo]" style "info_text"
+            if active_quest.forWho:
+                text "Для: [active_quest.forWho]" style "info_text"
+            if active_quest.location:
+                text "Локация: [active_quest.location]" style "info_text"
+            if active_quest.reward_character > 0:
+                text "Награда в симпатии: [active_quest.reward_character]" style "info_text"
+            if active_quest.reward_money > 0:
+                text "Награда в монетах: [active_quest.reward_money]" style "info_text"
+        if persistent.lang == "english":
+            text "Task: [active_quest.whatToDo]" style "info_text"
+            if active_quest.forWho:
+                text "For: [active_quest.forWho]" style "info_text"
+            if active_quest.location:
+                text "Location: [active_quest.location]" style "info_text"
+            if active_quest.reward_character > 0:
+                text "Reward sympathy: [active_quest.reward_character]" style "info_text"
+            if active_quest.reward_money > 0:
+                text "Reward gold: [active_quest.reward_money]" style "info_text"
 
     imagebutton:
         align (0.64, 0.07)
@@ -194,8 +259,12 @@ screen blessing_panel_text:
         spacing 5
         text "" style "info_text"
         text "" style "info_text"
-        text "Благословение: [chosen_blessing.name]" style "info_text"
-        text "Преимущество: [chosen_blessing.description]" style "info_text"
+        if persistent.lang == "russian":
+            text "Благословение: [chosen_blessing.name]" style "info_text"
+            text "Преимущество: [chosen_blessing.description]" style "info_text"
+        if persistent.lang == "english":
+            text "Bllessing: [chosen_blessing.name]" style "info_text"
+            text "Advantage: [chosen_blessing.description]" style "info_text"
 
     imagebutton:
         align (0.64, 0.07)
@@ -218,20 +287,38 @@ screen character_panel(char):
         xsize 350
         spacing 5
         text ""
-        text "Имя: [char.name]" style "info_text"
-        text ""
-        text "Описание: \n[char.desc]" style "info_text"
-        text ""
-        text "Совет: \n[char.notice]" style "info_text"
-        text ""
+        if persistent.lang == "russian":
+            text "Имя: [char.name]" style "info_text"
+            text ""
+            text "Описание: \n[char.desc]" style "info_text"
+            text ""
+            text "Совет: \n[char.notice]" style "info_text"
+            text ""
+        if persistent.lang == "english":
+            text "Name: [char.name]" style "info_text"
+            text ""
+            text "Description: \n[char.desc]" style "info_text"
+            text ""
+            text "Advice: \n[char.notice]" style "info_text"
+            text ""
         if is_cheats:
-            textbutton "Симпатия: [char.love]♥" text_style "info_textbutton":
-                action Function(char.addLove, 5)
-            textbutton "Сила: [char.str]♥" text_style "info_textbutton":
-                action Function(char.addNPCStr, 5)
+            if persistent.lang == "russian":
+                textbutton "Симпатия: [char.love]♥" text_style "info_textbutton":
+                    action Function(char.addLove, 5)
+                textbutton "Сила: [char.str]♥" text_style "info_textbutton":
+                    action Function(char.addNPCStr, 5)
+            if persistent.lang == "english":
+                textbutton "Sympathy: [char.love]♥" text_style "info_textbutton":
+                    action Function(char.addLove, 5)
+                textbutton "Strength: [char.str]♥" text_style "info_textbutton":
+                    action Function(char.addNPCStr, 5)
         else:
-            text "Симпатия: [char.love]♥" style "info_text"
-            text "Сила: [char.str]" style "info_text"
+            if persistent.lang == "russian":
+                text "Симпатия: [char.love]♥" style "info_text"
+                text "Сила: [char.str]" style "info_text"
+            if persistent.lang == "english":
+                text "Sympathy: [char.love]♥" style "info_text"
+                text "Strength: [char.str]" style "info_text"
 
     imagebutton:
         align (0.64, 0.07)
@@ -510,15 +597,24 @@ screen quick_menu():
 
             xalign 0.5
             yalign 1.0
-
-            textbutton _("Назад") action Rollback()
-            textbutton _("История") action ShowMenu('history')
-            textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Авто") action Preference("auto-forward", "toggle")
-            textbutton _("Сохранить") action ShowMenu('save')
-            textbutton _("Б.Сохр") action QuickSave()
-            textbutton _("Б.Загр") action QuickLoad()
-            textbutton _("Опции") action ShowMenu('preferences')
+            if persistent.lang == "russian":
+                textbutton _("Назад") action Rollback()
+                textbutton _("История") action ShowMenu('history')
+                textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("Авто") action Preference("auto-forward", "toggle")
+                textbutton _("Сохранить") action ShowMenu('save')
+                textbutton _("Б.Сохр") action QuickSave()
+                textbutton _("Б.Загр") action QuickLoad()
+                textbutton _("Опции") action ShowMenu('preferences')
+            elif persistent.lang == "english":
+                textbutton _("Back") action Rollback()
+                textbutton _("History") action ShowMenu('history')
+                textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("Auto") action Preference("auto-forward", "toggle")
+                textbutton _("Save") action ShowMenu('save')
+                textbutton _("F.Save") action QuickSave()
+                textbutton _("F.Load") action QuickLoad()
+                textbutton _("Preferences") action ShowMenu('preferences')
 
 
 ## Данный код гарантирует, что экран быстрого меню будет показан в игре в любое
@@ -559,32 +655,59 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Начать") action Start()
+            if persistent.lang == "russian":
+                textbutton _("Начать") action Start()
+            elif persistent.lang == "english":
+                textbutton _("Start") action Start()
 
         else:
 
-            textbutton _("История") action ShowMenu("history")
+            if persistent.lang == "russian":
+                textbutton _("История") action ShowMenu("history")
+            elif persistent.lang == "english":
+                textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Сохранить") action ShowMenu("save")
+            if persistent.lang == "russian":
+                textbutton _("Сохранить") action ShowMenu("save")
+            elif persistent.lang == "english":
+                textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Загрузить") action ShowMenu("load")
+        if persistent.lang == "russian":
+            textbutton _("Загрузить") action ShowMenu("load")
+        if persistent.lang == "english":
+            textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Настройки") action ShowMenu("preferences")
+        if persistent.lang == "russian":
+            textbutton _("Настройки") action ShowMenu("preferences")
+        if persistent.lang == "english":
+            textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
-            textbutton _("Завершить повтор") action EndReplay(confirm=True)
+            if persistent.lang == "russian":
+                textbutton _("Завершить повтор") action EndReplay(confirm=True)
+            if persistent.lang == "english":
+                textbutton _("End replay") action EndReplay(confirm=True)
 
         elif not main_menu:
 
-            textbutton _("Главное меню") action MainMenu()
+            if persistent.lang == "russian":
+                textbutton _("Главное меню") action MainMenu()
+            if persistent.lang == "english":
+                textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("Об игре") action ShowMenu("about")
+        if persistent.lang == "russian":
+            textbutton _("Об игре") action ShowMenu("about")
+        if persistent.lang == "english":
+            textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Помощь не необходима и не относится к мобильным устройствам.
-            textbutton _("Помощь") action ShowMenu("help")
+            if persistent.lang == "russian":
+                textbutton _("Помощь") action ShowMenu("help")
+            if persistent.lang == "english":
+                textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             textbutton _("Boosty") action OpenURL("https://boosty.to/Ko2ed/")
@@ -596,7 +719,10 @@ screen navigation():
 
             ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-
             ## версии.
-            textbutton _("Выход") action Quit(confirm=not main_menu)
+            if persistent.lang == "russian":
+                textbutton _("Выход") action Quit(confirm=not main_menu)
+            if persistent.lang == "english":
+                textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -743,11 +869,17 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                     transclude
 
     use navigation
+    
+    if persistent.lang == "russian":
+        textbutton _("Вернуться"):
+            style "return_button"
 
-    textbutton _("Вернуться"):
-        style "return_button"
+            action Return()
+    if persistent.lang == "english":
+        textbutton _("Return"):
+            style "return_button"
 
-        action Return()
+            action Return()
 
     label title
 
@@ -820,21 +952,37 @@ screen about():
 
     ## Этот оператор включает игровое меню внутрь этого экрана. Дочерний vbox
     ## включён в порт просмотра внутри экрана игрового меню.
-    use game_menu(_("Об игре"), scroll="viewport"):
+    if persistent.lang == "russian":
+        use game_menu(_("Об игре"), scroll="viewport"):
 
-        style_prefix "about"
+            style_prefix "about"
 
-        vbox:
+            vbox:
 
-            label "[config.name!t]"
-            text _("Версия [config.version!t]\n")
+                label "[config.name!t]"
+                text _("Версия [config.version!t]\n")
 
-            ## gui.about обычно установлено в options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+                ## gui.about обычно установлено в options.rpy.
+                if gui.about:
+                    text "[gui.about!t]\n"
 
-            text _("Сделано с помощью {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+                text _("Сделано с помощью {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+    if persistent.lang == "english":
+        use game_menu(_("About game"), scroll="viewport"):
 
+            style_prefix "about"
+
+            vbox:
+
+                label "[config.name!t]"
+                text _("Version [config.version!t]\n")
+
+                ## gui.about обычно установлено в options.rpy.
+                if gui.about:
+                    text "[gui.about!t]\n"
+
+                text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+    
 
 style about_label is gui_label
 style about_label_text is gui_label_text
@@ -856,19 +1004,29 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Сохранить"))
+    if persistent.lang == "russian":
+        use file_slots(_("Сохранить"))
+    if persistent.lang == "english":
+        use file_slots(_("Save"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Загрузить"))
+    if persistent.lang == "russian":
+        use file_slots(_("Загрузить"))
+    if persistent.lang == "english":
+        use file_slots(_("Load"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("{} страница"), auto=_("Автосохранения"), quick=_("Быстрые сохранения"))
+    if persistent.lang == "russian":
+        default page_name_value = FilePageNameInputValue(pattern=_("{} страница"), auto=_("Автосохранения"), quick=_("Быстрые сохранения"))
+
+    if persistent.lang == "english":
+        default page_name_value = FilePageNameInputValue(pattern=_("{} page"), auto=_("Autosaves"), quick=_("Fast saves"))
 
     use game_menu(title):
 
@@ -949,13 +1107,24 @@ screen file_slots(title):
 
                 if config.has_sync:
                     if CurrentScreenName() == "save":
-                        textbutton _("Загрузить Sync"):
-                            action UploadSync()
-                            xalign 0.5
+                        
+                        if persistent.lang == "russian":
+                            textbutton _("Загрузить Sync"):
+                                action UploadSync()
+                                xalign 0.5
+                        if persistent.lang == "english":
+                            textbutton _("Load Sync"):
+                                action UploadSync()
+                                xalign 0.5
                     else:
-                        textbutton _("Скачать Sync"):
-                            action DownloadSync()
-                            xalign 0.5
+                        if persistent.lang == "russian":
+                            textbutton _("Скачать Sync"):
+                                action DownloadSync()
+                                xalign 0.5
+                        if persistent.lang == "english":
+                            textbutton _("Download Sync"):
+                                action DownloadSync()
+                                xalign 0.5
 
 
 style page_label is gui_label
@@ -1009,28 +1178,54 @@ screen preferences():
 
                 if renpy.variant("pc") or renpy.variant("web"):
 
+                    if persistent.lang == "russian":
+                        vbox:
+                            style_prefix "radio"
+                            label _("Режим экрана")
+                            textbutton _("Оконный") action Preference("display", "window")
+                            textbutton _("Полный") action Preference("display", "fullscreen")
+
+                    if persistent.lang == "english":
+                        vbox:
+                            style_prefix "radio"
+                            label _("Screen mode")
+                            textbutton _("Window") action Preference("display", "window")
+                            textbutton _("Fullscreen") action Preference("display", "fullscreen")
+
+                if persistent.lang == "russian":
+                    vbox:
+                        style_prefix "check"
+                        label _("Пропуск")
+                        textbutton _("Всего текста") action Preference("skip", "toggle")
+                        textbutton _("После выборов") action Preference("after choices", "toggle")
+                        textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
                     vbox:
                         style_prefix "radio"
-                        label _("Режим экрана")
-                        textbutton _("Оконный") action Preference("display", "window")
-                        textbutton _("Полный") action Preference("display", "fullscreen")
-
-                vbox:
-                    style_prefix "check"
-                    label _("Пропуск")
-                    textbutton _("Всего текста") action Preference("skip", "toggle")
-                    textbutton _("После выборов") action Preference("after choices", "toggle")
-                    textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
-                vbox:
-                    style_prefix "radio"
-                    label _("Язык")
-                    textbutton _("Русский") action Language(None)
-                    textbutton _("English") action Language("english")
-                vbox:
-                    style_prefix "radio"
-                    label _("Читы")
-                    textbutton _("Вкл") action SetVariable("is_cheats", True)
-                    textbutton _("Выкл") action SetVariable("is_cheats", False)
+                        label _("Язык")
+                        textbutton _("Русский") action SetVariable("persistent.lang", "russian"), Function(setLang, "russian")
+                        textbutton _("English") action SetVariable("persistent.lang", "english"), Function(setLang, "english")
+                    vbox:
+                        style_prefix "radio"
+                        label _("Читы")
+                        textbutton _("Вкл") action SetVariable("is_cheats", True)
+                        textbutton _("Выкл") action SetVariable("is_cheats", False)
+                if persistent.lang == "english":
+                    vbox:
+                        style_prefix "check"
+                        label _("Skip")
+                        textbutton _("All text") action Preference("skip", "toggle")
+                        textbutton _("After choices") action Preference("after choices", "toggle")
+                        textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    vbox:
+                        style_prefix "radio"
+                        label _("Language")
+                        textbutton _("Русский") action SetVariable("persistent.lang", "russian"), Function(setLang, "russian")
+                        textbutton _("English") action SetVariable("persistent.lang", "english"), Function(setLang, "english")
+                    vbox:
+                        style_prefix "radio"
+                        label _("Cheats")
+                        textbutton _("On") action SetVariable("is_cheats", True)
+                        textbutton _("Off") action SetVariable("is_cheats", False)
 
                 ## Дополнительные vbox'ы типа "radio_pref" или "check_pref"
                 ## могут быть добавлены сюда для добавления новых настроек.
@@ -1043,48 +1238,71 @@ screen preferences():
 
                 vbox:
 
-                    label _("Скорость текста")
+                    if persistent.lang == "russian":
+                        label _("Скорость текста")
 
-                    bar value Preference("text speed")
+                        bar value Preference("text speed")
 
-                    label _("Скорость авточтения")
+                        label _("Скорость авточтения")
 
-                    bar value Preference("auto-forward time")
+                        bar value Preference("auto-forward time")
+                    if persistent.lang == "english":
+                        label _("Text speed")
+
+                        bar value Preference("text speed")
+
+                        label _("Autoreading speed")
+
+                        bar value Preference("auto-forward time")
 
                 vbox:
 
                     if config.has_music:
-                        label _("Громкость музыки")
+                        if persistent.lang == "russian":
+                            label _("Громкость музыки")
+                        if persistent.lang == "english":
+                            label _("Music volume")
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Громкость звуков")
+                        if persistent.lang == "russian":
+                            label _("Громкость звуков")
+                        if persistent.lang == "english":
+                            label _("Sound volume")
 
                         hbox:
                             bar value Preference("sound volume")
 
                             if config.sample_sound:
-                                textbutton _("Тест") action Play("sound", config.sample_sound)
+                                textbutton _("Test") action Play("sound", config.sample_sound)
 
 
                     if config.has_voice:
-                        label _("Громкость голоса")
+                        if persistent.lang == "russian":
+                            label _("Громкость голоса")
+                        if persistent.lang == "english":
+                            label _("Voice volume")
 
                         hbox:
                             bar value Preference("voice volume")
 
                             if config.sample_voice:
-                                textbutton _("Тест") action Play("voice", config.sample_voice)
+                                textbutton _("Test") action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Без звука"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+                        if persistent.lang == "russian":
+                            textbutton _("Без звука"):
+                                action Preference("all mute", "toggle")
+                                style "mute_all_button"
+                        if persistent.lang == "english":
+                            textbutton _("No sound"):
+                                action Preference("all mute", "toggle")
+                                style "mute_all_button"
 
 
 style pref_label is gui_label
@@ -1173,36 +1391,68 @@ screen history():
     ## массивным.
     predict False
 
-    use game_menu(_("История"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+    if persistent.lang == "russian":
+        use game_menu(_("История"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
-        style_prefix "history"
+            style_prefix "history"
 
-        for h in _history_list:
+            for h in _history_list:
 
-            window:
+                window:
 
-                ## Это всё правильно уравняет, если history_height будет
-                ## установлен на None.
-                has fixed:
-                    yfit True
+                    ## Это всё правильно уравняет, если history_height будет
+                    ## установлен на None.
+                    has fixed:
+                        yfit True
 
-                if h.who:
+                    if h.who:
 
-                    label h.who:
-                        style "history_name"
+                        label h.who:
+                            style "history_name"
+                            substitute False
+
+                            ## Берёт цвет из who параметра персонажа, если он
+                            ## установлен.
+                            if "color" in h.who_args:
+                                text_color h.who_args["color"]
+
+                    $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                    text what:
                         substitute False
 
-                        ## Берёт цвет из who параметра персонажа, если он
-                        ## установлен.
-                        if "color" in h.who_args:
-                            text_color h.who_args["color"]
+            if not _history_list:
+                label _("История диалогов пуста.")
+    if persistent.lang == "english":
+        use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
-                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                text what:
-                    substitute False
+            style_prefix "history"
 
-        if not _history_list:
-            label _("История диалогов пуста.")
+            for h in _history_list:
+
+                window:
+
+                    ## Это всё правильно уравняет, если history_height будет
+                    ## установлен на None.
+                    has fixed:
+                        yfit True
+
+                    if h.who:
+
+                        label h.who:
+                            style "history_name"
+                            substitute False
+
+                            ## Берёт цвет из who параметра персонажа, если он
+                            ## установлен.
+                            if "color" in h.who_args:
+                                text_color h.who_args["color"]
+
+                    $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                    text what:
+                        substitute False
+
+            if not _history_list:
+                label _("Dialogue history is empty.")
 
 
 ## Это определяет, какие теги могут отображаться на экране истории.
@@ -1261,130 +1511,251 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Помощь"), scroll="viewport"):
+    if persistent.lang == "russian":
+        use game_menu(_("Помощь"), scroll="viewport"):
 
-        style_prefix "help"
+            style_prefix "help"
 
-        vbox:
-            spacing 23
+            vbox:
+                spacing 23
 
-            hbox:
+                hbox:
 
-                textbutton _("Клавиатура") action SetScreenVariable("device", "keyboard")
-                textbutton _("Мышь") action SetScreenVariable("device", "mouse")
+                    textbutton _("Клавиатура") action SetScreenVariable("device", "keyboard")
+                    textbutton _("Мышь") action SetScreenVariable("device", "mouse")
 
-                if GamepadExists():
-                    textbutton _("Геймпад") action SetScreenVariable("device", "gamepad")
+                    if GamepadExists():
+                        textbutton _("Геймпад") action SetScreenVariable("device", "gamepad")
 
-            if device == "keyboard":
-                use keyboard_help
-            elif device == "mouse":
-                use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
+                if device == "keyboard":
+                    use keyboard_help
+                elif device == "mouse":
+                    use mouse_help
+                elif device == "gamepad":
+                    use gamepad_help
+    if persistent.lang == "english":
+        use game_menu(_("Help"), scroll="viewport"):
+
+            style_prefix "help"
+
+            vbox:
+                spacing 23
+
+                hbox:
+
+                    textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
+                    textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+
+                    if GamepadExists():
+                        textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+
+                if device == "keyboard":
+                    use keyboard_help
+                elif device == "mouse":
+                    use mouse_help
+                elif device == "gamepad":
+                    use gamepad_help
 
 
 screen keyboard_help():
 
-    hbox:
-        label _("Enter")
-        text _("Прохождение диалогов, активация интерфейса.")
+    if persistent.lang == "russian":
+        hbox:
+            label _("Enter")
+            text _("Прохождение диалогов, активация интерфейса.")
 
-    hbox:
-        label _("Пробел")
-        text _("Прохождение диалогов без возможности делать выбор.")
+        hbox:
+            label _("Пробел")
+            text _("Прохождение диалогов без возможности делать выбор.")
 
-    hbox:
-        label _("Стрелки")
-        text _("Навигация по интерфейсу.")
+        hbox:
+            label _("Стрелки")
+            text _("Навигация по интерфейсу.")
 
-    hbox:
-        label _("Esc")
-        text _("Вход в игровое меню.")
+        hbox:
+            label _("Esc")
+            text _("Вход в игровое меню.")
 
-    hbox:
-        label _("Ctrl")
-        text _("Пропускает диалоги, пока зажат.")
+        hbox:
+            label _("Ctrl")
+            text _("Пропускает диалоги, пока зажат.")
 
-    hbox:
-        label _("Tab")
-        text _("Включает режим пропуска.")
+        hbox:
+            label _("Tab")
+            text _("Включает режим пропуска.")
 
-    hbox:
-        label _("Page Up")
-        text _("Откат назад по сюжету игры.")
+        hbox:
+            label _("Page Up")
+            text _("Откат назад по сюжету игры.")
 
-    hbox:
-        label _("Page Down")
-        text _("Откатывает предыдущее действие вперёд.")
+        hbox:
+            label _("Page Down")
+            text _("Откатывает предыдущее действие вперёд.")
 
-    hbox:
-        label "H"
-        text _("Скрывает интерфейс пользователя.")
+        hbox:
+            label "H"
+            text _("Скрывает интерфейс пользователя.")
 
-    hbox:
-        label "S"
-        text _("Делает снимок экрана.")
+        hbox:
+            label "S"
+            text _("Делает снимок экрана.")
 
-    hbox:
-        label "V"
-        text _("Включает поддерживаемый {a=https://www.renpy.org/l/voicing}синтезатор речи{/a}.")
+        hbox:
+            label "V"
+            text _("Включает поддерживаемый {a=https://www.renpy.org/l/voicing}синтезатор речи{/a}.")
 
-    hbox:
-        label "Shift+A"
-        text _("Открывает меню специальных возможностей.")
+        hbox:
+            label "Shift+A"
+            text _("Открывает меню специальных возможностей.")
+
+    if persistent.lang == "english":
+        hbox:
+            label _("Enter")
+            text _("Going through dialogues, activating the interface.")
+
+        hbox:
+            label _("Space")
+            text _("Going through dialogues without the ability to make choices.")
+
+        hbox:
+            label _("Arrows")
+            text _("Navigating the interface.")
+
+        hbox:
+            label _("Esc")
+            text _("Enter the game menu.")
+
+        hbox:
+            label _("Ctrl")
+            text _("Skips dialogue while held down.")
+
+        hbox:
+            label _("Tab")
+            text _("Enables skip mode.")
+
+        hbox:
+            label _("Page Up")
+            text _("A reversal of the game's plot.")
+
+        hbox:
+            label _("Page Down")
+            text _("Rolls back the previous action.")
+
+        hbox:
+            label "H"
+            text _("Hides the user interface.")
+
+        hbox:
+            label "S"
+            text _("Takes a screenshot.")
+
+        hbox:
+            label "V"
+            text _("Includes the supported {a=https://www.renpy.org/l/voicing}speech synthesizer{/a}.")
+
+        hbox:
+            label "Shift+A"
+            text _("Opens the accessibility menu.")
 
 
 screen mouse_help():
 
-    hbox:
-        label _("Левый клик")
-        text _("Прохождение диалогов, активация интерфейса.")
+    if persistent.lang == "russian":
+        hbox:
+            label _("Левый клик")
+            text _("Прохождение диалогов, активация интерфейса.")
 
-    hbox:
-        label _("Клик колёсиком")
-        text _("Скрывает интерфейс пользователя.")
+        hbox:
+            label _("Клик колёсиком")
+            text _("Скрывает интерфейс пользователя.")
 
-    hbox:
-        label _("Правый клик")
-        text _("Вход в игровое меню.")
+        hbox:
+            label _("Правый клик")
+            text _("Вход в игровое меню.")
 
-    hbox:
-        label _("Колёсико вверх")
-        text _("Откат назад по сюжету игры.")
+        hbox:
+            label _("Колёсико вверх")
+            text _("Откат назад по сюжету игры.")
 
-    hbox:
-        label _("Колёсико вниз")
-        text _("Откатывает предыдущее действие вперёд.")
+        hbox:
+            label _("Колёсико вниз")
+            text _("Откатывает предыдущее действие вперёд.")
+    if persistent.lang == "english":
+        hbox:
+            label _("Left click")
+            text _("Going through dialogues, activating the interface.")
+
+        hbox:
+            label _("Click the wheel")
+            text _("Hides the user interface.")
+
+        hbox:
+            label _("Right click")
+            text _("Enter the game menu.")
+
+        hbox:
+            label _("Wheel up")
+            text _("A reversal of the game's plot.")
+
+        hbox:
+            label _("Wheel down")
+            text _("Rolls back the previous action.")
 
 
 screen gamepad_help():
 
-    hbox:
-        label _("Правый триггер\nA/Нижняя кнопка")
-        text _("Прохождение диалогов, активация интерфейса.")
+    if persistent.lang == "russian":
+        hbox:
+            label _("Правый триггер\nA/Нижняя кнопка")
+            text _("Прохождение диалогов, активация интерфейса.")
 
-    hbox:
-        label _("Левый Триггер\nЛевый Бампер")
-        text _("Откат назад по сюжету игры.")
+        hbox:
+            label _("Левый Триггер\nЛевый Бампер")
+            text _("Откат назад по сюжету игры.")
 
-    hbox:
-        label _("Правый бампер")
-        text _("Откатывает предыдущее действие вперёд.")
+        hbox:
+            label _("Правый бампер")
+            text _("Откатывает предыдущее действие вперёд.")
 
-    hbox:
-        label _("Крестовина, Стики")
-        text _("Навигация по интерфейсу.")
+        hbox:
+            label _("Крестовина, Стики")
+            text _("Навигация по интерфейсу.")
 
-    hbox:
-        label _("Старт, Гид, B/Правая кнопка")
-        text _("Вход в игровое меню.")
+        hbox:
+            label _("Старт, Гид, B/Правая кнопка")
+            text _("Вход в игровое меню.")
 
-    hbox:
-        label _("Y/Верхняя кнопка")
-        text _("Скрывает интерфейс пользователя.")
+        hbox:
+            label _("Y/Верхняя кнопка")
+            text _("Скрывает интерфейс пользователя.")
 
-    textbutton _("Калибровка") action GamepadCalibrate()
+        textbutton _("Калибровка") action GamepadCalibrate()
+    if persistent.lang == "english":
+        hbox:
+            label _("Right Trigger\nA/Lower Button")
+            text _("Go through dialogues, activate the interface.")
+
+        hbox:
+            label _("Left Trigger\nLeft Bumper")
+            text _("Go back through the game's story.")
+
+        hbox:
+            label _("Right Bumper")
+            text _("Go back through the previous action.")
+
+        hbox:
+            label _("D-Pad, Sticks")
+            text _("Navigate through the interface.")
+
+        hbox:
+            label _("Start, Guide, B/Right Button")
+            text _("Enter the game menu.")
+
+        hbox:
+            label _("Y/Up Button")
+            text _("Hides the user interface.")
+
+        textbutton _("Calibrate") action GamepadCalibrate()
 
 
 style help_button is gui_button
@@ -1449,8 +1820,12 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Да") action yes_action
-                textbutton _("Нет") action no_action
+                if persistent.lang == "russian":
+                    textbutton _("Да") action yes_action
+                    textbutton _("Нет") action no_action
+                if persistent.lang == "english":
+                    textbutton _("Yes") action yes_action
+                    textbutton _("No") action no_action
 
     ## Правый клик и esc, как ответ "Нет".
     key "game_menu" action no_action
@@ -1496,7 +1871,10 @@ screen skip_indicator():
         hbox:
             spacing 9
 
-            text _("Пропускаю")
+            if persistent.lang == "russian":
+                text _("Пропускаю")
+            if persistent.lang == "english":
+                text _("Skipping")
 
             text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
             text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
@@ -1804,10 +2182,16 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Назад") action Rollback()
-            textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Авто") action Preference("auto-forward", "toggle")
-            textbutton _("Меню") action ShowMenu()
+            if persistent.lang == "russian":
+                textbutton _("Назад") action Rollback()
+                textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("Авто") action Preference("auto-forward", "toggle")
+                textbutton _("Меню") action ShowMenu()
+            if persistent.lang == "english":
+                textbutton _("Back") action Rollback()
+                textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("Auto") action Preference("auto-forward", "toggle")
+                textbutton _("Menu") action ShowMenu()
 
 
 style window:

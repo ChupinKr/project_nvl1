@@ -24,7 +24,7 @@ init python:
     QTEGo = renpy.curry(qte_go)
 
     def generate_qte_sequence():
-        """Создаёт случайную комбинацию стрелок для ввода."""
+        #"""Создаёт случайную комбинацию стрелок для ввода."""
         # Пример расчёта количества символов (можно подстроить под свою логику)
         count = math.ceil(enemy_strength / 10) - math.ceil(strength / 20)
         if count < 6:
@@ -34,7 +34,7 @@ init python:
         return "".join(random.choices(["↑", "↓", "←", "→"], k=count))
 
     def add_qte_input(key):
-        """Добавляет нажатую клавишу в строку ввода игрока."""
+        #"""Добавляет нажатую клавишу в строку ввода игрока."""
         global qte_input
         if len(qte_input) < len(qte_sequence):
             qte_input += key

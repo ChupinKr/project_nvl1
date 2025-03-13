@@ -7,23 +7,42 @@ init python:
 
     class LocList:
         def __init__(self):
-            self.list = [
-                Location(tag="city",name="Город", canVisit=True),
-                Location(tag="forest",name="Лес", canVisit=True),
-                Location(tag="rt",name="Разрушенный храм", canVisit=True),
-                Location(tag="market",name="Городской рынок", canVisit=True),
-                Location(tag="bm",name="Черный рынок", canVisit=False),
-                Location(tag="tavern",name="Таверна", canVisit=False),
-                Location(tag="room",name="Моя комната", canVisit=False),
-                Location(tag="hospital",name="Больница", canVisit=False),
-                Location(tag="surgency",name="Хирургия", canVisit=False),
-                Location(tag="bar",name="Бар", canVisit=False),
-                Location(tag="brothel",name="Бордель", canVisit=False),
-                Location(tag="mt",name="Магическая башня", canVisit=False),
-                Location(tag="lib",name="Библиотека", canVisit=False),
-                Location(tag="guild",name="Гильдия", canVisit=False),
-                Location(tag="tg",name="Тренировочная площадка", canVisit=False)
-            ]
+            if persistent.lang == "russian":
+                self.list = [
+                    Location(tag="city",name="Город", canVisit=True),
+                    Location(tag="forest",name="Лес", canVisit=True),
+                    Location(tag="rt",name="Разрушенный храм", canVisit=True),
+                    Location(tag="market",name="Городской рынок", canVisit=True),
+                    Location(tag="bm",name="Черный рынок", canVisit=False),
+                    Location(tag="tavern",name="Таверна", canVisit=False),
+                    Location(tag="room",name="Моя комната", canVisit=False),
+                    Location(tag="hospital",name="Больница", canVisit=False),
+                    Location(tag="surgency",name="Хирургия", canVisit=False),
+                    Location(tag="bar",name="Бар", canVisit=False),
+                    Location(tag="brothel",name="Бордель", canVisit=False),
+                    Location(tag="mt",name="Магическая башня", canVisit=False),
+                    Location(tag="lib",name="Библиотека", canVisit=False),
+                    Location(tag="guild",name="Гильдия", canVisit=False),
+                    Location(tag="tg",name="Тренировочная площадка", canVisit=False)
+                ]
+            if persistent.lang == "english":
+                self.list = [
+                    Location(tag="city",name="City", canVisit=True),
+                    Location(tag="forest",name="Forest", canVisit=True),
+                    Location(tag="rt",name="Ruined Temple", canVisit=True),
+                    Location(tag="market",name="City Market", canVisit=True),
+                    Location(tag="bm",name="Black Market", canVisit=False),
+                    Location(tag="tavern",name="Tavern", canVisit=False),
+                    Location(tag="room",name="My Room", canVisit=False),
+                    Location(tag="hospital",name="Hospital", canVisit=False),
+                    Location(tag="surgency",name="Surgery", canVisit=False),
+                    Location(tag="bar",name="Bar", canVisit=False),
+                    Location(tag="brothel",name="Brothel", canVisit=False),
+                    Location(tag="mt",name="Magic Tower", canVisit=False),
+                    Location(tag="lib",name="Library", canVisit=False),
+                    Location(tag="guild",name="Guild", canVisit=False),
+                    Location(tag="tg",name="Training Ground", canVisit=False)
+                ]
         
         def getLocByTag(self, tag):
             for loc in self.list:
@@ -34,10 +53,17 @@ init python:
             global notices
             if self.getLocByTag(tag).canVisit != canVisit:
                 self.getLocByTag(tag).canVisit = canVisit
-                if canVisit:
-                    notices.append("Теперь вам доступна локация "+ self.getLocByTag(tag).name)
-                else:
-                    notices.append("Теперь вам недоступна локация "+ self.getLocByTag(tag).name)
+                if persistent.lang == "russian":
+                    if canVisit:
+                        notices.append("Теперь вам доступна локация "+ self.getLocByTag(tag).name)
+                    else:
+                        notices.append("Теперь вам недоступна локация "+ self.getLocByTag(tag).name)
+                if persistent.lang == "english":
+                    if canVisit:
+                        notices.append("You can now access location "+ self.getLocByTag(tag).name)
+                    else:
+                        notices.append("You can now access location "+ self.getLocByTag(tag).name)
+
                 renpy.show_screen('notify_plus', notices=notices)
                 notices = []
                 return True

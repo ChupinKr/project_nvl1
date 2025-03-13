@@ -249,9 +249,8 @@ label deal_with_emilia:
 
 # Награда от Эльзы
 label quest_elsa_crystall_reward:
-    # Определяем персонажей
-define p = Character("[hero_name]", color="#ffffff")
-define e = Character("Эльза", color="#b0e0e6")
+    "IN PROGRESS"
+    return
 
 # Сцена анального секса с Эльзой
 label elsa_anal_scene:
