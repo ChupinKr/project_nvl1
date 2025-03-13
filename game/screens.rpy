@@ -1023,6 +1023,11 @@ screen preferences():
                     textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
                 vbox:
                     style_prefix "radio"
+                    label _("Язык")
+                    textbutton _("Русский") action Language(None)
+                    textbutton _("English") action Language("english")
+                vbox:
+                    style_prefix "radio"
                     label _("Читы")
                     textbutton _("Вкл") action SetVariable("is_cheats", True)
                     textbutton _("Выкл") action SetVariable("is_cheats", False)
