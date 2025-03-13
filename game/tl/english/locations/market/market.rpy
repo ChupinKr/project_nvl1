@@ -2,321 +2,275 @@
 
 # game/locations/market/market.rpy:11
 translate english market_1268f95e:
-
-    # "Вы приходите на оживлённый рынок, где запах свежего хлеба смешивается с ароматом пряностей. Люди суетятся, обсуждают цены, и всюду слышится звон монет."
-    "Вы приходите на оживлённый рынок, где запах свежего хлеба смешивается с ароматом пряностей. Люди суетятся, обсуждают цены, и всюду слышится звон монет."
+    # "You arrive at a bustling market where the smell of fresh bread mingles with the aroma of spices. People bustle about, haggling over prices, and the clinking of coins fills the air."
+    "You arrive at a bustling market where the smell of fresh bread mingles with the aroma of spices. People bustle about, haggling over prices, and the clinking of coins fills the air."
 
 # game/locations/market/market.rpy:15
 translate english market_dee00711:
-
-    # "Ваш взгляд привлекает прилавок с фруктами и бочонками мёда. За ним стоит девушка с лисьими ушами и пушистым хвостом."
-    "Ваш взгляд привлекает прилавок с фруктами и бочонками мёда. За ним стоит девушка с лисьими ушами и пушистым хвостом."
+    # "Your gaze is drawn to a stall laden with fruits and barrels of honey. Behind it stands a girl with fox-like ears and a bushy tail."
+    "Your gaze is drawn to a stall laden with fruits and barrels of honey. Behind it stands a girl with fox-like ears and a bushy tail."
 
 # game/locations/market/market.rpy:18
 translate english market_fe4b2a9a:
-
     # p "!!!!!" with vpunch
     p "!!!!!" with vpunch
 
 # game/locations/market/market.rpy:19
 translate english market_4d3852ca:
-
-    # mind "У нее ушки?! Что это такое? Я в раю?"
-    mind "У нее ушки?! Что это такое? Я в раю?"
+    # mind "She has ears?! What is this? Am I in paradise?"
+    mind "She has ears?! What is this? Am I in paradise?"
 
 # game/locations/market/market.rpy:21
 translate english market_9b31bcc0:
-
-    # h "Ох-хо, кто это к нам пожаловал? Новенький, да ещё и без товарного запаса. Совсем голодранец, что ли?"
-    h "Ох-хо, кто это к нам пожаловал? Новенький, да ещё и без товарного запаса. Совсем голодранец, что ли?"
+    # h "Oh-ho, who do we have here? A newbie, and without any goods to trade. A total pauper, huh?"
+    h "Oh-ho, who do we have here? A newbie, and without any goods to trade. A total pauper, huh?"
 
 # game/locations/market/market.rpy:22
 translate english market_41537314:
-
-    # "Её янтарные глаза хитро поблёскивают, и на губах играет самодовольная ухмылка."
-    "Её янтарные глаза хитро поблёскивают, и на губах играет самодовольная ухмылка."
+    # "Her amber eyes glint slyly, and a smug smirk plays on her lips."
+    "Her amber eyes glint slyly, and a smug smirk plays on her lips."
 
 # game/locations/market/market.rpy:23
 translate english market_cc874ca9:
-
-    # p "Эм... Я просто осматриваюсь."
-    p "Эм... Я просто осматриваюсь."
+    # p "Uh... I’m just looking around."
+    p "Uh... I’m just looking around."
 
 # game/locations/market/market.rpy:24
 translate english market_94d0b8a0:
-
-    # h "Осматривайся, осматривайся. Главное, чтобы не пришлось осматривать пустой кошель... Хотя, глядя на тебя, он и так пустой, верно?"
-    h "Осматривайся, осматривайся. Главное, чтобы не пришлось осматривать пустой кошель... Хотя, глядя на тебя, он и так пустой, верно?"
+    # h "Look around, look around. Just don’t end up staring at an empty purse... Though, judging by the look of you, it’s already empty, right?"
+    h "Look around, look around. Just don’t end up staring at an empty purse... Though, judging by the look of you, it’s already empty, right?"
 
 # game/locations/market/market.rpy:25
 translate english market_c8ea8a4a:
-
     # p "..."
     p "..."
 
 # game/locations/market/market.rpy:26
 translate english market_207b84b0:
-
-    # h "Хех, не обижайся. Я [h.name], мудрая волчица. Но, как видишь, теперь ещё и успешная торговка."
-    h "Хех, не обижайся. Я [h.name], мудрая волчица. Но, как видишь, теперь ещё и успешная торговка."
+    # h "Heh, don’t take it personally. I’m [h.name], the wise wolf. But, as you can see, now also a successful merchant."
+    h "Heh, don’t take it personally. I’m [h.name], the wise wolf. But, as you can see, now also a successful merchant."
 
 # game/locations/market/market.rpy:28
 translate english market_9515136f:
-
-    # p "[h.name]? Красивое имя... Я [hero_name]."
-    p "[h.name]? Красивое имя... Я [hero_name]."
+    # p "[h.name]? That’s a beautiful name... I’m [hero_name]."
+    p "[h.name]? That’s a beautiful name... I’m [hero_name]."
 
 # game/locations/market/market.rpy:29
 translate english market_e11b07e9:
-
-    # h "[hero_name]? Хм... не звучит богато, но я запомню. Вдруг однажды ты разбогатеешь, и я смогу на тебе нажиться, ах-хаха!"
-    h "[hero_name]? Хм... не звучит богато, но я запомню. Вдруг однажды ты разбогатеешь, и я смогу на тебе нажиться, ах-хаха!"
+    # h "[hero_name]? Hmm... doesn’t sound rich, but I’ll remember it. Who knows, maybe one day you’ll strike it big, and I can profit off you, ah-haha!"
+    h "[hero_name]? Hmm... doesn’t sound rich, but I’ll remember it. Who knows, maybe one day you’ll strike it big, and I can profit off you, ah-haha!"
 
 # game/locations/market/market.rpy:31
 translate english market_959ac5fa:
-
-    # h "Раз уж ты здесь, позволь задать тебе пару вопросов. Мне ведь нужно знать, с кем имею дело."
-    h "Раз уж ты здесь, позволь задать тебе пару вопросов. Мне ведь нужно знать, с кем имею дело."
+    # h "Since you’re here, let me ask you a couple of questions. I need to know who I’m dealing with, after all."
+    h "Since you’re here, let me ask you a couple of questions. I need to know who I’m dealing with, after all."
 
 # game/locations/market/market.rpy:32
 translate english market_5357e0cc:
-
-    # h "Начнём с простого: какую еду ты предпочитаешь?"
-    h "Начнём с простого: какую еду ты предпочитаешь?"
+    # h "Let’s start with something simple: what kind of food do you prefer?"
+    h "Let’s start with something simple: what kind of food do you prefer?"
 
 # game/locations/market/market.rpy:35
 translate english market_2ff13543:
-
-    # h "Какую еду ты предпочитаешь?" nointeract
-    h "Какую еду ты предпочитаешь?" nointeract
+    # h "What kind of food do you prefer?" nointeract
+    h "What kind of food do you prefer?" nointeract
 
 # game/locations/market/market.rpy:37
 translate english market_f9bf7bb0:
-
-    # h "Хм... Значит, у тебя характер крепкий, как выдержанный сыр. Это похвально!"
-    h "Хм... Значит, у тебя характер крепкий, как выдержанный сыр. Это похвально!"
+    # h "Hmm... So you’ve got a sturdy character, like aged cheese. That’s commendable!"
+    h "Hmm... So you’ve got a sturdy character, like aged cheese. That’s commendable!"
 
 # game/locations/market/market.rpy:39
 translate english market_74dcdd80:
-
-    # h "О-о, так ты любишь острые ощущения? Осторожней, иначе сожжёшь себе язык, а потом слова благодарности сказать не сможешь!"
-    h "О-о, так ты любишь острые ощущения? Осторожней, иначе сожжёшь себе язык, а потом слова благодарности сказать не сможешь!"
+    # h "Ooh, so you like a thrill, huh? Careful, or you’ll burn your tongue and won’t be able to thank me properly!"
+    h "Ooh, so you like a thrill, huh? Careful, or you’ll burn your tongue and won’t be able to thank me properly!"
 
 # game/locations/market/market.rpy:42
 translate english market_4dedd1c9:
-
-    # h @ smile_closed_eyes "О-хо-хо! Значит, ты любишь мёд и спелые яблоки? Хороший вкус, но не обольщайся — я делиться не стану!" with dissolve
-    h @ smile_closed_eyes "О-хо-хо! Значит, ты любишь мёд и спелые яблоки? Хороший вкус, но не обольщайся — я делиться не стану!" with dissolve
+    # h @ smile_closed_eyes "Oh-ho-ho! So you’re into honey and ripe apples? Good taste, but don’t get your hopes up—I’m not sharing!" with dissolve
+    h @ smile_closed_eyes "Oh-ho-ho! So you’re into honey and ripe apples? Good taste, but don’t get your hopes up—I’m not sharing!" with dissolve
 
 # game/locations/market/market.rpy:43
 translate english market_aa84fb94:
-
-    # h "Теперь серьёзный вопрос. Какое качество в людях ты ценишь больше всего?"
-    h "Теперь серьёзный вопрос. Какое качество в людях ты ценишь больше всего?"
+    # h "Now for a serious question. What quality do you value most in people?"
+    h "Now for a serious question. What quality do you value most in people?"
 
 # game/locations/market/market.rpy:45
 translate english market_33cf56ec:
-
-    # h "Какое качество в людях ты ценишь больше всего?" nointeract
-    h "Какое качество в людях ты ценишь больше всего?" nointeract
+    # h "What quality do you value most in people?" nointeract
+    h "What quality do you value most in people?" nointeract
 
 # game/locations/market/market.rpy:48
 translate english market_52abf473:
-
-    # h @ smile_closed_eyes "Честность? Ох-хо, ты что, в сказку попал? Честные торговцы встречаются только в легендах." with dissolve
-    h @ smile_closed_eyes "Честность? Ох-хо, ты что, в сказку попал? Честные торговцы встречаются только в легендах." with dissolve
+    # h @ smile_closed_eyes "Honesty? Oh-ho, what, did you stumble into a fairy tale? Honest merchants only exist in legends." with dissolve
+    h @ smile_closed_eyes "Honesty? Oh-ho, what, did you stumble into a fairy tale? Honest merchants only exist in legends." with dissolve
 
 # game/locations/market/market.rpy:50
 translate english market_229a6543:
-
-    # h "Храбрый, значит? Хорошо, но помни: даже самый смелый волк не полезет в клетку к разъярённому медведю."
-    h "Храбрый, значит? Хорошо, но помни: даже самый смелый волк не полезет в клетку к разъярённому медведю."
+    # h "Brave, huh? Good, but remember: even the boldest wolf won’t jump into a cage with an enraged bear."
+    h "Brave, huh? Good, but remember: even the boldest wolf won’t jump into a cage with an enraged bear."
 
 # game/locations/market/market.rpy:52
 translate english market_847b5b1c:
-
-    # h "Доброта – вещь полезная, но в торговле за неё не дают скидку. Хотя... если мне вдруг станет скучно, я дам тебе яблоко. Может быть."
-    h "Доброта – вещь полезная, но в торговле за неё не дают скидку. Хотя... если мне вдруг станет скучно, я дам тебе яблоко. Может быть."
+    # h "Kindness is useful, but it won’t get you a discount in trade. Though... if I get bored, I might toss you an apple. Maybe."
+    h "Kindness is useful, but it won’t get you a discount in trade. Though... if I get bored, I might toss you an apple. Maybe."
 
 # game/locations/market/market.rpy:54
 translate english market_4c110aeb:
-
-    # h "Последний вопрос... и, пожалуй, самый важный."
-    h "Последний вопрос... и, пожалуй, самый важный."
+    # h "One last question... and perhaps the most important."
+    h "One last question... and perhaps the most important."
 
 # game/locations/market/market.rpy:55
 translate english market_bc8edb56:
-
-    # h "Какие женщины тебе нравятся?"
-    h "Какие женщины тебе нравятся?"
+    # h "What kind of women do you like?"
+    h "What kind of women do you like?"
 
 # game/locations/market/market.rpy:57
 translate english market_bcdcd904:
-
-    # h "Какие женщины тебе нравятся?" nointeract
-    h "Какие женщины тебе нравятся?" nointeract
+    # h "What kind of women do you like?" nointeract
+    h "What kind of women do you like?" nointeract
 
 # game/locations/market/market.rpy:59
 translate english market_67907518:
-
-    # h "Хм... Значит, тебе нужны те, кто принесёт тебе кружку тёплого молока перед сном? Скучно-о!"
-    h "Хм... Значит, тебе нужны те, кто принесёт тебе кружку тёплого молока перед сном? Скучно-о!"
+    # h "Hmm... So you need someone to bring you a mug of warm milk before bed? Bo-ring!"
+    h "Hmm... So you need someone to bring you a mug of warm milk before bed? Bo-ring!"
 
 # game/locations/market/market.rpy:62
 translate english market_bee40211:
-
-    # h @ smile_shy "О-хо-хо! Да ты разбираешься в хороших вещах, мальчишка. Может, не так уж ты и безнадёжен?" with dissolve
-    h @ smile_shy "О-хо-хо! Да ты разбираешься в хороших вещах, мальчишка. Может, не так уж ты и безнадёжен?" with dissolve
+    # h @ smile_shy "Oh-ho-ho! So you know a good thing when you see it, kid. Maybe you’re not so hopeless after all?" with dissolve
+    h @ smile_shy "Oh-ho-ho! So you know a good thing when you see it, kid. Maybe you’re not so hopeless after all?" with dissolve
 
 # game/locations/market/market.rpy:64
 translate english market_0e3be820:
-
-    # h "Красота – вещь хорошая, но если за ней пустота, то и разговаривать не о чем."
-    h "Красота – вещь хорошая, но если за ней пустота, то и разговаривать не о чем."
+    # h "Beauty’s nice, but if there’s nothing behind it, there’s nothing to talk about."
+    h "Beauty’s nice, but if there’s nothing behind it, there’s nothing to talk about."
 
 # game/locations/market/market.rpy:65
 translate english market_e4477315:
-
-    # h "Вот и славно! Теперь я знаю, что передо мной не просто болван, а кое-что интересное."
-    h "Вот и славно! Теперь я знаю, что передо мной не просто болван, а кое-что интересное."
+    # h "Well, that’s that! Now I know I’m not dealing with just some fool, but something interesting."
+    h "Well, that’s that! Now I know I’m not dealing with just some fool, but something interesting."
 
 # game/locations/market/market.rpy:69
 translate english market_57fc9e0a:
-
-    # "[h.name] смеётся, её хвост неторопливо покачивается из стороны в сторону. Кажется, ей понравился ваш ответ."
-    "[h.name] смеётся, её хвост неторопливо покачивается из стороны в сторону. Кажется, ей понравился ваш ответ."
+    # "[h.name] laughs, her tail swaying lazily from side to side. It seems she liked your answer."
+    "[h.name] laughs, her tail swaying lazily from side to side. It seems she liked your answer."
 
 # game/locations/market/market.rpy:70
 translate english market_8f18d30f:
-
-    # h smile "Может, ещё заглянешь? Кто знает, вдруг я предложу тебе выгодную сделку... или устрою тебе ещё один экзамен." with dissolve
-    h smile "Может, ещё заглянешь? Кто знает, вдруг я предложу тебе выгодную сделку... или устрою тебе ещё один экзамен." with dissolve
+    # h smile "Maybe you’ll drop by again? Who knows, I might offer you a good deal... or put you through another test." with dissolve
+    h smile "Maybe you’ll drop by again? Who knows, I might offer you a good deal... or put you through another test." with dissolve
 
 # game/locations/market/market.rpy:75
 translate english market_c5164132:
-
-    # "Вы снова на рынке. [h.name] замечает вас и лениво махает хвостом, но сегодня не пристаёт с вопросами – видимо, её развлекло что-то другое."
-    "Вы снова на рынке. [h.name] замечает вас и лениво махает хвостом, но сегодня не пристаёт с вопросами – видимо, её развлекло что-то другое."
+    # "You’re back at the market. [h.name] notices you and lazily wags her tail, but today she doesn’t pester you with questions—apparently, something else has caught her interest."
+    "You’re back at the market. [h.name] notices you and lazily wags her tail, but today she doesn’t pester you with questions—apparently, something else has caught her interest."
 
 # game/locations/market/market.rpy:77
 translate english market_51177fff:
-
-    # "Вы снова на рынке."
-    "Вы снова на рынке."
+    # "You’re back at the market."
+    "You’re back at the market."
 
 # game/locations/market/market.rpy:87
 translate english market_menu_f19ec66a:
-
-    # "Ты упал и притворился мертвым"
-    "Ты упал и притворился мертвым"
+    # "You fall down and pretend to be dead."
+    "You fall down and pretend to be dead."
 
 # game/locations/market/market.rpy:88
 translate english market_menu_8b0fdb2d:
-
-    # "Вышло настолько хорошо, что тебя схватили и куда-то понесли"
-    "Вышло настолько хорошо, что тебя схватили и куда-то понесли"
+    # "It worked so well that someone grabbed you and started carrying you somewhere."
+    "It worked so well that someone grabbed you and started carrying you somewhere."
 
 # game/locations/market/market.rpy:89
 translate english market_menu_90b5625a:
-
-    # "Ты пытался вырываться и кричать, но люди думали, что ты кричишь от боли"
-    "Ты пытался вырываться и кричать, но люди думали, что ты кричишь от боли"
+    # "You tried to struggle and shout, but people thought you were crying out in pain."
+    "You tried to struggle and shout, but people thought you were crying out in pain."
 
 # game/locations/market/market.rpy:90
 translate english market_menu_4582fe4c:
-
-    # "У тебя получилось убедить всех, что ты в порядке, но тебя уже принесли в больницу"
-    "У тебя получилось убедить всех, что ты в порядке, но тебя уже принесли в больницу"
+    # "You managed to convince everyone you’re fine, but they’d already brought you to the hospital."
+    "You managed to convince everyone you’re fine, but they’d already brought you to the hospital."
 
 # game/locations/market/market.rpy:91
 translate english market_menu_c1ec20da:
-
-    # "Тебя уже захотели избить за такое, но тебе удалось забежать в больницу"
-    "Тебя уже захотели избить за такое, но тебе удалось забежать в больницу"
+    # "They were about to beat you up for that, but you managed to run into the hospital."
+    "They were about to beat you up for that, but you managed to run into the hospital."
 
 # game/locations/market/market.rpy:96
 translate english market_menu_c7a99a77:
-
-    # "Ты осматриваешься"
-    "Ты осматриваешься"
+    # "You look around."
+    "You look around."
 
 # game/locations/market/market.rpy:97
 translate english market_menu_217c9a4c:
-
-    # "Это выглядит подозрительно.."
-    "Это выглядит подозрительно.."
+    # "This looks suspicious..."
+    "This looks suspicious..."
 
 # game/locations/market/market.rpy:99
 translate english market_menu_1f4021c3:
-
-    # "Лучше больше так не делать, а то можно и встрять.."
-    "Лучше больше так не делать, а то можно и встрять.."
+    # "Better not do that again, or you might get into trouble..."
+    "Better not do that again, or you might get into trouble..."
 
 # game/locations/market/market.rpy:101
 translate english market_menu_97c53e30:
-
-    # "Какой-то мутный тип подходит к тебе"
-    "Какой-то мутный тип подходит к тебе"
+    # "Some shady guy approaches you."
+    "Some shady guy approaches you."
 
 # game/locations/market/market.rpy:102
 translate english market_menu_650a5659:
-
-    # sg "Эй, че вылупился? Зрение слишком хорошее?!"
-    sg "Эй, че вылупился? Зрение слишком хорошее?!"
+    # sg "Hey, what’re you staring at? Eyesight too good or something?!"
+    sg "Hey, what’re you staring at? Eyesight too good or something?!"
 
 # game/locations/market/market.rpy:105
 translate english market_menu_0df048df:
-
-    # "[h.name] это видела"
-    "[h.name] это видела"
+    # "[h.name] saw that."
+    "[h.name] saw that."
 
 translate english strings:
 
     # game/locations/market/market.rpy:34
     old "Солёное"
-    new "Солёное"
+    new "Salty"
 
     # game/locations/market/market.rpy:34
     old "Острое"
-    new "Острое"
+    new "Spicy"
 
     # game/locations/market/market.rpy:34
     old "Сладкое"
-    new "Сладкое"
+    new "Sweet"
 
     # game/locations/market/market.rpy:44
     old "Честность"
-    new "Честность"
+    new "Honesty"
 
     # game/locations/market/market.rpy:44
     old "Храбрость"
-    new "Храбрость"
+    new "Bravery"
 
     # game/locations/market/market.rpy:44
     old "Доброта"
-    new "Доброта"
+    new "Kindness"
 
     # game/locations/market/market.rpy:56
     old "Нежные и заботливые"
-    new "Нежные и заботливые"
+    new "Gentle and caring"
 
     # game/locations/market/market.rpy:56
     old "Умные, хитрые и с характером"
-    new "Умные, хитрые и с характером"
+    new "Smart, cunning, and with character"
 
     # game/locations/market/market.rpy:56
     old "Красивые"
-    new "Красивые"
+    new "Beautiful"
 
     # game/locations/market/market.rpy:83
     old "Подойти к [h.name]"
-    new "Подойти к [h.name]"
+    new "Approach [h.name]"
 
     # game/locations/market/market.rpy:83
     old "Притвориться мертвым"
-    new "Притвориться мертвым"
+    new "Pretend to be dead"
 
     # game/locations/market/market.rpy:83
     old "Осмотреться"
-    new "Осмотреться"
-
+    new "Look around"
