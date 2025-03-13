@@ -2,251 +2,214 @@
 
 # game/locations/hospital/hospital.rpy:9
 translate english hospital_aaf60da2:
-
-    # "Ты видишь надпись: Больница закрыта, приходите утром."
-    "Ты видишь надпись: Больница закрыта, приходите утром."
+    # "You see a sign: The hospital is closed, come back in the morning."
+    "You see a sign: The hospital is closed, come back in the morning."
 
 # game/locations/hospital/hospital.rpy:13
 translate english hospital_ef58db5a:
-
-    # "Ты входишь в просторное помещение, оно выглядит довольно знакомо."
-    "Ты входишь в просторное помещение, оно выглядит довольно знакомо."
+    # "You enter a spacious room that feels oddly familiar."
+    "You enter a spacious room that feels oddly familiar."
 
 # game/locations/hospital/hospital.rpy:14
 translate english hospital_96e530f6:
-
-    # "Прямо как в родном мире, стоят баночки, даже висит монитор, да и свет от ламп."
-    "Прямо как в родном мире, стоят баночки, даже висит монитор, да и свет от ламп."
+    # "Just like in your home world, there are jars, a monitor hanging on the wall, and light coming from the lamps."
+    "Just like in your home world, there are jars, a monitor hanging on the wall, and light coming from the lamps."
 
 # game/locations/hospital/hospital.rpy:15
 translate english hospital_ab70c1f3:
-
-    # "Только что-то отличается, но ты не можешь понять, что именно? Ты приглядываешься и замечаешь, что на телевизоре нет ни единой кнопки"
-    "Только что-то отличается, но ты не можешь понять, что именно? Ты приглядываешься и замечаешь, что на телевизоре нет ни единой кнопки"
+    # "But something’s different, though you can’t quite figure out what. You look closer and notice that the television doesn’t have a single button."
+    "But something’s different, though you can’t quite figure out what. You look closer and notice that the television doesn’t have a single button."
 
 # game/locations/hospital/hospital.rpy:16
 translate english hospital_239c753b:
-
-    # "Но тут тебя от размышлений отрывает девушка с розовыми волосами, которая, похоже, здесь за главную."
-    "Но тут тебя от размышлений отрывает девушка с розовыми волосами, которая, похоже, здесь за главную."
+    # "Your thoughts are interrupted by a girl with pink hair who seems to be in charge here."
+    "Your thoughts are interrupted by a girl with pink hair who seems to be in charge here."
 
 # game/locations/hospital/hospital.rpy:19
 translate english hospital_893f173c:
-
-    # "Ты снова в больнице, где всегда кипит работа."
-    "Ты снова в больнице, где всегда кипит работа."
+    # "You’re back in the hospital, where work is always bustling."
+    "You’re back in the hospital, where work is always bustling."
 
 # game/locations/hospital/hospital.rpy:22
 translate english hospital_690b3ab2:
-
-    # s "О, новый пациент? Или ты просто интересуешься нашей работой?"
-    s "О, новый пациент? Или ты просто интересуешься нашей работой?"
+    # s "Oh, a new patient? Or are you just curious about our work?"
+    s "Oh, a new patient? Or are you just curious about our work?"
 
 # game/locations/hospital/hospital.rpy:23
 translate english hospital_b0c42837:
-
-    # s "Я Сакура, один из главных медиков города. Если тебе нужно лечение, обращайся."
-    s "Я Сакура, один из главных медиков города. Если тебе нужно лечение, обращайся."
+    # s "I’m Sakura, one of the city’s chief medics. If you need treatment, come to me."
+    s "I’m Sakura, one of the city’s chief medics. If you need treatment, come to me."
 
 # game/locations/hospital/hospital.rpy:24
 translate english hospital_0b9f1724:
-
-    # s "Но помни, лечение стоит денег."
-    s "Но помни, лечение стоит денег."
+    # s "But remember, treatment costs money."
+    s "But remember, treatment costs money."
 
 # game/locations/hospital/hospital.rpy:25
 translate english hospital_4bbf3053:
-
-    # p "Деньги, лечение, это понятно, но что всё это вокруг? Как работает ваш телевизор, да и эти лампы?"
-    p "Деньги, лечение, это понятно, но что всё это вокруг? Как работает ваш телевизор, да и эти лампы?"
+    # p "Money, treatment, I get that, but what’s all this around us? How does your television work, and these lamps?"
+    p "Money, treatment, I get that, but what’s all this around us? How does your television work, and these lamps?"
 
 # game/locations/hospital/hospital.rpy:26
 translate english hospital_43217f9f:
-
-    # s "Оу, а ты видимо не местный, дело в том, что наш ведущий маг считает здравоохранение - важнейшим."
-    s "Оу, а ты видимо не местный, дело в том, что наш ведущий маг считает здравоохранение - важнейшим."
+    # s "Oh, you’re clearly not from around here. The thing is, our lead mage considered healthcare the most important thing."
+    s "Oh, you’re clearly not from around here. The thing is, our lead mage considered healthcare the most important thing."
 
 # game/locations/hospital/hospital.rpy:27
 translate english hospital_a40156cf:
-
-    # s "И всё вокруг является его личным изобретением, он уже давно покинул этот мир. Но его наследние, его забота обо всех стаждущих проявляется в этих кабинетах, на этих палатах."
-    s "И всё вокруг является его личным изобретением, он уже давно покинул этот мир. Но его наследние, его забота обо всех стаждущих проявляется в этих кабинетах, на этих палатах."
+    # s "Everything around here is his personal invention. He left this world long ago, but his legacy—his care for all those in need—lives on in these rooms and wards."
+    s "Everything around here is his personal invention. He left this world long ago, but his legacy—his care for all those in need—lives on in these rooms and wards."
 
 # game/locations/hospital/hospital.rpy:28
 translate english hospital_709dc133:
-
-    # s "Раньше лечение было бесплатным, но теперь, когда величайшего мага с нами нет, ремонт и магические камни для этого оборудования стоят огромных денег, так что нам пришлось брать плату за лечение."
-    s "Раньше лечение было бесплатным, но теперь, когда величайшего мага с нами нет, ремонт и магические камни для этого оборудования стоят огромных денег, так что нам пришлось брать плату за лечение."
+    # s "Treatment used to be free, but now that the greatest mage is gone, repairs and the magic stones needed for this equipment cost a fortune, so we had to start charging for treatment."
+    s "Treatment used to be free, but now that the greatest mage is gone, repairs and the magic stones needed for this equipment cost a fortune, so we had to start charging for treatment."
 
 # game/locations/hospital/hospital.rpy:29
 translate english hospital_7954cf30:
-
-    # p "То есть всё здесь работает на магических кристаллах? Никакого электричества?"
-    p "То есть всё здесь работает на магических кристаллах? Никакого электричества?"
+    # p "So everything here runs on magic crystals? No electricity?"
+    p "So everything here runs on magic crystals? No electricity?"
 
 # game/locations/hospital/hospital.rpy:30
 translate english hospital_ef1607b1:
-
-    # s "Что такое \"э-ле-ктри-че-ство\"? Впервые слушу такое слово."
-    s "Что такое \"э-ле-ктри-че-ство\"? Впервые слушу такое слово."
+    # s "What’s this ‘e-lec-tri-ci-ty’ you’re talking about? I’ve never heard that word before."
+    s "What’s this ‘e-lec-tri-ci-ty’ you’re talking about? I’ve never heard that word before."
 
 # game/locations/hospital/hospital.rpy:31
 translate english hospital_444b212c:
-
-    # p "Это-о, ну, как, хммм.. Ну как если бы энергия.. Ээээ, ладно, забудь"
-    p "Это-о, ну, как, хммм.. Ну как если бы энергия.. Ээээ, ладно, забудь"
+    # p "It’s, uh, well, like, umm… Like energy… Er, never mind, forget it."
+    p "It’s, uh, well, like, umm… Like energy… Er, never mind, forget it."
 
 # game/locations/hospital/hospital.rpy:32
 translate english hospital_379a29f5:
-
-    # "Кажется ты не сможешь дать этому миру чудеса электричества, да, в том мире ты явно был не самым умным"
-    "Кажется ты не сможешь дать этому миру чудеса электричества, да, в том мире ты явно был не самым умным"
+    # "It seems you won’t be able to bring the wonders of electricity to this world. Yeah, you definitely weren’t the brightest back in your old world either."
+    "It seems you won’t be able to bring the wonders of electricity to this world. Yeah, you definitely weren’t the brightest back in your old world either."
 
 # game/locations/hospital/hospital.rpy:33
 translate english hospital_2f8e6795:
-
-    # s "Хорошо, странный мальчик, меня зовут [s.name], если тебе понадобится лечение - обращайся!"
-    s "Хорошо, странный мальчик, меня зовут [s.name], если тебе понадобится лечение - обращайся!"
+    # s "Alright, strange boy. My name’s [s.name]. If you need treatment, just let me know!"
+    s "Alright, strange boy. My name’s [s.name]. If you need treatment, just let me know!"
 
 # game/locations/hospital/hospital.rpy:34
 translate english hospital_a9c45c20:
-
-    # p "А меня зовут [hero_name], рад знакомству!"
-    p "А меня зовут [hero_name], рад знакомству!"
+    # p "And I’m [hero_name]. Nice to meet you!"
+    p "And I’m [hero_name]. Nice to meet you!"
 
 # game/locations/hospital/hospital.rpy:37
 translate english hospital_51e53a45:
-
-    # s "Опять ты? Надеюсь, не сильно пострадал."
-    s "Опять ты? Надеюсь, не сильно пострадал."
+    # s "You again? I hope you’re not too badly hurt."
+    s "You again? I hope you’re not too badly hurt."
 
 # game/locations/hospital/hospital.rpy:44
 translate english hospital_sakura_menu_3707c775:
-
-    # s "Ты имеешь в виду [ts.name]? Она лучший лекарь в этом городе."
-    s "Ты имеешь в виду [ts.name]? Она лучший лекарь в этом городе."
+    # s "You mean [ts.name]? She’s the best healer in this city."
+    s "You mean [ts.name]? She’s the best healer in this city."
 
 # game/locations/hospital/hospital.rpy:45
 translate english hospital_sakura_menu_eee45193:
-
-    # s "Сейчас она в операционной, впрочем как и всегда. Если тебе нужно серьёзное лечение, направляйся туда."
-    s "Сейчас она в операционной, впрочем как и всегда. Если тебе нужно серьёзное лечение, направляйся туда."
+    # s "She’s in the operating room right now, as usual. If you need serious treatment, head there."
+    s "She’s in the operating room right now, as usual. If you need serious treatment, head there."
 
 # game/locations/hospital/hospital.rpy:49
 translate english hospital_sakura_menu_2ec52cf3:
-
-    # s "Поднять на ноги стоит 5 монет. Полное лечение от [ts.name] будет стоить дороже, но оно будет сильно эффективнее при сильезных ранениях. Если у тебя их нет, придётся найти способ заработать."
-    s "Поднять на ноги стоит 5 монет. Полное лечение от [ts.name] будет стоить дороже, но оно будет сильно эффективнее при сильезных ранениях. Если у тебя их нет, придётся найти способ заработать."
+    # s "Getting you back on your feet costs 5 coins. Full treatment from [ts.name] will cost more, but it’s much more effective for serious injuries. If you don’t have the money, you’ll need to find a way to earn some."
+    s "Getting you back on your feet costs 5 coins. Full treatment from [ts.name] will cost more, but it’s much more effective for serious injuries. If you don’t have the money, you’ll need to find a way to earn some."
 
 # game/locations/hospital/hospital.rpy:56
 translate english hospital_sakura_menu_1340bfec:
-
-    # "Сакура осматривает тебя и использует медицинские техники."
-    "Сакура осматривает тебя и использует медицинские техники."
+    # "Sakura examines you and uses her medical techniques."
+    "Sakura examines you and uses her medical techniques."
 
 # game/locations/hospital/hospital.rpy:57
 translate english hospital_sakura_menu_7faa9b21:
-
-    # "Ты чувствуешь, как боль исчезает, а силы возвращаются."
-    "Ты чувствуешь, как боль исчезает, а силы возвращаются."
+    # "You feel the pain fade away as your strength returns."
+    "You feel the pain fade away as your strength returns."
 
 # game/locations/hospital/hospital.rpy:59
 translate english hospital_sakura_menu_5d18d65f:
-
-    # "Ты решаешь пока не тратить деньги на лечение."
-    "Ты решаешь пока не тратить деньги на лечение."
+    # "You decide not to spend money on treatment for now."
+    "You decide not to spend money on treatment for now."
 
 # game/locations/hospital/hospital.rpy:61
 translate english hospital_sakura_menu_cff9ad5a:
-
-    # "У тебя нет даже 5 монет"
-    "У тебя нет даже 5 монет"
+    # "You don’t even have 5 coins."
+    "You don’t even have 5 coins."
 
 # game/locations/hospital/hospital.rpy:69
 translate english hospital_sakura_menu_40730942:
-
-    # p "Я не смогу выполнить это задание."
-    p "Я не смогу выполнить это задание."
+    # p "I won’t be able to complete that task."
+    p "I won’t be able to complete that task."
 
 # game/locations/hospital/hospital.rpy:70
 translate english hospital_sakura_menu_ae8cd091:
-
-    # s "Жаль, но потребность в травах есть всегда, если захочешь помочь - приходи."
-    s "Жаль, но потребность в травах есть всегда, если захочешь помочь - приходи."
+    # s "Too bad, but there’s always a need for herbs. If you feel like helping, come back."
+    s "Too bad, but there’s always a need for herbs. If you feel like helping, come back."
 
 # game/locations/hospital/hospital.rpy:78
 translate english hospital_sakura_quests_df94a92b:
-
-    # s "Ты хочешь помочь? Хорошо, у нас в больнице всегда есть работа."
-    s "Ты хочешь помочь? Хорошо, у нас в больнице всегда есть работа."
+    # s "You want to help? Good, there’s always work to be done in the hospital."
+    s "You want to help? Good, there’s always work to be done in the hospital."
 
 # game/locations/hospital/hospital.rpy:82
 translate english hospital_sakura_quests_5ae62153:
-
-    # s smile_closed_eyes "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу." with dissolve
-    s smile_closed_eyes "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу." with dissolve
+    # s smile_closed_eyes "Want to help? Great! Here’s a list of the herbs we need. You can find them in the nearby forest." with dissolve
+    s smile_closed_eyes "Want to help? Great! Here’s a list of the herbs we need. You can find them in the nearby forest." with dissolve
 
 # game/locations/hospital/hospital.rpy:84
 translate english hospital_sakura_quests_4665e985:
-
-    # s smile_shy "За хороший набор я неплохо заплачу." with dissolve
-    s smile_shy "За хороший набор я неплохо заплачу." with dissolve
+    # s smile_shy "I’ll pay you well for a good haul." with dissolve
+    s smile_shy "I’ll pay you well for a good haul." with dissolve
 
 # game/locations/hospital/hospital.rpy:88
 translate english hospital_sakura_quests_42dbb8b9:
-
-    # s smile_shy "Будь осторожен, в лесу могут быть монстры." with dissolve
-    s smile_shy "Будь осторожен, в лесу могут быть монстры." with dissolve
+    # s smile_shy "Be careful—there might be monsters in the forest." with dissolve
+    s smile_shy "Be careful—there might be monsters in the forest." with dissolve
 
 # game/locations/hospital/hospital.rpy:91
 translate english hospital_sakura_quests_be55287e:
-
-    # s @ angry "А мог бы и помочь, теперь придется самой всё собирать."
-    s @ angry "А мог бы и помочь, теперь придется самой всё собирать."
+    # s @ angry "You could’ve helped, you know. Now I’ll have to gather everything myself."
+    s @ angry "You could’ve helped, you know. Now I’ll have to gather everything myself."
 
 # game/locations/hospital/hospital.rpy:93
 translate english hospital_sakura_quests_b67aafdd:
-
-    # s neutral "Подожди, я вижу, ты пока не подходишь для этой работы, возвращайся, когда станешь сильнее." with dissolve
-    s neutral "Подожди, я вижу, ты пока не подходишь для этой работы, возвращайся, когда станешь сильнее." with dissolve
+    # s neutral "Wait, I can see you’re not ready for this job yet. Come back when you’re stronger." with dissolve
+    s neutral "Wait, I can see you’re not ready for this job yet. Come back when you’re stronger." with dissolve
 
 # game/locations/hospital/hospital.rpy:95
 translate english hospital_sakura_quests_ad25e881:
-
-    # s neutral "Если передумаешь, только спроси" with dissolve
-    s neutral "Если передумаешь, только спроси" with dissolve
+    # s neutral "If you change your mind, just ask." with dissolve
+    s neutral "If you change your mind, just ask." with dissolve
 
 translate english strings:
 
     # game/locations/hospital/hospital.rpy:42
     old "Спросить, где можно найти главного медика"
-    new "Спросить, где можно найти главного медика"
+    new "Ask where to find the chief medic"
 
     # game/locations/hospital/hospital.rpy:42
     old "Спросить про лечение"
-    new "Спросить про лечение"
+    new "Ask about treatment"
 
     # game/locations/hospital/hospital.rpy:42
     old "Перейти в операционную"
-    new "Перейти в операционную"
+    new "Go to the operating room"
 
     # game/locations/hospital/hospital.rpy:42
     old "Спросить про задания"
-    new "Спросить про задания"
+    new "Ask about tasks"
 
     # game/locations/hospital/hospital.rpy:42
     old "Вернуться в город"
-    new "Вернуться в город"
+    new "Return to the city"
 
     # game/locations/hospital/hospital.rpy:51
     old "Заплатить за лечение (5 монет)"
-    new "Заплатить за лечение (5 монет)"
+    new "Pay for treatment (5 coins)"
 
     # game/locations/hospital/hospital.rpy:80
     old "Задание на сбор трав"
-    new "Задание на сбор трав"
+    new "Herb-gathering task"
 
     # game/locations/hospital/hospital.rpy:85
     old "Квест: Задание на сбор трав"
-    new "Квест: Задание на сбор трав"
-
+    new "Quest: Herb-gathering task"

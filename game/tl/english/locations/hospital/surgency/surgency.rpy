@@ -2,257 +2,219 @@
 
 # game/locations/hospital/surgency/surgency.rpy:13
 translate english surgency_tsunade_cure_1d0ae534:
-
-    # "Ты медленно приходишь в себя, чувствуя резкую боль во всём теле."
-    "Ты медленно приходишь в себя, чувствуя резкую боль во всём теле."
+    # "You slowly come to, feeling sharp pain throughout your entire body."
+    "You slowly come to, feeling sharp pain throughout your entire body."
 
 # game/locations/hospital/surgency/surgency.rpy:14
 translate english surgency_tsunade_cure_1f2d9ff8:
-
-    # "Белый потолок, запах медикаментов… Похоже, ты в операционной."
-    "Белый потолок, запах медикаментов… Похоже, ты в операционной."
+    # "A white ceiling, the smell of medicine… It seems you’re in an operating room."
+    "A white ceiling, the smell of medicine… It seems you’re in an operating room."
 
 # game/locations/hospital/surgency/surgency.rpy:15
 translate english surgency_tsunade_cure_067bc303:
-
-    # ts "Очнулся, наконец? Не люблю возиться с пациентами, которые валяются тут днями."
-    ts "Очнулся, наконец? Не люблю возиться с пациентами, которые валяются тут днями."
+    # ts "Awake at last? I don’t like fussing over patients who lie around here for days."
+    ts "Awake at last? I don’t like fussing over patients who lie around here for days."
 
 # game/locations/hospital/surgency/surgency.rpy:17
 translate english surgency_tsunade_cure_47fe2e59:
-
-    # ts "Вижу у тебя небольшие проблемы с золотом."
-    ts "Вижу у тебя небольшие проблемы с золотом."
+    # ts "I see you’ve got a little problem with gold."
+    ts "I see you’ve got a little problem with gold."
 
 # game/locations/hospital/surgency/surgency.rpy:18
 translate english surgency_tsunade_cure_9d2b92e6:
-
-    # ts "Повезло тебе, в первый раз я тебя подлатала бесплатно."
-    ts "Повезло тебе, в первый раз я тебя подлатала бесплатно."
+    # ts "Lucky for you, I patched you up for free this first time."
+    ts "Lucky for you, I patched you up for free this first time."
 
 # game/locations/hospital/surgency/surgency.rpy:20
 translate english surgency_tsunade_cure_f6f996b2:
-
-    # ts @ smile "С тебя 10 монет за срочную операцию" with dissolve
-    ts @ smile "С тебя 10 монет за срочную операцию" with dissolve
+    # ts @ smile "That’ll be 10 coins for the emergency surgery" with dissolve
+    ts @ smile "That’ll be 10 coins for the emergency surgery" with dissolve
 
 # game/locations/hospital/surgency/surgency.rpy:24
 translate english surgency_tsunade_cure_34c5490a:
-
-    # "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
-    "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
+    # "You feel your wounds closing up, your body filling with strength… but a lingering weakness remains."
+    "You feel your wounds closing up, your body filling with strength… but a lingering weakness remains."
 
 # game/locations/hospital/surgency/surgency.rpy:29
 translate english surgency_tsunade_cure_4dad5b5d:
-
-    # ts "Идти можешь, и пришёл ко мне, разве тебе нужно лечение? Или у тебя есть ко мне дело?"
-    ts "Идти можешь, и пришёл ко мне, разве тебе нужно лечение? Или у тебя есть ко мне дело?"
+    # ts "You can walk, and you came to me—do you really need treatment? Or do you have some business with me?"
+    ts "You can walk, and you came to me—do you really need treatment? Or do you have some business with me?"
 
 # game/locations/hospital/surgency/surgency.rpy:33
 translate english surgency_tsunade_cure_68ef3f2b:
-
-    # ts "Опять ты? Уже не первый раз на моём операционном столе."
-    ts "Опять ты? Уже не первый раз на моём операционном столе."
+    # ts "You again? This isn’t the first time you’ve ended up on my operating table."
+    ts "You again? This isn’t the first time you’ve ended up on my operating table."
 
 # game/locations/hospital/surgency/surgency.rpy:34
 translate english surgency_tsunade_cure_76ce2553:
-
-    # ts "С тебя {color=#FFD700}10 монет{/color}. Надеюсь, ты не разорился?"
-    ts "С тебя {color=#FFD700}10 монет{/color}. Надеюсь, ты не разорился?"
+    # ts "That’ll be {color=#FFD700}10 coins{/color}. Hope you’re not broke yet?"
+    ts "That’ll be {color=#FFD700}10 coins{/color}. Hope you’re not broke yet?"
 
 # game/locations/hospital/surgency/surgency.rpy:38
 translate english surgency_tsunade_cure_34c5490a_1:
-
-    # "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
-    "Ты ощущаешь, как раны затягиваются, тело наполняется силой… но остаётся слабость."
+    # "You feel your wounds closing up, your body filling with strength… but a lingering weakness remains."
+    "You feel your wounds closing up, your body filling with strength… but a lingering weakness remains."
 
 # game/locations/hospital/surgency/surgency.rpy:40
 translate english surgency_tsunade_cure_cc517f6b:
-
-    # ts angry "Так не пойдет, дорогой, надо и честь знать." with dissolve
-    ts angry "Так не пойдет, дорогой, надо и честь знать." with dissolve
+    # ts angry "This won’t do, dear. You need to know your limits." with dissolve
+    ts angry "This won’t do, dear. You need to know your limits." with dissolve
 
 # game/locations/hospital/surgency/surgency.rpy:41
 translate english surgency_tsunade_cure_746b3aef:
-
-    # ts "Думаю в этот раз вместо магических кристаллов - энергию мы будем брать прямо из тебя, потерпи, это будет незабываемо!"
-    ts "Думаю в этот раз вместо магических кристаллов - энергию мы будем брать прямо из тебя, потерпи, это будет незабываемо!"
+    # ts "I think this time, instead of magic crystals, we’ll draw the energy straight from you. Hold on—it’ll be unforgettable!"
+    ts "I think this time, instead of magic crystals, we’ll draw the energy straight from you. Hold on—it’ll be unforgettable!"
 
 # game/locations/hospital/surgency/surgency.rpy:43
 translate english surgency_tsunade_cure_e0ec47b9:
-
-    # "Ты условно умер, но [ts.name] пожалела тебя"
-    "Ты условно умер, но [ts.name] пожалела тебя"
+    # "You’ve technically died, but [ts.name] took pity on you."
+    "You’ve technically died, but [ts.name] took pity on you."
 
 # game/locations/hospital/surgency/surgency.rpy:61
 translate english surgency_tsunade_8ecdd090:
-
-    # ts "Пришел вернуть долги?"
-    ts "Пришел вернуть долги?"
+    # ts "Here to pay off your debts?"
+    ts "Here to pay off your debts?"
 
 # game/locations/hospital/surgency/surgency.rpy:64
 translate english surgency_tsunade_de1ae66f:
-
-    # ts "Я занята, возвращайся, когда будешь присмерти."
-    ts "Я занята, возвращайся, когда будешь присмерти."
+    # ts "I’m busy. Come back when you’re on death’s door."
+    ts "I’m busy. Come back when you’re on death’s door."
 
 # game/locations/hospital/surgency/surgency.rpy:66
 translate english surgency_tsunade_0f4fc53a:
-
-    # "Тебы выгнали из операционной, и правда, что тебе там понадобилось?"
-    "Тебы выгнали из операционной, и правда, что тебе там понадобилось?"
+    # "You’ve been kicked out of the operating room. Honestly, what did you need in there anyway?"
+    "You’ve been kicked out of the operating room. Honestly, what did you need in there anyway?"
 
 # game/locations/hospital/surgency/surgency.rpy:73
 translate english surgency_tsunade_menu_2637dab2:
-
-    # ts "А деньги то у тебя на это есть?"
-    ts "А деньги то у тебя на это есть?"
+    # ts "Do you even have the money for this?"
+    ts "Do you even have the money for this?"
 
 # game/locations/hospital/surgency/surgency.rpy:80
 translate english surgency_tsunade_menu_eb92a0de:
-
-    # p "Нет, но я верю, что такая молодая красавица как вы, [ts.name], не сможет оставить юношу умирать"
-    p "Нет, но я верю, что такая молодая красавица как вы, [ts.name], не сможет оставить юношу умирать"
+    # p "No, but I believe a young beauty like you, [ts.name], wouldn’t let a young man die."
+    p "No, but I believe a young beauty like you, [ts.name], wouldn’t let a young man die."
 
 # game/locations/hospital/surgency/surgency.rpy:82
 translate english surgency_tsunade_menu_52f77b41:
-
-    # ts "Каков наглец, ладно, но это в последний раз."
-    ts "Каков наглец, ладно, но это в последний раз."
+    # ts "What a cheeky one. Fine, but this is the last time."
+    ts "What a cheeky one. Fine, but this is the last time."
 
 # game/locations/hospital/surgency/surgency.rpy:88
 translate english surgency_tsunade_menu_47450253:
-
-    # ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
-    ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
+    # ts "Crawling back without money again? This won’t do, dear. You need to have some dignity."
+    ts "Crawling back without money again? This won’t do, dear. You need to have some dignity."
 
 # game/locations/hospital/surgency/surgency.rpy:92
 translate english surgency_tsunade_menu_f272a8e6:
-
-    # ts "Ты в лечебнице. Здесь поднимают на ноги таких, как ты — тех, кто не умеет держать меч или уклоняться от ударов."
-    ts "Ты в лечебнице. Здесь поднимают на ноги таких, как ты — тех, кто не умеет держать меч или уклоняться от ударов."
+    # ts "You’re in a clinic. We get people like you back on their feet—those who can’t hold a sword or dodge a blow."
+    ts "You’re in a clinic. We get people like you back on their feet—those who can’t hold a sword or dodge a blow."
 
 # game/locations/hospital/surgency/surgency.rpy:96
 translate english surgency_tsunade_menu_288da359:
-
-    # ts "Ох, ты хочешь расплачиваться честно? Что ж, это похвально."
-    ts "Ох, ты хочешь расплачиваться честно? Что ж, это похвально."
+    # ts "Oh, you want to pay honestly? Well, that’s commendable."
+    ts "Oh, you want to pay honestly? Well, that’s commendable."
 
 # game/locations/hospital/surgency/surgency.rpy:97
 translate english surgency_tsunade_menu_4816b03e:
-
-    # ts "Вижу ты в этих краях раньше не бывал, так что расскажу"
-    ts "Вижу ты в этих краях раньше не бывал, так что расскажу"
+    # ts "I can see you’re new around here, so I’ll fill you in."
+    ts "I can see you’re new around here, so I’ll fill you in."
 
 # game/locations/hospital/surgency/surgency.rpy:98
 translate english surgency_tsunade_menu_fdb6d221:
-
-    # ts "В таверне всегда нужны помощники. Помоешь посуду — получишь монеты."
-    ts "В таверне всегда нужны помощники. Помоешь посуду — получишь монеты."
+    # ts "The tavern’s always looking for helpers. Wash some dishes, and you’ll earn some coins."
+    ts "The tavern’s always looking for helpers. Wash some dishes, and you’ll earn some coins."
 
 # game/locations/hospital/surgency/surgency.rpy:99
 translate english surgency_tsunade_menu_3d91c406:
-
-    # "[ts.name] рассказывает, как попасть в Таверну"
-    "[ts.name] рассказывает, как попасть в Таверну"
+    # "[ts.name] explains how to get to the Tavern."
+    "[ts.name] explains how to get to the Tavern."
 
 # game/locations/hospital/surgency/surgency.rpy:103
 translate english surgency_tsunade_menu_03dc6186:
-
-    # p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"
-    p "У вас есть какие-нибудь задания для меня, чтобы я мог честно расплачиваться за лечение?"
+    # p "Do you have any tasks for me so I can honestly pay for my treatment?"
+    p "Do you have any tasks for me so I can honestly pay for my treatment?"
 
 # game/locations/hospital/surgency/surgency.rpy:107
 translate english surgency_tsunade_menu_40730942:
-
-    # p "Я не смогу выполнить это задание."
-    p "Я не смогу выполнить это задание."
+    # p "I won’t be able to complete that task."
+    p "I won’t be able to complete that task."
 
 # game/locations/hospital/surgency/surgency.rpy:108
 translate english surgency_tsunade_menu_37469df2:
-
-    # ts "Ох, ну хорошо, если передумаешь - приходи."
-    ts "Ох, ну хорошо, если передумаешь - приходи."
+    # ts "Oh, alright then. If you change your mind, come back."
+    ts "Oh, alright then. If you change your mind, come back."
 
 # game/locations/hospital/surgency/surgency.rpy:112
 translate english surgency_tsunade_menu_009c5625:
-
-    # ts smile "Хоть кто-то умеет говорить «спасибо». Постарайся больше не попадать ко мне." with dissolve
-    ts smile "Хоть кто-то умеет говорить «спасибо». Постарайся больше не попадать ко мне." with dissolve
+    # ts smile "At least someone knows how to say ‘thank you.’ Try not to end up back here." with dissolve
+    ts smile "At least someone knows how to say ‘thank you.’ Try not to end up back here." with dissolve
 
 # game/locations/hospital/surgency/surgency.rpy:119
 translate english surgency_tsunade_quests_077dafbd:
-
-    # ts "Задания? Хм... У меня есть кое-что для тебя."
-    ts "Задания? Хм... У меня есть кое-что для тебя."
+    # ts "Tasks? Hmm… I’ve got something for you."
+    ts "Tasks? Hmm… I’ve got something for you."
 
 # game/locations/hospital/surgency/surgency.rpy:122
 translate english surgency_tsunade_quests_e31e2112:
-
-    # ts "Мне нужен редкий алхимический ингредиент — клык ядовитой змеи. Можно достать его в глубине леса."
-    ts "Мне нужен редкий алхимический ингредиент — клык ядовитой змеи. Можно достать его в глубине леса."
+    # ts "I need a rare alchemical ingredient—a venomous snake’s fang. You can find it deep in the forest."
+    ts "I need a rare alchemical ingredient—a venomous snake’s fang. You can find it deep in the forest."
 
 # game/locations/hospital/surgency/surgency.rpy:123
 translate english surgency_tsunade_quests_46bf6b34:
-
-    # ts "Принеси его, и я заплачу тебе."
-    ts "Принеси его, и я заплачу тебе."
+    # ts "Bring it to me, and I’ll pay you."
+    ts "Bring it to me, and I’ll pay you."
 
 # game/locations/hospital/surgency/surgency.rpy:128
 translate english surgency_tsunade_quests_a29e6cf3:
-
-    # ts "Отлично, спасибо, буду ждать тебя, желательно в целости."
-    ts "Отлично, спасибо, буду ждать тебя, желательно в целости."
+    # ts "Great, thank you. I’ll be waiting for you—preferably in one piece."
+    ts "Great, thank you. I’ll be waiting for you—preferably in one piece."
 
 # game/locations/hospital/surgency/surgency.rpy:131
 translate english surgency_tsunade_quests_07431500:
-
-    # ts @ angry "Ну, значит, не так уж и нуждаешься в деньгах." with dissolve
-    ts @ angry "Ну, значит, не так уж и нуждаешься в деньгах." with dissolve
+    # ts @ angry "Well, I guess you don’t need the money that badly then." with dissolve
+    ts @ angry "Well, I guess you don’t need the money that badly then." with dissolve
 
 # game/locations/hospital/surgency/surgency.rpy:133
 translate english surgency_tsunade_quests_63f3abd0:
-
-    # ts "Хотя подожди, я передумала, вижу, ты слишком слаб для этой работы, возвращайся, когда поднаберешься сил."
-    ts "Хотя подожди, я передумала, вижу, ты слишком слаб для этой работы, возвращайся, когда поднаберешься сил."
+    # ts "Wait, I’ve changed my mind. I can see you’re too weak for this job. Come back when you’ve built up some strength."
+    ts "Wait, I’ve changed my mind. I can see you’re too weak for this job. Come back when you’ve built up some strength."
 
 # game/locations/hospital/surgency/surgency.rpy:135
 translate english surgency_tsunade_quests_1a807813:
-
-    # ts "Ну, значит, не так уж и нуждаешься в деньгах."
-    ts "Ну, значит, не так уж и нуждаешься в деньгах."
+    # ts "Well, I guess you don’t need the money that badly then."
+    ts "Well, I guess you don’t need the money that badly then."
 
 translate english strings:
 
     # game/locations/hospital/surgency/surgency.rpy:70
     old "Вылечи меня"
-    new "Вылечи меня"
+    new "Heal me"
 
     # game/locations/hospital/surgency/surgency.rpy:70
     old "Спросить, где ты"
-    new "Спросить, где ты"
+    new "Ask where you are"
 
     # game/locations/hospital/surgency/surgency.rpy:70
     old "Поинтересоваться, как заработать денег"
-    new "Поинтересоваться, как заработать денег"
+    new "Ask how to earn money"
 
     # game/locations/hospital/surgency/surgency.rpy:70
     old "Поблагодарить и уйти"
-    new "Поблагодарить и уйти"
+    new "Thank her and leave"
 
     # game/locations/hospital/surgency/surgency.rpy:74
     old "Да, [ts.name], вылечите меня поскорее"
-    new "Да, [ts.name], вылечите меня поскорее"
+    new "Yes, [ts.name], heal me quickly"
 
     # game/locations/hospital/surgency/surgency.rpy:74
     old "Нет, но я надеялся, что вы мне поможете даром"
-    new "Нет, но я надеялся, что вы мне поможете даром"
+    new "No, but I was hoping you’d help me for free"
 
     # game/locations/hospital/surgency/surgency.rpy:120
     old "Охота за редким ингредиентом"
-    new "Охота за редким ингредиентом"
+    new "Hunt for a rare ingredient"
 
     # game/locations/hospital/surgency/surgency.rpy:125
     old "Квест: Охота за редким ингредиентом"
-    new "Квест: Охота за редким ингредиентом"
-
+    new "Quest: Hunt for a rare ingredient"
