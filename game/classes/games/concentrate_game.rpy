@@ -1,14 +1,24 @@
 label magic_training_gmmm:
     scene bg room
 
-    if is_cheats:
-        menu:
-            "У вас включены читы. Пропустить мини-игру?"
-            "Играть":
-                pause .01
-            "Пропустить":
-                "Ты успешно контролировал магию!"
-                return
+    if persistent.lang == "russian":
+        if is_cheats:
+            menu:
+                "У вас включены читы. Пропустить мини-игру?"
+                "Играть":
+                    pause .01
+                "Пропустить":
+                    "Ты успешно контролировал магию!"
+                    return
+    if persistent.lang == "english":
+        if is_cheats:
+            menu:
+                "Cheats are enabled. Skip the mini-game?"
+                "Play":
+                    pause .01
+                "Skip":
+                    "You have successfully controlled magic!"
+                    return
 
     $ energy = 0  # Начальный уровень энергии
     $ min_energy = 0

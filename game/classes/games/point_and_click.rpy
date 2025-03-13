@@ -53,14 +53,25 @@ label bug_hunt:
         repeat  # Повторяем движение
 
     window hide
-    if is_cheats:
-        menu:
-            "У вас включены читы. Пропустить мини-игру?"
-            "Играть":
-                pause .01
-            "Пропустить":
-                "Успех!"
-                return
+    
+    if persistent.lang == "russian":
+        if is_cheats:
+            menu:
+                "У вас включены читы. Пропустить мини-игру?"
+                "Играть":
+                    pause .01
+                "Пропустить":
+                    "Успех!"
+                    return
+    if persistent.lang == "english":
+        if is_cheats:
+            menu:
+                "Cheats are enabled. Skip the mini-game?"
+                "Play":
+                    pause .01
+                "Skip":
+                    "Success!"
+                    return
 
     show screen bug_game
 

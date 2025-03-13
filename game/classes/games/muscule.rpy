@@ -98,15 +98,27 @@ screen clicker:
 label start_muscule(start_phrase, difficulty):
     # всякие ненужные штуки для оформления
     pause .5
-    if is_cheats:
-        menu:
-            "У вас включены читы. Пропустить мини-игру?"
-            "Играть":
-                pause .01
-            "Пропустить":
-                hide txt
-                $last_muscule_win = True
-                return
+    if persistent.lang == "russian":
+        if is_cheats:
+            menu:
+                "У вас включены читы. Пропустить мини-игру?"
+                "Играть":
+                    pause .01
+                "Пропустить":
+                    hide txt
+                    $last_muscule_win = True
+                    return
+    if persistent.lang == "english":
+        if is_cheats:
+            menu:
+                "Cheats are enabled. Skip the mini-game?"
+                "Play":
+                    pause .01
+                "Skip":
+                    hide txt
+                    $last_muscule_win = True
+                    return
+                    
     show expression Text(start_phrase) at truecenter as txt
     with dissolve
     pause
@@ -126,7 +138,10 @@ label start_muscule(start_phrase, difficulty):
             $ number += 1
             $ renpy.pause(ani_time, hard=True)
         with flash
-        show expression Text("Отлично!") at truecenter as txt
+        if persistent.lang == "russian":
+            show expression Text("Отлично!") at truecenter as txt
+        if persistent.lang == "english":
+            show expression Text("Great!") at truecenter as txt
         $last_muscule_win = True
     else:
         # перематываем анимацию до первого кадра
@@ -134,7 +149,10 @@ label start_muscule(start_phrase, difficulty):
             $ number -= 1
             $ renpy.pause(ani_time, hard=True)
         with flash2
-        show expression Text("Не вышло") at truecenter as txt
+        if persistent.lang == "russian":
+            show expression Text("Не вышло") at truecenter as txt
+        if persistent.lang == "english":
+            show expression Text("Fail") at truecenter as txt
         $last_muscule_win = False
     # жесткая пауза на случай, если игрок всё еще лупит по кнопке
     $ renpy.pause(1.0, hard=True)

@@ -731,8 +731,8 @@ translate english battle_win_forest_nagatoro_04a5fa5c:
 
 # game/locations/forest/nagatoro_forest.rpy:314
 translate english battle_win_forest_nagatoro_563af03e:
-    # nag laugh "Ha-ha! You’ve amused me. Hope the enemy dies laughing."
-    nag laugh "Ha-ha! You’ve amused me. Hope the enemy dies laughing."
+    # nag grin "Ha-ha! You’ve amused me. Hope the enemy dies laughing."
+    nag grin "Ha-ha! You’ve amused me. Hope the enemy dies laughing."
 
 # game/locations/forest/nagatoro_forest.rpy:316
 translate english battle_win_forest_nagatoro_5e83d1cc:

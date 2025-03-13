@@ -38,8 +38,12 @@ label start:
     f "Прежде всего, мне нужно узнать, как тебя зовут?"
 
     # Запрос имени главного героя
-    $ hero_name = renpy.input("Как тебя зовут?")
-    $ hero_name = hero_name.strip() or "Безымянный"
+    if persistent.lang == "russian":
+        $ hero_name = renpy.input("Как тебя зовут?")
+        $ hero_name = hero_name.strip() or "Безымянный"
+    if persistent.lang == "english":
+        $ hero_name = renpy.input("Whats your name?")
+        $ hero_name = hero_name.strip() or "Nameless"
 
     # Создание персонажа с подставленным именем
     define p = Character("[hero_name]", color="#FFFFFF") # Главный герой с именем, выбранным игроком

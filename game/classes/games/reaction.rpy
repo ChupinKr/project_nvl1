@@ -81,17 +81,29 @@ label start_magic_training(intelligence):
     $ win_score = 3
 
     pause .5
-    if is_cheats:
-        menu:
-            "У вас включены читы. Пропустить мини-игру?"
-            "Играть":
-                pause .01
-            "Пропустить":
-                $score = win_score
-                call end_magic_game
-                "Успех!"
-                return
-
+    
+    if persistent.lang == "russian":
+        if is_cheats:
+            menu:
+                "У вас включены читы. Пропустить мини-игру?"
+                "Играть":
+                    pause .01
+                "Пропустить":
+                    $score = win_score
+                    call end_magic_game
+                    "Успех!"
+                    return
+    if persistent.lang == "english":
+        if is_cheats:
+            menu:
+                "Cheats are enabled. Skip the mini-game?"
+                "Play":
+                    pause .01
+                "Skip":
+                    $score = win_score
+                    call end_magic_game
+                    "Success!"
+                    return
     show expression Text("Будь внимателен!") at truecenter as txt
     with dissolve
     pause

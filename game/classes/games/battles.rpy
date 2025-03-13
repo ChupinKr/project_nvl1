@@ -123,17 +123,30 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     $ qte_input = ""  # Обнуляем ввод игрока
     $ qte_warning = False
     pause .5
-    
-    if is_cheats:
-        menu:
-            "У вас включены читы. Пропустить мини-игру?"
-            "Играть":
-                pause .01
-            "Пропустить":
-                call battle_win
-                return
-
-    show expression Text("Сейчас начнется битва, приготовься!") at truecenter as txt
+    if persistent.lang == "russian":
+        if is_cheats:
+            menu:
+                "У вас включены читы. Пропустить мини-игру?"
+                "Играть":
+                    pause .01
+                "Пропустить":
+                    $score = win_score
+                    call battle_win
+                    return
+    if persistent.lang == "english":
+        if is_cheats:
+            menu:
+                "Cheats are enabled. Skip the mini-game?"
+                "Play":
+                    pause .01
+                "Skip":
+                    $score = win_score
+                    call battle_win
+                    return
+    if persistent.lang == "russian":
+        show expression Text("Сейчас начнется битва, приготовься!") at truecenter as txt
+    if persistent.lang == "english":
+        show expression Text("The battle is about to begin, get ready!") at truecenter as txt
     with dissolve
     pause
     hide txt

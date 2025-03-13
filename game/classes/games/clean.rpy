@@ -184,15 +184,25 @@ label start_clean(whatToWash):
         $ selected_item = renpy.random.choice(["book_blue", "book_red"])
     $ selected_fresh_item = "fresh_" + selected_item
     
-    if is_cheats:
-        menu:
-            "У вас включены читы. Пропустить мини-игру?"
-            "Играть":
-                pause .01
-            "Пропустить":
-                call clean_success
-                return
-    
+    if persistent.lang == "russian":
+        if is_cheats:
+            menu:
+                "У вас включены читы. Пропустить мини-игру?"
+                "Играть":
+                    pause .01
+                "Пропустить":
+                    call clean_success
+                    return
+    if persistent.lang == "english":
+        if is_cheats:
+            menu:
+                "Cheats are enabled. Skip the mini-game?"
+                "Play":
+                    pause .01
+                "Skip":
+                    call clean_success
+                    return
+
     pause .5
     show expression Text("Приготовься!") at truecenter as txt
     with dissolve
@@ -203,7 +213,10 @@ label start_clean(whatToWash):
  
 label clean_fail:
     $ last_clean_win = False
-    "Вы не справились"
+    if persistent.lang == "russian":
+        "Вы не справились"
+    if persistent.lang == "english":
+        "You failed"
     return
  
 label clean_success:
