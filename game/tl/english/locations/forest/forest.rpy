@@ -1,14 +1,12 @@
-﻿﻿# TODO: Translation updated at 2025-03-13 17:11
+﻿# TODO: Translation updated at 2025-03-13 17:11
 
 # game/locations/forest/forest.rpy:20
 translate english forest_f5a09eea:
-
     # "Ты в лесу"
     "You are in the forest"
 
 # game/locations/forest/forest.rpy:21
 translate english forest_440b616c:
-
     # "Куда направишься?"
     "Where will you go?"
 

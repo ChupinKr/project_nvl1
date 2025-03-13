@@ -2,29 +2,22 @@
 
 # game/locations/ruined_temple/ruined_temple.rpy:8
 translate english ruined_temple_993cd7d7:
-
-    # "Ты у входа в разрушенный храм… колонны в трещинах, повсюду мох и заросли. Слева густой лес, а справа виднеется город."
-    "Ты у входа в разрушенный храм… колонны в трещинах, повсюду мох и заросли. Слева густой лес, а справа виднеется город."
+    "You’re at the entrance to a ruined temple… cracked columns, moss, and overgrowth everywhere. To the left is a dense forest, and to the right, you can see a city in the distance."
 
 # game/locations/ruined_temple/ruined_temple.rpy:16
 translate english ruined_temple_menu_ffdc2c2b:
-
-    # "Ты ничего не находишь"
-    "Ты ничего не находишь"
+    "You find nothing."
 
 # game/locations/ruined_temple/ruined_temple.rpy:17
 translate english ruined_temple_menu_59e03460:
-
-    # "IN PROGRESS"
     "IN PROGRESS"
 
 translate english strings:
 
     # game/locations/ruined_temple/ruined_temple.rpy:12
     old "Обратиться к богине за советом"
-    new "Обратиться к богине за советом"
+    new "Seek advice from the goddess"
 
     # game/locations/ruined_temple/ruined_temple.rpy:12
     old "Вернуться в лес"
-    new "Вернуться в лес"
-
+    new "Return to the forest"

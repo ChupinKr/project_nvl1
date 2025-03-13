@@ -2,545 +2,374 @@
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:9
 translate english talk_to_freya_ca57624f:
-
-    # f "Дорогой, ты так неожиданно зашел, я как раз переодевалась, чем я могу помочь тебе?"
-    f "Дорогой, ты так неожиданно зашел, я как раз переодевалась, чем я могу помочь тебе?"
+    f "Dear, you came in so unexpectedly, I was just changing. How can I help you?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:12
 translate english talk_to_freya_bd2b857c:
-
-    # f "[hero_name], тебя не учили стучаться? Хотя ничего страшного, это всего-лишь плавательный костюм."
-    f "[hero_name], тебя не учили стучаться? Хотя ничего страшного, это всего-лишь плавательный костюм."
+    f "[hero_name], didn’t anyone teach you to knock? Though it’s not a big deal, it’s just a swimsuit."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:13
 translate english talk_to_freya_2dc497e1:
-
-    # f "Кстати как тебе?"
-    f "Кстати как тебе?"
+    f "By the way, how do I look?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:16
 translate english talk_to_freya_8625ecdb:
-
-    # p "Тебе очень идет!"
-    p "Тебе очень идет!"
+    p "It suits you perfectly!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:19
 translate english talk_to_freya_30cbb361:
-
-    # p "Что за стыд, могла бы прикрыться"
-    p "Что за стыд, могла бы прикрыться"
+    p "What a shame, you could’ve covered up."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:20
 translate english talk_to_freya_03ad2ba9:
-
-    # f "Ах так?"
-    f "Ах так?"
+    f "Oh, is that so?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:22
 translate english talk_to_freya_807b083e:
-
-    # f "Может быть так тебе больше понравится?"
-    f "Может быть так тебе больше понравится?"
+    f "Maybe you’ll like this better?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:26
 translate english talk_to_freya_2c4ccc83:
-
-    # p "Так определенно лучше!"
-    p "Так определенно лучше!"
+    p "That’s definitely better!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:28
 translate english talk_to_freya_13f3926b:
-
-    # f "Так и знала~"
-    f "Так и знала~"
+    f "I knew it~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:30
 translate english talk_to_freya_3a7e5f5f:
-
-    # p "Господи, ты меня не слышала?!"
-    p "Господи, ты меня не слышала?!"
+    p "Good Lord, didn’t you hear me?!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:31
 translate english talk_to_freya_5dc961b8:
-
-    # f "Хам!"
-    f "Хам!"
+    f "Rude!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:35
 translate english talk_to_freya_d7c4407c:
-
-    # "Больше такого не увидишь!"
-    "Больше такого не увидишь!"
+    "You won’t see that again!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:42
 translate english talk_to_freya_87289771:
-
-    # f "Ты выглядишь растерянным, милый~"
-    f "Ты выглядишь растерянным, милый~"
+    f "You look confused, darling~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:43
 translate english talk_to_freya_86ffd030:
-
-    # f "Но не волнуйся, у тебя есть выбор. Я не могу подсказывать слишком явно… но могу дать намёк."
-    f "Но не волнуйся, у тебя есть выбор. Я не могу подсказывать слишком явно… но могу дать намёк."
+    f "But don’t worry, you have a choice. I can’t give too obvious hints… but I can drop a clue."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:50
 translate english talk_to_freya_menu_0bf86d07:
-
-    # f "Дорогой, я понимаю, всё это очень сложно, но я верю в тебя!"
-    f "Дорогой, я понимаю, всё это очень сложно, но я верю в тебя!"
+    f "Dear, I understand it’s all very complicated, but I believe in you!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:51
 translate english talk_to_freya_menu_d49278a3:
-
-    # f "Я не могу вмешиваться в дела смертных, пойми."
-    f "Я не могу вмешиваться в дела смертных, пойми."
+    f "I can’t meddle in mortal affairs, you understand."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:52
 translate english talk_to_freya_menu_8b3ee94a:
-
-    # f "Хотя кажется я знаю, что тебе может помочь.."
-    f "Хотя кажется я знаю, что тебе может помочь.."
+    f "Though it seems I know something that might help you…"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:55
 translate english talk_to_freya_menu_b5b9b167:
-
-    # f "Я вручаю тебе магические письмена, в них будет написана вся важная для тебя информация."
-    f "Я вручаю тебе магические письмена, в них будет написана вся важная для тебя информация."
+    f "I’m giving you magical writings. They’ll contain all the important information you need."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:56
 translate english talk_to_freya_menu_a2c2fa42:
-
-    # f "А также всё, что с тобой происходит.."
-    f "А также всё, что с тобой происходит.."
+    f "As well as everything that’s happening to you…"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:57
 translate english talk_to_freya_menu_190033a9:
-
-    # f "Но не переживай, я не буду в них заглядывать."
-    f "Но не переживай, я не буду в них заглядывать."
+    f "But don’t worry, I won’t peek into them."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:58
 translate english talk_to_freya_menu_00a398d8:
-
-    # "Кнопка для просмотра текущей информации отображаются в правом верхнем углу"
-    "Кнопка для просмотра текущей информации отображаются в правом верхнем углу"
+    "The button to view current information is displayed in the top right corner."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:61
 translate english talk_to_freya_menu_7426acbf:
-
-    # p "Я так устал, помоги мне расстабиться, ты же богиня."
-    p "Я так устал, помоги мне расстабиться, ты же богиня."
+    p "I’m so tired, help me unwind. You’re a goddess, after all."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:62
 translate english talk_to_freya_menu_2ea23203:
-
-    # f "Дорогой, я вижу ты отлично потрудился."
-    f "Дорогой, я вижу ты отлично потрудился."
+    f "Dear, I see you’ve worked hard."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:65
 translate english talk_to_freya_menu_41d55fe7:
-
-    # f "Город — это место, где ты найдёшь защиту и, возможно, союзников."
-    f "Город — это место, где ты найдёшь защиту и, возможно, союзников."
+    f "The city is a place where you’ll find protection and, perhaps, allies."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:66
 translate english talk_to_freya_menu_eda5cca1:
-
-    # f "Но не думай, что там всё будет легко. Иногда за безопасность приходится платить…"
-    f "Но не думай, что там всё будет легко. Иногда за безопасность приходится платить…"
+    f "But don’t think it’ll all be easy there. Sometimes safety comes at a price…"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:69
 translate english talk_to_freya_menu_170fea00:
-
-    # f "Этот лес опасен. Без подготовки ты долго не проживёшь. Но… там можно найти редкие ресурсы и секреты."
-    f "Этот лес опасен. Без подготовки ты долго не проживёшь. Но… там можно найти редкие ресурсы и секреты."
+    f "This forest is dangerous. Without preparation, you won’t last long. But… you can find rare resources and secrets there."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:72
 translate english talk_to_freya_menu_c58297de:
-
-    # f "О, любопытный~? Каждая из них может стать твоим проводником в этом мире… или чем-то большим~"
-    f "О, любопытный~? Каждая из них может стать твоим проводником в этом мире… или чем-то большим~"
+    f "Oh, curious one~? Each of them could become your guide in this world… or something more~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:73
 translate english talk_to_freya_menu_df19df34:
-
-    # f "Но не забывай: твои поступки влияют на то, как они тебя воспринимают."
-    f "Но не забывай: твои поступки влияют на то, как они тебя воспринимают."
+    f "But don’t forget: your actions affect how they perceive you."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:76
 translate english talk_to_freya_menu_54156730:
-
-    # f "Ты всегда можешь обратиться ко мне, но твоя судьба зависит от тебя."
-    f "Ты всегда можешь обратиться ко мне, но твоя судьба зависит от тебя."
+    f "You can always turn to me, but your fate depends on you."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:77
 translate english talk_to_freya_menu_c1aed12b:
-
-    # f "До встречи!"
-    f "До встречи!"
+    f "See you later!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:105
 translate english freya_root_masturbate_25c46e74:
-
-    # "Вы каким-то образом появляетесь у тебя в комнате"
-    "Вы каким-то образом появляетесь у тебя в комнате"
+    "Somehow, you appear in your room."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:107
 translate english freya_root_masturbate_43aba676:
-
-    # "[f.name] не теряя времени опускается на колени, а одежда на вас пропадает"
-    "[f.name] не теряя времени опускается на колени, а одежда на вас пропадает"
+    "[f.name] wastes no time and kneels down as the clothes on both of you vanish."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:108
 translate english freya_root_masturbate_1f86a96a:
-
-    # "Вот она магия Богини? Поражает воображение.."
-    "Вот она магия Богини? Поражает воображение.."
+    "Is this the magic of a goddess? It’s mind-blowing…"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:112
 translate english freya_root_masturbate_86195d9c:
-
-    # f "О, дорогой [hero_name], как ты с таким вообще можешь ходить?"
-    f "О, дорогой [hero_name], как ты с таким вообще можешь ходить?"
+    f "Oh, dear [hero_name], how do you even walk around with this?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:113
 translate english freya_root_masturbate_3535d3f6:
-
-    # "[f.name] разглядывает твой член как младенец, которому подарили любимую игрушку"
-    "[f.name] разглядывает твой член как младенец, которому подарили любимую игрушку"
+    "[f.name] stares at your cock like a child who’s just been given their favorite toy."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:114
 translate english freya_root_masturbate_b662906e:
-
-    # f "М-можно я его поглажу?"
-    f "М-можно я его поглажу?"
+    f "C-can I touch it?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:115
 translate english freya_root_masturbate_9580de05:
-
-    # p "Богине можно всё и даже больше."
-    p "Богине можно всё и даже больше."
+    p "A goddess can do anything and more."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:116
 translate english freya_root_masturbate_111a7176:
-
-    # f "Спасибо~"
-    f "Спасибо~"
+    f "Thank you~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:120
 translate english freya_root_masturbate_805d78ed:
-
-    # f "Я не могу его даже обхватить, как ты мог прятать от меня такое сокровище?"
-    f "Я не могу его даже обхватить, как ты мог прятать от меня такое сокровище?"
+    f "I can’t even wrap my hand around it. How could you hide such a treasure from me?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:121
 translate english freya_root_masturbate_b8056c08:
-
-    # "[f.name] не может скрыть улыбку, она наслаждается происходящим"
-    "[f.name] не может скрыть улыбку, она наслаждается происходящим"
+    "[f.name] can’t hide her smile; she’s clearly enjoying this."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:122
 translate english freya_root_masturbate_3b464d7e:
-
-    # "Движения продолжаются с усиленным темпом"
-    "Движения продолжаются с усиленным темпом"
+    "Her movements pick up pace."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:123
 translate english freya_root_masturbate_109b968e:
-
-    # p "Господи, то есть, моя Богиня..Пожалуйста..Н-не останавливайся."
-    p "Господи, то есть, моя Богиня..Пожалуйста..Н-не останавливайся."
+    p "Lord—er, I mean, my Goddess… Please… D-don’t stop."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:124
 translate english freya_root_masturbate_bbf382a1:
-
-    # "Пульсации члена усилились"
-    "Пульсации члена усилились"
+    "The pulsing in your cock intensifies."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:128
 translate english freya_root_masturbate_4e98f8aa:
-
-    # "Ты уже готов выплеснуть весь свой стресс, полученный в новом мире"
-    "Ты уже готов выплеснуть весь свой стресс, полученный в новом мире"
+    "You’re ready to release all the stress you’ve built up in this new world."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:129
 translate english freya_root_masturbate_0c2c7a09:
-
-    # "[f.name], кажется, уже готова принять всё до последней капли"
-    "[f.name], кажется, уже готова принять всё до последней капли"
+    "[f.name] seems prepared to take every last drop."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:130
 translate english freya_root_masturbate_fbfd2dcc:
-
-    # "Ты видишь ее вожделение в глазах, она жаждет этого как можно скорее"
-    "Ты видишь ее вожделение в глазах, она жаждет этого как можно скорее"
+    "You see the lust in her eyes; she craves it as soon as possible."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:131
 translate english freya_root_masturbate_b0319c36:
-
-    # "Это было последней каплей, всё произошло быстрее, чем ты думал"
-    "Это было последней каплей, всё произошло быстрее, чем ты думал"
+    "That was the final straw—everything happens faster than you expected."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:132
 translate english freya_root_masturbate_8f306a66:
-
-    # "Самое время покрыть спермой прекрасную Богиню"
-    "Самое время покрыть спермой прекрасную Богиню"
+    "It’s time to cover the beautiful goddess in cum."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:136
 translate english freya_root_masturbate_4b09d98e:
-
-    # "Твое семя начинает выходить из члена, сильная струя, которая вот вот покроет всё ее тело"
-    "Твое семя начинает выходить из члена, сильная струя, которая вот вот покроет всё ее тело"
+    "Your seed starts to spurt out, a powerful stream about to coat her entire body."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:137
 translate english freya_root_masturbate_21b2eef0:
-
-    # "[f.name] не ожидала, но ждала этого с нетерпением"
-    "[f.name] не ожидала, но ждала этого с нетерпением"
+    "[f.name] didn’t expect it but eagerly awaited it."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:138
 translate english freya_root_masturbate_294c739a:
-
-    # "Румянец вновь проступил на её лице"
-    "Румянец вновь проступил на её лице"
+    "A blush spreads across her face again."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:142
 translate english freya_root_masturbate_b7a5bf81:
-
-    # f "Ох, [hero_name], о таком надо предупреждать~"
-    f "Ох, [hero_name], о таком надо предупреждать~"
+    f "Oh, [hero_name], you should’ve warned me about this~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:146
 translate english freya_root_masturbate_33c01ebf:
-
-    # "[f.name] старается поймать всё до последней капли"
-    "[f.name] старается поймать всё до последней капли"
+    "[f.name] tries to catch every last drop."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:150
 translate english freya_root_masturbate_437990e3:
-
-    # "Ротик богини открылся, она не упустит такое лакомство"
-    "Ротик богини открылся, она не упустит такое лакомство"
+    "The goddess’s mouth opens; she won’t miss out on such a treat."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:151
 translate english freya_root_masturbate_e6cdc44a:
-
-    # "[f.name] старается получить всё угощение"
-    "[f.name] старается получить всё угощение"
+    "[f.name] does her best to take it all in."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:152
 translate english freya_root_masturbate_3117a124:
-
-    # "Но неминуемо сперма попадает на ее лицо и челку"
-    "Но неминуемо сперма попадает на ее лицо и челку"
+    "But inevitably, some cum lands on her face and bangs."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:156
 translate english freya_root_masturbate_975b1ba5:
-
-    # "Лицо богини уже частично покрыто спермой, но ты не собираешься останавливаться"
-    "Лицо богини уже частично покрыто спермой, но ты не собираешься останавливаться"
+    "The goddess’s face is already partially covered in cum, but you’re not stopping."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:157
 translate english freya_root_masturbate_e60d77a6:
-
-    # p "Ах, [f.name], не закрывай ротик."
-    p "Ах, [f.name], не закрывай ротик."
+    p "Ah, [f.name], don’t close your mouth."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:158
 translate english freya_root_masturbate_9e58cfc5:
-
-    # "Твой член пульсирует, ты выпускаешь еще порцию"
-    "Твой член пульсирует, ты выпускаешь еще порцию"
+    "Your cock throbs as you release another load."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:159
 translate english freya_root_masturbate_c89c53c8:
-
-    # f "Аааааам"
-    f "Аааааам"
+    f "Aaaahh"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:163
 translate english freya_root_masturbate_ea4319ca:
-
-    # f "Ммм, еще?"
-    f "Ммм, еще?"
+    f "Mmm, more?"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:164
 translate english freya_root_masturbate_ebb81bd3:
-
-    # "Ты и не собирался останавливаться, и дальше поливаешь личико богини спермой"
-    "Ты и не собирался останавливаться, и дальше поливаешь личико богини спермой"
+    "You weren’t planning to stop, continuing to shower the goddess’s face with cum."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:165
 translate english freya_root_masturbate_9f1e80f1:
-
-    # "Из твоего члена выходит еще больше густой спермы, покрывая всё тело богини"
-    "Из твоего члена выходит еще больше густой спермы, покрывая всё тело богини"
+    "Even more thick cum spurts from your cock, covering her entire body."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:166
 translate english freya_root_masturbate_f2ce2756:
-
-    # "Она вздрагивает от каждой пульсации твоего члена"
-    "Она вздрагивает от каждой пульсации твоего члена"
+    "She trembles with every pulse of your cock."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:167
 translate english freya_root_masturbate_b6474ecf:
-
-    # f "Ах, больше, больше!"
-    f "Ах, больше, больше!"
+    f "Ah, more, more!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:168
 translate english freya_root_masturbate_0b43f868:
-
-    # p "А-ах, как прикажешь, [f.name]."
-    p "А-ах, как прикажешь, [f.name]."
+    p "A-ah, as you wish, [f.name]."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:169
 translate english freya_root_masturbate_9b9ad076:
-
-    # "Ты извергаешь еще одну огромную порцию спермы прямо на ее лицо"
-    "Ты извергаешь еще одну огромную порцию спермы прямо на ее лицо"
+    "You unleash another massive load of cum directly onto her face."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:170
 translate english freya_root_masturbate_4b1bfdd2:
-
-    # "Сперма течет по ее сочным розовым губам прямо на огромные груди и капает на пол"
-    "Сперма течет по ее сочным розовым губам прямо на огромные груди и капает на пол"
+    "The cum flows down her juicy pink lips, onto her huge breasts, and drips onto the floor."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:171
 translate english freya_root_masturbate_c757b5fb:
-
-    # f "А-ах"
-    f "А-ах"
+    f "A-ah"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:172
 translate english freya_root_masturbate_9b85df22:
-
-    # "[f.name] наслаждается теплым мужским семенем, стекающим по ее телу"
-    "[f.name] наслаждается теплым мужским семенем, стекающим по ее телу"
+    "[f.name] savors the warm seed trickling down her body."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:173
 translate english freya_root_masturbate_b32fc02e:
-
-    # "Поток спермы наконец ослабевает"
-    "Поток спермы наконец ослабевает"
+    "The stream of cum finally weakens."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:174
 translate english freya_root_masturbate_b28017b4:
-
-    # "Ты заканчиваешь обильное семяизвержение"
-    "Ты заканчиваешь обильное семяизвержение"
+    "You finish your abundant release."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:178
 translate english freya_root_masturbate_0e00ac58:
-
-    # "[f.name] облизывает губы, судя по ее выражению лица она очень довольна"
-    "[f.name] облизывает губы, судя по ее выражению лица она очень довольна"
+    "[f.name] licks her lips, her expression showing pure satisfaction."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:179
 translate english freya_root_masturbate_c8aa3960:
-
-    # f "Видишь, я вся теперь покрыта твоей спермой!"
-    f "Видишь, я вся теперь покрыта твоей спермой!"
+    f "See, I’m completely covered in your cum now!"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:180
 translate english freya_root_masturbate_50ef7316:
-
-    # p "Я-я..."
-    p "Я-я..."
+    p "I-I…"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:181
 translate english freya_root_masturbate_c73f3a6d:
-
-    # f "И мне очень понравилось~~"
-    f "И мне очень понравилось~~"
+    f "And I loved it~~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:182
 translate english freya_root_masturbate_e6d5997b:
-
-    # f "Заглядывай почаще и не забудь меня угостить~"
-    f "Заглядывай почаще и не забудь меня угостить~"
+    f "Come by more often and don’t forget to treat me~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:183
 translate english freya_root_masturbate_8fede7d6:
-
-    # "[f.name] поднимается, с ног до головы покрытая твоим семенем"
-    "[f.name] поднимается, с ног до головы покрытая твоим семенем"
+    "[f.name] stands up, covered head to toe in your seed."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:188
 translate english freya_root_masturbate_60949d43:
-
-    # f "Пожалуй мне пора возвращаться, буду ждать нашей новой встречи~"
-    f "Пожалуй мне пора возвращаться, буду ждать нашей новой встречи~"
+    f "I suppose it’s time for me to go. I’ll be looking forward to our next meeting~"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:190
 translate english freya_root_masturbate_c1bb656a:
-
-    # "[f.name] исчезает, а ты садишься на кровать с облегчением и чувством выполненого долга"
-    "[f.name] исчезает, а ты садишься на кровать с облегчением и чувством выполненого долга"
+    "[f.name] disappears, and you sit on the bed with a sense of relief and duty fulfilled."
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:195
 translate english freya_root_titfuck_59e03460:
-
-    # "IN PROGRESS"
     "IN PROGRESS"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:199
 translate english freya_root_blowjob_59e03460:
-
-    # "IN PROGRESS"
     "IN PROGRESS"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:203
 translate english freya_root_fuck_59e03460:
-
-    # "IN PROGRESS"
     "IN PROGRESS"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:207
 translate english freya_root_anal_59e03460:
-
-    # "IN PROGRESS"
     "IN PROGRESS"
 
 # game/locations/ruined_temple/freya_ruined_temple.rpy:211
 translate english freya_root_fetish_59e03460:
-
-    # "IN PROGRESS"
     "IN PROGRESS"
 
 translate english strings:
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:14
     old "Тебе идет"
-    new "Тебе идет"
+    new "It suits you"
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:14
     old "Прикройся"
-    new "Прикройся"
+    new "Cover up"
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:24
     old "Так лучше"
-    new "Так лучше"
+    new "That’s better"
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:48
     old "Помоги мне"
-    new "Помоги мне"
+    new "Help me"
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:48
     old "Спросить про город"
-    new "Спросить про город"
+    new "Ask about the city"
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:48
     old "Спросить про лес чудовищ"
-    new "Спросить про лес чудовищ"
+    new "Ask about the monster forest"
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:48
     old "Спросить про девушек, которых встретил"
-    new "Спросить про девушек, которых встретил"
+    new "Ask about the girls I’ve met"
 
     # game/locations/ruined_temple/freya_ruined_temple.rpy:48
     old "Закончить разговор"
-    new "Закончить разговор"
-
+    new "End the conversation"
