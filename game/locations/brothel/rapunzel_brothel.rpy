@@ -78,10 +78,6 @@ label rapunzel_root_menu:
             call r_root_masturbate
             $nextTime()
             jump brothel
-        "Грудями" if my_rapunzel.love >= 60:
-            call r_root_titfuck  
-            $nextTime()
-            jump brothel
         "Минет" if my_rapunzel.love >= 70:
             call r_root_blowjob  
             $nextTime()
@@ -282,23 +278,62 @@ label r_root_masturbate:
         return
 
     "[r.name] подзывает тебя к себе, чтобы ты заменил ее игрушку своим членом" 
-    scene bg r_dick_anal1 with dissolve   
+    scene bg r_dick_anal1 with vpunch 
     call hide_dialog
     r "О даа... Никакая игрушка с этим не сравнится"  
-
     "Узкий анус [r.name] жадно поглощает твой член" 
     "[r.name] улыбается"
+
+    
     scene bg r_dick_anal2 with dissolve
-    call hide_dialog
-    r "Да! Жесче! Долби меня как последнюю шлюху!"
-    "Ты наращиваешь темп с каждым толчком вгоняя свой член всё глубже"
-
+    pause .2
     scene bg r_dick_anal3 with dissolve
-    call hide_dialog
-    r "Ааааах.. Да, да, даааа!"
-
-    "Глаза [r.name] начинают слезиться, а соки струятся по ее упругим бедрам"
+    pause .2
     scene bg r_dick_anal4 with dissolve
+    pause .2
+    scene bg r_dick_anal3 with dissolve
+    pause .2
+    scene bg r_dick_anal2 with dissolve
+    pause .2
+    scene bg r_dick_anal3 with dissolve
+    pause .2
+    scene bg r_dick_anal4 with dissolve
+    pause .1
+    scene bg r_dick_anal3 with dissolve
+    pause .1
+    scene bg r_dick_anal4 with dissolve
+    pause .03
+    scene bg r_dick_anal3 with dissolve
+    pause .03
+    scene bg r_dick_anal4 with dissolve
+    pause .03
+    scene bg r_dick_anal3 with dissolve
+    pause .03
+    scene bg r_dick_anal4 with dissolve
+    pause .03
+    scene bg r_dick_anal3 with dissolve
+    pause .03
+    scene bg r_dick_anal4 with dissolve
+    pause .03
+    scene bg r_dick_anal3 with dissolve
+    pause .03
+    scene bg r_dick_anal4 with dissolve
+    pause .03
+    scene bg r_dick_anal3 with dissolve
+    pause .03
+    scene bg r_dick_anal4 with dissolve
+    pause .03
+    scene bg r_dick_anal3 with dissolve
+    pause .03
+    scene bg r_dick_anal4 with dissolve
+    pause .03
+    scene bg r_dick_anal3 with dissolve
+    pause .03
+    scene bg r_dick_anal4 with dissolve
+    call hide_dialog
+
+    scene bg r_dick_anal4 with dissolve
+    "Глаза [r.name] начинают слезиться, а соки струятся по ее упругим бедрам"
     call hide_dialog
     r "Долбли, добли меня еще сильнее!"
 
@@ -309,27 +344,27 @@ label r_root_masturbate:
     r "Еби меня, [hero_name], еще жесче!"
     
     mind "Как я могу ослушаться?"
-    scene bg r_dick_anal6 with dissolve
+    scene bg r_dick_anal6 with flash
     call hide_dialog
     "Ты целиком вгоняешь свой член в ее анус"
     r "Аааааааах!!!"
     r "Да! Да! Да! Да! Да!"
 
-    scene bg r_dick_anal7 with dissolve
+    scene bg r_dick_anal7 with flash
     call hide_dialog
     "Ты продолжаешь жестко ебать [r.name], кажется она начала терять сознание"
     
-    scene bg r_dick_anal8 with dissolve
+    scene bg r_dick_anal8 with flash
     call hide_dialog
     "[r.name] падает, без сознания, слезы всё еще текут по ее лицу, а задница всё еще приподнята"
     
     "Ты не можешь резко остановиться кончать, поэтому начинаешь кончать на ее прекрасное обнаженное тело"
     p "Аргх.."
-    scene bg r_dick_anal9 with dissolve
+    scene bg r_dick_anal9 with flash
     call hide_dialog
     "Сперма попала на тело [r.name] и стекает на простыни"
     
-    scene bg r_dick_anal10 with dissolve
+    scene bg r_dick_anal10 with flash
     call hide_dialog
     "Ты кончаешь еще больше, теперь все тело, задница и даже лицо [r.name] облиты твой спермой"
     "На лице [r.name] по прежнему красуется довольная улыбка"
@@ -557,13 +592,118 @@ label r_root_blowjob:
 
     return
 
-label r_root_titfuck:
-    "IN PROGRESS"
-    return
-
 label r_root_fuck:
-    "IN PROGRESS"
-    return
+    show r smile with dissolve
+    r "Ой, [hero_name], я так хотела тебе кое-что показать~ *хихикает*"
+    p "И что же ты придумала на этот раз?"
+    
+    scene bg r_fuck1 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[r.name] забирается к тебе на кровать."
+    r "А ты разве сам не догадываешься, что это может быть?~"
+    
+    scene bg r_fuck2 at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[r.name] наклоняется еще сильнее, ее платье задрается, открывая тебе вид на ее попку."
+    r "Нет никаких мыслей?"
+    p "!"
+    
+    scene bg r_play_pussy at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[r.name] плюхается на кровать, раздвигает ножки и неуверенно трогает свою киску, глядя на тебя с любопытством."
+    r "Я видела, как это делают... Смотри, я умею! *хихикает* Ой, а вдруг это слишком?"
+    p "Ты сама начала, давай дальше."
+    
+    scene bg r_blowjob_start at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "Она подползает к тебе, смотрит на твой член большими глазами и осторожно берёт его в рот, но тут же отдёргивается."
+    r "Ой, он такой большой! Это что, туда надо? *сосёт чуть-чуть* Мне страшно, но... прикольно!"
+    p "Не бойся, ты справишься."
+    
+    scene bg r_ass_tease at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "[r.name] встаёт, поворачивается попкой и медленно спускает трусики, подглядывая за тобой через плечо."
+    r "Смотри, какая я смелая! Хочешь потрогать? Только... не сильно, хорошо? *хихикает*"
+    
+    scene bg r_vaginal_start at Transform(zoom=1.5) with vpunch
+    call hide_dialog
+    "Ты хватаешь её за бёдра и врываешься в её киску. [r.name] вскрикивает, её маленькое тело дрожит от испуга."
+    r "Ой-ой! [hero_name], это что?! Оно такое... большое! Мне страшно! *хнычет* Но... делай ещё!"
+    
+    scene bg r_vaginal_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg r_vaginal_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg r_vaginal_3 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg r_vaginal_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_vaginal_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_vaginal_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_vaginal_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_vaginal_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg r_vaginal_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg r_vaginal_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg r_vaginal_3 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Она пищит и хнычет, но её глаза блестят от восторга, волосы колышутся в такт твоим движениям."
+    r "Ой, это... как в моих фантазиях! Но... оно такое тёплое и страшное!"
+    
+    scene bg r_vaginal_climax at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Ты кончаешь внутрь неё, и [r.name] взвизгивает, её лицо краснеет от удивления и страха."
+    r "Ай! Что это было?! Оно... течёт внутри! Ой, [hero_name], это так странно! *хихикает*"
+    
+    scene bg r_anal_start at Transform(zoom=1.5) with vpunch
+    call hide_dialog
+    "Ты переворачиваешь её и врываешься в её попку. [r.name] кричит, её ручки хватаются за волосы."
+    r "Ой-ой-ой! Это куда?! [hero_name], оно туда не влезет! Я боюсь! *шмыгает носом*"
+    
+    scene bg r_anal_1 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg r_anal_2 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg r_anal_3 at Transform(zoom=1.5) with dissolve
+    pause .2
+    scene bg r_anal_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_anal_1 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_anal_2 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_anal_3 at Transform(zoom=1.5) with dissolve
+    pause .1
+    scene bg r_anal_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg r_anal_3 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg r_anal_2 at Transform(zoom=1.5) with dissolve
+    pause .03
+    scene bg r_anal_3 at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Она дрожит и хнычет, но её голос дрожит от смеси страха и наивного удовольствия."
+    r "Ой... оно такое... тугое! Мне страшно, но... как интересно!"
+    
+    scene bg r_anal_climax at Transform(zoom=1.5) with flash
+    call hide_dialog
+    "Ты кончаешь в её попку, и [r.name] вскрикивает, её тело содрогается, она едва держится на ногах."
+    
+    scene bg r_after at Transform(zoom=1.5) with dissolve
+    call hide_dialog
+    "Ты вытаскиваешь член, и [r.name] падает на пол, её длинные волосы разметались вокруг, из неё вытекает сперма. Она тяжело дышит, глядя на тебя большими глазами."
+    r "Ой... [hero_name]... Это было... как в сказке, но... я так испугалась! *хнычет* И мне понравилось..."
+    p "Отдыхай, маленькая."
+    
+    call hide_dialog
+    "Ты встаёшь и уходишь, оставляя [r.name] лежать без сил, с её наивной улыбкой и дрожащими руками."
+    $nextTime()
+    jump brothel
 
 label r_root_anal:
     "IN PROGRESS"
