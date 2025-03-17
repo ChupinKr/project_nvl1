@@ -1,6 +1,10 @@
 ﻿################################################################################
 ## Инициализация
 ################################################################################
+init -1 python:
+    if not persistent.lang == "english":
+        if not persistent.lang == "russian":
+            persistent.lang = "english"
 
 init offset = -1
 define is_cheats = False
@@ -1191,6 +1195,11 @@ screen preferences():
                             label _("Screen mode")
                             textbutton _("Window") action Preference("display", "window")
                             textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                vbox:
+                    style_prefix "radio"
+                    label _("Язык")
+                    textbutton _("Русский") action SetVariable("persistent.lang", "russian"), Function(setLang, "russian")
+                    textbutton _("English") action SetVariable("persistent.lang", "english"), Function(setLang, "english")
 
                 if persistent.lang == "russian":
                     vbox:
@@ -1199,11 +1208,6 @@ screen preferences():
                         textbutton _("Всего текста") action Preference("skip", "toggle")
                         textbutton _("После выборов") action Preference("after choices", "toggle")
                         textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
-                    vbox:
-                        style_prefix "radio"
-                        label _("Язык")
-                        textbutton _("Русский") action SetVariable("persistent.lang", "russian"), Function(setLang, "russian")
-                        textbutton _("English") action SetVariable("persistent.lang", "english"), Function(setLang, "english")
                     vbox:
                         style_prefix "radio"
                         label _("Читы")
@@ -1216,11 +1220,6 @@ screen preferences():
                         textbutton _("All text") action Preference("skip", "toggle")
                         textbutton _("After choices") action Preference("after choices", "toggle")
                         textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-                    vbox:
-                        style_prefix "radio"
-                        label _("Language")
-                        textbutton _("Русский") action SetVariable("persistent.lang", "russian"), Function(setLang, "russian")
-                        textbutton _("English") action SetVariable("persistent.lang", "english"), Function(setLang, "english")
                     vbox:
                         style_prefix "radio"
                         label _("Cheats")

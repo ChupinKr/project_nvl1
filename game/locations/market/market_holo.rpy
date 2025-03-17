@@ -1489,7 +1489,6 @@ label h_root_anal_continue:
 
     scene bg holo_room with fade
     show h smile_naked_cummed with dissolve
-    "Юбка падает с бёдер [h.name]."
     "Она встаёт, её тело дрожит, но она гордо ухмыляется."
     h "Ну что, [hero_name], сделка удалась. Приноси ещё монет, если захочешь добавки."
     "Она подмигивает и уходит, оставляя тебя одного в комнате."

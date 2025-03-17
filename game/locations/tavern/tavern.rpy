@@ -28,7 +28,10 @@ label go_to_miku_stand:
     show m smile with dissolve
     if first_time_tavern:
         $ first_time_tavern = False
-        $ m.name = "Мику"
+        if persistent.lang == "russian":
+            $ m.name = "Мику"
+        if persistent.lang == "english":
+            $ m.name = "Miku"
         m @open_smile "Привет-привет! Добро пожаловать в таверну \"Звездные осколки\"!" with dissolve
         m @smile_closed_eyes "Я Мику, хозяйка этого местечка! Если что-то нужно – просто спрашивай, не стесняйся!" with dissolve 
     else:

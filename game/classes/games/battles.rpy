@@ -63,49 +63,120 @@ screen battle_qte():
     # 3. По истечении полного времени переходим к проверке ввода комбинации
     timer qte_time action Jump("check_qte")
 
-    # Таймер-бар, отображающий оставшееся время, располагается в нижней части экрана
-    bar:
-        align (0.5, 0.9)
-        xysize (300, 30)
-        # Анимированное значение от qte_bar до 100 за qte_time секунд
-        value AnimatedValue(qte_bar, 100, qte_time)
-        # Если включено предупреждение – меняем цвет заполненной части
-        if qte_warning:
-            left_bar Solid("#e02")
+    if renpy.variant("pc") or renpy.variant("web"):
+        # Таймер-бар, отображающий оставшееся время, располагается в нижней части экрана
+        bar:
+            align (0.5, 0.9)
+            xysize (300, 30)
+            # Анимированное значение от qte_bar до 100 за qte_time секунд
+            value AnimatedValue(qte_bar, 100, qte_time)
+            # Если включено предупреждение – меняем цвет заполненной части
+            if qte_warning:
+                left_bar Solid("#e02")
     
-    # Центральный блок – последовательность символов и ввод игрока
-    vbox:
-        align (0.5, 0.5)
+        # Центральный блок – последовательность символов и ввод игрока
+        vbox:
+            align (0.5, 0.5)
         
-        # Последовательность символов (комбинация противника)
-        hbox spacing 10:
-            for symbol in qte_sequence:
-                frame:
-                    xysize (50, 50)
-                    background "#4682B4"
-                    text symbol size 40 color "#FFFFFF"
-        
-        text "" size 30  # Пустой текст для отступа
-        
-        # Отображение ввода игрока
-        hbox spacing 10:
-            for i in range(len(qte_sequence)):
-                if i < len(qte_input):
+            # Последовательность символов (комбинация противника)
+            hbox spacing 10:
+                for symbol in qte_sequence:
                     frame:
                         xysize (50, 50)
-                        background "#FFFFFF"
-                        text qte_input[i] size 40 color "#4682B4"
-                else:
+                        background "#4682B4"
+                        text symbol size 40 color "#FFFFFF"
+        
+            text "" size 30  # Пустой текст для отступа
+        
+            # Отображение ввода игрока
+            hbox spacing 10:
+                for i in range(len(qte_sequence)):
+                    if i < len(qte_input):
+                        frame:
+                            xysize (50, 50)
+                            background "#FFFFFF"
+                            text qte_input[i] size 40 color "#4682B4"
+                    else:
+                        frame:
+                            xysize (50, 50)
+                            background "#FFFFFF"
+                            text "" size 40 color "#4682B4"
+    else:
+        # Таймер-бар, отображающий оставшееся время, располагается в нижней части экрана
+        bar:
+            align (0.5, 0.8)
+            xysize (500, 30)
+            # Анимированное значение от qte_bar до 100 за qte_time секунд
+            value AnimatedValue(qte_bar, 100, qte_time)
+            # Если включено предупреждение – меняем цвет заполненной части
+            if qte_warning:
+                left_bar Solid("#e02")
+        
+        # Центральный блок – последовательность символов и ввод игрока
+        vbox:
+            align (0.5, 0.2)
+            # Последовательность символов (комбинация противника)
+            hbox spacing 10:
+                for symbol in qte_sequence:
                     frame:
-                        xysize (50, 50)
-                        background "#FFFFFF"
-                        text "" size 40 color "#4682B4"
+                        xysize (100, 100)
+                        background "#4682B4"
+                        text symbol size 75 color "#FFFFFF"
+            
+            text "" size 30  # Пустой текст для отступа
+            
+            # Отображение ввода игрока
+            hbox spacing 10:
+                for i in range(len(qte_sequence)):
+                    if i < len(qte_input):
+                        frame:
+                            xysize (100, 100)
+                            background "#FFFFFF"
+                            text qte_input[i] size 75 color "#4682B4"
+                    else:
+                        frame:
+                            xysize (100, 100)
+                            background "#FFFFFF"
+                            text "" size 75 color "#4682B4"
+        vbox:
+            align (0.5, 0.5)
+            xsize 900
+            ysize 400
+            spacing 5
+            imagebutton:
+                xalign 0.5
+                yalign 0.95
+                idle "gui/button/arrowU.png"
+                action Function(add_qte_input, "↑")
+            hbox:
+                xsize 900
+                align (0.5, 0.5)
+                imagebutton:
+                    xalign 0.75
+                    yalign 0.5
+                    idle "gui/button/arrowR.png"
+                    action Function(add_qte_input, "→")
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    idle "gui/button/arrowD.png"
+                    action Function(add_qte_input, "↓")
+                imagebutton:
+                    xalign 0.25
+                    yalign 0.5
+                    idle "gui/button/arrowL.png"
+                    action Function(add_qte_input, "←")
+
 
     # Обработка нажатий клавиш для ввода комбинации
     key "K_UP" action Function(add_qte_input, "↑")
     key "K_DOWN" action Function(add_qte_input, "↓")
     key "K_LEFT" action Function(add_qte_input, "←")
     key "K_RIGHT" action Function(add_qte_input, "→")
+    # key "W" action Function(add_qte_input, "↑")
+    # key "S" action Function(add_qte_input, "↓")
+    # key "A" action Function(add_qte_input, "←")
+    # key "D" action Function(add_qte_input, "→")
 
 
 

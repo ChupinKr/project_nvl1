@@ -61,8 +61,12 @@ screen reactionGame:
         elif tick < 12:
             timer 0.1 action SetScreenVariable("reversal", False)
 
-        text "Твой счет: " + str(score) size 50 xoffset 10 yoffset 30
-        text "Целься в [key_value]%!!" at vibrate size 80 yoffset 100
+        if persistent.lang == "russian":
+            text "Твой счет: " + str(score) size 50 xoffset 10 yoffset 30
+            text "Целься в [key_value]%!!" at vibrate size 80 yoffset 100
+        if persistent.lang == "english":
+            text "Your score: " + str(score) size 50 xoffset 10 yoffset 30
+            text "Aim for [key_value]%!!" at vibrate size 80 yoffset 100
         #text "tick [tick]" size 80 yoffset 100
 
         bar:
@@ -104,7 +108,10 @@ label start_magic_training(intelligence):
                     call end_magic_game
                     "Success!"
                     return
-    show expression Text("Будь внимателен!") at truecenter as txt
+    if persistent.lang == "russian":
+        show expression Text("Будь внимателен!") at truecenter as txt
+    if persistent.lang == "english":
+        show expression Text("Be careful!") at truecenter as txt
     with dissolve
     pause
     hide txt

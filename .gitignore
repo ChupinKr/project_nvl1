@@ -5,4 +5,5 @@
 *.rpyb
 *.json
 *.txt
+*.keystore
 /game/saves
