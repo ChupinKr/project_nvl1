@@ -32,6 +32,10 @@ label find_elsa_menu:
             e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся." with dissolve
             call elsa_quests
             jump find_elsa_menu
+        "Награда" if isAnyQuestComplete(my_elsa):
+            e smile_shy "Оу, хочешь повторить?" with dissolve
+            call elsa_roots
+            jump find_elsa_menu
         "Отказаться от квеста" if isActualQuestOfCharacter("e"):
             p "Я откажусь от выполнения квеста."
             e smile "Ничего страшного, но если передумаешь - приходи!" with dissolve
@@ -55,6 +59,21 @@ label fail_elsa_training:
     p "Что? У меня же не вышло."
     e "Да, меня потрясло то, насколько ты необучаем."
     jump find_elsa_menu
+
+label elsa_roots:
+    menu:
+        "Минет" if isQuestComplete(quest_elsa_materials):
+            call blowjob_elsa
+            $nextTime()
+            "Ты выходишь в город"
+            jump city
+        "Мастурбация" if isQuestComplete(quest_elsa_crystall):
+            call elsa_masturbate_scene
+            $nextTime()
+            "Ты выходишь в город"
+            jump city
+        "Назад":
+            return
 
 label elsa_quests:
     menu:

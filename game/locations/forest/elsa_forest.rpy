@@ -243,6 +243,20 @@ label elsa_not_first_time:
             else:
                 e "Ах, тебе интересно? Хорошо, я покажу тебе путь."
             jump go_to_lib_with_elsa
+        
+        "Награда" if isAnyQuestComplete(my_elsa):
+            e smile_shy "Оу, хочешь повторить?" with dissolve
+            e "Иди за мной, [hero_name]."
+            call city_scene  
+            show e smile_shy with dissolve
+            scene bg magic_tower with fade
+            show e smile_shy with dissolve
+            p "..."
+            scene bg tower_training with fade
+            show e smile_shy with dissolve
+            e "Знаешь, мне здесь спокойнее всего..."
+            call elsa_roots
+            jump find_elsa_menu
 
         "Ты что-то ищешь в лесу?" if isNoQuestNow():
             p "Ты что-то ищешь в лесу?"

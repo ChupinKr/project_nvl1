@@ -35,9 +35,14 @@ init python:
             self.str_bonus = str_bonus  # Награда в стате силы
             self.intelligence_bonus = intelligence_bonus  # Награда в стате магии
             self.char_bonus = char_bonus  # Награда в стате харизмы
+        
+        def setUnrepeatable(self):
+            self.repeatable = False
+            return
 
     if persistent.lang == "russian":
-        no_quest = GirlQuest(whatToDo="Найди чем заняться", forWho="", forWhoShort="p", repeatable=True,
+        no_quest = GirlQuest(whatToDo="Найди чем заняться", forWho="", forWhoShort="p", 
+        repeatable=True,
         location="Надо поискать", countObj=0, 
         character_says=["Займись уже чем-нибудь"],
         req_love=0, req_str=0, req_intelligence=0, req_char=0, 
@@ -46,7 +51,8 @@ init python:
         )
 
         #elsa quests
-        quest_elsa_materials = GirlQuest(whatToDo="Собрать материалы", forWho="Эльза", forWhoShort="e", repeatable=True,
+        quest_elsa_materials = GirlQuest(whatToDo="Собрать материалы", forWho="Эльза", forWhoShort="e", 
+        repeatable=True,
         location="Лесная чаща", countObj=10, 
         character_says=["Хорошо, мне нужно несколько редких трав и минералов."
             ,"Ты можешь найти их в этих лесах."],
@@ -54,7 +60,8 @@ init python:
         reward_money=10, reward_character=10, 
         str_bonus=0, intelligence_bonus=5, char_bonus=0
         )
-        quest_elsa_crystall = GirlQuest(whatToDo="Добыть Кристалл зимнего эха", forWho="Эльза", forWhoShort="e", repeatable=True,
+        quest_elsa_crystall = GirlQuest(whatToDo="Добыть Кристалл зимнего эха", forWho="Эльза", forWhoShort="e", 
+        repeatable=True,
         location="Ледяные пещеры", countObj=1, 
         character_says=["Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума идти в эти пещеры."
             ,"Твоё тело мне пригодится~"],
@@ -64,7 +71,8 @@ init python:
         )
 
         #rapunzel quests
-        quest_rapunzel_mashrooms = GirlQuest(whatToDo="Собрать грибы", forWho="Рапунцель", forWhoShort="r", repeatable=True,
+        quest_rapunzel_mashrooms = GirlQuest(whatToDo="Собрать грибы", forWho="Рапунцель", forWhoShort="r", 
+        repeatable=True,
         location="Травянистая поляна", countObj=10, 
         character_says=["Есть такие грибы... Они обладают уникальными свойствами."
             ,"Если ты их найдешь, я буду просто в восторге!"],
@@ -72,7 +80,8 @@ init python:
         reward_money=10, reward_character=10, 
         str_bonus=0, intelligence_bonus=0, char_bonus=3
         )
-        quest_rapunzel_women = GirlQuest(whatToDo="Пригласить дам на подмену", forWho="Рапунцель", forWhoShort="r", repeatable=True,
+        quest_rapunzel_women = GirlQuest(whatToDo="Пригласить дам на подмену", forWho="Рапунцель", forWhoShort="r", 
+        repeatable=True,
         location="Темный переулок", countObj=3, 
         character_says=["О, это занятие мне по душе! Нам нужно больше красивых и опытных девушек."
             ,"Если приведешь мне парочку, я тебя щедро отблагодарю~"],
@@ -82,7 +91,8 @@ init python:
         )
         
         #nagatoro quests
-        quest_nagatoro_goblins = GirlQuest(whatToDo="Убить гоблинов", forWho="Нагаторо", forWhoShort="nag", repeatable=True,
+        quest_nagatoro_goblins = GirlQuest(whatToDo="Убить гоблинов", forWho="Нагаторо", forWhoShort="nag", 
+        repeatable=True,
         location="Лесная чаща", countObj=5, 
         character_says=["Гоблины не такие уж и слабые."
             ,"Ты уверен, что справишься?"],
@@ -90,14 +100,16 @@ init python:
         reward_money=15, reward_character=10, 
         str_bonus=2, intelligence_bonus=0, char_bonus=0
         )
-        quest_nagatoro_forest = GirlQuest(whatToDo="Зачистить лес", forWho="Нагаторо", forWhoShort="nag", repeatable=True,
+        quest_nagatoro_forest = GirlQuest(whatToDo="Зачистить лес", forWho="Нагаторо", forWhoShort="nag", 
+        repeatable=True,
         location="Лес монстров", countObj=5, 
         character_says=["Хороший выбор. Там полно опасных существ, будь осторожен."],
         req_love=0, req_str=10, req_intelligence=0, req_char=0, 
         reward_money=25, reward_character=10, 
         str_bonus=4, intelligence_bonus=0, char_bonus=0
         )
-        quest_nagatoro_bandits = GirlQuest(whatToDo="Убить бандитов", forWho="Нагаторо", forWhoShort="nag", repeatable=True,
+        quest_nagatoro_bandits = GirlQuest(whatToDo="Убить бандитов", forWho="Нагаторо", forWhoShort="nag", 
+        repeatable=True,
         location="Темный переулок", countObj=3, 
         character_says=["Банда действительно угрожает путникам."
             ,"Это задание стоит того, чтобы им заняться."],
@@ -406,29 +418,34 @@ init python:
             result = True
         return result
 
+    def getQuestListByWho(who):
+        result = []
+        if who == "ts":
+            result = [quest_tsunade_poison_tooth]
+        if who == "s":
+            result = [quest_sakura_materials]
+        if who == "r":
+            result = [quest_rapunzel_mashrooms,quest_rapunzel_women]
+        if who == "e":
+            result = [quest_elsa_materials, quest_elsa_crystall]
+        if who == "nag":
+            result = [quest_nagatoro_bandits, quest_nagatoro_forest, quest_nagatoro_goblins]
+        if who == "mer":
+            result = []
+        if who == "d":
+            result = []
+        if who == "h":
+            result = []
+        if who == "m":
+            result = []
+        if who == "eris":
+            result = [quest_eris_goblin_hunting, quest_eris_dragon_hunting, quest_eris_date]
+        return result
+        
     #вычисляет принят ли квест этого персонажа сейчас
     def isActualQuestOfCharacter(who):
         result = False
-        if who == "ts":
-            targetQuests = [quest_tsunade_poison_tooth]
-        if who == "s":
-            targetQuests = [quest_sakura_materials]
-        if who == "r":
-            targetQuests = [quest_rapunzel_mashrooms,quest_rapunzel_women]
-        if who == "e":
-            targetQuests = [quest_elsa_materials, quest_elsa_crystall]
-        if who == "nag":
-            targetQuests = [quest_nagatoro_bandits, quest_nagatoro_forest, quest_nagatoro_goblins]
-        if who == "mer":
-            targetQuests = []
-        if who == "d":
-            targetQuests = []
-        if who == "h":
-            targetQuests = []
-        if who == "m":
-            targetQuests = []
-        if who == "eris":
-            targetQuests = [quest_eris_goblin_hunting, quest_eris_dragon_hunting, quest_eris_date]
+        targetQuests = getQuestListByWho(who)
         if any(active_quest.name in q.name for q in targetQuests):
             result = True
         return result
@@ -440,8 +457,21 @@ init python:
         addChar(["char"], active_quest.char_bonus)
         addChar(["intelligence"], active_quest.intelligence_bonus)
         removeQuest(False)
-        quest.repeatable = False
+        quest.setUnrepeatable()
         return True
+
+    def isQuestComplete(quest):
+        if quest.repeatable == False:
+            return True
+        else:
+            return False
+
+    def isAnyQuestComplete(character):
+        targetQuests = getQuestListByWho(character.short_name)
+        if any(q.repeatable == False for q in targetQuests):
+            return True
+        else:
+            return False
 
     def getQuest(quest):
         global active_quest,notices
