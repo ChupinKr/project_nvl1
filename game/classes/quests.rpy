@@ -433,9 +433,9 @@ init python:
             result = True
         return result
 
-    def completeQuest(quest):
+    def completeQuest(quest, character):
         addMoney(active_quest.reward_money)
-        addLove(active_quest.forWhoShort, active_quest.reward_character)
+        character.addLove(active_quest.reward_character)
         addChar(["str"], active_quest.str_bonus)
         addChar(["char"], active_quest.char_bonus)
         addChar(["intelligence"], active_quest.intelligence_bonus)

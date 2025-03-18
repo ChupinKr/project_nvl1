@@ -21,7 +21,7 @@ label city:
             call city_scene 
             "[e.name] наверняка ждет, надо ее обрадовать"
             call quest_elsa_crystall_reward
-            $completeQuest(quest_elsa_crystall)
+            $completeQuest(quest_elsa_crystall, my_elsa)
             "Ты выходишь в город"
             jump city
         "Переночевать на скамейке" if isNight():

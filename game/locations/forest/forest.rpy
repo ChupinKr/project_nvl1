@@ -31,7 +31,7 @@ label forest_menu:
             call forest_scene 
             "[e.name] наверняка ждет, надо ее обрадовать"
             call forest_quest_elsa_materials_reward
-            $completeQuest(quest_elsa_materials)
+            $completeQuest(quest_elsa_materials, my_elsa)
             "Ты выходишь в город"
             jump city
 
