@@ -118,7 +118,7 @@ label surgency_tsunade_quests:
     show ts neutral with dissolve
     ts "Задания? Хм... У меня есть кое-что для тебя."
     menu:
-        "Охота за редким ингредиентом":
+        "Охота за редким ингредиентом" if not isQuestCompleted(quest_tsunade_poison_tooth):
                 ts "Мне нужен редкий алхимический ингредиент — клык ядовитой змеи. Можно достать его в глубине леса."
                 ts "Принеси его, и я заплачу тебе."
                 if isAbleQuest(quest_tsunade_poison_tooth, 0):
