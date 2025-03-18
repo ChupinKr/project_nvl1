@@ -62,12 +62,12 @@ label fail_elsa_training:
 
 label elsa_roots:
     menu:
-        "Минет" if isQuestComplete(quest_elsa_materials):
+        "Минет" if isQuestCompleted(quest_elsa_materials):
             call blowjob_elsa
             $nextTime()
             "Ты выходишь в город"
             jump city
-        "Мастурбация" if isQuestComplete(quest_elsa_crystall):
+        "Мастурбация" if isQuestCompleted(quest_elsa_crystall):
             call elsa_masturbate_scene
             $nextTime()
             "Ты выходишь в город"
@@ -77,7 +77,7 @@ label elsa_roots:
 
 label elsa_quests:
     menu:
-        "Собирать магические материалы":
+        "Собирать магические материалы" if not isQuestCompleted(quest_elsa_materials):
             p "Я готов собирать магические материалы."
             e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
             if isAbleQuest(quest_elsa_materials, my_elsa.love):
@@ -93,7 +93,7 @@ label elsa_quests:
             else:
                 e "Хотя нет, я вижу, что ты пока не готов, приходи, когда станешь умнее."
                 return
-        "Добыть Кристалл зимнего эха":
+        "Добыть Кристалл зимнего эха" if not isQuestCompleted(quest_elsa_crystall):
             e smirk "Моя наставница задала мне новое испытание, но я... не в настроении лезть в холод самой." with dissolve
             p "Испытание? Что на этот раз?"
             e smile_shy "Мне нужен 'Кристалл зимнего эха' из ледяных пещер." with dissolve

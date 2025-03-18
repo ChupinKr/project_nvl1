@@ -460,7 +460,7 @@ init python:
         quest.setUnrepeatable()
         return True
 
-    def isQuestComplete(quest):
+    def isQuestCompleted(quest):
         if quest.repeatable == False:
             return True
         else:
