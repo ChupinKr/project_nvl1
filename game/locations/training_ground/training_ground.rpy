@@ -65,7 +65,7 @@ label training_ground:
 
                 "[eris.name] бросается на тебя с резким выпадом!"
 
-                call start_battle(120, eris_str, eris.name, battle_location_training_ground)
+                call start_battle(120, my_eris.str, eris.name, 'return')
                 
                 if last_battle_win:
                     "Ты успеваешь отбить её удар и даже немного теснишь её назад."
