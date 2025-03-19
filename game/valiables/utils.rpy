@@ -21,10 +21,10 @@ transform left:
     xalign 0.0
     yalign 1.2
 transform right_bit:
-    xalign 0.75
+    xalign 0.6
     yalign 1.2
 transform right_mid:
-    xalign 0.9
+    xalign 0.75
     yalign 1.2
 transform right:
     xalign 1.0

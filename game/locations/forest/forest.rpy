@@ -27,11 +27,22 @@ label forest_menu:
         "Выполнить задание [e.name]" if active_quest.name in quest_elsa_materials.name:
             call forest_quest_elsa_materials
             "Ты выбираешься из [active_quest.location]"
-            $nextDay()
+            $nextTime()
             call forest_scene 
             "[e.name] наверняка ждет, надо ее обрадовать"
             call forest_quest_elsa_materials_reward
             $completeQuest(quest_elsa_materials, my_elsa)
+            "Ты выходишь в город"
+            jump city
+
+        "Выполнить задание [my_nag.name]" if active_quest.name in quest_nagatoro_goblins.name:
+            call forest_quest_nagatoro_goblins
+            "Ты выбираешься из [active_quest.location]"
+            $nextTime()
+            call forest_scene 
+            "[my_nag.name] наверняка ждет, надо ее обрадовать."
+            call forest_quest_nagatoro_goblins_reward
+            $completeQuest(quest_nagatoro_goblins, my_nag)
             "Ты выходишь в город"
             jump city
 
@@ -53,12 +64,14 @@ label look_around:
             jump visit_elsa_forest
         "Навестить [nag.name]" if not first_time_nagatoro and can_visit_nagatoro and not isNight():
             jump visit_nagatoro_forest
+        "Навестить [woblin.name]" if can_find_woblin and (isNight() or isMorning()):
+            jump visit_woblin_forest
         "Вернуться назад":
             jump forest
 
 label look_for_enemy:
     "Ты заходишь чуть глубже в лес, отходишь от протоптанной тропинки"
-    if strength >= 80:
+    if strength >= 50:
         "Ты настолько развил свои навыки, что можешь сам выслеживать добычу"
         menu:
             "Кого выследить?"
@@ -66,42 +79,42 @@ label look_for_enemy:
                 call start_battle(60, renpy.random.randint(1, 10) , "Слизь", 'scene')
                 if last_battle_win:
                     "Ты размазал слизьня"
-                    $ addChar(["str"],1)
+                    $ addChar(["str"],3)
                 $nextTime()
                 jump forest_menu
             "Рогатый заяц":
                 call start_battle(60, renpy.random.randint(1, 20) , "Рогатый заяц", 'scene') 
                 if last_battle_win:
                     "Ты прибил бедного зайку, тебе должно быть стыдно"
-                    $ addChar(["str"],2)
+                    $ addChar(["str"],4)
                 $nextTime()
                 jump forest_menu
             "Плотоядный олень":
                 call start_battle(100, renpy.random.randint(30, 50) , "Плотоядный олень", 'scene') 
                 if last_battle_win:
                     "Охота на оленя без оружия, неплохо, я справляюсь"
-                    $ addChar(["str"],3)
+                    $ addChar(["str"],5)
                 $nextTime()
                 jump forest_menu
             "Дикий кабан":
                 call start_battle(150, renpy.random.randint(40, 80) , "Дикий кабан", 'scene') 
                 if last_battle_win:
                     "Справился с диким кабаном, это успех!"
-                    $ addChar(["str"],4)
+                    $ addChar(["str"],6)
                 $nextTime()
                 jump forest_menu
             "Волк":
                 call start_battle(60, renpy.random.randint(90, 120) , "Волк", 'scene') 
                 if last_battle_win:
                     "Мне повезло справиться с волком Или я уже настолко силен?"
-                    $ addChar(["str"],5)
+                    $ addChar(["str"],7)
                 $nextTime()
                 jump forest_menu
             "Бурый медведь":
                 call start_battle(200, renpy.random.randint(120, 160) , "Бурый медведь", 'scene')
                 if last_battle_win:
                     "Это было очень опасно, хорошо, что я справился!"
-                    $ addChar(["str"],6)
+                    $ addChar(["str"],8)
                 $nextTime()
                 jump forest_menu
             'Разгневанный энт' if can_find_ent:
@@ -117,7 +130,7 @@ label look_for_enemy:
                                 call forest_scene 
                             "Отпустить":
                                 "Энт сбегает"
-                    $ addChar(["str"],7)
+                    $ addChar(["str"],10)
                 $nextTime()
                 jump forest_menu
     $rand_emeny = renpy.random.randint(1, 100) 

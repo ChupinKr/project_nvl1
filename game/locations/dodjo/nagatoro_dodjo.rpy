@@ -47,7 +47,7 @@ label nagatoro_dodjo_menu:
             call nagatoro_root_show  
             $nextTime()
             jump nagatoro_dodjo_menu
-        "Растираение грудными мыщцами" if my_nag.love >= 60: 
+        "Растираение грудными мыщцами" if isQuestCompleted(quest_nagatoro_goblins): 
             menu:
                 "INFO: В этой сцене пришлось сделать грудь [nag.name] значительно больше."
                 "Продолжить":
@@ -382,8 +382,8 @@ label nagatoro_root_show:
     jump city
 
 label nagatoro_root_titfuck:
-    nag @grin "Уже не терпится, да?"
-    hide nag grin with dissolve
+    nag grin "Уже не терпится, да?" with dissolve
+    hide nag with dissolve
     "[nag.name] вышла из комнаты"
     mind "Наверно она пошла переодеваться?"
     show nag grin_battle6 with dissolve

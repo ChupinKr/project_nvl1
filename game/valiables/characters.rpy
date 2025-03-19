@@ -43,7 +43,6 @@ init python:
                 customNotify(str(self.name) + "'s sympathy has diminished")
             return
 
-
     if persistent.lang == "english":
         my_freya = MyCharacter("Freya", 0, 10000, 
         "images/characters/freya_ch/f smile.png", 
@@ -221,18 +220,26 @@ init:
         define d = Character('Darkness', color="#c0c0c0", image='d')
         define eris = Character('Eiris', color="#7B1113", image='eris')
         ## Some guys
+        define old_woman = Character('Old woman', color="#ffaaaa")
         define guy1 = Character('Guy 1', color="#ffaaaa")
         define guy2 = Character('Guy 2', color="#ffaaaa")
         define guy3 = Character('Guy 3', color="#ffaaaa")
         define sg = Character('Muddy guy', color="#ffaaaa") #shady guy
 
-        
+        define goblin = Character('Goblin', color="#66cc33")
+        define hopgoblin = Character('Hop-goblin', color="#66cc33")
         define korg = Character('Korg', color="#ffaaaa")
         define korg_str = 300
-        #quest persns
+
+        #quest fuckable enemies
         define ent = Character('Ent Girl', color="#013220", image='ent')
+        define woblin = Character('Goblin-woman', color="#66cc33", image='woblin')
+
+        #quest persns
         define emilia = Character("Emilia", color="#dda0dd", image='emilia')
         define ramiris = Character('Ramiris', color="#FFBA00", image='ramiris')
+        define onna = Character("Onna", color="#FAD7A0", who_outlines=[(2, "#5D4037")], image='onna')
+
     elif persistent.lang == "russian":
         define r = Character("Рапунцель", color="#FFBA00", image='r')  # Золотистый (блондинка)
         define e = Character("Эльза", color="#87CEFA", image='e')  # Светло-голубой (платиновая блондинка)
@@ -248,15 +255,22 @@ init:
         define d = Character('Даркнесс', color="#c0c0c0", image='d')
         define eris = Character('Эрис', color="#7B1113", image='eris')
         ## Some guys
+        define old_woman = Character('Старая щенщина', color="#ffaaaa")
         define guy1 = Character('Парень 1', color="#ffaaaa")
         define guy2 = Character('Парень 2', color="#ffaaaa")
         define guy3 = Character('Парень 3', color="#ffaaaa")
         define sg = Character('Мутный тип', color="#ffaaaa") #shady guy
 
-        
+        define goblin = Character('Гоблин', color="#66cc33")
+        define hopgoblin = Character('Хоп-гоблин', color="#66cc33")
         define korg = Character('Корг', color="#ffaaaa")
         define korg_str = 300
-        #quest persns
+
+        #quest fuckable enemies
+        define woblin = Character('Женщина-гоблин', color="#66cc33", image='woblin')
         define ent = Character('Девушка Энт', color="#013220", image='ent')
+        
+        #quest persns
         define emilia = Character("Эмилия", color="#dda0dd", image='emilia')
         define ramiris = Character('Рамирис', color="#FFBA00", image='ramiris')
+        define onna = Character("Онна", color="#FAD7A0", who_outlines=[(2, "#5D4037")], image='onna')

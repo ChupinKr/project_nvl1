@@ -274,7 +274,8 @@ init python:
             )
 
         # Nagatoro quests
-        quest_nagatoro_goblins = GirlQuest(whatToDo="Kill goblins", forWho="Nagatoro", forWhoShort="nag", repeatable=True,
+        quest_nagatoro_goblins = GirlQuest(whatToDo="Kill goblins", forWho="Nagatoro", forWhoShort="nag", 
+        repeatable=True,
             location="Forest Thicket", countObj=5, 
             character_says=["Goblins aren’t as weak as they seem."
                 ,"Are you sure you can handle it?"],
@@ -282,14 +283,16 @@ init python:
             reward_money=15, reward_character=10, 
             str_bonus=2, intelligence_bonus=0, char_bonus=0
             )
-        quest_nagatoro_forest = GirlQuest(whatToDo="Clear the forest", forWho="Nagatoro", forWhoShort="nag", repeatable=True,
+        quest_nagatoro_forest = GirlQuest(whatToDo="Clear the forest", forWho="Nagatoro", forWhoShort="nag", 
+        repeatable=True,
             location="Monster Forest", countObj=5, 
             character_says=["Good choice. It’s full of dangerous creatures, so be careful."],
             req_love=0, req_str=10, req_intelligence=0, req_char=0, 
             reward_money=25, reward_character=10, 
             str_bonus=4, intelligence_bonus=0, char_bonus=0
             )
-        quest_nagatoro_bandits = GirlQuest(whatToDo="Kill bandits", forWho="Nagatoro", forWhoShort="nag", repeatable=True,
+        quest_nagatoro_bandits = GirlQuest(whatToDo="Kill bandits", forWho="Nagatoro", forWhoShort="nag", 
+        repeatable=True,
             location="Dark Alley", countObj=3, 
             character_says=["That gang’s really a threat to travelers."
                 ,"This task is worth taking on."],
