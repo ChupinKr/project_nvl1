@@ -78,19 +78,19 @@ label hospital_sakura_quests:
     s "Ты хочешь помочь? Хорошо, у нас в больнице всегда есть работа."
     
     menu:
-        "Задание на сбор трав" if not isQuestCompleted(quest_sakura_materials):
-            s smile_closed_eyes "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу." with dissolve
-            if isAbleQuest(quest_sakura_materials, my_sakura.love):
-                s smile_shy "За хороший набор я неплохо заплачу." with dissolve
-                menu:
-                    "Квест: Задание на сбор трав"
-                    "Принять квест":
-                        s smile_shy "Будь осторожен, в лесу могут быть монстры." with dissolve
-                        $ getQuest(quest_sakura_materials)
-                    "Не принимать квест":
-                        s @angry "А мог бы и помочь, теперь придется самой всё собирать."
-            else:
-                s neutral "Подожди, я вижу, ты пока не подходишь для этой работы, возвращайся, когда станешь сильнее." with dissolve
+        # "Задание на сбор трав" if not isQuestCompleted(quest_sakura_materials):
+        #     s smile_closed_eyes "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу." with dissolve
+        #     if isAbleQuest(quest_sakura_materials, my_sakura.love):
+        #         s smile_shy "За хороший набор я неплохо заплачу." with dissolve
+        #         menu:
+        #             "Квест: Задание на сбор трав"
+        #             "Принять квест":
+        #                 s smile_shy "Будь осторожен, в лесу могут быть монстры." with dissolve
+        #                 $ getQuest(quest_sakura_materials)
+        #             "Не принимать квест":
+        #                 s @angry "А мог бы и помочь, теперь придется самой всё собирать."
+        #     else:
+        #         s neutral "Подожди, я вижу, ты пока не подходишь для этой работы, возвращайся, когда станешь сильнее." with dissolve
         "Отказаться":
             s neutral "Если передумаешь, только спроси" with dissolve
     return

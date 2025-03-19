@@ -261,20 +261,21 @@ label rapunzel_forest:
             jump forest
 
 label rapunzel_quests: 
-    menu:
-        "Собрать особые грибы" if not isQuestCompleted(quest_rapunzel_mashrooms):
-            r "Есть такие грибы... Они обладают уникальными свойствами."
-            if isAbleQuest(quest_rapunzel_mashrooms, my_rapunzel.love):
-                r "Если ты их найдешь, я буду просто в восторге!"
-                $ getQuest(quest_rapunzel_mashrooms)
-            else:
-                r "Хотя нет, думаю ты пока не готов выполнить это задание."
-        "Приглашать девушек подменить на работе" if not isQuestCompleted(quest_rapunzel_women):
-            r "Нам нужно больше красивых и опытных девушек, но к сожалению работать некому."
-            r "Если приведешь мне парочку, я тебя щедро отблагодарю~"
-            $ getQuest(quest_rapunzel_women)
-        "Я передумал":
-            r "Ладно, но постарайся больше не отказывать девушкам в просьбах~~"
+    "IN PROGRESS"
+    # menu:
+    #     "Собрать особые грибы" if not isQuestCompleted(quest_rapunzel_mashrooms):
+    #         r "Есть такие грибы... Они обладают уникальными свойствами."
+    #         if isAbleQuest(quest_rapunzel_mashrooms, my_rapunzel.love):
+    #             r "Если ты их найдешь, я буду просто в восторге!"
+    #             $ getQuest(quest_rapunzel_mashrooms)
+    #         else:
+    #             r "Хотя нет, думаю ты пока не готов выполнить это задание."
+    #     "Приглашать девушек подменить на работе" if not isQuestCompleted(quest_rapunzel_women):
+    #         r "Нам нужно больше красивых и опытных девушек, но к сожалению работать некому."
+    #         r "Если приведешь мне парочку, я тебя щедро отблагодарю~"
+    #         $ getQuest(quest_rapunzel_women)
+    #     "Я передумал":
+    #         r "Ладно, но постарайся больше не отказывать девушкам в просьбах~~"
     return
 
 
