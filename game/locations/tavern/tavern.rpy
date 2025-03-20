@@ -170,20 +170,12 @@ label talk_miku_info:
         m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"
         m "*Описание того, как найти библиотеку*"
         $ updateCanVisit("lib", True)
-    elif my_miku.love >= 20 and not canVisit("tg"):
+    elif my_miku.love >= 25 and not canVisit("tg"):
         m "Ты мне нравишься!"
         m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
         m "*Описание того, как попасть на тренировочную площадку*"
         m "Если хочешь стать сильнее – тебе туда!"
         $ updateCanVisit("tg", True)
-    elif my_miku.love >= 30 and not canVisit("bar"):
-        m "Ты определённо мой типаж!"
-        m "В городе есть **закрытый бар**, куда пускают только своих."
-        m "Там можно найти очень... полезных знакомств!"
-        m "*Описание того, как найти закрытый бар*"
-        m "Скажи, что ты от меня и тебя пропустят."
-        m "Ах да, бар по утрам не работает, не забудь."
-        $ updateCanVisit("bar", True)
     elif my_miku.love >= 40 and not shoot_tits:
         m "Хммм, дай ка подумать.."
         show m smile_closed_eyes with dissolve
@@ -261,6 +253,7 @@ label talk_miku_info:
         show m smile_no_top with dissolve
         m "Я долго думала, как тебе отплатить за доброту.."
         m "Думаю, тебе понравится~"
+        hide m with dissolve
         "[m.name] встает на колени и снимает с тебя штаны"
         call m_root_tavern_blowjob
         scene bg bar_counter with fade
