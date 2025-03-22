@@ -329,9 +329,11 @@ label battle_escape:
             mind "О нет, адреналин прошел"
             "Ты не чувствуешь ничего кроме боли, от боли ты падаешь в обморок"
             $ nextDay()
+            hide screen battle_hp_bars
             jump surgency_tsunade_cure
         else:
             "Тебе больно, но это терпимо, само пройдет"
+            hide screen battle_hp_bars
             jump escape_battle
     else:
         "Противник такого уровня тебя не отпустит, ты пропустил удар"
