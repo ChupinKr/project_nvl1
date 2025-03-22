@@ -588,12 +588,12 @@ label visit_woblin_forest:
     return
 
 label visit_woblin_forest_menu:
-    $woblins_money = (woblin_from_day - (day + 2)) * 10
+    $woblins_money = (day - woblin_from_day) * 10
     menu:
         "Что я могу для вас сделать?"
         "Что удалось добыть?" if woblin_from_day > 0:
             p "Удалось добыть что-то для меня?"
-            if woblin_from_day >= day + 2:
+            if woblin_from_day < day + 2:
                 woblin happy_say "Конечно! Вот!" with dissolve
                 show woblin happy with dissolve
                 "[woblin.name] показывает вам [woblins_money] монет."
