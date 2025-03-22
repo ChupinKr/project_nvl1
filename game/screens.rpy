@@ -713,8 +713,7 @@ screen navigation():
             if persistent.lang == "english":
                 textbutton _("Help") action ShowMenu("help")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-            textbutton _("Boosty") action OpenURL("https://boosty.to/Ko2ed/")
+        textbutton _("Boosty") action OpenURL("https://boosty.to/Ko2ed/")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             textbutton _("Patreon") action OpenURL("https://patreon.com/c/Ko2ed/")
