@@ -4,7 +4,7 @@ label quest_elsa_crystall_start:
     "[e.name] говорила, что надо идти на север... Хорошо."
     "Буквально за Магической башней, на Севере ты увидел расположены обмерзшие пещены"
     p "Скорее всего имено сюда мне и нужно."
-    scene bg ice_caves at Transform(zoom=1.5) with fade
+    call ice_caves_scene
     "Ты заходишь в ледяные пещеры, и холод пробирает до костей."
     mind "Там проход! Кажется я слышу оттуда какие-то звуки."
     "Ты продвигаешься глубже в пещеры."
@@ -39,6 +39,7 @@ label quest_elsa_crystall_start:
             "Ты успешно проходишь мимо Голема, пока он ищет источник шума"
 
     "Ты продвигаешься дальше, в глубь пещеры"
+    play music "audio/arctic_wind.ogg" fadein 5.0 loop
     scene bg ice_cave_main at Transform(zoom=1.5)  with fade
     emilia "Кто нибудь! Помогите мне!"
     "Ты слышишь, как кто-то зовет на помощь."
@@ -58,7 +59,7 @@ label quest_elsa_crystall_start:
 
 # Вариант 1: Освободить без условий
 label free_emilia:
-    scene bg ice_caves at Transform(zoom=1.5)  with fade
+    call ice_caves_scene
     if strength > 50:
         "Ты подходишь к ней и разбиваешь их ударом или магией."
         "[emilia.name] приводит себя в порядок"
@@ -204,7 +205,7 @@ label deal_with_emilia:
     menu:
         "Освободить [emilia.name]":
             $my_freya.addLove(10)
-            scene bg ice_caves at Transform(zoom=1.5) with fade
+            call ice_caves_scene
             if strength > 50:
                 "Ты подходишь к ней и одним сильным ударом разбиваешь ледяные цепи."
                 "[emilia.name] потирает запястья, приводя себя в порядок."

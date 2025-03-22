@@ -2,8 +2,7 @@ default first_time_hospital = True
 default first_time_sakura = True
 
 label hospital:
-    scene bg hospital with fade
-    play music "audio/hospital_theme.mp3"
+    call hospital_scene
 
     if isNight():
         "Ты видишь надпись: Больница закрыта, приходите утром."

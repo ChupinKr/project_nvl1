@@ -219,6 +219,8 @@ label start_battle(enemy_hp, enemy_str, name, loc):
     if persistent.lang == "english":
         show expression Text("The battle is about to begin, get ready!") at truecenter as txt
     with dissolve
+    if renpy.music.get_playing("music") != "audio/fight.ogg":
+        play music "audio/fight.ogg" fadein 5.0 loop
     pause
     hide txt
     show screen battle_hp_bars
@@ -303,6 +305,8 @@ label battle_win:
     "Противник побежден!"
     $ last_battle_win = True
     $ strength += 2 * strength_mod
+    if renpy.music.get_playing("music") == "audio/fight.ogg":
+        stop music fadeout 5.0
     return
 
 label battle_loss:
@@ -310,6 +314,8 @@ label battle_loss:
     "Ты проиграл бой, возможно стоило улучшить свои навыки перед тем, как вступать в бой с серьезным противником"
     $ last_battle_win = False
     "Ты падаешь без сознания"
+    if renpy.music.get_playing("music") == "audio/fight.ogg":
+        stop music fadeout 5.0
     $ nextDay()
     jump surgency_tsunade_cure
     return

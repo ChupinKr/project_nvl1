@@ -82,18 +82,29 @@ init python:
 
 label forest_scene:
     if isMorning():
+        if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
+            play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
         scene bg forest_morning with fade
     elif isDay():
+        if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
+            play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
         scene bg forest_day with fade
     elif isEvening():
+        if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
+            play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
         scene bg forest_evening with fade
     elif isNight():
+        if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
+            play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
         scene bg forest_night with fade
     else:
         scene bg forest_day with fade
     return
 
 label tavern_scene:
+    play sound "audio/steps.ogg"
+    if renpy.music.get_playing("music") != "audio/tavern_music.ogg":
+        play music "audio/tavern_music.ogg" fadein 5.0 loop
     if isMorning():
         scene bg tavern_morning with fade
     elif isDay():
@@ -107,29 +118,47 @@ label tavern_scene:
     return
 
 label city_scene(bgc = None):
+    play sound "audio/steps.ogg"
     if bgc:
         if bgc == "morning":
+            if renpy.music.get_playing("music") != "audio/city_day.ogg":
+                play music "audio/city_day.ogg" fadein 5.0 loop
             scene bg city_morning with fade
         elif bgc == "day":
+            if renpy.music.get_playing("music") != "audio/city_day.ogg":
+                play music "audio/city_day.ogg" fadein 5.0 loop
             scene bg city_day with fade
         elif bgc == "evening":
+            if renpy.music.get_playing("music") != "audio/city_night.ogg":
+                play music "audio/city_night.ogg" fadein 5.0 loop
             scene bg city_evening with fade
         elif bgc == "night":
+            if renpy.music.get_playing("music") != "audio/city_night.ogg":
+                play music "audio/city_night.ogg" fadein 5.0 loop
             scene bg city_night with fade
         return
     if isMorning():
+        if renpy.music.get_playing("music") != "audio/city_day.ogg":
+            play music "audio/city_day.ogg" fadein 5.0 loop
         scene bg city_morning with fade
     elif isDay():
+        if renpy.music.get_playing("music") != "audio/city_day.ogg":
+            play music "audio/city_day.ogg" fadein 5.0 loop
         scene bg city_day with fade
     elif isEvening():
+        if renpy.music.get_playing("music") != "audio/city_night.ogg":
+            play music "audio/city_night.ogg" fadein 5.0 loop
         scene bg city_evening with fade
     elif isNight():
+        if renpy.music.get_playing("music") != "audio/city_night.ogg":
+            play music "audio/city_night.ogg" fadein 5.0 loop
         scene bg city_night with fade
     else:
         scene bg city_day with fade
     return
 
 label market_scene:
+    play sound "audio/steps.ogg"
     if isMorning():
         scene bg market_morning with fade
     elif isDay():
@@ -156,6 +185,7 @@ label ruined_temple_scene:
     return
 
 label training_ground_scene:
+    play sound "audio/steps.ogg"
     if isMorning():
         scene bg training_ground_morning with fade
     elif isDay():
@@ -166,4 +196,25 @@ label training_ground_scene:
         scene bg training_ground_night with fade
     else:
         scene bg training_ground_day with fade
+    return
+
+label magic_tower_scene:
+    play sound "audio/steps.ogg"
+    if renpy.music.get_playing("music") != "audio/mt_sound.ogg":
+        play music "audio/mt_sound.ogg" fadein 5.0 loop
+    scene bg magic_tower with fade
+    return
+
+label ice_caves_scene:
+    play sound "audio/steps.ogg"
+    if renpy.music.get_playing("music") != "audio/arctic_wind.ogg":
+        play music "audio/arctic_wind.ogg" fadein 5.0 loop
+    scene bg ice_caves at Transform(zoom=1.5) with fade
+    return
+
+label hospital_scene:
+    play sound "audio/steps.ogg"
+    if renpy.music.get_playing("music") != "audio/hospital_sound.ogg":
+        play music "audio/hospital_sound.ogg" fadein 5.0 loop
+    scene bg hospital with fade
     return

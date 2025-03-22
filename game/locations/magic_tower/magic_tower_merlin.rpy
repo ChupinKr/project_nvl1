@@ -2,7 +2,7 @@ define first_mer_root = True
 define can_go_mer = True
 # Поиск Мерлин (шанс зависит от intelligence)
 label find_merlin:
-    scene bg magic_tower with fade
+    call magic_tower_scene
 
     "Я отправился на поиски Мерлин. Она не любит, когда её беспокоят, но, возможно, мне повезёт."
 
@@ -116,7 +116,7 @@ label merlin_training:
     return
 
 label mer_root:
-    scene bg magic_tower with fade
+    call magic_tower_scene
     show mer smirk at center with dissolve
     mer smirk "Самое время дать тебе приватные уроки."
     if first_mer_root:

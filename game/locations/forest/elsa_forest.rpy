@@ -249,7 +249,7 @@ label elsa_not_first_time:
             e "Иди за мной, [hero_name]."
             call city_scene  
             show e smile_shy with dissolve
-            scene bg magic_tower with fade
+            call magic_tower_scene
             show e smile_shy with dissolve
             p "..."
             scene bg tower_training with fade

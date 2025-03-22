@@ -17,7 +17,7 @@ label magic_tower_first_visit:
 
     #show e neutral at center with dissolve
     e "Не зевай. Идём внутрь."
-    scene bg magic_tower with fade
+    call magic_tower_scene
 
     "Мы вошли внутрь."
     "Вокруг множество непонятного, не поддающегося логике, лестицы ведущие в никуда, и множество развилок путей." 
@@ -124,7 +124,7 @@ label magic_tower_first_visit:
 
 label magic_tower_with_elsa_no_blessing:
     hide e
-    scene bg magic_tower with fade
+    call magic_tower_scene
     "Я оказался у входа в магическую башню. [e.name] шла рядом, не скрывая своего недовольства."
     p "Неужели я так плох?"
     e "Ты даже хуже, чем я ожидала. Но не волнуйся, у нас ещё есть время тебя исправить."
@@ -163,7 +163,7 @@ label magic_tower_alone:
         else:
             "Ты не можешь преодолеть барьер"
             jump city
-    scene bg magic_tower with fade
+    call magic_tower_scene
 
     "Я стоял перед величественной магической башней. В отличие от прошлого раза, теперь Эльзы рядом не было."
 
@@ -189,7 +189,7 @@ label magic_tower_alone:
     jump magic_tower_hub
 
 label magic_tower_hub:
-    scene bg magic_tower with fade
+    call magic_tower_scene
     hide e with dissolve 
     hide mer with dissolve 
     "Я могу исследовать магическую башню, изучая магию и выполняя задания наставницы."
