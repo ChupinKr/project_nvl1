@@ -7,9 +7,10 @@ label find_merlin:
     "Я отправился на поиски Мерлин. Она не любит, когда её беспокоят, но, возможно, мне повезёт."
 
     $ find_chance = intelligence  # Чем выше intelligence, тем выше шанс
-    $ roll = renpy.random.randint(1, 300)
+    $ roll = renpy.random.randint(1, 100)
 
     if roll <= find_chance and can_go_mer:
+        scene bg magic_library1 with fade
         show mer smirk at center with dissolve
         mer "Ты меня нашёл. Вопрос в том, зачем."
         jump merlin_menu
@@ -54,7 +55,7 @@ label mer_teach:
     call merlin_training
     if last_magic_knowlenge_win:
         p "Да, без проблем расскажу"
-        if intelligence >= 150:
+        if intelligence >= 50:
             "Ты слово в слово пересказываешь всё, что рассказала [mer.name], она чувствует, что время было потрачено не зря и проникается к тебе уважением."
             mer @surprised "Удивительно, а ты не безнадежен!"
             $addChar(["intelligence"],5)
@@ -71,9 +72,11 @@ label mer_teach:
                         p "Сейчас я занят, может чуть позже?"
                         mer annoyed "Раз посмел прийти в магическую башню - у тебя не должно оставаться приоритетов выше изучения магии!"
                         "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+                        play sound "audio/magic_dissapear.ogg"
                         jump magic_tower_hub
             else:
                 "Урок закончился и ты очутился в середине развилки магической башни"
+                play sound "audio/magic_dissapear.ogg"
                 jump magic_tower_hub
         else:
             $customNotify("Недостаточно интеллекта")
@@ -84,9 +87,10 @@ label mer_teach:
             $addChar(["intelligence"],2)
             mer @sigh "Большего от тебя и не ожидала, всё, я занята, уходи!"
             "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+            play sound "audio/magic_dissapear.ogg"
             jump magic_tower_hub
     else:
-        if intelligence >= 100:
+        if intelligence >= 25:
             p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
             "[mer.name] рассказывает тебе ту часть, которую сразу у тебя не удалось понять"
             $my_merlin.addLove(5)
@@ -96,6 +100,7 @@ label mer_teach:
             mer "Если вновь появятся вопросы - можешь найти меня и я постараюсь помочь."
             p "Хорошо, еще я бы хотел..."
             "Не успев договорить, ты перемещаешься в центральную развилку магической башни"
+            play sound "audio/magic_dissapear.ogg"
             jump magic_tower_hub
         else:
             $customNotify("Недостаточно интеллекта")
@@ -108,6 +113,7 @@ label mer_teach:
             "Жаль, что ты ничего не запомнил"
             mer @sigh "Больше я не собираюсь тратить на тебя свое время!"
             "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+            play sound "audio/magic_dissapear.ogg"
             jump magic_tower_hub
     jump magic_tower_hub
 
@@ -116,7 +122,7 @@ label merlin_training:
     return
 
 label mer_root:
-    call magic_tower_scene
+    scene bg magic_library1 with fade
     show mer smirk at center with dissolve
     mer smirk "Самое время дать тебе приватные уроки."
     if first_mer_root:
@@ -138,6 +144,7 @@ label mer_root:
                 mer @annoyed "То есть ты мне не доверяешь? Будь по твоему!"
                 "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
                 $customNotify("Ты больше никогда не встретишь [mer.name]")
+                play sound "audio/magic_dissapear.ogg"
                 jump magic_tower_hub
     else:
         jump mer_root_menu
@@ -163,8 +170,8 @@ label mer_root_menu:
             call mer_root_fetish
             jump mer_root_menu
         "Вернуться":
-            "Ты уходишь восстанавливать магические силы"
             mer @smirk "До встречи~"
+            play sound "audio/magic_dissapear.ogg"
             jump magic_tower_hub
 
 label mer_root_blowjob:
@@ -177,7 +184,7 @@ label mer_root_blowjob:
         mer "Тебе нравится моя грудь?"
         "Да, очень":
             p "У тебя чудесная грудь"
-            mer smile_holding_breast "Правильный ответ~"
+            mer smile_holding_breast "Правильный ответ~" with dissolve
         "Нет":
             p "Если честно, не очень, мне нравятся груди поменьше, можешь магией их уменьшить?"
             mer "Нет! Убирайся!" 
@@ -189,21 +196,16 @@ label mer_root_blowjob:
     call hide_dialog
     "[mer.name] встает на колени, наконец ты можешь хорошо рассмотреть ее широкие беда"
     mer "Ну чего же ты ждешь?"
-    mer smile_knee "Раздевайся, или хочешь, чтобы я тебя раздела?"
+    mer smile_knee "Раздевайся, или хочешь, чтобы я тебя раздела?" with dissolve
     "Ты снимаешь с себя одежду не отрывая глаз от [mer.name]"
     "[mer.name] же смотрит на то, что скрывалось у тебя в штанах"
     "Ее красивые огромные груди, они всегда были такими большими? Или она подколдовала?"
-    "Ты задумался, кажется ты видел заклинание увеличения частей тела? Возможно ли его использовать отдельно на груди? [mer.name] хотела сделать занятие еще приятнее? Вдруг это всё очередной тест, а всё вокгру - магия иллюзий?"
-    hide mer with fade
-    p "!!!!!" 
-    show mer suck1 with fade
+    "Ты задумался, кажется ты видел заклинание увеличения частей тела? Возможно ли его использовать отдельно на груди? [mer.name] хотела сделать занятие еще приятнее? Вдруг это всё очередной тест, а всё вокруг - магия иллюзий?"
+    scene bg mer_suck1 with fade
     call hide_dialog
+    p "!!!!!" 
     "Пока ты размышлял [mer.name] обхватила головку твоего члена свими мягкими губами" with vpunch
     p "А-а-ах, [mer.name]."
-    mer "Не отвфекафься, у нафс исфыфтанифя влифяния фминефта нфа магифефкий пофенфывал"
-    "Мысли о хитрости и испытаниях моментально покинули тебя, ты наслаждаешься происходящим"
-    scene bg mer_suck1 with dissolve
-    call hide_dialog
     "[mer.name] смотрит на тебя, ласково обсасывая головку твоего члена"
     "Ты придерживаешь свой член, чтобы она не выпускала его из ротка"
     "Ты чувствуешь, что [mer.name] полностью взяла головку твоего члена и убираешь руку"

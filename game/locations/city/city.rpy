@@ -1,8 +1,7 @@
 define first_time_city = True
 
 label city:
-    call city_scene  
-    play music "audio/city_theme.mp3"
+    call city_scene
 
     if first_time_city:
         "Ты оказываешься в оживлённом городе, где прошлое и настоящее переплелись воедино."
@@ -24,9 +23,9 @@ label city:
             $completeQuest(quest_elsa_crystall, my_elsa)
             "Ты выходишь в город"
             jump city
-        "Переночевать на скамейке" if isNight():
+        "Переночевать на скамейке" if not canVisit("room") and isNight():
             jump city_overnight_stay
-        "Отдохнуть на скамейке" if not canVisit("room"):
+        "Отдохнуть на скамейке" if not canVisit("room") and not isNight():
             jump city_rest
         "Комната" if canVisit("room"):
             jump room

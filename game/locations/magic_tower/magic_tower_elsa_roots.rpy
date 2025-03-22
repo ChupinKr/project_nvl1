@@ -1,5 +1,5 @@
 label forest_quest_elsa_materials_reward:
-    scene bg tower_training with fade
+    call tower_training_scene
     "Ты запыхался, добираясь до башни."
     "Ты знаешь, где найти [e.name] — она, как всегда, неустанно оттачивает свои навыки."
     show e neutral at center with dissolve

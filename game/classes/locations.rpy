@@ -185,7 +185,9 @@ label ruined_temple_scene:
     return
 
 label training_ground_scene:
-    play sound "audio/steps.ogg"
+    if renpy.music.get_playing("music") != "audio/tg_sound.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/tg_sound.ogg" fadein 5.0 loop
     if isMorning():
         scene bg training_ground_morning with fade
     elif isDay():
@@ -205,6 +207,13 @@ label magic_tower_scene:
     scene bg magic_tower with fade
     return
 
+label tower_training_scene:
+    if renpy.music.get_playing("music") != "audio/mt_sound.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/mt_sound.ogg" fadein 5.0 loop
+    scene bg tower_training with fade
+    return
+
 label ice_caves_scene:
     play sound "audio/steps.ogg"
     if renpy.music.get_playing("music") != "audio/arctic_wind.ogg":
@@ -213,8 +222,63 @@ label ice_caves_scene:
     return
 
 label hospital_scene:
-    play sound "audio/steps.ogg"
     if renpy.music.get_playing("music") != "audio/hospital_sound.ogg":
+        play sound "audio/steps.ogg"
         play music "audio/hospital_sound.ogg" fadein 5.0 loop
     scene bg hospital with fade
     return
+
+label haven_scene:
+    if renpy.music.get_playing("music") != "audio/haven.ogg":
+        play sound "audio/magic_dissapear.ogg"
+        play music "audio/haven.ogg" fadein 5.0 loop
+    scene bg haven with fade
+    return
+
+label surgency_scene:
+    if renpy.music.get_playing("music") != "audio/surgency.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/surgency.ogg" fadein 5.0 loop
+    scene bg surgery with fade
+    return
+
+label brothel_scene:
+    if renpy.music.get_playing("music") != "audio/brothel_sound.ogg":
+        play sound "audio/door_enter.ogg"
+        play music "audio/brothel_sound.ogg" fadein 5.0 loop
+    $ girl = renpy.random.randint(1, 100)
+    if girl < 20:
+        scene bg brothel_girl1 with fade
+    if girl >= 20 and girl < 40:
+        scene bg brothel_girl2 with fade
+    if girl >= 40 and girl < 60:
+        scene bg brothel_girl3 with fade
+    if girl >= 60 and girl < 80:
+        scene bg brothel_girl4 with fade
+    if girl >= 80 and girl < 100:
+        scene bg brothel_girl5 with fade
+    return
+
+label room_scene:
+    if renpy.music.get_playing("music") != "audio/room_sound.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/room_sound.ogg" fadein 5.0 loop
+    scene bg room with fade
+    return
+
+label guild_scene:
+    if renpy.music.get_playing("music") != "audio/guild_sound.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/guild_sound.ogg" fadein 5.0 loop
+    scene bg guild with fade
+    return
+
+
+label dodjo_scene:
+    if renpy.music.get_playing("music") != "audio/dodjo_music.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/dodjo_music.ogg" fadein 5.0 loop
+    scene bg nagatoro_dodjo with fade
+    return
+
+    

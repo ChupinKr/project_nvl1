@@ -90,13 +90,16 @@ label training_ground:
                 eris "Передумаешь — я тут по утрам. Не мешай."
                 $nextTime()
 
+        if not isMorning():
+            eris "Всё, мне пора идти, увидимся!"
+            hide eris with dissolve
         "Ты понимаешь, что эта девушка — сущий вихрь. Тренировки с ней точно будут не из лёгких."
 
-    "Ты на тренировочной площадке в городе."
+    "Ты на тренировочной площадке."
     jump training_ground_menu
 
 label training_ground_menu:
-    hide eris
+    hide eris with dissolve
     menu:
         "Качаться":
             call start_muscule("Подход", 2.3)

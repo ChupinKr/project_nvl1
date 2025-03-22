@@ -1,7 +1,7 @@
 define is_show_stat = False
 
 label talk_to_freya:
-    scene bg haven with fade
+    call haven_scene
     pause 1.0
     $ outfit_chance = renpy.random.randint(1,100)
     if outfit_chance > 90 and my_freya.love >= 50:
@@ -182,7 +182,7 @@ label freya_root_masturbate:
     f "Заглядывай почаще и не забудь меня угостить~"
     "[f.name] поднимается, с ног до головы покрытая твоим семенем"
     
-    scene bg room with fade
+    call room_scene
     show f smile_shy_naked_hold_cummed with dissolve
     call hide_dialog
     f "Пожалуй мне пора возвращаться, буду ждать нашей новой встречи~"

@@ -1,6 +1,6 @@
 # Поиск Эльзы (всегда успешно) с меню взаимодействий
 label find_elsa:
-    scene bg tower_training with fade
+    call tower_training_scene
     show e neutral at center with dissolve
 
     "Я нашёл Эльзу в тренировочном зале. "

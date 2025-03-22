@@ -1,9 +1,9 @@
 
 # Сцена с комнатой игрока
 label room:
-    scene bg room with fade
+    call room_scene
     if not canVisit("room"):
-        show m with dissolve
+        show m smile with dissolve
         m smile "[hero_name], срок аренды закончился, комната стоит 10 монет в неделю..." with dissolve
         menu:
             "Арендовать комнату на неделю?"
@@ -18,6 +18,9 @@ label room:
                 "Ты уходишь"
                 jump city
     "Ты у себя в комнате"
+    call room_menu
+
+label room_menu:
     menu:
         "Тренироваться" if len(gg_items) > 0:
             "За дело!"
@@ -39,7 +42,7 @@ label room:
 
 label room_sleep:
     "Пора спать. Ты идешь в свою комнату в таверне."
-    scene bg room with fade
+    call room_scene
     "Ты проводишь ночь в теплой постели."
     $addHealth(100)
     $nextDay()

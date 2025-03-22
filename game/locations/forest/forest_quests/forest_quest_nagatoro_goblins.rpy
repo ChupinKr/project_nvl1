@@ -567,7 +567,7 @@ label forest_quest_nagatoro_goblins_reward:
     nag grin "Иди за мной, у меня есть награда для тебя!" with dissolve
     p "И что же это?"
     nag "Конечно же тренировка! Иди за мной, это рядом!"
-    scene bg nagatoro_dodjo with fade
+    call dodjo_scene
     show nag normal_shy with dissolve
     "Вы пришли в Додзё"
     nag "Я назвала эту тренировку - \"Растирание грудными мыщцами\""

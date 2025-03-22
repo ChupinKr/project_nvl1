@@ -1,14 +1,15 @@
 define first_time_nagatoro_dodjo = True
 
 label nagatoro_dodjo:
-    scene bg nagatoro_dodjo with fade
+    call dodjo_scene
     show nag grin with dissolve
+    if first_time_nagatoro_dodjo:
+        $first_time_nagatoro_dodjo = False
+        jump nagatoro_dodjo_first_time
     nag "Мы пришли, с чего начнем?"
     jump nagatoro_dodjo_menu
 
 label nagatoro_dodjo_first_time:
-    scene bg nagatoro_dodjo with fade
-    show nag grin with dissolve
     p "Надо же, традиционный Японский стиль."
     nag @happy "Это же додзё, само собой так и никак иначе."
     nag "Итак, мы на месте, будем тренироваться по плану."
@@ -32,13 +33,8 @@ label nagatoro_dodjo_first_time:
         "Показать заинтересованность.":
             p "Звучит интересно! Показывай!"
             nag @grin "Вот это настрой! Тогда начинаем!"
-    call nagatoro_root_show  
-    scene bg nagatoro_dodjo with fade
-    show nag normal_shy_battle6 with dissolve
-    nag "На этом пока закончим, найди меня в лесу, и мы продолжим наши занятия!"
-    nag "Можешь идти."
-    "Ошеломленный ты уходишь, надеясь на развитие ваших тренировок"
-    jump city
+    nag "С чего начнем?"
+    jump nagatoro_dodjo_menu  
     
 
 label nagatoro_dodjo_menu:
@@ -320,7 +316,7 @@ label nagatoro_root_show:
     if my_nag.love < 90:
         $customNotify("Недостаточно симпатии")
         p "У меня нет слов!"
-        scene bg nagatoro_dodjo with fade
+        call dodjo_scene
         show nag grin_battle6 with dissolve
         nag "Ты должен был сказать, что мои достижения тебя вдохновили на большие тренировки!"
         nag "Я дала тебе столько мотивации, хаха, самое время тренировать тебя!"
@@ -535,7 +531,7 @@ label nagatoro_root_titfuck:
     if strength < 100:
         $customNotify("Недостаточно силы")
         "[nag.name] вырвалась"
-        scene bg nagatoro_dodjo with fade
+        call dodjo_scene
         show nag normal_shy_battle6 with dissolve
         nag "Эй, подожди, я не готова!"
         nag "Тебе лучше уйти..."
@@ -556,7 +552,7 @@ label nagatoro_root_titfuck:
     if strength < my_nag.str / 2:
         $customNotify("Недостаточно силы")
         "[nag.name] вырвалась из твой хватки и вздохнула воздуха"
-        scene bg nagatoro_dodjo with fade
+        call dodjo_scene
         show nag angry_cummed with dissolve
         call hide_dialog
         nag "О таком нужно предупреждать!"
@@ -614,7 +610,7 @@ label nagatoro_root_titfuck:
         scene bg nag_titjob_cum28_3 with flash
         call hide_dialog
         "Наконец [nag.name] вырывается"
-        scene bg nagatoro_dodjo with fade
+        call dodjo_scene
         show nag angry_cummed with dissolve
         nag "Больше! Так! Не! Делай!"
         nag "Я ухожу!"
@@ -674,7 +670,7 @@ label nagatoro_root_titfuck:
     "И это тебя очень радует"
 
     "Довольная [nag.name] встает"
-    scene bg nagatoro_dodjo with fade
+    call dodjo_scene
     show nag smile_cummed with dissolve
     call hide_dialog
     nag "Хорошая вышла тренировка!"

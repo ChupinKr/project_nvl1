@@ -3,8 +3,7 @@ default first_time_surgency = True
 
 label surgency_tsunade_cure:
     $ bring = []
-    scene bg surgery with fade
-    play music "audio/hospital_theme.mp3"
+    call surgency_scene
 
 
     show ts neutral with dissolve
@@ -46,27 +45,8 @@ label surgency_tsunade_cure:
             $addHealth(100)
     jump surgency_tsunade_menu
 
-label surgency_tsunade:
-    $ bring = []
-    scene bg_hospital with fade
-    play music "audio/hospital_theme.mp3"   
-    show ts with dissolve
-
-    #можно зайти если:
-    # не может попасть в таверну
-    # нет задания
-    # не полные хп
-    # активное задание у тсунаде
-    if not canVisit("tavern") or isNoQuestNow() or health < 100 or isActualQuestOfCharacter("ts"):
-        ts "Пришел вернуть долги?"
-        jump surgency_tsunade_menu
-    else:
-        ts "Я занята, возвращайся, когда будешь присмерти."
-        hide ts with dissolve
-        "Тебы выгнали из операционной, и правда, что тебе там понадобилось?"
-        jump hospital
-
 label surgency_tsunade_menu: 
+    $ bring = []
     menu:
         set bring
         "Вылечи меня" if health < 100:

@@ -252,7 +252,7 @@ label elsa_not_first_time:
             call magic_tower_scene
             show e smile_shy with dissolve
             p "..."
-            scene bg tower_training with fade
+            call tower_training_scene
             show e smile_shy with dissolve
             e "Знаешь, мне здесь спокойнее всего..."
             call elsa_roots

@@ -8,8 +8,10 @@ label rapunzel_brothel_first_visit:
         $updateCanVisit("tavern", True)
     r @smile_shy "Мы еще не пришли, идем, за мной!" with dissolve
     "Мы заходим в туалет, а там уже открываем потайную дверь"
-    
+
+    play sound "audio/door_enter.ogg"
     scene bg brothel_girl1 with dissolve
+    play music "audio/brothel_sound.ogg" fadein 2.0 loop
     show r smile at right with dissolve
     
     if not canVisit("brothel"):
@@ -65,17 +67,7 @@ label rapunzel_brothel_first_visit:
     jump brothel
 
 label brothel:
-    $ girl = renpy.random.randint(1, 100)
-    if girl < 20:
-        scene bg brothel_girl1 with fade
-    if girl >= 20 and girl < 40:
-        scene bg brothel_girl2 with fade
-    if girl >= 40 and girl < 60:
-        scene bg brothel_girl3 with fade
-    if girl >= 60 and girl < 80:
-        scene bg brothel_girl4 with fade
-    if girl >= 80 and girl < 100:
-        scene bg brothel_girl5 with fade
+    call brothel_scene
 
     "Вы в борделе, сюда всегда приятно заглянуть!"
     jump brothel_menu

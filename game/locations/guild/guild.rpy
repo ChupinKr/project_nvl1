@@ -1,7 +1,7 @@
 define first_time_guild = True
 define battle_location_guild = "guild"
 label guild:
-    scene bg guild with fade
+    call guild_scene
 
     if first_time_guild:
         $ first_time_guild = False
@@ -48,7 +48,6 @@ label guild:
                 $my_darkness.addLove(5)
                 nag "Фу-у, [hero_name]! Серьёзно? Это было слишком!"
                 $minusLove("nag",10)
-                jump guild_menu
 
             "Схватить сзади, чтобы контролировать её движения":
                 if strength > 50:
@@ -60,8 +59,7 @@ label guild:
                 else:
                     "Ты пытаешься схватить её, но [d.name] неожиданно резко дёргается и вырывается."
                     d neutral "Хм? О, ты хотел меня обездвижить? Неплохо, но недостаточно силы!"
-                    nag @grin "Ха-ха, ну, по крайней мере, ты старался!"
-                jump guild_menu
+                    nag @grin "Ха-ха, ну, по крайней мере, ты старался!" with dissolve
 
             "Схватить за грудь":
                 "Ты делаешь неожиданный шаг вперёд и накрываешь ладонями её внушительную грудь."
@@ -70,7 +68,6 @@ label guild:
                 nag "[hero_name]! Ты извращенец! Ты даже не попытался сделать что-то нормальное!"
                 "Но [d.name] явно не в обиде. Скорее наоборот..."
                 $my_darkness.addLove(10)
-                jump guild_menu
 
             "Отказаться":
                 p "Нет уж, это испытание какое-то странное."
@@ -80,15 +77,18 @@ label guild:
                 $minusLove("d",10)
                 "Богине пришлось по душе твое решение"
                 $my_freya.addLove(10)
-                jump guild_menu
+
+        nag @grin "Тогда ты осмотрись здесь, и приходи с новыми силами ко мне, я буду в лесу." with dissolve
+        d "Можешь обращаться ко мне, я помогу."
+        jump guild_menu
     else:
         "Ты в гильдии."
 
     jump guild_menu
 
 label guild_menu:
-    hide d
-    hide nag
+    hide d with dissolve
+    hide nag with dissolve
     menu:
         "Тренироваться в спарринге":
             call start_battle(100, strength*3, "Противник", battle_location_guild)
