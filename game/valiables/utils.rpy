@@ -2,6 +2,7 @@
 # Переходы
 define dis25 = Dissolve(.25)
 define flash = Fade(0.1, 0.0, 1.0, color="#FFFFFF")
+define pink = Fade(0.1, 0.0, 1.0, color="#FFC0CB")
 
 # сторонние переменные
 define enemy_name = "Противник"
@@ -10,15 +11,44 @@ define battle_location = 0
 define last_battle_win = None
 define last_clean_win = None
 
+#яркость
+transform darken:
+    matrixcolor BrightnessMatrix(-0.75)
+transform normal_brightness:
+    matrixcolor BrightnessMatrix(0)
+
+#размер
+transform small:
+    zoom 0.75
+transform normal_size:
+    zoom 1
+transform bg_size:
+    zoom 1.5
+
+#перещемещение
+transform move_left_mid:
+    linear 1.0 left_mid  # Плавно перемещает персонажа в исходную позицию за 2 секунды
+
+#перещемещение
+transform move_left:
+    linear 1.0 left  # Плавно перемещает персонажа в исходную позицию за 2 секунды
+
+#перещемещение
+transform move_mid:
+    linear 1.0 mid  # Плавно перемещает персонажа в исходную позицию за 2 секунды
+
 #положения
 transform left_bit:
-    xalign 0.25
+    xalign 0.4
     yalign 1.2
 transform left_mid:
-    xalign 0.1
+    xalign 0.25
     yalign 1.2
 transform left:
     xalign 0.0
+    yalign 1.2
+transform mid:
+    xalign 0.5
     yalign 1.2
 transform right_bit:
     xalign 0.6
@@ -26,11 +56,11 @@ transform right_bit:
 transform right_mid:
     xalign 0.75
     yalign 1.2
+transform right_mid2:
+    xalign 0.85
+    yalign 1.2
 transform right:
     xalign 1.0
-    yalign 1.2
-transform mid:
-    xalign 0.5
     yalign 1.2
 
 # положения сфер

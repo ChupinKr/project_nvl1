@@ -80,23 +80,37 @@ init python:
         return all_locs.setVisit(locationtag,canVisit)
 
 
+label steps_sound:
+    play sound "audio/steps.ogg"
+return
+
 label forest_scene:
+    call forest_scene_music
+    if isMorning():
+        scene bg forest_morning with fade
+    elif isDay():
+        scene bg forest_day with fade
+    elif isEvening():
+        scene bg forest_evening with fade
+    elif isNight():
+        scene bg forest_night with fade
+    else:
+        scene bg forest_day with fade
+    return
+    
+label forest_scene_music:
     if isMorning():
         if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
             play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
-        scene bg forest_morning with fade
     elif isDay():
         if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
             play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
-        scene bg forest_day with fade
     elif isEvening():
         if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
             play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
-        scene bg forest_evening with fade
     elif isNight():
         if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
             play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
-        scene bg forest_night with fade
     else:
         scene bg forest_day with fade
     return
@@ -273,7 +287,6 @@ label guild_scene:
     scene bg guild with fade
     return
 
-
 label dodjo_scene:
     if renpy.music.get_playing("music") != "audio/dodjo_music.ogg":
         play sound "audio/steps.ogg"
@@ -282,3 +295,14 @@ label dodjo_scene:
     return
 
     
+label dark_forest_scene:
+    if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
+    scene bg dark_forest with fade
+    return
+    
+label river_scene_music:
+    if renpy.music.get_playing("music") != "audio/river_music.ogg":
+        play music "audio/river_music.ogg" fadein 1.0 loop
+    return

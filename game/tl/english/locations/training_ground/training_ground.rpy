@@ -236,87 +236,87 @@ translate english training_ground_eris_menu_53ac5a60:
     eris t_angry "No, I don’t trust you yet—maybe later!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:154
-translate english eris_quest_menu_d193111d:
+translate english eris_quests_menu_d193111d:
     # p "Ready to hunt some goblins together?"
     p "Ready to hunt some goblins together?"
 
 # game/locations/training_ground/training_ground.rpy:155
-translate english eris_quest_menu_c48fc573:
+translate english eris_quests_menu_c48fc573:
     # eris t_neutral "Goblins are small fry, but there’s too many of them. We need to thin them out before they start bothering people." with dissolve
     eris t_neutral "Goblins are small fry, but there’s too many of them. We need to thin them out before they start bothering people." with dissolve
 
 # game/locations/training_ground/training_ground.rpy:160
-translate english eris_quest_menu_28e3fc23:
+translate english eris_quests_menu_28e3fc23:
     # eris t_smirk "That’s the spirit! Grab a sword and keep up!" with dissolve
     eris t_smirk "That’s the spirit! Grab a sword and keep up!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:163
-translate english eris_quest_menu_a4d46f1e:
+translate english eris_quests_menu_a4d46f1e:
     # eris t_angry "What, too scared? Fine, I’ll handle it myself!" with dissolve
     eris t_angry "What, too scared? Fine, I’ll handle it myself!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:165
-translate english eris_quest_menu_a32d061d:
+translate english eris_quests_menu_a32d061d:
     # eris t_smirk "Ha, you’re too weak for this right now. Come back when you’ve toughened up!" with dissolve
     eris t_smirk "Ha, you’re too weak for this right now. Come back when you’ve toughened up!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:169
-translate english eris_quest_menu_462fa3ad:
+translate english eris_quests_menu_462fa3ad:
     # eris t_neutral "Heard about the dragon in the cave? I’ve been itching to take down something big!" with dissolve
     eris t_neutral "Heard about the dragon in the cave? I’ve been itching to take down something big!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:170
-translate english eris_quest_menu_a7fa61aa:
+translate english eris_quests_menu_a7fa61aa:
     # p "Are you sure? That’s a serious opponent."
     p "Are you sure? That’s a serious opponent."
 
 # game/locations/training_ground/training_ground.rpy:171
-translate english eris_quest_menu_57a45757:
+translate english eris_quests_menu_57a45757:
     # eris t_smirk "Sure? Ha! I’ll show it who’s boss, and you better not slack off!" with dissolve
     eris t_smirk "Sure? Ha! I’ll show it who’s boss, and you better not slack off!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:176
-translate english eris_quest_menu_32a95704:
+translate english eris_quests_menu_32a95704:
     # eris t_smile "Awesome! Don’t let me down, [hero_name]!" with dissolve
     eris t_smile "Awesome! Don’t let me down, [hero_name]!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:180
-translate english eris_quest_menu_baf5cca6:
+translate english eris_quests_menu_baf5cca6:
     # eris "Scared? Figures—I don’t need weaklings!"
     eris "Scared? Figures—I don’t need weaklings!"
 
 # game/locations/training_ground/training_ground.rpy:182
-translate english eris_quest_menu_dd766ae2:
+translate english eris_quests_menu_dd766ae2:
     # eris t_angry "No, you’re not ready yet. Don’t embarrass yourself—train first!" with dissolve
     eris t_angry "No, you’re not ready yet. Don’t embarrass yourself—train first!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:186
-translate english eris_quest_menu_65ca9105:
+translate english eris_quests_menu_65ca9105:
     # p "How about a walk around the city? No fighting, just the two of us."
     p "How about a walk around the city? No fighting, just the two of us."
 
 # game/locations/training_ground/training_ground.rpy:187
-translate english eris_quest_menu_28d06d65:
+translate english eris_quests_menu_28d06d65:
     # eris t_surprised "A date? Are you serious? Is this some kind of joke?" with dissolve
     eris t_surprised "A date? Are you serious? Is this some kind of joke?" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:192
-translate english eris_quest_menu_d334016e:
+translate english eris_quests_menu_d334016e:
     # eris t_smirk_blush "Alright, you convinced me! But if it’s boring, I’ll finish you off!" with dissolve
     eris t_smirk_blush "Alright, you convinced me! But if it’s boring, I’ll finish you off!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:195
-translate english eris_quest_menu_4bad8bfa:
+translate english eris_quests_menu_4bad8bfa:
     # eris t_smirk "Ha, knew you’d chicken out! Get lost then!" with dissolve
     eris t_smirk "Ha, knew you’d chicken out! Get lost then!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:197
-translate english eris_quest_menu_3588d4b4:
+translate english eris_quests_menu_3588d4b4:
     # eris t_smirk "You? With me? Don’t make me laugh—prove you’re worth it first!" with dissolve
     eris t_smirk "You? With me? Don’t make me laugh—prove you’re worth it first!" with dissolve
 
 # game/locations/training_ground/training_ground.rpy:201
-translate english eris_quest_menu_5d45abd0:
+translate english eris_quests_menu_5d45abd0:
     # eris t_angry "Seriously? Waste of my time—get out of here!" with dissolve
     eris t_angry "Seriously? Waste of my time—get out of here!" with dissolve
 

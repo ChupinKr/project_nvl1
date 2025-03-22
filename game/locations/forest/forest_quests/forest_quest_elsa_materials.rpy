@@ -2,7 +2,7 @@ define first_time_forest_quest_elsa_materials = True
 define can_find_ent = False
 
 label forest_quest_elsa_materials:
-    scene bg dark_forest with fade
+    call dark_forest_scene
     "Я вошёл в густой, таинственный лес, где солнечные лучи пробивались сквозь кроны деревьев."
     "В воздухе витал аромат свежей зелени, а где-то вдали раздавался лёгкий звонкий смех."
     "Я слышал легенды об этом месте, где магия переплетается с реальностью."
@@ -129,7 +129,7 @@ label forest_quest_elsa_materials:
         jump surgency_tsunade_cure
 
     mind "Наконец, измученный, я вышел из лабиринта, чувствуя, как изменился."
-    scene bg dark_forest with fade
+    call dark_forest_scene
     show ramiris smile with dissolve
     "У выхода уже ждала [ramiris.name], её взгляд был холоден, но в нём мелькала искра уважения."
     ramiris "Вот и вышел ты. Лабиринт был жесток, не так ли? Но теперь ты знаешь, на что способен."
@@ -161,7 +161,7 @@ label forest_quest_elsa_materials:
             menu:
                 "Надругаться":
                     call fuck_ent
-                    scene bg dark_forest with fade
+                    call dark_forest_scene
                     ramiris smile_blush "Вау, не знала, что с ними можно так обойтись..."
                 "Отпустить":
                     "Энт сбегает"
