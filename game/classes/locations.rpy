@@ -306,3 +306,8 @@ label river_scene_music:
     if renpy.music.get_playing("music") != "audio/river_music.ogg":
         play music "audio/river_music.ogg" fadein 1.0 loop
     return
+    
+label cave_scene_music:
+    if renpy.music.get_playing("music") != "audio/cave_music.ogg":
+        play music "audio/cave_music.ogg" fadein 1.0 loop
+    return

@@ -221,6 +221,7 @@ label go_goblin_cave:
     "Ты идешь по следам гоблинов и спускаешь будто под землю"
     p "Неужели они живут в этих пещерах? Как же здесь неуютно."
     "Ты решаешь медленно и тихо проходить глубже, нужно поставить точку."
+    call cave_scene_music
     scene bg goblin_cave1 at Transform(zoom=1.5) with fade
     "Ты проходишь всё дальше. Свет все еще пробивается в пещеру, но нигде не видно гоблинов."
     scene bg goblin_cave2 at Transform(zoom=1.5) with fade
@@ -349,6 +350,7 @@ label go_goblin_cave:
             woblin @nods "*кивает*" with dissolve
             show woblin sad with dissolve
             "[woblin.name] выводит тебя из извилистых гоблинских пещер."
+            call steps_sound
             call forest_scene 
             show woblin sad with dissolve
             p "Всё, мы ушли. Ты можешь говорить на человеческом языке?"

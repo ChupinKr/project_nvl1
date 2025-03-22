@@ -197,7 +197,8 @@ label forest_quest_eris_goblin_hunting_cave:
     eris smile_naked_cover "Или ты хочешь, чтобы я простудилась?" with dissolve
     p "Не хочу...{w} Ладно, идем."
     
-
+    call steps_sound
+    call cave_scene_music
     scene bg eris_root_cave0 at bg_size with fade
     play music "audio/cave_music.ogg" fadein 5.0 loop
     "Вы идете заходите в пещеру первым."
@@ -208,7 +209,7 @@ label forest_quest_eris_goblin_hunting_cave:
     scene bg eris_root_cave1 at bg_size with fade
     pause .5
     scene bg eris_root_cave2 at bg_size with fade
-    "Ты помогаешь [my_eris.name] сесть. В темноте пещеры свет костра освещает её тело."
+    "Ты помогаешь [my_eris.name] сесть. В темноте пещеры свет костра освещает её нежное тело."
     
     scene bg eris_root_cave3 at bg_size with dissolve
     p "Знаешь... Это напоминает мне нашу первую встречу."
