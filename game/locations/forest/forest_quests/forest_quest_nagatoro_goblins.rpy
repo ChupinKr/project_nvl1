@@ -146,6 +146,7 @@ label barn_onna_goblin_fuck:
     scene bg onna_goblin_gangbang_9 at Transform(zoom=1.5) with vpunch
     "Гоблин с силой пропихивает член в ее горло"
     mind "Чертовы животные!"
+    $first_time_forest_quest_nagatoro_goblins = False
 
     menu:
         "Что делать?"

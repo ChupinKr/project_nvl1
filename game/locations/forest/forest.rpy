@@ -30,8 +30,8 @@ label forest_menu:
             $nextTime()
             call forest_scene 
             "[e.name] наверняка ждет, надо ее обрадовать"
-            call forest_quest_elsa_materials_reward
             $completeQuest(quest_elsa_materials, my_elsa)
+            call forest_quest_elsa_materials_reward
             "Ты выходишь в город"
             jump city
 
@@ -41,8 +41,8 @@ label forest_menu:
             $nextTime()
             call forest_scene 
             "[my_nag.name] наверняка ждет, надо ее обрадовать."
-            call forest_quest_nagatoro_goblins_reward
             $completeQuest(quest_nagatoro_goblins, my_nag)
+            call forest_quest_nagatoro_goblins_reward
             "Ты выходишь в город"
             jump city
 
