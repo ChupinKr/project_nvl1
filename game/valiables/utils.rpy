@@ -102,6 +102,14 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
+    def setLocation(location):
+        global current_location
+        current_location = location
+
+    def getLocation():
+        global current_location
+        return current_location
+
     def addMoney(plusMoney=0):
         global money,notices
         money += plusMoney

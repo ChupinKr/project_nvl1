@@ -86,6 +86,7 @@ return
 
 label forest_scene:
     call forest_scene_music
+    $setLocation("forest")
     if isMorning():
         scene bg forest_morning with fade
     elif isDay():
@@ -116,6 +117,7 @@ label forest_scene_music:
     return
 
 label tavern_scene:
+    $setLocation("tavern")
     play sound "audio/steps.ogg"
     if renpy.music.get_playing("music") != "audio/tavern_music.ogg":
         play music "audio/tavern_music.ogg" fadein 5.0 loop
@@ -132,6 +134,7 @@ label tavern_scene:
     return
 
 label city_scene(bgc = None):
+    $setLocation("city")
     play sound "audio/steps.ogg"
     if bgc:
         if bgc == "morning":
@@ -172,6 +175,7 @@ label city_scene(bgc = None):
     return
 
 label market_scene:
+    $setLocation("market")
     play sound "audio/steps.ogg"
     if isMorning():
         scene bg market_morning with fade
@@ -186,6 +190,7 @@ label market_scene:
     return
 
 label ruined_temple_scene:
+    $setLocation("ruined_temple")
     if isMorning():
         scene bg ruined_temple_morning with fade
     elif isDay():
@@ -199,6 +204,7 @@ label ruined_temple_scene:
     return
 
 label training_ground_scene:
+    $setLocation("tg")
     if renpy.music.get_playing("music") != "audio/tg_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/tg_sound.ogg" fadein 5.0 loop
@@ -215,6 +221,7 @@ label training_ground_scene:
     return
 
 label magic_tower_scene:
+    $setLocation("mt")
     play sound "audio/steps.ogg"
     if renpy.music.get_playing("music") != "audio/mt_sound.ogg":
         play music "audio/mt_sound.ogg" fadein 5.0 loop
@@ -222,6 +229,7 @@ label magic_tower_scene:
     return
 
 label tower_training_scene:
+    $setLocation("tower_training")
     if renpy.music.get_playing("music") != "audio/mt_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/mt_sound.ogg" fadein 5.0 loop
@@ -229,6 +237,7 @@ label tower_training_scene:
     return
 
 label ice_caves_scene:
+    $setLocation("ice_caves")
     play sound "audio/steps.ogg"
     if renpy.music.get_playing("music") != "audio/arctic_wind.ogg":
         play music "audio/arctic_wind.ogg" fadein 5.0 loop
@@ -236,6 +245,7 @@ label ice_caves_scene:
     return
 
 label hospital_scene:
+    $setLocation("hospital")
     if renpy.music.get_playing("music") != "audio/hospital_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/hospital_sound.ogg" fadein 5.0 loop
@@ -243,6 +253,7 @@ label hospital_scene:
     return
 
 label haven_scene:
+    $setLocation("haven")
     if renpy.music.get_playing("music") != "audio/haven.ogg":
         play sound "audio/magic_dissapear.ogg"
         play music "audio/haven.ogg" fadein 5.0 loop
@@ -250,6 +261,7 @@ label haven_scene:
     return
 
 label surgency_scene:
+    $setLocation("surgency")
     if renpy.music.get_playing("music") != "audio/surgency.ogg":
         play sound "audio/steps.ogg"
         play music "audio/surgency.ogg" fadein 5.0 loop
@@ -257,6 +269,7 @@ label surgency_scene:
     return
 
 label brothel_scene:
+    $setLocation("brothel")
     if renpy.music.get_playing("music") != "audio/brothel_sound.ogg":
         play sound "audio/door_enter.ogg"
         play music "audio/brothel_sound.ogg" fadein 5.0 loop
@@ -274,6 +287,7 @@ label brothel_scene:
     return
 
 label room_scene:
+    $setLocation("room")
     if renpy.music.get_playing("music") != "audio/room_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/room_sound.ogg" fadein 5.0 loop
@@ -281,6 +295,7 @@ label room_scene:
     return
 
 label guild_scene:
+    $setLocation("guild")
     if renpy.music.get_playing("music") != "audio/guild_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/guild_sound.ogg" fadein 5.0 loop
@@ -288,6 +303,7 @@ label guild_scene:
     return
 
 label dodjo_scene:
+    $setLocation("dodjo")
     if renpy.music.get_playing("music") != "audio/dodjo_music.ogg":
         play sound "audio/steps.ogg"
         play music "audio/dodjo_music.ogg" fadein 5.0 loop
@@ -296,6 +312,7 @@ label dodjo_scene:
 
     
 label dark_forest_scene:
+    $setLocation("dark_forest")
     if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
         play sound "audio/steps.ogg"
         play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop

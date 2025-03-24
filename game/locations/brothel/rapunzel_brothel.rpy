@@ -73,6 +73,28 @@ label rapunzel_brothel_menu:
             jump brothel
 
 label rapunzel_root_menu:
+    if getLocation() != "brothel":
+        r "Пойдем, я знаю, где я смогу помочь тебе расслабиться."
+        call tavern_scene
+        pause 3.5
+        show r smile at right with dissolve
+        if not canVisit("tavern"):
+            $updateCanVisit("tavern", True)
+        r @smile_shy "Мы еще не пришли, идем, за мной!" with dissolve
+        "Мы заходим в туалет, открываем потайную дверь и заходим в бордель."
+
+        play sound "audio/door_enter.ogg"
+        scene bg brothel_girl1 with dissolve
+        play music "audio/brothel_sound.ogg" fadein 2.0 loop
+        show r smile at right with dissolve
+        
+        if not canVisit("brothel"):
+            $updateCanVisit("brothel", True)
+        
+        r @smile_shy "Ну же, идем в мою комнату!" with dissolve
+        scene bg brothel_private with dissolve
+        show r smile  with dissolve
+
     menu:
         "Мастурбация" if my_rapunzel.love >= 50:
             call r_root_masturbate

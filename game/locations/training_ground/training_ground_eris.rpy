@@ -51,22 +51,22 @@ label eris_quests_menu:
                 eris t_smirk "Ха, да ты пока слабак для такого. Приходи, когда подкачаешься!" with dissolve
             return
 
-        # "Выгнать дракона":
-        #     eris t_neutral "Слышал про дракона в пещере? Я давно хочу зарубить что-то большое!" with dissolve
-        #     p "Ты уверена? Это серьёзный противник."
-        #     eris t_smirk "Уверена? Ха! Покажу ему, кто тут главный, а ты не зевай!" with dissolve
-        #     if isAbleQuest(quest_eris_dragon_hunting, my_eris.love):
-        #         menu:
-        #             "Выгнать дракона из пещеры"
-        #             "Принять квест":
-        #                 eris t_smile "Отлично! Не подведи меня, [hero_name]!" with dissolve
-        #                 $ getQuest(quest_eris_dragon_hunting)
-        #             "Не принимать квест":
-        #                 show eris t_angry with dissolve
-        #                 eris "Трусишь? Ожидаемо, слабаки мне не нужны!"
-        #     else:
-        #         eris t_angry "Нет, ты ещё не готов. Не позорься, подкачайся сначала!" with dissolve
-        #     return
+        "Выгнать дракона":
+            eris t_neutral "Слышал про дракона в пещере? Я давно хочу зарубить что-то большое!" with dissolve
+            p "Ты уверена? Это серьёзный противник."
+            eris t_smirk "Уверена? Ха! Покажу ему, кто тут главный, а ты не зевай!" with dissolve
+            if isAbleQuest(quest_eris_dragon_hunting, my_eris.love):
+                menu:
+                    "Выгнать дракона из пещеры"
+                    "Принять квест":
+                        eris t_smile "Отлично! Не подведи меня, [hero_name]!" with dissolve
+                        $ getQuest(quest_eris_dragon_hunting)
+                    "Не принимать квест":
+                        show eris t_angry with dissolve
+                        eris "Трусишь? Ожидаемо, слабаки мне не нужны!"
+            else:
+                eris t_angry "Нет, ты ещё не готов. Не позорься, подкачайся сначала!" with dissolve
+            return
 
         # "Свидание":
         #     p "Может, сходим прогуляться по городу? Без драк, просто вдвоём."

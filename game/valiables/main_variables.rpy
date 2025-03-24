@@ -32,6 +32,9 @@ init:
     # Массив купленных товаров
     $ gg_items = []
 
+    # Текущее местоположение
+    $ current_location = "forest"
+
     # Приглашенная девушка
     $ can_invite_brothel = False
     $ invited_girl = None
