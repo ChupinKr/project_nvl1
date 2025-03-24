@@ -62,6 +62,18 @@ label forest_menu:
             "Ты выходишь в город"
             jump city
 
+        "Выполнить задание [my_eris.name]" if active_quest.name in quest_eris_dragon_hunting.name:
+            call village_quest_eris_dragon_hunting
+            "Ты выбираешься из [active_quest.location]"
+            $nextTime()
+            call forest_scene 
+            $completeQuest(quest_eris_dragon_hunting, my_eris)
+            show eris t_smile with dissolve
+            eris "Увидимся на тренировочной площадке, [hero_name]!"
+            p "Да, [my_eris.name]!"
+            "Ты выходишь в город"
+            jump city
+
         "Посетить руины храма":
             jump ruined_temple
         "Осмотреться вокруг" if not first_time_rapunzel or not first_time_elsa or not first_time_nagatoro:

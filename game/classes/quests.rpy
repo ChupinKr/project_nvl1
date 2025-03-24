@@ -314,12 +314,12 @@ init python:
                 "Grab a sword and let’s go—I’ll start!"
             ],
             req_love=20,  # Requires some affection from Eris
-            req_str=20,   # Needs some strength for combat
+            req_str=40,   # Needs some strength for combat
             req_intelligence=0,  # Intelligence not required
             req_char=0,   # Charisma not needed
             reward_money=15,      # Modest reward
-            reward_character=10,  # +10 to Eris’s affection
-            str_bonus=5,          # Strength bonus for victory
+            reward_character=15,  # +10 to Eris’s affection
+            str_bonus=10,          # Strength bonus for victory
             intelligence_bonus=0, # No intelligence bonus
             char_bonus=0          # No charisma bonus
         )
@@ -328,19 +328,19 @@ init python:
             forWho="Eris",
             forWhoShort="eris",
             repeatable=False,  # Dragons are rare foes
-            location="Cave",
+            location="Willage",
             countObj=1,  # One dragon
             character_says=[
                 "A dragon? Perfect, I’ve been itching to take down something big!",
                 "Show me what you’ve got, or stay out of my way!"
             ],
-            req_love=30,  # Requires more trust from Eris
-            req_str=40,   # A dragon demands serious strength
+            req_love=50,  # Requires more trust from Eris
+            req_str=60,   # A dragon demands serious strength
             req_intelligence=10,  # Needs some cunning for tactics
             req_char=0,   # Charisma doesn’t matter
             reward_money=50,      # Good reward for the challenge
             reward_character=15,  # +15 to Eris’s affection
-            str_bonus=10,         # Strength bonus for victory
+            str_bonus=15,         # Strength bonus for victory
             intelligence_bonus=0, # No intelligence bonus
             char_bonus=0          # No charisma bonus
         )
@@ -355,7 +355,7 @@ init python:
                 "A date? Are you kidding? Well… let’s give it a shot!",
                 "Don’t think I’ll be bored. Surprise me!"
             ],
-            req_love=50,  # Needs more affection for romance
+            req_love=70,  # Needs more affection for romance
             req_str=0,    # Strength not required
             req_intelligence=0,  
             req_char=20,  # Charisma is key to success
