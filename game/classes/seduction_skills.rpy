@@ -1,4 +1,4 @@
-python:
+init python:
     # Класс для умений соблазнения
     class SeductionSkill:
         def __init__(self, name, effect):

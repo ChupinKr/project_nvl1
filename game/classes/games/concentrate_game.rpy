@@ -1,3 +1,25 @@
+init python:
+    import renpy.exports as renpy
+    import random
+
+    def update_energy():
+        global energy, running, stable_zone
+
+        while running:
+            if renpy.get_mouse_pressed()[0]:  # Если зажата левая кнопка
+                energy = min(energy + energy_gain, max_energy)
+            else:
+                energy = max(energy - energy_loss, min_energy)
+
+            # Двигаем зону стабильности вверх или вниз случайным образом
+            shift = random.choice([-1, 1]) * stable_shift_speed
+            new_lower = max(10, min(80, stable_zone[0] + shift))
+            new_upper = min(90, max(20, stable_zone[1] + shift))
+
+            stable_zone = [new_lower, new_upper]
+
+            renpy.restart_interaction()
+            renpy.pause(0.1)
 label magic_training_gmmm:
     scene bg room
 
@@ -62,28 +84,6 @@ label magic_training_gmmm:
             text "Стабильность!" color "#0f0" xalign 0.5 yalign 0.1
 
     python:
-        import renpy.exports as renpy
-        import random
-
-        def update_energy():
-            global energy, running, stable_zone
-
-            while running:
-                if renpy.get_mouse_pressed()[0]:  # Если зажата левая кнопка
-                    energy = min(energy + energy_gain, max_energy)
-                else:
-                    energy = max(energy - energy_loss, min_energy)
-
-                # Двигаем зону стабильности вверх или вниз случайным образом
-                shift = random.choice([-1, 1]) * stable_shift_speed
-                new_lower = max(10, min(80, stable_zone[0] + shift))
-                new_upper = min(90, max(20, stable_zone[1] + shift))
-
-                stable_zone = [new_lower, new_upper]
-
-                renpy.restart_interaction()
-                renpy.pause(0.1)
-
         renpy.start_predict("magic_game")
         renpy.invoke_in_thread(update_energy)
 

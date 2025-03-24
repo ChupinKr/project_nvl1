@@ -1,10 +1,4 @@
-label bug_hunt: 
-    $ score = 0
-    $ bugs = []  # Список жуков
-    $ bug_path = "images/assets/point_and_click/bug.png"
-    $ bug_hover_path = "images/assets/point_and_click/bug_hover.png"
-
-    python:
+init python:
         import random
 
         class Bug:
@@ -26,9 +20,15 @@ label bug_hunt:
                     self.targetX = max(100, min(1600, self.targetX))
                     self.targetY = max(100, min(900, self.targetY))
 
-    # Создаем 20 жуков
-    python:
-        bugs = [Bug(i) for i in range(20)]
+
+label bug_hunt: 
+    $ score = 0
+    $ bug_hunt_winscore = 20
+    $ bugs = []  # Список жуков
+    $ bug_path = "images/assets/point_and_click/bug.png"
+    $ bug_hover_path = "images/assets/point_and_click/bug_hover.png"
+
+    $bugs = [Bug(i) for i in range(20)]
 
     screen bug_game():
         text "Счет: [score]" xpos 20 ypos 20 size 40 color "#fff"
@@ -75,7 +75,7 @@ label bug_hunt:
 
     show screen bug_game
 
-    while score < 20:
+    while score < bug_hunt_winscore:
         python:
             for bug in bugs:
                 bug.move()  # Обновляем координаты

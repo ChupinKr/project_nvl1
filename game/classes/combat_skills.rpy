@@ -1,4 +1,4 @@
-python:
+init python:
     # Класс для физических умений
     class CombatSkill:
         def __init__(self, name, energy_cost, effect, description, upgradeable=False):

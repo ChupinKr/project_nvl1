@@ -1,4 +1,4 @@
-python:
+init python:
     # Класс для заклинаний
     class Spell:
         def __init__(self, name, intelligence_cost, location):
