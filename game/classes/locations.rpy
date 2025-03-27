@@ -319,6 +319,31 @@ label dark_forest_scene:
     scene bg dark_forest with fade
     return
     
+label village_scene:
+    $setLocation("village")
+    play sound "audio/steps.ogg"
+    if isMorning():
+        if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
+            play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
+        scene bg village_day at bg_size with fade
+    elif isDay():
+        if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
+            play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
+        scene bg village_day at bg_size with fade
+    elif isEvening():
+        if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
+            play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
+        scene bg village_night at bg_size with fade
+    elif isNight():
+        if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
+            play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
+        scene bg village_night at bg_size with fade
+    else:
+        if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
+            play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
+        scene bg village_day at bg_size with fade
+    return
+    
 label river_scene_music:
     if renpy.music.get_playing("music") != "audio/river_music.ogg":
         play music "audio/river_music.ogg" fadein 1.0 loop

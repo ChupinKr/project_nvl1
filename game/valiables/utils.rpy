@@ -3,6 +3,7 @@
 define dis25 = Dissolve(.25)
 define flash = Fade(0.1, 0.0, 1.0, color="#FFFFFF")
 define pink = Fade(0.1, 0.0, 1.0, color="#FFC0CB")
+define long_fade = Fade(0.5, 1.2, 0.5)
 
 # сторонние переменные
 define enemy_name = "Противник"
@@ -24,6 +25,8 @@ transform normal_size:
     zoom 1
 transform bg_size:
     zoom 1.5
+transform bg_size_plus:
+    zoom 2
 
 #перещемещение
 transform move_left_mid:
@@ -348,6 +351,28 @@ init python:
                     renpy.jump("room_sleep")
                 else:
                     renpy.jump("city_overnight_stay")
+
+
+    def setTime(time_num):  #0,1,2,3 - morning, day, evening, night
+        global time
+        if persistent.lang == "russian":
+            if time_num == 0:
+                time = "Утро"
+            if time_num == 1:
+                time = "День"
+            if time_num == 2:
+                time = "Вечер"
+            if time_num == 3:
+                time = "Ночь"
+        if persistent.lang == "english":
+            if time_num == 0:
+                time = "Morning"
+            if time_num == 1:
+                time = "Day"
+            if time_num == 2:
+                time = "Evening"
+            if time_num == 3:
+                time = "Night"
 
     def nextDay():
         global day,time,notices

@@ -144,7 +144,7 @@ init python:
             whatToDo="Выгнать дракона",
             forWho="Эрис",
             forWhoShort="eris",
-            repeatable=False,  # Дракон — редкий противник
+            repeatable=True,
             location="Пещера",
             countObj=1,  # Один дракон
             character_says=[

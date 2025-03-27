@@ -206,71 +206,77 @@ init:
     # Инициализация персонажей с соответствующими цветами имен
     
     if persistent.lang == "english":
-        define r = Character("Rapunzel", color="#FFBA00", image='r')  # Золотистый (блондинка)
-        define e = Character("Elsa", color="#87CEFA", image='e')  # Светло-голубой (платиновая блондинка)
-        define nag = Character("Nagatoro", color="#964B00", image='nag')  
-        define god = Character("God", color="#B38DF9", image='f')
-        define f = Character("Freya", color="#B38DF9", image='f')
-        define ts = Character("Tsunade", color="#FFD700", image='ts')
-        define s = Character("Sakura", color="#FFC0CB", image='s')
-        define mer = Character("Merlin", color="#800080", image='mer')
-        define h = Character("Holo", color="#ff8c00", image='h')
-        define m = Character('Innkeeper', color="#00ffff", image='m')
-        define mao = Character('Mao Mao', color="#006400", image='mao')
-        define d = Character('Darkness', color="#c0c0c0", image='d')
-        define eris = Character('Eiris', color="#7B1113", image='eris')
-        ## Some guys
-        define old_woman = Character('Old woman', color="#ffaaaa")
-        define guy1 = Character('Guy 1', color="#ffaaaa")
-        define guy2 = Character('Guy 2', color="#ffaaaa")
-        define guy3 = Character('Guy 3', color="#ffaaaa")
-        define sg = Character('Muddy guy', color="#ffaaaa") #shady guy
+        define r = Character("Rapunzel", color="#FFBA00", image='r', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])   # Золотистый (блондинка)
+        define e = Character("Elsa", color="#87CEFA", image='e', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])   # Светло-голубой (платиновая блондинка)
+        define nag = Character("Nagatoro", color="#964B00", image='nag', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])   
+        define god = Character("God", color="#B38DF9", image='f', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define f = Character("Freya", color="#B38DF9", image='f', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define ts = Character("Tsunade", color="#FFD700", image='ts', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define s = Character("Sakura", color="#FFC0CB", image='s', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define mer = Character("Merlin", color="#800080", image='mer', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define h = Character("Holo", color="#ff8c00", image='h', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define m = Character('Innkeeper', color="#00ffff", image='m', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define mao = Character('Mao Mao', color="#006400", image='mao', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define d = Character('Darkness', color="#c0c0c0", image='d', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define eris = Character('Eiris', color="#ff5555", image='eris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define makima = Character("Makima", color="#ffaa00", image='makima', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Макима из "Человека-бензопилы"
+        
+        # Some guys
+        define old_woman = Character('Old woman', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define guy1 = Character('Guy 1', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define guy2 = Character('Guy 2', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define guy3 = Character('Guy 3', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define sg = Character('Muddy guy', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  #shady guy
 
-        define goblin = Character('Goblin', color="#66cc33")
-        define hopgoblin = Character('Hop-goblin', color="#66cc33")
-        define korg = Character('Korg', color="#ffaaaa")
+        define goblin = Character('Goblin', color="#66cc33", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define hopgoblin = Character('Hop-goblin', color="#66cc33", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define korg = Character('Korg', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define korg_str = 300
 
         #quest fuckable enemies
-        define ent = Character('Ent Girl', color="#013220", image='ent')
-        define woblin = Character('Goblin-woman', color="#66cc33", image='woblin')
+        define ent = Character('Ent Girl', color="#013220", image='ent', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define woblin = Character('Goblin-woman', color="#66cc33", image='woblin', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define wragon = Character('Dragoness', color="#013220", image='wragon', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
 
         #quest persns
-        define emilia = Character("Emilia", color="#dda0dd", image='emilia')
-        define ramiris = Character('Ramiris', color="#FFBA00", image='ramiris')
-        define onna = Character("Onna", color="#FAD7A0", who_outlines=[(2, "#5D4037")], image='onna')
+        define emilia = Character("Emilia", color="#dda0dd", image='emilia', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define ramiris = Character('Ramiris', color="#FFBA00", image='ramiris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define onna = Character("Onna", color="#FAD7A0", image='onna', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
 
     elif persistent.lang == "russian":
-        define r = Character("Рапунцель", color="#FFBA00", image='r')  # Золотистый (блондинка)
-        define e = Character("Эльза", color="#87CEFA", image='e')  # Светло-голубой (платиновая блондинка)
-        define nag = Character("Нагаторо", color="#964B00", image='nag')  
-        define god = Character("Богиня", color="#B38DF9", image='f')
-        define f = Character("Фрея", color="#B38DF9", image='f')
-        define ts = Character("Цунаде", color="#FFD700", image='ts')
-        define s = Character("Сакура", color="#FFC0CB", image='s')
-        define mer = Character("Мерлин", color="#800080", image='mer')
-        define h = Character("Холо", color="#ff8c00", image='h')
-        define m = Character('Тавернщица', color="#00ffff", image='m')
-        define mao = Character('Мао Мао', color="#006400", image='mao')
-        define d = Character('Даркнесс', color="#c0c0c0", image='d')
-        define eris = Character('Эрис', color="#7B1113", image='eris')
-        ## Some guys
-        define old_woman = Character('Старая щенщина', color="#ffaaaa")
-        define guy1 = Character('Парень 1', color="#ffaaaa")
-        define guy2 = Character('Парень 2', color="#ffaaaa")
-        define guy3 = Character('Парень 3', color="#ffaaaa")
-        define sg = Character('Мутный тип', color="#ffaaaa") #shady guy
+        define r = Character("Рапунцель", color="#FFBA00", image='r', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])   # Золотистый (блондинка)
+        define e = Character("Эльза", color="#87CEFA", image='e', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])   # Светло-голубой (платиновая блондинка)
+        define nag = Character("Нагаторо", color="#964B00", image='nag', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])   
+        define god = Character("Богиня", color="#B38DF9", image='f', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define f = Character("Фрея", color="#B38DF9", image='f', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define ts = Character("Цунаде", color="#FFD700", image='ts', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define s = Character("Сакура", color="#FFC0CB", image='s', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define mer = Character("Мерлин", color="#800080", image='mer', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define h = Character("Холо", color="#ff8c00", image='h', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define m = Character('Тавернщица', color="#00ffff", image='m', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define mao = Character('Мао Мао', color="#006400", image='mao', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define d = Character('Даркнесс', color="#c0c0c0", image='d', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define eris = Character('Эрис', color="#ff5555", image='eris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define makima = Character("Макима", color="#ffaa00", image='makima', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Макима из "Человека-бензопилы"
 
-        define goblin = Character('Гоблин', color="#66cc33")
-        define hopgoblin = Character('Хоп-гоблин', color="#66cc33")
-        define korg = Character('Корг', color="#ffaaaa")
+        # Some guys
+        define old_woman = Character('Старая щенщина', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define guy1 = Character('Парень 1', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define guy2 = Character('Парень 2', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define guy3 = Character('Парень 3', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define sg = Character('Мутный тип', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  #shady guy
+
+        define goblin = Character('Гоблин', color="#66cc33", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define hopgoblin = Character('Хоп-гоблин', color="#66cc33", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define korg = Character('Корг', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define korg_str = 300
 
         #quest fuckable enemies
-        define woblin = Character('Женщина-гоблин', color="#66cc33", image='woblin')
-        define ent = Character('Девушка Энт', color="#013220", image='ent')
+        define woblin = Character('Женщина-гоблин', color="#66cc33", image='woblin', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define ent = Character('Девушка Энт', color="#013220", image='ent', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define wragon = Character('Драконица', color="#013220", image='wragon', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         
         #quest persns
-        define emilia = Character("Эмилия", color="#dda0dd", image='emilia')
-        define ramiris = Character('Рамирис', color="#FFBA00", image='ramiris')
-        define onna = Character("Онна", color="#FAD7A0", who_outlines=[(2, "#5D4037")], image='onna')
+        define emilia = Character("Эмилия", color="#dda0dd", image='emilia', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define ramiris = Character('Рамирис', color="#FFBA00", image='ramiris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define onna = Character("Онна", color="#FAD7A0", image='onna', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
