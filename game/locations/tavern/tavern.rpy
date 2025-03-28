@@ -88,7 +88,7 @@ label talk_miku_menu:
             m "Поднимайся по лестнице, ты знаешь, где моя комната~"
             jump miku_tavern_root
         "Снять комнату" if not canVisit("room"):
-            m smile "Комната стоит 10 золотых в неделю." with dissolve
+            m smile "Комната стоит 10 золотых за 3 дня." with dissolve
             menu:
                 "Снять комнату?"
                 "Беру" if money >= 10:

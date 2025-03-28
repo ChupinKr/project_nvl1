@@ -4,7 +4,7 @@ label room:
     call room_scene
     if not canVisit("room"):
         show m smile with dissolve
-        m smile "[hero_name], срок аренды закончился, комната стоит 10 монет в неделю..." with dissolve
+        m smile "[hero_name], срок аренды закончился, комната стоит 10 монет за 3 дня..." with dissolve
         menu:
             "Арендовать комнату на неделю?"
             "Беру" if money >= 10:

@@ -252,7 +252,7 @@ label go_goblin_cave:
                         "Ты быстро вырубаешь [goblin.name] с одного удара по затылку."
                         "Проход свободен."
                     else:
-                        $customNotify("Недостаточно интеллекта")
+                        $customNotify("Необходимо 30 интеллекта")
                         "Ты кидаешь в гоблина камень, он сразу нападает на тебя."
                         call start_battle(100, 120, goblin.name, 'forest')
                         p "С одним справился, хорошо, что он не закричал. Надо торопиться."
@@ -286,7 +286,7 @@ label go_goblin_cave:
                 "Вы слышите, как маленькие шаги очень быстро отдаляются."
                 p "Действительно испугались."
             else:
-                $customNotify("Недостаточно харизмы")
+                $customNotify("Необходимо 50 харизмы")
                 show goblin1 at mid with dissolve
                 show goblin3 at right with dissolve
                 show goblin2 at right_mid with dissolve

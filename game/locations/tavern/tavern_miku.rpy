@@ -204,7 +204,7 @@ label m_root_show:
             "Продолжать сцену":
                 "Ты режаешь досмотреть шоу"
     else:
-        $customNotify("Недостаточно симпатии")
+        $customNotify("Необходимо 80 симпатии")
 
     if my_miku_love >= 65:
         p "Может покажешь, настоящую себя?"
@@ -283,9 +283,9 @@ label m_root_show:
                 "Продолжить сцену":
                     "Ты режаешь досмотреть шоу"
         else:
-            $customNotify("Недостаточно харизмы")
+            $customNotify("Необходимо 90 харизмы")
     else:
-        $customNotify("Недостаточно симпатии")
+        $customNotify("Необходимо 90 симпатии")
 
     scene bg m_show28 with dissolve
     call hide_dialog
@@ -318,7 +318,7 @@ label m_root_show:
             "Продолжить сцену":
                 "Ты решаешь продолжить смотреть шоу"
     else:
-        $customNotify("Недостаточно симпатии")
+        $customNotify("Необходимо 20 симпатии")
 
     p "Твоя растяжка... Это что-то!"
     scene bg m_show32 with dissolve
@@ -369,7 +369,7 @@ label m_root_show:
                 m "Ч-чтооо?"
                 p "Хаха! Ладно, ты итак молодец!"
     else:
-        $customNotify("Недостаточно харизмы")
+        $customNotify("Необходимо 60 харизмы")
         scene bg m_show37_2 with dissolve
         call hide_dialog
         m "Ч-чтооо?"
@@ -505,7 +505,7 @@ label m_root_titfuck:
     call hide_dialog
     m "Как тебе мой язычок, а, [hero_name]?"
     if charisma < 25:
-        $customNotify("Недостаточно интеллекта")
+        $customNotify("Необходимо 25 харизмы")
         p "Не так уж это и заводит..."
         scene bg miku_titfuck5 at Transform(zoom=1.5) with dissolve
         m "Я... Тебя не возбудила?"
@@ -626,7 +626,7 @@ label m_root_titfuck:
             "Продолжить":
                 m "Ааааа..."
     else:
-        $customNotify("Недостаточно силы")
+        $customNotify("Необходимо 70 силы")
 
     scene bg miku_titfuck20 at Transform(zoom=1.5) with dissolve
     call hide_dialog
@@ -745,7 +745,7 @@ label m_root_blowjob:
     call hide_dialog
     "[my_miku.name] вылизывает головку твоего члена до блеска"
     if charisma < 40:
-        $customNotify("Недостаточно харизмы")
+        $customNotify("Необходимо 40 харизмы")
         p "Ааах... Как же ты хороша..."
         scene bg m_blowjob6 at Transform(zoom=1.5) with dissolve
         m "Да? Рада, что тебе понравилось!"
@@ -812,7 +812,7 @@ label m_root_blowjob_continue:
     "[my_miku.name] ухмыляется"
     m "Что, не выдержал моего темпа?"
     if strength < 40:
-        $customNotify("Недостаточно силы")
+        $customNotify("Необходимо 40 силы")
         "Ты тянешь ее голову на свой член, но у тебя не получается."
         p "А, ой, нет, прости, не хотел испортить твою прическу."
         scene bg m_blowjob11_2 at Transform(zoom=1.5) with dissolve
@@ -944,7 +944,7 @@ label m_root_blowjob_continue:
             "Продолжить":
                 m "Ааааа..."
     else:
-        $customNotify("Недостаточно харизмы")
+        $customNotify("Необходимо 60 интеллекта")
 
     p "Тут стало так грязно, я пожалуй пойду."
     "Ты встаешь и уходишь."
@@ -1098,7 +1098,7 @@ label m_root_fuck_continue:
             "Достаточно":
                 p "Пока хватит, звезда моя."
     else:
-        $customNotify("Недостаточно харизмы")
+        $customNotify("Необходимо 90 харизмы")
     
     m "Мы ведь повторим, да, [hero_name]?"
     p "Обязательно."

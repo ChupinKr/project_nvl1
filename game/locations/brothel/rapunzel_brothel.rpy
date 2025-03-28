@@ -267,7 +267,7 @@ label r_root_masturbate:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
         show r smile_naked with dissolve
-        $customNotify("Недостаточно симпатии [r.name]")
+        $customNotify("Необходимо 70 симпатии")
         "Она остановилась на самом интересном, может если она будет мне больше доверять, то я получу еще больше?"
         return
 
@@ -292,7 +292,7 @@ label r_root_masturbate:
     p "Я теряю голову..."  
 
     if my_rapunzel_love < 90:
-        $customNotify("Недостаточно симпатии [r.name]")
+        $customNotify("Необходимо 90 симпатии")
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
         show r smile_naked with dissolve
@@ -518,7 +518,7 @@ label r_root_blowjob:
     "[r.name] умоляющим взглядом просит тебя остановиться, но ты даже не думаешь об этом"
     
     if strength < 30:
-        $customNotify("Недостаточно силы")
+        $customNotify("Необходимо 30 силы")
         "Ты не смог удержать ее голову"
         scene bg brothel_private with dissolve
         show r naked_cummed_annoyed with dissolve

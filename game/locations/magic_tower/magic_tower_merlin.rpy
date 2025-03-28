@@ -55,7 +55,7 @@ label mer_teach:
     call merlin_training
     if last_magic_knowlenge_win:
         p "Да, без проблем расскажу"
-        if intelligence >= 50:
+        if intelligence >= 70:
             "Ты слово в слово пересказываешь всё, что рассказала [mer.name], она чувствует, что время было потрачено не зря и проникается к тебе уважением."
             mer @surprised "Удивительно, а ты не безнадежен!"
             $addChar(["intelligence"],10)
@@ -79,7 +79,7 @@ label mer_teach:
                 play sound "audio/magic_dissapear.ogg"
                 jump magic_tower_hub
         else:
-            $customNotify("Недостаточно интеллекта")
+            $customNotify("Необходимо 70 интеллекта")
             "Ты попытался рассказать всё именно так, как говорила [mer.name], но у тебя не вышло"
             $minusLove(my_merlin,-2)
             "[mer.name] выглядит раздраженной"
@@ -90,7 +90,7 @@ label mer_teach:
             play sound "audio/magic_dissapear.ogg"
             jump magic_tower_hub
     else:
-        if intelligence >= 25:
+        if intelligence >= 50:
             p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
             "[mer.name] рассказывает тебе ту часть, которую сразу у тебя не удалось понять"
             $addLove(my_merlin, 7)
@@ -103,7 +103,7 @@ label mer_teach:
             play sound "audio/magic_dissapear.ogg"
             jump magic_tower_hub
         else:
-            $customNotify("Недостаточно интеллекта")
+            $customNotify("Необходимо 50 интеллекта")
             p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
             "[mer.name] еще пару часов объясняла тебе структуры магических элементов и разжевывала основны магического сотворения"
             "И даже так ты ничего не понял"

@@ -212,16 +212,16 @@ init python:
             if not quest.repeatable:
                 return False
             if quest.req_love > love:
-                notices.append("Недостаточно симпатии")
+                notices.append("Необходимо [quest.req_love] симпатии")
                 result = False
             if quest.req_str > strength:
-                notices.append("Недостаточно силы")
+                notices.append("Необходимо [quest.req_str] силы")
                 result = False
             if quest.req_intelligence > intelligence:
-                notices.append("Недостаточно интеллекта")
+                notices.append("Необходимо [quest.req_intelligence] интеллекта")
                 result = False
             if quest.req_char > charisma:
-                notices.append("Недостаточно харизмы")
+                notices.append("Необходимо [quest.req_char] харизмы")
                 result = False
             #renpy.watch(str(result))
             if notices:

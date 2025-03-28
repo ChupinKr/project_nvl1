@@ -119,10 +119,10 @@ label forest_quest_elsa_materials:
     hide screen minds1 with dissolve
     pause .2
     hide screen minds4 with dissolve
-    if intelligence > 60:
+    if intelligence >= 60:
         $addChar(["str"], 10)
     else:
-        $customNotify("Недостаточно интеллекта")
+        $customNotify("Необходимо 60 интеллекта")
         "Ты падаешь в обморок не способный подняться"
         $ nextDay()
         $health = 0
@@ -166,7 +166,7 @@ label forest_quest_elsa_materials:
                 "Отпустить":
                     "Энт сбегает"
         else:
-            $customNotify("Недостаточно силы")
+            $customNotify("Необходимо 100 силы")
         $can_find_ent = True
         show ramiris smile with dissolve
         ramiris smile "Ты действительно справился! Может, ты не такой уж и слабак."
@@ -250,7 +250,7 @@ label forest_quest_elsa_materials:
             "Не сейчас":
                 ramiris "Ты прав, не время отдыхать."
     else:
-        $customNotify("Недостаточно харизмы")
+        $customNotify("Необходимо 70 харизмы")
 
     ramiris "Впереди ещё один этап. Мы должны собрать необходимые тебе травы."
     ramiris "Вот оно, место, где они растут. Будь осторожен, здесь может быть не так спокойно."

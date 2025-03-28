@@ -448,8 +448,8 @@ label h_root_masturbate:
     call hide_dialog
     mind "[h.name] ложится на моё тело, её пальчики нежно двигаются по уздечке моего члена. Её дыхание горячее, а взгляд полон желания."  
 
-    if charisma < 30:
-        $customNotify("Недостаточно харизмы")
+    if charisma < 40:
+        $customNotify("Необходимо 40 харизмы")
         p "Сколько мне доплатить, чтобы тебя трахнуть?" with vpunch
         h "!!!!!"
         scene bg holo_room with dissolve
@@ -521,7 +521,7 @@ label h_root_masturbate:
     h "Ну что, мой волчонок, устал?"
 
     if my_holo_love < 70:
-        $customNotify("Недостаточно симпатии")
+        $customNotify("Необходимо 70 симпатии")
         p "Да, спасибо за этот день"
         h "Всё для моего волчонка~"
         scene bg holo_room with dissolve
@@ -1170,7 +1170,7 @@ label h_root_fuck_continue:
     p "Стой смирно, волчица!"
 
     if strength < 50:
-        $customNotify("Недостаточно силы")
+        $customNotify("Необходимо 50 силы")
         "Ты не смог удержать [h.name]"
         scene bg holo_room with fade
         show h angry_naked_cummed with dissolve

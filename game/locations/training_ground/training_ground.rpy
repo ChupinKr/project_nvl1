@@ -26,7 +26,7 @@ label training_ground:
                     eris "Ого! Да ты шустрый!"
                 else:
                     "Ты не успеваешь среагировать, и манекен сшибает тебя с ног, придавливая к земле."
-                    show eris t_smirk with dissolve
+                    show eris t_smirk with vpunch
                     eris "Ха! Не можешь даже от манекена уйти? Что ты вообще тут делаешь?"
 
             "Попытаться остановить манекен":
@@ -36,7 +36,7 @@ label training_ground:
                     eris "О! Да ты не слабак, оказывается!"
                 else:
                     "Ты пытаешься поймать манекен, но он сносит тебя с ног, и ты падаешь на спину."
-                    show eris t_smirk with dissolve
+                    show eris t_smirk with vpunch
                     eris "Ха! Переоценил себя, да?"
 
             "Не двигаться":

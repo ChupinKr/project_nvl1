@@ -22,9 +22,9 @@ label find_elsa_menu:
             call start_magic_training(intelligence)
             if last_reaction_win:
                 $addChar(["intelligence"], 5)
-                jump win_elsa_training
+                call win_elsa_training
             else:
-                jump fail_elsa_training
+                call fail_elsa_training
             $nextTime()
             jump find_elsa_menu
         "Попросить квест" if isNoQuestNow():
@@ -51,14 +51,14 @@ label win_elsa_training:
     p "Надо будет повторить, мне понравилось."
     e @smile_shy "Мне тоже.."
     $addLove(my_elsa, 10)
-    jump find_elsa_menu
+    return
 
 label fail_elsa_training:
     show e laugh at center with dissolve
     e "Это потрясающе!"
     p "Что? У меня же не вышло."
     e "Да, меня потрясло то, насколько ты необучаем."
-    jump find_elsa_menu
+    return
 
 label elsa_roots:
     menu:
