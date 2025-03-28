@@ -7,27 +7,27 @@ label miku_tavern_root:
 
 label miku_tavern_root_menu:
     menu:
-        "Покажи" if my_miku.love >= 50:
+        "Покажи" if my_miku_love >= 50:
             call m_root_show 
             $nextTime()
             jump tavern
-        "Грудями" if my_miku.love >= 60: 
+        "Грудями" if my_miku_love >= 60: 
             call m_root_titfuck
             $nextTime()
             jump tavern
-        "Горловой минет" if my_miku.love >= 70: 
+        "Горловой минет" if my_miku_love >= 70: 
             call m_root_blowjob 
             $nextTime()
             jump tavern
-        "Секс" if my_miku.love >= 80: 
+        "Секс" if my_miku_love >= 80: 
             call m_root_fuck 
             $nextTime()
             jump tavern
-        "Анал" if my_miku.love >= 90: 
+        "Анал" if my_miku_love >= 90: 
             call m_root_anal 
             $nextTime()
             jump tavern
-        "Сделаем это прилюдно" if my_miku.love >= 200: 
+        "Сделаем это прилюдно" if my_miku_love >= 200: 
             call m_root_fetish 
             $nextTime()
             jump tavern
@@ -194,7 +194,7 @@ label m_root_show:
     "[m.name] немного поворачивается, оттягивая попку, чтобы показать, как много соков вышло из неё."
     m "Видишь, как я старалась?"
 
-    if my_miku.love >= 80:
+    if my_miku_love >= 80:
         menu:
             "Секс":
                 p "Надеюсь ты готова.."
@@ -206,7 +206,7 @@ label m_root_show:
     else:
         $customNotify("Недостаточно симпатии")
 
-    if my_miku.love >= 65:
+    if my_miku_love >= 65:
         p "Может покажешь, настоящую себя?"
         m "Д-да..."
 
@@ -307,7 +307,7 @@ label m_root_show:
     call hide_dialog
     "Она встаёт, оперевшись на грудь, но теперь повёрнута к тебе спиной, ты видишь её киску и гладкий животик."
     
-    if my_miku.love >= 200:
+    if my_miku_love >= 200:
         m "К-какую из этих дырочек ты хочешь больше?~"
         menu:
             "Обе!":
@@ -509,7 +509,7 @@ label m_root_titfuck:
         p "Не так уж это и заводит..."
         scene bg miku_titfuck5 at Transform(zoom=1.5) with dissolve
         m "Я... Тебя не возбудила?"
-        $minusLove("m", 5)
+        $minusLove(my_miku, -5)
         m "Тебе пора идти, [hero_name]!"
         return
     p "Ты просто невероятна!"

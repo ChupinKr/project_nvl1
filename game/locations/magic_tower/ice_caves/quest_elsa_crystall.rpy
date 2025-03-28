@@ -204,7 +204,7 @@ label deal_with_emilia:
 
     menu:
         "Освободить [emilia.name]":
-            $my_freya.addLove(10)
+            $addLove(my_freya, 10)
             call ice_caves_scene
             if strength > 50:
                 "Ты подходишь к ней и одним сильным ударом разбиваешь ледяные цепи."

@@ -56,7 +56,7 @@ label mer_teach:
                 mer @surprised "Удивительно, а ты не безнадежен!"
                 $addChar(["intelligence"],5)
                 $addLove("mer",10)
-                if my_merlin.love >= 50:
+                if my_merlin_love >= 50:
                     mer smile "Не хочешь пройти дополнительный курс? Этот курс сильно укрепит твои знания!"
                     menu:
                         "Конечно!":
@@ -138,22 +138,22 @@ label mer_root:
 
 label mer_root_menu:
     menu:
-        "Мастурбация" if my_merlin.love >= 50:
+        "Мастурбация" if my_merlin_love >= 50:
             call mer_root_masturbate
             jump mer_root_menu
-        "Грудями" if my_merlin.love >= 60:
+        "Грудями" if my_merlin_love >= 60:
             call mer_root_titfuck
             jump mer_root_menu
-        "Минет" if my_merlin.love >= 70:
+        "Минет" if my_merlin_love >= 70:
             call mer_root_blowjob
             jump mer_root_menu
-        "Секс" if my_merlin.love >= 80:
+        "Секс" if my_merlin_love >= 80:
             call mer_root_fuck
             jump mer_root_menu
-        "Анал" if my_merlin.love >= 90:
+        "Анал" if my_merlin_love >= 90:
             call mer_root_anal
             jump mer_root_menu
-        "Фетиш" if my_merlin.love >= 200:
+        "Фетиш" if my_merlin_love >= 200:
             call mer_root_fetish
             jump mer_root_menu
         "Вернуться":

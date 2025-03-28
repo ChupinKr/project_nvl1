@@ -271,7 +271,7 @@ label elsa_magic_training:
         p "Надо будет повторить, мне понравилось."
         e @smile_shy "Мне тоже~~" with dissolve
         $addLove("e", 5)
-        if my_elsa.love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
+        if my_elsa_love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
             e @smile_shy "Ладно, думаю ты готов, идем." with dissolve
             p "К чему готов? Куда мы?"
             e @smirk "Не важно, просто идем." with dissolve
@@ -289,7 +289,7 @@ label elsa_quests:
         "Собирать магические материалы":
             p "Я готов собирать магические материалы."
             e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
-            if isAbleQuest(quest_elsa_materials, my_elsa.love):
+            if isAbleQuest(quest_elsa_materials, my_elsa_love):
                 menu:
                     "Принять квест":
                         e "Постарайся и принеси большую корзину!"
@@ -305,7 +305,7 @@ label elsa_quests:
             p "Я готов стать подпытным кроликом."
             e "Я вижу, что ты довольно крепкий, если у тебя все еще хватает ума заходить в этот лес."
             e "Твоё тело мне пригодится~"
-            if isAbleQuest(quest_elsa_test, my_elsa.love):
+            if isAbleQuest(quest_elsa_test, my_elsa_love):
                 menu:
                     "Принять квест":
                         e "Ты действительно готов, надо же, ну тогда идем!"

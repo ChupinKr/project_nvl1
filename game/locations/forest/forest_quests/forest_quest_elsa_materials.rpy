@@ -120,7 +120,7 @@ label forest_quest_elsa_materials:
     pause .2
     hide screen minds4 with dissolve
     if intelligence > 60:
-        $addChar(["str"], 5)
+        $addChar(["str"], 10)
     else:
         $customNotify("Недостаточно интеллекта")
         "Ты падаешь в обморок не способный подняться"
@@ -156,7 +156,7 @@ label forest_quest_elsa_materials:
     $customNotify("Теперь ты можешь выследить энта в лесу")
     if last_battle_win:
         "С победой я ощутил, как энергия леса вливается в меня, наполняя новыми силами."
-        $ addChar(["str"],7)
+        $ addChar(["str"],10)
         if strength > 100:
             menu:
                 "Надругаться":

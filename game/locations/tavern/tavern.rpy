@@ -83,7 +83,7 @@ label talk_miku_drinks_menu:
 
 label talk_miku_menu:
     menu:
-        "Обслужи меня" if my_miku.love >= 50 and m_can_go_root:
+        "Обслужи меня" if my_miku_love >= 50 and m_can_go_root:
             show m smile_blush with dissolve
             m "Поднимайся по лестнице, ты знаешь, где моя комната~"
             jump miku_tavern_root
@@ -125,7 +125,7 @@ label talk_miku_work:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
                         "Ты провёл время, помогая [m.name]"
                         "[m.name] это оценила"
-                        $my_miku.addLove(5)
+                        $addLove(my_miku, 7)
                         pause 3.5
                         $addMoney(10)
                     else: 
@@ -152,7 +152,7 @@ label talk_miku_work:
                 if last_battle_win:
                     "[m.name] это оценила"
                     m smile "Спасибо, [hero_name], ты меня снова выручил." with dissolve
-                    $my_miku.addLove(10)
+                    $addLove(my_miku,10)
                     pause 3.5
                     $addMoney(10)
             scene bg bar_counter with fade
@@ -164,19 +164,19 @@ label talk_miku_work:
     jump talk_miku_menu
 
 label talk_miku_info:
-    if my_miku.love >= 10 and not canVisit("lib"):
+    if my_miku_love >= 10 and not canVisit("lib"):
         m "Знаешь, ты неплохой! "
         m "Ладно, расскажу тебе одну тайну... "
         m "В городе есть **тайная библиотека**, где можно найти запрещённые магические знания!"
         m "*Описание того, как найти библиотеку*"
         $ updateCanVisit("lib", True)
-    elif my_miku.love >= 25 and not canVisit("tg"):
+    elif my_miku_love >= 25 and not canVisit("tg"):
         m "Ты мне нравишься!"
         m "Дам тебе наводку: неподалёку есть место, где любой желающий может стать сильнее."
         m "*Описание того, как попасть на тренировочную площадку*"
         m "Если хочешь стать сильнее – тебе туда!"
         $ updateCanVisit("tg", True)
-    elif my_miku.love >= 40 and not shoot_tits:
+    elif my_miku_love >= 40 and not shoot_tits:
         m "Хммм, дай ка подумать.."
         show m smile_closed_eyes with dissolve
         pause 1
@@ -210,7 +210,7 @@ label talk_miku_info:
                     m smile_closed_eyes "Вот твой напиток!"
                     "[m.name] подскальзывается и проливает немного на себя"
                     m surprised_wet_top "В-вооот! Держи!" with dissolve
-                    $addChar(["str"], 2)
+                    $addChar(["str"], 5)
                     p "Спасибо! Очень освежает"
                     show m smile_wet_top with dissolve
                     "[m.name] улыбается тебе"
@@ -219,7 +219,7 @@ label talk_miku_info:
                     show m smile_no_top with dissolve
                     m "Эммм... Я... Я видела, как ты пялился, такого извинения будет достаточно?"
                     p "Хаха! Да, пойдет, отлично шоу, [m.name]!"
-    elif my_miku.love >= 50 and not m_can_go_root:
+    elif my_miku_love >= 50 and not m_can_go_root:
         $m_can_go_root = True
         m "Мне нравится, что ты не просто клиент."
         m "Мне больше нечего тебе рассказать.."
@@ -248,7 +248,7 @@ label talk_miku_info:
                 "[m.name] отвернулась и плачет"
                 $customNotify("Ты больше не сможешь поговорить с [m.name]")
                 jump tavern
-    elif my_miku.love >= 60:
+    elif my_miku_love >= 60:
         m "Ты мне так много помогаешь, [hero_name]..."
         show m smile_no_top with dissolve
         m "Я долго думала, как тебе отплатить за доброту.."

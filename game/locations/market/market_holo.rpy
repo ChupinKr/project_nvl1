@@ -6,7 +6,7 @@ define h_can_visit = True
 label visit_holo:
     scene bg holo_market with fade
     show h smile with dissolve
-    if not h_can_go_root and my_holo.love >= 50:
+    if not h_can_go_root and my_holo_love >= 50:
         h smile_shy "Охо-хо~, [hero_name], вижу ты разжился монетками! Я готова предложить тебе новый товар~"
         pause .5
         h "Подожди тут, я подготовлюсь~"
@@ -43,7 +43,7 @@ label holo_menu:
         "Купить товары":
             h "О-хо-хо, [hero_name], неужели ты наконец разжился монетками?"
             jump holo_market_menu
-        "Обслужи меня" if my_holo.love >= 50 and h_can_go_root:
+        "Обслужи меня" if my_holo_love >= 50 and h_can_go_root:
             h "О-хо-хо, [hero_name], а ты уверен, что тебе хватит?"
             jump holo_market_root_menu
         "Чем тебе помочь?" if can_work_with_holo:
@@ -61,7 +61,7 @@ label holo_menu:
                             if last_clean_win:
                                 h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
                                 "Ты провёл время, помогая [h.name]"
-                                $my_holo.addLove(5)
+                                $addLove(my_holo,7)
                                 "[h.name] это оценила"
                                 pause 3.5
                                 $addMoney(10)
@@ -85,7 +85,7 @@ label holo_menu:
                     scene bg holo_market with fade
                     show h smile_shy with dissolve
                     h "О-хо-хо! [hero_name], спасибо, не знаю, что бы я без тебя делала!"
-                    $my_holo.addLove(5)
+                    $addLove(my_holo,7)
                     "Ты провёл время, помогая [h.name], она это оценила"
                     $addMoney(10)
                     jump holo_menu
@@ -114,57 +114,57 @@ label holo_market_menu:
         "Купить [item_motivational_book.name]([item_motivational_book.price] монет)" if isAbleToBuy(item_motivational_book):
             "Вы купили [item_motivational_book.name]"
             $buyItem(item_motivational_book)
-            $my_holo.addLove(3)
+            $addLove(my_holo,3)
             jump holo_market_menu
         "Купить [item_mirror.name]([item_mirror.price] монет)" if isAbleToBuy(item_mirror):
             "Вы купили [item_mirror.name]"
             $buyItem(item_mirror)
-            $my_holo.addLove(5)
+            $addLove(my_holo,7)
             jump holo_market_menu
         "Купить [item_art_plus_size.name]([item_art_plus_size.price] монет)" if isAbleToBuy(item_art_plus_size):
             "Вы купили [item_art_plus_size.name]"
             $buyItem(item_art_plus_size)
-            $my_holo.addLove(10)
+            $addLove(my_holo,10)
             jump holo_market_menu
         "Купить [item_dumbbells_ez.name]([item_dumbbells_ez.price] монет)" if isAbleToBuy(item_dumbbells_ez):
             "Вы купили [item_dumbbells_ez.name]"
             $buyItem(item_dumbbells_ez)
-            $my_holo.addLove(3)
+            $addLove(my_holo,3)
             jump holo_market_menu
         "Купить [item_weight_mid.name]([item_weight_mid.price] монет)" if isAbleToBuy(item_weight_mid):
             "Вы купили [item_weight_mid.name]"
             $buyItem(item_dumbbells_ez)
-            $my_holo.addLove(5)
+            $addLove(my_holo,7)
             jump holo_market_menu
         "Купить [item_barbell.name]([item_barbell.price] монет)" if isAbleToBuy(item_barbell):
             "Вы купили [item_barbell.name]"
             $buyItem(item_barbell)
-            $my_holo.addLove(10)
+            $addLove(my_holo,10)
             jump holo_market_menu
         "Купить [item_book_math.name]([item_book_math.price] монет)" if isAbleToBuy(item_book_math):
             "Вы купили [item_book_math.name]"
             $buyItem(item_book_math)
-            $my_holo.addLove(3)
+            $addLove(my_holo,3)
             jump holo_market_menu
         "Купить [item_self_study_guide.name]([item_self_study_guide.price] монет)" if isAbleToBuy(item_self_study_guide):
             "Вы купили [item_self_study_guide.name]"
             $buyItem(item_self_study_guide)
-            $my_holo.addLove(5)
+            $addLove(my_holo,7)
             jump holo_market_menu
         "Купить [item_grimoire.name]([item_grimoire.price] монет)" if isAbleToBuy(item_grimoire):
             "Вы купили [item_grimoire.name]"
             $buyItem(item_grimoire)
-            $my_holo.addLove(10)
+            $addLove(my_holo,10)
             jump holo_market_menu
         "Купить [item_forest_guide.name]([item_forest_guide.price] монет)" if isAbleToBuy(item_forest_guide):
             "Вы купили [item_forest_guide.name]"
             $buyItem(item_forest_guide)
-            $my_holo.addLove(10)
+            $addLove(my_holo,10)
             jump holo_market_menu
         "Купить [item_combat_book.name]([item_combat_book.price] монет)" if isAbleToBuy(item_combat_book):
             "Вы купили [item_combat_book.name]"
             $buyItem(item_combat_book)
-            $my_holo.addLove(10)
+            $addLove(my_holo,10)
             jump holo_market_menu
         "Уйти":
             h "Приятно было с тобой сотрудничать"
@@ -172,11 +172,11 @@ label holo_market_menu:
 
 label holo_market_root_menu:
     menu:
-        "Мастурбация(30 монет)" if my_holo.love >= 50:
+        "Мастурбация(30 монет)" if my_holo_love >= 50:
             if money < 30:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump market
-            if my_holo.love >= 150:
+            if my_holo_love >= 150:
                 h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
                 $minusMoney(10)
             else:
@@ -184,11 +184,11 @@ label holo_market_root_menu:
             call h_root_masturbate
             $nextTime()
             jump market
-        "Грудями(40 монет)" if my_holo.love >= 60:
+        "Грудями(40 монет)" if my_holo_love >= 60:
             if money < 40:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            if my_holo.love >= 150:
+            if my_holo_love >= 150:
                 h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
                 $minusMoney(10)
             else:
@@ -196,11 +196,11 @@ label holo_market_root_menu:
             call h_root_titfuck
             $nextTime()
             jump market
-        "Минет(50 монет)" if my_holo.love >= 70:
+        "Минет(50 монет)" if my_holo_love >= 70:
             if money < 50:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            if my_holo.love >= 150:
+            if my_holo_love >= 150:
                 h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
                 $minusMoney(10)
             else:
@@ -208,11 +208,11 @@ label holo_market_root_menu:
             call h_root_blowjob
             $nextTime()
             jump market
-        "Секс(70 монет)" if my_holo.love >= 80:
+        "Секс(70 монет)" if my_holo_love >= 80:
             if money < 70:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            if my_holo.love >= 150:
+            if my_holo_love >= 150:
                 h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
                 $minusMoney(10)
             else:
@@ -220,11 +220,11 @@ label holo_market_root_menu:
             call h_root_fuck
             $nextTime()
             jump market
-        "Анал(80 монет)" if my_holo.love >= 90:
+        "Анал(80 монет)" if my_holo_love >= 90:
             if money < 80:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            if my_holo.love >= 150:
+            if my_holo_love >= 150:
                 h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
                 $minusMoney(10)
             else:
@@ -238,11 +238,11 @@ label holo_market_root_menu:
             call h_root_anal
             $nextTime()
             jump market
-        "Секрет(100 монет)" if my_holo.love >= 100:
+        "Секрет(100 монет)" if my_holo_love >= 100:
             if money < 100:
                 h @angry "Ну уж нет, без денег я тебя не обслужу"
                 jump holo_menu
-            if my_holo.love >= 150:
+            if my_holo_love >= 150:
                 h @smile_shy "Ладно, это слишком, как постоянному клиенту сделаю для тебя скидку~"
                 $minusMoney(10)
             else:
@@ -456,7 +456,7 @@ label h_root_masturbate:
         show h angry_naked_cummed with dissolve
         call hide_dialog
         h "Какой же ты иногда хам!"
-        $minusLove("h", 10)
+        $minusLove(my_holo, -10)
         "[h.name] ушла, закрыв за собой дверь, кажется стоит научиться общаться с женщинами"
         return
 
@@ -520,7 +520,7 @@ label h_root_masturbate:
     "Ты наконец заканчиваешь, только небольшая струйка спермы свисает с твоего члена. [h.name] с ухмылкой смотрит тебе в глаза, а её рука всё ещё держит твой член."  
     h "Ну что, мой волчонок, устал?"
 
-    if my_holo.love < 70:
+    if my_holo_love < 70:
         $customNotify("Недостаточно симпатии")
         p "Да, спасибо за этот день"
         h "Всё для моего волчонка~"
@@ -640,7 +640,7 @@ label h_root_titfuck:
     mind "Она уже забралась на меня, неужели так соскучилась по моему члену?"
     h "Ну же, доставай его скорее~"
     
-    if my_holo.love > 80:
+    if my_holo_love > 80:
     
         show bg h_titfuck8 with dissolve
         call hide_dialog
@@ -989,7 +989,7 @@ label h_root_blowjob_continue:
     scene bg h_blowjob_after2 at Transform(zoom=1.5) with dissolve
     "[h.name] встаёт на четвереньки, сперма капает с её груди и лица на кровать."
     h "Спасибо за угощение~"
-    if my_holo.love >= 90:
+    if my_holo_love >= 90:
         scene bg h_blowjob_after3 at Transform(zoom=1.5) with dissolve
         call hide_dialog
         h "Вижу по твоим глазам, [hero_name], тебе мало."

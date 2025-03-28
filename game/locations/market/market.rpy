@@ -64,7 +64,7 @@ label market:
                 h "Красота – вещь хорошая, но если за ней пустота, то и разговаривать не о чем."
         h "Вот и славно! Теперь я знаю, что передо мной не просто болван, а кое-что интересное."  
         if (holo_choices == 3):
-            $my_holo.addLove(10)
+            $addLove(my_holo,10)
             show h smile_shy with dissolve
             "[h.name] смеётся, её хвост неторопливо покачивается из стороны в сторону. Кажется, ей понравился ваш ответ."
         h smile "Может, ещё заглянешь? Кто знает, вдруг я предложу тебе выгодную сделку... или устрою тебе ещё один экзамен." with dissolve
@@ -103,7 +103,7 @@ label market_menu:
                 call start_battle(100, renpy.random.randint(40,80), "Мутный тип", battle_location_market)
                 if last_battle_win and not isNight() and not isEvening():
                     "[h.name] это видела"
-                    $my_holo.addLove(10)
+                    $addLove(my_holo,10)
             $nextTime()
             jump market_menu
         "Уйти":

@@ -455,7 +455,7 @@ init python:
 
     def completeQuest(quest, character):
         addMoney(active_quest.reward_money)
-        character.addLove(active_quest.reward_character)
+        addLove(character, active_quest.reward_character)
         addChar(["str"], active_quest.str_bonus)
         addChar(["char"], active_quest.char_bonus)
         addChar(["intelligence"], active_quest.intelligence_bonus)

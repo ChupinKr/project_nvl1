@@ -88,7 +88,7 @@ label visit_nagatoro_forest:
             "Дать [nag.name] понять, кто тут главный":
                 p "Посмотрим, кто кого. Я готов на всё!"
                 nag "Вот так мне нравится! Давай, покажи, на что ты способен! Но помни, жалеть не стану."
-                call start_battle(100, my_nag.str, nag.name, battle_location_forest)
+                call start_battle(100, my_nag_str, nag.name, battle_location_forest)
                 if last_battle_win:
                     jump battle_win_forest_nagatoro
 
@@ -117,7 +117,7 @@ label visit_nagatoro_forest:
 
 label nagatoro_forest_menu:
     menu:
-        "Тренировка(новая)" if my_nag.love >= 50 and first_root_nagatoro: 
+        "Тренировка(новая)" if my_nag_love >= 50 and first_root_nagatoro: 
             nag @happy "Эй, [hero_name], я придумала новые тренировки!"
             nag @grin "Это скорее кардио, и направлены на развитие различных групп мышц, а тренироваться необходимо с минимумом одежды!"
             show nag normal_shy_battle3 with dissolve   
@@ -145,7 +145,7 @@ label nagatoro_forest_menu:
             p "Давай потренируемся. Я хочу проверить, насколько сильнее я стал."
             show nag grin with dissolve
             nag "Ха-ха! Снова рискнёшь? Мне нравится твоя наглость, но помни – слабость тут не прощается, и я не собираюсь тебя щадить."
-            call start_battle(100, my_nag.str, nag.name, battle_location_forest)
+            call start_battle(100, my_nag_str, nag.name, battle_location_forest)
             if last_battle_win:
                 jump battle_win_forest_nagatoro
         "Попросить задание" if isNoQuestNow():
@@ -174,7 +174,7 @@ label nagatoro_forest_quests:
             show nag happy with dissolve
             nag "Гоблины, да? Они не так просты, как кажутся. Ты точно справишься, или уже запаниковал? Давай, покажи, что ты не просто шкет, а кто-то с характером."
             
-            if isAbleQuest(quest_nagatoro_goblins, my_nag.love):
+            if isAbleQuest(quest_nagatoro_goblins, my_nag_love):
                 menu:
                     "Квест: Убить гоблинов в лесу?"
                     "Принять квест":
@@ -188,7 +188,7 @@ label nagatoro_forest_quests:
         #     p "Зачистить часть леса от диких зверей, чтобы хоть немного восстановить порядок."
         #     show nag neutral with dissolve
         #     nag "Хороший выбор, если решишься. Там полно опасных созданий – так что не расслабляйся и не думай, что всё будет просто."
-        #     if isAbleQuest(quest_nagatoro_forest, my_nag.love):
+        #     if isAbleQuest(quest_nagatoro_forest, my_nag_love):
         #         menu:
         #             "Квест: Зачистить часть леса от диких зверей?"
         #             "Принять квест":
@@ -202,7 +202,7 @@ label nagatoro_forest_quests:
         #     p "Уничтожить банду разбойников на восточной дороге, чтобы восстановить хоть чуточку справедливости."
         #     show nag grin with dissolve
         #     nag "Банда разбойников? Звучит заманчиво. Но будь готов – они не такие простые, как ты думаешь. Если решишься, покажи, что ты не просто болт."
-        #     if isAbleQuest(quest_nagatoro_bandits, my_nag.love):
+        #     if isAbleQuest(quest_nagatoro_bandits, my_nag_love):
         #         menu:
         #             "Квест: Уничтожить банду разбойников на восточной дороге?"
         #             "Принять квест":
@@ -385,24 +385,24 @@ label battle_win_forest_nagatoro:
 
 
 label check_lvl_root:
-    if my_nag.love >= 50:
+    if my_nag_love >= 50:
         show nag normal_shy_battle2
         nag "Эй, ты совсем порвал мой кэйкоги!"
         p "В настоящем сражении одежда неминуемо порвется."
         nag "Так не пойдет, реванш, сейчас же!"
-        $my_nag.addNPCStr(5)
+        $addNPCStr(my_nag,5)
         #Требует реванш!
-        call start_battle(100, my_nag.str, nag.name, 'return_to_this')
+        call start_battle(100, my_nag_str, nag.name, 'return_to_this')
         if last_battle_win:
             hide nag with dissolve
             "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
             show nag normal_shy_battle4 with dissolve
             nag @grin_battle4 "Знаешь, [hero_name], я слишком сильно поддавалась тебе, с этим покончено!"
-            $my_nag.addNPCStr(10)
+            $addNPCStr(my_nag,10)
             show nag normal_shy_battle5 with dissolve
             "[nag.name] снимает с себя всю верхнюю одежду в надежде, что теперь тебе будет еще сложнее ухватиться и победить ее"
             nag @grin_battle5 "Что смотришь? Больше тебе не победить! Реванш!"
-            call start_battle(100, my_nag.str, nag.name, 'return_to_this')
+            call start_battle(100, my_nag_str, nag.name, 'return_to_this')
             if last_battle_win:
                 hide nag with dissolve
                 "Шло ожесточенное сражение. Твои руки скользят по ее гладкому телу"
@@ -417,27 +417,27 @@ label check_lvl_root:
                 mind "Спасибо [f.name], прекрасный мир!"
             else:
                 nag "Я так и знала, что ты слабак, просто надо было серьезнее отнестись к бою!"
-                $minusLove("nag", 10)
+                $minusLove(my_nag, -10)
                 "Ты убегаешь, пока не понимаешь, что в безопасности"
                 "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
                 mind "Нужно стать сильнее!"
         else:
             nag "И это всё, что ты можешь? Беги, беги, слабак!"
-            $minusLove("nag", 10)
+            $minusLove(my_nag, -10)
             jump forest
             "Ты убегаешь, пока не понимаешь, что в безопасности"
             "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
             mind "Нужно стать сильнее!"
         $nextTime()
         jump forest
-    if my_nag.love >= 40:
+    if my_nag_love >= 40:
         show nag normal_shy_battle2 with dissolve
         nag "Эй, ты совсем порвал мой кэйкоги!"
         p "В настоящем сражении одежда неминуемо порвется."
         nag "Так не пойдет, реванш, сейчас же!"
-        $my_nag.addNPCStr(5)
+        $addNPCStr(my_nag,5)
         #Требует реванш!
-        call start_battle(100, my_nag.str, nag.name, 'return_to_this')
+        call start_battle(100, my_nag_str, nag.name, 'return_to_this')
         if last_battle_win:
            hide nag 
            "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее. Ты случайно задел даже ее футболку, тренировка была довольно серьезная."
@@ -452,21 +452,21 @@ label check_lvl_root:
            jump forest
         else:
             nag "И это всё, что ты можешь? Беги, беги, слабак!"
-            $minusLove("nag", 10)
+            $minusLove(my_nag, -10)
             jump forest
             "Ты убегаешь, пока не понимаешь, что в безопасности"
             "И когда понимаешь, что опасность миновала, понимаешь одну истину.."
             mind "Нужно стать сильнее!"
         $nextTime()
         jump forest
-    elif my_nag.love >= 30: 
+    elif my_nag_love >= 30: 
         show nag normal_shy_battle2 with dissolve
         nag "Эй, ты совсем порвал мой кэйкоги!"
         p "В настоящем сражении одежда неминуемо порвется."
         nag "Так не пойдет, реванш, сейчас же!"
-        $my_nag.addNPCStr(5)
+        $addNPCStr(my_nag,5)
         #Требует реванш!
-        call start_battle(100, my_nag.str, nag.name, 'return_to_this')
+        call start_battle(100, my_nag_str, nag.name, 'return_to_this')
         if last_battle_win:
            hide nag 
            "Верхняя одежда [nag.name] была порвана в клочья и слетела с нее."
@@ -481,21 +481,21 @@ label check_lvl_root:
            "Ты уходишь, понимая, что всё было не зря"
         else:
             nag "И это всё, что ты можешь? Беги, беги, слабак!"
-            $minusLove("nag", 10)
+            $minusLove(my_nag, -10)
             jump forest
             "Ты убегаешь, пока не понимаешь, что в безопасности"
             "И когда понимаешь, что опасность миновала, задаешься риторическим вопросом.."
             p "Может мне стоило достойно принять поражение?"
         $nextTime()
         jump forest
-    elif my_nag.love >= 20:
+    elif my_nag_love >= 20:
         show nag normal_shy_battle2 with dissolve
         nag "Эй, ты порвал мой кэйкоги!"
         p "В настоящем сражении одежда неизбежно изнашивается."
         nag "[hero_name], на сегодня закончили, приходи завтра, я буду серьезна."
         $nextTime()
         jump forest
-    elif my_nag.love >= 10:
+    elif my_nag_love >= 10:
         show nag normal_shy_battle1 with dissolve
         nag "[hero_name], больше не хватайся так, ты растянул мне всю одежу!"
         p "Это было необходимо, чтобы наконец победить тебя"

@@ -58,9 +58,9 @@ label mer_teach:
         if intelligence >= 50:
             "Ты слово в слово пересказываешь всё, что рассказала [mer.name], она чувствует, что время было потрачено не зря и проникается к тебе уважением."
             mer @surprised "Удивительно, а ты не безнадежен!"
-            $addChar(["intelligence"],5)
-            $my_merlin.addLove(10)
-            if first_mer_root and my_merlin.love >= 50:
+            $addChar(["intelligence"],10)
+            $addLove(my_merlin, 10)
+            if first_mer_root and my_merlin_love >= 50:
                 mer smile "Не хочешь пройти дополнительный курс? Этот курс сильно укрепит твои знания!"
                 menu:
                     mer "Хочешь пройти дополнительный курс?"
@@ -81,10 +81,10 @@ label mer_teach:
         else:
             $customNotify("Недостаточно интеллекта")
             "Ты попытался рассказать всё именно так, как говорила [mer.name], но у тебя не вышло"
-            $minusLove("mer",2)
+            $minusLove(my_merlin,-2)
             "[mer.name] выглядит раздраженной"
             "Хорошо, что хоть что-то ты запомнил"
-            $addChar(["intelligence"],2)
+            $addChar(["intelligence"],3)
             mer @sigh "Большего от тебя и не ожидала, всё, я занята, уходи!"
             "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
             play sound "audio/magic_dissapear.ogg"
@@ -93,10 +93,10 @@ label mer_teach:
         if intelligence >= 25:
             p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
             "[mer.name] рассказывает тебе ту часть, которую сразу у тебя не удалось понять"
-            $my_merlin.addLove(5)
+            $addLove(my_merlin, 7)
             mer smile "По глазам вижу, теперь то ты всё понял"
             p "Да, спасибо, что разъяснила!"
-            $addChar(["intelligence"],3)
+            $addChar(["intelligence"],5)
             mer "Если вновь появятся вопросы - можешь найти меня и я постараюсь помочь."
             p "Хорошо, еще я бы хотел..."
             "Не успев договорить, ты перемещаешься в центральную развилку магической башни"
@@ -109,7 +109,7 @@ label mer_teach:
             "И даже так ты ничего не понял"
             "Возможно стоит сначала повысить свой интелект.."
             "[mer.name] выглядит раздраженной"
-            $minusLove("mer",3)
+            $minusLove(my_merlin,-3)
             "Жаль, что ты ничего не запомнил"
             mer @sigh "Больше я не собираюсь тратить на тебя свое время!"
             "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
@@ -136,7 +136,7 @@ label mer_root:
             "Конечно":
                 p "Конечно, я пожертвую телом ради науки!"
                 mer smile "Это именно то, что я ожидала услышать."
-                $my_merlin.addLove(5)
+                $addLove(my_merlin, 5)
                 jump mer_root_menu
             "Откажусь":
                 p "Откажусь, мне не нравится эта идея."
@@ -151,22 +151,22 @@ label mer_root:
 
 label mer_root_menu:
     menu:
-        "Мастурбация" if my_merlin.love >= 50:
+        "Мастурбация" if my_merlin_love >= 50:
             call mer_root_masturbate
             jump mer_root_menu
-        "Грудями" if my_merlin.love >= 60:
+        "Грудями" if my_merlin_love >= 60:
             call mer_root_titfuck
             jump mer_root_menu
-        "Минет" if my_merlin.love >= 70:
+        "Минет" if my_merlin_love >= 70:
             call mer_root_blowjob
             jump mer_root_menu
-        "Секс" if my_merlin.love >= 80:
+        "Секс" if my_merlin_love >= 80:
             call mer_root_fuck
             jump mer_root_menu
-        "Анал" if my_merlin.love >= 90:
+        "Анал" if my_merlin_love >= 90:
             call mer_root_anal
             jump mer_root_menu
-        "Фетиш" if my_merlin.love >= 200:
+        "Фетиш" if my_merlin_love >= 200:
             call mer_root_fetish
             jump mer_root_menu
         "Вернуться":

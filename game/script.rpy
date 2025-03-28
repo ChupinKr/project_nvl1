@@ -1,6 +1,10 @@
-﻿$ active_quest = no_quest
-# Игра начинается здесь:
+﻿# Игра начинается здесь:
 label start:
+
+    if persistent.lang == "russian":
+        $setTime(0) #Всего 4 времени (Утро, День, Вечер, Ночь)
+    if persistent.lang == "english":
+        $setTime(0) #Всего 4 времени (Утро, День, Вечер, Ночь)
 
     scene bg haven_bright3
     play music "audio/haven.ogg" fadein 5.0 loop

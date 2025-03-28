@@ -1,43 +1,30 @@
-init:
-    # Инициализация переменных
-    $ hero_name = ""
-    $ chosen_blessing = None  # Хранит выбранное благословение
-    $ health = 100  # Здоровье
+# Инициализация переменных
+default  hero_name = ""
+default  chosen_blessing = None  # Хранит выбранное благословение
+default  health = 100  # Здоровье
+default  money = 0  # Монеты
 
-    $ money = 0  # Харизма
-    
-    $ charisma = 1  # Харизма
-    $ strength = 1  # Сила
-    $ intelligence = 1  # Объем маны
-    $ charisma_mod = 1  # Модификатор харизмы
-    $ strength_mod = 1  # Модификатор силы
-    $ intelligence_mod = 1  # Модификатор маны
-
-    # День и время
-    $ day = 1 # после вечера должно идти утро след дня
-    if persistent.lang == "russian":
-        $ time = "Утро" #Всего 4 времени (Утро, День, Вечер, Ночь)
-    if persistent.lang == "english":
-        $ time = "Morning" #Всего 4 времени (Утро, День, Вечер, Ночь)
-
-    #До какого дня можно попасть в комнату
-    $ while_room = 0
-
-    #Текущий квест
-    $ active_quest = no_quest
-
-    # Массив доступных для главного героя заклинаний
-    $ available_spells = []
-
-    # Массив купленных товаров
-    $ gg_items = []
-
-    # Текущее местоположение
-    $ current_location = "forest"
-
-    # Приглашенная девушка
-    $ can_invite_brothel = False
-    $ invited_girl = None
-
-    #Количество смертей
-    $ defeat_count = 0
+default  charisma = 1  # Харизма
+default  strength = 1  # Сила
+default  intelligence = 1  # Объем маны
+default  charisma_mod = 1  # Модификатор харизмы
+default  strength_mod = 1  # Модификатор силы
+default  intelligence_mod = 1  # Модификатор маны
+# День и время
+default  day = 1 # после вечера должно идти утро след дня
+default  time = "" # после вечера должно идти утро след дня
+#До какого дня можно попасть в комнату
+default  while_room = 0
+#Текущий квест
+default  active_quest = no_quest
+# Массив доступных для главного героя заклинаний
+default  available_spells = []
+# Массив купленных товаров
+default  gg_items = []
+# Текущее местоположение
+default  current_location = "forest"
+# Приглашенная девушка
+default  can_invite_brothel = False
+default  invited_girl = None
+#Количество смертей
+default  defeat_count = 0

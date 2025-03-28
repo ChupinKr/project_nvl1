@@ -48,7 +48,7 @@ label forest_quest_nagatoro_goblins:
         onna "Мне верно стоит отблагодарить тебя за спасение..."
         p "Я спас тебя не из корыстных целей."
         onna smile_naked "Ты добрый человек, [hero_name]." with dissolve
-        $my_freya.addLove(10)
+        $addLove(my_freya, 10)
         onna closed_naked_1 "Но я все же дам тебе то, что ты заслуживаешь." with dissolve
         "[onna.name] закрыла глаза и начала читать молитвы, очень тихо."
         show onna closed_naked_2 with dissolve

@@ -481,7 +481,7 @@ label nagatoro_root_titfuck:
     scene bg nag_titjob_cum23 with flash
     "[nag.name] сопротивляется все сильнее, пока ты заливаешь в ее рот сперму порцию за порцией"
 
-    if strength < my_nag.str:
+    if strength < my_nag_str:
         $customNotify("Недостаточно силы")
         "[nag.name] вырвалась из твой хватки и вздохнула воздуха"
         scene bg nagatoro_dodjo with fade
@@ -518,7 +518,7 @@ label nagatoro_root_titfuck:
     scene bg nag_titjob_cum28 with flash
     "Ты даешь ей возможность вдохнуть немного воздуха, и продолжаешь обильно кончать в ее рот"
 
-    if strength < my_nag.str * 1.5:
+    if strength < my_nag_str * 1.5:
         scene bg nag_titjob_cum28_1 with flash
         "Почти сразу ты насаживаешь ее ротик обратно на свой член"
         "Грудь [nag.name] покрылась спермой, а сама она смотрит на тебя гневным взглядом"

@@ -200,7 +200,7 @@ label first_time_rapunzel_no_blessing:
 label rapunzel_forest: 
     show r smile with dissolve
     menu:
-        "Посмотреть Бордель" if my_rapunzel.love >= 20 and not canVisit("brothel"):
+        "Посмотреть Бордель" if my_rapunzel_love >= 20 and not canVisit("brothel"):
             p "Я слышал, что где-то здесь есть бордель, ты случаем не знаешь о нем?"
             r @surprised "Только тихо, место это секретное. Идем." with dissolve
             jump rapunzel_brothel_first_visit
@@ -229,7 +229,7 @@ label rapunzel_quests:
     menu:
         "Собрать особые грибы":
             r "Есть такие грибы... Они обладают уникальными свойствами."
-            if isAbleQuest(quest_rapunzel_mashrooms, my_rapunzel.love):
+            if isAbleQuest(quest_rapunzel_mashrooms, my_rapunzel_love):
                 r "Если ты их найдешь, я буду просто в восторге!"
                 $ getQuest(quest_rapunzel_mashrooms)
             else:

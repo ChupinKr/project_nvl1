@@ -3,204 +3,307 @@ init python:
         def __init__(
             self, 
             in_name, 
-            in_love, 
-            in_strength,
             in_img,
             in_desc,
             in_notice,
             in_short_name
         ):
-
             self.name = in_name  # Имя
-            self.love = in_love  # Симпатия
-            self.str = in_strength  # Сила
             self.img = in_img  # Картинка
             self.desc = in_desc  # Описание
             self.notice = in_notice  # Совет
             self.short_name = in_short_name  # Совет
 
-        def addNPCStr(self, countStr):
-            self.str += countStr
-            if persistent.lang == "russian":
-                customNotify(str(self.name) + " стала серьезнее")
-            if persistent.lang == "english":
-                customNotify(str(self.name) + " became more serious")
-            return
+    def addNPCStr(charac, countStr):
+        current_str = switchStr(charac, countStr)
+        if persistent.lang == "russian":
+            customNotify(str(charac.name) + " теперь серьезнее")
+        if persistent.lang == "english":
+            customNotify(str(charac.name) + " became more serious")
+        return
+    
+    def switchStr(charac, countLove):
+        global my_freya_str, my_elsa_str, my_nag_str, my_rapunzel_str, my_tsunade_str, my_sakura_str, my_merlin_str
+        global my_holo_str, my_miku_str, my_mao_str, my_darkness_str, my_eris_str
+        if charac.short_name == "f":
+            my_freya_str += countLove
+            return my_freya_str
+        elif charac.short_name == "e":
+            my_elsa_str += countLove
+            return my_elsa_str
+        elif charac.short_name == "nag":
+            my_nag_str += countLove
+            return my_nag_str
+        elif charac.short_name == "r":
+            my_rapunzel_str += countLove
+            return my_rapunzel_str
+        elif charac.short_name == "ts":
+            my_tsunade_str += countLove
+            return my_tsunade_str
+        elif charac.short_name == "s":
+            my_sakura_str += countLove
+            return my_sakura_str
+        elif charac.short_name == "mer":
+            my_merlin_str += countLove
+            return my_merlin_str
+        elif charac.short_name == "h":
+            my_holo_str += countLove
+            return my_holo_str
+        elif charac.short_name == "m":
+            my_miku_str += countLove
+            return my_miku_str
+        elif charac.short_name == "mao":
+            my_mao_str += countLove
+            return my_mao_str
+        elif charac.short_name == "d":
+            my_darkness_str += countLove
+            return my_darkness_str
+        elif charac.short_name == "eris":
+            my_eris_str += countLove
+            return my_eris_str
+        return
 
-        def addLove(self, countLove):
-            self.love += countLove
-            if persistent.lang == "russian":
-                customNotify("Симпатия " + str(self.name) + " возросла")
-            if persistent.lang == "english":
-                customNotify(str(self.name) + "'s sympathy has increased")
-            return
+    def minusLove(charac, countMinusLove):
+        current_love = switchLove(charac, countMinusLove)
+        if persistent.lang == "russian":
+            customNotify("Симпатия " + str(charac.name) + " уменьшилась")
+        if persistent.lang == "english":
+            customNotify(str(charac.name) + "'s sympathy has diminished")
+        return
 
-        def minusLove(self, countLove):
-            self.love -= countLove
-            if persistent.lang == "russian":
-                customNotify("Симпатия " + str(self.name) + " уменьшилась")
-            if persistent.lang == "english":
-                customNotify(str(self.name) + "'s sympathy has diminished")
-            return
+    def addLove(charac, countLove):
+        current_love = switchLove(charac, countLove)
+        if persistent.lang == "russian":
+            customNotify("Симпатия " + str(charac.name) + " возросла")
+        if persistent.lang == "english":
+            customNotify(str(charac.name) + "'s sympathy has increased")
+        return
+        
+    def switchLove(charac, countLove):
+        global my_freya_love, my_elsa_love, my_nag_love, my_rapunzel_love, my_tsunade_love, my_sakura_love, my_merlin_love
+        global my_holo_love, my_miku_love, my_mao_love, my_darkness_love, my_eris_love
+        if charac.short_name == "f":
+            my_freya_love += countLove
+            return my_freya_love
+        elif charac.short_name == "e":
+            my_elsa_love += countLove
+            return my_elsa_love
+        elif charac.short_name == "nag":
+            my_nag_love += countLove
+            return my_nag_love
+        elif charac.short_name == "r":
+            my_rapunzel_love += countLove
+            return my_rapunzel_love
+        elif charac.short_name == "ts":
+            my_tsunade_love += countLove
+            return my_tsunade_love
+        elif charac.short_name == "s":
+            my_sakura_love += countLove
+            return my_sakura_love
+        elif charac.short_name == "mer":
+            my_merlin_love += countLove
+            return my_merlin_love
+        elif charac.short_name == "h":
+            my_holo_love += countLove
+            return my_holo_love
+        elif charac.short_name == "m":
+            my_miku_love += countLove
+            return my_miku_love
+        elif charac.short_name == "mao":
+            my_mao_love += countLove
+            return my_mao_love
+        elif charac.short_name == "d":
+            my_darkness_love += countLove
+            return my_darkness_love
+        elif charac.short_name == "eris":
+            my_eris_love += countLove
+            return my_eris_love
+        return
 
+define my_freya_love = 0
+define my_freya_str = 10000
+define my_freya = None
+define my_elsa_love = 0
+define my_elsa_str = 10
+define my_elsa = None
+define my_nag_love = 0
+define my_nag_str = 100
+define my_nag = None
+define my_rapunzel_love = 0
+define my_rapunzel_str = 20
+define my_rapunzel = None
+define my_tsunade_love = 0
+define my_tsunade_str = 500
+define my_tsunade = None
+define my_sakura_love = 0
+define my_sakura_str = 300
+define my_sakura = None
+define my_merlin_love = 0
+define my_merlin_str = 20
+define my_merlin = None
+define my_holo_love = 0
+define my_holo_str = 30
+define my_holo = None
+define my_miku_love = 0
+define my_miku_str = 40
+define my_miku = None
+define my_mao_love = 0
+define my_mao_str = 20
+define my_mao = None
+define my_darkness_love = 0
+define my_darkness_str = 200
+define my_darkness = None
+define my_eris_love = 0
+define my_eris_str = 150
+define my_eris = None
+
+init: #TODO сделать отдельные переменные для силы и 
     if persistent.lang == "english":
-        my_freya = MyCharacter("Freya", 0, 10000, 
+        $my_freya = MyCharacter("Freya", 
         "images/characters/freya_ch/f smile.png", 
         "The goddess who summoned you to this world, she watches your every move.", 
         "Try to 'do the right thing,' and she’ll reward you. \nJust know that doing the right thing isn’t always the best path.",
         "f"
         )
-
-        my_elsa = MyCharacter("Elsa", 0, 500,
+        $my_elsa = MyCharacter("Elsa", 
         "images/characters/elsa_ch/new/e smile.png", 
         "A student of a great sorceress. \nHer specialty is ice magic. \nShe’s quite headstrong and sharp-tongued, but if you make an effort to please her, she won’t forget it.",
         "Try to complete her tasks.",
         "e"
         )
-
-        my_nag = MyCharacter("Nagatoro", 0, 100,
+        $my_nag = MyCharacter("Nagatoro", 
         "images/characters/nagatoro_ch/nag grin.png", 
         "Pretty harsh with her words and loves a good fight. \nShe’s spent years honing her martial arts and physique. \nShe enjoys teasing people.",
         "Try to surpass her in strength—note that she only gets stronger.",
         "nag"
         )
-
-        my_rapunzel = MyCharacter("Rapunzel", 0, 20,
+        $my_rapunzel = MyCharacter("Rapunzel", 
         "images/characters/rapunzel_ch/new/r smile.png", 
         "A playful and cheerful girl. \nShe’s quite crude with her language. \nShe seems to be connected to some shady characters.",
         "Train your charisma with her, and you’ll be in for a treat.",
         "r"
         )
-
-        my_tsunade = MyCharacter("Tsunade", 0, 500,
+        $my_tsunade = MyCharacter("Tsunade", 
         "images/characters/tsunade_ch/ts smile.png", 
         "A serious woman who works as the chief doctor at the local hospital. \nShe’s the one who’ll heal you, so it’s best to stay on good terms with her.",
         "IN PROGRESS",
         "ts"
         )
-
-        my_sakura = MyCharacter("Sakura", 0, 300,
+        $my_sakura = MyCharacter("Sakura", 
         "images/characters/sakura_ch/s smile.png", 
         "The assistant to the chief doctor at the local hospital. \nShe can be harsh at times, but she has a very kind heart.",
         "IN PROGRESS",
         "s"
         )
-
-        my_merlin = MyCharacter("Merlin", 0, 0,
+        $my_merlin = MyCharacter("Merlin", 
         "images/characters/merlin_ch/standart/mer smile.png", 
         "The head of the Magic Tower. \nA great sorceress who seems capable of anything.",
         "Try to get smarter so you can find her whenever you need to.",
         "mer"
         )
-
-        my_holo = MyCharacter("Holo", 0, 30,
+        $my_holo = MyCharacter("Holo", 
         "images/characters/holo_ch/h smile.png", 
         "A wolf-girl. A vendor at one of the stalls in the City Market. \nA very gentle girl with a pleasant personality and a stunning figure.",
         "Help her out at the City Market.",
         "h"
         )
-
-        my_miku = MyCharacter("Miku", 0, 40,
+        $my_miku = MyCharacter("Miku", 
         "images/characters/miku_ch/m smile.png", 
         "A bright girl who runs her own tavern. She serves drinks, so she’s almost always holding a mug of beer.",
         "Help her out at the Tavern.",
         "m"
         )
-
-        my_mao = MyCharacter("Mao Mao", 0, 20,
+        $my_mao = MyCharacter("Mao Mao", 
         "images/characters/maomao_ch/mao smile.png", 
         "A short girl who runs her own brothel. \nShe doesn’t look it, but she’s actually an adult and very clever.",
         "Bring girls to work at her brothel—she’ll pay you well.",
         "mao"
         )
-
-        my_darkness = MyCharacter("Darkness", 0, 300,
+        $my_darkness = MyCharacter("Darkness", 
         "images/characters/darkness_ch/d smile.png", 
         "A fairly strong girl. \nThe head of the local warriors’ guild. \nShe has masochistic tendencies but keeps them hidden.",
         "Don’t go easy on her.",
         "d"
         )
-
-        my_eris = MyCharacter("Eiris", 0, 150,
+        $my_eris = MyCharacter("Eiris", 
         "images/characters/eris_ch/mini/eris t_smile.png", 
         "A girl who sharpens her skills every morning at the Training Grounds. \nShe’s determined to get stronger to catch up to some mage.",
         "Train with her and complete her tasks.",
         "eris"
         )
     elif persistent.lang == "russian":
-        my_freya = MyCharacter("Фрея", 0, 10000, 
+        $my_freya = MyCharacter("Фрея", 
         "images/characters/freya_ch/f smile.png", 
         "Богиня, призвавшая тебя в этот мир, она следит за каждым твоим действием.", 
         "Постарайся \"поступать правильно\" и она тебя отблагодарит. \nТолько знай, что поступать правильно - не всегда лучший путь.",
         "f"
         )
-        my_elsa = MyCharacter("Эльза", 0, 500,
+        $my_elsa = MyCharacter("Эльза", 
         "images/characters/elsa_ch/new/e smile.png", 
         "Ученица великой волшебницы. \nЕе профиль - ледяная магия. \nОна довольно своевольна и резка, но если постараешься ей услужить - она в долгу не останется.",
         "Постарайся выполнять ее задания.",
         "e"
         )
-        my_nag = MyCharacter("Нагаторо", 0, 100,
+        $my_nag = MyCharacter("Нагаторо", 
         "images/characters/nagatoro_ch/nag grin.png", 
         "Довольно резкая в высказываниях и любит подраться. \nОна долго оттачивала боевые искусства и свое тело. \nЛюбит поддразнивать.",
         "Постарайся обогнать ее по силе, заметь, она становится лишь сильнее.",
         "nag"
         )
-        my_rapunzel = MyCharacter("Рапунцель", 0, 20,
+        $my_rapunzel = MyCharacter("Рапунцель", 
         "images/characters/rapunzel_ch/new/r smile.png", 
         "Игривая и веселая девушка. \nДовольно пошлая в своих выражениях. \nКажется связана с темными личностями.",
         "Тренируй харизму с ней и будет тебе счастье.",
         "r"
         )
-        my_tsunade = MyCharacter("Цунаде", 0, 500,
+        $my_tsunade = MyCharacter("Цунаде", 
         "images/characters/tsunade_ch/ts smile.png", 
         "Серьезная дама, работает в местой больнице главным врачом. \nИменно она будет лечить тебя, так что лучше придерживаться с ней хороших отношений.",
         "IN PROGRESS",
         "ts"
         )
-        my_sakura = MyCharacter("Сакура", 0, 300,
+        $my_sakura = MyCharacter("Сакура",
         "images/characters/sakura_ch/s smile.png", 
         "Помошница главного врача в местной больнице. \nБывает злая, но у нее очень доброе сердце.",
         "IN PROGRESS",
         "s"
         )
-        my_merlin = MyCharacter("Мерлин", 0, 0,
+        $my_merlin = MyCharacter("Мерлин", 
         "images/characters/merlin_ch/standart/mer smile.png", 
         "Глава Магической башни. \nВеликая волшебница, способная будто на всё.",
         "Постарайся стать умнее, чтобы в любое время иметь возможность найти ее.",
         "mer"
         )
-        my_holo = MyCharacter("Холо", 0, 30,
+        $my_holo = MyCharacter("Холо", 
         "images/characters/holo_ch/h smile.png", 
         "Девушка-волчица. Продавщица в одной из лавок на Городском рынке. \nОчень нежная девушка с приятным характером и шикарной фигурой.",
         "Помогай ей на Городском рынке.",
         'h'
         )
-        my_miku = MyCharacter("Мику", 0, 40,
+        $my_miku = MyCharacter("Мику", 
         "images/characters/miku_ch/m smile.png", 
         "Светлая девушка, которая держит свою таверну. Разносит напитки, так что почти все время ходит с кружкой пива в руках.",
         "Помогай ей в Таверне.",
         "m"
         )
-        my_mao = MyCharacter("Мао Мао", 0, 20,
+        $my_mao = MyCharacter("Мао Мао", 
         "images/characters/maomao_ch/mao smile.png", 
         "Низкая девушка, заведующая своим Борделем. \nНа вид  и не скажешь, но на деле уже взрослая и очень умная.",
         "Приводи девок работать к ней в Бордель, она хорошо оплатит.",
         "mao"
         )
-        my_darkness = MyCharacter("Даркнесс", 0, 300,
+        $my_darkness = MyCharacter("Даркнесс", 
         "images/characters/darkness_ch/d smile.png", 
         "Довольно сильная девушка. \nГлава местной гильдии войнов. \nИмеет мазохистские наклонности, но скрывает это.",
         "Не жалей ее.",
         "d"
         )
-        my_eris = MyCharacter("Эрис", 0, 150,
+        $my_eris = MyCharacter("Эрис", 
         "images/characters/eris_ch/mini/eris t_smile.png", 
         "Девушка, которая каждое утро оттачивает свои навыки на Тренировочной площадке. \nОна стремится стать сильнее, чтобы догнать по силе какого-то мага.",
         "Тренируйся и выполняй ее задания.",
         "eris"
         )
-
 
 init:
     # Инициализация персонажей с соответствующими цветами имен

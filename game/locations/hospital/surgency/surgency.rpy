@@ -58,11 +58,11 @@ label surgency_tsunade_menu:
                     $addHealth(100)
                 "Нет, но я надеялся, что вы мне поможете даром":
                     p "Нет, но я верю, что такая молодая красавица как вы, [ts.name], не сможет оставить юношу умирать"
-                    if my_tsunade.love > 20 and charisma > 20:
+                    if my_tsunade_love > 20 and charisma > 20:
                         ts "Каков наглец, ладно, но это в последний раз."
                         $addHealth(100)
                         pause 3.5
-                        $minusLove("ts", 5)
+                        $minusLove(my_tsunade, -5)
                         jump surgency_tsunade_menu
                     else:
                         ts "Опять приполз без денег? Так не пойдет, дорогой, надо и честь знать."
