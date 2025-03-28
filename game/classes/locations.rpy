@@ -1,83 +1,155 @@
 init python:
     class Location:
-        def __init__(self, tag, name, canVisit):
+        def __init__(self, tag, name):
             self.tag = tag  # Название локации
             self.name = name  # Название локации
-            self.canVisit = canVisit  # Возможность посетить
 
-    class LocList:
-        def __init__(self):
+    def getLocByTag(locList, tag):
+        for loc in locList:
+            if(tag == loc.tag):
+                return loc
+
+    def getLocCanVisitByTag(tag):
+        global city_canVisit, forest_canVisit, rt_canVisit, market_canVisit, bm_canVisit
+        global room_canVisit, room_canVisit, hospital_canVisit, surgency_canVisit
+        global brothel_canVisit, mt_canVisit, lib_canVisit, guild_canVisit, tg_canVisit
+        if(tag == "city"):
+            return city_canVisit
+        if(tag == "forest"):
+            return forest_canVisit
+        if(tag == "rt"):
+            return rt_canVisit
+        if(tag == "market"):
+            return market_canVisit
+        if(tag == "bm"):
+            return bm_canVisit
+        if(tag == "room"):
+            return room_canVisit
+        if(tag == "hospital"):
+            return hospital_canVisit
+        if(tag == "surgency"):
+            return surgency_canVisit
+        if(tag == "brothel"):
+            return brothel_canVisit
+        if(tag == "mt"):
+            return mt_canVisit
+        if(tag == "lib"):
+            return lib_canVisit
+        if(tag == "guild"):
+            return guild_canVisit
+        if(tag == "tg"):
+            return tg_canVisit
+        return False
+
+    def setCanVisitByTag(tag, canVisit):
+        global city_canVisit, forest_canVisit, rt_canVisit, market_canVisit, bm_canVisit
+        global room_canVisit, room_canVisit, hospital_canVisit, surgency_canVisit
+        global brothel_canVisit, mt_canVisit, lib_canVisit, guild_canVisit, tg_canVisit
+        if(tag == "city"):
+            city_canVisit = canVisit
+        if(tag == "forest"):
+            forest_canVisit = canVisit
+        if(tag == "rt"):
+            rt_canVisit = canVisit
+        if(tag == "market"):
+            market_canVisit = canVisit
+        if(tag == "bm"):
+            bm_canVisit = canVisit
+        if(tag == "room"):
+            room_canVisit = canVisit
+        if(tag == "hospital"):
+            hospital_canVisit = canVisit
+        if(tag == "surgency"):
+            surgency_canVisit = canVisit
+        if(tag == "brothel"):
+            brothel_canVisit = canVisit
+        if(tag == "mt"):
+            mt_canVisit = canVisit
+        if(tag == "lib"):
+            lib_canVisit = canVisit
+        if(tag == "guild"):
+            guild_canVisit = canVisit
+        if(tag == "tg"):
+            tg_canVisit = canVisit
+        return
+
+    def setVisit(tag, canVisit):
+        global notices, locList
+        if getLocCanVisitByTag(tag) != canVisit:
+            setCanVisitByTag(tag, canVisit)
             if persistent.lang == "russian":
-                self.list = [
-                    Location(tag="city",name="Город", canVisit=True),
-                    Location(tag="forest",name="Лес", canVisit=True),
-                    Location(tag="rt",name="Разрушенный храм", canVisit=True),
-                    Location(tag="market",name="Городской рынок", canVisit=True),
-                    Location(tag="bm",name="Черный рынок", canVisit=False),
-                    Location(tag="tavern",name="Таверна", canVisit=False),
-                    Location(tag="room",name="Моя комната", canVisit=False),
-                    Location(tag="hospital",name="Больница", canVisit=False),
-                    Location(tag="surgency",name="Хирургия", canVisit=False),
-                    Location(tag="bar",name="Бар", canVisit=False),
-                    Location(tag="brothel",name="Бордель", canVisit=False),
-                    Location(tag="mt",name="Магическая башня", canVisit=False),
-                    Location(tag="lib",name="Библиотека", canVisit=False),
-                    Location(tag="guild",name="Гильдия", canVisit=False),
-                    Location(tag="tg",name="Тренировочная площадка", canVisit=False)
-                ]
+                if canVisit:
+                    notices.append("Теперь вам доступна локация "+ getLocByTag(locList, tag).name)
+                else:
+                    notices.append("Теперь вам недоступна локация "+ getLocByTag(locList, tag).name)
             if persistent.lang == "english":
-                self.list = [
-                    Location(tag="city",name="City", canVisit=True),
-                    Location(tag="forest",name="Forest", canVisit=True),
-                    Location(tag="rt",name="Ruined Temple", canVisit=True),
-                    Location(tag="market",name="City Market", canVisit=True),
-                    Location(tag="bm",name="Black Market", canVisit=False),
-                    Location(tag="tavern",name="Tavern", canVisit=False),
-                    Location(tag="room",name="My Room", canVisit=False),
-                    Location(tag="hospital",name="Hospital", canVisit=False),
-                    Location(tag="surgency",name="Surgery", canVisit=False),
-                    Location(tag="bar",name="Bar", canVisit=False),
-                    Location(tag="brothel",name="Brothel", canVisit=False),
-                    Location(tag="mt",name="Magic Tower", canVisit=False),
-                    Location(tag="lib",name="Library", canVisit=False),
-                    Location(tag="guild",name="Guild", canVisit=False),
-                    Location(tag="tg",name="Training Ground", canVisit=False)
-                ]
-        
-        def getLocByTag(self, tag):
-            for loc in self.list:
-                if(tag == loc.tag):
-                    return loc
+                if canVisit:
+                    notices.append("You can now access location "+ getLocByTag(locList, tag).name)
+                else:
+                    notices.append("You can now access location "+ getLocByTag(locList, tag).name)
 
-        def setVisit(self, tag, canVisit):
-            global notices
-            if self.getLocByTag(tag).canVisit != canVisit:
-                self.getLocByTag(tag).canVisit = canVisit
-                if persistent.lang == "russian":
-                    if canVisit:
-                        notices.append("Теперь вам доступна локация "+ self.getLocByTag(tag).name)
-                    else:
-                        notices.append("Теперь вам недоступна локация "+ self.getLocByTag(tag).name)
-                if persistent.lang == "english":
-                    if canVisit:
-                        notices.append("You can now access location "+ self.getLocByTag(tag).name)
-                    else:
-                        notices.append("You can now access location "+ self.getLocByTag(tag).name)
+            renpy.show_screen('notify_plus', notices=notices)
+            notices = []
+            return True
+        else:
+            return False
 
-                renpy.show_screen('notify_plus', notices=notices)
-                notices = []
-                return True
-            else:
-                return False
-    
-    all_locs = LocList()
+    def canVisit(locationTag):
+        return getLocCanVisitByTag(locationTag)
 
+    def updateCanVisit(locListLocationTag, canVisit):
+        return setVisit(locListLocationTag, canVisit)
 
-    def canVisit(locationtag):
-        return all_locs.getLocByTag(locationtag).canVisit
+define locList = []
+define city_canVisit = True
+define forest_canVisit = True
+define rt_canVisit = True
+define market_canVisit = True
+define bm_canVisit = False
+define room_canVisit = False
+define hospital_canVisit = False
+define surgency_canVisit = False
+define brothel_canVisit = False
+define mt_canVisit = False
+define lib_canVisit = False
+define guild_canVisit = False
+define tg_canVisit = False
 
-    def updateCanVisit(locationtag, canVisit):
-        return all_locs.setVisit(locationtag,canVisit)
+init:
+    if persistent.lang == "russian":
+        $locList = [
+            Location(tag="city",name="Город"),
+            Location(tag="forest",name="Лес"),
+            Location(tag="rt",name="Разрушенный храм"),
+            Location(tag="market",name="Городской рынок"),
+            Location(tag="bm",name="Черный рынок"),
+            Location(tag="tavern",name="Таверна"),
+            Location(tag="room",name="Моя комната"),
+            Location(tag="hospital",name="Больница"),
+            Location(tag="surgency",name="Хирургия"),
+            Location(tag="brothel",name="Бордель"),
+            Location(tag="mt",name="Магическая башня"),
+            Location(tag="lib",name="Библиотека"),
+            Location(tag="guild",name="Гильдия"),
+            Location(tag="tg",name="Тренировочная площадка")
+        ]
+    if persistent.lang == "english":
+        $locList = [
+            Location(tag="city",name="City"),
+            Location(tag="forest",name="Forest"),
+            Location(tag="rt",name="Ruined Temple"),
+            Location(tag="market",name="City Market"),
+            Location(tag="bm",name="Black Market"),
+            Location(tag="tavern",name="Tavern"),
+            Location(tag="room",name="My Room"),
+            Location(tag="hospital",name="Hospital"),
+            Location(tag="surgency",name="Surgery"),
+            Location(tag="brothel",name="Brothel"),
+            Location(tag="mt",name="Magic Tower"),
+            Location(tag="lib",name="Library"),
+            Location(tag="guild",name="Guild"),
+            Location(tag="tg",name="Training Ground")
+        ]
 
 
 label steps_sound:
