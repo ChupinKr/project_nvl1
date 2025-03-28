@@ -11,8 +11,10 @@ init python:
 
     def getLocCanVisitByTag(tag):
         global city_canVisit, forest_canVisit, rt_canVisit, market_canVisit, bm_canVisit
-        global room_canVisit, room_canVisit, hospital_canVisit, surgency_canVisit
+        global tavern_canVisit, room_canVisit, room_canVisit, hospital_canVisit, surgency_canVisit
         global brothel_canVisit, mt_canVisit, lib_canVisit, guild_canVisit, tg_canVisit
+        if(tag == "tavern"):
+            return tavern_canVisit
         if(tag == "city"):
             return city_canVisit
         if(tag == "forest"):
@@ -43,8 +45,10 @@ init python:
 
     def setCanVisitByTag(tag, canVisit):
         global city_canVisit, forest_canVisit, rt_canVisit, market_canVisit, bm_canVisit
-        global room_canVisit, room_canVisit, hospital_canVisit, surgency_canVisit
+        global tavern_canVisit, room_canVisit, room_canVisit, hospital_canVisit, surgency_canVisit
         global brothel_canVisit, mt_canVisit, lib_canVisit, guild_canVisit, tg_canVisit
+        if(tag == "tavern"):
+            tavern_canVisit = canVisit
         if(tag == "city"):
             city_canVisit = canVisit
         if(tag == "forest"):
@@ -114,6 +118,7 @@ define mt_canVisit = False
 define lib_canVisit = False
 define guild_canVisit = False
 define tg_canVisit = False
+define tavern_canVisit = False
 
 init:
     if persistent.lang == "russian":
@@ -135,6 +140,7 @@ init:
         ]
     if persistent.lang == "english":
         $locList = [
+            Location(tag="city",name="City"),
             Location(tag="city",name="City"),
             Location(tag="forest",name="Forest"),
             Location(tag="rt",name="Ruined Temple"),
