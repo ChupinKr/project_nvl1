@@ -48,7 +48,7 @@ label forest_quest_nagatoro_goblins:
         onna "Мне верно стоит отблагодарить тебя за спасение..."
         p "Я спас тебя не из корыстных целей."
         onna smile_naked "Ты добрый человек, [hero_name]." with dissolve
-        $my_freya.addLove(10)
+        $addLove(my_freya, 10)
         onna closed_naked_1 "Но я все же дам тебе то, что ты заслуживаешь." with dissolve
         "[onna.name] закрыла глаза и начала читать молитвы, очень тихо."
         show onna closed_naked_2 with dissolve
@@ -252,7 +252,7 @@ label go_goblin_cave:
                         "Ты быстро вырубаешь [goblin.name] с одного удара по затылку."
                         "Проход свободен."
                     else:
-                        $customNotify("Недостаточно интеллекта")
+                        $customNotify("Необходимо 30 интеллекта")
                         "Ты кидаешь в гоблина камень, он сразу нападает на тебя."
                         call start_battle(100, 120, goblin.name, 'forest')
                         p "С одним справился, хорошо, что он не закричал. Надо торопиться."
@@ -286,7 +286,7 @@ label go_goblin_cave:
                 "Вы слышите, как маленькие шаги очень быстро отдаляются."
                 p "Действительно испугались."
             else:
-                $customNotify("Недостаточно харизмы")
+                $customNotify("Необходимо 50 харизмы")
                 show goblin1 at mid with dissolve
                 show goblin3 at right with dissolve
                 show goblin2 at right_mid with dissolve
@@ -595,7 +595,7 @@ label visit_woblin_forest_menu:
         "Что я могу для вас сделать?"
         "Что удалось добыть?" if woblin_from_day > 0:
             p "Удалось добыть что-то для меня?"
-            if woblin_from_day < day + 2:
+            if woblin_from_day + 3 < day:
                 woblin happy_say "Конечно! Вот!" with dissolve
                 show woblin happy with dissolve
                 "[woblin.name] показывает вам [woblins_money] монет."

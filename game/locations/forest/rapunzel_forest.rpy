@@ -207,14 +207,14 @@ label first_time_rapunzel_no_blessing:
 label rapunzel_forest: 
     show r smile with dissolve
     menu:
-        "Посмотреть Бордель" if my_rapunzel.love >= 20 and not canVisit("brothel"):
+        "Посмотреть Бордель" if my_rapunzel_love >= 20 and not canVisit("brothel"):
             p "Я слышал, что где-то здесь есть бордель, ты случаем не знаешь о нем?"
             r @surprised "Только тихо, место это секретное. Идем." with dissolve
             jump rapunzel_brothel_first_visit
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
             call rapunzel_training
-            if last_charisma_training_win and first_r_root and my_rapunzel.love >= 50:
+            if last_charisma_training_win and first_r_root and my_rapunzel_love >= 50:
                 $ first_r_root = False
                 r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
                 r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
@@ -235,12 +235,12 @@ label rapunzel_forest:
                         $nextTime()
                         jump forest
             elif last_charisma_training_win:
-                $addChar(["char"], 2)
+                $addChar(["char"], 10)
                 r closed_eyes "Хорошая работа, [hero_name]!" with dissolve
-                $my_rapunzel.addLove(5)
+                $addLove(my_rapunzel, 7)
             else:
                 r annoyed "Мог бы хоть постараться!" with dissolve
-                $minusLove ("r", 2)
+                $minusLove (my_rapunzel, -2)
             $nextTime()
             jump rapunzel_forest
         "Спросить про задание" if isNoQuestNow():
@@ -265,7 +265,7 @@ label rapunzel_quests:
     # menu:
     #     "Собрать особые грибы" if not isQuestCompleted(quest_rapunzel_mashrooms):
     #         r "Есть такие грибы... Они обладают уникальными свойствами."
-    #         if isAbleQuest(quest_rapunzel_mashrooms, my_rapunzel.love):
+    #         if isAbleQuest(quest_rapunzel_mashrooms, my_rapunzel_love):
     #             r "Если ты их найдешь, я буду просто в восторге!"
     #             $ getQuest(quest_rapunzel_mashrooms)
     #         else:

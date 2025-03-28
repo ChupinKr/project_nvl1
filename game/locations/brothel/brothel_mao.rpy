@@ -23,7 +23,7 @@ label visit_mao_menu:
             show mao open_clothes_shy at right_bit with dissolve
             mao "Всякая работа должна быть оплачена~"
             jump mao_root_menu
-        "Повысить оплату за девушку" if my_mao.love >= 50 and mao_first_root:
+        "Повысить оплату за девушку" if my_mao_love >= 50 and mao_first_root:
             p "Я хочу, чтобы ты платила мне больше за каждую приведенную девушку."
             mao @annoyed "Знаешь, [hero_name], у нас не так уж много посетителей, а для тебя посещение вовсе басплатно.." with dissolve
             mao @smirk "Кажется я кое-что придумала, ты же видишь, в каком заведении мы находимся." with dissolve
@@ -66,7 +66,7 @@ label visit_mao_menu:
                     invited_girl @smile "Привет, меня зовут [invited_girl.name] и я готова работать у вас~" with dissolve
                     $addChar(["char"], 10)
                     mao @open_smile "Прекрасная кандидатка!" with dissolve
-                    $my_mao.addLove(10)
+                    $addLove(my_mao, 20)
                     mao @smile "Хорошая работа, [hero_name], можешь идти, а мы пока обсудим детали." with dissolve
                     mao @smile "Ах да, [hero_name], вот твоя оплата." with dissolve
                     $addMoney(20)
@@ -80,27 +80,27 @@ label visit_mao_menu:
 
 label brothen_mao_root_menu:
     menu:
-        "Мастурбация" if my_mao.love >= 50:
+        "Мастурбация" if my_mao_love >= 50:
             call mao_root_masturbate
             $nextTime()
             jump brothel
-        "Грудями" if my_mao.love >= 60:
+        "Грудями" if my_mao_love >= 60:
             call mao_root_titfuck
             $nextTime()
             jump brothel
-        "Минет" if my_mao.love >= 70:
+        "Минет" if my_mao_love >= 70:
             call mao_root_blowjob
             $nextTime()
             jump brothel
-        "Секс" if my_mao.love >= 80:
+        "Секс" if my_mao_love >= 80:
             call mao_root_fuck
             $nextTime()
             jump brothel
-        "Анал" if my_mao.love >= 90:
+        "Анал" if my_mao_love >= 90:
             call mao_root_anal
             $nextTime()
             jump brothel
-        "Фетиш" if my_mao.love >= 200:
+        "Фетиш" if my_mao_love >= 200:
             call mao_root_fetish
             $nextTime()
             jump brothel

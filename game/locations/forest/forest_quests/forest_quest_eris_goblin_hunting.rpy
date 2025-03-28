@@ -108,7 +108,7 @@ label forest_quest_eris_goblin_hunting:
     menu:
         "Приказать [my_eris.name] отступить":
             p "[my_eris.name], отойди! Это моя битва."
-            $my_eris.addLove(10)
+            $addLove(my_eris, 10)
             eris "Я не привыкла отсиживаться! Но ладно, будь по-твоему."
             hide eris with dissolve
             call start_battle(200, 150, hopgoblin.name, 'forest')
@@ -116,7 +116,7 @@ label forest_quest_eris_goblin_hunting:
         
         "Сражаться вместе":
             p "Вместе у нас больше шансов!"
-            $my_eris.addLove(5)
+            $addLove(my_eris, 7)
             eris "Да!Заходи к нему справа, я отвлеку его!"
             call start_battle(100, 150, hopgoblin.name, 'forest')
             hide hopgoblin1 with dissolve

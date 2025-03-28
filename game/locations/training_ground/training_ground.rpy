@@ -26,7 +26,7 @@ label training_ground:
                     eris "Ого! Да ты шустрый!"
                 else:
                     "Ты не успеваешь среагировать, и манекен сшибает тебя с ног, придавливая к земле."
-                    show eris t_smirk with dissolve
+                    show eris t_smirk with vpunch
                     eris "Ха! Не можешь даже от манекена уйти? Что ты вообще тут делаешь?"
 
             "Попытаться остановить манекен":
@@ -36,7 +36,7 @@ label training_ground:
                     eris "О! Да ты не слабак, оказывается!"
                 else:
                     "Ты пытаешься поймать манекен, но он сносит тебя с ног, и ты падаешь на спину."
-                    show eris t_smirk with dissolve
+                    show eris t_smirk with vpunch
                     eris "Ха! Переоценил себя, да?"
 
             "Не двигаться":
@@ -64,14 +64,14 @@ label training_ground:
 
                 "[eris.name] бросается на тебя с резким выпадом!"
 
-                call start_battle(120, my_eris.str, eris.name, 'return')
+                call start_battle(120, my_eris_str, my_eris.name, 'return')
                 
                 if last_battle_win:
                     "Ты успеваешь отбить её удар и даже немного теснишь её назад."
                     show eris t_smile with dissolve
                     eris "Ого! Да ты не совсем бесполезный!"
                     "Она кивает с одобрением, опуская меч."
-                    $my_eris.addLove(10)
+                    $addLove(my_eris,10)
                 else:
                     "Ты не успеваешь среагировать, и её удар валит тебя с ног."
                     show eris t_angry with dissolve
@@ -110,7 +110,7 @@ label training_ground_menu:
                         call start_muscule("Сотру со лба я лёгкий пот", 2.7)
                         if last_muscule_win:
                             "Я явно становлюсь лучше!"
-                            $addChar(["str"], 2)
+                            $addChar(["str"], 7)
             $nextTime()
             "Надо больше тренироваться."
             jump training_ground_menu

@@ -2,6 +2,7 @@
 ## Инициализация
 ################################################################################
 init -1 python:
+    renpy.config.has_autosave = False
     if not persistent.lang == "english":
         if not persistent.lang == "russian":
             persistent.lang = "english"
@@ -37,12 +38,30 @@ screen daytime:
     vbox:
         xalign 0.01
         yalign 0.01
-        if persistent.lang == "russian":
-            text "День: [day]" style "outline_text"
-            text "Время: [time]" style "outline_text"
-        if persistent.lang == "english":
-            text "Day: [day]" style "outline_text"
-            text "Time: [time]" style "outline_text"
+        spacing 15
+        vbox:
+            if persistent.lang == "russian":
+                text "День: [day]" style "outline_text"
+                text "Время: [time]" style "outline_text"
+            if persistent.lang == "english":
+                text "Day: [day]" style "outline_text"
+                text "Time: [time]" style "outline_text"
+        fixed:
+            xsize 126
+            ysize 126
+            if is_cheats:
+                imagebutton idle "gui/button/heart.png" action Function(addHealth, 10) xpos 0 ypos 0
+            else:
+                imagebutton idle "gui/button/heart.png" xpos 0 ypos 0
+            text _(str(health)) xalign 0.5 yalign 0.5
+        fixed:
+            xsize 126
+            ysize 100
+            if is_cheats:
+                imagebutton idle "gui/button/coins.png" action Function(addMoney, 10) xpos 0 ypos 0
+            else:
+                imagebutton idle "gui/button/coins.png" xpos 0 ypos 0
+            text _(str(money)) xalign 0.5 yalign 0.6
 
 transform rotate_text(angle=0):
     rotate angle
@@ -102,13 +121,8 @@ screen stat:
 screen cheat_buttons:
     if is_cheats:
         vbox:
-            xalign 0.01
-            yalign 0.15
-            imagebutton:
-                ypadding 15
-                idle "gui/button/plus_buttons/plus_money.png"
-                hover "gui/button/plus_buttons/plus_money_hover.png"
-                action Function(addMoney, 10)
+            xalign 0.02
+            yalign 0.50
             imagebutton:
                 ypadding 15
                 idle "gui/button/plus_buttons/plus_str.png"
@@ -161,30 +175,30 @@ screen info_panel_text:
             text "Сила: [strength]" style "info_text"
             text "Интеллект: [intelligence]" style "info_text"
             text "Харизма: [charisma]" style "info_text"
-            textbutton "♥[f.name]: [my_freya.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_freya), Hide("info_panel_text")
-            textbutton "♥[nag.name]: [my_nag.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_nag), Hide("info_panel_text")
-            textbutton "♥[e.name]: [my_elsa.love]"  text_style "info_textbutton":
-                action Show("character_panel", char=my_elsa), Hide("info_panel_text")
-            textbutton "♥[r.name]: [my_rapunzel.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_rapunzel), Hide("info_panel_text")
-            textbutton "♥[d.name]: [my_darkness.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_darkness), Hide("info_panel_text")
-            textbutton "♥[eris.name]: [my_eris.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_eris), Hide("info_panel_text")
-            textbutton "♥[mao.name]: [my_mao.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_mao), Hide("info_panel_text")
-            textbutton "♥[mer.name]: [my_merlin.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_merlin), Hide("info_panel_text")
-            textbutton "♥[h.name]: [my_holo.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_holo), Hide("info_panel_text")
-            textbutton "♥[m.name]: [my_miku.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_miku), Hide("info_panel_text")
-            textbutton "♥[s.name]: [my_sakura.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_sakura), Hide("info_panel_text")
-            textbutton "♥[ts.name]: [my_tsunade.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_tsunade), Hide("info_panel_text")
+            textbutton "♥[f.name]: [my_freya_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_freya, ch_love=my_freya_love, ch_str=my_freya_str), Hide("info_panel_text")
+            textbutton "♥[nag.name]: [my_nag_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_nag, ch_love=my_nag_love, ch_str=my_nag_str), Hide("info_panel_text")
+            textbutton "♥[e.name]: [my_elsa_love]"  text_style "info_textbutton":
+                action Show("character_panel", char=my_elsa, ch_love=my_elsa_love, ch_str=my_elsa_str), Hide("info_panel_text")
+            textbutton "♥[r.name]: [my_rapunzel_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_rapunzel, ch_love=my_rapunzel_love, ch_str=my_rapunzel_str), Hide("info_panel_text")
+            textbutton "♥[d.name]: [my_darkness_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_darkness, ch_love=my_darkness_love, ch_str=my_darkness_str), Hide("info_panel_text")
+            textbutton "♥[eris.name]: [my_eris_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_eris, ch_love=my_eris_love, ch_str=my_eris_str), Hide("info_panel_text")
+            textbutton "♥[mao.name]: [my_mao_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_mao, ch_love=my_mao_love, ch_str=my_mao_str), Hide("info_panel_text")
+            textbutton "♥[mer.name]: [my_merlin_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_merlin, ch_love=my_merlin_love, ch_str=my_merlin_str), Hide("info_panel_text")
+            textbutton "♥[h.name]: [my_holo_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_holo, ch_love=my_holo_love, ch_str=my_holo_str), Hide("info_panel_text")
+            textbutton "♥[m.name]: [my_miku_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_miku, ch_love=my_miku_love, ch_str=my_miku_str), Hide("info_panel_text")
+            textbutton "♥[s.name]: [my_sakura_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_sakura, ch_love=my_sakura_love, ch_str=my_sakura_str), Hide("info_panel_text")
+            textbutton "♥[ts.name]: [my_tsunade_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_tsunade, ch_love=my_tsunade_love, ch_str=my_tsunade_str), Hide("info_panel_text")
         if persistent.lang == "english":
             textbutton "Task: [active_quest.name]" text_style "info_textbutton":
                 action Show("quest_panel_text"), Hide("info_panel_text"), Hide("character_panel")
@@ -195,30 +209,30 @@ screen info_panel_text:
             text "Strength: [strength]" style "info_text"
             text "Intelligence: [intelligence]" style "info_text"
             text "Charisma: [charisma]" style "info_text"
-            textbutton "♥[f.name]: [my_freya.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_freya), Hide("info_panel_text")
-            textbutton "♥[nag.name]: [my_nag.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_nag), Hide("info_panel_text")
-            textbutton "♥[e.name]: [my_elsa.love]"  text_style "info_textbutton":
-                action Show("character_panel", char=my_elsa), Hide("info_panel_text")
-            textbutton "♥[r.name]: [my_rapunzel.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_rapunzel), Hide("info_panel_text")
-            textbutton "♥[d.name]: [my_darkness.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_darkness), Hide("info_panel_text")
-            textbutton "♥[eris.name]: [my_eris.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_eris), Hide("info_panel_text")
-            textbutton "♥[mao.name]: [my_mao.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_mao), Hide("info_panel_text")
-            textbutton "♥[mer.name]: [my_merlin.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_merlin), Hide("info_panel_text")
-            textbutton "♥[h.name]: [my_holo.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_holo), Hide("info_panel_text")
-            textbutton "♥[m.name]: [my_miku.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_miku), Hide("info_panel_text")
-            textbutton "♥[s.name]: [my_sakura.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_sakura), Hide("info_panel_text")
-            textbutton "♥[ts.name]: [my_tsunade.love]" text_style "info_textbutton":
-                action Show("character_panel", char=my_tsunade), Hide("info_panel_text")
+            textbutton "♥[f.name]: [my_freya_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_freya, ch_love=my_freya_love, ch_str=my_freya_str), Hide("info_panel_text")
+            textbutton "♥[nag.name]: [my_nag_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_nag, ch_love=my_nag_love, ch_str=my_nag_str), Hide("info_panel_text")
+            textbutton "♥[e.name]: [my_elsa_love]"  text_style "info_textbutton":
+                action Show("character_panel", char=my_elsa, ch_love=my_elsa_love, ch_str=my_elsa_str), Hide("info_panel_text")
+            textbutton "♥[r.name]: [my_rapunzel_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_rapunzel, ch_love=my_rapunzel_love, ch_str=my_rapunzel_str), Hide("info_panel_text")
+            textbutton "♥[d.name]: [my_darkness_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_darkness, ch_love=my_darkness_love, ch_str=my_darkness_str), Hide("info_panel_text")
+            textbutton "♥[eris.name]: [my_eris_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_eris, ch_love=my_eris_love, ch_str=my_eris_str), Hide("info_panel_text")
+            textbutton "♥[mao.name]: [my_mao_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_mao, ch_love=my_mao_love, ch_str=my_mao_str), Hide("info_panel_text")
+            textbutton "♥[mer.name]: [my_merlin_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_merlin, ch_love=my_merlin_love, ch_str=my_merlin_str), Hide("info_panel_text")
+            textbutton "♥[h.name]: [my_holo_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_holo, ch_love=my_holo_love, ch_str=my_holo_str), Hide("info_panel_text")
+            textbutton "♥[m.name]: [my_miku_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_miku, ch_love=my_miku_love, ch_str=my_miku_str), Hide("info_panel_text")
+            textbutton "♥[s.name]: [my_sakura_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_sakura, ch_love=my_sakura_love, ch_str=my_sakura_str), Hide("info_panel_text")
+            textbutton "♥[ts.name]: [my_tsunade_love]" text_style "info_textbutton":
+                action Show("character_panel", char=my_tsunade, ch_love=my_tsunade_love, ch_str=my_tsunade_str), Hide("info_panel_text")
 
 screen quest_panel_text:
     vbox:
@@ -277,7 +291,7 @@ screen blessing_panel_text:
         action Hide("blessing_panel_text"), Show("info_panel_text"), Show("cheat_buttons")
 
 
-screen character_panel(char):
+screen character_panel(char, ch_love, ch_str):
     frame:
         xalign 0.58
         yalign 0.15
@@ -307,22 +321,22 @@ screen character_panel(char):
             text ""
         if is_cheats:
             if persistent.lang == "russian":
-                textbutton "Симпатия: [char.love]♥" text_style "info_textbutton":
-                    action Function(char.addLove, 5)
-                textbutton "Сила: [char.str]♥" text_style "info_textbutton":
-                    action Function(char.addNPCStr, 5)
+                textbutton "Симпатия: [ch_love]♥" text_style "info_textbutton":
+                    action Function(addLove, char, 5), Hide("character_panel"), Show("character_panel", char=char, ch_love=ch_love + 5, ch_str=ch_str)
+                textbutton "Сила: [ch_str]♥" text_style "info_textbutton":
+                    action Function(addNPCStr, char, 5), Hide("character_panel"), Show("character_panel", char=char, ch_love=ch_love, ch_str=ch_str + 5)
             if persistent.lang == "english":
-                textbutton "Sympathy: [char.love]♥" text_style "info_textbutton":
-                    action Function(char.addLove, 5)
-                textbutton "Strength: [char.str]♥" text_style "info_textbutton":
-                    action Function(char.addNPCStr, 5)
+                textbutton "Sympathy: [ch_love]♥" text_style "info_textbutton":
+                    action Function(addLove, char, 5), Hide("character_panel"), Show("character_panel", char=char, ch_love=ch_love + 5, ch_str=ch_str)
+                textbutton "Strength: [ch_str]♥" text_style "info_textbutton":
+                    action Function(addNPCStr, char, 5), Hide("character_panel"), Show("character_panel", char=char, ch_love=ch_love, ch_str=ch_str + 5)
         else:
             if persistent.lang == "russian":
-                text "Симпатия: [char.love]♥" style "info_text"
-                text "Сила: [char.str]" style "info_text"
+                text "Симпатия: [ch_love]♥" style "info_text"
+                text "Сила: [ch_str]" style "info_text"
             if persistent.lang == "english":
-                text "Sympathy: [char.love]♥" style "info_text"
-                text "Strength: [char.str]" style "info_text"
+                text "Sympathy: [ch_love]♥" style "info_text"
+                text "Strength: [ch_str]" style "info_text"
 
     imagebutton:
         align (0.64, 0.07)

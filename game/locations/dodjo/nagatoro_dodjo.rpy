@@ -39,7 +39,7 @@ label nagatoro_dodjo_first_time:
 
 label nagatoro_dodjo_menu:
     menu:
-        "Спортивное позирование" if my_nag.love >= 50: 
+        "Спортивное позирование" if my_nag_love >= 50: 
             call nagatoro_root_show  
             $nextTime()
             jump nagatoro_dodjo_menu
@@ -52,19 +52,19 @@ label nagatoro_dodjo_menu:
                     jump nagatoro_dodjo_menu
             $nextTime()
             jump city
-        "Развитие лицевых мышц" if my_nag.love >= 70: 
+        "Развитие лицевых мышц" if my_nag_love >= 70: 
             call nagatoro_root_blowjob  
             $nextTime()
             jump city
-        "Тренировка мышц таза" if my_nag.love >= 80: 
+        "Тренировка мышц таза" if my_nag_love >= 80: 
             call nagatoro_root_fuck  
             $nextTime()
             jump city
-        "Стимулирование анальной проходимости" if my_nag.love >= 90: 
+        "Стимулирование анальной проходимости" if my_nag_love >= 90: 
             call nagatoro_root_anal  
             $nextTime()
             jump city
-        "Тренировка с доп. условиями" if my_nag.love >= 90: 
+        "Тренировка с доп. условиями" if my_nag_love >= 90: 
             call nagatoro_root_fetish  
             $nextTime()
             jump city
@@ -172,8 +172,8 @@ label nagatoro_root_show:
     nag "Ладно, думаю этого достаточно."
     p "Ч-что? Это всё?"
 
-    if my_nag.love < 55:
-        $customNotify("Недостаточно симпатии")
+    if my_nag_love < 55:
+        $customNotify("Необходимо 60 симпатии")
         nag "Да, с тебя хватит, давай займемся обычными тренировками, а то что-то ты расслабился сильно."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
         "Вы встаете, [nag.name] одевается"
@@ -228,8 +228,8 @@ label nagatoro_root_show:
     p "Чт-т-тооо?"
     nag "Хаха, да шучу я!"
 
-    if my_nag.love < 60:
-        $customNotify("Недостаточно симпатии")
+    if my_nag_love < 65:
+        $customNotify("Необходимо 65 симпатии")
         nag "Всё, на этом закончим, пора идти заниматься еще и твоими тренировками."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
         "Вы встаете, [nag.name] одевается"
@@ -272,8 +272,8 @@ label nagatoro_root_show:
     nag "Ааааах, дааааа!"
     "Ты не можешь сделать вид, что ничего не заметил"
     
-    if my_nag.love < 70:
-        $customNotify("Недостаточно симпатии")
+    if my_nag_love < 75:
+        $customNotify("Необходимо 75 симпатии")
         "Но [nag.name] может"
         scene bg nag_show19 with dissolve
         call hide_dialog
@@ -313,8 +313,8 @@ label nagatoro_root_show:
     call hide_dialog
     nag "Как тебе шоу? Понравилось же?"
 
-    if my_nag.love < 90:
-        $customNotify("Недостаточно симпатии")
+    if my_nag_love < 90:
+        $customNotify("Необходимо 90 симпатии")
         p "У меня нет слов!"
         call dodjo_scene
         show nag grin_battle6 with dissolve
@@ -529,7 +529,7 @@ label nagatoro_root_titfuck:
     "Ты начинаешь кончать"
     
     if strength < 100:
-        $customNotify("Недостаточно силы")
+        $customNotify("Необходимо 100 силы")
         "[nag.name] вырвалась"
         call dodjo_scene
         show nag normal_shy_battle6 with dissolve
@@ -549,15 +549,15 @@ label nagatoro_root_titfuck:
     call hide_dialog
     "[nag.name] сопротивляется все сильнее, пока ты заливаешь в ее рот сперму порцию за порцией"
 
-    if strength < my_nag.str / 2:
-        $customNotify("Недостаточно силы")
+    if strength < my_nag_str / 2:
+        $customNotify("Необходимо более [my_nag_str / 2] силы")
         "[nag.name] вырвалась из твой хватки и вздохнула воздуха"
         call dodjo_scene
         show nag angry_cummed with dissolve
         call hide_dialog
         nag "О таком нужно предупреждать!"
         nag "Я ухожу."
-        $minusLove("nag", 10)
+        $minusLove(my_nag, -10)
         jump city
     "Ты смог удержать порыв [nag.name]"
 
@@ -593,7 +593,7 @@ label nagatoro_root_titfuck:
     call hide_dialog
     "Ты даешь ей возможность вдохнуть немного воздуха, и продолжаешь обильно кончать в ее рот"
 
-    if strength < my_nag.str * 0.8:
+    if strength < my_nag_str * 0.8:
         scene bg nag_titjob_cum28_1 with flash
         call hide_dialog
         "Почти сразу ты насаживаешь ее ротик обратно на свой член"
@@ -606,7 +606,7 @@ label nagatoro_root_titfuck:
         "Ты стараешься насадить ее еще сильнее на свой член, но сопротивление [nag.name] лишь растет"
         "[nag.name] старается изо всех сил, ты действительно ее разозлил"
         
-        $customNotify("Недостаточно силы")
+        $customNotify("Необходимо [my_nag_str * 0.8] силы")
         scene bg nag_titjob_cum28_3 with flash
         call hide_dialog
         "Наконец [nag.name] вырывается"
@@ -614,7 +614,7 @@ label nagatoro_root_titfuck:
         show nag angry_cummed with dissolve
         nag "Больше! Так! Не! Делай!"
         nag "Я ухожу!"
-        $minusLove("nag", 10)
+        $minusLove(my_nag, -10)
         jump city
 
     scene bg nag_titjob_cum29 with flash

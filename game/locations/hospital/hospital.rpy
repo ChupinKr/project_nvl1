@@ -79,7 +79,7 @@ label hospital_sakura_quests:
     menu:
         # "Задание на сбор трав" if not isQuestCompleted(quest_sakura_materials):
         #     s smile_closed_eyes "Хочешь помочь? Отлично! Вот список необходимых трав. Их можно найти в ближайшем лесу." with dissolve
-        #     if isAbleQuest(quest_sakura_materials, my_sakura.love):
+        #     if isAbleQuest(quest_sakura_materials, my_sakura_love):
         #         s smile_shy "За хороший набор я неплохо заплачу." with dissolve
         #         menu:
         #             "Квест: Задание на сбор трав"

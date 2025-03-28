@@ -19,25 +19,25 @@ init python:
 
     if persistent.lang == "russian":
         item_motivational_book = Item(name="Мотивирующая книга", price=20,
-        countUsage=3, lvl=1, bonus=1, char="char")
+        countUsage=3, lvl=1, bonus=5, char="char")
         item_mirror = Item(name="Зеркало", price=50,
-        countUsage=3, lvl=2, bonus=3, char="char")
+        countUsage=3, lvl=2, bonus=10, char="char")
         item_art_plus_size = Item(name="Артефакт \"PlusSize\"", price=100,
-        countUsage=3, lvl=3, bonus=5, char="char")
+        countUsage=3, lvl=3, bonus=15, char="char")
 
         item_dumbbells_ez = Item(name="Легкие гантели", price=20,
-        countUsage=3, lvl=1, bonus=1, char="str")
+        countUsage=3, lvl=1, bonus=5, char="str")
         item_weight_mid = Item(name="Гиря", price=50,
-        countUsage=3, lvl=2, bonus=3, char="str")
+        countUsage=3, lvl=2, bonus=10, char="str")
         item_barbell = Item(name="Штанга", price=100,
-        countUsage=3, lvl=3, bonus=5, char="str")
+        countUsage=3, lvl=3, bonus=15, char="str")
 
         item_book_math = Item(name="Книга по математике", price=20,
-        countUsage=3, lvl=1, bonus=1, char="intelligence")
+        countUsage=3, lvl=1, bonus=5, char="intelligence")
         item_self_study_guide  = Item(name="Самоучитель по магии", price=50,
-        countUsage=3, lvl=2, bonus=3, char="intelligence")
+        countUsage=3, lvl=2, bonus=10, char="intelligence")
         item_grimoire = Item(name="Гримуар", price=100,
-        countUsage=3, lvl=3, bonus=5, char="intelligence")
+        countUsage=3, lvl=3, bonus=15, char="intelligence")
 
         item_forest_guide = Item(name="Путеводитель по лесу", price=100,
         countUsage=1, lvl=0, bonus=0, char="")
@@ -45,25 +45,25 @@ init python:
         countUsage=1, lvl=0, bonus=0, char="")
     if persistent.lang == "english":
         item_motivational_book = Item(name="Motivational book", price=20,
-        countUsage=3, lvl=1, bonus=1, char="char")
+        countUsage=3, lvl=1, bonus=5, char="char")
         item_mirror = Item(name="Mirror", price=50,
-        countUsage=3, lvl=2, bonus=3, char="char")
+        countUsage=3, lvl=2, bonus=10, char="char")
         item_art_plus_size = Item(name="Artifact \"PlusSize\"", price=100,
-        countUsage=3, lvl=3, bonus=5, char="char")
+        countUsage=3, lvl=3, bonus=15, char="char")
 
         item_dumbbells_ez = Item(name="Light Dumbbells", price=20,
-        countUsage=3, lvl=1, bonus=1, char="str")
+        countUsage=3, lvl=1, bonus=5, char="str")
         item_weight_mid = Item(name="Weight", price=50,
-        countUsage=3, lvl=2, bonus=3, char="str")
+        countUsage=3, lvl=2, bonus=10, char="str")
         item_barbell = Item(name="Barbell", price=100,
-        countUsage=3, lvl=3, bonus=5, char="str")
+        countUsage=3, lvl=3, bonus=15, char="str")
 
         item_book_math = Item(name="Book of Mathematics", price=20,
-        countUsage=3, lvl=1, bonus=1, char="intelligence")
+        countUsage=3, lvl=1, bonus=5, char="intelligence")
         item_self_study_guide = Item(name="Self-study Guide to Magic", price=50,
-        countUsage=3, lvl=2, bonus=3, char="intelligence")
+        countUsage=3, lvl=2, bonus=10, char="intelligence")
         item_grimoire = Item(name="Grimoire", price=100,
-        countUsage=3, lvl=3, bonus=5, char="intelligence")
+        countUsage=3, lvl=3, bonus=15, char="intelligence")
 
         item_forest_guide = Item(name="Forest Guide", price=100,
         countUsage=1, lvl=0, bonus=0, char="")

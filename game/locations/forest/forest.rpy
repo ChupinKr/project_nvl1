@@ -107,48 +107,48 @@ label look_for_enemy:
                 call start_battle(60, renpy.random.randint(1, 10) , "Слизь", 'scene')
                 if last_battle_win:
                     "Ты размазал слизьня"
-                    $ addChar(["str"],3)
+                    $ addChar(["str"],5)
                 $nextTime()
                 jump forest_menu
             "Рогатый заяц":
                 call start_battle(60, renpy.random.randint(1, 20) , "Рогатый заяц", 'scene') 
                 if last_battle_win:
                     "Ты прибил бедного зайку, тебе должно быть стыдно"
-                    $ addChar(["str"],4)
+                    $ addChar(["str"],6)
                 $nextTime()
                 jump forest_menu
             "Плотоядный олень":
                 call start_battle(100, renpy.random.randint(30, 50) , "Плотоядный олень", 'scene') 
                 if last_battle_win:
                     "Охота на оленя без оружия, неплохо, я справляюсь"
-                    $ addChar(["str"],5)
+                    $ addChar(["str"],7)
                 $nextTime()
                 jump forest_menu
             "Дикий кабан":
                 call start_battle(150, renpy.random.randint(40, 80) , "Дикий кабан", 'scene') 
                 if last_battle_win:
                     "Справился с диким кабаном, это успех!"
-                    $ addChar(["str"],6)
+                    $ addChar(["str"],8)
                 $nextTime()
                 jump forest_menu
             "Волк":
                 call start_battle(60, renpy.random.randint(90, 120) , "Волк", 'scene') 
                 if last_battle_win:
                     "Мне повезло справиться с волком Или я уже настолко силен?"
-                    $ addChar(["str"],7)
+                    $ addChar(["str"],10)
                 $nextTime()
                 jump forest_menu
             "Бурый медведь":
                 call start_battle(200, renpy.random.randint(120, 160) , "Бурый медведь", 'scene')
                 if last_battle_win:
                     "Это было очень опасно, хорошо, что я справился!"
-                    $ addChar(["str"],8)
+                    $ addChar(["str"],15)
                 $nextTime()
                 jump forest_menu
             'Разгневанный энт' if can_find_ent:
-                show ent at center with dissolve
+                show ent angry at center with dissolve
                 call start_battle(200, renpy.random.randint(150, 200), 'Разгневанный энт', 'scene')
-                hide ent at center with dissolve
+                hide ent with dissolve
                 if last_battle_win:
                     "Это было очень опасно, хорошо, что я справился!"
                     if strength > 100:
@@ -158,9 +158,14 @@ label look_for_enemy:
                                 call forest_scene 
                             "Отпустить":
                                 "Энт сбегает"
-                    $ addChar(["str"],10)
+                    else:
+                        $customNotify("Необходимо 100 силы")
+                    $ addChar(["str"],20)
                 $nextTime()
                 jump forest_menu
+            'Передумал':
+                jump forest_menu
+
     $rand_emeny = renpy.random.randint(1, 100) 
     if rand_emeny < 35:
         "Ты видишь слизь, она даже убежать не сможет"
@@ -170,7 +175,7 @@ label look_for_enemy:
                 call start_battle(60, renpy.random.randint(1, 10) , "Слизь", 'scene') 
                 if last_battle_win:
                     "Ты размазал слизьня"
-                    $ addChar(["str"],1)
+                    $ addChar(["str"],5)
                 $nextTime()
                 jump forest_menu
             "Уйти":
@@ -183,7 +188,7 @@ label look_for_enemy:
                 call start_battle(60, renpy.random.randint(1, 20) , "Заяц", 'scene') 
                 if last_battle_win:
                     "Ты прибил бедного зайку, тебе должно быть стыдно"
-                    $ addChar(["str"],2)
+                    $ addChar(["str"],6)
                 $nextTime()
                 jump forest_menu
             "Уйти":
@@ -197,7 +202,7 @@ label look_for_enemy:
                 call start_battle(100, renpy.random.randint(30, 50) , "Плотоядный олень", 'scene') 
                 if last_battle_win:
                     "Охота на оленя без оружия, неплохо, я справляюсь"
-                    $ addChar(["str"],3)
+                    $ addChar(["str"],7)
                 $nextTime()
                 jump forest_menu
             "Уйти":
@@ -207,7 +212,7 @@ label look_for_enemy:
         call start_battle(150, renpy.random.randint(40, 80) , "Дикий кабан", 'scene') 
         if last_battle_win:
             "Справился с диким кабаном, это успех!"
-            $ addChar(["str"],4)
+            $ addChar(["str"],8)
         $nextTime()
         jump forest_menu
     if rand_emeny >= 85 and rand_emeny < 95:
@@ -215,7 +220,7 @@ label look_for_enemy:
         call start_battle(60, renpy.random.randint(90, 120) , "Волк", 'scene') 
         if last_battle_win:
             "Мне повезло справиться с волком Или я уже настолко силен?"
-            $ addChar(["str"],5)
+            $ addChar(["str"],10)
         $nextTime()
         jump forest_menu
     if rand_emeny >= 95 and rand_emeny < 100:
@@ -223,6 +228,6 @@ label look_for_enemy:
         call start_battle(200, renpy.random.randint(120, 160) , "Бурый медведь", 'scene') 
         if last_battle_win:
             "Это было очень опасно, хорошо, что я справился!"
-            $ addChar(["str"],6)
+            $ addChar(["str"],15)
         $nextTime()
         jump forest_menu

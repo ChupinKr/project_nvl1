@@ -114,7 +114,7 @@ init python:
         return current_location
 
     def addMoney(plusMoney=0):
-        global money,notices
+        global money, notices
         money += plusMoney
         if persistent.lang == "russian":
             notices.append("Ты получил " + str(plusMoney) + " монет")
@@ -272,43 +272,10 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def minusLove(who, countLove):
-        global notices
-        if who == "f":
-            my_freya.love -= countLove
-        elif who == "nag":
-            my_nag.love -= countLove
-        elif who == "mer":
-            my_merlin.love -= countLove
-        elif who == "s":
-            my_sakura.love -= countLove
-        elif who == "ts":
-            my_tsunade.love -= countLove
-        elif who == "h":
-            my_holo.love -= countLove
-        elif who == "m":
-            my_miku.love -= countLove
-        elif who == "e":
-            my_elsa.love -= countLove
-        elif who == "r":
-            my_rapunzel.love -= countLove
-        elif who == "mao":
-            my_mao.love -= countLove
-        elif who == "eris":
-            my_eris.love -= countLove
-        elif who == "d":
-            my_darkness.love -= countLove
-        if persistent.lang == "russian":
-            notices.append("Характеристика симпатии уменьшилась")
-        if persistent.lang == "english":
-            notices.append("The sympathy characteristic has decreased")
-        renpy.show_screen('notify_plus', notices=notices)
-        notices = []
-
     def addLoveAndStr(who, countLove, countStr):
         global strength,notices
         if who == "nag":
-            my_nag.love += countLove
+            my_nag_love += countLove
         strength += countStr * strength_mod
         if persistent.lang == "russian":
             notices.append("Ты стал сильнее")

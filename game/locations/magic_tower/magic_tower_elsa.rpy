@@ -21,10 +21,10 @@ label find_elsa_menu:
             show e smile at right with fade
             call start_magic_training(intelligence)
             if last_reaction_win:
-                $addChar(["intelligence"], 2)
-                jump win_elsa_training
+                $addChar(["intelligence"], 5)
+                call win_elsa_training
             else:
-                jump fail_elsa_training
+                call fail_elsa_training
             $nextTime()
             jump find_elsa_menu
         "Попросить квест" if isNoQuestNow():
@@ -50,15 +50,15 @@ label win_elsa_training:
     e "Вау, да у тебя талант!"
     p "Надо будет повторить, мне понравилось."
     e @smile_shy "Мне тоже.."
-    $my_elsa.addLove(5)
-    jump find_elsa_menu
+    $addLove(my_elsa, 10)
+    return
 
 label fail_elsa_training:
     show e laugh at center with dissolve
     e "Это потрясающе!"
     p "Что? У меня же не вышло."
     e "Да, меня потрясло то, насколько ты необучаем."
-    jump find_elsa_menu
+    return
 
 label elsa_roots:
     menu:
@@ -80,7 +80,7 @@ label elsa_quests:
         "Собирать магические материалы" if not isQuestCompleted(quest_elsa_materials):
             p "Я готов собирать магические материалы."
             e "Хорошо, мне нужно несколько редких трав и минералов. Ты можешь найти их в этих лесах."
-            if isAbleQuest(quest_elsa_materials, my_elsa.love):
+            if isAbleQuest(quest_elsa_materials, my_elsa_love):
                 menu:
                     "Собирать магические материалы"
                     "Принять квест":
@@ -102,7 +102,7 @@ label elsa_quests:
             e smile_closed_eyes "Ты быстро учишься, [hero_name]. Сделай это, и я... подумаю, как тебя отблагодарить." with dissolve
             p "Звучит как сделка."
             e smirk "Тогда не медли. Пещеры к северу от башни. И не разбей кристалл — он хрупкий." with dissolve
-            if isAbleQuest(quest_elsa_crystall, my_elsa.love):
+            if isAbleQuest(quest_elsa_crystall, my_elsa_love):
                 menu:
                     "Добыть Кристалл зимнего эха в Ледяных пещерах"
                     "Принять квест":

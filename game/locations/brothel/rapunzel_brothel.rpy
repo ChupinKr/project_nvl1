@@ -26,7 +26,7 @@ label rapunzel_brothel_menu:
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
             call rapunzel_training
-            if last_charisma_training_win and first_r_root and my_rapunzel.love >= 50:
+            if last_charisma_training_win and first_r_root and my_rapunzel_love >= 50:
                 $ first_r_root = False
                 r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
                 r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
@@ -47,12 +47,12 @@ label rapunzel_brothel_menu:
                         $nextTime()
                         jump brothel
             elif last_charisma_training_win:
-                $addChar(["char"], 2)
+                $addChar(["char"], 10)
                 r smile_shy "Хорошая работа, [hero_name]!" with dissolve
-                $my_rapunzel.addLove(5)
+                $addLove(my_rapunzel, 10)
             else:
                 r annoyed "Мог бы хоть постараться!" with dissolve
-                $minusLove ("r", 2)
+                $minusLove(my_rapunzel, -2)
             $nextTime()
             jump rapunzel_brothel_menu
         "Спросить про задание" if isNoQuestNow():
@@ -96,23 +96,23 @@ label rapunzel_root_menu:
         show r smile  with dissolve
 
     menu:
-        "Мастурбация" if my_rapunzel.love >= 50:
+        "Мастурбация" if my_rapunzel_love >= 50:
             call r_root_masturbate
             $nextTime()
             jump brothel
-        "Минет" if my_rapunzel.love >= 70:
+        "Минет" if my_rapunzel_love >= 70:
             call r_root_blowjob  
             $nextTime()
             jump brothel
-        "Секс" if my_rapunzel.love >= 80:
+        "Секс" if my_rapunzel_love >= 80:
             call r_root_fuck  
             $nextTime()
             jump brothel
-        "Анал" if my_rapunzel.love >= 90:
+        "Анал" if my_rapunzel_love >= 90:
             call r_root_anal  
             $nextTime()
             jump brothel
-        "Фетиш" if my_rapunzel.love >= 200:
+        "Фетиш" if my_rapunzel_love >= 200:
             call r_root_fetish  
             $nextTime()
             jump brothel
@@ -263,11 +263,11 @@ label r_root_masturbate:
     r "Смотри... Я ведь такая мокрая..."  
     p "Ты слишком хороша, чтобы не смотреть."  
 
-    if my_rapunzel.love < 70:
+    if my_rapunzel_love < 70:
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
         show r smile_naked with dissolve
-        $customNotify("Недостаточно симпатии [r.name]")
+        $customNotify("Необходимо 70 симпатии")
         "Она остановилась на самом интересном, может если она будет мне больше доверять, то я получу еще больше?"
         return
 
@@ -291,8 +291,8 @@ label r_root_masturbate:
     r "Ммм... Да... Ещё глубже..."  
     p "Я теряю голову..."  
 
-    if my_rapunzel.love < 90:
-        $customNotify("Недостаточно симпатии [r.name]")
+    if my_rapunzel_love < 90:
+        $customNotify("Необходимо 90 симпатии")
         r "Ладно, милыый [hero_name], на сегодня с тебя достаточно~~"
         scene bg brothel_private with dissolve
         show r smile_naked with dissolve
@@ -518,12 +518,12 @@ label r_root_blowjob:
     "[r.name] умоляющим взглядом просит тебя остановиться, но ты даже не думаешь об этом"
     
     if strength < 30:
-        $customNotify("Недостаточно силы")
+        $customNotify("Необходимо 30 силы")
         "Ты не смог удержать ее голову"
         scene bg brothel_private with dissolve
         show r naked_cummed_annoyed with dissolve
         r "Урод!"
-        $minusLove("r", 10)
+        $minusLove(my_rapunzel, -10)
         "[r.name] расстроенная уходит"
         return
 

@@ -381,7 +381,7 @@ label elsa_masturbate_scene:
         scene bg elsa_tower_room at Transform(zoom=1.5) with fade
         show e smirk_naked_cummed with dissolve
     else:
-        $customNotify("Недостаточно харизмы")
+        $customNotify("Необходимо 50 харизмы")
         scene bg elsa_tower_room at Transform(zoom=1.5) with fade
         show e smirk_naked with dissolve
 

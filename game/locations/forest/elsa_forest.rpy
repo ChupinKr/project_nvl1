@@ -283,13 +283,13 @@ label elsa_magic_training:
     e smirk "Хорошо. Ты должен почувствовать, тот момент, когда твоя энергия доходит до пика и выплеснуть всё~" with dissolve
     call start_magic_training(intelligence)  
     if last_reaction_win:
-        $addChar(["intelligence"], 2)
+        $addChar(["intelligence"], 5)
         show e smile at center with dissolve
         e "Вау, да у тебя талант!"
         p "Надо будет повторить, мне понравилось."
         e smile_shy "Мне тоже.." with dissolve
-        $my_elsa.addLove(5)
-        if my_elsa.love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
+        $addLove(my_elsa, 7)
+        if my_elsa_love >= 15 and intelligence > 10 and not canVisit("mt") and can_go_mer:
             e smile_shy "Ладно, думаю ты готов, идем." with dissolve
             p "К чему готов? Куда мы?"
             e @smirk "Не важно, просто идем." with dissolve
