@@ -3,7 +3,7 @@ label training_ground_eris_menu:
     show eris t_neutral with dissolve
     menu:
         "Спарринг":
-            call start_battle(120, eris_str, eris.name, battle_location_training_ground)
+            call start_battle(120, my_eris_str, eris.name, battle_location_training_ground)
             if last_battle_win:
                 "IN PROGRESS"
                 $addChar(["str"], 5)
