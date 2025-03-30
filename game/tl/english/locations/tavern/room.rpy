@@ -264,4 +264,29 @@ translate english strings:
 
     # game/locations/tavern/room.rpy:51
     old "Использовать [gg_items[14].name]"
-    new "Use [gg_items[14].name]"
+    new "Use [gg_items[14].name]"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/tavern/room.rpy:7
+translate english room_732c324b:
+    # m smile "[hero_name], your rental period is up. The room costs 10 coins for 3 days..." with dissolve
+    m smile "[hero_name], your rental period is up. The room costs 10 coins for 3 days..." with dissolve
+
+# game/locations/tavern/room.rpy:26
+translate english room_menu_c325ebda:
+    # "To work!"
+    "To work!"
+
+# game/locations/tavern/room.rpy:30
+translate english room_menu_5c0b52bf:
+    # "It’s been so long since I could just rest."
+    "It’s been so long since I could just rest."
+
+# game/locations/tavern/room.rpy:37
+translate english room_menu_81220749:
+    # "You head to the tavern."
+    "You head to the tavern."
+
+# game/locations/tavern/room.rpy:40
+translate english room_menu_692d2289:
+    # "You step out into the city."
+    "You step out into the city."

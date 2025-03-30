@@ -194,4 +194,40 @@ translate english strings:
 
     # game/locations/start_loc.rpy:68
     old "Подожди"
-    new "Wait"
+    new "Wait"# TODO: Translation updated at 2025-03-30 19:52
+    
+# game/locations/start_loc.rpy:102
+translate english blessings_choice_0bf86d07:
+    # f "Dear, I understand, all of this is very complicated, but I believe in you!"
+    f "Dear, I understand, all of this is very complicated, but I believe in you!"
+
+# game/locations/start_loc.rpy:103
+translate english blessings_choice_d49278a3:
+    # f "I can’t interfere in the affairs of mortals, you understand."
+    f "I can’t interfere in the affairs of mortals, you understand."
+
+# game/locations/start_loc.rpy:104
+translate english blessings_choice_8b3ee94a:
+    # f "Though it seems I know something that might help you…"
+    f "Though it seems I know something that might help you…"
+
+# game/locations/start_loc.rpy:107
+translate english blessings_choice_b5b9b167:
+    # f "I’m giving you magical writings; they’ll contain all the important information you need."
+    f "I’m giving you magical writings; they’ll contain all the important information you need."
+
+# game/locations/start_loc.rpy:108
+translate english blessings_choice_a2c2fa42:
+    # f "As well as everything that’s happening to you…"
+    f "As well as everything that’s happening to you…"
+
+# game/locations/start_loc.rpy:109
+translate english blessings_choice_190033a9:
+    # f "But don’t worry, I won’t peek into them."
+    f "But don’t worry, I won’t peek into them."
+
+# game/locations/start_loc.rpy:110
+translate english blessings_choice_c5245521:
+    # "INFO: The button to view current information is displayed in the top right corner."
+    "INFO: The button to view current information is displayed in the top right corner."
+

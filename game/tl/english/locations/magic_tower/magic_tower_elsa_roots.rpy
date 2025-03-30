@@ -343,4 +343,206 @@ translate english blowjob_elsa_43845dda:
 # game/locations/magic_tower/magic_tower_elsa_roots.rpy:200
 translate english elsa_anal_continue_59e03460:
     # "IN PROGRESS"
-    "IN PROGRESS"
+    "IN PROGRESS"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:32
+translate english blowjob_elsa_a20cefa7:
+
+    # "..."
+    "..."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:33
+translate english blowjob_elsa_07bdde05:
+
+    # "....."
+    "....."
+    
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:204
+translate english elsa_masturbate_scene_e8025922:
+    # "Elsa leads you to her room, her steps confident, though a faint tension lingers in the air."
+    "Elsa leads you to her room, her steps confident, though a faint tension lingers in the air."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:206
+translate english elsa_masturbate_scene_f8f213ba:
+    # e "So, [hero_name], ready for your reward? Don’t disappoint me."
+    e "So, [hero_name], ready for your reward? Don’t disappoint me."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:211
+translate english elsa_masturbate_scene_89af4f81:
+    # "She twirls, lifting her dress slightly, knowing I can’t help but peek underneath."
+    "She twirls, lifting her dress slightly, knowing I can’t help but peek underneath."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:216
+translate english elsa_masturbate_scene_f0a47f55:
+    # "[e.name] slowly raises her hands, letting the dress slip off her shoulders. Beneath it, pristine white panties are revealed."
+    "[e.name] slowly raises her hands, letting the dress slip off her shoulders. Beneath it, pristine white panties are revealed."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:217
+translate english elsa_masturbate_scene_804dcab9:
+    # p "You… look stunning."
+    p "You… look stunning."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:218
+translate english elsa_masturbate_scene_189b6748:
+    # e "Hm, I know. But this is just the beginning."
+    e "Hm, I know. But this is just the beginning."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:223
+translate english elsa_masturbate_scene_6625bb4e:
+    # "The dress falls to the floor, leaving her in just her panties. She turns slightly, teasing you with the view."
+    "The dress falls to the floor, leaving her in just her panties. She turns slightly, teasing you with the view."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:224
+translate english elsa_masturbate_scene_97a5e867:
+    # e "Like what you see? Of course you do."
+    e "Like what you see? Of course you do."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:229
+translate english elsa_masturbate_scene_f4d18bbf:
+    # "[e.name] turns her back to you, bending slightly to accentuate the curve of her ass in those white panties."
+    "[e.name] turns her back to you, bending slightly to accentuate the curve of her ass in those white panties."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:230
+translate english elsa_masturbate_scene_b4ce6ddc:
+    # p "Elsa… this is…"
+    p "Elsa… this is…"
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:231
+translate english elsa_masturbate_scene_1c580231:
+    # e "Quiet and watch, [hero_name]."
+    e "Quiet and watch, [hero_name]."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:236
+translate english elsa_masturbate_scene_87832d72:
+    # "[e.name] sits on the pristine white bed with her back to you."
+    "[e.name] sits on the pristine white bed with her back to you."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:248
+translate english elsa_masturbate_scene_2b45f036:
+    # "She starts wiggling her ass a little on the bed."
+    "She starts wiggling her ass a little on the bed."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:254
+translate english elsa_masturbate_scene_6b55e208:
+    # "And she sticks her ass out toward you, letting you enjoy the sight."
+    "And she sticks her ass out toward you, letting you enjoy the sight."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:258
+translate english elsa_masturbate_scene_a8fbb935:
+    # "[e.name] pulls her legs onto the bed and pushes her ass out even more, making it hard for you to keep control."
+    "[e.name] pulls her legs onto the bed and pushes her ass out even more, making it hard for you to keep control."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:264
+translate english elsa_masturbate_scene_2892ee87:
+    # "[e.name] sits on the edge of the bed, her hand slowly sliding down to her panties, gently pushing the fabric aside."
+    "[e.name] sits on the edge of the bed, her hand slowly sliding down to her panties, gently pushing the fabric aside."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:265
+translate english elsa_masturbate_scene_c635f1ec:
+    # e "You don’t mind watching, do you?"
+    e "You don’t mind watching, do you?"
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:266
+translate english elsa_masturbate_scene_1b3601ad:
+    # "She starts moving her fingers, her breathing growing slightly deeper."
+    "She starts moving her fingers, her breathing growing slightly deeper."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:271
+translate english elsa_masturbate_scene_8892e3a8:
+    # "[e.name]’s fingers slip inside, her eyes half-closed, though she never loses control."
+    "[e.name]’s fingers slip inside, her eyes half-closed, though she never loses control."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:272
+translate english elsa_masturbate_scene_0c88adde:
+    # e "Mmm… the cold of my magic and the warmth… an interesting mix."
+    e "Mmm… the cold of my magic and the warmth… an interesting mix."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:273
+translate english elsa_masturbate_scene_efc89760:
+    # p "You’re incredible…"
+    p "You’re incredible…"
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:305
+translate english elsa_masturbate_scene_3f1b727b:
+    # e "Ah… I can’t keep going in these panties, I’ll have to take them off."
+    e "Ah… I can’t keep going in these panties, I’ll have to take them off."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:306
+translate english elsa_masturbate_scene_a0e89f9c:
+    # "[e.name] removes her panties."
+    "[e.name] removes her panties."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:311
+translate english elsa_masturbate_scene_e558976d:
+    # "[e.name] sits upright, watching your lustful gaze."
+    "[e.name] sits upright, watching your lustful gaze."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:315
+translate english elsa_masturbate_scene_fa20788e:
+    # "She leans forward a little, letting you get a good look at her anus and pussy."
+    "She leans forward a little, letting you get a good look at her anus and pussy."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:319
+translate english elsa_masturbate_scene_227c6b31:
+    # "[e.name] clenches her ass."
+    "[e.name] clenches her ass."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:320
+translate english elsa_masturbate_scene_4113ffe0:
+    # e "How’s that?"
+    e "How’s that?"
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:321
+translate english elsa_masturbate_scene_46c7a5b8:
+    # p "!!!!!"
+    p "!!!!!"
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:326
+translate english elsa_masturbate_scene_29e11b17:
+    # "[e.name] flips over, her hand reaching toward her anus."
+    "[e.name] flips over, her hand reaching toward her anus."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:327
+translate english elsa_masturbate_scene_c3604fff:
+    # e "And now… something bolder. Don’t look away."
+    e "And now… something bolder. Don’t look away."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:363
+translate english elsa_masturbate_scene_9d76b24e:
+    # "[e.name] climaxes, her face contorting with pleasure as juices drip from her pussy."
+    "[e.name] climaxes, her face contorting with pleasure as juices drip from her pussy."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:367
+translate english elsa_masturbate_scene_c3094462:
+    # "Juices squirt from her wet pussy."
+    "Juices squirt from her wet pussy."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:371
+translate english elsa_masturbate_scene_42d6a238:
+    # e "A-aaah!"
+    e "A-aaah!"
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:375
+translate english elsa_masturbate_scene_72445617:
+    # e "So, [hero_name], impressed?"
+    e "So, [hero_name], impressed?"
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:379
+translate english elsa_masturbate_scene_72a048d6:
+    # p "Elsa, you’re too good to stop now. Let me help you."
+    p "Elsa, you’re too good to stop now. Let me help you."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:388
+translate english elsa_masturbate_scene_43eb1afe:
+    # "[e.name] stands up, adjusting her panties, and looks at you."
+    "[e.name] stands up, adjusting her panties, and looks at you."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:389
+translate english elsa_masturbate_scene_265984ad:
+    # e "I think I’ve repaid you more than enough."
+    e "I think I’ve repaid you more than enough."
+
+# game/locations/magic_tower/magic_tower_elsa_roots.rpy:390
+translate english elsa_masturbate_scene_450481aa:
+    # "She gives a cold nod and points to the door, leaving you with a pleasant aftertaste."
+    "She gives a cold nod and points to the door, leaving you with a pleasant aftertaste."

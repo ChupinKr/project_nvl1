@@ -114,7 +114,7 @@ label training_ground_menu:
             $nextTime()
             "Надо больше тренироваться."
             jump training_ground_menu
-        "Подойти к [eris.name]" if isMorning():
+        "Подойти к [eris.name]" if isMorning() or isDay():
             "Ты подходишь к [eris.name]."
             jump training_ground_eris_menu
         "Отправиться в город":

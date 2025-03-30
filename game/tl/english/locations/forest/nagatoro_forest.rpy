@@ -1302,4 +1302,17 @@ translate english strings:
 
     # game/locations/forest/nagatoro_forest.rpy:374
     old "Следовать за [nag.name]"
-    new "Follow [nag.name]."
+    new "Follow [nag.name]."# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/forest/nagatoro_forest.rpy:13
+translate english visit_nagatoro_forest_d6cd9b9e:
+
+    # p "Ааа! К-кто т-ты?!"
+    p "Wow! W-who are y-you?"
+
+# game/locations/forest/nagatoro_forest.rpy:314
+translate english battle_win_forest_nagatoro_599655f8:
+
+    # nag grin "Ха-ха! Ты меня позабавил. Надеюсь, враг умрёт от смеха."
+    nag grin "Ha-ha! You made me laugh. I hope the enemy dies laughing."
+

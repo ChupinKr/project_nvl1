@@ -1473,4 +1473,17 @@ translate english strings:
 
     # game/locations/dodjo/nagatoro_dodjo.rpy:51
     old "Продолжить"
-    new "Continue"
+    new "Continue"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/dodjo/nagatoro_dodjo.rpy:36
+translate english nagatoro_dodjo_first_time_6dedbc06:
+
+    # nag "С чего начнем?"
+    nag "Where do we begin?"
+
+# game/locations/dodjo/nagatoro_dodjo.rpy:381
+translate english nagatoro_root_titfuck_cad86ccb:
+
+    # nag grin "Уже не терпится, да?" with dissolve
+    nag grin "Can't wait already, huh?" with dissolve
+

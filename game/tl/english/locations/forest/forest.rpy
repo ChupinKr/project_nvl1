@@ -256,3 +256,91 @@ translate english strings:
     # game/locations/forest/forest.rpy:153
     old "Он тебя еще не видит, что будешь делать?"
     new "It hasn't noticed you yet. What will you do?"
+# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/forest/forest.rpy:41
+translate english forest_menu_9e382a1a:
+
+    # mind "Лучше пойду днем, так будет безопаснее."
+    mind "I'd better go during the day, it will be safer."
+
+# game/locations/forest/forest.rpy:44
+translate english forest_menu_9460e6fc_1:
+
+    # "Ты выбираешься из [active_quest.location]"
+    "You are getting out of [active_quest.location]"
+
+# game/locations/forest/forest.rpy:47
+translate english forest_menu_52efcfc3:
+
+    # "[my_nag.name] наверняка ждет, надо ее обрадовать."
+    "[my_nag.name] is probably waiting, I need to make her happy."
+
+# game/locations/forest/forest.rpy:50
+translate english forest_menu_cb059863_1:
+
+    # "Ты выходишь в город"
+    "You go out into the city"
+
+# game/locations/forest/forest.rpy:55
+translate english forest_menu_9460e6fc_2:
+
+    # "Ты выбираешься из [active_quest.location]"
+    "You are getting out of [active_quest.location]"
+
+# game/locations/forest/forest.rpy:60
+translate english forest_menu_19dba87f:
+
+    # eris "Увидимся на тренировочной площадке, [hero_name]!"
+    eris "See you on the training ground, [hero_name]!"
+
+# game/locations/forest/forest.rpy:61
+translate english forest_menu_350e6a42:
+
+    # p "Да, [my_eris.name]!"
+    p "Yes, [my_eris.name]!"
+
+# game/locations/forest/forest.rpy:62
+translate english forest_menu_cb059863_2:
+
+    # "Ты выходишь в город"
+    "You go out into the city"
+
+# game/locations/forest/forest.rpy:67
+translate english forest_menu_9460e6fc_3:
+
+    # "Ты выбираешься из [active_quest.location]"
+    "You are getting out of [active_quest.location]"
+
+# game/locations/forest/forest.rpy:72
+translate english forest_menu_19dba87f_1:
+
+    # eris "Увидимся на тренировочной площадке, [hero_name]!"
+    eris "See you on the training ground, [hero_name]!"
+
+# game/locations/forest/forest.rpy:73
+translate english forest_menu_350e6a42_1:
+
+    # p "Да, [my_eris.name]!"
+    p "Yes, [my_eris.name]!"
+
+# game/locations/forest/forest.rpy:74
+translate english forest_menu_cb059863_3:
+
+    # "Ты выходишь в город"
+    "You go out into the city"
+
+translate english strings:
+
+    # game/locations/forest/forest.rpy:27
+    old "Выполнить задание [my_nag.name]"
+    new "Complete task [my_nag.name]"
+
+    # game/locations/forest/forest.rpy:27
+    old "Выполнить задание [my_eris.name]"
+    new "Complete task [my_eris.name]"
+
+    # game/locations/forest/forest.rpy:88
+    old "Навестить [woblin.name]"
+    new "Visit [woblin.name]"
+

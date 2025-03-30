@@ -729,9 +729,6 @@ screen navigation():
 
         textbutton _("Boosty") action OpenURL("https://boosty.to/Ko2ed/")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-            textbutton _("Patreon") action OpenURL("https://patreon.com/c/Ko2ed/")
-
         if renpy.variant("pc"):
 
             ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-

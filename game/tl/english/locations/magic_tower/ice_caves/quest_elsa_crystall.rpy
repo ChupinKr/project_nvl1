@@ -742,4 +742,34 @@ translate english strings:
 
     # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:204
     old "I lied"
+    new "I lied"# TODO: Translation updated at 2025-03-30 19:52
+
+translate english strings:
+
+    # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:15
+    old "Сразиться с Ледяным Големом"
+    new "Fight the Ice Golem"
+
+    # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:15
+    old "Попытаться обойти его"
+    new "Try to sneak around it"
+
+    # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:15
+    old "Отвлечь его и пройти мимо"
+    new "Distract it and slip by"
+
+    # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:53
+    old "Освободить её без условий"
+    new "Free her without conditions"
+
+    # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:53
+    old "Предложить сделку"
+    new "Offer a deal"
+
+    # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:205
+    old "Освободить [emilia.name]"
+    new "Free [emilia.name]"
+
+    # game/locations/magic_tower/ice_caves/quest_elsa_crystall.rpy:205
+    old "Я солгал"
     new "I lied"

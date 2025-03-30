@@ -3,6 +3,7 @@
 **/saves
 **/cache
 *.rpyb
+*.rpyc
 *.json
 *.txt
 *.keystore
