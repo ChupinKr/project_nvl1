@@ -769,4 +769,20 @@ translate english strings:
 
     # game/locations/magic_tower/magic_tower_merlin.rpy:176
     old "Да, очень"
-    new "Yes, very much"
+    new "Yes, very much"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:187
+translate english mer_root_blowjob_f2a2b8b9:
+    # mer smile_holding_breast "The right answer~" with dissolve
+    mer smile_holding_breast "The right answer~" with dissolve
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:199
+translate english mer_root_blowjob_37eaa273:
+    # mer smile_knee "Get undressed, or do you want me to undress you?" with dissolve
+    mer smile_knee "Get undressed, or do you want me to undress you?" with dissolve
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:203
+translate english mer_root_blowjob_97d8c7b3:
+    # "You pause to think. Didn’t you once see a spell for enlarging body parts? Could it be used just on the chest? Maybe [mer.name] wanted to make this lesson even more enjoyable? What if this is all just another test, and everything around you is illusion magic?"
+    "You pause to think. Didn’t you once see a spell for enlarging body parts? Could it be used just on the chest? Maybe [mer.name] wanted to make this lesson even more enjoyable? What if this is all just another test, and everything around you is illusion magic?"
+

@@ -646,3 +646,17 @@ translate english strings:
     old "Я передумал"
     new "I’ve changed my mind"
 
+# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/forest/rapunzel_forest.rpy:64
+translate english rapunzel_first_time_blessing_9b19a7f2:
+
+    # r "Хах! Неужели мне выпал шанс обучить самого обольстительного мужчину? Это даже забавно~"
+    r "Hah! Do I really get the chance to teach the most seductive man? It's even funny~"
+
+# game/locations/forest/rapunzel_forest.rpy:264
+translate english rapunzel_quests_59e03460:
+
+    # "IN PROGRESS"
+    "IN PROGRESS"
+

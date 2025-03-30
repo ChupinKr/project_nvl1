@@ -1299,4 +1299,29 @@ translate english strings:
 
     # game/locations/brothel/rapunzel_brothel.rpy:33
     old "Ты? Чем?"
-    new "You? How?"
+    new "You? How?"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/brothel/rapunzel_brothel.rpy:77
+translate english rapunzel_root_menu_184cf14a:
+
+    # r "Пойдем, я знаю, где я смогу помочь тебе расслабиться."
+    r "Come on, I know where I can help you relax."
+
+# game/locations/brothel/rapunzel_brothel.rpy:83
+translate english rapunzel_root_menu_9372a49c:
+
+    # r @ smile_shy "Мы еще не пришли, идем, за мной!" with dissolve
+    r @ smile_shy "We're not there yet, come on, follow me!" with dissolve
+
+# game/locations/brothel/rapunzel_brothel.rpy:84
+translate english rapunzel_root_menu_012abb17:
+
+    # "Мы заходим в туалет, открываем потайную дверь и заходим в бордель."
+    "We go into the toilet, open the secret door and enter the brothel."
+
+# game/locations/brothel/rapunzel_brothel.rpy:94
+translate english rapunzel_root_menu_377035e1:
+
+    # r @ smile_shy "Ну же, идем в мою комнату!" with dissolve
+    r @ smile_shy "Come on, let's go to my room!" with dissolve
+
