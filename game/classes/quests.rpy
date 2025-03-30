@@ -268,7 +268,7 @@ init:
         str_bonus=0, intelligence_bonus=5, char_bonus=0
         )
     elif persistent.lang == "english":
-        $no_quest = GirlQuest(tag="noq", whatToDo="Find something to do", forWho="", forWhoShort="p", repeatable=True,
+        $no_quest = GirlQuest(tag="noq", whatToDo="Find something to do", forWho="", forWhoShort="p",
             location="You need to look around", countObj=0, 
             character_says=["Get busy with something already"],
             req_love=0, req_str=0, req_intelligence=0, req_char=0, 
@@ -277,7 +277,7 @@ init:
             )
 
         # Elsa quests
-        $quest_elsa_materials = GirlQuest(tag="qem", whatToDo="Gather materials", forWho="Elsa", forWhoShort="e", repeatable=True,
+        $quest_elsa_materials = GirlQuest(tag="qem", whatToDo="Gather materials", forWho="Elsa", forWhoShort="e",
             location="Forest Thicket", countObj=10, 
             character_says=["Good, I need some rare herbs and minerals."
                 ,"You can find them in these forests."],
@@ -285,7 +285,7 @@ init:
             reward_money=10, reward_character=10, 
             str_bonus=0, intelligence_bonus=5, char_bonus=0
             )
-        $quest_elsa_crystall = GirlQuest(tag="qec", whatToDo="Obtain a Winter Echo Crystal", forWho="Elsa", forWhoShort="e", repeatable=True,
+        $quest_elsa_crystall = GirlQuest(tag="qec", whatToDo="Obtain a Winter Echo Crystal", forWho="Elsa", forWhoShort="e",
             location="Icy Caves", countObj=1, 
             character_says=["I see you’re pretty sturdy if you still have the wits to head into those caves."
                 ,"Your body will come in handy~"],
@@ -295,7 +295,7 @@ init:
             )
 
         # Rapunzel quests
-        $quest_rapunzel_mashrooms = GirlQuest(tag="qrm", whatToDo="Gather mushrooms", forWho="Rapunzel", forWhoShort="r", repeatable=True,
+        $quest_rapunzel_mashrooms = GirlQuest(tag="qrm", whatToDo="Gather mushrooms", forWho="Rapunzel", forWhoShort="r",
             location="Grassy Clearing", countObj=10, 
             character_says=["There are these mushrooms… They have unique properties."
                 ,"If you find them, I’ll be absolutely thrilled!"],
@@ -303,7 +303,7 @@ init:
             reward_money=10, reward_character=10, 
             str_bonus=0, intelligence_bonus=0, char_bonus=3
             )
-        $quest_rapunzel_women = GirlQuest(tag="qrw", whatToDo="Recruit ladies for backup", forWho="Rapunzel", forWhoShort="r", repeatable=True,
+        $quest_rapunzel_women = GirlQuest(tag="qrw", whatToDo="Recruit ladies for backup", forWho="Rapunzel", forWhoShort="r",
             location="Dark Alley", countObj=3, 
             character_says=["Oh, this job’s right up my alley! We need more pretty, experienced girls."
                 ,"If you bring me a couple, I’ll reward you handsomely~"],
@@ -314,7 +314,6 @@ init:
 
         # Nagatoro quests
         $quest_nagatoro_goblins = GirlQuest(tag="qng", whatToDo="Kill goblins", forWho="Nagatoro", forWhoShort="nag", 
-        repeatable=True,
             location="Forest Thicket", countObj=5, 
             character_says=["Goblins aren’t as weak as they seem."
                 ,"Are you sure you can handle it?"],
@@ -323,7 +322,6 @@ init:
             str_bonus=2, intelligence_bonus=0, char_bonus=0
             )
         $quest_nagatoro_forest = GirlQuest(tag="qnf", whatToDo="Clear the forest", forWho="Nagatoro", forWhoShort="nag", 
-        repeatable=True,
             location="Monster Forest", countObj=5, 
             character_says=["Good choice. It’s full of dangerous creatures, so be careful."],
             req_love=0, req_str=10, req_intelligence=0, req_char=0, 
@@ -331,7 +329,6 @@ init:
             str_bonus=4, intelligence_bonus=0, char_bonus=0
             )
         $quest_nagatoro_bandits = GirlQuest(tag="qnb", whatToDo="Kill bandits", forWho="Nagatoro", forWhoShort="nag", 
-        repeatable=True,
             location="Dark Alley", countObj=3, 
             character_says=["That gang’s really a threat to travelers."
                 ,"This task is worth taking on."],
@@ -346,7 +343,6 @@ init:
             whatToDo="Goblin hunting",
             forWho="Eris",
             forWhoShort="eris",
-            repeatable=True,
             location="Forest Thicket",
             countObj=10,  # Kill 10 goblins
             character_says=[
@@ -368,7 +364,6 @@ init:
             whatToDo="Drive out a dragon",
             forWho="Eris",
             forWhoShort="eris",
-            repeatable=False,  # Dragons are rare foes
             location="Willage",
             countObj=1,  # One dragon
             character_says=[
@@ -390,7 +385,6 @@ init:
             whatToDo="Date",
             forWho="Eris",
             forWhoShort="eris",
-            repeatable=True,  # Can be repeated to strengthen the relationship
             location="City",
             countObj=0,  # No specific objects, just spend time together
             character_says=[
@@ -409,7 +403,7 @@ init:
         )
 
         # Tsunade quests
-        $quest_tsunade_poison_tooth = GirlQuest(tag="qtpt", whatToDo="Obtain a fang", forWho="Tsunade", forWhoShort="ts", repeatable=True,
+        $quest_tsunade_poison_tooth = GirlQuest(tag="qtpt", whatToDo="Obtain a fang", forWho="Tsunade", forWhoShort="ts",
             location="Forest Thicket", countObj=5, 
             character_says=["You can find that snake in the forest—it’s highly venomous."
                 ,"Are you sure you can handle it?"],
@@ -419,7 +413,7 @@ init:
             )
 
         # Sakura quests
-        $quest_sakura_materials = GirlQuest(tag="qsm", whatToDo="Gather herbs", forWho="Sakura", forWhoShort="s", repeatable=True,
+        $quest_sakura_materials = GirlQuest(tag="qsm", whatToDo="Gather herbs", forWho="Sakura", forWhoShort="s",
             location="Forest Thicket", countObj=5, 
             character_says=["You should be able to find the herbs without trouble."
                 ,"But there are monsters out there, so be careful."],

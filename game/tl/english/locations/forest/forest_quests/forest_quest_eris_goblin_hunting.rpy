@@ -371,7 +371,7 @@ translate english forest_quest_eris_goblin_hunting_cave_fe31c362:
     eris angry_naked_cover_closed_eyes "Yes, it’s wet!" with dissolve
 
 # game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:197
-translate english forest_quest_eris_goblin_hunting_cave_1724 Incorporated:
+translate english forest_quest_eris_goblin_hunting_cave_1724:
     # eris smile_naked_cover "Or do you want me to catch a cold?" with dissolve
     eris smile_naked_cover "Or do you want me to catch a cold?" with dissolve
 

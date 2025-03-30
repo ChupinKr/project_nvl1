@@ -816,9 +816,8 @@ translate english strings:
     old "Сдамся и скажу, что готов принять смерть, чтобы другие выжили."
     new "I’ll surrender and say I’m ready to die so the others can live."# TODO: Translation updated at 2025-03-30 19:52
 
-    # game/locations/tavern/tavern.rpy:91
-    translate english talk_miku_menu_b3528c48:
-
+# game/locations/tavern/tavern.rpy:91
+translate english talk_miku_menu_b3528c48:
     # m smile "Комната стоит 10 золотых за 3 дня." with dissolve
     m smile "The room costs 10 gold for 3 days." with dissolve
 
