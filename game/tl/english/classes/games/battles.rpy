@@ -90,4 +90,31 @@ translate english strings:
 
     # game/classes/games/battles.rpy:198
     old "Try to escape"
-    new "Try to escape"
+    new "Try to escape"# TODO: Translation updated at 2025-03-30 19:52
+
+translate english strings:
+
+    # game/classes/games/battles.rpy:199
+    old "У вас включены читы. Пропустить мини-игру?"
+    new "У вас включены читы. Пропустить мини-игру?"
+
+    # game/classes/games/battles.rpy:199
+    old "Играть"
+    new "Играть"
+
+    # game/classes/games/battles.rpy:199
+    old "Пропустить"
+    new "Пропустить"
+
+    # game/classes/games/battles.rpy:209
+    old "Cheats are enabled. Skip the mini-game?"
+    new "Cheats are enabled. Skip the mini-game?"
+
+    # game/classes/games/battles.rpy:285
+    old "Продолжить бой"
+    new "Продолжить бой"
+
+    # game/classes/games/battles.rpy:285
+    old "Попытаться сбежать"
+    new "Попытаться сбежать"
+

@@ -738,4 +738,35 @@ translate english strings:
 
     # game/locations/forest/elsa_forest.rpy:300
     old "Идти сразу в магическую башню"
-    new "Go straight to the magic tower"
+    new "Go straight to the magic tower"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/forest/elsa_forest.rpy:248
+translate english elsa_not_first_time_d00552da:
+
+    # e smile_shy "Оу, хочешь повторить?" with dissolve
+    e smile_shy "Oh, do you want to repeat that?" with dissolve
+
+# game/locations/forest/elsa_forest.rpy:249
+translate english elsa_not_first_time_dfa81ec2:
+
+    # e "Иди за мной, [hero_name]."
+    e "Follow me, [hero_name]."
+
+# game/locations/forest/elsa_forest.rpy:254
+translate english elsa_not_first_time_c8ea8a4a:
+
+    # p "..."
+    p "..."
+
+# game/locations/forest/elsa_forest.rpy:257
+translate english elsa_not_first_time_5844b511:
+
+    # e "Знаешь, мне здесь спокойнее всего..."
+    e "I feel most at peace here..."
+
+translate english strings:
+
+    # game/locations/forest/elsa_forest.rpy:227
+    old "Награда"
+    new "Reward"
+
