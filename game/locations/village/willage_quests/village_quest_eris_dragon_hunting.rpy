@@ -17,7 +17,7 @@
 define dragon_fight_field_first_time = True
 define dragon_fight_mountain_first_time = True
 
-label willage_quest_eris_dragon_hunting:
+label village_quest_eris_dragon_hunting:
     if not dragon_fight_mountain_first_time:
         call dragon_mountain
         call return_village_quest_eris_dragon_hunting
@@ -258,7 +258,7 @@ label dragon_fight_field:
             p "[my_eris.name]! Бей под его крылья, это слабое место!"
             eris "Поняла!"
             hide eris with dissolve
-            $my_eris.addLove(5)
+            $addLove(my_eris,5)
             "[my_eris.name] пробегает сбоку от него и наносит сокрушительный удар по его крыльям."
             scene bg dragon_angry_blood at bg_size with flash
             show eris t_smile_torn at left with dissolve
@@ -316,11 +316,11 @@ label dragon_fight_field_blood:
         "Что делать?"
         "Использовать магию льда" if intelligence > 20:
             "Ледяные копья протыкают чешую ослабевшего Дракона. Он падает."
-            $my_elsa.addLove(10)
+            $addLove(my_elsa, 10)
         "Использовать боевые искусства" if strength > 50:
             "Ты приближаешься и наносишь несколько сокрушительных ударов. Дракону падает."
-            $my_nag.addLove(5)
-            $my_eris.addLove(5)
+            $addLove(my_nag, 5)
+            $addLove(my_eris, 5)
         "Ударить изо всех сил":
             scene bg dragon_angry_blood at bg_size_plus with dissolve
             "Ты приближаешься, Дракон явно сильно ослаблен, но упорно сопротивляется."
@@ -490,13 +490,13 @@ label dragon_mountain:
             wragon neutral "Это путь к одиночеству." with dissolve
         "Дружбу и верность.":
             $ points += 1
-            wragon smile "Ты мудр для человека." with dissolve
+            wragon smile_say "Ты мудр для человека." with dissolve
         "Богатство и славу.":
             wragon neutral "Пустые ценности." with dissolve
 
     # Итог
     if points > 3:
-        wragon smile "Ты удивил меня, человек. Ты не только умён, но и честен. Я оставлю тебя в живых." with dissolve
+        wragon smile_say "Ты удивил меня, человек. Ты не только умён, но и честен. Я оставлю тебя в живых." with dissolve
         wragon smile_closed "Знаешь, человек, между нами не столь большая разница." with dissolve
         p "Д-да?"
         mind "Что происходит?!"
@@ -527,7 +527,7 @@ label dragon_mountain:
                 return
             "Вылечи [my_eris.name]":
                 wragon horny_say "Как благородно с твоей стороны, ты в перую очередь заботишься о друзьях." with dissolve
-                $my_freya.addLove(10)
+                $addLove(my_freya,10)
                 wragon "Она не нуждается в серьезном лечении. Сам лечи её."
                 show wragon horny with dissolve
                 mind "Чёрт, эта [wragon.name] бесполезна."
@@ -581,7 +581,7 @@ label heal_eris_by_yourself:
             "Магические существа начинают растворяться в воздухе."
             eris "Так ты и магией владеешь?"
             p "Совсем немного..."
-            $my_eris.addLove(5)
+            $addLove(my_eris,5)
             scene bg eris_mountain_unconscious_fireflies_6 at bg_size with dissolve
             "[my_eris.name] поднимается целая и невредимая, будто ничего и не было."
             eris "Шутишь? Ты удивительный человек, [hero_name]!"
@@ -634,7 +634,7 @@ label return_village_quest_eris_dragon_hunting:
     show bg forest_path2 at bg_size with dissolve
     call steps_sound
     p "Да. Я не мог бросить тебя."
-    $my_eris.addLove(10)
+    $addLove(my_eris,10)
     eris t_embarrassed_blush "С-спасибо тебе, [hero_name]..." with dissolve
     p "..."
     hide eris with dissolve
@@ -704,15 +704,18 @@ label makima_titfuck:
     scene bg makima_root_titfuck5_1 at bg_size with fade
     pause .3
     scene bg makima_root_titfuck5_2 at bg_size with dissolve
+    call hide_dialog
     makima "Мой любимый размер~"
 
     scene bg makima_root_titfuck6_1 at bg_size with dissolve
     pause .3
     scene bg makima_root_titfuck6_2 at bg_size with dissolve
+    call hide_dialog
     makima "Герой, ты же спасешь деревню от дракона?"
     p "К-конечно, обязательно..."
 
     scene bg makima_root_titfuck7 at bg_size with dissolve
+    call hide_dialog
     "[makima.name] сильнее сжамает твой член своей грудью."
     p "Ухх"
 
@@ -814,18 +817,22 @@ label makima_titfuck:
     p "Аргх!"
 
     scene bg makima_root_titfuck10 at bg_size with flash
+    call hide_dialog
     "Мощная струя спермы выстреливает на лицо [makima.name]."
 
     scene bg makima_root_titfuck11 at bg_size with dissolve
     pause .5
     scene bg makima_root_titfuck12 at bg_size with flash
+    call hide_dialog
     "[makima.name] резким движением перекрывает поток спермы."
     makima "*глотает*"
 
     scene bg makima_root_titfuck13 at bg_size with dissolve
+    call hide_dialog
     makima "Мммм~"
 
     scene bg makima_root_titfuck14 at bg_size with dissolve
+    call hide_dialog
     p "*выдыхает*"
     makima "Вижу я смогла тебя удовлетворить, Герой."
 
@@ -839,26 +846,32 @@ label wragon_root_fuck:
     p "Д-да, здесь довольно уютно..."
 
     scene bg wragon_anal2 at bg_size with dissolve
+    call hide_dialog
     wragon "Эта пещерка тебе понравится еще больше~"
     p "*сглатывает*"
 
     scene bg wragon_anal3 at bg_size with dissolve
+    call hide_dialog
     "[wragon.name] наклоняется, открывая тебе вид на ее округлую попку."
     p "Стой! Ты же говорила о том, что у тебя есть муж? Вдруг он узнгает и накажет меня."
 
     scene bg wragon_anal3_2 at bg_size with dissolve
+    call hide_dialog
     wragon "Хаха, не посмеет. Он со мной даже рядом не стоит."
 
     scene bg wragon_anal3 at bg_size with dissolve
+    call hide_dialog
     wragon "Думаю даже ты можешь его одолеть~"
 
     scene bg wragon_anal4_1 at bg_size with fade
     pause .5
     scene bg wragon_anal4_2 at bg_size with dissolve
+    call hide_dialog
     wragon "Так что не тяни время, я уже вне терпения~"
     "Ты быстро стягиваешь штаны и вонзаешь свой член в ее тугую попку."
 
     scene bg wragon_anal6 at bg_size with flash
+    call hide_dialog
     wragon "Ах! Ты решил выбрать эту дырочку?"
 
     scene bg wragon_anal5 at bg_size with dissolve
@@ -883,9 +896,11 @@ label wragon_root_fuck:
     wragon "Стой!"
 
     scene bg wragon_anal4_2 at bg_size with fade
+    call hide_dialog
     wragon "Стой, я не хочу терять твоё семя. Воспользуйся моей киской~"
     
     scene bg wragon_vaginal1 at bg_size with fade
+    call hide_dialog
     wragon "Ах! Как же приятно~"
     "[wragon.name] седлает твой член и начинает двигаться."
     scene bg wragon_vaginal2 at bg_size with dissolve
@@ -939,6 +954,7 @@ label wragon_root_fuck:
     scene bg wragon_vaginal2 at bg_size with dissolve
     pause .1
     scene bg wragon_vaginal3 at bg_size with dissolve
+    call hide_dialog
     wragon "Ах! Ах! Ах! Не останавливайся!"
 
     scene bg wragon_vaginal4 at bg_size with dissolve
@@ -1032,15 +1048,23 @@ label wragon_root_fuck:
     wragon "Даааа-ах~"
 
     scene bg wragon_vaginal10 at bg_size with dissolve
+    pause .3
+    scene bg wragon_vaginal10_say at bg_size with dissolve
     call hide_dialog
-    scene bg wragon_vaginal10_say at bg_size with dissolve
     wragon "Ты оказался лучше, чем я думала~"
+
     scene bg wragon_vaginal10 at bg_size with dissolve
+    call hide_dialog
     p "Ты на это и рассчитывала изначально?"
+
     scene bg wragon_vaginal10_say at bg_size with dissolve
+    call hide_dialog
     wragon "Изначально я рассчитывала убить тебя.{w} А теперь, думаю, у нас будет чудесное потомство."
+    
     scene bg wragon_vaginal10 at bg_size with dissolve
+    call hide_dialog
     mind "Как же она меня пугает."
+    
     scene bg wragon_vaginal10_say at bg_size with dissolve
     wragon "Ты хорошо постарался, смертный, можешь идти."
     "Ты выходишь из пещеры."
