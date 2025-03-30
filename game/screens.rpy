@@ -307,6 +307,7 @@ screen character_panel(char, ch_love, ch_str):
         text ""
         if persistent.lang == "russian":
             text "Имя: [char.name]" style "info_text"
+            text "Возраст: [char.old] лет" style "info_text"
             text ""
             text "Описание: \n[char.desc]" style "info_text"
             text ""
@@ -314,6 +315,7 @@ screen character_panel(char, ch_love, ch_str):
             text ""
         if persistent.lang == "english":
             text "Name: [char.name]" style "info_text"
+            text "Old: [char.old] y.o." style "info_text"
             text ""
             text "Description: \n[char.desc]" style "info_text"
             text ""
