@@ -520,8 +520,7 @@ init python:
     def getRepeatableByTagList(tagList): 
         result = []
         for tag in tagList:
-            if getRepeatableByTag(tag):
-                result.append(getRepeatableByTag(tag))
+            result.append(getRepeatableByTag(tag))
         return result
                 
     def getRepeatableByTag(tag):
