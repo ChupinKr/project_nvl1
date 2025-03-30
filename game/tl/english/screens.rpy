@@ -364,4 +364,283 @@ translate english strings:
 
     # game/screens.rpy:1810
     old "Меню"
+    new "Menu"# TODO: Translation updated at 2025-03-30 19:52
+
+translate english strings:
+
+    # game/screens.rpy:628
+    old "Back"
+    new "Back"
+
+    # game/screens.rpy:629
+    old "History"
+    new "History"
+
+    # game/screens.rpy:631
+    old "Auto"
+    new "Auto"
+
+    # game/screens.rpy:632
+    old "Save"
+    new "Save"
+
+    # game/screens.rpy:633
+    old "F.Save"
+    new "F.Save"
+
+    # game/screens.rpy:634
+    old "F.Load"
+    new "F.Load"
+
+    # game/screens.rpy:635
+    old "Preferences"
+    new "Preferences"
+
+    # game/screens.rpy:679
+    old "Start"
+    new "Start"
+
+    # game/screens.rpy:696
+    old "Load"
+    new "Load"
+
+    # game/screens.rpy:708
+    old "End replay"
+    new "End replay"
+
+    # game/screens.rpy:715
+    old "Main Menu"
+    new "Main Menu"
+
+    # game/screens.rpy:720
+    old "About"
+    new "About"
+
+    # game/screens.rpy:728
+    old "Help"
+    new "Help"
+
+    # game/screens.rpy:988
+    old "About game"
+    new "About game"
+
+    # game/screens.rpy:995
+    old "Version [config.version!t]\n"
+    new "Version [config.version!t]\n"
+
+    # game/screens.rpy:1001
+    old "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"
+    new "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"
+
+    # game/screens.rpy:1046
+    old "{} page"
+    new "{} page"
+
+    # game/screens.rpy:1046
+    old "Autosaves"
+    new "Autosaves"
+
+    # game/screens.rpy:1046
+    old "Fast saves"
+    new "Fast saves"
+
+    # game/screens.rpy:1133
+    old "Load Sync"
+    new "Load Sync"
+
+    # game/screens.rpy:1142
+    old "Download Sync"
+    new "Download Sync"
+
+    # game/screens.rpy:1208
+    old "Screen mode"
+    new "Screen mode"
+
+    # game/screens.rpy:1209
+    old "Window"
+    new "Window"
+
+    # game/screens.rpy:1233
+    old "All text"
+    new "All text"
+
+    # game/screens.rpy:1234
+    old "After choices"
+    new "After choices"
+
+    # game/screens.rpy:1235
+    old "Transitions"
+    new "Transitions"
+
+    # game/screens.rpy:1238
+    old "Cheats"
+    new "Cheats"
+
+    # game/screens.rpy:1239
+    old "On"
+    new "On"
+
+    # game/screens.rpy:1262
+    old "Text speed"
+    new "Text speed"
+
+    # game/screens.rpy:1266
+    old "Autoreading speed"
+    new "Autoreading speed"
+
+    # game/screens.rpy:1276
+    old "Music volume"
+    new "Music volume"
+
+    # game/screens.rpy:1286
+    old "Sound volume"
+    new "Sound volume"
+
+    # game/screens.rpy:1292
+    old "Test"
+    new "Test"
+
+    # game/screens.rpy:1299
+    old "Voice volume"
+    new "Voice volume"
+
+    # game/screens.rpy:1315
+    old "No sound"
+    new "No sound"
+
+    # game/screens.rpy:1467
+    old "Dialogue history is empty."
+    new "Dialogue history is empty."
+
+    # game/screens.rpy:1558
+    old "Keyboard"
+    new "Keyboard"
+
+    # game/screens.rpy:1559
+    old "Mouse"
+    new "Mouse"
+
+    # game/screens.rpy:1626
+    old "Going through dialogues, activating the interface."
+    new "Going through dialogues, activating the interface."
+
+    # game/screens.rpy:1629
+    old "Space"
+    new "Space"
+
+    # game/screens.rpy:1630
+    old "Going through dialogues without the ability to make choices."
+    new "Going through dialogues without the ability to make choices."
+
+    # game/screens.rpy:1633
+    old "Arrows"
+    new "Arrows"
+
+    # game/screens.rpy:1634
+    old "Navigating the interface."
+    new "Navigating the interface."
+
+    # game/screens.rpy:1638
+    old "Enter the game menu."
+    new "Enter the game menu."
+
+    # game/screens.rpy:1642
+    old "Skips dialogue while held down."
+    new "Skips dialogue while held down."
+
+    # game/screens.rpy:1646
+    old "Enables skip mode."
+    new "Enables skip mode."
+
+    # game/screens.rpy:1650
+    old "A reversal of the game's plot."
+    new "A reversal of the game's plot."
+
+    # game/screens.rpy:1654
+    old "Rolls back the previous action."
+    new "Rolls back the previous action."
+
+    # game/screens.rpy:1658
+    old "Hides the user interface."
+    new "Hides the user interface."
+
+    # game/screens.rpy:1662
+    old "Takes a screenshot."
+    new "Takes a screenshot."
+
+    # game/screens.rpy:1666
+    old "Includes the supported {a=https://www.renpy.org/l/voicing}speech synthesizer{/a}."
+    new "Includes the supported {a=https://www.renpy.org/l/voicing}speech synthesizer{/a}."
+
+    # game/screens.rpy:1670
+    old "Opens the accessibility menu."
+    new "Opens the accessibility menu."
+
+    # game/screens.rpy:1697
+    old "Left click"
+    new "Left click"
+
+    # game/screens.rpy:1701
+    old "Click the wheel"
+    new "Click the wheel"
+
+    # game/screens.rpy:1705
+    old "Right click"
+    new "Right click"
+
+    # game/screens.rpy:1709
+    old "Wheel up"
+    new "Wheel up"
+
+    # game/screens.rpy:1713
+    old "Wheel down"
+    new "Wheel down"
+
+    # game/screens.rpy:1747
+    old "Right Trigger\nA/Lower Button"
+    new "Right Trigger\nA/Lower Button"
+
+    # game/screens.rpy:1748
+    old "Go through dialogues, activate the interface."
+    new "Go through dialogues, activate the interface."
+
+    # game/screens.rpy:1751
+    old "Left Trigger\nLeft Bumper"
+    new "Left Trigger\nLeft Bumper"
+
+    # game/screens.rpy:1752
+    old "Go back through the game's story."
+    new "Go back through the game's story."
+
+    # game/screens.rpy:1755
+    old "Right Bumper"
+    new "Right Bumper"
+
+    # game/screens.rpy:1756
+    old "Go back through the previous action."
+    new "Go back through the previous action."
+
+    # game/screens.rpy:1759
+    old "D-Pad, Sticks"
+    new "D-Pad, Sticks"
+
+    # game/screens.rpy:1760
+    old "Navigate through the interface."
+    new "Navigate through the interface."
+
+    # game/screens.rpy:1763
+    old "Start, Guide, B/Right Button"
+    new "Start, Guide, B/Right Button"
+
+    # game/screens.rpy:1767
+    old "Y/Up Button"
+    new "Y/Up Button"
+
+    # game/screens.rpy:1889
+    old "Skipping"
+    new "Skipping"
+
+    # game/screens.rpy:2206
+    old "Menu"
     new "Menu"
+

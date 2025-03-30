@@ -184,4 +184,23 @@ translate english strings:
 
     # game/locations/magic_tower/magic_tower_elsa.rpy:87
     old "Добыть Кристалл зимнего эха в Ледяных пещерах"
-    new "Obtain the Crystal of Winter Echoes in the Ice Caves"
+    new "Obtain the Crystal of Winter Echoes in the Ice Caves"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/magic_tower/magic_tower_elsa.rpy:36
+translate english find_elsa_menu_d00552da:
+
+    # e smile_shy "Оу, хочешь повторить?" with dissolve
+    e smile_shy "Oh, do you want to repeat that?" with dissolve
+
+# game/locations/magic_tower/magic_tower_elsa.rpy:68
+translate english elsa_roots_cb059863:
+
+    # "Ты выходишь в город"
+    "You go out into the city"
+
+# game/locations/magic_tower/magic_tower_elsa.rpy:73
+translate english elsa_roots_cb059863_1:
+
+    # "Ты выходишь в город"
+    "You go out into the city"
+

@@ -436,4 +436,16 @@ translate english strings:
 
     # game/locations/training_ground/training_ground.rpy:217
     old "Делать котят3"
-    new "Make kittens 3"
+    new "Make kittens 3"# TODO: Translation updated at 2025-03-30 19:52
+
+    # game/locations/training_ground/training_ground.rpy:93
+    translate english training_ground_e6126ac6:
+
+    # eris "Okay, I gotta go, see ya!"
+    eris "Okay, I gotta go, see ya!"
+
+    # game/locations/training_ground/training_ground.rpy:97
+    translate english training_ground_91271b41:
+
+    # "You're on the training ground."
+    "You're on the training ground."

@@ -248,4 +248,23 @@ translate english strings:
 
     # game/locations/guild/guild.rpy:92
     old "Качаться"
-    new "Work out"
+    new "Work out"# TODO: Translation updated at 2025-03-30 19:52
+
+# game/locations/guild/guild.rpy:62
+translate english guild_769effef:
+
+    # nag @ grin "Ха-ха, ну, по крайней мере, ты старался!" with dissolve
+    nag @ grin "Haha, well, at least you tried!" with dissolve
+
+# game/locations/guild/guild.rpy:81
+translate english guild_4c08f138:
+
+    # nag @ grin "Тогда ты осмотрись здесь, и приходи с новыми силами ко мне, я буду в лесу." with dissolve
+    nag @ grin "Then you look around here, and come back to me with renewed strength, I'll be in the forest." with dissolve
+
+# game/locations/guild/guild.rpy:82
+translate english guild_8fe618f5:
+
+    # d "Можешь обращаться ко мне, я помогу."
+    d "You can contact me, I will help."
+
