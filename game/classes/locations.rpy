@@ -214,47 +214,62 @@ label tavern_scene:
 label city_scene(bgc = None):
     $setLocation("city")
     play sound "audio/steps.ogg"
+    call city_music_scene
     if bgc:
         if bgc == "morning":
-            if renpy.music.get_playing("music") != "audio/city_day.ogg":
-                play music "audio/city_day.ogg" fadein 5.0 loop
             scene bg city_morning with fade
         elif bgc == "day":
-            if renpy.music.get_playing("music") != "audio/city_day.ogg":
-                play music "audio/city_day.ogg" fadein 5.0 loop
             scene bg city_day with fade
         elif bgc == "evening":
-            if renpy.music.get_playing("music") != "audio/city_night.ogg":
-                play music "audio/city_night.ogg" fadein 5.0 loop
             scene bg city_evening with fade
         elif bgc == "night":
-            if renpy.music.get_playing("music") != "audio/city_night.ogg":
-                play music "audio/city_night.ogg" fadein 5.0 loop
             scene bg city_night with fade
         return
     if isMorning():
-        if renpy.music.get_playing("music") != "audio/city_day.ogg":
-            play music "audio/city_day.ogg" fadein 5.0 loop
         scene bg city_morning with fade
     elif isDay():
-        if renpy.music.get_playing("music") != "audio/city_day.ogg":
-            play music "audio/city_day.ogg" fadein 5.0 loop
         scene bg city_day with fade
     elif isEvening():
-        if renpy.music.get_playing("music") != "audio/city_night.ogg":
-            play music "audio/city_night.ogg" fadein 5.0 loop
         scene bg city_evening with fade
     elif isNight():
-        if renpy.music.get_playing("music") != "audio/city_night.ogg":
-            play music "audio/city_night.ogg" fadein 5.0 loop
         scene bg city_night with fade
     else:
         scene bg city_day with fade
     return
 
+label city_music_scene(bgc = None):
+    if bgc:
+        if bgc == "morning":
+            if renpy.music.get_playing("music") != "audio/city_day.ogg":
+                play music "audio/city_day.ogg" fadein 5.0 loop
+        elif bgc == "day":
+            if renpy.music.get_playing("music") != "audio/city_day.ogg":
+                play music "audio/city_day.ogg" fadein 5.0 loop
+        elif bgc == "evening":
+            if renpy.music.get_playing("music") != "audio/city_night.ogg":
+                play music "audio/city_night.ogg" fadein 5.0 loop
+        elif bgc == "night":
+            if renpy.music.get_playing("music") != "audio/city_night.ogg":
+                play music "audio/city_night.ogg" fadein 5.0 loop
+        return
+    if isMorning():
+        if renpy.music.get_playing("music") != "audio/city_day.ogg":
+            play music "audio/city_day.ogg" fadein 5.0 loop
+    elif isDay():
+        if renpy.music.get_playing("music") != "audio/city_day.ogg":
+            play music "audio/city_day.ogg" fadein 5.0 loop
+    elif isEvening():
+        if renpy.music.get_playing("music") != "audio/city_night.ogg":
+            play music "audio/city_night.ogg" fadein 5.0 loop
+    elif isNight():
+        if renpy.music.get_playing("music") != "audio/city_night.ogg":
+            play music "audio/city_night.ogg" fadein 5.0 loop
+    return
+
 label market_scene:
     $setLocation("market")
     play sound "audio/steps.ogg"
+    call city_music_scene
     if isMorning():
         scene bg market_morning with fade
     elif isDay():
@@ -265,6 +280,22 @@ label market_scene:
         scene bg market_night with fade
     else:
         scene bg market_day with fade
+    return
+
+label black_alley_scene:
+    $setLocation("black_alley")
+    play sound "audio/steps.ogg"
+    call city_music_scene
+    if isMorning():
+        scene bg market_morning with fade
+    elif isDay():
+        scene bg market_day with fade
+    elif isEvening():
+        scene bg market_evening with fade
+    elif isNight():
+        scene bg black_alley_night at bg_size with fade
+    else:
+        scene bg black_alley_night at bg_size with fade
     return
 
 label ruined_temple_scene:
@@ -430,4 +461,41 @@ label river_scene_music:
 label cave_scene_music:
     if renpy.music.get_playing("music") != "audio/cave_music.ogg":
         play music "audio/cave_music.ogg" fadein 1.0 loop
+    return
+    
+label dance_scene:
+    $setLocation("club")
+    call dance_scene_music
+    scene bg city_dance at bg_size with fade
+    return
+
+label dance_scene_music:
+    if renpy.music.get_playing("music") != "audio/brothel_sound.ogg":
+        play sound "audio/steps.ogg"
+        play music "audio/brothel_sound.ogg" fadein 1.0 loop
+    return
+
+label brothel_bass_sound:
+    if renpy.music.get_playing("music") != "audio/brothel_sound_bass.ogg":
+        play sound "audio/door_enter.ogg"
+        play music "audio/brothel_sound_bass.ogg" fadein 5.0 loop
+    return
+
+label door_enter_sound:
+    play sound "audio/door_enter.ogg"
+    return
+
+label battle_music:
+    if renpy.music.get_playing("music") != "audio/fight.ogg":
+        play music "audio/fight.ogg" fadein 1.0 loop
+    return
+
+label battle_music_stop:
+    if renpy.music.get_playing("music") == "audio/fight.ogg":
+        stop music fadeout 1.0
+    return
+
+label magic_wind_music:
+    if renpy.music.get_playing("music") != "audio/magic_portal_music.ogg":
+        play music "audio/magic_portal_music.ogg" fadein 1.0
     return
