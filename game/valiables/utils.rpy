@@ -260,12 +260,13 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def addHealth(counHealth):
+    def addHealth(countHealth):
         global health,notices
-        health += counHealth
+        health = 0
+        health += countHealth
         if(health > 100):
             health = 100
-        if counHealth > 10:
+        if countHealth > 10:
             if persistent.lang == "russian":
                 notices.append("Ты чувствуешь себя намного лучше")
             if persistent.lang == "english":
@@ -282,9 +283,9 @@ init python:
         renpy.show_screen('notify_plus', notices=notices)
         notices = []
 
-    def minusHealth(counHealth):
+    def minusHealth(countHealth):
         global health,notices
-        health -= counHealth
+        health -= countHealth
         if(health < 0):
             health = 0
         if persistent.lang == "russian":

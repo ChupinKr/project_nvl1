@@ -205,6 +205,8 @@ label first_time_rapunzel_no_blessing:
 
 
 label rapunzel_menu: 
+    if current_location == "forest":
+        call forest_scene
     show r smile with dissolve
     menu:
         "Посмотреть Бордель" if my_rapunzel_love >= 20 and not canVisit("brothel"):

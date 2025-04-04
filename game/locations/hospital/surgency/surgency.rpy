@@ -8,7 +8,7 @@ label surgency_tsunade_cure:
 
     show ts neutral with dissolve
 
-    if first_time_surgency and health == 0:
+    if first_time_surgency and health <= 0:
         "Ты медленно приходишь в себя, чувствуя резкую боль во всём теле."
         "Белый потолок, запах медикаментов… Похоже, ты в операционной."
         ts "Очнулся, наконец? Не люблю возиться с пациентами, которые валяются тут днями."
@@ -27,7 +27,7 @@ label surgency_tsunade_cure:
             $ updateCanVisit("hospital", True)
         ts "Идти можешь, и пришёл ко мне, разве тебе нужно лечение? Или у тебя есть ко мне дело?"
         $first_time_surgency = False
-    elif health == 0:
+    elif health <= 0:
         if money >= 10:
             ts "Опять ты? Уже не первый раз на моём операционном столе."  
             ts "С тебя {color=#FFD700}10 монет{/color}. Надеюсь, ты не разорился?"

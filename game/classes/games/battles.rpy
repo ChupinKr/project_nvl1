@@ -261,7 +261,7 @@ label qte_fail:
     if not is_real_fight:
         $ health -= 35
     # Уменьшаем здоровье игрока на случайный урон
-    $ damage = random.randint(math.ceil(enemy_strength / 2), math.ceil(enemy_strength * 1.5))  # Случайный урон для игрока (например, от 10 до 30)
+    $ damage = random.randint(math.ceil(enemy_strength / 2), math.ceil(enemy_strength))  # Случайный урон для игрока (например, от 10 до 30)
     $ damage = damage - (strength * 2)
     if damage < 10:
         $ damage = 10
@@ -329,6 +329,7 @@ label battle_loss:
     if renpy.music.get_playing("music") == "audio/fight.ogg":
         stop music fadeout 5.0
     $ nextDay()
+    $ is_real_fight = True
     jump surgency_tsunade_cure
     return
 
