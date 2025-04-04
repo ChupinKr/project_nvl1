@@ -3,6 +3,7 @@
 define dis25 = Dissolve(.25)
 define flash = Fade(0.1, 0.0, 1.0, color="#FFFFFF")
 define pink = Fade(0.1, 0.0, 1.0, color="#FFC0CB")
+define long_fade = Fade(0.5, 1.2, 0.5)
 
 # сторонние переменные
 define enemy_name = "Противник"
@@ -14,16 +15,22 @@ define last_clean_win = None
 #яркость
 transform darken:
     matrixcolor BrightnessMatrix(-0.75)
+transform darken_bit:
+    matrixcolor BrightnessMatrix(-0.25)
 transform normal_brightness:
     matrixcolor BrightnessMatrix(0)
 
 #размер
 transform small:
     zoom 0.75
+transform smaller:
+    zoom 0.7
 transform normal_size:
     zoom 1
 transform bg_size:
     zoom 1.5
+transform bg_size_plus:
+    zoom 2
 
 #перещемещение
 transform move_left_mid:
@@ -34,10 +41,25 @@ transform move_left:
     linear 1.0 left  # Плавно перемещает персонажа в исходную позицию за 2 секунды
 
 #перещемещение
+transform move_left_out:
+    linear 1 left_out  # Плавно перемещает персонажа в исходную позицию за 2 секунды
+
+#перещемещение
+transform move_right_out:
+    linear 1 right_out  # Плавно перемещает персонажа в исходную позицию за 2 секунды
+
+#перещемещение
+transform move_right_bit:
+    linear 1.0 right_bit  # Плавно перемещает персонажа в исходную позицию за 2 секунды
+
+#перещемещение
 transform move_mid:
     linear 1.0 mid  # Плавно перемещает персонажа в исходную позицию за 2 секунды
 
 #положения
+transform left_out:
+    xalign -0.5
+    yalign 1.2
 transform left_bit:
     xalign 0.4
     yalign 1.2
@@ -49,6 +71,9 @@ transform left:
     yalign 1.2
 transform mid:
     xalign 0.5
+    yalign 1.2
+transform right_out:
+    xalign 1.5
     yalign 1.2
 transform right_bit:
     xalign 0.6
@@ -222,10 +247,10 @@ init python:
                     notices.append("You feel smarter")
         if minusMoney > 0:
             if persistent.lang == "russian":
-                notices.append("Ты потерял " + str(plusMoney) + " монет")
+                notices.append("Ты потерял " + str(minusMoney) + " монет")
                 notices.append("У тебя " + str(money) + " монет")
             if persistent.lang == "english":
-                notices.append("You lost " + str(plusMoney) + " coins")
+                notices.append("You lost " + str(minusMoney) + " coins")
                 notices.append("You have " + str(money) + " coins")
         if len(notices) < 1:
             if persistent.lang == "russian":

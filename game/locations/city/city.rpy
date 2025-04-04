@@ -23,6 +23,24 @@ label city:
             $completeQuest(quest_elsa_crystall, my_elsa)
             "Ты выходишь в город"
             jump city
+        "Пойти на свидание с [eris.name]" if (active_quest.name in quest_eris_date.name) and not isNight():
+            call quest_eris_date_start
+            $completeQuest(quest_eris_date, my_eris, False)
+            "Ты в таверне"
+            jump tavern
+        "Исследовать червоточину" if active_quest.name in quest_eris_black_hole.name:
+            call quest_eris_black_hole_start
+            $completeQuest(quest_eris_black_hole, my_eris)
+            "Ты в городе"
+            jump city
+        "Заняться поиском [eris.name]" if isNoQuestNow() and can_find_eris==False:
+            $getQuest(quest_eris_black_hole)
+            mind "Хорошо, так я не забуду о своей цели."
+            jump city
+        "Временно прекратить поиски [eris.name]" if active_quest.name in quest_eris_black_hole.name:
+            $removeQuest()
+            mind "Пока я точно не готов, стоит заняться этим позже."
+            jump city
         "Переночевать на скамейке" if not canVisit("room") and isNight():
             jump city_overnight_stay
         "Отдохнуть на скамейке" if not canVisit("room") and not isNight():

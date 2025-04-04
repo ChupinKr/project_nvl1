@@ -282,6 +282,7 @@ label forest_quest_eris_goblin_hunting_cave:
     return
 
 label eris_root_blowjob:
+    $eris_first_time_root = False
     scene bg eris_root_cave5 at bg_size with dissolve
     "[my_eris.name] прижимаеться к твоей промежности."
     scene bg eris_root_cave6 at bg_size with dissolve
@@ -311,14 +312,24 @@ label eris_root_blowjob:
     pause .3
     scene bg eris_root_cave14 at bg_size with dissolve
     pause .3
-    scene bg eris_root_cave15 at bg_size with dissolve
+    scene bg eris_root_cave13 at bg_size with dissolve
     pause .3
     scene bg eris_root_cave14 at bg_size with dissolve
-    pause .5
+    pause .3
+    scene bg eris_root_cave13 at bg_size with dissolve
+    pause .3
+    scene bg eris_root_cave14 at bg_size with dissolve
+    pause .3
+    scene bg eris_root_cave13 at bg_size with dissolve
+    pause .3
+    scene bg eris_root_cave14 at bg_size with dissolve
+    p "Ах... Можешь взять его поглубже?"
+    eris "Мнннф."
+    
     scene bg eris_root_cave15 at bg_size with dissolve
-    pause .5
+    pause .3
     scene bg eris_root_cave16 at bg_size with dissolve
-    pause .5
+    pause .3
     scene bg eris_root_cave15 at bg_size with dissolve
     pause .3
     scene bg eris_root_cave16 at bg_size with dissolve
@@ -364,6 +375,7 @@ label eris_root_blowjob:
     scene bg eris_root_cave16 at bg_size with dissolve
     pause .1
     scene bg eris_root_cave17 at bg_size with flash
+
     p "[my_eris.name], я..."
     scene bg eris_root_cave18 at bg_size with flash
     pause .3

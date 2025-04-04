@@ -1,4 +1,10 @@
-﻿# Игра начинается здесь:
+
+$ active_quest = no_quest
+if persistent.lang == 'russian':
+    $ hero_name = "Игрок"
+if persistent.lang == 'english':
+    $ hero_name = "Player"
+    
 label start:
 
     if persistent.lang == "russian":

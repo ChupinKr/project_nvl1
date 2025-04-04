@@ -4,7 +4,7 @@ define battle_location_training_ground = "training_ground"
 label training_ground:
     call training_ground_scene
 
-    if first_time_training_ground and isMorning():
+    if first_time_training_ground and (isMorning() or isDay()):
         $ first_time_training_ground = False
         "Ты попадаешь на тренировочную площадку — просторную открытую зону, где собрались бойцы разного уровня. Кто-то молотит деревянные манекены, кто-то спаррингует, а кто-то отдыхает, потирая синяки."
         "Воздух звенит от ударов, выкриков и хриплого дыхания. Пахнет землёй, потом и чуть-чуть кровью. Вдалеке виднеются стойки с оружием: деревянные мечи, копья, тренировочные топоры."
@@ -114,7 +114,7 @@ label training_ground_menu:
             $nextTime()
             "Надо больше тренироваться."
             jump training_ground_menu
-        "Подойти к [eris.name]" if isMorning() or isDay():
+        "Подойти к [eris.name]" if (isMorning() or isDay()) and can_find_eris:
             "Ты подходишь к [eris.name]."
             jump training_ground_eris_menu
         "Отправиться в город":

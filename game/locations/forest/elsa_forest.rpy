@@ -244,7 +244,7 @@ label elsa_not_first_time:
                 e "Ах, тебе интересно? Хорошо, я покажу тебе путь."
             jump go_to_lib_with_elsa
         
-        "Награда" if isAnyQuestComplete(my_elsa):
+        "Награда" if isAnyQuestCompleted(my_elsa):
             e smile_shy "Оу, хочешь повторить?" with dissolve
             e "Иди за мной, [hero_name]."
             call city_scene  
