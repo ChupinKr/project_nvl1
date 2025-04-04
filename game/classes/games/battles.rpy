@@ -27,8 +27,8 @@ init python:
         #"""Создаёт случайную комбинацию стрелок для ввода."""
         # Пример расчёта количества символов (можно подстроить под свою логику)
         count = math.ceil(enemy_strength / 10) - math.ceil(strength / 20)
-        if count < 6:
-            count = 6
+        if count < 4:
+            count = 4
         if count > 26:
             count = 26
         return "".join(random.choices(["↑", "↓", "←", "→"], k=count))
@@ -180,7 +180,8 @@ screen battle_qte():
 
 
 
-label start_battle(enemy_hp, enemy_str, name, loc):
+label start_battle(enemy_hp, enemy_str, name, loc, isRealFight = True):
+    $ is_real_fight = isRealFight
     $ damage_to_enemy = 0
     $ damage = 0
     $ enemy_health = enemy_hp  # Устанавливаем здоровье противника
@@ -215,12 +216,12 @@ label start_battle(enemy_hp, enemy_str, name, loc):
                     call battle_win
                     return
     if persistent.lang == "russian":
-        show expression Text("Сейчас начнется битва, приготовься!") at truecenter as txt
+        show expression Text("Приготовься!") at truecenter as txt
     if persistent.lang == "english":
-        show expression Text("The battle is about to begin, get ready!") at truecenter as txt
+        show expression Text("Get ready!") at truecenter as txt
     with dissolve
-    if renpy.music.get_playing("music") != "audio/fight.ogg":
-        play music "audio/fight.ogg" fadein 5.0 loop
+    if is_real_fight:
+        call battle_music
     pause
     hide txt
     show screen battle_hp_bars
@@ -257,6 +258,8 @@ label qte_success:
         call screen battle_qte  # Продолжаем бой
 
 label qte_fail:
+    if not is_real_fight:
+        $ health -= 35
     # Уменьшаем здоровье игрока на случайный урон
     $ damage = random.randint(math.ceil(enemy_strength / 2), math.ceil(enemy_strength * 1.5))  # Случайный урон для игрока (например, от 10 до 30)
     $ damage = damage - (strength * 2)
@@ -276,14 +279,18 @@ label qte_fail:
         jump continue_battle
 
 label continue_battle:
-    if damage_to_enemy > 0:
-        "Вы наносите противнику [damage_to_enemy], показатель здоровья противника [enemy_health]"
+
+    if is_real_fight:
+        if damage_to_enemy > 0:
+            "Вы наносите противнику [damage_to_enemy], показатель здоровья противника [enemy_health]"
+        else:
+            "Противник нанес вам урон [damage], ваш показатель здоровья [health]"
     else:
-        "Противник нанес вам урон [damage], ваш показатель здоровья [health]"
+        "Ты плохо двигаешься, но пока можешь продолжать."
     $ damage_to_enemy = 0
     if persistent.lang == "russian":
         menu:
-            "Продолжить бой":
+            "Продолжить":
                 # Сброс таймера: возвращаем значение qte_bar в 100 и сбрасываем предупреждение
                 $ qte_bar = 100
                 $ qte_warning = False
@@ -292,7 +299,7 @@ label continue_battle:
                 jump battle_escape  # Бегство из боя
     if persistent.lang == "english":
         menu:
-            "Continue the fight":
+            "Continue":
                 # Сброс таймера: возвращаем значение qte_bar в 100 и сбрасываем предупреждение
                 $ qte_bar = 100
                 $ qte_warning = False
@@ -301,19 +308,24 @@ label continue_battle:
                 jump battle_escape  # Бегство из боя
 
 label battle_win:
-    "Вы наносите противнику [damage_to_enemy], показатель здоровья противника [enemy_health]"
-    "Противник побежден!"
-    $ last_battle_win = True
-    $ strength += 2 * strength_mod
-    if renpy.music.get_playing("music") == "audio/fight.ogg":
-        stop music fadeout 5.0
+    if not is_real_fight:
+        $ strength += 1 * strength_mod
+    else:
+        "Вы наносите противнику [damage_to_enemy], показатель здоровья противника [enemy_health]"
+        "Противник побежден!"
+        $ last_battle_win = True
+        $ strength += 2 * strength_mod
+    call battle_music_stop
     return
 
 label battle_loss:
-    "Ваш показатель здоровья [health]"
-    "Ты проиграл бой, возможно стоило улучшить свои навыки перед тем, как вступать в бой с серьезным противником."
+    if not is_real_fight:
+        "Ты спотыкаешься, падаешь и теряешь сознание"
+    else:
+        "Ваш показатель здоровья [health]"
+        "Ты проиграл бой, возможно стоило улучшить свои навыки перед тем, как вступать в бой с серьезным противником."
+        "Ты падаешь без сознания"
     $ last_battle_win = False
-    "Ты падаешь без сознания"
     if renpy.music.get_playing("music") == "audio/fight.ogg":
         stop music fadeout 5.0
     $ nextDay()
@@ -321,8 +333,11 @@ label battle_loss:
     return
 
 label battle_escape:
-    "Ты пытаешься сбежать из боя"
+    "Ты пытаешься сбежать"
     $ last_battle_win = False
+    if not is_real_fight:
+        hide screen battle_hp_bars
+        jump escape_battle
     if strength / 2 * random.randint(1, 10) > enemy_strength:
         "Тебе повезло, ты убежал и даже почти не чувствуешь боли"
         if health < health_to_not_escape:
@@ -341,7 +356,10 @@ label battle_escape:
 
 label escape_battle:
     hide screen battle_hp_bars
-    "Ухх, было близко, хорошо, что успел убежать"
+    if is_real_fight:
+        mind "Ухх, было близко, хорошо, что успел убежать."
+    else:
+        mind "Какой позор, я убегаю."
     if battle_location == "ruined_temple":
         jump ruined_temple
     elif battle_location == "magic_tower":
@@ -358,5 +376,7 @@ label escape_battle:
         jump forest
     elif battle_location == "brothel":
         jump brothel
+    elif battle_location == "city":
+        jump city
     else: 
         return
