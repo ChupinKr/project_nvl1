@@ -8,7 +8,7 @@ label visit_rapunzel_forest:
         jump first_time_rapunzel_no_blessing
     else:
         r "О, ты снова пришел?"
-        jump rapunzel_forest
+        jump rapunzel_menu
 
 label rapunzel_first_time_blessing:
     $ first_time_rapunzel = False
@@ -204,7 +204,7 @@ label first_time_rapunzel_no_blessing:
     jump rapunzel_forest
 
 
-label rapunzel_forest: 
+label rapunzel_menu: 
     show r smile with dissolve
     menu:
         "Посмотреть Бордель" if my_rapunzel_love >= 20 and not canVisit("brothel"):
@@ -214,45 +214,17 @@ label rapunzel_forest:
         "Попросить тренировку":
             r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
             call rapunzel_training
-            if last_charisma_training_win and first_r_root and my_rapunzel_love >= 50:
-                $ first_r_root = False
-                r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
-                r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
-                menu:
-                    r "Может я могу помочь тебе расслабиться?"
-                    "Определенно можешь":
-                        p "Ты точно можешь мне помочь!"
-                        show r smile_shy with dissolve
-                        r "..."
-                        jump rapunzel_root_menu
-                    "Ты? Чем?":
-                        p "И чем ты можешь мне помочь? Какой мне толк от твоей помощи?"
-                        r @neutral "уходи..." with dissolve
-                        r annoyed "Я больше не хочу тебя видеть!" with dissolve
-                        $can_go_r = False
-                        "[r.name] силой выталкивает тебя из своей комнаты и запирает дверь на ключ"
-                        $customNotify("Ты больше никогда не встретишь [r.name]")
-                        $nextTime()
-                        jump forest
-            elif last_charisma_training_win:
-                $addChar(["char"], 10)
-                r closed_eyes "Хорошая работа, [hero_name]!" with dissolve
-                $addLove(my_rapunzel, 7)
-            else:
-                r annoyed "Мог бы хоть постараться!" with dissolve
-                $minusLove (my_rapunzel, -2)
-            $nextTime()
-            jump rapunzel_forest
+            
         "Спросить про задание" if isNoQuestNow():
             p "У тебя не найдется задания для меня?"
             r "Хм... На самом деле, у меня есть кое-что интересное!"
             call rapunzel_quests
-            jump rapunzel_forest
+            jump rapunzel_menu
         "Отказаться от выполнения задания" if isActualQuestOfCharacter("r"):
             p "Я не смогу выполнить это задание."
             r "Ох, ну хорошо, если передумаешь - приходи."
             $ removeQuest()
-            jump rapunzel_forest
+            jump rapunzel_menu
         "Уйти":
             p "В другой раз, Рапунцель."
             show r annoyed with dissolve
@@ -281,4 +253,32 @@ label rapunzel_quests:
 
 label rapunzel_training:
     call start_charisma_training(r, charisma)
-    return
+    if last_charisma_training_win and first_r_root and my_rapunzel_love >= 50:
+        $ first_r_root = False
+        r @smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
+        r @smirk "Может я могу помочь тебе расслабиться?" with dissolve
+        menu:
+            r "Может я могу помочь тебе расслабиться?"
+            "Определенно можешь":
+                p "Ты точно можешь мне помочь!"
+                show r smile_shy with dissolve
+                r "..."
+                jump rapunzel_root_menu
+            "Ты? Чем?":
+                p "И чем ты можешь мне помочь? Какой мне толк от твоей помощи?"
+                r @neutral "уходи..." with dissolve
+                r annoyed "Я больше не хочу тебя видеть!" with dissolve
+                $can_go_r = False
+                "[r.name] силой выталкивает тебя из своей комнаты и запирает дверь на ключ"
+                $customNotify("Ты больше никогда не встретишь [r.name]")
+                $nextTime()
+                jump forest
+    elif last_charisma_training_win:
+        $addChar(["char"], 10)
+        r closed_eyes "Хорошая работа, [hero_name]!" with dissolve
+        $addLove(my_rapunzel, 7)
+    else:
+        r annoyed "Мог бы хоть постараться!" with dissolve
+        $minusLove (my_rapunzel, -2)
+    $nextTime()
+    jump rapunzel_menu

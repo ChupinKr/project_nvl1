@@ -112,8 +112,8 @@ label guild_menu:
                         call start_muscule("Сотру со лба я легкий пот",2.7)
                         if last_muscule_win:
                             "Я определенно становлюсь все лучше!"
-                            $addChar(["str"], 2)
-                            if renpy.random.randint(1, 100) > 90:
+                            $addChar(["str"], 7)
+                            if renpy.random.randint(1, 100) > 80:
                                 "Твоя занятия увидела [d.name]"
                                 $addLove(my_darkness, 5)
                             jump guild_menu

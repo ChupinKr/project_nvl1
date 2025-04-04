@@ -13,6 +13,7 @@ label city:
         "Куда ты отправишься?"
 
     menu:
+        #quests
         "Выполнить задание [e.name]" if active_quest.name in quest_elsa_crystall.name:
             call quest_elsa_crystall_start
             "Ты выбираешься из [active_quest.location]"
@@ -41,6 +42,8 @@ label city:
             $removeQuest()
             mind "Пока я точно не готов, стоит заняться этим позже."
             jump city
+
+        #actions
         "Переночевать на скамейке" if not canVisit("room") and isNight():
             jump city_overnight_stay
         "Отдохнуть на скамейке" if not canVisit("room") and not isNight():

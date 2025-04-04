@@ -60,8 +60,9 @@ label holo_menu:
                             call start_clean("books")
                             if last_clean_win:
                                 h "О-хо-хо! [hero_name], книги были проданы по выгодной цене, это успех!"
-                                "Ты провёл время, помогая [h.name]"
                                 $addLove(my_holo,7)
+                                "Ты провёл время, помогая [h.name]"
+                                $addChar(["intelligence", "str"],3)
                                 "[h.name] это оценила"
                                 pause 3.5
                                 $addMoney(10)
@@ -84,6 +85,7 @@ label holo_menu:
                     $nextTime()
                     scene bg holo_market with fade
                     show h smile_shy with dissolve
+                    $addChar
                     h "О-хо-хо! [hero_name], спасибо, не знаю, что бы я без тебя делала!"
                     $addLove(my_holo,7)
                     "Ты провёл время, помогая [h.name], она это оценила"

@@ -41,9 +41,9 @@ init python:
     def isAbleQuest(quest, love):
         global notices
         result = True
-        renpy.watch(str(quest.req_love))
-        renpy.watch(str(love))
-        renpy.watch(str(quest.req_love >= love))
+        # renpy.watch(str(quest.req_love))
+        # renpy.watch(str(love))
+        # renpy.watch(str(quest.req_love >= love))
         if persistent.lang == "russian":
             if not getRepeatableByTag(quest.tag):
                 return False

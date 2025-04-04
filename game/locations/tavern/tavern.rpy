@@ -123,9 +123,10 @@ label talk_miku_work:
                     call start_clean("dish")
                     if last_clean_win:
                         m @smile_closed_eyes "Все сыты и пьяны, то что надо, так держать, [hero_name]!"
-                        "Ты провёл время, помогая [m.name]"
-                        "[m.name] это оценила"
                         $addLove(my_miku, 7)
+                        "Ты провёл время, помогая [m.name]"
+                        $addChar(["char"],5)
+                        "[m.name] это оценила"
                         pause 3.5
                         $addMoney(10)
                     else: 

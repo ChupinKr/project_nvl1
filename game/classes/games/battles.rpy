@@ -309,12 +309,12 @@ label continue_battle:
 
 label battle_win:
     if not is_real_fight:
-        $ strength += 1 * strength_mod
+        $ addChar(["str"], 1)
     else:
         "Вы наносите противнику [damage_to_enemy], показатель здоровья противника [enemy_health]"
         "Противник побежден!"
         $ last_battle_win = True
-        $ strength += 2 * strength_mod
+        $ addChar(["str"], 2)
     call battle_music_stop
     return
 
