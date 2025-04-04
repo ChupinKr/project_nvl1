@@ -242,7 +242,7 @@ label dragon_fight_field:
             show eris t_angry_torn at left with dissolve
             eris "Черт, [hero_name]! Не сработало!"
             $choice = 1
-            $my_eris.minusLove(5)
+            $minusLove(my_eris, 5)
         "Сказать [my_eris.name] бить в голову":
             p "[my_eris.name]! Ударь по голове, должно сработать!"
             eris "Поняла!"
@@ -253,7 +253,7 @@ label dragon_fight_field:
             show eris t_angry_torn at left with dissolve
             eris "Черт, [hero_name]! Не сработало!"
             $choice = 2
-            $my_eris.minusLove(5)
+            $minusLove(my_eris, 5)
         "Сказать [my_eris.name] бить под крылья":
             p "[my_eris.name]! Бей под его крылья, это слабое место!"
             eris "Поняла!"
@@ -597,7 +597,7 @@ label heal_eris_by_yourself:
             scene bg eris_mountain_unconscious_wet_2 at bg_size with dissolve
             "Она в шоке от происходящего смотрит на тебя."
             eris "А? [hero_name]? Почему я мокрая?"
-            $my_eris.minusLove(5)
+            $minusLove(my_eris, 5)
             scene bg eris_mountain_angry_wet_1 at bg_size with dissolve
             p "Слава богу, [my_eris.name]... Ты..."
             scene bg eris_mountain_angry_wet_2 at bg_size with dissolve

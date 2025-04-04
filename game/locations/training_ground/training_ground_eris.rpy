@@ -1,3 +1,4 @@
+define can_find_eris = True
 define eris_first_time_root = True
 label training_ground_eris_menu:
     show eris t_neutral with dissolve
@@ -37,7 +38,7 @@ label training_ground_eris_menu:
 label eris_quests_menu:
     show eris t_smile with dissolve
     menu:
-        "Охота на гоблинов":
+        "Охота на гоблинов" if isNoQuestNow() and isQuestRepeatable(quest_eris_goblin_hunting):
             p "Ты готова поохотиться на гоблинов вместе?"
             eris t_neutral "Гоблины — мелочь, но их слишком много. Надо их проредить, пока не полезли к людям." with dissolve
             if isAbleQuest(quest_eris_goblin_hunting, my_eris_love):
@@ -52,7 +53,7 @@ label eris_quests_menu:
                 eris t_smirk "Ха, да ты пока слабак для такого. Приходи, когда подкачаешься!" with dissolve
             return
 
-        "Выгнать дракона":
+        "Выгнать дракона" if isNoQuestNow() and isQuestRepeatable(quest_eris_dragon_hunting):
             eris t_neutral "Слышал про дракона в пещере? Я давно хочу зарубить что-то большое!" with dissolve
             p "Ты уверена? Это серьёзный противник."
             eris t_smirk "Уверена? Ха! Покажу ему, кто тут главный, а ты не зевай!" with dissolve
@@ -69,7 +70,7 @@ label eris_quests_menu:
                 eris t_angry "Нет, ты ещё не готов. Не позорься, подкачайся сначала!" with dissolve
             return
 
-        "Свидание":
+        "Свидание" if isNoQuestNow() and isAnyQuestCompleted(my_eris) and isQuestRepeatable(quest_eris_date):
             p "Может, сходим прогуляться по городу? Без драк, просто вдвоём."
             eris t_surprised "Свидание? Ты серьёзно? Это что, шутка такая?" with dissolve
             if isAbleQuest(quest_eris_date, my_eris_love):
@@ -77,11 +78,30 @@ label eris_quests_menu:
                     "Прогуляться по городу с [eris.name]"
                     "Принять квест":
                         eris t_smirk_blush "Ладно, уговорил! Но если будет скучно, я тебя прикончу!" with dissolve
+                        p "Встретимся в центре города."
                         $ getQuest(quest_eris_date)
                     "Не принимать квест":
                         eris t_smirk "Ха, знал же, что струсил! Ну и вали тогда!" with dissolve
             else:
                 eris t_smirk "Ты? Со мной? Не смеши, сначала докажи, что достоин!" with dissolve
+            return
+
+        "Исследовать червоточину" if isNoQuestNow() and isQuestCompleted(quest_eris_date) and isQuestRepeatable(quest_eris_black_hole):
+            p "Может исследуем ту червоточину?"
+            eris t_surprised "Мы?" with dissolve
+            eris t_angry "Да! Исследовать точно нужно. " with dissolve
+            eris t_smirk "Только на этот раз пойдешь ты один.{w} У меня сейчас есть много сторонних заданий." with dissolve
+            if isAbleQuest(quest_eris_black_hole, my_eris_love):
+                menu:
+                    "Исследовать червоточину в одиночку"
+                    "Принять квест":
+                        eris t_smile "Хорошо, верю в тебя, [hero_name]." with dissolve
+                        p "Я не подведу!"
+                        $ getQuest(quest_eris_black_hole)
+                    "Не принимать квест":
+                        eris t_smirk "Ха, знала же, что струсил идти один!" with dissolve
+            else:
+                eris t_smirk "Ты? Не думаю, что ты справишься?" with dissolve
             return
 
         "Я передумал":
@@ -91,6 +111,7 @@ label eris_quests_menu:
 
 label eris_root:
     "Вы идете к [eris.name] домой, это небольшая комната в таверне"
+    call door_enter_sound
     scene bg eris_room at bg_size with fade
     "Подожди минутку, я подготовлюсь"
     "..."
@@ -118,7 +139,8 @@ label eris_root_menu:
             "Довольная собой [my_eris.name] проводит тебя до выхода."
             eris "Еще увидимся, [hero_name]~"
         "Сделать котят" if isQuestCompleted(quest_eris_date):
-            call eris_root_vaginal
+            eris t_smirk "Чаю захотелось?~" with dissolve
+            call eris_root_tea
             "[my_eris.name] лежит без сил. Ты уходишь."
         "Передумал":
             eris transparent_annoyed "Да и мне не очень то хотелось!" with dissolve

@@ -32,7 +32,7 @@ label find_elsa_menu:
             e "Квест? Есть пара дел, но предупреждаю – они тебе вряд ли понравятся." with dissolve
             call elsa_quests
             jump find_elsa_menu
-        "Награда" if isAnyQuestComplete(my_elsa):
+        "Награда" if isAnyQuestCompleted(my_elsa):
             e smile_shy "Оу, хочешь повторить?" with dissolve
             call elsa_roots
             jump find_elsa_menu

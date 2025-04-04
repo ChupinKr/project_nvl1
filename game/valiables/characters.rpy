@@ -228,7 +228,7 @@ init: #TODO сделать отдельные переменные для сил
         "d"
         )
         $my_eris = MyCharacter("Eiris", "19",
-        "images/characters/eris_ch/mini/eris t_smile.png", 
+        "images/characters/eris_ch/min/training_outfit/eris t_smile.png", 
         "A girl who sharpens her skills every morning at the Training Grounds. \nShe’s determined to get stronger to catch up to some mage.",
         "Train with her and complete her tasks.",
         "eris"
@@ -301,7 +301,7 @@ init: #TODO сделать отдельные переменные для сил
         "d"
         )
         $my_eris = MyCharacter("Эрис", "19",
-        "images/characters/eris_ch/mini/eris t_smile.png", 
+        "images/characters/eris_ch/mini/training_outfit/eris t_smile.png", 
         "Девушка, которая каждое утро оттачивает свои навыки на Тренировочной площадке. \nОна стремится стать сильнее, чтобы догнать по силе какого-то мага.",
         "Тренируйся и выполняй ее задания.",
         "eris"
@@ -325,10 +325,11 @@ init:
         define d = Character('Darkness', color="#c0c0c0", image='d', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define eris = Character('Eiris', color="#ff5555", image='eris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define makima = Character("Makima", color="#ffaa00", image='makima', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Макима из "Человека-бензопилы"
+        define chizuru = Character("Сhizuru", color="#ffaa00", image='chizuru', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Чизуру из "Девушки на час"
+        define guy1 = Character('Guy', color="#ffaaaa", image='guy1', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         
         # Some guys
         define old_woman = Character('Old woman', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
-        define guy1 = Character('Guy 1', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define guy2 = Character('Guy 2', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define guy3 = Character('Guy 3', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define sg = Character('Muddy guy', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  #shady guy
@@ -363,10 +364,11 @@ init:
         define d = Character('Даркнесс', color="#c0c0c0", image='d', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define eris = Character('Эрис', color="#ff5555", image='eris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define makima = Character("Макима", color="#ffaa00", image='makima', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Макима из "Человека-бензопилы"
-
+        define chizuru = Character("Чизуру", color="#ffaa00", image='chizuru', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Чизуру из "Девушки на час"
+        define guy1 = Character('Парень', color="#ffaaaa", image='guy1', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        
         # Some guys
         define old_woman = Character('Старая щенщина', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
-        define guy1 = Character('Парень 1', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define guy2 = Character('Парень 2', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define guy3 = Character('Парень 3', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define sg = Character('Мутный тип', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  #shady guy

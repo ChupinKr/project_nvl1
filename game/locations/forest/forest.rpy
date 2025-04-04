@@ -28,12 +28,12 @@ label forest_menu:
         "Выполнить задание [e.name]" if active_quest.name in quest_elsa_materials.name:
             call forest_quest_elsa_materials
             "Ты выбираешься из [active_quest.location]"
-            $nextTime()
             call forest_scene 
             "[e.name] наверняка ждет, надо ее обрадовать"
             $completeQuest(quest_elsa_materials, my_elsa)
             call forest_quest_elsa_materials_reward
             "Ты выходишь в город"
+            $nextTime()
             jump city
 
         "Выполнить задание [my_nag.name]" if active_quest.name in quest_nagatoro_goblins.name:
@@ -42,36 +42,36 @@ label forest_menu:
                 jump forest_menu
             call forest_quest_nagatoro_goblins
             "Ты выбираешься из [active_quest.location]"
-            $nextTime()
             call forest_scene 
             "[my_nag.name] наверняка ждет, надо ее обрадовать."
             $completeQuest(quest_nagatoro_goblins, my_nag)
             call forest_quest_nagatoro_goblins_reward
             "Ты выходишь в город"
+            $nextTime()
             jump city
 
         "Выполнить задание [my_eris.name]" if active_quest.name in quest_eris_goblin_hunting.name:
             call forest_quest_eris_goblin_hunting
             "Ты выбираешься из [active_quest.location]"
-            $nextTime()
             call forest_scene 
             $completeQuest(quest_eris_goblin_hunting, my_eris)
             show eris t_smile with dissolve
             eris "Увидимся на тренировочной площадке, [hero_name]!"
             p "Да, [my_eris.name]!"
             "Ты выходишь в город"
+            $nextTime()
             jump city
 
         "Выполнить задание [my_eris.name]" if active_quest.name in quest_eris_dragon_hunting.name:
             call village_quest_eris_dragon_hunting
             "Ты выбираешься из [active_quest.location]"
-            $nextTime()
             call forest_scene 
             $completeQuest(quest_eris_dragon_hunting, my_eris)
             show eris t_smile with dissolve
             eris "Увидимся на тренировочной площадке, [hero_name]!"
             p "Да, [my_eris.name]!"
             "Ты выходишь в город"
+            $nextTime()
             jump city
 
         "Посетить руины храма":
