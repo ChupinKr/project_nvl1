@@ -41,22 +41,23 @@ init python:
     def isAbleQuest(quest, love):
         global notices
         result = True
-        #renpy.watch(str(quest.req_str))
-        #renpy.watch(str(strength))
+        renpy.watch(str(quest.req_love))
+        renpy.watch(str(love))
+        renpy.watch(str(quest.req_love >= love))
         if persistent.lang == "russian":
             if not getRepeatableByTag(quest.tag):
                 return False
             if quest.req_love > love:
-                notices.append("Необходимо [quest.req_love] симпатии")
+                notices.append("Необходимо " + str(quest.req_love) + " симпатии")
                 result = False
             if quest.req_str > strength:
-                notices.append("Необходимо [quest.req_str] силы")
+                notices.append("Необходимо " + str(quest.req_str) + " силы")
                 result = False
             if quest.req_intelligence > intelligence:
-                notices.append("Необходимо [quest.req_intelligence] интеллекта")
+                notices.append("Необходимо " + str(quest.req_intelligence) + " интеллекта")
                 result = False
-            if quest.req_char > charisma:
-                notices.append("Необходимо [quest.req_char] харизмы")
+            if quest.req_char >=charisma:
+                notices.append("Необходимо " + str(quest.req_char) + " харизмы")
                 result = False
             #renpy.watch(str(result))
             if notices:
@@ -67,16 +68,16 @@ init python:
             if not getRepeatableByTag(quest.tag):
                 return False
             if quest.req_love > love:
-                notices.append("Not enough affection")
+                notices.append("Required " + str(quest.req_love) + " affection")
                 result = False
             if quest.req_str > strength:
-                notices.append("Not enough strength")
+                notices.append("Required " + str(quest.req_str) + " strength")
                 result = False
             if quest.req_intelligence > intelligence:
-                notices.append("Not enough intelligence")
+                notices.append("Required " + str(quest.req_intelligence) + " intelligence")
                 result = False
             if quest.req_char > charisma:
-                notices.append("Not enough charisma")
+                notices.append("Required " + str(quest.req_char) + " charisma")
                 result = False
             #renpy.watch(str(result))
             if notices:
@@ -96,9 +97,11 @@ define quest_nagatoro_bandits = None
 define quest_eris_goblin_hunting = None
 define quest_eris_dragon_hunting = None
 define quest_eris_date = None       
+define quest_eris_black_hole = None
 define quest_tsunade_poison_tooth = None       
 define quest_sakura_materials = None  
 
+#Повторяемость квестов
 define repeatable_quest_elsa_materials = True
 define repeatable_quest_elsa_crystall = True
 define repeatable_quest_rapunzel_mashrooms = True
@@ -108,9 +111,25 @@ define repeatable_quest_nagatoro_forest = True
 define repeatable_quest_nagatoro_bandits = True
 define repeatable_quest_eris_goblin_hunting = True
 define repeatable_quest_eris_dragon_hunting = True
-define repeatable_quest_eris_date = True       
+define repeatable_quest_eris_date = True      
+define repeatable_quest_eris_black_hole = True 
 define repeatable_quest_tsunade_poison_tooth = True       
-define repeatable_quest_sakura_materials = True    
+define repeatable_quest_sakura_materials = True 
+
+#Выполненность квестов
+define completed_quest_elsa_materials = False
+define completed_quest_elsa_crystall = False
+define completed_quest_rapunzel_mashrooms = False
+define completed_quest_rapunzel_women = False
+define completed_quest_nagatoro_goblins = False
+define completed_quest_nagatoro_forest = False
+define completed_quest_nagatoro_bandits = False
+define completed_quest_eris_goblin_hunting = False
+define completed_quest_eris_dragon_hunting = False
+define completed_quest_eris_date = False      
+define completed_quest_eris_black_hole = False 
+define completed_quest_tsunade_poison_tooth = False       
+define completed_quest_sakura_materials = False    
 
 init:
     if persistent.lang == "russian":
@@ -210,7 +229,7 @@ init:
             whatToDo="Выгнать дракона",
             forWho="Эрис",
             forWhoShort="eris",
-            location="Пещера",
+            location="Соседняя деревня",
             countObj=1,  # Один дракон
             character_says=[
                 "Дракон? Отлично, я давно хотела зарубить что-то большое!",
@@ -244,8 +263,29 @@ init:
             reward_money=0,       # Нет денег, это не про заработок
             reward_character=20,  # +20 к любви Эрис при успехе
             str_bonus=0,          # Нет бонуса к силе
-            intelligence_bonus=1, # Небольшой бонус к интеллекту
-            char_bonus=2          # Бонус к харизме за удачное свидание
+            intelligence_bonus=5, # Небольшой бонус к интеллекту
+            char_bonus=7           # Бонус к харизме за удачное свидание
+        )
+        $quest_eris_black_hole = GirlQuest(
+            tag="qebh", 
+            whatToDo="Изучить червоточину",
+            forWho="Эрис",
+            forWhoShort="eris",
+            location="Город",
+            countObj=0,  # Нет конкретных объектов, просто провести время
+            character_says=[
+                "Нам надо расследовать, от чего возникла та червоточина.",
+                "Н-ну точнее тебе, у меня других задач полно!"
+            ],
+            req_love=0,  # Нужно больше любви для романтики
+            req_str=0,    # Сила не требуется
+            req_intelligence=30,  
+            req_char=20,  # Харизма важна для успеха
+            reward_money=0,       # Нет денег, это не про заработок
+            reward_character=20,  # +20 к любви Эрис при успехе
+            str_bonus=0,          # Нет бонуса к силе
+            intelligence_bonus=5, # Небольшой бонус к интеллекту
+            char_bonus=7          # Бонус к харизме за удачное свидание
         )
 
         #tsunade quests
@@ -364,7 +404,7 @@ init:
             whatToDo="Drive out a dragon",
             forWho="Eris",
             forWhoShort="eris",
-            location="Willage",
+            location="Village",
             countObj=1,  # One dragon
             character_says=[
                 "A dragon? Perfect, I’ve been itching to take down something big!",
@@ -391,15 +431,36 @@ init:
                 "A date? Are you kidding? Well… let’s give it a shot!",
                 "Don’t think I’ll be bored. Surprise me!"
             ],
-            req_love=70,  # Needs more affection for romance
+            req_love=50,  # Needs more affection for romance
             req_str=0,    # Strength not required
             req_intelligence=0,  
             req_char=20,  # Charisma is key to success
             reward_money=0,       # No money, it’s not about profit
             reward_character=20,  # +20 to Eris’s affection if successful
             str_bonus=0,          # No strength bonus
-            intelligence_bonus=1, # Small intelligence bonus
-            char_bonus=2          # Charisma bonus for a successful date
+            intelligence_bonus=5, # Small intelligence bonus
+            char_bonus=7          # Charisma bonus for a successful date
+        )
+        $quest_eris_black_hole = GirlQuest(
+            tag="qebh", 
+            whatToDo="Investigate the black hole",
+            forWho="Eris",
+            forWhoShort="eris",
+            location="City",
+            countObj=0,  # Нет конкретных объектов, просто провести время
+            character_says=[
+                "We need to investigate what caused that wormhole.",
+                "W-well, you, I have plenty of other things to do!"
+            ],
+            req_love=0,  # Нужно больше любви для романтики
+            req_str=0,    # Сила не требуется
+            req_intelligence=30,  
+            req_char=20,  # Харизма важна для успеха
+            reward_money=0,       # Нет денег, это не про заработок
+            reward_character=20,  # +20 к любви Эрис при успехе
+            str_bonus=0,          # Нет бонуса к силе
+            intelligence_bonus=5, # Небольшой бонус к интеллекту
+            char_bonus=7          # Бонус к харизме за удачное свидание
         )
 
         # Tsunade quests
@@ -453,11 +514,15 @@ init python:
         if who == "m":
             result = []
         if who == "eris":
-            result = [quest_eris_goblin_hunting, quest_eris_dragon_hunting, quest_eris_date]
+            result = [quest_eris_goblin_hunting, quest_eris_dragon_hunting, quest_eris_date, quest_eris_black_hole]
         return result
         
     def setUnrepeatable(quest):
         setRepeatableByTag(quest.tag, False)
+        return
+
+    def setCompleted(quest):
+        setCompletedByTag(quest.tag, True)
         return
 
     #вычисляет принят ли квест этого персонажа сейчас
@@ -468,30 +533,33 @@ init python:
             result = True
         return result
 
-    def completeQuest(quest, character):
+    def completeQuest(quest, character, isRemomeRepeatable = True):
         addMoney(active_quest.reward_money)
         addLove(character, active_quest.reward_character)
         addChar(["str"], active_quest.str_bonus)
         addChar(["char"], active_quest.char_bonus)
         addChar(["intelligence"], active_quest.intelligence_bonus)
         removeQuest(False)
-        setUnrepeatable(quest)
+        setCompleted(quest)
+        if isRemomeRepeatable:
+            setUnrepeatable(quest)
         return True
 
     def isQuestCompleted(quest):
-        isRep = getRepeatableByTag(quest.tag)
-        if isRep == False:
-            return True
-        else:
-            return False
+        isComp = getCompletedByTag(quest.tag)
+        return isComp
 
-    def isAnyQuestComplete(character):
+    def isQuestRepeatable(quest):
+        isRep = getRepeatableByTag(quest.tag)
+        return isRep
+
+    def isAnyQuestCompleted(character):
         targetQuests = getQuestListByWho(character.short_name)
         tagList = []
         for q in targetQuests:
             tagList.append(q.tag)
-        reps = getRepeatableByTagList(tagList)
-        if any(r == False for r in reps):
+        reps = getCompletedByTagList(tagList)
+        if any(r == True for r in reps):
             return True
         else:
             return False
@@ -522,18 +590,29 @@ init python:
         for tag in tagList:
             result.append(getRepeatableByTag(tag))
         return result
+    
+    def getCompletedByTagList(tagList): 
+        result = []
+        for tag in tagList:
+            result.append(getCompletedByTag(tag))
+        return result
                 
     def getRepeatableByTag(tag):
         global repeatable_quest_elsa_materials
         global repeatable_quest_elsa_crystall
+
         global repeatable_quest_rapunzel_mashrooms
         global repeatable_quest_rapunzel_women
+
         global repeatable_quest_nagatoro_goblins
         global repeatable_quest_nagatoro_forest
         global repeatable_quest_nagatoro_bandits
+
         global repeatable_quest_eris_goblin_hunting
         global repeatable_quest_eris_dragon_hunting
         global repeatable_quest_eris_date       
+        global repeatable_quest_eris_black_hole
+
         global repeatable_quest_tsunade_poison_tooth       
         global repeatable_quest_sakura_materials   
         if tag == "qem":
@@ -556,6 +635,8 @@ init python:
             return repeatable_quest_eris_dragon_hunting
         if tag == "qed":
             return repeatable_quest_eris_date
+        if tag == "qebh":
+            return repeatable_quest_eris_black_hole
         if tag == "qtpt":
             return repeatable_quest_tsunade_poison_tooth
         if tag == "qsm":
@@ -564,14 +645,19 @@ init python:
     def setRepeatableByTag(tag, isRep):
         global repeatable_quest_elsa_materials
         global repeatable_quest_elsa_crystall
+
         global repeatable_quest_rapunzel_mashrooms
         global repeatable_quest_rapunzel_women
+
         global repeatable_quest_nagatoro_goblins
         global repeatable_quest_nagatoro_forest
         global repeatable_quest_nagatoro_bandits
+
         global repeatable_quest_eris_goblin_hunting
         global repeatable_quest_eris_dragon_hunting
-        global repeatable_quest_eris_date       
+        global repeatable_quest_eris_date
+        global repeatable_quest_eris_black_hole
+
         global repeatable_quest_tsunade_poison_tooth       
         global repeatable_quest_sakura_materials   
         if tag == "qem":
@@ -594,8 +680,101 @@ init python:
             repeatable_quest_eris_dragon_hunting = isRep
         if tag == "qed":
             repeatable_quest_eris_date = isRep
+        if tag == "qebh":
+            repeatable_quest_eris_black_hole = isRep
         if tag == "qtpt":
             repeatable_quest_tsunade_poison_tooth = isRep
         if tag == "qsm":
             repeatable_quest_sakura_materials = isRep
         return
+    
+    def setCompletedByTag(tag, isCompleted):
+        global completed_quest_elsa_materials
+        global completed_quest_elsa_crystall
+
+        global completed_quest_rapunzel_mashrooms
+        global completed_quest_rapunzel_women
+
+        global completed_quest_nagatoro_goblins
+        global completed_quest_nagatoro_forest
+        global completed_quest_nagatoro_bandits
+
+        global completed_quest_eris_goblin_hunting
+        global completed_quest_eris_dragon_hunting
+        global completed_quest_eris_date
+        global completed_quest_eris_black_hole
+
+        global completed_quest_tsunade_poison_tooth       
+        global completed_quest_sakura_materials   
+        if tag == "qem":
+            completed_quest_elsa_materials = isCompleted
+        if tag == "qec":
+            completed_quest_elsa_crystall = isCompleted
+        if tag == "qrm":
+            completed_quest_rapunzel_mashrooms = isCompleted
+        if tag == "qrw":
+            completed_quest_rapunzel_women = isCompleted
+        if tag == "qng":
+            completed_quest_nagatoro_goblins = isCompleted
+        if tag == "qnf":
+            completed_quest_nagatoro_forest = isCompleted
+        if tag == "qnb":
+            completed_quest_nagatoro_bandits = isCompleted
+        if tag == "qegh":
+            completed_quest_eris_goblin_hunting = isCompleted
+        if tag == "qedh":
+            completed_quest_eris_dragon_hunting = isCompleted
+        if tag == "qed":
+            completed_quest_eris_date = isCompleted
+        if tag == "qebh":
+            completed_quest_eris_black_hole = isCompleted
+        if tag == "qtpt":
+            completed_quest_tsunade_poison_tooth = isCompleted
+        if tag == "qsm":
+            completed_quest_sakura_materials = isCompleted
+        return
+    
+    def getCompletedByTag(tag):
+        global completed_quest_elsa_materials
+        global completed_quest_elsa_crystall
+
+        global completed_quest_rapunzel_mashrooms
+        global completed_quest_rapunzel_women
+
+        global completed_quest_nagatoro_goblins
+        global completed_quest_nagatoro_forest
+        global completed_quest_nagatoro_bandits
+
+        global completed_quest_eris_goblin_hunting
+        global completed_quest_eris_dragon_hunting
+        global completed_quest_eris_date       
+        global completed_quest_eris_black_hole
+
+        global completed_quest_tsunade_poison_tooth       
+        global completed_quest_sakura_materials   
+        if tag == "qem":
+            return completed_quest_elsa_materials
+        if tag == "qec":
+            return completed_quest_elsa_crystall
+        if tag == "qrm":
+            return completed_quest_rapunzel_mashrooms
+        if tag == "qrw":
+            return completed_quest_rapunzel_women
+        if tag == "qng":
+            return completed_quest_nagatoro_goblins
+        if tag == "qnf":
+            return completed_quest_nagatoro_forest
+        if tag == "qnb":
+            return completed_quest_nagatoro_bandits
+        if tag == "qegh":
+            return completed_quest_eris_goblin_hunting
+        if tag == "qedh":
+            return completed_quest_eris_dragon_hunting
+        if tag == "qed":
+            return completed_quest_eris_date
+        if tag == "qebh":
+            return completed_quest_eris_black_hole
+        if tag == "qtpt":
+            return completed_quest_tsunade_poison_tooth
+        if tag == "qsm":
+            return completed_quest_sakura_materials
