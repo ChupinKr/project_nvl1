@@ -13,7 +13,149 @@ define is_cheats = False
 ################
 ## МОИ ЭКРАНЫ
 
+# Определяем изображения для галереи
 
+# Класс для хранения информации о персонаже
+# Определяем изображения
+define gui.gallery_background = gui.main_menu_background  # Используем фон главного меню
+
+# Классы для данных
+# Определяем изображения
+define gui.gallery_background = gui.main_menu_background
+
+# Классы для данных
+# Определяем изображения
+define gui.gallery_background = gui.main_menu_background
+
+# Классы для данных
+init python:
+    class SceneInfo:
+        def __init__(self, label, name, thumbnail):
+            self.label = label
+            self.name = name
+            self.thumbnail = thumbnail
+
+    class CharacterGallery:
+        def __init__(self, name, image, scenes):
+            self.name = name
+            self.image = image
+            self.scenes = scenes
+
+# Данные персонажей
+default gallery_characters = [
+    CharacterGallery("Аня", "anya_thumb.png", [
+        SceneInfo("scene_anya_1", "Первая встреча", "anya_scene1_thumb.png"),
+        SceneInfo("scene_anya_2", "Разговор у реки", "anya_scene2_thumb.png"),
+        # ... до 10 сцен
+    ]),
+    CharacterGallery("Борис", "boris_thumb.png", [
+        SceneInfo("scene_boris_1", "Встреча в парке", "boris_scene1_thumb.png"),
+        SceneInfo("scene_boris_2", "Тренировка", "boris_scene2_thumb.png"),
+        # ... до 10 сцен
+    ]),
+    # Всего 30 персонажей
+]
+
+# Переменные
+default current_page = 0
+default selected_character = None
+default previous_screen = None  # Для отслеживания возврата
+
+# Экран выбора персонажей
+screen gallery_characters():
+    tag menu
+    
+    use game_menu(_("Галерея"), scroll="viewport"):
+        vbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 20
+            
+            frame:
+                style_prefix "gallery"
+                xalign 0.5
+                grid 4 2:
+                    spacing 20
+                    $ characters_per_page = 8
+                    $ total_pages = (len(gallery_characters) - 1) // characters_per_page + 1
+                    $ start_index = current_page * characters_per_page
+                    $ end_index = min(start_index + characters_per_page, len(gallery_characters))
+                    
+                    for char in gallery_characters[start_index:end_index]:
+                        vbox:
+                            imagebutton:
+                                idle char.image
+                                hover im.MatrixColor(char.image, im.matrix.brightness(0.1))
+                                action [SetVariable("selected_character", char), SetVariable("previous_screen", "gallery_characters"), ShowMenu("gallery_scenes")]
+                            text char.name xalign 0.5
+                    
+                    for i in range(end_index - start_index, characters_per_page):
+                        null
+            
+            if total_pages > 1:
+                hbox:
+                    xalign 0.5
+                    spacing 20
+                    
+                    textbutton _("Назад") action If(current_page > 0, SetVariable("current_page", current_page - 1))
+                    for i in range(total_pages):
+                        textbutton str(i + 1) action SetVariable("current_page", i)
+                    textbutton _("Вперед") action If(current_page < total_pages - 1, SetVariable("current_page", current_page + 1))
+
+# Экран выбора сцен
+screen gallery_scenes():
+    tag menu
+    
+    use game_menu(_("[selected_character.name]"), scroll="viewport"):
+        vbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 20
+            
+            if selected_character is not None:
+                frame:
+                    style_prefix "gallery"
+                    xalign 0.5
+                    grid 5 2:
+                        spacing 15
+                        for scene in selected_character.scenes:
+                            vbox:
+                                imagebutton:
+                                    idle scene.thumbnail
+                                    hover im.MatrixColor(scene.thumbnail, im.matrix.brightness(0.1))
+                                    # Переход к сцене и возврат
+                                    action [Hide("gallery_scenes"), Function(renpy.call_in_new_context, scene.label), ShowMenu("gallery_scenes")]
+                                text scene.name xalign 0.5 size 16
+
+# Стили
+style gallery_frame:
+    padding (20, 20)
+    background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
+
+style gallery_button:
+    xsize 120
+    ysize 120
+
+style gallery_button_text:
+    size 16
+    color gui.idle_color
+    hover_color gui.hover_color
+    xalign 0.5
+
+# Примеры сцен (теперь снова с return)
+label scene_anya_1:
+    scene bg park
+    show anya happy
+    "Аня" "Привет! Рада тебя видеть!"
+    return
+
+label scene_anya_2:
+    scene bg river
+    show anya smile
+    "Аня" "Как красиво здесь у реки, правда?"
+    return
+
+###ВСЁ ЕЩЕ МОИ ЭКРАНЫ
 screen notify_plus(notices):
 
     zorder 100
@@ -702,6 +844,12 @@ screen navigation():
         if persistent.lang == "english":
             textbutton _("Preferences") action ShowMenu("preferences")
 
+        # Добавлена кнопка Галереи
+        if persistent.lang == "russian":
+            textbutton _("Галерея") action ShowMenu("gallery_characters")
+        if persistent.lang == "english":
+            textbutton _("Gallery") action ShowMenu("gallery_characters")
+
         if _in_replay:
 
             if persistent.lang == "russian":
@@ -730,6 +878,7 @@ screen navigation():
                 textbutton _("Help") action ShowMenu("help")
 
         textbutton _("Boosty") action OpenURL("https://boosty.to/Ko2ed/")
+        
 
         if renpy.variant("pc"):
 
