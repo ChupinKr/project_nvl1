@@ -162,6 +162,10 @@ label steps_sound:
     play sound "audio/steps.ogg"
 return
 
+label sand_steps_sound:
+    play sound "audio/sand_steps.ogg"
+return
+
 label forest_scene:
     call forest_scene_music
     $setLocation("forest")
@@ -225,6 +229,21 @@ label city_scene(bgc = None):
         elif bgc == "night":
             scene bg city_night with fade
         return
+    if isMorning():
+        scene bg city_morning with fade
+    elif isDay():
+        scene bg city_day with fade
+    elif isEvening():
+        scene bg city_evening with fade
+    elif isNight():
+        scene bg city_night with fade
+    else:
+        scene bg city_day with fade
+    return
+
+label city_scene_bg():
+    $setLocation("city")
+    call city_music_scene
     if isMorning():
         scene bg city_morning with fade
     elif isDay():
@@ -364,9 +383,13 @@ label hospital_scene:
 label haven_scene:
     $setLocation("haven")
     if renpy.music.get_playing("music") != "audio/haven.ogg":
-        play sound "audio/magic_dissapear.ogg"
+        call magic_dissapear
         play music "audio/haven.ogg" fadein 5.0 loop
     scene bg haven with fade
+    return
+
+label magic_dissapear:
+    play sound "audio/magic_dissapear.ogg"
     return
 
 label surgency_scene:
@@ -498,4 +521,9 @@ label battle_music_stop:
 label magic_wind_music:
     if renpy.music.get_playing("music") != "audio/magic_portal_music.ogg":
         play music "audio/magic_portal_music.ogg" fadein 1.0
+    return
+
+label desert_wind_music:
+    if renpy.music.get_playing("music") != "audio/desert_wind.ogg":
+        play music "audio/desert_wind.ogg" fadein 1.0
     return

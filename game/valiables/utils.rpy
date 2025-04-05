@@ -3,6 +3,7 @@
 define dis25 = Dissolve(.25)
 define flash = Fade(0.1, 0.0, 1.0, color="#FFFFFF")
 define pink = Fade(0.1, 0.0, 1.0, color="#FFC0CB")
+define red = Fade(0.1, 0.0, 1.0, color="#FF0000")
 define long_fade = Fade(0.5, 1.2, 0.5)
 
 # сторонние переменные
@@ -55,6 +56,14 @@ transform move_right_bit:
 #перещемещение
 transform move_mid:
     linear 1.0 mid  # Плавно перемещает персонажа в исходную позицию за 2 секунды
+
+#слегка прозрачный
+transform transparent:
+    alpha 0.8
+
+#отразить по горизонтали
+transform flipped:
+    xzoom -1
 
 #положения
 transform left_out:
@@ -363,6 +372,18 @@ init python:
                 time = "Evening"
             if time_num == 3:
                 time = "Night"
+
+    def getTime():  #0,1,2,3 - morning, day, evening, night
+        if persistent.lang == "russian":
+            if time == "Утро" or time == "Morning":
+                return 0
+            elif time == "День" or time == "Day":
+                return 1
+            elif time == "Вечер" or time == "Evening":
+                return 2
+            elif time == "Ночь" or time == "Night":
+                return 3
+
 
     def nextDay():
         global day,time,notices

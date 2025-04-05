@@ -29,16 +29,25 @@ label city:
             $completeQuest(quest_eris_date, my_eris, False)
             "Ты в таверне"
             jump tavern
-        "Исследовать червоточину" if active_quest.name in quest_eris_black_hole.name:
+        "Исследовать червоточину" if active_quest.name in quest_eris_black_hole.name and not isNight():
             call quest_eris_black_hole_start
             $completeQuest(quest_eris_black_hole, my_eris)
+            if not can_find_eris:
+                mind "Наконец всё вернется в норму."
+                $can_find_eris = True
+                call magic_dissapear
+                call city_scene_bg
+                show eris smile at left_bit with dissolve
+                eris "Увидимся завтра на тренировочной площадке."
+                $customNotify("Ты можешь найти Эрис на тренировочной площадке.")
             "Ты в городе"
+            $nextTime()
             jump city
         "Заняться поиском [eris.name]" if isNoQuestNow() and can_find_eris==False:
             $getQuest(quest_eris_black_hole)
             mind "Хорошо, так я не забуду о своей цели."
             jump city
-        "Временно прекратить поиски [eris.name]" if active_quest.name in quest_eris_black_hole.name:
+        "Временно прекратить поиски [eris.name]" if active_quest.name in quest_eris_black_hole.name and can_find_eris==False:
             $removeQuest()
             mind "Пока я точно не готов, стоит заняться этим позже."
             jump city

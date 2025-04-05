@@ -327,6 +327,7 @@ init:
         define makima = Character("Makima", color="#ffaa00", image='makima', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Макима из "Человека-бензопилы"
         define chizuru = Character("Сhizuru", color="#ffaa00", image='chizuru', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Чизуру из "Девушки на час"
         define guy1 = Character('Guy', color="#ffaaaa", image='guy1', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define asoka = Character("Ahsoka", color="#FFA500", image="asoka", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])
         
         # Some guys
         define old_woman = Character('Old woman', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
@@ -342,8 +343,9 @@ init:
         #quest fuckable enemies
         define ent = Character('Ent Girl', color="#013220", image='ent', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define woblin = Character('Goblin-woman', color="#66cc33", image='woblin', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
-        define wragon = Character('Dragoness', color="#013220", image='wragon', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
-
+        define wragon = Character('Dragoness', color="#ff0000", image='wragon', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define mummy = Character('Mummy', color="#ff0000", image='mummy', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        
         #quest persns
         define emilia = Character("Emilia", color="#dda0dd", image='emilia', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define ramiris = Character('Ramiris', color="#FFBA00", image='ramiris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
@@ -366,6 +368,7 @@ init:
         define makima = Character("Макима", color="#ffaa00", image='makima', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Макима из "Человека-бензопилы"
         define chizuru = Character("Чизуру", color="#ffaa00", image='chizuru', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])  # Чизуру из "Девушки на час"
         define guy1 = Character('Парень', color="#ffaaaa", image='guy1', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define asoka = Character("Асока", color="#FFA500", image="asoka", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))])
         
         # Some guys
         define old_woman = Character('Старая щенщина', color="#ffaaaa", who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
@@ -381,8 +384,10 @@ init:
         #quest fuckable enemies
         define woblin = Character('Женщина-гоблин', color="#66cc33", image='woblin', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define ent = Character('Девушка Энт', color="#013220", image='ent', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
-        define wragon = Character('Драконица', color="#013220", image='wragon', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define wragon = Character('Драконица', color="#ff0000", image='wragon', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
+        define mummy = Character('Мумия', color="#ff0000", image='mummy', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         
+
         #quest persns
         define emilia = Character("Эмилия", color="#dda0dd", image='emilia', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
         define ramiris = Character('Рамирис', color="#FFBA00", image='ramiris', who_outlines=[(1, "#FFFFFF", absolute(0), absolute(0))]) 
