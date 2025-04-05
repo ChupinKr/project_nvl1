@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## Версия игры.
 
-define config.version = "0.1.3"
+define config.version = "0.1.4-eris_update"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
