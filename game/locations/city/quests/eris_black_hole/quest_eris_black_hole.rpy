@@ -1,16 +1,21 @@
 define first_time_quest_eris_black_hole = True
+
 label quest_eris_black_hole_start:
     if first_time_quest_eris_black_hole:
+        $first_time_quest_eris_black_hole = False
         $qebh_if_visit_market = False
         mind "Хм, с чего бы мне начать?"
         call find_black_hole_enter
+        call magic_dissapear
         call quest_eris_desert_enter
+    else:
+        call magic_dissapear
     call asoka_root_wake_up
     call quest_eris_desert_asoka_dialog
     call quest_eris_desert_crypt
     if health <= 0:
         call quest_eris_desert_crypt_wake_up
-    call fadequest_eris_black_hole_skelet_king
+    call quest_eris_black_hole_skelet_king
     call quest_eris_black_hole_end
     
     mind "Надеюсь червоточина здесь больше не возникнет."
@@ -565,10 +570,15 @@ label quest_eris_desert_crypt:
         "[asoka.name] быстрым движением разрубает нечисть."
         show asoka neutral_say_cummed at left_mid with dissolve
         asoka "Я победила противника."
+        show asoka neutral with dissolve
         p "Х-хорошо..."
+        asoka surprised "Ах да!" with dissolve
         hide asoka with dissolve
         "[asoka.name] вытирает лицо."
-        show asoka neutral_say at mid with dissolve
+        show asoka neutral_say at left_mid with dissolve
+        asoka "Ну что, идем дальше?"
+        show asoka neutral with dissolve
+        mind "Она думает, что я ничего не заметил?!"
     else:
         scene bg desert_pyramid_indoor4 at bg_size,flipped with fade
         p "[asoka.name]? Ты тут?"
@@ -579,12 +589,18 @@ label quest_eris_desert_crypt:
         mummy "Гррр!"
         show asoka angry with dissolve
         "Внезапно на тебя нападает мумия."
-        call start_battle(90, 150 , mummy.name, 'return_here')
+        call start_battle(90, 120 , mummy.name, 'return_here')
+        if not last_battle_win:
+            $health = 10
+            return
         hide asoka with vpunch
         "В ходе битвы [asoka.name] пострадала, прикрыв тебя от удара."
         "Но [mummy.name] не отступает."
         mummy "Грар!"
-        call start_battle(45, 180 , mummy.name, 'return_here')
+        call start_battle(45, 150 , mummy.name, 'return_here')
+        if not last_battle_win:
+            $health = 10
+            return
         show mummy stand_embarrassed at right_mid with dissolve
         mummy "Рррр?.."
         if strength < 60:
@@ -632,11 +648,12 @@ label quest_eris_desert_crypt_wake_up:
     asoka angry_say "Спящая красавица наконец очнулась?" with dissolve
     show asoka angry with dissolve
     p "Я-я..."
-    asoka angry_say "Никаких оправданий! Соберись! Впереди саркофаг, думаю там и лежит то, что нам нужно!" with dissolve
+    asoka angry_say "Никаких оправданий! Соберись! Впереди трон, а на нем скелет, думаю он то нам и нужен!" with dissolve
+    $addHealth(20)
     show asoka angry with dissolve
     return
 
-label fadequest_eris_black_hole_skelet_king:
+label quest_eris_black_hole_skelet_king:
     scene bg desert_pyramid_throne1 at bg_size with fade
     show asoka angry at left_mid with dissolve
     asoka angry_say "Эй ты! Мы одолеем тебя!" with dissolve
