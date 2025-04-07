@@ -1,5 +1,5 @@
 
-label guy1_black_alley_root:
+label guy1_black_alley_root(is_preview=False):
     scene bg guy1_black_alley_root_masturbate0 at bg_size with fade
     "[guy1.name] подходит ближе, медленно расстегивая куртку."
     guy1 "В таком случае мне надо тебя отблагодарить~"
@@ -10,23 +10,24 @@ label guy1_black_alley_root:
     scene bg guy1_black_alley_root_masturbate2 at bg_size with dissolve
     guy1 "Я же сама сказала, что заработала эти деньги. Позволь мне их отработать~"
 
-    menu:
-        guy1 "Позволь мне их отработать~"
-        "Да":
-            p "Раз ты так настаиваешь."
-        "Нет":
-            p "Нет, мне это не интересно."
-            call black_alley_scene
-            "[guy1.name] застегивает куртку."
-            show guy1 angry at right_bit with dissolve
-            guy1 "Фу, ну и мужчины пошли..."
-            p "Ты просто меня не интересуешь."
-            guy1 smile "В любом случае спасибо за деньги." with dissolve
-            show guy1 neutral_shadow with dissolve
-            pause .5
-            hide guy1 with dissolve
-            "[guy1.name] быстро растворилась в темных переулках"
-            return
+    if not is_preview:
+        menu:
+            guy1 "Позволь мне их отработать~"
+            "Да":
+                p "Раз ты так настаиваешь."
+            "Нет":
+                p "Нет, мне это не интересно."
+                call black_alley_scene
+                "[guy1.name] застегивает куртку."
+                show guy1 angry at right_bit with dissolve
+                guy1 "Фу, ну и мужчины пошли..."
+                p "Ты просто меня не интересуешь."
+                guy1 smile "В любом случае спасибо за деньги." with dissolve
+                show guy1 neutral_shadow with dissolve
+                pause .5
+                hide guy1 with dissolve
+                "[guy1.name] быстро растворилась в темных переулках"
+                return
             
     scene bg guy1_black_alley_root_masturbate3 at bg_size with fade
     "Она встает на колени и раскрывает тебе вид на ее сочную грудь."

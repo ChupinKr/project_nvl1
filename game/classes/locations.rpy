@@ -195,7 +195,8 @@ label forest_scene_music:
         if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
             play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
     else:
-        scene bg forest_day with fade
+        if renpy.music.get_playing("music") != "audio/forest_day_morning_music.ogg":
+            play music "audio/forest_day_morning_music.ogg" fadein 5.0 loop
     return
 
 label tavern_scene:

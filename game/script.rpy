@@ -1,10 +1,14 @@
 
 $ active_quest = no_quest
-if persistent.lang == 'russian':
-    $ hero_name = "Игрок"
-if persistent.lang == 'english':
-    $ hero_name = "Player"
-    
+define hero_name = "Player"
+init:
+    if persistent.lang == 'russian':
+        $ hero_name = "Игрок"
+    else:
+        $ hero_name = "Player"
+define p = Character(hero_name, color="#FFFFFF")
+define mind = Character(hero_name + " mind", color="#FFFFFF")
+
 label start:
 
     if persistent.lang == "russian":
@@ -57,11 +61,11 @@ label start:
         $ hero_name = hero_name.strip() or "Nameless"
 
     # Создание персонажа с подставленным именем
-    define p = Character("[hero_name]", color="#FFFFFF") # Главный герой с именем, выбранным игроком
+    $p = Character("[hero_name]", color="#FFFFFF") # Главный герой с именем, выбранным игроком
     if persistent.lang == "russian":
-        define mind = Character("Мысли [hero_name]", color="#FFFFFF")  # Мысли ГГ
+        $mind = Character("Мысли [hero_name]", color="#FFFFFF")  # Мысли ГГ
     if persistent.lang == "english":
-        define mind = Character("[hero_name] mind", color="#FFFFFF")  # Мысли ГГ
+        $mind = Character("[hero_name] mind", color="#FFFFFF")  # Мысли ГГ
 
     p "Меня зовут [hero_name]."  # Главный герой говорит своё имя
 

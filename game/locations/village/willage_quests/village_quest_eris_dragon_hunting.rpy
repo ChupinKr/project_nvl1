@@ -553,13 +553,13 @@ label dragon_fight_mountain_fail:
     "Но это же просто игра, повтори попытку."
     jump battle_loss
 
-label heal_eris_by_yourself:
+label heal_eris_by_yourself(is_preview=False):
     scene bg eris_mountain_unconscious at bg_size with fade
     p "Мне нужно как-то поднять [my_eris.name] на ноги. И чем быстрее, тем лучше."
     menu:
         "Как исцелить [my_eris.name]?"
         "Магией":
-            if intelligence < 30:
+            if intelligence < 30 and not is_preview:
                 $customNotify("Недостаточно интеллекта")
                 p "Ффф... Мнн! {w}Ха..."
                 "Ты стараешься изо всех сил, но ничего не происходит."
@@ -581,7 +581,8 @@ label heal_eris_by_yourself:
             "Магические существа начинают растворяться в воздухе."
             eris "Так ты и магией владеешь?"
             p "Совсем немного..."
-            $addLove(my_eris,5)
+            if not is_preview:
+                $addLove(my_eris,5)
             scene bg eris_mountain_unconscious_fireflies_6 at bg_size with dissolve
             "[my_eris.name] поднимается целая и невредимая, будто ничего и не было."
             eris "Шутишь? Ты удивительный человек, [hero_name]!"
@@ -597,7 +598,8 @@ label heal_eris_by_yourself:
             scene bg eris_mountain_unconscious_wet_2 at bg_size with dissolve
             "Она в шоке от происходящего смотрит на тебя."
             eris "А? [hero_name]? Почему я мокрая?"
-            $minusLove(my_eris, 5)
+            if not is_preview:
+                $minusLove(my_eris, 5)
             scene bg eris_mountain_angry_wet_1 at bg_size with dissolve
             p "Слава богу, [my_eris.name]... Ты..."
             scene bg eris_mountain_angry_wet_2 at bg_size with dissolve
@@ -606,7 +608,8 @@ label heal_eris_by_yourself:
             scene bg eris_mountain_angry_wet_3 at bg_size with dissolve
             pause .7
             scene bg forest_mountain_path at bg_size with flash
-            $health -= 10
+            if not is_preview:
+                $health -= 10
             $customNotify("[my_eris.name] довольно сильно ударила тебя")
             if health <= 0:
                 jump battle_loss
@@ -684,18 +687,19 @@ label return_village_quest_eris_dragon_hunting:
     p "У этой деревни есть свои секреты...{w} Идём, нам нужен отдых."
     return
 
-label makima_titfuck:
+label makima_titfuck(is_preview=False):
     scene bg makima_root_titfuck2 at bg_size with fade
     "[makima.name] поднимает свою рубашку и открывает тебе вид на ее шикарную грудь."
     p "*сглатывает*"
-    menu:
-        makima "Герой, который спасет нас от дракона, желаешь получить дополнительную мотивацию?"
-        "Да":
-            p "Конечно!"
-        "Нет":
-            p "Я и без неё управлюсь."
-            makima "Будь по твоему"
-            return
+    if not is_preview:
+        menu:
+            makima "Герой, который спасет нас от дракона, желаешь получить дополнительную мотивацию?"
+            "Да":
+                p "Конечно!"
+            "Нет":
+                p "Я и без неё управлюсь."
+                makima "Будь по твоему"
+                return
     scene bg makima_root_titfuck3 at bg_size with fade
     "[makima.name] встает из за стола, пиджак сползает по ее плечам и падает на пол, оголяя её плечи и грудь."
     scene bg makima_root_titfuck4 at bg_size with fade
@@ -838,7 +842,7 @@ label makima_titfuck:
 
     return
 
-label wragon_root_fuck:
+label wragon_root_fuck(is_preview=False):
     scene bg wragon_anal1 at bg_size with fade
     "[wragon.name] заводит тебя в пещеру."
     "Ты видишь множество комнат, но больше всего твое внимание привлекает [wragon.name] и её сочная задница."

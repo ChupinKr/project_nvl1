@@ -3,7 +3,7 @@ define mao_first_visit = True
 define can_go_mao = True
 
 label visit_mao:
-    scene bg brothel_private2 with dissolve
+    scene bg brothel_private2 at bg_size with dissolve
     show mao neutral at right_bit with dissolve
     if mao_first_visit:
         mao "Деловые предложения лучше не обсуждать при гостях, я обычно нахожусь в этой комнате."

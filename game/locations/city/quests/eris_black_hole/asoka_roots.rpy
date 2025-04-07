@@ -1,10 +1,11 @@
 
-label asoka_root_wake_up:
+label asoka_root_wake_up(is_preview=False):
     scene bg black_screen at bg_size with long_fade
     mind "Что? Я умер?{w} Опять?"
     mind "Разве можно умереть второй раз? Я думал, что Богиня мне поможет..."
-    $health = 0
-    $addHealth(50)
+    if not is_preview:
+        $health = 0
+        $addHealth(50)
     asoka "Эй! Отзовись!"
     call hide_dialog
     mind "?"
@@ -31,7 +32,7 @@ label asoka_root_wake_up:
     return
 
 
-label asoka_root_tent_blowjob:
+label asoka_root_tent_blowjob(is_preview=False):
     asoka "Действует безотказно~" with dissolve
     "..."
     "....."
@@ -167,7 +168,7 @@ label asoka_root_tent_blowjob:
 
     return
 
-label asoka_root_suck_another:
+label asoka_root_suck_another(is_preview=False):
     "Ты видишь, как [asoka.name] отсасывает какой-то нежити."
     scene bg asoka_root_suck_another1 at bg_size with fade
     pause .2
@@ -237,7 +238,7 @@ label asoka_root_suck_another:
     call hide_dialog
     return
 
-label asoka_root_tent_vaginal_fuck:
+label asoka_root_tent_vaginal_fuck(is_preview=False):
     scene bg asoka_root_vaginal_fuck1_1 at bg_size with fade
     call hide_dialog
     "[asoka.name] поднимает топ, огаляя свою грудь."

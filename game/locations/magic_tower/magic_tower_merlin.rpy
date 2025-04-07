@@ -176,24 +176,25 @@ label mer_root_menu:
             play sound "audio/magic_dissapear.ogg"
             jump magic_tower_hub
 
-label mer_root_blowjob:
+label mer_root_blowjob(is_preview=False):
     scene bg magic_library1 with fade
     show mer holding_breast with fade
     call hide_dialog
     mer "[hero_name], давай сегодня попрбуем кое-что интересное~"
     mer "Тебе нравится моя грудь?"
-    menu:
-        mer "Тебе нравится моя грудь?"
-        "Да, очень":
-            p "У тебя чудесная грудь"
-            mer smile_holding_breast "Правильный ответ~" with dissolve
-        "Нет":
-            p "Если честно, не очень, мне нравятся груди поменьше, можешь магией их уменьшить?"
-            mer "Нет! Убирайся!" 
-            $ can_go_mer = False 
-            "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
-            $customNotify("Ты больше никогда не встретишь [mer.name]")
-            jump magic_tower_hub
+    if not is_preview:
+        menu:
+            mer "Тебе нравится моя грудь?"
+            "Да, очень":
+                p "У тебя чудесная грудь"
+                mer smile_holding_breast "Правильный ответ~" with dissolve
+            "Нет":
+                p "Если честно, не очень, мне нравятся груди поменьше, можешь магией их уменьшить?"
+                mer "Нет! Убирайся!" 
+                $ can_go_mer = False 
+                "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+                $customNotify("Ты больше никогда не встретишь [mer.name]")
+                jump magic_tower_hub
     show mer neutral_knee with fade
     call hide_dialog
     "[mer.name] встает на колени, наконец ты можешь хорошо рассмотреть ее широкие беда"

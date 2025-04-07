@@ -40,7 +40,7 @@ label nagatoro_dodjo_first_time:
 label nagatoro_dodjo_menu:
     menu:
         "Спортивное позирование" if my_nag_love >= 50: 
-            call nagatoro_root_show  
+            call nagatoro_root_show
             $nextTime()
             jump nagatoro_dodjo_menu
         "Растираение грудными мыщцами" if isQuestCompleted(quest_nagatoro_goblins): 
@@ -74,7 +74,7 @@ label nagatoro_dodjo_menu:
             "Ты уходишь"
             jump city
 
-label nagatoro_root_show:
+label nagatoro_root_show(is_preview=False):
     hide nag with fade 
     scene bg nag_show0 with dissolve
     "[nag.name] в спортивном костюме села напротив тебя"
@@ -172,7 +172,7 @@ label nagatoro_root_show:
     nag "Ладно, думаю этого достаточно."
     p "Ч-что? Это всё?"
 
-    if my_nag_love < 55:
+    if my_nag_love < 55 and not is_preview:
         $customNotify("Необходимо 60 симпатии")
         nag "Да, с тебя хватит, давай займемся обычными тренировками, а то что-то ты расслабился сильно."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
@@ -228,7 +228,7 @@ label nagatoro_root_show:
     p "Чт-т-тооо?"
     nag "Хаха, да шучу я!"
 
-    if my_nag_love < 65:
+    if my_nag_love < 65 and not is_preview:
         $customNotify("Необходимо 65 симпатии")
         nag "Всё, на этом закончим, пора идти заниматься еще и твоими тренировками."
         mind "Опять спарринг, а мне так нравилось. Наверняка если я постараюсь завоевать ее доверие - она покажет еще больше!"
@@ -272,7 +272,7 @@ label nagatoro_root_show:
     nag "Ааааах, дааааа!"
     "Ты не можешь сделать вид, что ничего не заметил"
     
-    if my_nag_love < 75:
+    if my_nag_love < 75 and not is_preview:
         $customNotify("Необходимо 75 симпатии")
         "Но [nag.name] может"
         scene bg nag_show19 with dissolve
@@ -313,7 +313,7 @@ label nagatoro_root_show:
     call hide_dialog
     nag "Как тебе шоу? Понравилось же?"
 
-    if my_nag_love < 90:
+    if my_nag_love < 90 and not is_preview:
         $customNotify("Необходимо 90 симпатии")
         p "У меня нет слов!"
         call dodjo_scene
@@ -375,9 +375,11 @@ label nagatoro_root_show:
     p "Еще увидимся."
     "Ты одеваешься и уходишь"
 
+    if is_preview:
+        return
     jump city
 
-label nagatoro_root_titfuck:
+label nagatoro_root_titfuck(is_preview=False):
     nag grin "Уже не терпится, да?" with dissolve
     hide nag with dissolve
     "[nag.name] вышла из комнаты"
@@ -528,7 +530,7 @@ label nagatoro_root_titfuck:
 
     "Ты начинаешь кончать"
     
-    if strength < 100:
+    if strength < 100 and not is_preview:
         $customNotify("Необходимо 100 силы")
         "[nag.name] вырвалась"
         call dodjo_scene
@@ -549,7 +551,7 @@ label nagatoro_root_titfuck:
     call hide_dialog
     "[nag.name] сопротивляется все сильнее, пока ты заливаешь в ее рот сперму порцию за порцией"
 
-    if strength < my_nag_str / 2:
+    if strength < my_nag_str / 2 and not is_preview:
         $customNotify("Необходимо более [my_nag_str / 2] силы")
         "[nag.name] вырвалась из твой хватки и вздохнула воздуха"
         call dodjo_scene
@@ -593,7 +595,7 @@ label nagatoro_root_titfuck:
     call hide_dialog
     "Ты даешь ей возможность вдохнуть немного воздуха, и продолжаешь обильно кончать в ее рот"
 
-    if strength < my_nag_str * 0.8:
+    if strength < my_nag_str * 0.8 and not is_preview:
         scene bg nag_titjob_cum28_1 with flash
         call hide_dialog
         "Почти сразу ты насаживаешь ее ротик обратно на свой член"
@@ -679,6 +681,9 @@ label nagatoro_root_titfuck:
     hide nag
     mind "Уверен она пошла в душ."
     "Полностью удовлетворенный, ты уходишь"
+
+    if is_preview:
+        return
     jump city
     
         

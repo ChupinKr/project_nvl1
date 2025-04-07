@@ -100,7 +100,7 @@ label freya_root_menu:
         "Вернуться":
             jump talk_to_freya_menu
 
-label freya_root_masturbate:
+label freya_root_masturbate(is_preview=False):
     hide f
     "Вы каким-то образом появляетесь у тебя в комнате"
     scene bg room with dissolve
@@ -184,6 +184,8 @@ label freya_root_masturbate:
     
     call room_scene
     show f smile_shy_naked_hold_cummed with dissolve
+    if is_preview:
+        return
     call hide_dialog
     f "Пожалуй мне пора возвращаться, буду ждать нашей новой встречи~"
     hide f with dissolve

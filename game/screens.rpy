@@ -43,23 +43,107 @@ init python:
 
 # Данные персонажей
 default gallery_characters = [
-    CharacterGallery("Аня", "anya_thumb.png", [
-        SceneInfo("scene_anya_1", "Первая встреча", "anya_scene1_thumb.png"),
-        SceneInfo("scene_anya_2", "Разговор у реки", "anya_scene2_thumb.png"),
-        # ... до 10 сцен
+    #main characters
+    CharacterGallery(my_rapunzel.name, "images/characters/rapunzel_ch/bg rapunzel_gallery.png", [
+        SceneInfo("r_root_masturbate", "Мастурбация", "images/characters/rapunzel_ch/roots/own_masturbate/bg r_masturbate13.png"),
+        SceneInfo("r_root_blowjob", "Blowjob", "images/characters/rapunzel_ch/roots/blowjob/bg r_close_to_dick.png"),
+        SceneInfo("r_root_fuck", "Секс", "images/characters/rapunzel_ch/roots/fuck/bg r_fuck3.png"),
     ]),
-    CharacterGallery("Борис", "boris_thumb.png", [
-        SceneInfo("scene_boris_1", "Встреча в парке", "boris_scene1_thumb.png"),
-        SceneInfo("scene_boris_2", "Тренировка", "boris_scene2_thumb.png"),
-        # ... до 10 сцен
+    CharacterGallery(my_elsa.name, "images/characters/elsa_ch/bg elsa_gallery.png", [
+        SceneInfo("blowjob_elsa", "Blowjob", "images/characters/elsa_ch/roots/blowjob/bg elsa_blow0_4.png"),
+        SceneInfo("elsa_masturbate_scene", "Мастурбация", "images/characters/elsa_ch/roots/masturbate/bg elsa_fuck_fingering5.png"),
     ]),
-    # Всего 30 персонажей
+    CharacterGallery(my_nag.name, "images/characters/nagatoro_ch/bg nag_gallery.png", [
+        SceneInfo("nagatoro_root_show", "Показать", "images/characters/nagatoro_ch/roots/show/bg nag_show4.png"),
+        SceneInfo("nagatoro_root_titfuck", "Titjob", "images/characters/nagatoro_ch/roots/titjob/bg nag_titjob5.png"),
+    ]),
+
+    #second characters
+    CharacterGallery(my_eris.name, "images/characters/eris_ch/bg eris_gallery.png", [
+        SceneInfo("eris_root_sausage", "Сосиска", "images/characters/eris_ch/roots/date_quest/market_sousage/bg eris_root_sousage2.png"),
+        SceneInfo("eris_root_date_dance", "Танец", "images/characters/eris_ch/roots/date_quest/date_dance/bg eris_root_date_dance4.png"),
+        SceneInfo("forest_eris_root_kiss", "Поцелуй", "images/characters/eris_ch/roots/goblin_quest/forest_kiss/bg eris_root_kiss1.png"),
+        SceneInfo("eris_root_river_situation", "Река", "images/characters/eris_ch/roots/goblin_quest/river_situation/bg eris_root_river2.png"),
+        SceneInfo("heal_eris_by_yourself", "Исцеление", "images/characters/eris_ch/roots/dragon_quest/mountain_unconscious/bg eris_mountain_unconscious.png"),
+        SceneInfo("eris_root_handjob", "Handjob", "images/characters/eris_ch/roots/dragon_quest/tavern_handjob/bg eris_root_handjob5_say.png"),
+        SceneInfo("eris_root_blowjob", "Blowjob", "images/characters/eris_ch/roots/goblin_quest/cave_blowjob/bg eris_root_cave7.png"),
+        SceneInfo("eris_root_tea", "Секс", "images/characters/eris_ch/roots/date_quest/tavern_tea/bg eris_root_tea9.png"),
+    ]),
+    CharacterGallery(my_holo.name, "images/characters/holo_ch/bg holo_gallery.png", [
+        SceneInfo("h_root_masturbate", "Handjob", "images/characters/holo_ch/roots/masturbate/bg h_masturbate13.png"),
+        SceneInfo("h_root_titfuck", "Titjob", "images/characters/holo_ch/roots/titfuck/bg h_titfuck15.png"),
+        SceneInfo("h_root_blowjob", "Blowjob", "images/characters/holo_ch/roots/blowjob/bg h_blowjob10.png"),
+        SceneInfo("h_root_fuck", "Секс", "images/characters/holo_ch/roots/fuck/bg h_fuck16.png"),
+        SceneInfo("h_root_footfuck", "Footjob", "images/characters/holo_ch/roots/footjob/bg h_foot1.png"),
+        SceneInfo("h_root_anal", "Анал", "images/characters/holo_ch/roots/anal/bg h_anal21.png"),
+    ]),
+    CharacterGallery(my_miku.name, "images/characters/miku_ch/bg miku_gallery.png", [
+        SceneInfo("m_root_show", "Показать", "images/characters/miku_ch/roots/show/bg m_show2.png"),
+        SceneInfo("m_root_titfuck", "Titjob", "images/characters/miku_ch/roots/titfuck/bg miku_titfuck4_2.png"),
+        SceneInfo("m_root_blowjob", "Blowjob", "images/characters/miku_ch/roots/blowjob/bg m_blowjob5.png"),
+        SceneInfo("m_root_fuck", "Секс", "images/characters/miku_ch/roots/fuck/bg m_fuck1_6.png"),
+        SceneInfo("m_root_anal", "Секс", "images/characters/miku_ch/roots/anal/bg m_anal8_2.png"),
+    ]),
+    CharacterGallery(my_merlin.name, "images/characters/merlin_ch/bg merlin_gallery.png", [
+        SceneInfo("mer_root_blowjob", "Blowjob", "images/characters/merlin_ch/roots/blowjob/bg mer_suck1.png"),
+    ]),
+    CharacterGallery(asoka.name, "images/characters/asoka/bg asoka_gallery.png", [
+        SceneInfo("asoka_root_wake_up", "Проснись", "images/characters/asoka/roots/wake_up/asoka_root_wake_up1.png"),
+        SceneInfo("asoka_root_suck_another", "Blowjob мертвецу", "images/characters/asoka/roots/suck_another/bg asoka_root_suck_another1.png"),
+        SceneInfo("asoka_root_tent_blowjob", "Blowjob", "images/characters/asoka/roots/blowjob/bg asoka_root_blowjob2.png"),
+        SceneInfo("asoka_root_tent_vaginal_fuck", "Секс", "images/characters/asoka/roots/vaginal_fuck/bg asoka_root_vaginal_fuck3_1.png"),
+    ]),
+    CharacterGallery(chizuru.name, "images/characters/chizuru/bg chizuru_gallery.png", [
+        SceneInfo("chizuru_root_dance", "Танец", "images/characters/chizuru/roots/dance/bg chizuru_root_dance5.png"),
+        SceneInfo("chizuru_root_toilet_suck", "Handjob", "images/characters/chizuru/roots/toilet_masturbate/bg chizuru_root_toilet_suck5.png"),
+        SceneInfo("chizuru_root_toilet_own_masturbate", "Мастурбация", "images/characters/chizuru/roots/toilet_own_masturbate/bg chizuru_root_toilet_own_masturbate0_4.png"),
+        SceneInfo("chizuru_root_toilet_vaginal_sex", "Секс", "images/characters/chizuru/roots/toilet_vaginal_sex/bg chizuru_root_toilet_vaginal_sex1_2.png"),
+    ]),
+    CharacterGallery(my_darkness.name, "images/characters/darkness_ch/bg darkness_gallery.png", [
+    ]),
+    CharacterGallery(my_mao.name, "images/characters/maomao_ch/bg maomao_gallery.png", [
+    ]),
+    CharacterGallery(my_sakura.name, "images/characters/sakura_ch/bg sakura_gallery.png", [
+    ]),
+    CharacterGallery(my_tsunade.name, "images/characters/tsunade_ch/bg tsunade_gallery.png", [
+    ]),
+    CharacterGallery(my_freya.name, "images/characters/freya_ch/bg freya_gallery.png", [
+        SceneInfo("freya_root_masturbate", "Blowjob", "images/characters/freya_ch/roots/masturbate/frey_masturbate_1.png"),
+    ]),
+
+    #side characters
+    CharacterGallery(ramiris.name, "images/characters/ramiris/bg ramiris_gallery.png", [
+        SceneInfo("ramiris_root_river_dialog", "Диалог у реки", "images/characters/ramiris/scenes/river/bg ramiris_river1.png"),
+        SceneInfo("ramiris_root_kiss", "Полелуй", "images/characters/ramiris/scenes/river/bg ramiris_kiss2.png"),
+        SceneInfo("fuck_ramiris", "Секс", "images/characters/ramiris/scenes/fuck/bg ramiris_sex5.png"),
+    ]),
+    CharacterGallery(guy1.name, "images/characters/guy1/bg guy1_gallery.png", [
+        SceneInfo("guy1_black_alley_root", "Titjob", "images/characters/guy1/roots/black_alley_root_masturbate/bg guy1_black_alley_root_masturbate5.png"),
+    ]),
+    CharacterGallery(makima.name, "images/characters/makima_ch/bg makima_gallery.png", [
+        SceneInfo("makima_titfuck", "Titjob", "images/characters/makima_ch/roots/titfuck/bg makima_root_titfuck4.png"),
+    ]),
+
+    #enemies
+    CharacterGallery(ent.name, "images/characters/ent/bg ent_gallery.png", [
+        SceneInfo("fuck_ent", "Секс", "images/characters/ent/fuck/ent_fuck1.png"),
+    ]),
+    CharacterGallery(mummy.name, "images/characters/mummy/bg mummy_gallery.png", [
+        SceneInfo("mummy_root_desert_pussy_fuck", "Секс", "images/characters/mummy/roots/desert_pussy_fuck/bg mummy_desert_pussy_fuck1.png"),
+    ]),
+    CharacterGallery(woblin.name, "images/characters/woblin/bg woblin_gallery.png", [
+        SceneInfo("woblin_root_blowjob", "Blowjob", "images/characters/woblin/roots/blowjob/bg woblin_blowjob2.png"),
+    ]),
+    CharacterGallery(wragon.name, "images/characters/wragon/bg wragon_gallery.png", [
+        SceneInfo("wragon_root_fuck", "Секс", "images/characters/wragon/roots/cave_anal/bg wragon_anal1.png"),
+    ]),
+    
 ]
 
 # Переменные
 default current_page = 0
 default selected_character = None
-default previous_screen = None  # Для отслеживания возврата
+default previous_screen = None
 
 # Экран выбора персонажей
 screen gallery_characters():
@@ -71,36 +155,37 @@ screen gallery_characters():
             yalign 0.5
             spacing 20
             
-            frame:
-                style_prefix "gallery"
+            grid 4 2:
                 xalign 0.5
-                grid 4 2:
-                    spacing 20
-                    $ characters_per_page = 8
-                    $ total_pages = (len(gallery_characters) - 1) // characters_per_page + 1
-                    $ start_index = current_page * characters_per_page
-                    $ end_index = min(start_index + characters_per_page, len(gallery_characters))
-                    
-                    for char in gallery_characters[start_index:end_index]:
-                        vbox:
-                            imagebutton:
-                                idle char.image
-                                hover im.MatrixColor(char.image, im.matrix.brightness(0.1))
-                                action [SetVariable("selected_character", char), SetVariable("previous_screen", "gallery_characters"), ShowMenu("gallery_scenes")]
-                            text char.name xalign 0.5
-                    
-                    for i in range(end_index - start_index, characters_per_page):
-                        null
+                spacing 20
+                $ characters_per_page = 8
+                $ total_pages = (len(gallery_characters) - 1) // characters_per_page + 1
+                $ start_index = current_page * characters_per_page
+                $ end_index = min(start_index + characters_per_page, len(gallery_characters))
+                
+                for char in gallery_characters[start_index:end_index]:
+                    vbox:
+                        imagebutton:
+                            idle Transform(char.image, zoom=0.2)
+                            hover Transform(char.image, zoom=0.2, matrixcolor=BrightnessMatrix(0.1))
+                            action [SetVariable("selected_character", char), SetVariable("previous_screen", "gallery_characters"), ShowMenu("gallery_scenes")]
+                        text char.name xalign 0.5
+                
+                for i in range(end_index - start_index, characters_per_page):
+                    null
+            
+            # Добавляем пустое пространство, чтобы отодвинуть кнопки вниз
+            null height 362  # Регулируйте высоту по необходимости
             
             if total_pages > 1:
                 hbox:
                     xalign 0.5
                     spacing 20
                     
-                    textbutton _("Назад") action If(current_page > 0, SetVariable("current_page", current_page - 1))
+                    textbutton _("<") action If(current_page > 0, SetVariable("current_page", current_page - 1))
                     for i in range(total_pages):
                         textbutton str(i + 1) action SetVariable("current_page", i)
-                    textbutton _("Вперед") action If(current_page < total_pages - 1, SetVariable("current_page", current_page + 1))
+                    textbutton _(">") action If(current_page < total_pages - 1, SetVariable("current_page", current_page + 1))
 
 # Экран выбора сцен
 screen gallery_scenes():
@@ -113,47 +198,28 @@ screen gallery_scenes():
             spacing 20
             
             if selected_character is not None:
-                frame:
-                    style_prefix "gallery"
+                grid 5 2:  # Убираем frame, размещаем grid напрямую
                     xalign 0.5
-                    grid 5 2:
-                        spacing 15
-                        for scene in selected_character.scenes:
-                            vbox:
-                                imagebutton:
-                                    idle scene.thumbnail
-                                    hover im.MatrixColor(scene.thumbnail, im.matrix.brightness(0.1))
-                                    # Переход к сцене и возврат
-                                    action [Hide("gallery_scenes"), Function(renpy.call_in_new_context, scene.label), ShowMenu("gallery_scenes")]
-                                text scene.name xalign 0.5 size 16
+                    spacing 15
+                    for scene in selected_character.scenes:
+                        vbox:
+                            imagebutton:
+                                idle Transform(scene.thumbnail, zoom=0.2)
+                                hover Transform(scene.thumbnail, zoom=0.2, matrixcolor=BrightnessMatrix(0.1))
+                                action [Hide("gallery_scenes"), Function(renpy.call_in_new_context, scene.label, is_preview=True), ShowMenu("gallery_scenes")]
+                            text scene.name xalign 0.5 size 16
+
+                
+        null height 442  # Регулируйте высоту по необходимости
+        textbutton _("Назад") action ShowMenu("gallery_characters")
 
 # Стили
-style gallery_frame:
-    padding (20, 20)
-    background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
-
-style gallery_button:
-    xsize 120
-    ysize 120
-
+# Убираем style gallery_frame, так как frame больше не используется
 style gallery_button_text:
     size 16
     color gui.idle_color
     hover_color gui.hover_color
     xalign 0.5
-
-# Примеры сцен (теперь снова с return)
-label scene_anya_1:
-    scene bg park
-    show anya happy
-    "Аня" "Привет! Рада тебя видеть!"
-    return
-
-label scene_anya_2:
-    scene bg river
-    show anya smile
-    "Аня" "Как красиво здесь у реки, правда?"
-    return
 
 ###ВСЁ ЕЩЕ МОИ ЭКРАНЫ
 screen notify_plus(notices):

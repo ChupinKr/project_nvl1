@@ -27,7 +27,7 @@ label forest_quest_elsa_materials_reward:
     call blowjob_elsa
     return
 
-label blowjob_elsa:
+label blowjob_elsa(is_preview=False):
     scene bg elsa_tower_room at Transform(zoom=1.5) with fade
     "..."
     "....."
@@ -198,7 +198,7 @@ label blowjob_elsa:
     return
 
 # Сцена анального секса с Эльзой
-label elsa_masturbate_scene:
+label elsa_masturbate_scene(is_preview=False):
     scene bg elsa_tower_room at Transform(zoom=1.5) with fade
     # Светлая комната в магической башне: белые стены, ледяные узоры, мягкий свет через окно
     "Эльза ведёт тебя в свою комнату, её шаги уверенные, но в воздухе витает лёгкое напряжение."
@@ -375,13 +375,17 @@ label elsa_masturbate_scene:
     e "Ну что, [hero_name], впечатлён?"
 
     # 4. Выбор в зависимости от харизмы
-    if charisma >= 50:
-        p "Эльза, ты слишком хороша, чтобы останавливаться. Давай я помогу тебе."
-        call elsa_anal_continue
-        scene bg elsa_tower_room at Transform(zoom=1.5) with fade
-        show e smirk_naked_cummed with dissolve
+    if not is_preview:
+        if charisma >= 50:
+            p "Эльза, ты слишком хороша, чтобы останавливаться. Давай я помогу тебе."
+            call elsa_anal_continue
+            scene bg elsa_tower_room at Transform(zoom=1.5) with fade
+            show e smirk_naked_cummed with dissolve
+        else:
+            $customNotify("Необходимо 50 харизмы")
+            scene bg elsa_tower_room at Transform(zoom=1.5) with fade
+            show e smirk_naked with dissolve
     else:
-        $customNotify("Необходимо 50 харизмы")
         scene bg elsa_tower_room at Transform(zoom=1.5) with fade
         show e smirk_naked with dissolve
 

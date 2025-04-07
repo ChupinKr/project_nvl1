@@ -185,42 +185,7 @@ label forest_quest_elsa_materials:
     
     ramiris "Дальше я расскажу, где найти магические травы. Но сперва — немного отдыха."
     "Мы подошли к маленькому ручью, где журчание воды успокаивало душу."
-    scene bg ramiris_river1 with fade
-    ramiris "Знаешь, [hero_name], природа умеет лечить даже самые раненые сердца."
-    "[ramiris.name] села на мягкую траву, пригласив меня разделить с ней этот миг."
-    p "Расскажи, как ты стала хозяйкой этого леса? Какая цена была заплачена за твою силу?"
-    scene bg ramiris_river3 with dissolve
-    ramiris "О, это длинная история, полная кровавых битв и потерь. Но, может, я расскажу тебе немного..."
-    scene bg ramiris_river2 with dissolve
-    "Она задумалась, её взгляд стал тёплым, но с оттенком грусти."
-    scene bg ramiris_river3 with dissolve
-    ramiris "Когда-то я была простой феей, как и многие. Но судьба распорядилась иначе..."
-    "[ramiris.name] начала рассказывать свою историю, словно ветер шёпотом передавал древние тайны."
-    scene bg ramiris_river4 with dissolve
-    ramiris "Я родилась здесь, в этом лесу, и природа дала мне силу защищать его."
-    scene bg ramiris_river1 with dissolve
-    p "Значит, ты приняла решение стать его хранительницей?"
-    scene bg ramiris_river3 with dissolve
-    ramiris "Не столько выбор, сколько судьба. Каждая победа и поражение сделали меня тем, кто я есть."
-    scene bg ramiris_river1 with dissolve
-    "Её голос затих, и тишина окутала нас, наполненная воспоминаниями."
-    p "Я чувствую, что за каждым твоим словом скрыта боль, но и огромная сила."
-    scene bg ramiris_river4 with dissolve
-    ramiris "Боль и страсть — неразделимы. Они делают нас живыми, если мы умеем с ними обращаться."
-    scene bg ramiris_river1 with dissolve
-    "Мы молчали некоторое время, слушая шум ручья и шелест листвы."
-    p "Что для тебя значит любовь, [ramiris.name]?"
-    scene bg ramiris_river3 with dissolve
-    ramiris "Любовь — это огонь, который согревает в холодные ночи, но может обжечь, если им не управлять."
-    scene bg ramiris_river1 with dissolve
-    p "Я никогда не чувствовал такой страсти. С тобой я готов рискнуть всем."
-    scene bg ramiris_river3 with dissolve
-    ramiris "Ты умеешь находить слова... Возможно, ты станешь для меня этим светом."
-    scene bg ramiris_river1 with dissolve
-    "Наши взгляды встретились, и в них мелькнула искра взаимопонимания и ожидания."
-    p "Кажется, наше приключение становится чем-то большим, чем просто поиск трав."
-    scene bg ramiris_river4 with dissolve
-    ramiris "Помни, всё имеет свою цену. Каждая радость и каждая боль — часть пути."
+    call ramiris_root_river_dialog
     
     scene bg meadow with fade
     show ramiris smile with dissolve
@@ -264,323 +229,365 @@ label forest_quest_elsa_materials:
     p "Я думаю, я понял. Это не просто сбор трав — это путь к себе."
     p "[ramiris.name]... Спасибо за всё, что ты мне открыла."
 
-    scene bg ramiris_kiss1 with fade
-    "[ramiris.name] посмотрела на меня с теплотой, её глаза отражали свет луны. Её щеки слегка порозовели."
-    ramiris "Спасибо тебе, [hero_name], за то, что поверил в магию этого леса."
-    "Она сделала шаг ближе, её пальцы легко коснулись моей руки."
-
-    scene bg ramiris_kiss2 with dissolve
-    "В следующую секунду её губы мягко накрыли мои."
-    "Поцелуй был тёплым, наполненным нежностью и скрытой силой."
-    "В этот миг весь лес замер, словно сама природа благословляла этот момент."
-
-    scene bg ramiris_kiss1 with dissolve
-    "Когда она отстранилась, её глаза сияли, а на губах играла загадочная улыбка."
-    
-    scene bg meadow with fade
-    show ramiris blush with dissolve
-    ramiris "Теперь иди и исполни свою судьбу!"
+    call ramiris_root_kiss
     "[ramiris.name] медленно отступила в тень деревьев."
     "Я остался с новыми знаниями, ощущением неизбежного будущего и вкусом её губ на моих."
     p "Я знал, что этот лес изменит меня навсегда."
     p "Возможно, именно здесь начнётся моя истинная история."
     return
 
+label ramiris_root_kiss(is_preview=False):
+    scene bg ramiris_kiss1 at bg_size with fade
+    "[ramiris.name] посмотрела на меня с теплотой, её глаза отражали свет луны. Её щеки слегка порозовели."
+    ramiris "Спасибо тебе, [hero_name], за то, что поверил в магию этого леса."
+    "Она сделала шаг ближе, её пальцы легко коснулись моей руки."
+
+    scene bg ramiris_kiss2 at bg_size with dissolve
+    "В следующую секунду её губы мягко накрыли мои."
+    "Поцелуй был тёплым, наполненным нежностью и скрытой силой."
+    "В этот миг весь лес замер, словно сама природа благословляла этот момент."
+
+    scene bg ramiris_kiss1 at bg_size with dissolve
+    "Когда она отстранилась, её глаза сияли, а на губах играла загадочная улыбка."
+    
+    scene bg meadow at bg_size with fade
+    show ramiris blush with dissolve
+    ramiris "Теперь иди и исполни свою судьбу!"
+    return
 
 
+label ramiris_root_river_dialog(is_preview=False):
+    scene bg ramiris_river1 at bg_size with fade
+    ramiris "Знаешь, [hero_name], природа умеет лечить даже самые раненые сердца."
+    "[ramiris.name] села на мягкую траву, пригласив меня разделить с ней этот миг."
+    p "Расскажи, как ты стала хозяйкой этого леса? Какая цена была заплачена за твою силу?"
+    scene bg ramiris_river3 at bg_size with dissolve
+    ramiris "О, это длинная история, полная кровавых битв и потерь. Но, может, я расскажу тебе немного..."
+    scene bg ramiris_river2 at bg_size with dissolve
+    "Она задумалась, её взгляд стал тёплым, но с оттенком грусти."
+    scene bg ramiris_river3 at bg_size with dissolve
+    ramiris "Когда-то я была простой феей, как и многие. Но судьба распорядилась иначе..."
+    "[ramiris.name] начала рассказывать свою историю, словно ветер шёпотом передавал древние тайны."
+    scene bg ramiris_river4 at bg_size with dissolve
+    ramiris "Я родилась здесь, в этом лесу, и природа дала мне силу защищать его."
+    scene bg ramiris_river1 at bg_size with dissolve
+    p "Значит, ты приняла решение стать его хранительницей?"
+    scene bg ramiris_river3 at bg_size with dissolve
+    ramiris "Не столько выбор, сколько судьба. Каждая победа и поражение сделали меня тем, кто я есть."
+    scene bg ramiris_river1 at bg_size with dissolve
+    "Её голос затих, и тишина окутала нас, наполненная воспоминаниями."
+    p "Я чувствую, что за каждым твоим словом скрыта боль, но и огромная сила."
+    scene bg ramiris_river4 at bg_size with dissolve
+    ramiris "Боль и страсть — неразделимы. Они делают нас живыми, если мы умеем с ними обращаться."
+    scene bg ramiris_river1 at bg_size with dissolve
+    "Мы молчали некоторое время, слушая шум ручья и шелест листвы."
+    p "Что для тебя значит любовь, [ramiris.name]?"
+    scene bg ramiris_river3 at bg_size with dissolve
+    ramiris "Любовь — это огонь, который согревает в холодные ночи, но может обжечь, если им не управлять."
+    scene bg ramiris_river1 at bg_size with dissolve
+    p "Я никогда не чувствовал такой страсти. С тобой я готов рискнуть всем."
+    scene bg ramiris_river3 at bg_size with dissolve
+    ramiris "Ты умеешь находить слова... Возможно, ты станешь для меня этим светом."
+    scene bg ramiris_river1 at bg_size with dissolve
+    "Наши взгляды встретились, и в них мелькнула искра взаимопонимания и ожидания."
+    p "Кажется, наше приключение становится чем-то большим, чем просто поиск трав."
+    scene bg ramiris_river4 at bg_size with dissolve
+    ramiris "Помни, всё имеет свою цену. Каждая радость и каждая боль — часть пути."
+    return
 
-label fuck_ent:
+label fuck_ent(is_preview=False):
     "Разгневанный энт встает, пускай уже без части брони, но лишь злее"
     show ent prenaked with dissolve
-    call start_battle(170, 250, 'Разгневанный энт', 'next')
-    if last_battle_win:
+    if not is_preview:
+        call start_battle(170, 250, 'Разгневанный энт', 'next')
+    if last_battle_win or is_preview:
         show ent naked with dissolve
         ent "Что? Что ты собираешься со мной сделать?"
         p "Оооо, сейчас узнаешь."
 
-        scene ent_fuck1 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck1 at bg_size with dissolve
         call hide_dialog
         "Ты опрокидываешь ее на землю, срывая остатки веток с ее головы и тела"
         ent "А-ааааах!"
         
-        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck2 at bg_size with dissolve
         call hide_dialog
         mind "Она не сопротивляется.."
         ent "Ах! Ах! Ах!"
         
-        scene ent_fuck3 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck3 at bg_size with dissolve
         pause .5
-        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck2 at bg_size with dissolve
         pause .3
-        scene ent_fuck3 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck3 at bg_size with dissolve
         pause .3
-        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck2 at bg_size with dissolve
         pause .1
-        scene ent_fuck3 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck3 at bg_size with dissolve
         pause .1
-        scene ent_fuck2 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck2 at bg_size with dissolve
         pause .1
-        scene ent_fuck3 at Transform(zoom=1.5) with flash
+        scene ent_fuck3 at bg_size with flash
         pause .4
-        scene ent_fuck4_1 at Transform(zoom=1.5) with flash
+        scene ent_fuck4_1 at bg_size with flash
         call hide_dialog
         p "Аааргх!"
 
-        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        scene ent_fuck4_2 at bg_size with flash
         call hide_dialog
         ent "Ааааааах~~"
         p "Мы не закончили!"
         
-        scene ent_fuck5 at Transform(zoom=1.5) with flash
+        scene ent_fuck5 at bg_size with flash
         pause .3
-        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        scene ent_fuck4_2 at bg_size with flash
         pause .3
-        scene ent_fuck5 at Transform(zoom=1.5) with flash
+        scene ent_fuck5 at bg_size with flash
         pause .1
-        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        scene ent_fuck4_2 at bg_size with flash
         pause .1
-        scene ent_fuck5 at Transform(zoom=1.5) with flash
+        scene ent_fuck5 at bg_size with flash
         pause .1
-        scene ent_fuck4_2 at Transform(zoom=1.5) with flash
+        scene ent_fuck4_2 at bg_size with flash
         pause .1
-        scene ent_fuck5 at Transform(zoom=1.5) with flash
+        scene ent_fuck5 at bg_size with flash
         call hide_dialog
 
         ent "А-аааах~~"
         
-        scene ent_fuck6 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck6 at bg_size with dissolve
         call hide_dialog
         "Из ее киски сочится сперма"
         
-        scene ent_fuck7 at Transform(zoom=1.5) with dissolve
+        scene ent_fuck7 at bg_size with dissolve
         call hide_dialog
         "[ent.name] частично покрыта спермой. Ты поднимаешься и тянешься к ее личику"
         
-        scene ent_cumming1 at Transform(zoom=1.5) with dissolve
+        scene ent_cumming1 at bg_size with dissolve
         call hide_dialog
         p "Твое личико тоже можно удобрить"
 
-        scene ent_cumming2 at Transform(zoom=1.5) with flash
+        scene ent_cumming2 at bg_size with flash
         pause .4
-        scene ent_cumming3 at Transform(zoom=1.5) with flash
+        scene ent_cumming3 at bg_size with flash
         pause .5
-        scene ent_cumming4 at Transform(zoom=1.5) with flash
+        scene ent_cumming4 at bg_size with flash
         pause .3
-        scene ent_cumming4 at Transform(zoom=1.5) with flash
+        scene ent_cumming4 at bg_size with flash
         call hide_dialog
 
-        scene ent_go1 at Transform(zoom=1.5) with dissolve
+        scene ent_go1 at bg_size with dissolve
         call hide_dialog
         p "Прощай, теперь это мой лес."
 
-        scene ent_go2 at Transform(zoom=1.5) with dissolve
+        scene ent_go2 at bg_size with dissolve
         call hide_dialog
         "[ent.name] с тоской смотрит на тебя"
 
-        scene ent_go3 at Transform(zoom=1.5) with dissolve
+        scene ent_go3 at bg_size with dissolve
         call hide_dialog
         "Она будет ждать тебя..."
     return
 
-label fuck_ramiris:
+label fuck_ramiris(is_preview=False):
     scene bg forest_day with fade
     show ramiris smile with dissolve
     ramiris "Терпение, [hero_name]. Сначала мне нужно убедиться, что ты достоин моего внимания."
     
-    scene bg ramiris_undress1 at Transform(zoom=1.5) with fade
+    scene bg ramiris_undress1 at bg_size with fade
     call hide_dialog
     "[ramiris.name] грациозно взмахивает крыльями и взлетает, паря над землёй."
     "Её волосы струятся по ветру, словно танцуя в солнечных лучах."
     ramiris "Смотри внимательно, смертный~"
 
-    scene bg ramiris_undress2 at Transform(zoom=1.5) with fade
+    scene bg ramiris_undress2 at bg_size with fade
     call hide_dialog
     "Она пролетает мимо, и вокруг тебя начинают падать части её одежды. [ramiris.name] игриво приподнимает юбку, дразняще показывая свои трусики."
     p "Ты... что задумала?"
     ramiris "Разве не ясно? Я хочу, чтобы ты остался со мной..."
 
-    scene bg ramiris_undress3 at Transform(zoom=1.5) with fade
+    scene bg ramiris_undress3 at bg_size with fade
     call hide_dialog
     "[ramiris.name] делает ещё один круг, останавливается перед тобой и ловким движением демонстрирует, что трусиков на ней уже нет."
     "Твоё сердце колотится в груди, пока она продолжает соблазнительный танец раздевания."
 
-    scene bg ramiris_undress4 at Transform(zoom=1.5) with fade
+    scene bg ramiris_undress4 at bg_size with fade
     call hide_dialog
     "Наконец она сбрасывает платье полностью, и её крылья мерцают в лучах солнца, подчёркивая изящество обнажённого тела."
     ramiris "Ну, как тебе? Нравится?"
     p "Ты... просто невероятна."
     ramiris "Тогда подойди ко мне ближе, мой милый смертный. Я жажду тебя."
 
-    scene bg ramiris_undress5 at Transform(zoom=1.5) with fade
+    scene bg ramiris_undress5 at bg_size with fade
     call hide_dialog
     "[ramiris.name] мягко опускается на траву, маняще глядя на тебя и приглашая присоединиться."
     ramiris "Как тебе такой вид, [hero_name]?"
     "Её зов слишком силён, чтобы сопротивляться, и ты опускаешься к ней."
 
-    scene bg ramiris_sex1 at Transform(zoom=1.5) with fade
+    scene bg ramiris_sex1 at bg_size with fade
     call hide_dialog
     "Ты наклоняешься над ней, а [ramiris.name] смотрит на тебя с предвкушением."
     ramiris "Ну же, покажи мне, на что ты способен!"
 
-    scene bg ramiris_sex2 at Transform(zoom=1.5) with fade
+    scene bg ramiris_sex2 at bg_size with fade
     call hide_dialog
     "Ты достаёшь свой член — он уже твёрдый и готовый."
     ramiris "Ах... это что, уже?!"
 
-    scene bg ramiris_sex3_0 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex3_0 at bg_size with dissolve
     call hide_dialog
     "[ramiris.name] раздвигает ноги и прижимается к твоему огромному члену, её дыхание учащается."
     ramiris "Ох, боги... он такой большой..."
 
-    scene bg ramiris_sex3_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex3_1 at bg_size with dissolve
     call hide_dialog
     p "Не бойся, просто погладь его своими маленькими ручками, прижмись поближе."
 
-    scene bg ramiris_sex3_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex3_2 at bg_size with dissolve
     call hide_dialog
     "[ramiris.name] послушно обхватывает твой член обеими руками, её пальцы дрожат от волнения."
 
-    scene bg ramiris_sex4 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex4 at bg_size with dissolve
     call hide_dialog
     ramiris "Тебе... нравится это?"
     
-    scene bg ramiris_sex5 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex5 at bg_size with dissolve
     call hide_dialog
     p "О да, это потрясающе!"
 
-    scene bg ramiris_sex6 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex6 at bg_size with dissolve
     call hide_dialog
     "[ramiris.name] слегка улыбается, в её глазах мелькает озорная искорка, словно она задумала нечто большее."
 
-    scene bg ramiris_sex7 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex7 at bg_size with dissolve
     call hide_dialog
     "Она наклоняется ближе, прижимаясь лицом к твоему члену, её дыхание обжигает кожу."
     ramiris "А что, если я попробую вот так?.."
     
-    scene bg ramiris_sex8 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex8 at bg_size with dissolve
     call hide_dialog
     "[ramiris.name] начинает медленно облизывать твой член, её язычок скользит по поверхности."
 
-    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex9 at bg_size with dissolve
     call hide_dialog
     ramiris "Ммм... вкусно..."
 
-    scene bg ramiris_sex8 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex8 at bg_size with dissolve
     pause .3
-    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex9 at bg_size with dissolve
     pause .3
-    scene bg ramiris_sex8 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex8 at bg_size with dissolve
     pause .2
-    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex9 at bg_size with dissolve
     pause .2
-    scene bg ramiris_sex8 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex8 at bg_size with dissolve
     pause .1
-    scene bg ramiris_sex9 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex9 at bg_size with dissolve
     call hide_dialog
 
-    scene bg ramiris_sex10 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex10 at bg_size with flash
     call hide_dialog
     "Не выдержав её ласк, ты выпускаешь небольшую струйку спермы."
     
-    scene bg ramiris_sex11 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex11 at bg_size with dissolve
     call hide_dialog
     ramiris "Чтооо? Ты уже? Это всё?!"
 
-    scene bg ramiris_sex12 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex12 at bg_size with dissolve
     call hide_dialog
     "[ramiris.name] не сдаётся: она проводит руками вдоль твоего ствола, и он снова становится твёрдым."
     ramiris "Ого, тебе правда так нравится, [hero_name]?"
     
-    scene bg ramiris_sex13 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex13 at bg_size with dissolve
     call hide_dialog
     ramiris "Он всё ещё стоит... и что мне теперь с ним делать?"
     
-    scene bg ramiris_sex14 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex14 at bg_size with dissolve
     call hide_dialog
     p "У меня есть одна мысль..."
     ramiris "Ох, что ты задумал?!"
 
-    scene bg ramiris_sex15_0 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_0 at bg_size with dissolve
     call hide_dialog
     "Ты прижимаешь [ramiris.name] к своему члену, её маленькое тело дрожит от твоих движений."
     "Ты начинаешь использовать её тело, скользя вдоль него."
 
-    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_1 at bg_size with dissolve
     call hide_dialog
     p "[ramiris.name]... ты такая узкая и горячая."
     ramiris "Давай... не останавливайся, прошу!"
     pause .3
-    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_2 at bg_size with dissolve
     pause .3
-    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_1 at bg_size with dissolve
     pause .3
-    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_2 at bg_size with dissolve
     pause .3
-    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_1 at bg_size with dissolve
     pause .2
-    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_2 at bg_size with dissolve
     pause .2
-    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_1 at bg_size with dissolve
     pause .2
-    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_2 at bg_size with dissolve
     pause .1
-    scene bg ramiris_sex15_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_1 at bg_size with dissolve
     pause .1
-    scene bg ramiris_sex15_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex15_2 at bg_size with dissolve
     call hide_dialog
 
-    scene bg ramiris_sex16_1 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex16_1 at bg_size with flash
     pause .5
-    scene bg ramiris_sex16_2 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex16_2 at bg_size with flash
     pause .5
-    scene bg ramiris_sex16_3 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex16_3 at bg_size with flash
     call hide_dialog
     ramiris "А-а-ааах!"
     "[ramiris.name] дрожит всем телом, достигая оргазма от твоих движений."
 
     p "Теперь ты точно готова."
-    scene bg ramiris_sex17 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex17 at bg_size with dissolve
     call hide_dialog
     "Ты с силой входишь в её узкую киску, заполняя её целиком."
 
-    scene bg ramiris_sex17_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex17_1 at bg_size with dissolve
     pause .3
-    scene bg ramiris_sex17_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex17_2 at bg_size with dissolve
     pause .3
-    scene bg ramiris_sex17_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex17_1 at bg_size with dissolve
     pause .2
-    scene bg ramiris_sex17_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex17_2 at bg_size with dissolve
     pause .2
-    scene bg ramiris_sex17_1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex17_1 at bg_size with dissolve
     pause .1
-    scene bg ramiris_sex17_2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_sex17_2 at bg_size with dissolve
     call hide_dialog
 
-    scene bg ramiris_sex17_cum1 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex17_cum1 at bg_size with flash
     pause .5
-    scene bg ramiris_sex17_cum2 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex17_cum2 at bg_size with flash
     pause .5
-    scene bg ramiris_sex17_cum3 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex17_cum3 at bg_size with flash
     pause .5
-    scene bg ramiris_sex17_cum4 at Transform(zoom=1.5) with flash
+    scene bg ramiris_sex17_cum4 at bg_size with flash
     call hide_dialog
     p "Аааргх!"
     "Ты извергаешь поток спермы, заполняя её до краёв. Она вытекает из всех щелей, стекая по её телу."
     
-    scene bg ramiris_go0 at Transform(zoom=1.5) with fade
+    scene bg ramiris_go0 at bg_size with fade
     call hide_dialog
     "Ты бережно опускаешь её на землю — [ramiris.name] лежит, полностью покрытая твоей спермой."
     
-    scene bg ramiris_go1 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_go1 at bg_size with dissolve
     call hide_dialog
     "Она приходит в себя, пытаясь что-то сказать сквозь усталость."
     ramiris "М-мглф... ф-ф..."
     
-    scene bg ramiris_go2 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_go2 at bg_size with dissolve
     call hide_dialog
     "[ramiris.name] слабо шевелится, пытаясь подняться, но силы покинули её."
     
-    scene bg ramiris_go3 at Transform(zoom=1.5) with dissolve
+    scene bg ramiris_go3 at bg_size with dissolve
     call hide_dialog
     p "До встречи, [ramiris.name]. Мы ещё увидимся!"
     "Ты разворачиваешься и уходишь, оставляя её на поляне."

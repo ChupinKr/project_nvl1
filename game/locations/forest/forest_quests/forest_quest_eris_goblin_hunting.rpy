@@ -124,24 +124,7 @@ label forest_quest_eris_goblin_hunting:
     show eris t_smile_torn at mid with dissolve
     eris "Хаха! Мы победили!"
 
-    call forest_scene_music
-    scene bg eris_root_kiss1 at bg_size with fade
-    call hide_dialog
-    "[my_eris.name] приближается к тебе."
-    mind "Она? [my_eris.name] целует меня?!"
-    scene bg eris_root_kiss2 at bg_size with dissolve
-    pause .5
-    scene bg eris_root_kiss3 at bg_size with dissolve
-    call hide_dialog
-    scene bg eris_root_kiss4 at bg_size with pink
-    call hide_dialog
-    p "А-а-а, спасибо..."
-    scene bg eris_root_kiss5 at bg_size with dissolve
-    pause 1
-    scene bg eris_root_kiss6 at bg_size with dissolve
-    call hide_dialog
-
-    eris "Спасибо тебе, [hero_name]. Ты меня спас и заслужил это."
+    call forest_eris_root_kiss
 
     call dark_forest_scene
     show eris t_smile_torn at left_mid with dissolve
@@ -160,13 +143,28 @@ label forest_quest_eris_goblin_hunting:
 
     return 
 
-label forest_quest_eris_goblin_hunting_cave:
-    "Вы тихо уходите и направляетесь к ближайшей речке"
-    scene bg river at bg_size with fade
-    show eris t_angry_torn with dissolve
-    eris "Быстро, смываем с себя запах и уходим!"
-    "Вы залезаете в воду."
+label forest_eris_root_kiss(is_preview=False):
+    call forest_scene_music
+    scene bg eris_root_kiss1 at bg_size with fade
+    call hide_dialog
+    "[my_eris.name] приближается к тебе."
+    mind "Она? [my_eris.name] целует меня?!"
+    scene bg eris_root_kiss2 at bg_size with dissolve
+    pause .5
+    scene bg eris_root_kiss3 at bg_size with dissolve
+    call hide_dialog
+    scene bg eris_root_kiss4 at bg_size with pink
+    call hide_dialog
+    p "А-а-а, спасибо..."
+    scene bg eris_root_kiss5 at bg_size with dissolve
+    pause 1
+    scene bg eris_root_kiss6 at bg_size with dissolve
+    call hide_dialog
 
+    eris "Спасибо тебе, [hero_name]. Ты меня спас и заслужил это."
+    return
+
+label eris_root_river_situation(is_preview=False):
     call river_scene_music
     scene bg eris_root_river1 at bg_size with fade
     mind "Как же прекрасно её тело."
@@ -179,6 +177,16 @@ label forest_quest_eris_goblin_hunting_cave:
     scene bg eris_root_river5 at bg_size with dissolve
     pause .5
     scene bg eris_root_river6 at bg_size with flash
+    return
+
+label forest_quest_eris_goblin_hunting_cave:
+    "Вы тихо уходите и направляетесь к ближайшей речке"
+    scene bg river at bg_size with fade
+    show eris t_angry_torn with dissolve
+    eris "Быстро, смываем с себя запах и уходим!"
+    "Вы залезаете в воду."
+
+    call eris_root_river_situation
     $health -= 5
     $customNotify("[my_eris.name] дала тебе хорошую пощечину")
     if health <= 0:
@@ -281,8 +289,9 @@ label forest_quest_eris_goblin_hunting_cave:
     "Снаружи уже виднеется рассвет, вы выходите из пещеры."
     return
 
-label eris_root_blowjob:
-    $eris_first_time_root = False
+label eris_root_blowjob(is_preview=False):
+    if not is_preview:
+        $eris_first_time_root = False
     scene bg eris_root_cave5 at bg_size with dissolve
     "[my_eris.name] прижимаеться к твоей промежности."
     scene bg eris_root_cave6 at bg_size with dissolve

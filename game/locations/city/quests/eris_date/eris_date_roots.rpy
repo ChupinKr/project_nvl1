@@ -1,4 +1,4 @@
-label eris_root_sausage:
+label eris_root_sausage(is_preview=False):
     scene bg eris_root_sousage0 at bg_size with fade
     call hide_dialog
     p "[my_eris.name] выглядит очень довольной."
@@ -43,9 +43,10 @@ label eris_root_sausage:
     return
 
 
-label eris_root_date_dance:
+label eris_root_date_dance(is_preview=False):
     scene bg eris_root_date_dance0 at bg_size with fade
-    call start_battle(10, 10, my_eris.name, 'city', False)
+    if not is_preview:
+        call start_battle(10, 10, my_eris.name, 'city', False)
     scene bg eris_root_date_dance1 at bg_size with dissolve
     pause .3
     scene bg eris_root_date_dance2 at bg_size with dissolve
@@ -63,7 +64,8 @@ label eris_root_date_dance:
     scene bg eris_root_date_dance2 at bg_size with dissolve
     call hide_dialog
     eris "Ну же, поспевай!"
-    call start_battle(10, 10, my_eris.name, 'city', False)
+    if not is_preview:
+        call start_battle(10, 10, my_eris.name, 'city', False)
     scene bg eris_root_date_dance3 at bg_size with dissolve
     pause .3
     scene bg eris_root_date_dance4 at bg_size with dissolve
@@ -90,7 +92,8 @@ label eris_root_date_dance:
     call hide_dialog
     mind "Кажется она вообще не замечает, как сильно развевается её платье."
     eris "Давай же, танцуй со мной, [hero_name]."
-    call start_battle(10, 10, my_eris.name, 'city', False)
+    if not is_preview:
+        call start_battle(10, 10, my_eris.name, 'city', False)
     scene bg eris_root_date_dance6 at bg_size with dissolve
     pause .3
     scene bg eris_root_date_dance7 at bg_size with dissolve
@@ -130,8 +133,9 @@ label eris_root_date_dance:
     eris "Спасибо, [hero_name]!"
     return
 
-label eris_root_tea:
-    $eris_first_time_root = False
+label eris_root_tea(is_preview=False):
+    if not is_preview:
+        $eris_first_time_root = False
     scene bg eris_root_tea0 at bg_size with fade
     call hide_dialog
     eris "[hero_name], я принесла чай~"

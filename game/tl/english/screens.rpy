@@ -368,21 +368,9 @@ translate english strings:
 
 translate english strings:
 
-    # game/screens.rpy:628
-    old "Back"
-    new "Back"
-
-    # game/screens.rpy:629
-    old "History"
-    new "History"
-
     # game/screens.rpy:631
     old "Auto"
     new "Auto"
-
-    # game/screens.rpy:632
-    old "Save"
-    new "Save"
 
     # game/screens.rpy:633
     old "F.Save"
@@ -391,14 +379,6 @@ translate english strings:
     # game/screens.rpy:634
     old "F.Load"
     new "F.Load"
-
-    # game/screens.rpy:635
-    old "Preferences"
-    new "Preferences"
-
-    # game/screens.rpy:679
-    old "Start"
-    new "Start"
 
     # game/screens.rpy:696
     old "Load"
@@ -447,6 +427,9 @@ translate english strings:
     # game/screens.rpy:1133
     old "Load Sync"
     new "Load Sync"
+
+    old "Галерея"
+    new "Gallery"
 
     # game/screens.rpy:1142
     old "Download Sync"

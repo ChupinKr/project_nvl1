@@ -399,7 +399,7 @@ label go_goblin_cave:
             call forest_scene
     return
         
-label woblin_root_blowjob:
+label woblin_root_blowjob(is_preview=False):
     woblin sad_open_mouth "Слушаюсь..." with dissolve
     scene bg woblin_blowjob1 at Transform(zoom=1.5) with fade
     "Вы отошли на небольшую полянку в лесу, там, где вас никто не побеспокоит. [woblin.name] послушно села перед тобой на колени."
