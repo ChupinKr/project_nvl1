@@ -42,6 +42,7 @@ label m_root_tavern_blowjob:
     return
 
 label m_root_show(is_preview=False):
+    $setSceneUnlockedFlag('seen_m_root_show')
     m "Подожди меня тут, [hero_name]~"
     hide m with dissolve
     p "Надо же, как тут светло и чисто."
@@ -395,6 +396,7 @@ label m_root_show(is_preview=False):
     return
 
 label m_root_titfuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_m_root_titfuck')
     scene bg miku_titfuck1 at bg_size with dissolve
     call hide_dialog
     "[my_miku.name] отталкивает тебя на кровать и слегка приподнимает юбку так, что ты можешь увидеть ее белые трусики"
@@ -681,6 +683,7 @@ label m_root_titfuck(is_preview=False):
     return
 
 label m_root_blowjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_m_root_blowjob')
     m "Подожди меня тут, [hero_name]~"
     hide m with dissolve
     "..."
@@ -961,6 +964,7 @@ label m_root_blowjob_continue:
     return
 
 label m_root_fuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_m_root_fuck')
     m "Подожди тут, я сейчас вернусь... в новом образе~"
     hide m with dissolve
     p "..."
@@ -1192,6 +1196,7 @@ label m_root_anal_continue:
     return
 
 label m_root_anal(is_preview=False):
+    $setSceneUnlockedFlag('seen_m_root_anal')
     m "Подожди тут, я сейчас вернусь... в новом образе~"
     hide m with dissolve
     p "..."

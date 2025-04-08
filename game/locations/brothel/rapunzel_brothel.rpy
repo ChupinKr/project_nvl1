@@ -122,6 +122,7 @@ label rapunzel_root_menu:
             jump brothel
 
 label r_root_masturbate(is_preview=False):
+    $setSceneUnlockedFlag('seen_r_root_masturbate')
     "[r.name] садит тебя на свою кровать и скидывает с себя почти всю одежду"
     show r smile_naked  with dissolve
     "Она садится на колени перед тобой, обнажая свою прелестную грудь"
@@ -396,6 +397,7 @@ label r_root_masturbate(is_preview=False):
 
 
 label r_root_blowjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_r_root_blowjob')
     "[r.name] полностью разделась и посадила меня на кровать"
     show r smile_naked with fade
     r "[hero_name], Чего ты ждешь? Можешь тоже снимаешь штаны?"
@@ -613,6 +615,7 @@ label r_root_blowjob(is_preview=False):
     return
 
 label r_root_fuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_r_root_fuck')
     show r smile with dissolve
     r "Ой, [hero_name], я так хотела тебе кое-что показать~ *хихикает*"
     p "И что же ты придумала на этот раз?"

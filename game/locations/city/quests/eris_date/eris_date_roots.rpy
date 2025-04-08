@@ -1,4 +1,5 @@
 label eris_root_sausage(is_preview=False):
+    $setSceneUnlockedFlag('seen_eris_root_sausage')
     scene bg eris_root_sousage0 at bg_size with fade
     call hide_dialog
     p "[my_eris.name] выглядит очень довольной."
@@ -44,6 +45,7 @@ label eris_root_sausage(is_preview=False):
 
 
 label eris_root_date_dance(is_preview=False):
+    $setSceneUnlockedFlag('seen_eris_root_date_dance')
     scene bg eris_root_date_dance0 at bg_size with fade
     if not is_preview:
         call start_battle(10, 10, my_eris.name, 'city', False)
@@ -134,6 +136,7 @@ label eris_root_date_dance(is_preview=False):
     return
 
 label eris_root_tea(is_preview=False):
+    $setSceneUnlockedFlag('seen_eris_root_tea')
     if not is_preview:
         $eris_first_time_root = False
     scene bg eris_root_tea0 at bg_size with fade

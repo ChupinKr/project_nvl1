@@ -1,4 +1,5 @@
 label mummy_root_desert_pussy_fuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_mummy_root_desert_pussy_fuck')
     scene bg mummy_desert_pussy_fuck1 at bg_size with flash
     call hide_dialog
     "Ты хватаешь её за руки и начинаешь жестко насиловать."

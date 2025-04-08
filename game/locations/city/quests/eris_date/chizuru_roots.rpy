@@ -129,6 +129,7 @@ label chizuru_club_dialog:
     return
 
 label chizuru_root_dance(is_preview=False):
+    $setSceneUnlockedFlag('seen_chizuru_root_dance')
     scene bg chizuru_root_dance0 at bg_size with fade
     "Ты подходи к сцене и видишь чарующую девушку и ее шикарный танец с шестом."
 
@@ -183,6 +184,7 @@ label chizuru_root_dance(is_preview=False):
     return
 
 label chizuru_root_toilet_suck(is_preview=False):
+    $setSceneUnlockedFlag('seen_chizuru_root_toilet_suck')
     call brothel_bass_sound
     scene bg club_toilet at bg_size with dissolve
     show chizuru d_smirk at mid with dissolve
@@ -357,6 +359,7 @@ label chizuru_root_toilet_suck(is_preview=False):
     return
 
 label chizuru_root_toilet_own_masturbate(is_preview=False):
+    $setSceneUnlockedFlag('seen_chizuru_root_toilet_own_masturbate')
     scene bg chizuru_root_toilet_own_masturbate0 at bg_size with dissolve
     pause .5
     scene bg chizuru_root_toilet_own_masturbate0_2 at bg_size with dissolve
@@ -446,6 +449,7 @@ label chizuru_root_toilet_own_masturbate(is_preview=False):
     return
 
 label chizuru_root_toilet_vaginal_sex(is_preview=False):
+    $setSceneUnlockedFlag('seen_chizuru_root_toilet_vaginal_sex')
     p "Самое время для главного блюда."
     scene bg chizuru_root_toilet_vaginal_sex0 at bg_size with vpunch
     pause .5

@@ -258,6 +258,7 @@ label holo_market_root_menu:
             jump market
 
 label h_root_masturbate(is_preview=False):
+    $setSceneUnlockedFlag('seen_h_root_masturbate')
     scene bg holo_room at bg_size with dissolve
     "[h.name] Приводит тебя к себе в комнату"
     h "Подожди тут, я переоденусь~"
@@ -567,6 +568,7 @@ label h_root_masturbate(is_preview=False):
 
 
 label h_root_titfuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_h_root_titfuck')
     scene bg holo_room at bg_size with dissolve
     "[h.name] Приводит тебя к себе в комнату"
     show h smile_shy with fade
@@ -799,6 +801,7 @@ label h_root_titfuck(is_preview=False):
 
 # Сцена глубокого минета с [h.name]
 label h_root_blowjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_h_root_blowjob')
     scene bg holo_room at bg_size with fade
     "[h.name] приводит тебя в свою комнату."
     show h smile_panties with dissolve
@@ -1024,6 +1027,7 @@ label h_root_blowjob_continue(is_preview=False):
     return
 
 label h_root_fuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_h_root_fuck')
     scene bg holo_room at bg_size with fade
     "[h.name] приводит тебя в свою комнату, её глаза блестят хитринкой, а кончик волчьего хвоста слегка покачивается."
     show h smile_shy with dissolve
@@ -1247,6 +1251,7 @@ label h_root_fuck_continue:
     return
 
 label h_root_anal(is_preview=False):
+    $setSceneUnlockedFlag('seen_h_root_anal')
     scene bg holo_room at bg_size with fade
     "[h.name] приводит тебя в свою комнату."
     show h smile_no_top with fade
@@ -1499,6 +1504,7 @@ label h_root_anal_continue(is_preview=False):
     return
 
 label h_root_footfuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_h_root_footfuck')
     scene bg h_foot1 at bg_size with fade
     # Холо сидит на стуле или кровати, вытягивая ноги к ГГ
     "[h.name] садится напротив тебя, вытягивая свои стройные ноги и шевеля пальцами."

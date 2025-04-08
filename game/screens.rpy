@@ -6,6 +6,53 @@ init -1 python:
     if not persistent.lang == "english":
         if not persistent.lang == "russian":
             persistent.lang = "english"
+    if not persistent.scene_flags:
+        persistent.scene_flags = {
+            'seen_r_root_masturbate': False,
+            'seen_r_root_blowjob': False,
+            'seen_r_root_fuck': False,
+            'seen_blowjob_elsa': False,
+            'seen_elsa_masturbate_scene': False,
+            'seen_nagatoro_root_show': False,
+            'seen_nagatoro_root_titfuck': False,
+            'seen_eris_root_sausage': False,
+            'seen_eris_root_date_dance': False,
+            'seen_forest_eris_root_kiss': False,
+            'seen_eris_root_river_situation': False,
+            'seen_heal_eris_by_yourself': False,
+            'seen_eris_root_handjob': False,
+            'seen_eris_root_blowjob': False,
+            'seen_eris_root_tea': False,
+            'seen_h_root_masturbate': False,
+            'seen_h_root_titfuck': False,
+            'seen_h_root_blowjob': False,
+            'seen_h_root_fuck': False,
+            'seen_h_root_anal': False,
+            'seen_m_root_show': False,
+            'seen_m_root_titfuck': False,
+            'seen_m_root_blowjob': False,
+            'seen_m_root_fuck': False,
+            'seen_m_root_anal': False,
+            'seen_mer_root_blowjob': False,
+            'seen_asoka_root_wake_up': False,
+            'seen_asoka_root_suck_another': False,
+            'seen_asoka_root_tent_blowjob': False,
+            'seen_asoka_root_tent_vaginal_fuck': False,
+            'seen_chizuru_root_dance': False,
+            'seen_chizuru_root_toilet_suck': False,
+            'seen_chizuru_root_toilet_own_masturbate': False,
+            'seen_chizuru_root_toilet_vaginal_sex': False,
+            'seen_freya_root_masturbate': False,
+            'seen_ramiris_root_river_dialog': False,
+            'seen_ramiris_root_kiss': False,
+            'seen_fuck_ramiris': False,
+            'seen_guy1_black_alley_root': False,
+            'seen_fuck_ent': False,
+            'seen_mummy_root_desert_pussy_fuck': False,
+            'seen_woblin_root_blowjob': False,
+            'seen_wragon_root_fuck': False,
+        }
+
 
 init offset = -1
 define is_cheats = False
@@ -40,6 +87,49 @@ init python:
             self.name = name
             self.image = image
             self.scenes = scenes
+    
+    def getSceneUnlockedFlag(scene_label):
+        # Проверяем, существует ли флаг в persistent, иначе возвращаем False
+        return persistent.scene_flags.get(scene_label, False)
+
+    def setSceneUnlockedFlag(scene_label):
+        # Устанавливаем флаг просмотренности сцены в True
+        if persistent.scene_flags is not None:
+            persistent.scene_flags[scene_label] = True
+        else:
+            persistent.scene_flags = {scene_label: True}
+
+    def has_locked_scenes(character):
+        # Проверяем, есть ли у персонажа хотя бы одна заблокированная сцена
+        if character is None or not character.scenes:
+            return False
+        for scene in character.scenes:
+            if not getSceneUnlockedFlag("seen_" + scene.label):
+                return True
+        return False
+
+    def try_unlock_all_scenes(code):
+        # Проверяем код и выполняем действия
+        if code == "BESTBOOSTEREVER":
+            unlock_all_scenes()
+            renpy.store.unlock_code = ""  # Очищаем поле ввода
+            renpy.store.unlock_error = ""  # Очищаем сообщение об ошибке
+            renpy.show_screen("gallery_scenes")
+        else:
+            renpy.store.unlock_code = ""  # Очищаем поле ввода
+            renpy.store.unlock_error = "Неверный код"  # Устанавливаем сообщение об ошибке
+
+    def unlock_all_scenes():
+        # Разблокируем все сцены, устанавливая флаги в True
+        if persistent.scene_flags is not None:
+            for key in persistent.scene_flags:
+                persistent.scene_flags[key] = True
+
+    def lock_all_scenes():
+        # Разблокируем все сцены, устанавливая флаги в True
+        if persistent.scene_flags is not None:
+            for key in persistent.scene_flags:
+                persistent.scene_flags[key] = False
 
 # Данные персонажей
 default gallery_characters = [
@@ -144,8 +234,10 @@ default gallery_characters = [
 default current_page = 0
 default selected_character = None
 default previous_screen = None
+default unlock_code = ""  # Переменная для хранения введенного кода
+default unlock_error = ""  # Переменная для сообщения об ошибке
 
-# Экран выбора персонажей
+# Экран выбора персонажей (без изменений)
 screen gallery_characters():
     tag menu
     
@@ -153,12 +245,11 @@ screen gallery_characters():
         vbox:
             xalign 0.5
             yalign 0.5
-            spacing 20
             
-            grid 4 2:
+            grid 5 2:
                 xalign 0.5
                 spacing 20
-                $ characters_per_page = 8
+                $ characters_per_page = 10
                 $ total_pages = (len(gallery_characters) - 1) // characters_per_page + 1
                 $ start_index = current_page * characters_per_page
                 $ end_index = min(start_index + characters_per_page, len(gallery_characters))
@@ -169,25 +260,22 @@ screen gallery_characters():
                             idle Transform(char.image, zoom=0.2)
                             hover Transform(char.image, zoom=0.2, matrixcolor=BrightnessMatrix(0.1))
                             action [SetVariable("selected_character", char), SetVariable("previous_screen", "gallery_characters"), ShowMenu("gallery_scenes")]
-                        text char.name xalign 0.5
+                        text (char.name[:10] + "..." if len(char.name) > 10 else char.name) xalign 0.5
                 
                 for i in range(end_index - start_index, characters_per_page):
-                    null
-            
-            # Добавляем пустое пространство, чтобы отодвинуть кнопки вниз
-            null height 362  # Регулируйте высоту по необходимости
+                    null width 256 height 144
+            null height 402
             
             if total_pages > 1:
                 hbox:
                     xalign 0.5
-                    spacing 20
                     
                     textbutton _("<") action If(current_page > 0, SetVariable("current_page", current_page - 1))
                     for i in range(total_pages):
                         textbutton str(i + 1) action SetVariable("current_page", i)
                     textbutton _(">") action If(current_page < total_pages - 1, SetVariable("current_page", current_page + 1))
 
-# Экран выбора сцен
+# Экран выбора сцен (с добавлением кнопки "Разблокировать всё")
 screen gallery_scenes():
     tag menu
     
@@ -198,23 +286,60 @@ screen gallery_scenes():
             spacing 20
             
             if selected_character is not None:
-                grid 5 2:  # Убираем frame, размещаем grid напрямую
+                grid 5 2:
                     xalign 0.5
-                    spacing 15
+                    spacing 20
                     for scene in selected_character.scenes:
                         vbox:
-                            imagebutton:
-                                idle Transform(scene.thumbnail, zoom=0.2)
-                                hover Transform(scene.thumbnail, zoom=0.2, matrixcolor=BrightnessMatrix(0.1))
-                                action [Hide("gallery_scenes"), Function(renpy.call_in_new_context, scene.label, is_preview=True), ShowMenu("gallery_scenes")]
-                            text scene.name xalign 0.5 size 16
+                            if getSceneUnlockedFlag("seen_" + scene.label):
+                                imagebutton:
+                                    idle Transform(scene.thumbnail, zoom=0.2)
+                                    hover Transform(scene.thumbnail, zoom=0.2, matrixcolor=BrightnessMatrix(0.1))
+                                    action [Hide("gallery_scenes"), Function(renpy.call_in_new_context, scene.label, is_preview=True), ShowMenu("gallery_scenes")]
+                            else:
+                                imagebutton:
+                                    idle Transform(scene.thumbnail, zoom=0.2, matrixcolor=SaturationMatrix(0.0) * BrightnessMatrix(-0.4))
+                                    action None
+                            text (scene.name[:10] + "..." if len(scene.name) > 10 else scene.name) xalign 0.5
+        
+        null height 402
+        hbox:
+            xalign 0.1
+            yalign 0.95
+            spacing 350
+            textbutton _("Назад") action ShowMenu("gallery_characters")
+            if has_locked_scenes(selected_character):
+                textbutton _("Разблокировать всё") action ShowMenu("unlock_code_input")
 
-                
-        null height 442  # Регулируйте высоту по необходимости
-        textbutton _("Назад") action ShowMenu("gallery_characters")
+# Экран ввода кода
+screen unlock_code_input():
+    tag menu
+    
+    use game_menu(_("Введите код разблокировки"), scroll="viewport"):
+        vbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 20
+            
+            # Поле ввода кода
+            input:
+                value VariableInputValue("unlock_code")
+                xalign 0.5
+                length 20
+            
+            # Сообщение об ошибке, если код неверный
+            if unlock_error:
+                text unlock_error color "#ff0000" xalign 0.5
+            
+            # Кнопки
+            hbox:
+                xalign 0.5
+                spacing 20
+                textbutton _("Подтвердить") action Function(try_unlock_all_scenes, unlock_code)
+                textbutton _("Получить код") action OpenURL("https://boosty.to/ko2ed")
+                textbutton _("Отмена") action [SetVariable("unlock_code", ""), SetVariable("unlock_error", ""), ShowMenu("gallery_scenes")]
 
 # Стили
-# Убираем style gallery_frame, так как frame больше не используется
 style gallery_button_text:
     size 16
     color gui.idle_color

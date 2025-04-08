@@ -400,6 +400,7 @@ label go_goblin_cave:
     return
         
 label woblin_root_blowjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_woblin_root_blowjob')
     woblin sad_open_mouth "Слушаюсь..." with dissolve
     scene bg woblin_blowjob1 at bg_size with fade
     "Вы отошли на небольшую полянку в лесу, там, где вас никто не побеспокоит. [woblin.name] послушно села перед тобой на колени."

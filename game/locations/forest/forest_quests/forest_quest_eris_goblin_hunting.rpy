@@ -144,6 +144,7 @@ label forest_quest_eris_goblin_hunting:
     return 
 
 label forest_eris_root_kiss(is_preview=False):
+    $setSceneUnlockedFlag('seen_forest_eris_root_kiss')
     call forest_scene_music
     scene bg eris_root_kiss1 at bg_size with fade
     call hide_dialog
@@ -165,6 +166,7 @@ label forest_eris_root_kiss(is_preview=False):
     return
 
 label eris_root_river_situation(is_preview=False):
+    $setSceneUnlockedFlag('seen_eris_root_river_situation')
     call river_scene_music
     scene bg eris_root_river1 at bg_size with fade
     mind "Как же прекрасно её тело."
@@ -290,6 +292,7 @@ label forest_quest_eris_goblin_hunting_cave:
     return
 
 label eris_root_blowjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_eris_root_blowjob')
     if not is_preview:
         $eris_first_time_root = False
     scene bg eris_root_cave5 at bg_size with dissolve

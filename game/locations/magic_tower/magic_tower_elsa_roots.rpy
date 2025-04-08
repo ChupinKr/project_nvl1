@@ -28,6 +28,7 @@ label forest_quest_elsa_materials_reward:
     return
 
 label blowjob_elsa(is_preview=False):
+    $setSceneUnlockedFlag('seen_blowjob_elsa')
     scene bg elsa_tower_room at bg_size with fade
     "..."
     "....."
@@ -199,6 +200,7 @@ label blowjob_elsa(is_preview=False):
 
 # Сцена анального секса с Эльзой
 label elsa_masturbate_scene(is_preview=False):
+    $setSceneUnlockedFlag('seen_elsa_masturbate_scene')
     scene bg elsa_tower_room at bg_size with fade
     # Светлая комната в магической башне: белые стены, ледяные узоры, мягкий свет через окно
     "Эльза ведёт тебя в свою комнату, её шаги уверенные, но в воздухе витает лёгкое напряжение."

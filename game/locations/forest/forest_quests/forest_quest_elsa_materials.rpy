@@ -237,6 +237,7 @@ label forest_quest_elsa_materials:
     return
 
 label ramiris_root_kiss(is_preview=False):
+    $setSceneUnlockedFlag('seen_ramiris_root_kiss')
     scene bg ramiris_kiss1 at bg_size with fade
     "[ramiris.name] посмотрела на меня с теплотой, её глаза отражали свет луны. Её щеки слегка порозовели."
     ramiris "Спасибо тебе, [hero_name], за то, что поверил в магию этого леса."
@@ -257,6 +258,7 @@ label ramiris_root_kiss(is_preview=False):
 
 
 label ramiris_root_river_dialog(is_preview=False):
+    $setSceneUnlockedFlag('seen_ramiris_root_river_dialog')
     scene bg ramiris_river1 at bg_size with fade
     ramiris "Знаешь, [hero_name], природа умеет лечить даже самые раненые сердца."
     "[ramiris.name] села на мягкую траву, пригласив меня разделить с ней этот миг."
@@ -296,6 +298,7 @@ label ramiris_root_river_dialog(is_preview=False):
     return
 
 label fuck_ent(is_preview=False):
+    $setSceneUnlockedFlag('seen_fuck_ent')
     "Разгневанный энт встает, пускай уже без части брони, но лишь злее"
     show ent prenaked with dissolve
     if not is_preview:
@@ -390,6 +393,7 @@ label fuck_ent(is_preview=False):
     return
 
 label fuck_ramiris(is_preview=False):
+    $setSceneUnlockedFlag('seen_fuck_ramiris')
     scene bg forest_day at bg_size with fade
     show ramiris smile with dissolve
     ramiris "Терпение, [hero_name]. Сначала мне нужно убедиться, что ты достоин моего внимания."

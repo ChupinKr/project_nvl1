@@ -75,6 +75,7 @@ label nagatoro_dodjo_menu:
             jump city
 
 label nagatoro_root_show(is_preview=False):
+    $setSceneUnlockedFlag('seen_nagatoro_root_show')
     hide nag with fade 
     scene bg nag_show0 at bg_size with dissolve
     "[nag.name] в спортивном костюме села напротив тебя"
@@ -371,6 +372,7 @@ label nagatoro_root_show(is_preview=False):
     jump city
 
 label nagatoro_root_titfuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_nagatoro_root_titfuck')
     nag grin "Уже не терпится, да?" with dissolve
     hide nag with dissolve
     "[nag.name] вышла из комнаты"

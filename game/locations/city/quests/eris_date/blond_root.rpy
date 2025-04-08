@@ -1,5 +1,6 @@
 
 label guy1_black_alley_root(is_preview=False):
+    $setSceneUnlockedFlag('seen_guy1_black_alley_root')
     scene bg guy1_black_alley_root_masturbate0 at bg_size with fade
     "[guy1.name] подходит ближе, медленно расстегивая куртку."
     guy1 "В таком случае мне надо тебя отблагодарить~"

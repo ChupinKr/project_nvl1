@@ -1,5 +1,6 @@
 
 label asoka_root_wake_up(is_preview=False):
+    $setSceneUnlockedFlag('seen_asoka_root_wake_up')
     scene bg black_screen at bg_size with long_fade
     mind "Что? Я умер?{w} Опять?"
     mind "Разве можно умереть второй раз? Я думал, что Богиня мне поможет..."
@@ -33,6 +34,7 @@ label asoka_root_wake_up(is_preview=False):
 
 
 label asoka_root_tent_blowjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_asoka_root_tent_blowjob')
     asoka "Действует безотказно~" with dissolve
     "..."
     "....."
@@ -169,6 +171,7 @@ label asoka_root_tent_blowjob(is_preview=False):
     return
 
 label asoka_root_suck_another(is_preview=False):
+    $setSceneUnlockedFlag('seen_asoka_root_suck_another')
     "Ты видишь, как [asoka.name] отсасывает какой-то нежити."
     scene bg asoka_root_suck_another1 at bg_size with fade
     pause .2
@@ -239,6 +242,7 @@ label asoka_root_suck_another(is_preview=False):
     return
 
 label asoka_root_tent_vaginal_fuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_asoka_root_tent_vaginal_fuck')
     scene bg asoka_root_vaginal_fuck1_1 at bg_size with fade
     call hide_dialog
     "[asoka.name] поднимает топ, огаляя свою грудь."

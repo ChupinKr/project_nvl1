@@ -101,6 +101,7 @@ label freya_root_menu:
             jump talk_to_freya_menu
 
 label freya_root_masturbate(is_preview=False):
+    $setSceneUnlockedFlag('seen_freya_root_masturbate')
     hide f
     "Вы каким-то образом появляетесь у тебя в комнате"
     scene bg room at bg_size with dissolve

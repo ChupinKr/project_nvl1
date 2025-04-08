@@ -150,6 +150,7 @@ label eris_root_menu:
 
 
 label eris_root_handjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_eris_root_handjob')
     if not is_preview:
         $ eris_first_time_root = False
     "[eris.name] садит тебя на кровать и встает перед тобой в полупрозрачной белой ночнушке."

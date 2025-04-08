@@ -177,6 +177,7 @@ label mer_root_menu:
             jump magic_tower_hub
 
 label mer_root_blowjob(is_preview=False):
+    $setSceneUnlockedFlag('seen_mer_root_blowjob')
     scene bg magic_library1 at bg_size with fade
     show mer holding_breast with fade
     call hide_dialog

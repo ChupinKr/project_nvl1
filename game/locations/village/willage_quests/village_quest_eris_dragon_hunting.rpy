@@ -554,6 +554,7 @@ label dragon_fight_mountain_fail:
     jump battle_loss
 
 label heal_eris_by_yourself(is_preview=False):
+    $setSceneUnlockedFlag('seen_heal_eris_by_yourself')
     scene bg eris_mountain_unconscious at bg_size with fade
     p "Мне нужно как-то поднять [my_eris.name] на ноги. И чем быстрее, тем лучше."
     menu:
@@ -688,6 +689,7 @@ label return_village_quest_eris_dragon_hunting:
     return
 
 label makima_titfuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_makima_titfuck')
     scene bg makima_root_titfuck2 at bg_size with fade
     "[makima.name] поднимает свою рубашку и открывает тебе вид на ее шикарную грудь."
     p "*сглатывает*"
@@ -843,6 +845,7 @@ label makima_titfuck(is_preview=False):
     return
 
 label wragon_root_fuck(is_preview=False):
+    $setSceneUnlockedFlag('seen_wragon_root_fuck')
     scene bg wragon_anal1 at bg_size with fade
     "[wragon.name] заводит тебя в пещеру."
     "Ты видишь множество комнат, но больше всего твое внимание привлекает [wragon.name] и её сочная задница."
