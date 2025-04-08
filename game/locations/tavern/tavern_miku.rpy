@@ -947,7 +947,7 @@ label m_root_blowjob_continue:
         menu:
             "Секс":
                 p "Подставляй задницу!"
-                scene bg m_show20 with fade
+                scene bg m_show20 at bg_size with fade
                 "[my_miku.name] вытирает слёзы и послушно поворачивается к тебе"
                 call m_root_fuck_continue
                 return

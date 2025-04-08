@@ -362,7 +362,7 @@ label tower_training_scene:
     if renpy.music.get_playing("music") != "audio/mt_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/mt_sound.ogg" fadein 5.0 loop
-    scene bg tower_training with fade
+    scene bg tower_training at bg_size with fade
     return
 
 label ice_caves_scene:

@@ -48,7 +48,7 @@ label guild_d_menu:
             jump guild
 
 label toilet:
-    scene bg toilet with fade
+    scene bg club_toilet at bg_size with fade
     menu:
         "Позвать [d.name]" if my_darkness_love >= 90:
             jump toilet_root_d
