@@ -52,7 +52,7 @@ label forest_quest_eris_goblin_hunting:
     eris "Пф-ф... Они даже не сопротивляются!"
 
     #Глубже в лес, новые враги
-    scene bg dark_forest2 with fade
+    scene bg dark_forest2 at bg_size with fade
     show eris t_smirk at mid with dissolve
     "Вы двинулись дальше, пробираясь через темный лес в его глубь."
     

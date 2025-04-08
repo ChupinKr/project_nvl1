@@ -170,15 +170,15 @@ label forest_scene:
     call forest_scene_music
     $setLocation("forest")
     if isMorning():
-        scene bg forest_morning with fade
+        scene bg forest_morning at bg_size with fade
     elif isDay():
-        scene bg forest_day with fade
+        scene bg forest_day at bg_size with fade
     elif isEvening():
-        scene bg forest_evening with fade
+        scene bg forest_evening at bg_size with fade
     elif isNight():
-        scene bg forest_night with fade
+        scene bg forest_night at bg_size with fade
     else:
-        scene bg forest_day with fade
+        scene bg forest_day at bg_size with fade
     return
     
 label forest_scene_music:
@@ -205,15 +205,15 @@ label tavern_scene:
     if renpy.music.get_playing("music") != "audio/tavern_music.ogg":
         play music "audio/tavern_music.ogg" fadein 5.0 loop
     if isMorning():
-        scene bg tavern_morning with fade
+        scene bg tavern_morning at bg_size with fade
     elif isDay():
-        scene bg tavern_day with fade
+        scene bg tavern_day at bg_size with fade
     elif isEvening():
-        scene bg tavern_evening with fade
+        scene bg tavern_evening at bg_size with fade
     elif isNight():
-        scene bg tavern_night with fade
+        scene bg tavern_night at bg_size with fade
     else:
-        scene bg tavern_day with fade
+        scene bg tavern_day at bg_size with fade
     return
 
 label city_scene(bgc = None):
@@ -222,39 +222,39 @@ label city_scene(bgc = None):
     call city_music_scene
     if bgc:
         if bgc == "morning":
-            scene bg city_morning with fade
+            scene bg city_morning at bg_size with fade
         elif bgc == "day":
-            scene bg city_day with fade
+            scene bg city_day at bg_size with fade
         elif bgc == "evening":
-            scene bg city_evening with fade
+            scene bg city_evening at bg_size with fade
         elif bgc == "night":
-            scene bg city_night with fade
+            scene bg city_night at bg_size with fade
         return
     if isMorning():
-        scene bg city_morning with fade
+        scene bg city_morning at bg_size with fade
     elif isDay():
-        scene bg city_day with fade
+        scene bg city_day at bg_size with fade
     elif isEvening():
-        scene bg city_evening with fade
+        scene bg city_evening at bg_size with fade
     elif isNight():
-        scene bg city_night with fade
+        scene bg city_night at bg_size with fade
     else:
-        scene bg city_day with fade
+        scene bg city_day at bg_size with fade
     return
 
 label city_scene_bg():
     $setLocation("city")
     call city_music_scene
     if isMorning():
-        scene bg city_morning with fade
+        scene bg city_morning at bg_size with fade
     elif isDay():
-        scene bg city_day with fade
+        scene bg city_day at bg_size with fade
     elif isEvening():
-        scene bg city_evening with fade
+        scene bg city_evening at bg_size with fade
     elif isNight():
-        scene bg city_night with fade
+        scene bg city_night at bg_size with fade
     else:
-        scene bg city_day with fade
+        scene bg city_day at bg_size with fade
     return
 
 label city_music_scene(bgc = None):
@@ -321,15 +321,15 @@ label black_alley_scene:
 label ruined_temple_scene:
     $setLocation("ruined_temple")
     if isMorning():
-        scene bg ruined_temple_morning with fade
+        scene bg ruined_temple_morning at bg_size with fade
     elif isDay():
-        scene bg ruined_temple_day with fade
+        scene bg ruined_temple_day at bg_size with fade
     elif isEvening():
-        scene bg ruined_temple_evening with fade
+        scene bg ruined_temple_evening at bg_size with fade
     elif isNight():
-        scene bg ruined_temple_night with fade
+        scene bg ruined_temple_night at bg_size with fade
     else:
-        scene bg ruined_temple_day with fade
+        scene bg ruined_temple_day at bg_size with fade
     return
 
 label training_ground_scene:
@@ -338,15 +338,15 @@ label training_ground_scene:
         play sound "audio/steps.ogg"
         play music "audio/tg_sound.ogg" fadein 5.0 loop
     if isMorning():
-        scene bg training_ground_morning with fade
+        scene bg training_ground_morning at bg_size with fade
     elif isDay():
-        scene bg training_ground_day with fade
+        scene bg training_ground_day at bg_size with fade
     elif isEvening():
-        scene bg training_ground_evening with fade
+        scene bg training_ground_evening at bg_size with fade
     elif isNight():
-        scene bg training_ground_night with fade
+        scene bg training_ground_night at bg_size with fade
     else:
-        scene bg training_ground_day with fade
+        scene bg training_ground_day at bg_size with fade
     return
 
 label magic_tower_scene:
@@ -354,7 +354,7 @@ label magic_tower_scene:
     play sound "audio/steps.ogg"
     if renpy.music.get_playing("music") != "audio/mt_sound.ogg":
         play music "audio/mt_sound.ogg" fadein 5.0 loop
-    scene bg magic_tower with fade
+    scene bg magic_tower at bg_size with fade
     return
 
 label tower_training_scene:
@@ -370,7 +370,7 @@ label ice_caves_scene:
     play sound "audio/steps.ogg"
     if renpy.music.get_playing("music") != "audio/arctic_wind.ogg":
         play music "audio/arctic_wind.ogg" fadein 5.0 loop
-    scene bg ice_caves at Transform(zoom=1.5) with fade
+    scene bg ice_caves at bg_size with fade
     return
 
 label hospital_scene:
@@ -378,7 +378,7 @@ label hospital_scene:
     if renpy.music.get_playing("music") != "audio/hospital_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/hospital_sound.ogg" fadein 5.0 loop
-    scene bg hospital with fade
+    scene bg hospital at bg_size with fade
     return
 
 label haven_scene:
@@ -386,7 +386,7 @@ label haven_scene:
     if renpy.music.get_playing("music") != "audio/haven.ogg":
         call magic_dissapear
         play music "audio/haven.ogg" fadein 5.0 loop
-    scene bg haven with fade
+    scene bg haven at bg_size with fade
     return
 
 label magic_dissapear:
@@ -398,7 +398,7 @@ label surgency_scene:
     if renpy.music.get_playing("music") != "audio/surgency.ogg":
         play sound "audio/steps.ogg"
         play music "audio/surgency.ogg" fadein 5.0 loop
-    scene bg surgery with fade
+    scene bg surgery at bg_size with fade
     return
 
 label brothel_scene:
@@ -408,15 +408,15 @@ label brothel_scene:
         play music "audio/brothel_sound.ogg" fadein 5.0 loop
     $ girl = renpy.random.randint(1, 100)
     if girl < 20:
-        scene bg brothel_girl1 with fade
+        scene bg brothel_girl1 at bg_size with fade
     if girl >= 20 and girl < 40:
-        scene bg brothel_girl2 with fade
+        scene bg brothel_girl2 at bg_size with fade
     if girl >= 40 and girl < 60:
-        scene bg brothel_girl3 with fade
+        scene bg brothel_girl3 at bg_size with fade
     if girl >= 60 and girl < 80:
-        scene bg brothel_girl4 with fade
+        scene bg brothel_girl4 at bg_size with fade
     if girl >= 80 and girl < 100:
-        scene bg brothel_girl5 with fade
+        scene bg brothel_girl5 at bg_size with fade
     return
 
 label room_scene:
@@ -424,7 +424,7 @@ label room_scene:
     if renpy.music.get_playing("music") != "audio/room_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/room_sound.ogg" fadein 5.0 loop
-    scene bg room with fade
+    scene bg room at bg_size with fade
     return
 
 label guild_scene:
@@ -432,7 +432,7 @@ label guild_scene:
     if renpy.music.get_playing("music") != "audio/guild_sound.ogg":
         play sound "audio/steps.ogg"
         play music "audio/guild_sound.ogg" fadein 5.0 loop
-    scene bg guild with fade
+    scene bg guild at bg_size with fade
     return
 
 label dodjo_scene:
@@ -440,7 +440,7 @@ label dodjo_scene:
     if renpy.music.get_playing("music") != "audio/dodjo_music.ogg":
         play sound "audio/steps.ogg"
         play music "audio/dodjo_music.ogg" fadein 5.0 loop
-    scene bg nagatoro_dodjo with fade
+    scene bg nagatoro_dodjo at bg_size with fade
     return
 
     
@@ -449,7 +449,7 @@ label dark_forest_scene:
     if renpy.music.get_playing("music") != "audio/forest_evening_night_music.ogg":
         play sound "audio/steps.ogg"
         play music "audio/forest_evening_night_music.ogg" fadein 5.0 loop
-    scene bg dark_forest with fade
+    scene bg dark_forest at bg_size with fade
     return
     
 label village_scene:

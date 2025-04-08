@@ -21,7 +21,7 @@ init python:
             renpy.restart_interaction()
             renpy.pause(0.1)
 label magic_training_gmmm:
-    scene bg room
+    scene bg room at bg_size
 
     if persistent.lang == "russian":
         if is_cheats:

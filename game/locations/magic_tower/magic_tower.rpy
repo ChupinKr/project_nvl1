@@ -8,7 +8,7 @@ label magic_tower_elsa:
         jump magic_tower_with_elsa_no_blessing
 
 label magic_tower_first_visit:
-    scene bg magic_tower_enterence with fade
+    scene bg magic_tower_enterence at bg_size with fade
 
     "Передо мной возвышалась гигантская магическая башня."
     "Она не выглядела древней — её стены словно впитали в себя магию и время."
@@ -220,13 +220,13 @@ label explore_magic_tower:
     $ luck = renpy.random.randint(1, 100)
     $ lib = renpy.random.randint(1, 100)
     if lib < 25:
-        scene bg magic_library1 with fade
+        scene bg magic_library1 at bg_size with fade
     if lib >= 25 and lib < 50:
-        scene bg magic_library2 with fade
+        scene bg magic_library2 at bg_size with fade
     if lib >= 50 and lib < 75:
-        scene bg magic_library3 with fade
+        scene bg magic_library3 at bg_size with fade
     if lib >= 75 and lib < 100:
-        scene bg magic_library4 with fade
+        scene bg magic_library4 at bg_size with fade
 
     "Здесь было полно загадочных комнат, пыльных полок с книгами и странных артефактов"
     "Я осмотрел одну из секций гигантской библиотеки"

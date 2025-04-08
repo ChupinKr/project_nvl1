@@ -103,11 +103,11 @@ label freya_root_menu:
 label freya_root_masturbate(is_preview=False):
     hide f
     "Вы каким-то образом появляетесь у тебя в комнате"
-    scene bg room with dissolve
+    scene bg room at bg_size with dissolve
     "[f.name] не теряя времени опускается на колени, а одежда на вас пропадает"
     "Вот она магия Богини? Поражает воображение.."
 
-    scene frey_masturbate_1 with dissolve
+    scene frey_masturbate_1 at bg_size with dissolve
     call hide_dialog
     f "О, дорогой [hero_name], как ты с таким вообще можешь ходить?"
     "[f.name] разглядывает твой член как младенец, которому подарили любимую игрушку"
@@ -115,7 +115,7 @@ label freya_root_masturbate(is_preview=False):
     p "Богине можно всё и даже больше."
     f "Спасибо~"
 
-    scene frey_masturbate_2 with dissolve
+    scene frey_masturbate_2 at bg_size with dissolve
     call hide_dialog
     f "Я не могу его даже обхватить, как ты мог прятать от меня такое сокровище?"
     "[f.name] не может скрыть улыбку, она наслаждается происходящим"
@@ -123,7 +123,7 @@ label freya_root_masturbate(is_preview=False):
     p "Господи, то есть, моя Богиня..Пожалуйста..Н-не останавливайся."
     "Пульсации члена усилились"
 
-    scene frey_masturbate_2_1 with dissolve
+    scene frey_masturbate_2_1 at bg_size with dissolve
     call hide_dialog
     "Ты уже готов выплеснуть весь свой стресс, полученный в новом мире"
     "[f.name], кажется, уже готова принять всё до последней капли"
@@ -131,34 +131,34 @@ label freya_root_masturbate(is_preview=False):
     "Это было последней каплей, всё произошло быстрее, чем ты думал"
     "Самое время покрыть спермой прекрасную Богиню"
 
-    scene frey_masturbate_3_1 with dissolve
+    scene frey_masturbate_3_1 at bg_size with dissolve
     call hide_dialog
     "Твое семя начинает выходить из члена, сильная струя, которая вот вот покроет всё ее тело"
     "[f.name] не ожидала, но ждала этого с нетерпением"
     "Румянец вновь проступил на её лице"
     
-    scene frey_masturbate_3_1_blush with dissolve
+    scene frey_masturbate_3_1_blush at bg_size with flash
     call hide_dialog
     f "Ох, [hero_name], о таком надо предупреждать~"
 
-    scene frey_masturbate_3_2 with dissolve
+    scene frey_masturbate_3_2 at bg_size with flash
     call hide_dialog
     "[f.name] старается поймать всё до последней капли"
 
-    scene frey_masturbate_3_3 with dissolve
+    scene frey_masturbate_3_3 at bg_size with dissolve
     call hide_dialog
     "Ротик богини открылся, она не упустит такое лакомство"
     "[f.name] старается получить всё угощение"
     "Но неминуемо сперма попадает на ее лицо и челку"
     
-    scene frey_masturbate_3_4 with dissolve
+    scene frey_masturbate_3_4 at bg_size with dissolve
     call hide_dialog
     "Лицо богини уже частично покрыто спермой, но ты не собираешься останавливаться"
     p "Ах, [f.name], не закрывай ротик."
     "Твой член пульсирует, ты выпускаешь еще порцию"
     f "Аааааам"
 
-    scene frey_masturbate_3_5 with dissolve
+    scene frey_masturbate_3_5 at bg_size with flash
     call hide_dialog
     f "Ммм, еще?"
     "Ты и не собирался останавливаться, и дальше поливаешь личико богини спермой"
@@ -173,7 +173,7 @@ label freya_root_masturbate(is_preview=False):
     "Поток спермы наконец ослабевает"
     "Ты заканчиваешь обильное семяизвержение"
 
-    scene frey_masturbate_3_6 with dissolve
+    scene frey_masturbate_3_6 at bg_size with dissolve
     call hide_dialog
     "[f.name] облизывает губы, судя по ее выражению лица она очень довольна"
     f "Видишь, я вся теперь покрыта твоей спермой!"

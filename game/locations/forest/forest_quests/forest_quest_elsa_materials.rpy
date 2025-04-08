@@ -84,11 +84,11 @@ label forest_quest_elsa_materials:
         ramiris "Мы уже на месте!"
 
     "[ramiris.name] взмахнула крыльями, и лес вокруг начал преображаться, окутываясь мистическим туманом."
-    scene bg entrance_labyrinth with fade
+    scene bg entrance_labyrinth at bg_size with fade
     "Мы подошли к входу в лабиринт, окутанному мерцающим дымкой."
     ramiris "Внутри тебя ждут твои страхи и желания. Пройди лабиринт, и, возможно, я помогу тебе."
     "Я сделал глубокий вдох и шагнул в туман, оставив позади обычный мир."
-    scene bg labyrinth1 with fade
+    scene bg labyrinth1 at bg_size with fade
     "Лабиринт оказался не просто местом, а испытанием духа и тела."
     show screen minds1 with dissolve
     pause .15
@@ -99,7 +99,7 @@ label forest_quest_elsa_materials:
     hide screen minds5 with dissolve
     p "!!!"
     mind "[ramiris.name] не солгала, внутри моей головы звучали голоса!"
-    scene bg labyrinth2 with dissolve
+    scene bg labyrinth2 at bg_size with dissolve
     mind "Я прошёл через узкие коридоры, где каждая тень шептала о моих неудачах."
     show screen minds2 with dissolve
     pause .1
@@ -109,7 +109,7 @@ label forest_quest_elsa_materials:
     pause .1
     hide screen minds3 with dissolve
     mind "Я шел вперед, а время тянулось бесконечно, и я боролся со своими внутренними демонами."
-    scene bg labyrinth3 with dissolve
+    scene bg labyrinth3 at bg_size with dissolve
     mind "Кажется я уже близко..."
     p "Арргх!"
     show screen minds1 with dissolve
@@ -187,7 +187,7 @@ label forest_quest_elsa_materials:
     "Мы подошли к маленькому ручью, где журчание воды успокаивало душу."
     call ramiris_root_river_dialog
     
-    scene bg meadow with fade
+    scene bg meadow at bg_size with fade
     show ramiris smile with dissolve
 
     if charisma > 70:
@@ -199,7 +199,7 @@ label forest_quest_elsa_materials:
             ramiris "Мы можем связать наши души здесь, на этой чудесной поляне..." with dissolve
             "Связь с [ramiris.name]":
                 call fuck_ramiris
-                scene bg meadow with fade
+                scene bg meadow at bg_size with fade
                 "Ты возвращаешься к поиску магических материалов"
                 "Через некоторое время..."
                 "..."
@@ -390,7 +390,7 @@ label fuck_ent(is_preview=False):
     return
 
 label fuck_ramiris(is_preview=False):
-    scene bg forest_day with fade
+    scene bg forest_day at bg_size with fade
     show ramiris smile with dissolve
     ramiris "Терпение, [hero_name]. Сначала мне нужно убедиться, что ты достоин моего внимания."
     

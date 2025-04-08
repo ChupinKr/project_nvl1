@@ -256,7 +256,7 @@ label find_black_hole_enter:
 
 label quest_eris_desert_enter:
     call magic_wind_music
-    scene bg city_night_bh with dissolve
+    scene bg city_night_bh at bg_size with dissolve
     p "Получилось! {w} Меня затягивает..."
     menu:
         "Войти в червоточину?"

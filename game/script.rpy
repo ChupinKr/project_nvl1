@@ -16,23 +16,23 @@ label start:
     if persistent.lang == "english":
         $setTime(0) #Всего 4 времени (Утро, День, Вечер, Ночь)
 
-    scene bg haven_bright3
+    scene bg haven_bright3 at bg_size
     play music "audio/haven.ogg" fadein 5.0 loop
     "Ты был человеком, обыкновенным, может, даже скучным, но с тобой случилось нечто, что лишило тебя жизни."
     "И вот теперь ты оказался в новом, незнакомом месте. Ты не чувствуешь боли, но осознаёшь, что ушёл."
     "Оставил этот мир, оставил свои прошлые заботы. Но где ты сейчас?"
     "Вокруг всё сверкало ярким светом, пронизывающим пространство."
     
-    scene bg haven_bright2 with dissolve
+    scene bg haven_bright2 at bg_size with dissolve
     pause .3
     "Со временем тебя окутывала тишина и лёгкость."
     "Как будто ты оказался в самом центре вселенной, в месте, где нет ни времени, ни смерти."
     
-    scene bg haven_bright1 with dissolve
+    scene bg haven_bright1 at bg_size with dissolve
     pause .3
     "Ты знал, что это не рай, но и не ад. Это было что-то другое. Что-то странное и волнующее."
 
-    scene bg haven with dissolve
+    scene bg haven at bg_size with dissolve
     pause .3
     "И вот, прямо перед тобой, в этом прекрасном зале, появилась она."
     "Высокая, с белыми волосами, с изысканным платьем, которое словно плавно парило в воздухе."

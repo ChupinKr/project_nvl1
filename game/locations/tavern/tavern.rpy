@@ -24,7 +24,7 @@ label tavern:
                 jump city
 
 label go_to_miku_stand:
-    scene bg bar_counter with fade
+    scene bg bar_counter at bg_size with fade
     show m smile with dissolve
     if first_time_tavern:
         $ first_time_tavern = False
@@ -113,7 +113,7 @@ label talk_miku_work:
     menu:
         "Помыть посуду (10 монет)":
             m "Надо мыть посуду! Только быстро, там уже очередь! Готов?"
-            scene bg tavern_sink with fade
+            scene bg tavern_sink at bg_size with fade
             call start_clean("dish")
             if last_clean_win:
                 m "Следующую! У нас много гостей, поторопись!"
@@ -136,11 +136,11 @@ label talk_miku_work:
             else: 
                 m @angry "[hero_name], тебе не нужны деньги? Почему так плохо?!" with dissolve
             $nextTime()
-            scene bg bar_counter with fade
+            scene bg bar_counter at bg_size with fade
             show m smile with dissolve
             jump talk_miku_menu
         "Прогнать шумных гостей (10 монет)":
-            scene bg tavern_battle with fade
+            scene bg tavern_battle at bg_size with fade
             show m angry at left with dissolve
             m "Эти парни никак не угомонятся! Выгони их, и будет тебе награда!" with dissolve
             if renpy.random.choice([False, True]) > 0:
@@ -156,7 +156,7 @@ label talk_miku_work:
                     $addLove(my_miku,10)
                     pause 3.5
                     $addMoney(10)
-            scene bg bar_counter with fade
+            scene bg bar_counter at bg_size with fade
             show m smile at center with dissolve
             $nextTime()
             jump talk_miku_menu
@@ -231,7 +231,7 @@ label talk_miku_info:
             "Всегда готов":
                 m "Поднимайся на второй этаж, дверь налево. Я подойду через минуту~~"
                 "Ты идешь на второй этаж и заходишь в комнату [m.name]"
-                scene bg miku_room_tavern with fade
+                scene bg miku_room_tavern at bg_size with fade
                 "..."
                 "....."
                 "........"
@@ -257,7 +257,7 @@ label talk_miku_info:
         hide m with dissolve
         "[m.name] встает на колени и снимает с тебя штаны"
         call m_root_tavern_blowjob
-        scene bg bar_counter with fade
+        scene bg bar_counter at bg_size with fade
         show m smile_naked_cummed with dissolve
         m "Спасибо за угощение~"
         m "Мне пора переодеться, пока меня никто не увидел"

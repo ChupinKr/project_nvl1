@@ -1,5 +1,5 @@
 label miku_tavern_root:
-    scene bg miku_room_tavern with fade
+    scene bg miku_room_tavern at bg_size with fade
     "Ты в уютной комнате [m.name] в таверне"
     show m smirk_no_top with dissolve
     m "Чем займемся сегодня, [hero_name]?"

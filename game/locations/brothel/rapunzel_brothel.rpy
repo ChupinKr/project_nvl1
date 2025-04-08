@@ -84,7 +84,7 @@ label rapunzel_root_menu:
         "Мы заходим в туалет, открываем потайную дверь и заходим в бордель."
 
         play sound "audio/door_enter.ogg"
-        scene bg brothel_girl1 with dissolve
+        scene bg brothel_girl1 at bg_size with dissolve
         play music "audio/brothel_sound.ogg" fadein 2.0 loop
         show r smile at right with dissolve
         

@@ -10,7 +10,7 @@ label rapunzel_brothel_first_visit:
     "Мы заходим в туалет, а там уже открываем потайную дверь"
 
     play sound "audio/door_enter.ogg"
-    scene bg brothel_girl1 with dissolve
+    scene bg brothel_girl1 at bg_size with dissolve
     play music "audio/brothel_sound.ogg" fadein 2.0 loop
     show r smile at right with dissolve
     

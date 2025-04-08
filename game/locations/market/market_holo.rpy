@@ -4,7 +4,7 @@ define h_can_go_root = False
 define h_can_visit = True
 
 label visit_holo:
-    scene bg holo_market with fade
+    scene bg holo_market at bg_size with fade
     show h smile with dissolve
     if not h_can_go_root and my_holo_love >= 50:
         h smile_shy "Охо-хо~, [hero_name], вижу ты разжился монетками! Я готова предложить тебе новый товар~"
@@ -50,7 +50,7 @@ label holo_menu:
             menu:
                 "Протереть книги(10 монет)":
                     h "Надо протереть книги! Только быстро, там уже очередь! Готов?"
-                    scene bg holo_market_boxes with fade
+                    scene bg holo_market_boxes at bg_size with fade
                     call start_clean("books")
                     if last_clean_win:
                         h "Хватай следующую, быстрее!"
@@ -73,7 +73,7 @@ label holo_menu:
                     else: 
                         h "[hero_name], это никуда не годится, работай лучше!"
                     $nextTime()
-                    scene bg holo_market with fade
+                    scene bg holo_market at bg_size with fade
                     show h smile with dissolve
                     jump holo_menu
                 "Избавиться от жуков(10 монет)":
@@ -83,7 +83,7 @@ label holo_menu:
                     h "Это уже тебе решать, [hero_name]~"
                     call bug_hunt
                     $nextTime()
-                    scene bg holo_market with fade
+                    scene bg holo_market at bg_size with fade
                     show h smile_shy with dissolve
                     $addChar
                     h "О-хо-хо! [hero_name], спасибо, не знаю, что бы я без тебя делала!"
@@ -258,7 +258,7 @@ label holo_market_root_menu:
             jump market
 
 label h_root_masturbate(is_preview=False):
-    scene bg holo_room with dissolve
+    scene bg holo_room at bg_size with dissolve
     "[h.name] Приводит тебя к себе в комнату"
     h "Подожди тут, я переоденусь~"
     pause 1
@@ -454,7 +454,7 @@ label h_root_masturbate(is_preview=False):
         $customNotify("Необходимо 40 харизмы")
         p "Сколько мне доплатить, чтобы тебя трахнуть?" with vpunch
         h "!!!!!"
-        scene bg holo_room with dissolve
+        scene bg holo_room at bg_size with dissolve
         show h angry_naked_cummed with dissolve
         call hide_dialog
         h "Какой же ты иногда хам!"
@@ -526,7 +526,7 @@ label h_root_masturbate(is_preview=False):
         $customNotify("Необходимо 70 симпатии")
         p "Да, спасибо за этот день"
         h "Всё для моего волчонка~"
-        scene bg holo_room with dissolve
+        scene bg holo_room at bg_size with dissolve
         show h angry_naked_cummed with dissolve
         call hide_dialog
         "[h.name] ушла в душ"
@@ -552,7 +552,7 @@ label h_root_masturbate(is_preview=False):
 
     
     "Довольная [h.name] встает"
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     show h smile_naked_cummed with dissolve
     call hide_dialog
     h "Спасибо за покупку~"
@@ -567,7 +567,7 @@ label h_root_masturbate(is_preview=False):
 
 
 label h_root_titfuck(is_preview=False):
-    scene bg holo_room with dissolve
+    scene bg holo_room at bg_size with dissolve
     "[h.name] Приводит тебя к себе в комнату"
     show h smile_shy with fade
     h "[hero_name], знаешь, у меня совсем не много опыта в этом.."
@@ -784,7 +784,7 @@ label h_root_titfuck(is_preview=False):
     call hide_dialog 
     "Довольная собой, [h.name], улыбается тебе"
 
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     show h smile_naked_cummed with dissolve
     call hide_dialog
     h "Спасибо за покупку~"
@@ -799,33 +799,33 @@ label h_root_titfuck(is_preview=False):
 
 # Сцена глубокого минета с [h.name]
 label h_root_blowjob(is_preview=False):
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     "[h.name] приводит тебя в свою комнату."
     show h smile_panties with dissolve
     h "Знаешь, [hero_name], я немало практиковалась для твоего размера~"
 
     # 1. [h.name] в трусиках показывает тело
-    scene bg h_blowjob1 at Transform(zoom=1.5) with fade
+    scene bg h_blowjob1 at bg_size with fade
     call hide_dialog
     "[h.name] с лёгкой насмешкой встаёт на четвереньки на кровати в одних трусиках, покачивая бёдрами."
     h "Ну как тебе? Волчица ведь не зря хвалится своим товаром."
     p "Ты... правда красива."
 
-    scene bg h_blowjob2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob2 at bg_size with dissolve
     call hide_dialog
     "[h.name] ложится на кровать, сжимая свою пышную грудь."
     h "Смотри, какая аппетитная грудь у твоей волчицы."
 
-    scene bg h_blowjob3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob3 at bg_size with dissolve
     call hide_dialog
     "[h.name] хмыкает, будто что-то её стесняет, и медленно стягивает трусики."
 
-    scene bg h_blowjob4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob4 at bg_size with dissolve
     call hide_dialog
     h "Они только мешают. Так куда лучше, согласен?"
     "Её обнажённое тело теперь перед тобой, и она смотрит с хитрой ухмылкой."
 
-    scene bg h_blowjob5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob5 at bg_size with dissolve
     call hide_dialog
     "[h.name] садится на колени напротив, её движения плавные и уверенные."
     h "Ну что, начнём? Ты ведь за этим сюда явился."
@@ -834,169 +834,169 @@ label h_root_blowjob(is_preview=False):
     return
 
 label h_root_blowjob_continue(is_preview=False):
-    scene bg h_blowjob5_2 at Transform(zoom=1.5) with fade
+    scene bg h_blowjob5_2 at bg_size with fade
     call hide_dialog
     "Ты расстёгиваешь штаны, и [h.name] склоняет голову."
     h "Ох, какой лакомый кусочек... Не зря ты столько заплатил."
     "Она облизывает губы, её глаза хитро блестят."
 
-    scene bg h_blowjob6 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob6 at bg_size with dissolve
     call hide_dialog
     "[h.name] устраивается между твоих ног, твой член прямо перед её лицом, а она смотрит тебе в глаза."
 
-    scene bg h_blowjob7 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob7 at bg_size with dissolve
     call hide_dialog
     "[h.name], упираясь грудью в твой уже твёрдый член, заставляет его подрагивать."
 
-    scene bg h_blowjob8_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob8_1 at bg_size with dissolve
     call hide_dialog
     "[h.name] наклоняется ближе и медленно проводит языком вдоль головки, дразня тебя."
-    scene bg h_blowjob8_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob8_2 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob8_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob8_1 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob8_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob8_2 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob8_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob8_1 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob8_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob8_2 at bg_size with dissolve
     pause .5
-    scene bg h_blowjob9 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob9 at bg_size with dissolve
     call hide_dialog
     h "Ммм... сладковато. Что ты такое ел? Волчице по вкусу."
     p "[h.name]..."
 
-    scene bg h_blowjob10 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob10 at bg_size with dissolve
     "[h.name] трётся щекой о твой член с явной ухмылкой."
     h "Как думаешь, ему будет уютно у меня во рту?"
 
-    scene bg h_blowjob11_0 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_0 at bg_size with dissolve
     call hide_dialog
     "Не дождавшись твоего ответа, она обхватывает твой член губами и начинает сосать."
 
-    scene bg h_blowjob11_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_1 at bg_size with dissolve
     pause .3
-    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_2 at bg_size with dissolve
     pause .3
-    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_3 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_2 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob11_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_1 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_2 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_3 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_2 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_3 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob11_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_2 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob11_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob11_3 at bg_size with dissolve
     pause .1
     h "Ммф... не дёргайся, дай мне повеселиться."
-    scene bg h_blowjob12 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob12 at bg_size with dissolve
     call hide_dialog
     "Её тёплое дыхание и ловкий язык заставляют тебя сжаться от напряжения."
 
-    scene bg h_blowjob_deep1 at Transform(zoom=1.5) with vpunch
+    scene bg h_blowjob_deep1 at bg_size with vpunch
     call hide_dialog
     p "Чёрт, [h.name]... это слишком..."
     "[h.name] наклоняется ниже, заглатывая твой член целиком. Её горло сжимается, и она слегка мычит."
     h "Ммгх..."
     "[h.name] ускоряет движения, заглатывая ещё глубже."
-    scene bg h_blowjob_deep2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep2 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob_deep3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep3 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep5 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob_deep3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep3 at bg_size with dissolve
     pause .2
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep5 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep5 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .1
-    scene bg h_blowjob_deep3 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep3 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep5 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep5 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep5 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep4 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_deep4 at bg_size with dissolve
     pause .03
-    scene bg h_blowjob_deep5 at Transform(zoom=1.5) with flash
+    scene bg h_blowjob_deep5 at bg_size with flash
     pause .1
 
     # 8. ГГ кончает в горло [h.name]
-    scene bg h_blowjob_deep5_cum1 at Transform(zoom=1.5) with flash
+    scene bg h_blowjob_deep5_cum1 at bg_size with flash
     call hide_dialog
     "Ты не выдерживаешь и кончаешь."
-    scene bg h_blowjob_deep5_cum2 at Transform(zoom=1.5) with flash
+    scene bg h_blowjob_deep5_cum2 at bg_size with flash
     call hide_dialog
     "Поток спермы заполняет её горло. [h.name] глотает, стараясь не отстраниться."
-    scene bg h_blowjob_deep5_cum3 at Transform(zoom=1.5) with flash
+    scene bg h_blowjob_deep5_cum3 at bg_size with flash
     call hide_dialog
     "На глазах у [h.name] проступают слёзы."
     h "Ммммф..."
 
-    scene bg h_blowjob_cum4 at Transform(zoom=1.5) with flash
+    scene bg h_blowjob_cum4 at bg_size with flash
     call hide_dialog
     "[h.name] понимает, что ей не хватает воздуха, и резко поднимается по твоему стволу, пока сперма брызжет наружу."
 
-    scene bg h_blowjob_cum5 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_cum5 at bg_size with dissolve
     call hide_dialog
     "[h.name] держит кончик твоего члена во рту, стараясь проглотить всё, что может."
 
-    scene bg h_blowjob_cum6 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_cum6 at bg_size with dissolve
     call hide_dialog
     h "Ааах..."
 
-    scene bg h_blowjob_cum7 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_cum7 at bg_size with dissolve
     call hide_dialog
     "[h.name], вся покрытая спермой, открывает рот с улыбкой, показывая, что всё проглотила."
 
-    scene bg h_blowjob_cum8 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_cum8 at bg_size with dissolve
     pause .5
-    scene bg h_blowjob_cum9 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_cum9 at bg_size with dissolve
     call hide_dialog
     h "Ну как, [hero_name]? Мои тренировки стоили того, правда?"
 
-    scene bg h_blowjob_after1 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_after1 at bg_size with dissolve
     call hide_dialog
     "[h.name] ложится напротив тебя и ухмыляется, её лицо и грудь покрыты спермой."
     h "Ну что, стоило своих монет? Волчица умеет угодить, да?"
     p "Ты... невероятна."
 
-    scene bg h_blowjob_after2 at Transform(zoom=1.5) with dissolve
+    scene bg h_blowjob_after2 at bg_size with dissolve
     "[h.name] встаёт на четвереньки, сперма капает с её груди и лица на кровать."
     h "Спасибо за угощение~"
     if my_holo_love >= 90 and not is_preview:
-        scene bg h_blowjob_after3 at Transform(zoom=1.5) with dissolve
+        scene bg h_blowjob_after3 at bg_size with dissolve
         call hide_dialog
         h "Вижу по твоим глазам, [hero_name], тебе мало."
 
-        scene bg h_blowjob_after4 at Transform(zoom=1.5) with dissolve
+        scene bg h_blowjob_after4 at bg_size with dissolve
         call hide_dialog
         h "Хочешь продолжить?"
         menu:
@@ -1006,9 +1006,9 @@ label h_root_blowjob_continue(is_preview=False):
                 "..."
                 "....."
                 "......."
-                scene bg pull_skirt1 at Transform(zoom=1.5) with fade
+                scene bg pull_skirt1 at bg_size with fade
                 pause .7
-                scene bg pull_skirt2 at Transform(zoom=1.5) with fade
+                scene bg pull_skirt2 at bg_size with fade
                 call hide_dialog
                 h "Так?"
                 call h_root_anal_continue
@@ -1016,7 +1016,7 @@ label h_root_blowjob_continue(is_preview=False):
             "На этом всё":
                 p "На сегодня всё."
 
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     show h smile_naked_cummed with dissolve
     h "Что ж, [hero_name], было славно. Приноси ещё золота, если захочешь повторить."
     "Она подмигивает и уходит, оставляя тебя одного в комнате."
@@ -1024,102 +1024,102 @@ label h_root_blowjob_continue(is_preview=False):
     return
 
 label h_root_fuck(is_preview=False):
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     "[h.name] приводит тебя в свою комнату, её глаза блестят хитринкой, а кончик волчьего хвоста слегка покачивается."
     show h smile_shy with dissolve
     h "Ну что, [hero_name], готов к настоящему угощению от волчицы?"
 
     # 1. Холо раздевается с элементами зверя
-    scene bg h_fuck1_1 at Transform(zoom=1.5) with fade
+    scene bg h_fuck1_1 at bg_size with fade
     call hide_dialog
     "[h.name] садится перед тобой и смотрит с игривой насмешкой."
 
-    scene bg h_fuck1_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck1_2 at bg_size with dissolve
     pause .4
-    scene bg h_fuck1_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck1_1 at bg_size with dissolve
     pause .4
-    scene bg h_fuck1_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck1_2 at bg_size with dissolve
     pause .4
-    scene bg h_fuck1_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck1_1 at bg_size with dissolve
     pause .4
-    scene bg h_fuck1_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck1_2 at bg_size with dissolve
     call hide_dialog
     "[h.name] шевелит ушками и хвостиком, дразня тебя."
     h "Ну как, нравится смотреть на волчицу?"
 
-    scene bg h_fuck2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck2 at bg_size with dissolve
     call hide_dialog
     "Она встаёт и смотрит с лукавой ухмылкой."
     h "Готовься, смертный, сейчас будет жарко!"
 
-    scene bg h_fuck3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck3 at bg_size with dissolve
     call hide_dialog
     "[h.name] медленно стягивает юбку ниже по бёдрам, не открывая киску."
     h "Терпение, [hero_name], я знаю, чего ты ждёшь."
 
-    scene bg h_fuck4 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck4 at bg_size with dissolve
     call hide_dialog
     "[h.name] игриво снимает юбку и приподнимает рубашку, показывая киску и грудь."
 
-    scene bg h_fuck5 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck5 at bg_size with dissolve
     call hide_dialog
     "[h.name] стоит перед тобой абсолютно голая и уверенная в себе."
     h "Вот тебе волчица во всей красе — наслаждайся!"
     p "Ты... просто невероятна."
 
-    scene bg h_fuck7 at Transform(zoom=1.5) with fade
+    scene bg h_fuck7 at bg_size with fade
     call hide_dialog
     "[h.name] садится обратно на колени в немного дикой позе и смотрит на тебя как на добычу."
     h "Ну что, готов к охоте, смертный?"
 
-    scene bg h_fuck8 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck8 at bg_size with dissolve
     call hide_dialog
     "Каким-то образом за хвостиком [h.name] появляется красный дилдо."
     h "Смотри, какая у меня игрушка — почти как ты, только чуть скромнее."
 
-    scene bg h_fuck9 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck9 at bg_size with dissolve
     call hide_dialog
     "[h.name] приближает дилдо к своей киске, слегка касаясь его."
     h "Хочешь, чтобы волчица разогрелась перед тобой?"
 
-    scene bg h_fuck10 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck10 at bg_size with dissolve
     call hide_dialog
     "[h.name] с той же ухмылкой пристраивается к дилдо, дразня киской."
 
-    scene bg h_fuck11 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck11 at bg_size with dissolve
     call hide_dialog
     "[h.name] начинает тереться о дилдо, её лицо искажается от возбуждения."
     h "Ммм..."
 
-    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_1 at bg_size with dissolve
     pause .2
-    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_2 at bg_size with dissolve
     pause .2
-    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_1 at bg_size with dissolve
     pause .2
-    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_2 at bg_size with dissolve
     pause .2
-    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_1 at bg_size with dissolve
     pause .1
-    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_2 at bg_size with dissolve
     pause .1
-    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_1 at bg_size with dissolve
     pause .1
-    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_2 at bg_size with dissolve
     pause .1
-    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_1 at bg_size with dissolve
     pause .03
-    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_2 at bg_size with dissolve
     pause .03
-    scene bg h_fuck12_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_1 at bg_size with dissolve
     pause .03
-    scene bg h_fuck12_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck12_2 at bg_size with dissolve
     pause .03
-    scene bg h_fuck12_1 at Transform(zoom=1.5) with flash
+    scene bg h_fuck12_1 at bg_size with flash
     pause .03
-    scene bg h_fuck12_2 at Transform(zoom=1.5) with flash
+    scene bg h_fuck12_2 at bg_size with flash
     pause .5
-    scene bg h_fuck13 at Transform(zoom=1.5) with flash
+    scene bg h_fuck13 at bg_size with flash
     call hide_dialog
     h "Ааах..."
     call h_root_fuck_continue
@@ -1128,234 +1128,234 @@ label h_root_fuck(is_preview=False):
 label h_root_fuck_continue:
 
     "Ты не выдерживаешь и набрасываешься на [h.name]."
-    scene bg h_fuck14 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck14 at bg_size with dissolve
     call hide_dialog
     "Твой член уже в киске [h.name], и ты готов её взять."
     h "Ах... Покажи, чего стоишь!"
 
-    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_1 at bg_size with dissolve
     pause .2
-    scene bg h_fuck15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_2 at bg_size with dissolve
     pause .2
-    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_3 at bg_size with dissolve
     pause .2
-    scene bg h_fuck15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_2 at bg_size with dissolve
     pause .2
-    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_1 at bg_size with dissolve
     pause .1
-    scene bg h_fuck15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_2 at bg_size with dissolve
     pause .1
-    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_3 at bg_size with dissolve
     pause .1
-    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_1 at bg_size with dissolve
     pause .1
-    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_3 at bg_size with dissolve
     pause .03
-    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_1 at bg_size with dissolve
     pause .03
-    scene bg h_fuck15_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_3 at bg_size with dissolve
     pause .03
-    scene bg h_fuck15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck15_1 at bg_size with dissolve
     pause .03
-    scene bg h_fuck15_3 at Transform(zoom=1.5) with flash
+    scene bg h_fuck15_3 at bg_size with flash
     pause .03
-    scene bg h_fuck15_1 at Transform(zoom=1.5) with flash
+    scene bg h_fuck15_1 at bg_size with flash
     pause .5
-    scene bg h_fuck16 at Transform(zoom=1.5) with flash
+    scene bg h_fuck16 at bg_size with flash
     call hide_dialog
     p "Вот тебе!"
     h "Ах... Да!"
     "У [h.name] текут слёзы. Ты заполняешь киску [h.name] спермой, но тебе мало, и ты меняешь позу."
 
-    scene bg h_fuck18 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18 at bg_size with dissolve
     call hide_dialog
     p "Стой смирно, волчица!"
 
     if strength < 50:
         $customNotify("Необходимо 50 силы")
         "Ты не смог удержать [h.name]"
-        scene bg holo_room with fade
+        scene bg holo_room at bg_size with fade
         show h angry_naked_cummed with dissolve
         h "Что ж, [hero_name], было хорошо, но и меру надо знать!"
         "Она уходит, оставляя тебя одного в комнате."
         "Ты уходишь."
         return
 
-    scene bg h_fuck18_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_1 at bg_size with dissolve
     pause .2
-    scene bg h_fuck18_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_2 at bg_size with dissolve
     pause .2
-    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_3 at bg_size with dissolve
     pause .2
-    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_4 at bg_size with dissolve
     pause .2
-    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_3 at bg_size with dissolve
     pause .1
-    scene bg h_fuck18_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_2 at bg_size with dissolve
     pause .1
-    scene bg h_fuck18_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_1 at bg_size with dissolve
     pause .1
-    scene bg h_fuck18_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_2 at bg_size with dissolve
     pause .1
-    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_3 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_4 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_3 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_4 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_3 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_4 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_3 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_4 at Transform(zoom=1.5) with dissolve
+    scene bg h_fuck18_4 at bg_size with dissolve
     pause .03
-    scene bg h_fuck18_3 at Transform(zoom=1.5) with flash
+    scene bg h_fuck18_3 at bg_size with flash
     pause .03
-    scene bg h_fuck18_4 at Transform(zoom=1.5) with flash
+    scene bg h_fuck18_4 at bg_size with flash
     pause .5
-    scene bg h_fuck19 at Transform(zoom=1.5) with flash
+    scene bg h_fuck19 at bg_size with flash
     call hide_dialog
     p "Ещё порция для тебя!"
     h "Ааааах!"
 
-    scene bg h_fuck20 at Transform(zoom=1.5) with flash
+    scene bg h_fuck20 at bg_size with flash
     call hide_dialog
     "Ты продолжаешь наполнять её киску спермой, она брызжет наружу и течёт по бёдрам."
     h "Ммм... Ааах.."
 
-    scene bg h_fuck21 at Transform(zoom=1.5) with fade
+    scene bg h_fuck21 at bg_size with fade
     call hide_dialog
     "[h.name] падает на кровать от усталости, сперма вытекает из её киски."
     h "Ох..."
 
-    scene bg h_fuck22 at Transform(zoom=1.5) with flash
+    scene bg h_fuck22 at bg_size with flash
     call hide_dialog
     "Но ты ещё не закончил и продолжаешь покрывать её тело спермой."
     p "Получай ещё, волчица!"
 
-    scene bg h_fuck23 at Transform(zoom=1.5) with flash
+    scene bg h_fuck23 at bg_size with flash
     call hide_dialog
     p "И последняя порция!"
     h "..."
 
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     "[h.name] всё ещё лежит в огромной луже спермы, а ты уходишь."
     return
 
 label h_root_anal(is_preview=False):
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     "[h.name] приводит тебя в свою комнату."
     show h smile_no_top with fade
     h "Присаживайся, [hero_name], и наслаждайся."
 
     # 1. Холо раздевается
-    scene bg h_anal1 at Transform(zoom=1.5) with fade
+    scene bg h_anal1 at bg_size with fade
     call hide_dialog
     "[h.name] дразняще показывает тебе грудь."
     h "Ну как тебе мои сокровища? Волчица ведь знает, как завлечь."
     p "Сложно их не заметить..."
 
-    scene bg h_anal2 at Transform(zoom=1.5) with fade
+    scene bg h_anal2 at bg_size with fade
     call hide_dialog
     h "Ха, и верно! А сегодня я покажу тебе кое-что ещё интереснее."
 
-    scene bg h_anal3 at Transform(zoom=1.5) with fade
+    scene bg h_anal3 at bg_size with fade
     call hide_dialog
     "[h.name] приподнимает юбку, ты видишь, что на ней нет трусиков."
     h "Нравится моя юбка? Или то, что под ней?"
 
-    scene bg h_anal4 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal4 at bg_size with dissolve
     call hide_dialog
     "[h.name] встаёт на четвереньки боком к тебе в одной юбке."
 
-    scene bg h_anal5 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal5 at bg_size with dissolve
     call hide_dialog
     "[h.name] немного разворачивается спиной, открывая тебе вид на её анус и киску."
     h "Ну как? Волчица в самом соку, не находишь?"
 
-    scene bg h_anal5 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal5 at bg_size with dissolve
     pause .3
-    scene bg h_anal6 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal6 at bg_size with dissolve
     pause .3
-    scene bg h_anal5 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal5 at bg_size with dissolve
     pause .3
-    scene bg h_anal6 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal6 at bg_size with dissolve
     pause .3
-    scene bg h_anal5 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal5 at bg_size with dissolve
     pause .3
-    scene bg h_anal6 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal6 at bg_size with dissolve
     "[h.name] слегка покачивает попкой, дразня тебя."
 
     # 3. Холо подготавливает попку пальцами
-    scene bg h_anal7 at Transform(zoom=1.5) with fade
+    scene bg h_anal7 at bg_size with fade
     call hide_dialog
     "[h.name] немного оттягивает попку, показывая тебе свой анус."
     p "Обожаю эту аппетитную попку..."
 
-    scene bg h_anal8 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal8 at bg_size with dissolve
     call hide_dialog
     "[h.name] оттягивает край своего ануса."
 
-    scene bg h_anal9 at Transform(zoom=1.5) with fade
+    scene bg h_anal9 at bg_size with fade
     call hide_dialog
     "Она нежно вводит два пальца в свой анус."
     h "Надо подготовиться, верно? Волчица не любит скучать."
 
-    scene bg h_anal10_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_1 at bg_size with dissolve
     pause .2
-    scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_2 at bg_size with dissolve
     pause .2
-    scene bg h_anal10_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_3 at bg_size with dissolve
     pause .2
-    scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_2 at bg_size with dissolve
     pause .1
-    scene bg h_anal10_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_1 at bg_size with dissolve
     pause .1
-    scene bg h_anal10_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_3 at bg_size with dissolve
     pause .1
-    scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_2 at bg_size with dissolve
     pause .1
-    scene bg h_anal10_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_3 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_3 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal10_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal10_2 at Transform(zoom=1.5) with flash
+    scene bg h_anal10_2 at bg_size with flash
     pause .03
-    scene bg h_anal10_3 at Transform(zoom=1.5) with flash
+    scene bg h_anal10_3 at bg_size with flash
     pause .2
-    scene bg h_anal11 at Transform(zoom=1.5) with flash
+    scene bg h_anal11 at bg_size with flash
     call hide_dialog
 
-    scene bg h_anal12 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal12 at bg_size with dissolve
     call hide_dialog
     "Она заканчивает играть со своей попкой и медленно вытаскивает пальцы."
 
-    scene bg h_anal13 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal13 at bg_size with dissolve
     call hide_dialog
     "[h.name] расслабляет анус и растягивает его пальцами, дразня тебя."
     h "Ну что, [hero_name], готов ли я?"
     p "Сейчас помогу."
 
     # ГГ подходит, его рука тянется к попке Холо
-    scene bg h_anal14 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal14 at bg_size with dissolve
     call hide_dialog
     "Ты подходишь ближе, и твоя рука касается её попки."
     h "Давай, покажи, на что способен."
@@ -1364,41 +1364,41 @@ label h_root_anal(is_preview=False):
     h "Ха, а ты ждал ледяную волчицу?"
     "Ты двигаешь рукой, и по её лицу видно, что [h.name] наслаждается."
 
-    scene bg h_anal15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_1 at bg_size with dissolve
     pause .2
-    scene bg h_anal15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_2 at bg_size with dissolve
     pause .2
-    scene bg h_anal15_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_3 at bg_size with dissolve
     pause .2
-    scene bg h_anal15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_2 at bg_size with dissolve
     pause .2
-    scene bg h_anal15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_1 at bg_size with dissolve
     pause .1
-    scene bg h_anal15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_2 at bg_size with dissolve
     pause .1
-    scene bg h_anal15_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_3 at bg_size with dissolve
     pause .1
-    scene bg h_anal15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_2 at bg_size with dissolve
     pause .1
-    scene bg h_anal15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal15_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_3 at bg_size with dissolve
     pause .03
-    scene bg h_anal15_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal15_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal15_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal15_2 at Transform(zoom=1.5) with flash
+    scene bg h_anal15_2 at bg_size with flash
     pause .03
-    scene bg h_anal15_3 at Transform(zoom=1.5) with flash
+    scene bg h_anal15_3 at bg_size with flash
     pause .2
-    scene bg h_anal16 at Transform(zoom=1.5) with flash
+    scene bg h_anal16 at bg_size with flash
     call hide_dialog
     h "Ах... ну же!"
 
-    scene bg h_anal17 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal17 at bg_size with dissolve
     call hide_dialog
     "Ты суёшь большой палец ей в попку, слегка двигая."
     p "Теперь ты готова."
@@ -1407,89 +1407,89 @@ label h_root_anal(is_preview=False):
     return
 
 label h_root_anal_continue(is_preview=False):
-    scene bg h_anal18 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal18 at bg_size with dissolve
     call hide_dialog
     h "Ииик!"
     "Ты резко вводишь свой член в попку [h.name]."
 
-    scene bg h_anal19_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_1 at bg_size with dissolve
     pause .2
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .2
-    scene bg h_anal19_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_3 at bg_size with dissolve
     pause .2
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .2
-    scene bg h_anal19_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_1 at bg_size with dissolve
     pause .1
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .1
-    scene bg h_anal19_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_3 at bg_size with dissolve
     pause .1
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .1
-    scene bg h_anal19_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_3 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_3 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_3 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_2 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal19_1 at bg_size with dissolve
     pause .03
-    scene bg h_anal19_2 at Transform(zoom=1.5) with flash
+    scene bg h_anal19_2 at bg_size with flash
     pause .03
-    scene bg h_anal19_3 at Transform(zoom=1.5) with flash
+    scene bg h_anal19_3 at bg_size with flash
     pause .2
-    scene bg h_anal20 at Transform(zoom=1.5) with flash
+    scene bg h_anal20 at bg_size with flash
     call hide_dialog
     h "Ааааах!"
     "Ты кончаешь в ее попку."
 
-    scene bg h_anal21 at Transform(zoom=1.5) with flash
+    scene bg h_anal21 at bg_size with flash
     call hide_dialog
     "Ты выпускаешь огромную порцию спермы."
     p "Получай!"
     h "Ах! Ах! Сколько же тебя!"
 
-    scene bg h_anal22_after1 at Transform(zoom=1.5) with flash
+    scene bg h_anal22_after1 at bg_size with flash
     call hide_dialog
     "Ты вытаскиваешь член из её попки и продолжаешь кончать на её спину и ягодицы."
     p "Вот так!"
 
-    scene bg h_anal22_after2 at Transform(zoom=1.5) with flash
+    scene bg h_anal22_after2 at bg_size with flash
     call hide_dialog
     "Ты испускаешь последнее, [h.name] держит попку приподнятой, её анус раскрыт, принимая остатки."
     h "Ммм... Ааах..."
 
-    scene bg h_anal22_after3 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal22_after3 at bg_size with dissolve
     call hide_dialog
     "Слезы текут по щекам [h.name], она ложится на живот, сперма сочится из её попки и покрывает спину."
 
-    scene bg h_anal22_after5 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal22_after5 at bg_size with dissolve
     pause .7
-    scene bg h_anal22_after4 at Transform(zoom=1.5) with dissolve
+    scene bg h_anal22_after4 at bg_size with dissolve
     call hide_dialog
     "[h.name] улыбается и слегка приподнимает попку, показывая, сколько спермы ты оставил внутри."
 
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     show h smile_naked_cummed with dissolve
     "Она встаёт, её тело дрожит, но она гордо ухмыляется."
     h "Ну что, [hero_name], сделка удалась. Приноси ещё монет, если захочешь добавки."
@@ -1499,18 +1499,18 @@ label h_root_anal_continue(is_preview=False):
     return
 
 label h_root_footfuck(is_preview=False):
-    scene bg h_foot1 at Transform(zoom=1.5) with fade
+    scene bg h_foot1 at bg_size with fade
     # Холо сидит на стуле или кровати, вытягивая ноги к ГГ
     "[h.name] садится напротив тебя, вытягивая свои стройные ноги и шевеля пальцами."
     h "Смотри, какие у волчицы лапки. Удобно устроился, [hero_name]?"
 
-    scene bg h_foot2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot2 at bg_size with dissolve
     call hide_dialog
     p "Холо, что ты задумала?"
     h "Ха, скоро узнаешь. Волчица хочет поиграть!"
 
     # 2. ГГ возбуждается, Холо касается ногами его члена
-    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_1 at bg_size with dissolve
     call hide_dialog
     # Холо касается ногами промежности ГГ, он напрягается
     "Ты чувствуешь, как её прохладные ступни касаются твоей промежности, и твой член мгновенно твердеет."
@@ -1519,75 +1519,75 @@ label h_root_footfuck(is_preview=False):
     p "Холо... это слишком..."
 
     # Анимация: Холо ускоряет движения ногами
-    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_2 at bg_size with dissolve
     pause .2
-    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_1 at bg_size with dissolve
     pause .2
-    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_2 at bg_size with dissolve
     pause .1
-    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_2 at bg_size with dissolve
     pause .1
-    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_1 at bg_size with dissolve
     pause .1
-    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_2 at bg_size with dissolve
     pause .1
-    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_1 at bg_size with dissolve
     pause .03
-    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_2 at bg_size with dissolve
     pause .03
-    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_1 at bg_size with dissolve
     pause .03
-    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_2 at bg_size with dissolve
     pause .03
-    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_1 at bg_size with dissolve
     pause .03
-    scene bg h_foot3_2 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_2 at bg_size with dissolve
     pause .03
-    scene bg h_foot3_1 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot3_1 at bg_size with dissolve
     pause .03
-    scene bg h_foot3_2 at Transform(zoom=1.5) with flash
+    scene bg h_foot3_2 at bg_size with flash
     call hide_dialog
     h "Ха, ты весь дрожишь, [hero_name]! Неужто мои лапки так тебя завели?"
     p "Холо... я не выдержу долго..."
 
     # 4. ГГ обильно кончает
-    scene bg h_foot4 at Transform(zoom=1.5) with flash
+    scene bg h_foot4 at bg_size with flash
     call hide_dialog
     "Ты не выдерживаешь, и мощный поток спермы вырывается, заливая её ступни и лодыжки."
 
-    scene bg h_foot5 at Transform(zoom=1.5) with flash
+    scene bg h_foot5 at bg_size with flash
     call hide_dialog
     h "Ох... сколько же ты припас! Волчица довольна таким уловом!"
 
-    scene bg h_foot6 at Transform(zoom=1.5) with flash
+    scene bg h_foot6 at bg_size with flash
     call hide_dialog
     "Сперма сочится из твоего члена и стекает по её ногам, а она ухмыляется."
     h "Ммм... ну и напор у тебя!"
 
-    scene bg h_foot7 at Transform(zoom=1.5) with flash
+    scene bg h_foot7 at bg_size with flash
     call hide_dialog
     p "Ах... Холо..."
     h "Хо-хо, [hero_name], ты так изголодался по моим ножкам?"
 
     # 5. Холо показывает ноги, покрытые спермой
-    scene bg h_foot8 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot8 at bg_size with dissolve
     call hide_dialog
     # Холо поднимает ноги, демонстрируя сперму
     "[h.name] приподнимает ноги, показывая, как твоя сперма блестит на её коже, и слегка разводит пальцы."
     h "Ну что скажешь, [hero_name]? Мои лапки теперь все в твоём... даре."
     "Она хихикает, её хвост игриво дёргается."
 
-    scene bg h_foot9 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot9 at bg_size with dissolve
     call hide_dialog
     p "Ты... это слишком много для меня..."
     h "Ха, слишком? Волчица знает, как удивить!"
 
-    scene bg h_foot10 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot10 at bg_size with dissolve
     call hide_dialog
     "[h.name] показывает, как сперма стекает по её ножкам."
     h "Тепло и липко... мне нравится."
 
-    scene bg h_foot11 at Transform(zoom=1.5) with dissolve
+    scene bg h_foot11 at bg_size with dissolve
     call hide_dialog
     h "Неужто мы на этом закончим?"
     if not is_preview:
@@ -1604,9 +1604,9 @@ label h_root_footfuck(is_preview=False):
                 "..."
                 "....."
                 "......."
-                scene bg pull_skirt1 at Transform(zoom=1.5) with fade
+                scene bg pull_skirt1 at bg_size with fade
                 pause .7
-                scene bg pull_skirt2 at Transform(zoom=1.5) with fade
+                scene bg pull_skirt2 at bg_size with fade
                 h "Вот так?"
                 call h_root_anal_continue
                 return
@@ -1615,7 +1615,7 @@ label h_root_footfuck(is_preview=False):
     else:
         p "Хватит на сегодня."
 
-    scene bg holo_room with fade
+    scene bg holo_room at bg_size with fade
     show h smile_naked at center with dissolve
     "[h.name] встаёт, её ноги всё ещё покрыты спермой, и она смотрит на тебя с лукавой улыбкой."
     h "Вот так волчица развлекается, [hero_name]. Приходи ещё, если захочешь новых игр."

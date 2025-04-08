@@ -110,9 +110,9 @@ label blessings_choice:
     "INFO: Кнопка для просмотра текущей информации отображаются в правом верхнем углу"
     
     # Вспышка света, переход к перерождению
-    scene bg haven_bright1 with dissolve
-    scene bg haven_bright2 with dissolve
-    scene bg haven_bright3 with dissolve
+    scene bg haven_bright1 at bg_size with dissolve
+    scene bg haven_bright2 at bg_size with dissolve
+    scene bg haven_bright3 at bg_size with dissolve
     pause 1.0
 
     "Ну что ж... Пришло время отправить тебя в новый мир."

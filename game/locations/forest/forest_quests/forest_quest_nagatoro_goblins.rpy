@@ -4,14 +4,14 @@ define can_talk_onna = True
 define woblin_from_day = 0
 
 label forest_quest_nagatoro_goblins:
-    scene bg farm_enterence at Transform(zoom=1.5) with fade
+    scene bg farm_enterence at bg_size with fade
     "Вы заходите в небольшую фермерскую деревню. Воздух пропитан запахом сена и земли, но что-то не так."
     if not first_time_forest_quest_nagatoro_goblins:
         "Деревня пуста. Ты видишь следы гоблинов, они ведут в пещеру, их там может быть еще больше."
         call go_goblin_cave
         return
     
-    scene bg farm_enterence_screams at Transform(zoom=1.5) with vpunch
+    scene bg farm_enterence_screams at bg_size with vpunch
     "Внезапно тишину разрывают крики, доносящиеся из амбара неподалеку."
     p "Что за чертовщина? Надо проверить!"
     
@@ -19,11 +19,11 @@ label forest_quest_nagatoro_goblins:
     old_woman "Бедная [onna.name]... Гоблины добрались и до неё..."
     "Жители деревни давно попрятались по домам, закрыв окна и двери. Никто не хочет вмешиваться."
 
-    scene bg barn at Transform(zoom=1.5) with fade
+    scene bg barn at bg_size with fade
     "Вы заглядываете в амбар."
     call barn_onna_goblin_fuck
 
-    scene bg barn at Transform(zoom=1.5) with fade
+    scene bg barn at bg_size with fade
     show goblin4 at mid with dissolve
     show goblin3 at right with dissolve
     show goblin5 at right_mid with dissolve
@@ -60,90 +60,90 @@ label forest_quest_nagatoro_goblins:
     else:
         p "Хорошо, здесь разобрались. Прости, что не подоспел раньше, [onna.name]."
 
-    scene bg farm_enterence at Transform(zoom=1.5) with fade
+    scene bg farm_enterence at bg_size with fade
     "Ты выходишь из амбара и видишь следы гоблинов, они ведут в пещеру."
     mind "Их там может быть еще больше."
     call go_goblin_cave
     return
 
 label barn_onna_goblin_fuck:
-    scene bg onna_goblin_gangbang_1 at Transform(zoom=1.5) with fade
+    scene bg onna_goblin_gangbang_1 at bg_size with fade
     "Перед вами жуткая сцена: несколько гоблинов окружили женщину в рваных одеждах священницы, прижимая её к земле."
     
-    scene bg onna_goblin_gangbang_2 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_2 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_3 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_3 at bg_size with dissolve
     goblin "SKWI! SKWI!"
 
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_5 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_5 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_3 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_3 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_5 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_5 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_3 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_3 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_5 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_5 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_5 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_5 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_3 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_3 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_4 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_4 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_5 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_5 at bg_size with dissolve
     onna "Ммммннф!"
 
-    scene bg onna_goblin_gangbang_6 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_6 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_6 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_6 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_8 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_8 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_6 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_6 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_8 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_8 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_6 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_6 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_8 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_8 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_6 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_6 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_7 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_7 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_8 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_8 at bg_size with dissolve
     onna "Грлффф!!"
 
-    scene bg onna_goblin_gangbang_9 at Transform(zoom=1.5) with vpunch
+    scene bg onna_goblin_gangbang_9 at bg_size with vpunch
     "Гоблин с силой пропихивает член в ее горло"
     mind "Чертовы животные!"
     $first_time_forest_quest_nagatoro_goblins = False
@@ -157,79 +157,79 @@ label barn_onna_goblin_fuck:
             call barn_onna_goblin_fuck_continue
             p "Ну всё, больше медлить больше нельзя!"
     
-    scene bg barn at Transform(zoom=1.5) with fade
+    scene bg barn at bg_size with fade
     "Ты нападаешь на гоблинов"
     return
             
 
 label barn_onna_goblin_fuck_continue:
     mind "Надо дождаться подходящего момента..."
-    scene bg onna_goblin_gangbang_10 at Transform(zoom=1.5) with fade
+    scene bg onna_goblin_gangbang_10 at bg_size with fade
     "Гоблины решили активнее работать с задними дарками [onna.name]."
 
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_12 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_12 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .5
-    scene bg onna_goblin_gangbang_10 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_10 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_12 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_12 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_10 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_10 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_12 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_12 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_10 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_10 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_12 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_12 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_10 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_10 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_11 at Transform(zoom=1.5) with dissolve
+    scene bg onna_goblin_gangbang_11 at bg_size with dissolve
     pause .2
-    scene bg onna_goblin_gangbang_12 at Transform(zoom=1.5) with flash
+    scene bg onna_goblin_gangbang_12 at bg_size with flash
     onna "Аааах!"
     
-    scene bg onna_goblin_gangbang_13 at Transform(zoom=1.5) with flash
+    scene bg onna_goblin_gangbang_13 at bg_size with flash
     pause .5
-    scene bg onna_goblin_gangbang_14 at Transform(zoom=1.5) with flash
+    scene bg onna_goblin_gangbang_14 at bg_size with flash
     "Гоблины наполняют ее дырочки спермой."
 
-    scene bg onna_goblin_gangbang_15 at Transform(zoom=1.5) with flash
+    scene bg onna_goblin_gangbang_15 at bg_size with flash
     mind "Кажется [onna.name] теряет сознание."
 
-    scene bg onna_goblin_gangbang_16 at Transform(zoom=1.5) with fade
+    scene bg onna_goblin_gangbang_16 at bg_size with fade
     "Наполненная гоблинской спермой, обессиленная и скованная [onna.name] упала без сознания на сено."
     return
 
 label go_goblin_cave:
-    scene bg goblin_cave_enterence at Transform(zoom=1.5) with fade
+    scene bg goblin_cave_enterence at bg_size with fade
     "Ты идешь по следам гоблинов и спускаешь будто под землю"
     p "Неужели они живут в этих пещерах? Как же здесь неуютно."
     "Ты решаешь медленно и тихо проходить глубже, нужно поставить точку."
     call cave_scene_music
-    scene bg goblin_cave1 at Transform(zoom=1.5) with fade
+    scene bg goblin_cave1 at bg_size with fade
     "Ты проходишь всё дальше. Свет все еще пробивается в пещеру, но нигде не видно гоблинов."
-    scene bg goblin_cave2 at Transform(zoom=1.5) with fade
+    scene bg goblin_cave2 at bg_size with fade
     "Ты зашел очень глубоко в их пещеры, здесь очень темно."
-    scene bg goblin_cave3 at Transform(zoom=1.5) with fade
+    scene bg goblin_cave3 at bg_size with fade
     mind "Я готов ко всему, даже если это ловушка!"
     p "..."
-    scene bg goblin_cave4 at Transform(zoom=1.5) with dissolve
+    scene bg goblin_cave4 at bg_size with dissolve
     "Постепенно твое зрение адаптируется и ты замечаешь, что эту непроглядную тьму слегка освещают люминисцентные растения и светящиеся камни."
     mind "Впервые вижу такие источники света."
     "Здесь никого нет."
@@ -323,17 +323,17 @@ label go_goblin_cave:
                 p "Ха ха! Да! Так вам!"
     "Вы двигаетесь дальше, скорее всего где-то здесь есть их потомство, надо их всех перебить."
     
-    scene bg goblin_cave5_1 at Transform(zoom=1.5) with fade
+    scene bg goblin_cave5_1 at bg_size with fade
     "Ты находишь комнату с массой детенышей гоблинов и их маткой."
     mind "Отлично!"
-    scene bg goblin_cave5_2 at Transform(zoom=1.5) with fade
+    scene bg goblin_cave5_2 at bg_size with fade
     "Ты тихо прошел и избавился от каждого."
     menu:
         "Что делать с маткой?"
         "Пощадить":
             p "Я слышал, что гоблинши довольно умные, по сравнению с мужскими особями."
             mind "И эти формы... Нельзя такое терять!"
-            scene bg goblin_cave6 at Transform(zoom=1.5) with fade
+            scene bg goblin_cave6 at bg_size with fade
             show woblin scared with dissolve
             woblin "А? *Skwik*?!"
             "Ты пригрожаешь ей расправой."
@@ -393,7 +393,7 @@ label go_goblin_cave:
             $can_find_woblin = True
         "Избавиться от нее":
             "Ты избавляешься от [woblin.name]."
-            scene bg goblin_cave6 at Transform(zoom=1.5) with fade
+            scene bg goblin_cave6 at bg_size with fade
             mind "Миссия выполнена. Остатки гоблинов разбежались, бросив матку. Они больше не смогут размножаться."
             "Ты уходишь, оставляя гору гоблинских трупов в пещере."
             call forest_scene
@@ -401,157 +401,157 @@ label go_goblin_cave:
         
 label woblin_root_blowjob(is_preview=False):
     woblin sad_open_mouth "Слушаюсь..." with dissolve
-    scene bg woblin_blowjob1 at Transform(zoom=1.5) with fade
+    scene bg woblin_blowjob1 at bg_size with fade
     "Вы отошли на небольшую полянку в лесу, там, где вас никто не побеспокоит. [woblin.name] послушно села перед тобой на колени."
     
-    scene bg woblin_blowjob2 at Transform(zoom=1.5) with fade
+    scene bg woblin_blowjob2 at bg_size with fade
     mind "Как же она хороша, руки сами тянутся к ней."
 
-    scene bg woblin_blowjob3 at Transform(zoom=1.5) with vpunch
+    scene bg woblin_blowjob3 at bg_size with vpunch
     woblin "Skwi!"
 
-    scene bg woblin_blowjob4_1 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob4_1 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob4_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob4_2 at bg_size with dissolve
     p "Начинай..."
 
-    scene bg woblin_blowjob5 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob5 at bg_size with dissolve
     mind "Кажется она всё еще в шоке."
     woblin "Ты точно человек, а не [hopgoblin.name]?"
     p "Я человек..."
 
-    scene bg woblin_blowjob6_1 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_1 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob6_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_2 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob6_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_3 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob6_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_2 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob6_1 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_1 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_2 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_3 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_2 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_3 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_2 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_1 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_1 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_2 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob6_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob6_3 at bg_size with dissolve
     p "Так и продолжишь лизать? Хорошо обслужи меня!"
     woblin "Х-хорошо.."
 
-    scene bg woblin_blowjob7 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob7 at bg_size with dissolve
     "Она прикоснулась губками к головке твоего члена и жалобно смотрит на тебя."
     p "Поторопись!"
 
-    scene bg woblin_blowjob8 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob8 at bg_size with dissolve
     p "Раз у тебя не получается, я тебе помогу."
-    scene bg woblin_blowjob9 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob9 at bg_size with dissolve
     "Ты силой насаживаешь ее рот на свой член."
     
-    scene bg woblin_blowjob10_1 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_1 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob10_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_2 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob10_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_2 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob10_1 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_1 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_2 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_2 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_1 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_1 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_2 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_2 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .2
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_3 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_3 at bg_size with dissolve
     pause .1
-    scene bg woblin_blowjob10_4 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob10_4 at bg_size with dissolve
     p "Аргх!"
     
-    scene bg woblin_blowjob11 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob11 at bg_size with dissolve
     "Ты притягиваешь ее голову на всю длину своего члена."
     
-    scene bg woblin_blowjob12 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob12 at bg_size with dissolve
     p "Арх! Молодец!"
     
-    scene bg woblin_blowjob13 at Transform(zoom=1.5) with flash
+    scene bg woblin_blowjob13 at bg_size with flash
     "Ты начинаешь кончать в ее глотку."
     woblin "Мммн!"
     
-    scene bg woblin_blowjob14 at Transform(zoom=1.5) with flash
+    scene bg woblin_blowjob14 at bg_size with flash
     p "Получай!"
     
-    scene bg woblin_blowjob15 at Transform(zoom=1.5) with flash
+    scene bg woblin_blowjob15 at bg_size with flash
     "[woblin.name] изо всех сил старается глотать всю твою сперму"
     
-    scene bg woblin_blowjob16 at Transform(zoom=1.5) with flash
+    scene bg woblin_blowjob16 at bg_size with flash
     woblin "Ммнффф!"
     
-    scene bg woblin_blowjob17 at Transform(zoom=1.5) with flash
+    scene bg woblin_blowjob17 at bg_size with flash
     pause .2
-    scene bg woblin_blowjob18 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob18 at bg_size with dissolve
     p "Эй! Я тебя не отпускал!"
     
-    scene bg woblin_blowjob19 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob19 at bg_size with dissolve
     woblin "А-ааах"
     
-    scene bg woblin_blowjob20 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob20 at bg_size with dissolve
     "[woblin.name] жалобно смотрит на тебя, ожидая твоей реакции."
     p "Ладно, ты хорошо постаралась."
     
-    scene bg woblin_blowjob21 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob21 at bg_size with dissolve
     pause .5
-    scene bg woblin_blowjob22 at Transform(zoom=1.5) with dissolve
+    scene bg woblin_blowjob22 at bg_size with dissolve
     "Она широко улыбается тебе."
     mind "Неплохо... Для начала неплохо."
 

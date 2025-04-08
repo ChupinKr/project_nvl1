@@ -261,7 +261,7 @@ label going_home:
 # Сцена 5: Чёрная дыра
 label black_hole_event:
     call magic_wind_music
-    scene bg city_night_bh with fade
+    scene bg city_night_bh at bg_size with fade
     show eris annoyed at mid with dissolve
     "Но вдруг воздух задрожал. Перед нами возникла чёрная дыра, и неведомая сила начала затягивать [my_eris.name] внутрь."
     eris "[hero_name]! Что за дьявольщина? Ты опять что-то натворил?!"
@@ -285,7 +285,7 @@ label hold_eris:
     p "[my_eris.name], держись за меня! Я не дам тебе пропасть!"
     show eris annoyed at smaller with dissolve
     eris "Давай, тяни!"
-    scene bg city_night with flash
+    scene bg city_night at bg_size with flash
     show eris smirk_blush at mid,normal_size  with dissolve
     "Мои мышцы горели, но я продолжал бороться. Наконец, дыра сжалась и исчезла с хлопком."
     "[my_eris.name] упала мне на руки, тяжело дыша."
@@ -302,7 +302,7 @@ label let_go_eris:
     "Мои руки задрожали и ослабели. [my_eris.name] выскользнула и исчезла в чёрной дыре."
     hide eris with dissolve
     eris "[hero_name]!"
-    scene bg city_night with flash
+    scene bg city_night at bg_size with flash
     "Её голос оборвался. Дыра закрылась, оставив меня одного."
     p "[my_eris.name]! Нет!"
     mind "Я не смог её удержать. Она пропала... навсегда?"
