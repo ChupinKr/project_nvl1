@@ -1,3 +1,4 @@
+define can_escape_every_time = False
 init python:
     import random, math
     health_to_not_escape = 20
@@ -339,7 +340,7 @@ label battle_escape:
     if not is_real_fight:
         hide screen battle_hp_bars
         jump escape_battle
-    if strength / 2 * random.randint(1, 10) > enemy_strength:
+    if (strength / 2 * random.randint(1, 10) > enemy_strength) or can_escape_every_time:
         "Тебе повезло, ты убежал и даже почти не чувствуешь боли"
         if health < health_to_not_escape:
             mind "О нет, адреналин прошел"

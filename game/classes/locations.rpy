@@ -291,15 +291,15 @@ label market_scene:
     play sound "audio/steps.ogg"
     call city_music_scene
     if isMorning():
-        scene bg market_morning with fade
+        scene bg market_morning at bg_size with fade
     elif isDay():
-        scene bg market_day with fade
+        scene bg market_day at bg_size with fade
     elif isEvening():
-        scene bg market_evening with fade
+        scene bg market_evening at bg_size with fade
     elif isNight():
-        scene bg market_night with fade
+        scene bg market_night at bg_size with fade
     else:
-        scene bg market_day with fade
+        scene bg market_day at bg_size with fade
     return
 
 label black_alley_scene:
@@ -307,11 +307,11 @@ label black_alley_scene:
     play sound "audio/steps.ogg"
     call city_music_scene
     if isMorning():
-        scene bg market_morning with fade
+        scene bg market_morning at bg_size with fade
     elif isDay():
-        scene bg market_day with fade
+        scene bg market_day at bg_size with fade
     elif isEvening():
-        scene bg market_evening with fade
+        scene bg market_evening at bg_size with fade
     elif isNight():
         scene bg black_alley_night at bg_size with fade
     else:

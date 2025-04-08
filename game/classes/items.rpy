@@ -13,8 +13,13 @@ init python:
         
         
         def executeItem(self):
+            global can_escape_every_time
             self.countUsage -=1
-            addChar([self.char], self.bonus)
+            if self.char:
+                addChar([self.char], self.bonus)
+            else:
+                can_escape_every_time = True
+                customNotify("Теперь ты можешь бежать вечно")
             return True  
 
     if persistent.lang == "russian":
@@ -65,9 +70,7 @@ init python:
         item_grimoire = Item(name="Grimoire", price=100,
         countUsage=3, lvl=3, bonus=15, char="intelligence")
 
-        item_forest_guide = Item(name="Forest Guide", price=100,
-        countUsage=1, lvl=0, bonus=0, char="")
-        item_combat_book = Item(name="Buy a brief excursion on combat", price=100,
+        item_combat_book = Item(name="Buy a brief excursion on combat", price=200,
         countUsage=1, lvl=0, bonus=0, char="")
 
     def getDoneItemsByChar(character):

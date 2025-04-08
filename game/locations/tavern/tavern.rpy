@@ -8,7 +8,7 @@ define can_go_m = True
 # Сцена с таверной
 label tavern:
     call tavern_scene
-    "Вы в таверне"
+    "Ты в таверне"
     menu:
         "Пойти в комнату" if canVisit("room"):
                 jump room
@@ -59,21 +59,21 @@ label talk_miku_drinks_menu:
             m "Этот эль действительно придаст тебе сил!"
             if money >= 10:
                 m @open_smile "Ооо, хорошенький выбор! Попробуй – освежает!" with dissolve
-                $minusMoneyPlusChar(10, ["str"], 2)
+                $minusMoneyPlusChar(10, ["str"], 4)
             else:
                 m "Эх, золотишка не хватает... Может, сначала квестик возьмёшь?"
         "Магический ликёр (10 золота)":
             m "Опьяняет и слегка пробуждает магическое чутье!"
             if money >= 10:
                 m @open_smile  "Этот напиток буквально искрит энергией! На, попробуй!" with dissolve
-                $minusMoneyPlusChar(10, ["intelligence"], 2)
+                $minusMoneyPlusChar(10, ["intelligence"], 4)
             else:
                 m "Эй, кажется, у тебя не хватает монеток!"
         "Чёрный ром (10 золота)":
             m "Тяжелый черный ром, после него все твое тело скажет \"Спасибо\"!"
             if money >= 10:
                 m @open_smile "Ого, крепкое же пойло ты выбрал! Только не переборщи!" with dissolve
-                $minusMoneyPlusChar(10, ["intelligence", "str"], 1)
+                $minusMoneyPlusChar(10, ["intelligence", "str"], 2)
             else:
                 m "Хм... похоже, придётся немного подкопить!"
         "Не хочу пить":

@@ -69,7 +69,7 @@ label rapunzel_brothel_first_visit:
 label brothel:
     call brothel_scene
 
-    "Вы в борделе, сюда всегда приятно заглянуть!"
+    "Ты в борделе, сюда всегда приятно заглянуть!"
     jump brothel_menu
 
 label brothel_menu:
