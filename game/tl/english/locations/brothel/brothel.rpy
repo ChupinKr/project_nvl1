@@ -305,4 +305,11 @@ translate english strings:
 
     # game/locations/brothel/brothel.rpy:110
     old "Отпустить"
-    new "Let him go"
+    new "Let him go"# TODO: Translation updated at 2025-04-09 12:36
+
+# game/locations/brothel/brothel.rpy:72
+translate english brothel_aca63ad7:
+
+    # "Ты в борделе, сюда всегда приятно заглянуть!"
+    "You're in a brothel, it's always nice to drop in here!"
+

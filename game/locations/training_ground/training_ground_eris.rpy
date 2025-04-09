@@ -132,7 +132,7 @@ label eris_root_menu:
             show eris angry_naked_cummed_cover with dissolve
             eris "Знаешь, [hero_name], мог бы и предупредить о таком."
             mind "Мне надо бежать, пока не получил."
-        "Внучную" if isQuestCompleted(quest_eris_dragon_hunting):
+        "Вручную" if isQuestCompleted(quest_eris_dragon_hunting):
             call eris_root_handjob
             scene bg eris_room at bg_size with fade
             show eris transparent_smile with dissolve

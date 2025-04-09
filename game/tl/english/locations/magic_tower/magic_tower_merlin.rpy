@@ -769,7 +769,7 @@ translate english strings:
 
     # game/locations/magic_tower/magic_tower_merlin.rpy:176
     old "Да, очень"
-    new "Yes, very much"# TODO: Translation updated at 2025-03-30 19:52
+    new "Yes, very much"
 
 # game/locations/magic_tower/magic_tower_merlin.rpy:187
 translate english mer_root_blowjob_f2a2b8b9:
@@ -786,3 +786,157 @@ translate english mer_root_blowjob_97d8c7b3:
     # "You pause to think. Didn’t you once see a spell for enlarging body parts? Could it be used just on the chest? Maybe [mer.name] wanted to make this lesson even more enjoyable? What if this is all just another test, and everything around you is illusion magic?"
     "You pause to think. Didn’t you once see a spell for enlarging body parts? Could it be used just on the chest? Maybe [mer.name] wanted to make this lesson even more enjoyable? What if this is all just another test, and everything around you is illusion magic?"
 
+# game/locations/magic_tower/magic_tower_merlin.rpy:62
+translate english merlin_training_64a1a6f3:
+    # p "Да, без проблем расскажу"
+    p "Sure, I’ll tell you, no problem."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:64
+translate english merlin_training_a6f67056:
+    # "Ты слово в слово пересказываешь всё, что рассказала [mer.name], она чувствует, что время было потрачено не зря и проникается к тебе уважением."
+    "You recount everything [mer.name] told you word for word. She feels her time wasn’t wasted and grows to respect you."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:65
+translate english merlin_training_a9918966:
+    # mer @ surprised "Удивительно, а ты не безнадежен!"
+    mer @ surprised "Amazing, you’re not hopeless after all!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:69
+translate english merlin_training_b3faf495:
+    # mer smile "Не хочешь пройти дополнительный курс? Этот курс сильно укрепит твои знания!"
+    mer smile "Would you like to take an extra course? It’ll really solidify your knowledge!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:71
+translate english merlin_training_ce3f6a31:
+    # mer "Хочешь пройти дополнительный курс?" nointeract
+    mer "Would you like to take an extra course?" nointeract
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:73
+translate english merlin_training_dfad7041:
+    # p "Само собой, я хочу изучить еще больше!"
+    p "Of course, I want to learn even more!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:74
+translate english merlin_training_7565f2ff:
+    # mer smirk "Тогда следуй за мной."
+    mer smirk "Then follow me."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:77
+translate english merlin_training_0e94effb:
+    # p "Сейчас я занят, может чуть позже?"
+    p "I’m busy right now, maybe later?"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:78
+translate english merlin_training_07d00968:
+    # mer annoyed "Раз посмел прийти в магическую башню - у тебя не должно оставаться приоритетов выше изучения магии!"
+    mer annoyed "Since you dared to come to the magic tower, you shouldn’t have any priorities higher than studying magic!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:79
+translate english merlin_training_8890127f:
+    # "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+    "Suddenly, you’re teleported to the central junction of the magic tower. She didn’t even let you explain yourself."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:83
+translate english merlin_training_7ca3aa28:
+    # "Урок закончился и ты очутился в середине развилки магической башни"
+    "The lesson ended, and you found yourself in the middle of the magic tower’s junction."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:88
+translate english merlin_training_b8520047:
+    # "Ты попытался рассказать всё именно так, как говорила [mer.name], но у тебя не вышло"
+    "You tried to recount everything exactly as [mer.name] said it, but you couldn’t pull it off."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:90
+translate english merlin_training_98aa6283:
+    # "[mer.name] выглядит раздраженной"
+    "[mer.name] looks irritated."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:91
+translate english merlin_training_ccf195ea:
+    # "Хорошо, что хоть что-то ты запомнил"
+    "At least you managed to remember something."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:93
+translate english merlin_training_70cca1ff:
+    # mer @ sigh "Большего от тебя и не ожидала, всё, я занята, уходи!"
+    mer @ sigh "I didn’t expect much from you anyway. That’s it, I’m busy—get out!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:94
+translate english merlin_training_8890127f_1:
+    # "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+    "Suddenly, you’re teleported to the central junction of the magic tower. She didn’t even let you explain yourself."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:99
+translate english merlin_training_17c951d9:
+    # p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
+    p "I didn’t catch a couple of things, but overall, you’ve opened my eyes!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:100
+translate english merlin_training_592ec5ba:
+    # "[mer.name] рассказывает тебе ту часть, которую сразу у тебя не удалось понять"
+    "[mer.name] explains the part you didn’t grasp right away."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:102
+translate english merlin_training_8fc12868:
+    # mer smile "По глазам вижу, теперь то ты всё понял"
+    mer smile "I can see in your eyes that you get it now."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:103
+translate english merlin_training_6cb7bc64:
+    # p "Да, спасибо, что разъяснила!"
+    p "Yes, thanks for clearing it up!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:105
+translate english merlin_training_b5532490:
+    # mer "Если вновь появятся вопросы - можешь найти меня и я постараюсь помочь."
+    mer "If you have more questions later, you can find me, and I’ll try to help."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:106
+translate english merlin_training_12070658:
+    # p "Хорошо, еще я бы хотел..."
+    p "Great, I’d also like to..."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:107
+translate english merlin_training_5dd164f2:
+    # "Не успев договорить, ты перемещаешься в центральную развилку магической башни"
+    "Before you can finish, you’re teleported to the central junction of the magic tower."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:112
+translate english merlin_training_17c951d9_1:
+    # p "Я не понял пару моментов, но в остальном ты мне раскрыла глаза!"
+    p "I didn’t catch a couple of things, but overall, you’ve opened my eyes!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:113
+translate english merlin_training_fbafb412:
+    # "[mer.name] еще пару часов объясняла тебе структуры магических элементов и разжевывала основы магического сотворения"
+    "[mer.name] spent another couple of hours explaining the structures of magical elements and breaking down the basics of spellcasting."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:114
+translate english merlin_training_23470cfd:
+    # "И даже так ты ничего не понял"
+    "And even then, you didn’t understand a thing."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:115
+translate english merlin_training_9740f681:
+    # "Возможно стоит сначала повысить свой интелект.."
+    "Maybe you should raise your intelligence first..."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:116
+translate english merlin_training_98aa6283_1:
+    # "[mer.name] выглядит раздраженной"
+    "[mer.name] looks irritated."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:118
+translate english merlin_training_c011e6d3:
+    # "Жаль, что ты ничего не запомнил"
+    "It’s a shame you didn’t remember anything."
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:119
+translate english merlin_training_3273c71e:
+    # mer @ sigh "Больше я не собираюсь тратить на тебя свое время!"
+    mer @ sigh "I’m not going to waste any more time on you!"
+
+# game/locations/magic_tower/magic_tower_merlin.rpy:120
+translate english merlin_training_8890127f_2:
+    # "Внезапно ты перемещаешься в центральную развилку магической башни, она даже не дала тебе оправдаться"
+    "Suddenly, you’re teleported to the central junction of the magic tower. She didn’t even let you explain yourself."

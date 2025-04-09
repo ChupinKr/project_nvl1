@@ -2334,4 +2334,11 @@ translate english strings:
 
     # game/locations/market/market_holo.rpy:1000
     old "На этом всё"
-    new "That’s all"
+    new "That’s all"# TODO: Translation updated at 2025-04-09 12:36
+
+# game/locations/market/market_holo.rpy:1622
+translate english h_root_footfuck_b706b169_1:
+
+    # p "Хватит на сегодня."
+    p "That's enough for today."
+

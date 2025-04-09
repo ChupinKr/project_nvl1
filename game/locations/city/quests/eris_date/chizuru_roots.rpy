@@ -92,7 +92,7 @@ label chizuru_club_dialog:
                             call chizuru_root_toilet_suck
                             if strength >= 50:
                                 menu:
-                                    "dD[chizuru.name] уходит"
+                                    "[chizuru.name] уходит"
                                     "Схватить":
                                         scene bg chizuru_root_toilet_suck9 at bg_size with vpunch
                                         chizuru "А?!"

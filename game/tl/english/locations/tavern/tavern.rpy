@@ -821,3 +821,8 @@ translate english talk_miku_menu_b3528c48:
     # m smile "Комната стоит 10 золотых за 3 дня." with dissolve
     m smile "The room costs 10 gold for 3 days." with dissolve
 
+# game/locations/tavern/tavern.rpy:11
+translate english tavern_9fac51d4:
+
+    # "Ты в таверне"
+    "You are in a tavern"

@@ -197,3 +197,58 @@ translate english strings:
     # game/locations/city/city.rpy:16
     old "Выйти за городские стены"
     new "Leave the city walls"
+
+# game/locations/city/city.rpy:30
+translate english city_9fac51d4:
+
+    # "Ты в таверне"
+    "You are in a tavern"
+
+# game/locations/city/city.rpy:36
+translate english city_83861172:
+
+    # mind "Наконец всё вернется в норму."
+    mind "Finally everything will return to normal."
+
+# game/locations/city/city.rpy:41
+translate english city_e91a64e7:
+
+    # eris "Увидимся завтра на тренировочной площадке."
+    eris "See you tomorrow at the training ground."
+
+# game/locations/city/city.rpy:43
+translate english city_c3448358:
+
+    # "Ты в городе"
+    "You are in the city"
+
+# game/locations/city/city.rpy:48
+translate english city_eefacf83:
+
+    # mind "Хорошо, так я не забуду о своей цели."
+    mind "Okay, so I won't forget about my goal."
+
+# game/locations/city/city.rpy:52
+translate english city_bb0f992e:
+
+    # mind "Пока я точно не готов, стоит заняться этим позже."
+    mind "I'm definitely not ready yet, I'll do it later."
+
+translate english strings:
+
+    # game/locations/city/city.rpy:15
+    old "Пойти на свидание с [eris.name]"
+    new "Go on a date with [eris.name]"
+
+    # game/locations/city/city.rpy:15
+    old "Исследовать червоточину"
+    new "Explore the wormhole"
+
+    # game/locations/city/city.rpy:15
+    old "Заняться поиском [eris.name]"
+    new "Search for [eris.name]"
+
+    # game/locations/city/city.rpy:15
+    old "Временно прекратить поиски [eris.name]"
+    new "Temporarily stop searching [eris.name]"
+

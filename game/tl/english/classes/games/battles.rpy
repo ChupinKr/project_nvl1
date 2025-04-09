@@ -73,48 +73,64 @@ translate english escape_battle_1e951109:
 translate english strings:
 
     # game/classes/games/battles.rpy:128
-    old "You have cheats enabled. Skip the mini-game?"
+    old "У вас включены читы. Пропустить мини-игру?"
     new "You have cheats enabled. Skip the mini-game?"
 
     # game/classes/games/battles.rpy:128
-    old "Play"
+    old "Играть"
     new "Play"
 
     # game/classes/games/battles.rpy:128
-    old "Skip"
+    old "Пропустить"
     new "Skip"
 
     # game/classes/games/battles.rpy:198
-    old "Continue the fight"
+    old "Продолжить бой"
     new "Continue the fight"
 
     # game/classes/games/battles.rpy:198
-    old "Try to escape"
+    old "Попытаться сбежать"
     new "Try to escape"# TODO: Translation updated at 2025-03-30 19:52
 
-translate english strings:
+# game/classes/games/battles.rpy:290
+translate english continue_battle_3223fde3:
 
-    # game/classes/games/battles.rpy:199
-    old "У вас включены читы. Пропустить мини-игру?"
-    new "У вас включены читы. Пропустить мини-игру?"
+    # "Ты плохо двигаешься, но пока можешь продолжать."
+    "You're not moving well, but you can keep going for now."
 
-    # game/classes/games/battles.rpy:199
-    old "Играть"
-    new "Играть"
+# game/classes/games/battles.rpy:324
+translate english battle_loss_ad3fe0d0:
 
-    # game/classes/games/battles.rpy:199
-    old "Пропустить"
-    new "Пропустить"
+    # "Ты спотыкаешься, падаешь и теряешь сознание"
+    "You trip, fall and lose consciousness"
 
-    # game/classes/games/battles.rpy:209
-    old "Cheats are enabled. Skip the mini-game?"
-    new "Cheats are enabled. Skip the mini-game?"
+# game/classes/games/battles.rpy:326
+translate english battle_loss_b5703dfc:
 
-    # game/classes/games/battles.rpy:285
-    old "Продолжить бой"
-    new "Продолжить бой"
+    # "Ваш показатель здоровья [health]"
+    "Your health score is [health]"
 
-    # game/classes/games/battles.rpy:285
-    old "Попытаться сбежать"
-    new "Попытаться сбежать"
+# game/classes/games/battles.rpy:327
+translate english battle_loss_91367fb6:
+
+    # "Ты проиграл бой, возможно стоило улучшить свои навыки перед тем, как вступать в бой с серьезным противником."
+    "You lost the fight, maybe you should have improved your skills before engaging in a fight with a serious opponent."
+
+# game/classes/games/battles.rpy:338
+translate english battle_escape_181379e2:
+
+    # "Ты пытаешься сбежать"
+    "You are trying to escape"
+
+# game/classes/games/battles.rpy:362
+translate english escape_battle_c3bdd4bc:
+
+    # mind "Ухх, было близко, хорошо, что успел убежать."
+    mind "Uhh, that was close, good thing I managed to escape."
+
+# game/classes/games/battles.rpy:364
+translate english escape_battle_719a0ea4:
+
+    # mind "Какой позор, я убегаю."
+    mind "What a shame, I'm running away."
 

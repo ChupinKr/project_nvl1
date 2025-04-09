@@ -610,3 +610,57 @@ translate english strings:
     # game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:221
     old "Серьёзно напомнить про тот случай"
     new "Seriously bring up that incident"
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:151
+translate english forest_eris_root_kiss_43e994c0:
+    # "[my_eris.name] приближается к тебе."
+    "[my_eris.name] approaches you."
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:152
+translate english forest_eris_root_kiss_ef958ed0:
+    # mind "Она? [my_eris.name] целует меня?!"
+    mind "[my_eris.name] is kissing me?!"
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:159
+translate english forest_eris_root_kiss_dd80b4f0:
+    # p "А-а-а, спасибо..."
+    p "Uh-uh-uh, thanks..."
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:165
+translate english forest_eris_root_kiss_b166cbf2:
+    # eris "Спасибо тебе, [hero_name]. Ты меня спас и заслужил это."
+    eris "Thank you, [hero_name]. You saved me, and you deserved this."
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:172
+translate english eris_root_river_situation_d039ea96:
+    # mind "Как же прекрасно её тело."
+    mind "How beautiful her body is."
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:174
+translate english eris_root_river_situation_c85f17ff:
+    # mind "Каждый изгиб, [my_eris.name], ты меня дразнишь?"
+    mind "Every curve, [my_eris.name], are you teasing me?"
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:176
+translate english eris_root_river_situation_7e78449b:
+    # mind "Черт, она заметила, что я подглядываю за ней?!"
+    mind "Damn, did she notice me peeking at her?!"
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:178
+translate english eris_root_river_situation_c33ef47f:
+    # eris "Хватит пялиться на меня!"
+    eris "Stop staring at me!"
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:207
+translate english forest_quest_eris_goblin_hunting_cave_1724bbf3:
+    # eris smile_naked_cover "Или ты хочешь, чтобы я простудилась?" with dissolve
+    eris smile_naked_cover "Or do you want me to catch a cold?" with dissolve
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:338
+translate english eris_root_blowjob_4390c781:
+    # p "Ах... Можешь взять его поглубже?"
+    p "Ah... Can you take it deeper?"
+
+# game/locations/forest/forest_quests/forest_quest_eris_goblin_hunting.rpy:339
+translate english eris_root_blowjob_5087ed26:
+    # eris "Мнннф."
+    eris "Mnnf."

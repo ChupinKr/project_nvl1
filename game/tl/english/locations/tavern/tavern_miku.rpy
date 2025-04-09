@@ -1760,4 +1760,17 @@ translate english strings:
 
     # game/locations/tavern/tavern_miku.rpy:1092
     old "Достаточно"
-    new "Enough"
+    new "Enough"# TODO: Translation updated at 2025-04-09 12:36
+
+# game/locations/tavern/tavern_miku.rpy:384
+translate english m_root_show_a79114a3_3:
+
+    # m "Ч-чтооо?"
+    m "Wh-whaaat?"
+
+# game/locations/tavern/tavern_miku.rpy:385
+translate english m_root_show_efd2723f_2:
+
+    # p "Хаха! Ладно, ты итак молодец!"
+    p "Haha! Okay, you're doing great!"
+

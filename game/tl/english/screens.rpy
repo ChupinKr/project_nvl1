@@ -1,6 +1,4 @@
-﻿# TODO: Translation updated at 2025-03-13 17:11
-
-translate english strings:
+﻿translate english strings:
 
     # game/screens.rpy:514
     old "Назад"
@@ -627,3 +625,28 @@ translate english strings:
     old "Menu"
     new "Menu"
 
+translate english strings:
+
+    # game/screens.rpy:282
+    old "[selected_character.name]"
+    new "[selected_character.name]"
+
+    # game/screens.rpy:312
+    old "Разблокировать всё"
+    new "Unlock Everything"
+
+    # game/screens.rpy:318
+    old "Введите код разблокировки"
+    new "Enter Unlock Code"
+
+    # game/screens.rpy:338
+    old "Подтвердить"
+    new "Confirm"
+
+    # game/screens.rpy:339
+    old "Получить код"
+    new "Get Code"
+
+    # game/screens.rpy:340
+    old "Отмена"
+    new "Cancel"

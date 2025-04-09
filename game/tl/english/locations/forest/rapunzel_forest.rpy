@@ -646,7 +646,6 @@ translate english strings:
     old "Я передумал"
     new "I’ve changed my mind"
 
-# TODO: Translation updated at 2025-03-30 19:52
 
 # game/locations/forest/rapunzel_forest.rpy:64
 translate english rapunzel_first_time_blessing_9b19a7f2:
@@ -659,4 +658,108 @@ translate english rapunzel_quests_59e03460:
 
     # "IN PROGRESS"
     "IN PROGRESS"
+    
+# game/locations/forest/rapunzel_forest.rpy:213
+translate english rapunzel_menu_b31fe280:
+    # p "Я слышал, что где-то здесь есть бордель, ты случаем не знаешь о нем?"
+    p "I heard there’s a brothel around here somewhere. Do you happen to know anything about it?"
 
+# game/locations/forest/rapunzel_forest.rpy:214
+translate english rapunzel_menu_748e2dbe:
+    # r @ surprised "Только тихо, место это секретное. Идем." with dissolve
+    r @ surprised "Shh, it’s a secret place. Let’s go." with dissolve
+
+# game/locations/forest/rapunzel_forest.rpy:217
+translate english rapunzel_menu_8a6183d2:
+    # r "Ах, ты хочешь улучшить свои навыки? Мне это нравится!"
+    r "Oh, you want to improve your skills? I like that!"
+
+# game/locations/forest/rapunzel_forest.rpy:221
+translate english rapunzel_menu_0d0a9959:
+    # p "У тебя не найдется задания для меня?"
+    p "Do you have any tasks for me?"
+
+# game/locations/forest/rapunzel_forest.rpy:222
+translate english rapunzel_menu_644ff944:
+    # r "Хм... На самом деле, у меня есть кое-что интересное!"
+    r "Hmm... Actually, I do have something interesting!"
+
+# game/locations/forest/rapunzel_forest.rpy:226
+translate english rapunzel_menu_40730942:
+    # p "Я не смогу выполнить это задание."
+    p "I won’t be able to complete this task."
+
+# game/locations/forest/rapunzel_forest.rpy:227
+translate english rapunzel_menu_ec067d85:
+    # r "Ох, ну хорошо, если передумаешь - приходи."
+    r "Oh, alright then. Come back if you change your mind."
+
+# game/locations/forest/rapunzel_forest.rpy:231
+translate english rapunzel_menu_01fecd47:
+    # p "В другой раз, Рапунцель."
+    p "Another time, Rapunzel."
+
+# game/locations/forest/rapunzel_forest.rpy:233
+translate english rapunzel_menu_8fd2c46e:
+    # r "Ну вот, а я уже придумала, чем тебя занять~"
+    r "Oh, and here I was, already thinking of something to keep you busy~"
+
+# game/locations/forest/rapunzel_forest.rpy:234
+translate english rapunzel_menu_473f3128:
+    # r @ smile "Ладно, не пропадай!" with dissolve
+    r @ smile "Alright, don’t disappear on me!" with dissolve
+
+# game/locations/forest/rapunzel_forest.rpy:260
+translate english rapunzel_training_a7671c84:
+    # r @ smile_shy "Ты так много трудишься и так много сделал для меня." with dissolve
+    r @ smile_shy "You work so hard and have done so much for me." with dissolve
+
+# game/locations/forest/rapunzel_forest.rpy:261
+translate english rapunzel_training_d66bde46:
+    # r @ smirk "Может я могу помочь тебе расслабиться?" with dissolve
+    r @ smirk "Maybe I can help you relax?" with dissolve
+
+# game/locations/forest/rapunzel_forest.rpy:263
+translate english rapunzel_training_ccb35620:
+    # r "Может я могу помочь тебе расслабиться?" nointeract
+    r "Maybe I can help you relax?" nointeract
+
+# game/locations/forest/rapunzel_forest.rpy:265
+translate english rapunzel_training_9cf4bcac:
+    # p "Ты точно можешь мне помочь!"
+    p "You can definitely help me!"
+
+# game/locations/forest/rapunzel_forest.rpy:267
+translate english rapunzel_training_b9b755e5:
+    # r "..."
+    r "..."
+
+# game/locations/forest/rapunzel_forest.rpy:270
+translate english rapunzel_training_da879dfe:
+    # p "И чем ты можешь мне помочь? Какой мне толк от твоей помощи?"
+    p "And how can you help me? What’s the point of your help?"
+
+# game/locations/forest/rapunzel_forest.rpy:271
+translate english rapunzel_training_5dfb1678:
+    # r @ neutral "уходи..." with dissolve
+    r @ neutral "Leave..." with dissolve
+
+# game/locations/forest/rapunzel_forest.rpy:272
+translate english rapunzel_training_282646ec:
+    # r annoyed "Я больше не хочу тебя видеть!" with dissolve
+    r annoyed "I don’t want to see you anymore!" with dissolve
+
+# game/locations/forest/rapunzel_forest.rpy:274
+translate english rapunzel_training_21fbfb52:
+    # "[r.name] силой выталкивает тебя из своей комнаты и запирает дверь на ключ"
+    "[r.name] forcefully pushes you out of her room and locks the door."
+
+# game/locations/forest/rapunzel_forest.rpy:280
+translate english rapunzel_training_28cf07c0:
+    # r closed_eyes "Хорошая работа, [hero_name]!" with dissolve
+    r closed_eyes "Good job, [hero_name]!" with dissolve
+
+# game/locations/forest/rapunzel_forest.rpy:283
+translate english rapunzel_training_e05f9fba:
+    # r annoyed "Мог бы хоть постараться!" with dissolve
+    r annoyed "You could’ve at least tried harder!" with dissolve
