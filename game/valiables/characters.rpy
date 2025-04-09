@@ -159,7 +159,7 @@ define my_eris_love = 0
 define my_eris_str = 150
 define my_eris = None
 
-init: #TODO сделать отдельные переменные для силы и 
+init: 
     if persistent.lang == "english":
         $my_freya = MyCharacter("Freya", "~10000",
         "images/characters/freya_ch/f smile.png", 

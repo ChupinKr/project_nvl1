@@ -136,16 +136,16 @@ default gallery_characters = [
     #main characters
     CharacterGallery(my_rapunzel.name, "images/characters/rapunzel_ch/bg rapunzel_gallery.png", [
         SceneInfo("r_root_masturbate", "Мастурбация", "images/characters/rapunzel_ch/roots/own_masturbate/bg r_masturbate13.png"),
-        SceneInfo("r_root_blowjob", "Blowjob", "images/characters/rapunzel_ch/roots/blowjob/bg r_close_to_dick.png"),
+        SceneInfo("r_root_blowjob", "Минет", "images/characters/rapunzel_ch/roots/blowjob/bg r_close_to_dick.png"),
         SceneInfo("r_root_fuck", "Секс", "images/characters/rapunzel_ch/roots/fuck/bg r_fuck3.png"),
     ]),
     CharacterGallery(my_elsa.name, "images/characters/elsa_ch/bg elsa_gallery.png", [
-        SceneInfo("blowjob_elsa", "Blowjob", "images/characters/elsa_ch/roots/blowjob/bg elsa_blow0_4.png"),
+        SceneInfo("blowjob_elsa", "Минет", "images/characters/elsa_ch/roots/blowjob/bg elsa_blow0_4.png"),
         SceneInfo("elsa_masturbate_scene", "Мастурбация", "images/characters/elsa_ch/roots/masturbate/bg elsa_fuck_fingering5.png"),
     ]),
     CharacterGallery(my_nag.name, "images/characters/nagatoro_ch/bg nag_gallery.png", [
         SceneInfo("nagatoro_root_show", "Показать", "images/characters/nagatoro_ch/roots/show/bg nag_show4.png"),
-        SceneInfo("nagatoro_root_titfuck", "Titjob", "images/characters/nagatoro_ch/roots/titjob/bg nag_titjob5.png"),
+        SceneInfo("nagatoro_root_titfuck", "Грудью", "images/characters/nagatoro_ch/roots/titjob/bg nag_titjob5.png"),
     ]),
 
     #second characters
@@ -155,37 +155,37 @@ default gallery_characters = [
         SceneInfo("forest_eris_root_kiss", "Поцелуй", "images/characters/eris_ch/roots/goblin_quest/forest_kiss/bg eris_root_kiss1.png"),
         SceneInfo("eris_root_river_situation", "Река", "images/characters/eris_ch/roots/goblin_quest/river_situation/bg eris_root_river2.png"),
         SceneInfo("heal_eris_by_yourself", "Исцеление", "images/characters/eris_ch/roots/dragon_quest/mountain_unconscious/bg eris_mountain_unconscious.png"),
-        SceneInfo("eris_root_handjob", "Handjob", "images/characters/eris_ch/roots/dragon_quest/tavern_handjob/bg eris_root_handjob5_say.png"),
-        SceneInfo("eris_root_blowjob", "Blowjob", "images/characters/eris_ch/roots/goblin_quest/cave_blowjob/bg eris_root_cave7.png"),
+        SceneInfo("eris_root_handjob", "Руками", "images/characters/eris_ch/roots/dragon_quest/tavern_handjob/bg eris_root_handjob5_say.png"),
+        SceneInfo("eris_root_blowjob", "Минет", "images/characters/eris_ch/roots/goblin_quest/cave_blowjob/bg eris_root_cave7.png"),
         SceneInfo("eris_root_tea", "Секс", "images/characters/eris_ch/roots/date_quest/tavern_tea/bg eris_root_tea9.png"),
     ]),
     CharacterGallery(my_holo.name, "images/characters/holo_ch/bg holo_gallery.png", [
-        SceneInfo("h_root_masturbate", "Handjob", "images/characters/holo_ch/roots/masturbate/bg h_masturbate13.png"),
-        SceneInfo("h_root_titfuck", "Titjob", "images/characters/holo_ch/roots/titfuck/bg h_titfuck15.png"),
-        SceneInfo("h_root_blowjob", "Blowjob", "images/characters/holo_ch/roots/blowjob/bg h_blowjob10.png"),
+        SceneInfo("h_root_masturbate", "Руками", "images/characters/holo_ch/roots/masturbate/bg h_masturbate13.png"),
+        SceneInfo("h_root_titfuck", "Грудью", "images/characters/holo_ch/roots/titfuck/bg h_titfuck15.png"),
+        SceneInfo("h_root_blowjob", "Минет", "images/characters/holo_ch/roots/blowjob/bg h_blowjob10.png"),
         SceneInfo("h_root_fuck", "Секс", "images/characters/holo_ch/roots/fuck/bg h_fuck16.png"),
-        SceneInfo("h_root_footfuck", "Footjob", "images/characters/holo_ch/roots/footjob/bg h_foot1.png"),
+        SceneInfo("h_root_footfuck", "Ногами", "images/characters/holo_ch/roots/footjob/bg h_foot1.png"),
         SceneInfo("h_root_anal", "Анал", "images/characters/holo_ch/roots/anal/bg h_anal21.png"),
     ]),
     CharacterGallery(my_miku.name, "images/characters/miku_ch/bg miku_gallery.png", [
         SceneInfo("m_root_show", "Показать", "images/characters/miku_ch/roots/show/bg m_show2.png"),
-        SceneInfo("m_root_titfuck", "Titjob", "images/characters/miku_ch/roots/titfuck/bg miku_titfuck4_2.png"),
-        SceneInfo("m_root_blowjob", "Blowjob", "images/characters/miku_ch/roots/blowjob/bg m_blowjob5.png"),
+        SceneInfo("m_root_titfuck", "Грудью", "images/characters/miku_ch/roots/titfuck/bg miku_titfuck4_2.png"),
+        SceneInfo("m_root_blowjob", "Минет", "images/characters/miku_ch/roots/blowjob/bg m_blowjob5.png"),
         SceneInfo("m_root_fuck", "Секс", "images/characters/miku_ch/roots/fuck/bg m_fuck1_6.png"),
-        SceneInfo("m_root_anal", "Секс", "images/characters/miku_ch/roots/anal/bg m_anal8_2.png"),
+        SceneInfo("m_root_anal", "Анал", "images/characters/miku_ch/roots/anal/bg m_anal8_2.png"),
     ]),
     CharacterGallery(my_merlin.name, "images/characters/merlin_ch/bg merlin_gallery.png", [
-        SceneInfo("mer_root_blowjob", "Blowjob", "images/characters/merlin_ch/roots/blowjob/bg mer_suck1.png"),
+        SceneInfo("mer_root_blowjob", "Минет", "images/characters/merlin_ch/roots/blowjob/bg mer_suck1.png"),
     ]),
     CharacterGallery(asoka.name, "images/characters/asoka/bg asoka_gallery.png", [
         SceneInfo("asoka_root_wake_up", "Проснись", "images/characters/asoka/roots/wake_up/asoka_root_wake_up1.png"),
-        SceneInfo("asoka_root_suck_another", "Blowjob мертвецу", "images/characters/asoka/roots/suck_another/bg asoka_root_suck_another1.png"),
-        SceneInfo("asoka_root_tent_blowjob", "Blowjob", "images/characters/asoka/roots/blowjob/bg asoka_root_blowjob2.png"),
+        SceneInfo("asoka_root_suck_another", "Минет мертвецу", "images/characters/asoka/roots/suck_another/bg asoka_root_suck_another1.png"),
+        SceneInfo("asoka_root_tent_blowjob", "Минет", "images/characters/asoka/roots/blowjob/bg asoka_root_blowjob2.png"),
         SceneInfo("asoka_root_tent_vaginal_fuck", "Секс", "images/characters/asoka/roots/vaginal_fuck/bg asoka_root_vaginal_fuck3_1.png"),
     ]),
     CharacterGallery(chizuru.name, "images/characters/chizuru/bg chizuru_gallery.png", [
         SceneInfo("chizuru_root_dance", "Танец", "images/characters/chizuru/roots/dance/bg chizuru_root_dance5.png"),
-        SceneInfo("chizuru_root_toilet_suck", "Handjob", "images/characters/chizuru/roots/toilet_masturbate/bg chizuru_root_toilet_suck5.png"),
+        SceneInfo("chizuru_root_toilet_suck", "Руками", "images/characters/chizuru/roots/toilet_masturbate/bg chizuru_root_toilet_suck5.png"),
         SceneInfo("chizuru_root_toilet_own_masturbate", "Мастурбация", "images/characters/chizuru/roots/toilet_own_masturbate/bg chizuru_root_toilet_own_masturbate0_4.png"),
         SceneInfo("chizuru_root_toilet_vaginal_sex", "Секс", "images/characters/chizuru/roots/toilet_vaginal_sex/bg chizuru_root_toilet_vaginal_sex1_2.png"),
     ]),
@@ -198,20 +198,20 @@ default gallery_characters = [
     CharacterGallery(my_tsunade.name, "images/characters/tsunade_ch/bg tsunade_gallery.png", [
     ]),
     CharacterGallery(my_freya.name, "images/characters/freya_ch/bg freya_gallery.png", [
-        SceneInfo("freya_root_masturbate", "Blowjob", "images/characters/freya_ch/roots/masturbate/frey_masturbate_1.png"),
+        SceneInfo("freya_root_masturbate", "Минет", "images/characters/freya_ch/roots/masturbate/frey_masturbate_1.png"),
     ]),
 
     #side characters
     CharacterGallery(ramiris.name, "images/characters/ramiris/bg ramiris_gallery.png", [
         SceneInfo("ramiris_root_river_dialog", "Диалог у реки", "images/characters/ramiris/scenes/river/bg ramiris_river1.png"),
-        SceneInfo("ramiris_root_kiss", "Полелуй", "images/characters/ramiris/scenes/river/bg ramiris_kiss2.png"),
+        SceneInfo("ramiris_root_kiss", "Поцелуй", "images/characters/ramiris/scenes/river/bg ramiris_kiss2.png"),
         SceneInfo("fuck_ramiris", "Секс", "images/characters/ramiris/scenes/fuck/bg ramiris_sex5.png"),
     ]),
     CharacterGallery(guy1.name, "images/characters/guy1/bg guy1_gallery.png", [
-        SceneInfo("guy1_black_alley_root", "Titjob", "images/characters/guy1/roots/black_alley_root_masturbate/bg guy1_black_alley_root_masturbate5.png"),
+        SceneInfo("guy1_black_alley_root", "Грудью", "images/characters/guy1/roots/black_alley_root_masturbate/bg guy1_black_alley_root_masturbate5.png"),
     ]),
     CharacterGallery(makima.name, "images/characters/makima_ch/bg makima_gallery.png", [
-        SceneInfo("makima_titfuck", "Titjob", "images/characters/makima_ch/roots/titfuck/bg makima_root_titfuck4.png"),
+        SceneInfo("makima_titfuck", "Грудью", "images/characters/makima_ch/roots/titfuck/bg makima_root_titfuck4.png"),
     ]),
 
     #enemies
@@ -222,13 +222,14 @@ default gallery_characters = [
         SceneInfo("mummy_root_desert_pussy_fuck", "Секс", "images/characters/mummy/roots/desert_pussy_fuck/bg mummy_desert_pussy_fuck1.png"),
     ]),
     CharacterGallery(woblin.name, "images/characters/woblin/bg woblin_gallery.png", [
-        SceneInfo("woblin_root_blowjob", "Blowjob", "images/characters/woblin/roots/blowjob/bg woblin_blowjob2.png"),
+        SceneInfo("woblin_root_blowjob", "Минет", "images/characters/woblin/roots/blowjob/bg woblin_blowjob2.png"),
     ]),
     CharacterGallery(wragon.name, "images/characters/wragon/bg wragon_gallery.png", [
         SceneInfo("wragon_root_fuck", "Секс", "images/characters/wragon/roots/cave_anal/bg wragon_anal1.png"),
     ]),
-    
+            
 ]
+
 
 # Переменные
 default current_page = 0
@@ -336,7 +337,10 @@ screen unlock_code_input():
                 xalign 0.5
                 spacing 20
                 textbutton _("Подтвердить") action Function(try_unlock_all_scenes, unlock_code)
-                textbutton _("Получить код") action OpenURL("https://boosty.to/ko2ed")
+                if persistent.lang == "russian":
+                    textbutton _("Получить код") action OpenURL("https://boosty.to/ko2ed")
+                if persistent.lang == "english":
+                    textbutton _("Получить код") action OpenURL("https://www.patreon.com/c/Ko2ed")
                 textbutton _("Отмена") action [SetVariable("unlock_code", ""), SetVariable("unlock_error", ""), ShowMenu("gallery_scenes")]
 
 # Стили
@@ -1069,6 +1073,7 @@ screen navigation():
                 textbutton _("Help") action ShowMenu("help")
 
         textbutton _("Boosty") action OpenURL("https://boosty.to/Ko2ed/")
+        textbutton _("Patreon") action OpenURL("https://www.patreon.com/c/Ko2ed")
         
 
         if renpy.variant("pc"):

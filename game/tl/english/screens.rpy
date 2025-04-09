@@ -650,3 +650,42 @@ translate english strings:
     # game/screens.rpy:340
     old "Отмена"
     new "Cancel"
+    
+    old "Сосиска"
+    new "Sausage"
+    
+    old "Танец"
+    new "Dance"
+    
+    old "Поцелуй"
+    new "Kiss"
+    
+    old "Река"
+    new "River"
+    
+    old "Исцеление"
+    new "Heal"
+    
+    old "Руками"
+    new "Handjob"
+    
+    old "Грудью"
+    new "Titjob"
+    
+    old "Показать"
+    new "Show"
+    
+    old "Ногами"
+    new "Footjob"
+    
+    old "Минет мерт..."
+    new "Deadman blo.."
+
+    old "Проснись"
+    new "Wake up"
+
+    old "Диалог у р..."
+    new "River dial..."
+
+    old "Мастурбаци..."
+    new "Masturbati..."
