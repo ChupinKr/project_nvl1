@@ -315,24 +315,25 @@ screen gallery_scenes():
 # Экран ввода кода
 screen unlock_code_input():
     tag menu
-    
+
     use game_menu(_("Введите код разблокировки"), scroll="viewport"):
         vbox:
             xalign 0.5
             yalign 0.5
             spacing 20
-            
-            # Поле ввода кода
+
+            # Поле ввода кода. Используем default для автоматического связывания с переменной unlock_code.
             input:
                 value VariableInputValue("unlock_code")
+                copypaste True
                 xalign 0.5
                 length 20
-            
-            # Сообщение об ошибке, если код неверный
+
+            # Сообщение об ошибке, если код неверный.
             if unlock_error:
                 text unlock_error color "#ff0000" xalign 0.5
-            
-            # Кнопки
+
+            # Кнопки.
             hbox:
                 xalign 0.5
                 spacing 20
